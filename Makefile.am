@@ -38,7 +38,7 @@ sharedpixmapdir=$(datadir)/pixmaps
 sharedpixmap_DATA = gnome-gnomine.png
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_in_files) $(pixmap_DATA)
+	$(schema_in_files) $(pixmap_DATA) $(sharedpixmap_DATA)
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
