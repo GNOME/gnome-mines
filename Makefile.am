@@ -1,6 +1,8 @@
 scoredir=$(localstatedir)/games
 Gamesdir = $(datadir)/gnome/apps/Games
 
+SUBDIRS = help
+
 INCLUDES = 			\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)				 \

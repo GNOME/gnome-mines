@@ -236,6 +236,14 @@ void size_radio_callback(GtkWidget *widget, gpointer data)
 	gnome_property_box_changed (GNOME_PROPERTY_BOX (pref_dialog));
 }
 
+static void help_cb (GtkWidget * widget, gpointer data)
+{
+
+  GnomeHelpMenuEntry help_entry = { "gnome-mines", "menubar.html" };
+
+  gnome_help_display (NULL, &help_entry);
+}
+
 static void apply_cb (GtkWidget *widget, gint pagenum, gpointer data)
 {
         guint oldxsize, oldysize, oldnmines, oldfsize, oldminesize;
@@ -461,6 +469,9 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 
 	gtk_signal_connect (GTK_OBJECT (pref_dialog), "apply", GTK_SIGNAL_FUNC
 			(apply_cb), NULL);
+
+	gtk_signal_connect (GTK_OBJECT (pref_dialog), "help", GTK_SIGNAL_FUNC
+			(help_cb), NULL);
 
         fsc = fsize;
 
