@@ -1,3 +1,8 @@
+2003-07-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Reinstate window resizing now that the public
+	release has been made.
+
 2003-07-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (main): Disabled window resizing for the 2.3.4 release

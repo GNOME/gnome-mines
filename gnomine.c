@@ -862,7 +862,7 @@ main (int argc, char *argv[])
 
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
-	gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
 	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_NEVER));
 	gnome_app_set_statusbar (GNOME_APP (window), GTK_WIDGET (appbar));
