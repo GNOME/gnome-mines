@@ -73,6 +73,7 @@ struct _GtkMineField {
         sign mine;
 	sign question;
         GRand * grand;
+	GdkGC *thick_line;
   
 	gboolean started;
 

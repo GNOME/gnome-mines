@@ -288,6 +288,15 @@ static void gtk_minefield_size_allocate (GtkWidget     *widget,
                 xofs = allocation->x + (allocation->width - width)/2;
                 yofs = allocation->y + (allocation->height - height)/2;
                 
+		if (!mfield->thick_line)
+			mfield->thick_line = gdk_gc_new (widget->window);
+		gdk_gc_copy (mfield->thick_line, widget->style->black_gc);
+		gdk_gc_set_line_attributes (mfield->thick_line, 
+					    MAX(1, 0.1*minesize),
+					    GDK_LINE_SOLID,
+					    GDK_CAP_ROUND,
+					    GDK_JOIN_ROUND);
+
 		gdk_window_move_resize (widget->window, xofs, yofs,
                                         width, height);
 	}
@@ -417,32 +426,18 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		                 GDK_RGB_DITHER_NORMAL, 0, 0);
 
 		if (mfield->lose && mfield->mines[c].mined != 1) {
-			gdk_draw_line(widget->window,
-				      widget->style->black_gc,
-				      x*minesize+2,
-				      y*minesize+3,
-				      x*minesize+minesize-4,
-				      y*minesize+minesize-3);
-			gdk_draw_line(widget->window,
-				      widget->style->black_gc,
-				      x*minesize+3,
-				      y*minesize+2,
-				      x*minesize+minesize-3,
-				      y*minesize+minesize-4);
-			gdk_draw_line(widget->window,
-				      widget->style->black_gc,
-				      x*minesize+2,
-				      y*minesize+minesize-4,
-				      x*minesize+minesize-4,
-				      y*minesize+2);
-			gdk_draw_line(widget->window,
-				      widget->style->black_gc,
-				      x*minesize+3,
-				      y*minesize+minesize-3,
-				      x*minesize+minesize-3,
-				      y*minesize+3);
-		}
+			int x1 = x*minesize + 0.1*minesize;
+			int y1 = y*minesize + 0.1*minesize;
+			int x2 = x*minesize + 0.9*minesize;
+			int y2 = y*minesize + 0.9*minesize;
 
+			gdk_draw_line (widget->window,
+				       mfield->thick_line,
+				       x1, y1, x2, y2);
+			gdk_draw_line (widget->window,
+				       mfield->thick_line,
+				       x1, y2, x2, y1);
+		}
 	} else if (mfield->lose && mfield->mines[c].mined) {
 		gdk_draw_pixbuf (widget->window, NULL,
 				 mfield->mine.scaledpixbuf, 0, 0, 
@@ -1004,6 +999,7 @@ static void gtk_minefield_init (GtkMineField *mfield)
         mfield->mine.pixbuf = NULL;
 	mfield->question.pixbuf = NULL;
 	mfield->grand = g_rand_new ();
+	mfield->thick_line = NULL;
 }
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
