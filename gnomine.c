@@ -531,12 +531,12 @@ main (int argc, char *argv[])
 
 	gnome_score_init("gnomine");
 
-	client = gnome_client_new_default ();
-	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
-			    GTK_SIGNAL_FUNC (save_state), argv[0]);
-
         gnome_init_with_popt_table("gnomine", VERSION, argc, argv,
 				   options, 0, NULL);
+
+	client = gnome_master_client ();
+	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
+			    GTK_SIGNAL_FUNC (save_state), argv[0]);
 
 	if (xpos > 0 || ypos > 0)
 	  gtk_widget_set_uposition (window, xpos, ypos);
