@@ -1,14 +1,30 @@
 <?xml version="1.0" standalone="no"?>
 <omf>
-  <resource>
-    <title>
-      GNOME Mines Manual
-    </title>
-    <subject>
-      <category>GNOME|Games</category>
-    </subject>
-    <format mime="text/xml"/>
-    <identifier url="gnome-mines.xml"/>
-    <language code="C"/>
-  </resource>
-</omf>
+       <resource>
+       <creator>
+    tkriehle@citilink.com (Tim Riehle)
+   </creator>
+     <maintainer>
+    chris@wilddev.net (Chris Lyttle)
+   </maintainer>
+     <title>
+     GNOME Mines Manual
+   </title>
+     <date>
+    2002-05-05
+   </date>
+     <version identifier="2.0" date="2002-05-05" description="Updated to full OMF format"/>
+     <subject category="GNOME|Games"/>
+     <description>
+    GNOME Mines is a variation of the popular logic puzzle minesweeper.
+   </description>
+     <type>
+     user's guide
+   </type>
+     <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
+     <identifier url="file://usr/share/gnome/help/gnomine/C/gnome-mines.xml"/>
+     <language code="C"/>
+     <relation seriesid="54d3211e-6006-11d6-9a4c-97ceaf12a926"/>
+     <rights type="GNU FDL" license.version="1.1" holder="Tim Riehle"/>
+     </resource>
+     </omf>
