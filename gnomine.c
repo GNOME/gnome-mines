@@ -75,29 +75,9 @@ void set_flabel(GtkMineField *mfield)
 }
 
 void
-show_scores ( gchar *level, guint pos )
+show_scores (gchar *level, guint pos)
 {
- GtkWidget *hs;
- GdkColor ctitle = {0, 0, 0, 65535};
- GdkColor col = {0, 65535, 0, 0};
- gchar **names = NULL;
- gfloat *scores = NULL;
- time_t *scoretimes = NULL;
- gint top;
- int i;
-
- top = gnome_score_get_notable("gnomine", level, &names, &scores, &scoretimes);
-
- hs = gnome_scores_new(top, names, scores, scoretimes, 0);
- gnome_scores_set_logo_label (GNOME_SCORES(hs), _("Gnome Mines"), 0, 
-			      &ctitle);
- if(pos)
-   gnome_scores_set_color(GNOME_SCORES(hs), pos-1, &col);
-
- gtk_widget_show (hs);
- gnome_string_array_free(names);
- g_free(scores);
- g_free(scoretimes);
+	gnome_scores_display (_("Gnome mines"), "gnomine", level, pos);
 }
 
 void top_ten(GtkWidget *widget, gpointer data)
