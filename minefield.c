@@ -113,7 +113,7 @@ static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
 	if (signp->preimage == NULL) {
 		GError *error = NULL;
-		signp->preimage = games_preimage_new_from_uri (file, &error);
+		signp->preimage = games_preimage_new_from_file (file, &error);
 		if (signp->preimage == NULL)
 			g_error (error->message);
 	} else {
