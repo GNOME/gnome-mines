@@ -1,3 +1,8 @@
+2001-12-30  Juan Pablo Mendoza <jpablo@gnome.org>
+
+	* Makefile.am:
+	* gnomine.c: Update to work with games-clock.
+
 2001-12-19  Seth Nickell  <snickell@stanford.edu>
 
 	* Makefile.am:

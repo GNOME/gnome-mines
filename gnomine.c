@@ -12,7 +12,7 @@
 #include <string.h>
 
 #include "minefield.h"
-#include "clock.h"
+#include "games-clock.h"
 
 #include "face-worried.xpm"
 #include "face-smile.xpm"
@@ -91,8 +91,8 @@ void top_ten(GtkWidget *widget, gpointer data)
 
 void new_game(GtkWidget *widget, gpointer data)
 {
-        clock_stop(CLOCK(clk));
-	clock_set_seconds(CLOCK(clk), 0);
+        games_clock_stop(GAMES_CLOCK(clk));
+	games_clock_set_seconds(GAMES_CLOCK(clk), 0);
 
         show_face(pm_smile);
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
@@ -105,13 +105,13 @@ void new_game(GtkWidget *widget, gpointer data)
 
 void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
-	if (CLOCK(clk)->timer_id == -1)
+	if (GAMES_CLOCK(clk)->timer_id == -1)
 		return;
 
 	gtk_widget_hide (mfield);
 	gtk_widget_show (rbutton);
 
-	clock_stop(CLOCK(clk)); 
+	games_clock_stop(GAMES_CLOCK(clk)); 
 }
 
 void resume_game_cb (GtkButton *widget, gpointer data)
@@ -119,21 +119,21 @@ void resume_game_cb (GtkButton *widget, gpointer data)
 	gtk_widget_hide (rbutton);
 	gtk_widget_show (mfield);
 
-	clock_start(CLOCK(clk));
+	games_clock_start(GAMES_CLOCK(clk));
 }
 
 void marks_changed(GtkWidget *widget, gpointer data)
 {
         set_flabel(GTK_MINEFIELD(widget));
 
-	clock_start(CLOCK(clk));
+	games_clock_start(GAMES_CLOCK(clk));
 }
 
 void lose_game(GtkWidget *widget, gpointer data)
 {
         show_face(pm_sad);
 
-        clock_stop(CLOCK(clk));
+        games_clock_stop(GAMES_CLOCK(clk));
 }
 
 void win_game(GtkWidget *widget, gpointer data)
@@ -143,19 +143,19 @@ void win_game(GtkWidget *widget, gpointer data)
         gchar buf[64];
 
 
-        clock_stop(CLOCK(clk));
+        games_clock_stop(GAMES_CLOCK(clk));
 
         show_face(pm_win);
 
 	if(fsize<3) {
-	    score = (gfloat) (CLOCK(clk)->stopped / 60) + 
-		    (gfloat) (CLOCK(clk)->stopped % 60) / 100;
+	    score = (gfloat) (GAMES_CLOCK(clk)->stopped / 60) + 
+		    (gfloat) (GAMES_CLOCK(clk)->stopped % 60) / 100;
 
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, FALSE);
 	} else {
 	    score = ((nmines * 100) / (xsize * ysize)) /
-		    (gfloat) (CLOCK(clk)->stopped); 
+		    (gfloat) (GAMES_CLOCK(clk)->stopped); 
 
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, TRUE);
@@ -167,7 +167,7 @@ void look_cell(GtkWidget *widget, gpointer data)
 {
         show_face(pm_worried);
 
-        clock_start(CLOCK(clk));
+        games_clock_start(GAMES_CLOCK(clk));
 }
 
 void unlook_cell(GtkWidget *widget, gpointer data)
@@ -767,7 +767,7 @@ main (int argc, char *argv[])
 			 2, 3, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(label);
 
-        clk = clock_new();
+        clk = games_clock_new();
 	gtk_table_attach(GTK_TABLE(status_table), clk,
 		3, 4, 0, 1, 0, 0, 3 ,3);
 	gtk_widget_show(clk);

@@ -3,7 +3,9 @@ Gamesdir = $(datadir)/applications
 
 SUBDIRS = help
 
-INCLUDES = $(GNOME_GAMES_CFLAGS)		\
+INCLUDES = \
+	-I$(top_srcdir)/libgames-support \
+	$(GNOME_GAMES_CFLAGS)		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)	
 	
@@ -12,12 +14,11 @@ bin_PROGRAMS = gnomine
 gnomine_SOURCES =	\
 	gnomine.c	\
 	minefield.h	\
-	minefield.c	\
-	clock.c		\
-	clock.h
+	minefield.c
 
 gnomine_LDADD = \
 	$(GNOME_GAMES_LIBS) \
+	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
