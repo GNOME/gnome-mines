@@ -80,14 +80,17 @@ static void gtk_minefield_realize(GtkWidget *widget)
         widget->style = gtk_style_attach(widget->style, widget->window);
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
-	mfield->marked_sign = gdk_pixmap_create_from_xpm_d (widget->window,
-							    &mfield->marked_sign_mask,
+	mfield->flag.pixmap = gdk_pixmap_create_from_xpm_d (widget->window,
+							    &mfield->flag.mask,
 							    &widget->style->bg[GTK_STATE_NORMAL],
 							    flag_xpm);
-	mfield->mine_sign = gdk_pixmap_create_from_xpm_d (widget->window,
-							  &mfield->mine_sign_mask,
+        gdk_window_get_size(mfield->flag.pixmap, &(mfield->flag.width), &(mfield->flag.height));
+  
+	mfield->mine.pixmap = gdk_pixmap_create_from_xpm_d (widget->window,
+							  &mfield->mine.mask,
 							  &widget->style->bg[GTK_STATE_NORMAL],
 							  mine_xpm);
+        gdk_window_get_size(mfield->mine.pixmap, &(mfield->mine.width), &(mfield->mine.height));
 
 	mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
 					    gtk_widget_get_colormap (widget));
@@ -168,10 +171,18 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 					mfield->numstr[n].text);
 		}
 	} else if (mfield->mines[c].marked == 1) {
+		gdk_gc_set_clip_mask(widget->style->black_gc,
+					     mfield->flag.mask);
+		gdk_gc_set_clip_origin(widget->style->black_gc,
+					       x * minesize + (minesize - mfield->flag.width) / 2, 
+					       y * minesize + (minesize - mfield->flag.height) / 2);
 		gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
-				 mfield->marked_sign,
-				 0, 0, x*minesize+3, y*minesize+3, -1, -1);
+				 mfield->flag.pixmap,
+				 0, 0, x * minesize + (minesize - mfield->flag.width) / 2, 
+				       y * minesize + (minesize - mfield->flag.height) / 2, -1, -1);
+	        gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
+	  
 		if (mfield->lose && mfield->mines[c].mined != 1) {
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
@@ -199,19 +210,21 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 				      y*minesize+3);
 		}
 	} else if ( mfield->lose && mfield->mines[c].mined) {
-		if (mfield->mine_sign_mask) {
+		if (mfield->mine.mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc,
-					     mfield->mine_sign_mask);
+					     mfield->mine.mask);
 			gdk_gc_set_clip_origin(widget->style->black_gc,
-					       x*minesize+3, y*minesize+3);
+					       x*minesize + (minesize - mfield->mine.width) / 2, 
+					       y*minesize + (minesize - mfield->mine.height) / 2);
 		}
-		
-		gdk_draw_pixmap (widget->window,
+
+	        gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
-				 mfield->mine_sign,
-				 0, 0, x*minesize+3, y*minesize+3, -1, -1);
+				 mfield->mine.pixmap,
+				 0, 0, x * minesize + (minesize - mfield->mine.width) / 2,
+				       y * minesize + (minesize - mfield->mine.height) / 2, -1, -1);
 		
-		if (mfield->marked_sign_mask) {
+		if (mfield->flag.mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
 		}
 	}

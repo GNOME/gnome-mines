@@ -28,6 +28,17 @@ struct _Mine {
 
 typedef struct _Mine mine;
 
+typedef struct _Sign sign;
+  
+struct _Sign
+    {
+	GdkPixmap *pixmap;
+	GdkBitmap *mask;
+      
+        gint width;
+        gint height;
+    };
+  
 struct _GtkMineField {
         GtkWidget widget;
         guint xsize, ysize;
@@ -42,10 +53,8 @@ struct _GtkMineField {
         gint lose;
         gint win;
 	gint multi_mode;
-	GdkPixmap *marked_sign;
-	GdkBitmap *marked_sign_mask;
-	GdkPixmap *mine_sign;
-	GdkBitmap *mine_sign_mask;
+        sign flag;
+        sign mine;
         GdkFont   *font;
 	GdkColorContext *cc;
 	struct {

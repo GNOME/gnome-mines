@@ -2,7 +2,7 @@
 static char *face_cool_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 234 2",
-"   None",
+"   c None",
 ".  c #d8d7cc",
 "X  c #e2da9c",
 "o  c #e9da6f",

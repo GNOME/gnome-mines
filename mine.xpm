@@ -1,19 +1,21 @@
 /* XPM */
 static char *mine_xpm[] = {
 /* columns rows colors chars-per-pixel */
-"11 11 2 1",
+"12 12 3 1",
 "  c Black",
 "X c None",
+"# c White",
 /* pixels */
-"XXXXX XXXXX",
-"X         X",
-"X    XXX  X",
-"X     XXX X",
-"          X",
-"           ",
-"X         X",
-"X         X",
-"X         X",
-"X         X",
-"XXXXX XXXXX"
+"XXXXX  XXXXX",
+"XXXXX  XXXXX",
+"XXX      XXX",
+"XX   ###  XX",
+"XX    ### XX",
+"            ",
+"            ",
+"XX        XX",
+"XX        XX",
+"XXX      XXX",
+"XXXXX  XXXXX",
+"XXXXX  XXXXX",
 };

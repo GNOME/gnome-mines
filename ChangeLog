@@ -1,5 +1,14 @@
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
+        * minefield.h: Added sign structure to unclutter the GtkMineField
+	               struct.
+	* minefield.c (gtk_mine_draw): Mines and flags are now centered.
+        * minefield.c (gtk_mine_draw): Added flag mask declaration.
+	* flag.xpm mine.xpm: Pixmaps are sharper now.
+	* face*.xpm: Fixed faces transparencies.
+
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
         * minefield.c (gtk_minefield_set_mines): font position is forced
 	              by setting numstr[0].gc to zero.
 	

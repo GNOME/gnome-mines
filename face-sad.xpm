@@ -2,7 +2,7 @@
 static char *face_sad_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 242 2",
-"   None",
+"   c None",
 ".  c #dad6cc",
 "X  c #e2da9c",
 "o  c #e8da74",

@@ -2,7 +2,7 @@
 static char *face_worried_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 237 2",
-"   None",
+"   c None",
 ".  c #c3c2bc",
 "X  c #a9a9aa",
 "o  c #777672",

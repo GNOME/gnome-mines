@@ -1,20 +1,20 @@
 /* XPM */
 static char *flag_xpm[] = {
 /* columns rows colors chars-per-pixel */
-"11 11 3 1",
+"12 11 3 1",
 "  c Black",
 ". c #fe0204",
 "X c None",
 /* pixels */
-"XXXX... XXX",
-"XX..... XXX",
-"....... XXX",
-"....... XXX",
-"XX..... XXX",
-"XXXX... XXX",
-"XXXXX   XXX",
-"XXXXX   XXX",
-"XXXXX   XXX",
-"XXXX      X",
-"XX         "
+"XXXXXX. XXXX",
+"XXXX... XXXX",
+"XX..... XXXX",
+"....... XXXX",
+"XX..... XXXX",
+"XXXX... XXXX",
+"XXXXXX  XXXX",
+"XXXXXX  XXXX",
+"XXXXXX  XXXX",
+"XXXX      XX",
+"XX          "
 };

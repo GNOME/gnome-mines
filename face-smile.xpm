@@ -2,7 +2,7 @@
 static char *face_smile_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 245 2",
-"   None",
+"   c None",
 ".  c #d5d5d0",
 "X  c #cdcdcc",
 "o  c #c6c6bc",

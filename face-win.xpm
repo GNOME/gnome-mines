@@ -2,7 +2,7 @@
 static char *face_win_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 234 2",
-"   None",
+"   c None",
 ".  c #d8d7cf",
 "X  c #e1daa1",
 "o  c #ead977",
