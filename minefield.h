@@ -52,6 +52,7 @@ struct _GtkMineField {
 		gint dx, dy;
 		GdkGC *gc;
 	} numstr[9];
+	guint minesize;
 };
 
 struct _GtkMineFieldClass
@@ -69,8 +70,9 @@ guint      gtk_minefield_get_type (void);
 GtkWidget* gtk_minefield_new      (void);
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize);
-void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount);
+void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize);
 void gtk_minefield_restart(GtkMineField *mfield);
+extern guint minesize;
 
 enum {
 	MARKS_CHANGED_SIGNAL,

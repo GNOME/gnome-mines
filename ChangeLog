@@ -1,3 +1,8 @@
+
+Donnie Barnes <djb@redhat.com>:
+
+* Added resizing of squares
+
 Mon Feb 16 19:58:06 KST 1998  Changwoo Ryu  <cwryu@adam.kaist.ac.kr>
 
 	* Makefile.am (INCLUDES): Define GNOMELOCALEDIR.

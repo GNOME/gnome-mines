@@ -6,8 +6,6 @@
 #include "flag.xpm"
 #include "mine.xpm"
 
-#define MINESIZE 17
-
 static struct {
 	gint x;
 	gint y;
@@ -102,16 +100,16 @@ static void gtk_minefield_size_allocate(GtkWidget *widget,
 	if (GTK_WIDGET_REALIZED(widget)) {
 		gdk_window_move_resize(widget->window,
 				       allocation->x, allocation->y,
-				       GTK_MINEFIELD(widget)->xsize*MINESIZE,
-				       GTK_MINEFIELD(widget)->ysize*MINESIZE);
+				       GTK_MINEFIELD(widget)->xsize*minesize,
+				       GTK_MINEFIELD(widget)->ysize*minesize);
 	}
 }
 
 static void gtk_minefield_size_request(GtkWidget *widget,
 				       GtkRequisition *requisition)
 {
-        requisition->width  = GTK_MINEFIELD(widget)->xsize*MINESIZE;
-	requisition->height = GTK_MINEFIELD(widget)->ysize*MINESIZE;
+        requisition->width  = GTK_MINEFIELD(widget)->xsize*minesize;
+	requisition->height = GTK_MINEFIELD(widget)->ysize*minesize;
 }
 
 static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
@@ -129,68 +127,68 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	}
 	
 	gdk_window_clear_area(widget->window,
-			      x*MINESIZE, y*MINESIZE,
-			      MINESIZE,
-			      MINESIZE);
+			      x*minesize, y*minesize,
+			      minesize,
+			      minesize);
 
 	gtk_draw_shadow(widget->style, widget->window,
 			GTK_WIDGET_STATE (widget), shadow_type,
-			x*MINESIZE, y*MINESIZE,
-			MINESIZE,
-			MINESIZE);
+			x*minesize, y*minesize,
+			minesize,
+			minesize);
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
 		if ((n = mfield->mines[c].neighbours) != 0) {
 			gdk_draw_string(widget->window,
 					mfield->font,
 					mfield->numstr[n].gc,
-					x*MINESIZE+mfield->numstr[n].dx,
-					y*MINESIZE+mfield->numstr[n].dy,
+					x*minesize+mfield->numstr[n].dx,
+					y*minesize+mfield->numstr[n].dy,
 					mfield->numstr[n].text);
 		}
 	} else if (mfield->mines[c].marked == 1) {
 		gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
 				 mfield->marked_sign,
-				 0, 0, x*MINESIZE+3, y*MINESIZE+3, -1, -1);
+				 0, 0, x*minesize+3, y*minesize+3, -1, -1);
 		if (mfield->lose && mfield->mines[c].mined != 1) {
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
-				      x*MINESIZE+2,
-				      y*MINESIZE+3,
-				      x*MINESIZE+MINESIZE-4,
-				      y*MINESIZE+MINESIZE-3);
+				      x*minesize+2,
+				      y*minesize+3,
+				      x*minesize+minesize-4,
+				      y*minesize+minesize-3);
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
-				      x*MINESIZE+3,
-				      y*MINESIZE+2,
-				      x*MINESIZE+MINESIZE-3,
-				      y*MINESIZE+MINESIZE-4);
+				      x*minesize+3,
+				      y*minesize+2,
+				      x*minesize+minesize-3,
+				      y*minesize+minesize-4);
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
-				      x*MINESIZE+2,
-				      y*MINESIZE+MINESIZE-4,
-				      x*MINESIZE+MINESIZE-4,
-				      y*MINESIZE+2);
+				      x*minesize+2,
+				      y*minesize+minesize-4,
+				      x*minesize+minesize-4,
+				      y*minesize+2);
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
-				      x*MINESIZE+3,
-				      y*MINESIZE+MINESIZE-3,
-				      x*MINESIZE+MINESIZE-3,
-				      y*MINESIZE+3);
+				      x*minesize+3,
+				      y*minesize+minesize-3,
+				      x*minesize+minesize-3,
+				      y*minesize+3);
 		}
 	} else if ( mfield->lose && mfield->mines[c].mined) {
 		if (mfield->mine_sign_mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc,
 					     mfield->mine_sign_mask);
 			gdk_gc_set_clip_origin(widget->style->black_gc,
-					       x*MINESIZE+3, y*MINESIZE+3);
+					       x*minesize+3, y*minesize+3);
 		}
 		
 		gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
 				 mfield->mine_sign,
-				 0, 0, x*MINESIZE+3, y*MINESIZE+3, -1, -1);
+				 0, 0, x*minesize+3, y*minesize+3, -1, -1);
 		
 		if (mfield->marked_sign_mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
@@ -203,10 +201,10 @@ void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
 	guint x1, y1, x2, y2, x, y;
 
 	if (area) {
-		x1 = area->x/MINESIZE;
-		y1 = area->y/MINESIZE;
-		x2 = (area->x+area->width)/MINESIZE;
-		y2 = (area->y+area->height)/MINESIZE;
+		x1 = area->x/minesize;
+		y1 = area->y/minesize;
+		x2 = (area->x+area->width)/minesize;
+		y2 = (area->y+area->height)/minesize;
 	} else {
 		x1 = 0; y1 = 0;
 		x2 = mfield->xsize;
@@ -243,9 +241,9 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			mfield->numstr[i].text[0] = i+'0';
 			mfield->numstr[i].text[1] = '\0';
 			mfield->numstr[i].dx =
-				(MINESIZE-gdk_string_width(mfield->font,
+				(minesize-gdk_string_width(mfield->font,
 							   mfield->numstr[i].text))/2;
-			mfield->numstr[i].dy = (MINESIZE-mfield->font->ascent)/2
+			mfield->numstr[i].dy = (minesize-mfield->font->ascent)/2
 				+10;
 			mfield->numstr[i].gc = gdk_gc_new(GTK_WIDGET(mfield)->window);
 			color.pixel  = gnome_colors_get_pixel(num_colors[i][0], /* R */
@@ -458,8 +456,8 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 	if (mfield->lose || mfield->win) return FALSE;
 	
         if (!mfield->bdown) {
-                x = event->x/MINESIZE;
-                y = event->y/MINESIZE;
+                x = event->x/minesize;
+                y = event->y/minesize;
                 c = x+y*(mfield->xsize);
                 mfield->cdownx = x;
                 mfield->cdowny = y;
@@ -492,8 +490,8 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 	if (mfield->lose || mfield->win) return FALSE;
 
         if (event->button == mfield->bdown) {
-                x = event->x/MINESIZE;
-                y = event->y/MINESIZE;
+                x = event->x/minesize;
+                y = event->y/minesize;
 		if (x+y*(mfield->xsize) == mfield->cdown) {
                         switch (event->button) {
 			case 1: gtk_minefield_show(mfield, x, y);
@@ -586,8 +584,8 @@ static void gtk_minefield_init (GtkMineField *mfield)
         mfield->xsize = 0;
         mfield->ysize = 0;
         
-        GTK_WIDGET (mfield)->requisition.width = MINESIZE;
-        GTK_WIDGET (mfield)->requisition.height = MINESIZE;
+        GTK_WIDGET (mfield)->requisition.width = minesize;
+        GTK_WIDGET (mfield)->requisition.height = minesize;
 }
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
@@ -638,9 +636,10 @@ guint gtk_minefield_get_type ()
         return minefield_type;
 }
 
-void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount)
+void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 {
         mfield->mcount = mcount;
+        mfield->minesize = minesize;
 }
 
 static gulong random_seed;
