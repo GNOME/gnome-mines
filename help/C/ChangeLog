@@ -1,3 +1,7 @@
+2003-08-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.xml: Updated for 2.4, including some images.
+
 2003-01-11  Ross Burton  <ross@burtonini.com>
 
 	* gnomine.xml: Remove the use of "figure <xref linkend..." as that

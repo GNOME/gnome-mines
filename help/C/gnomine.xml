@@ -2,12 +2,12 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.0">
-  <!ENTITY manrevision "2.0">
+  <!ENTITY appversion "2.4">
+  <!ENTITY manrevision "2.4">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>GNOME Mines</application>">
   <!ENTITY appname "GNOME Mines">
-  <!ENTITY version "1.2.0">
+  <!ENTITY version "2.4">
 ]>
 
 <!-- 
@@ -133,7 +133,7 @@
       player to flag all mines hidden on the playing grid and to uncover
       all the remaining squares.  If the player mistakenly uncovers
       a square containing a mine the game is lost.  Winning games are
-      ranked by how quickly the play was completed.
+      ranked by how quickly the game was completed.
     </para>
   </sect1>
 
@@ -255,6 +255,11 @@
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
+      </para>
+      <para>
+      When the focus moves away from the <application>GNOME
+      Mines</application> window the game is paused and the playing
+      area hidden.
       </para>
     </sect2>
   
@@ -451,7 +456,29 @@
                              <interface>Preferences</interface> dialog,
                              as shown in <xref linkend="gnomine-preferences-fig"/>
                              This allows you to choose the size of the
-                             playing grid and the size of the squares.
+                             playing grid and the number of mines. You
+                             can either use one of the pre-defined
+                             sizes on the left or create your own by
+                             selecting
+                             <guimenuitem>custom</guimenuitem> and
+                             selecting the value you want on the
+                             right.
+                             <para>
+                             Also there is an option to use an extra
+                             "I'm not sure" flag with a question mark
+                             for squares you aren't sure about. These
+                             are there for your convenience and are
+                             treated as unflagged squares by the
+                             game. To mark a square in this way right
+                             click on a square already marked with a
+                             flag (i.e. right click twice). Clicking
+                             it again will clear it.
+                             </para>
+                             <para>
+                             All preferences are applied and saved the
+                             moment you change them. If you change the
+                             size of the grid, a new game is started.
+                             </para>
 
                        <!-- ==== Figure ==== -->
                        <figure id="gnomine-preferences-fig">
@@ -481,14 +508,14 @@
 	    <para>
 	       This menu contains:
 	       <itemizedlist>
-<!--		<listitem>
+		<listitem>
 		  <para>
 	            <menuchoice>
-		      <guimenuitem>Help</guimenuitem>
+		      <guimenuitem>Contents</guimenuitem>
 		     </menuchoice>
 	             &mdash; Bring up this help.
 	           </para>
-		</listitem> -->
+		</listitem>
 		<listitem>
 		  <para>
 	            <menuchoice>
@@ -505,7 +532,9 @@
                              in a pithy sentence then this menu item
                              is for you.  No rambling; no beating about the
                              bush. The <interface>About</interface> window
-                             tells it like it is.
+                             tells it like it is. In fact there is
+                             more words in this description than
+                             in the entire about box !
 	           </para>
 		</listitem>
 	      </itemizedlist>
