@@ -187,13 +187,20 @@ void verify_ranges (void)
 void
 about(GtkWidget *widget, gpointer data)
 {
-        GtkWidget *about;
+        static GtkWidget *about;
+
         const gchar *authors[] = {
 		N_("Code: Pista"),
 		N_("Faces: tigert"),
 		N_("Score: HoraPe"),
 		NULL
 	};
+
+	if (about) {
+		gdk_window_raise (about->window);
+		gdk_window_show (about->window);
+		return;
+	}
 
 #ifdef ENABLE_NLS
        {
@@ -207,6 +214,9 @@ about(GtkWidget *widget, gpointer data)
 				 (const char **)authors,
 				 _("Minesweeper clone"),
 				 NULL);
+	gtk_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
+			(gtk_widget_destroyed), &about);
+	gnome_dialog_set_parent (GNOME_DIALOG (about), GTK_WINDOW (window));
         gtk_widget_show (about);
 }
 

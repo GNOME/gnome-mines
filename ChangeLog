@@ -1,5 +1,10 @@
 1999-03-12  Ian Peters  <itp@gnu.org>
 
+	* gnomine.c (about): Now can only create one about dialog, which is
+	set_parented to the main window
+
+1999-03-12  Ian Peters  <itp@gnu.org>
+
 	* gnomine.c (lots of stuff): Moved gnomine to use a propbox for
 	configuration.
 
