@@ -36,7 +36,7 @@
 #define KEY_USE_QUESTION_MARKS "/apps/gnomine/use_question_marks"
 
 static GtkWidget *mfield;
-static GtkWidget *pref_dialog;
+static GtkWidget *pref_dialog = NULL;
 static GtkWidget *rbutton;
 static GtkWidget *ralign;
 static GConfClient *conf_client;
@@ -70,6 +70,9 @@ char *fsize2names[] = {
 	N_("Large"),
 	N_("Custom"),
 };
+
+static void create_preferences (void);
+
 
 static GtkWidget *
 image_widget_setup (char *name)
@@ -168,22 +171,24 @@ new_game (GtkWidget *widget, gpointer data)
 	set_flabel (GTK_MINEFIELD (mfield));
 
 	gtk_widget_hide (ralign);
-/*	gtk_widget_show (mfield); */
+	gtk_widget_show (mfield); 
 }
 
-static gint
+static gboolean
 configure_cb (GtkWidget *widget, GdkEventConfigure *event)
 {
-#if 0
-	/* FIXME: resize mines to fix window */
-	/* Need to resize mines when grid changes too */
-	gint mxsize, mysize, size;
-	mxsize = event->width / xsize;
-	mysize = event->height / ysize;
-	size = MIN (mxsize, mysize);
-	gconf_client_set_int (conf_client, KEY_MINESIZE,
-			      size, NULL);
-#endif
+	GtkMineField *mf = GTK_MINEFIELD (mfield);
+	gint size = MIN (event->width / mf->xsize, event->height / mf->ysize);
+
+	/* problem? configure_cb expands minefield to fit the window, so it
+	   does not allow you to reduce (in preferences) minefield smaller than
+	   the statusbar min width */
+	if (mf->minesize != size) {
+		if (pref_dialog == NULL)
+			create_preferences ();
+		/* make sure preferences dialog updates the minesize value */
+		gtk_spin_button_set_value (GTK_SPIN_BUTTON (sentry), size);
+	}
 	return FALSE;
 }
 
@@ -443,6 +448,8 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		use_question_marks = value ? gconf_value_get_bool (value) : TRUE;
 		gtk_minefield_set_use_question_marks(GTK_MINEFIELD(mfield), use_question_marks);
 	}
+	/* now window is resizable we need to shrink it when changing minesize etc */
+	gtk_window_resize (GTK_WINDOW (window), 1, 1);
 }
 
 static void
@@ -521,7 +528,7 @@ use_question_toggle_cb (GtkCheckButton *check, gpointer data)
 }
 
 static void
-preferences_callback (GtkWidget *widget, gpointer data)
+create_preferences (void)
 {
 	GtkWidget *table;
 	GtkWidget *frame;
@@ -531,11 +538,6 @@ preferences_callback (GtkWidget *widget, gpointer data)
 	GtkWidget *table2;
 	GtkWidget *label2;
         
-	if (pref_dialog) {
-                gtk_window_present (GTK_WINDOW (pref_dialog));
-		return;
-        }
-
 	table = gtk_table_new (2, 3, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
 	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
@@ -670,12 +672,21 @@ preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_container_add (GTK_CONTAINER(GTK_DIALOG(pref_dialog)->vbox),
 			table);
 
-	g_signal_connect (GTK_OBJECT (pref_dialog), "destroy",
-			GTK_SIGNAL_FUNC (gtk_widget_destroyed), &pref_dialog);
-	g_signal_connect (GTK_OBJECT (pref_dialog), "response",
-			GTK_SIGNAL_FUNC (gtk_widget_destroy), NULL);
+	g_signal_connect (G_OBJECT (pref_dialog), "destroy",
+			  G_CALLBACK (gtk_widget_destroyed), &pref_dialog);
+	g_signal_connect (G_OBJECT (pref_dialog), "response",
+			  G_CALLBACK (gtk_widget_hide), NULL);
 
-	gtk_widget_show_all (pref_dialog);
+	/* show all child widgets, but do not display the dialog (yet) */
+	gtk_widget_show_all (GTK_WIDGET (table));
+}
+
+static void
+preferences_callback (GtkWidget *widget, gpointer data)
+{
+	if (pref_dialog == NULL)
+		create_preferences ();
+	gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
 GnomeUIInfo gamemenu[] = {
@@ -849,8 +860,7 @@ main (int argc, char *argv[])
 
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
-	/* FIXME: this should be resizable */
-	gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
 	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_NEVER));
 	gnome_app_set_statusbar (GNOME_APP (window), GTK_WIDGET (appbar));
@@ -960,6 +970,9 @@ main (int argc, char *argv[])
 	gtk_widget_hide (pm_sad);
 	gtk_widget_hide (pm_cool);
 	gtk_widget_hide (pm_worried);
+
+	/* shrink the window to recover the space that ralign was using */
+	gtk_window_resize (GTK_WINDOW (window), 1, 1);
 	
         gtk_main ();
 

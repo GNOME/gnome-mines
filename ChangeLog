@@ -1,3 +1,22 @@
+2003-06-24  Steve Chaplin   <stevech1097@yahoo.com.au>
+
+       * gnomine.c (create_preferences): New function to create preferences
+       dialog, but not display it.
+       (preferences_callback): Call create_preferences() to create the
+       preferences dialog, if it does not already exist.
+       (configure_cb): Allow user to manually increase the minesize. It uses
+       the preferences spin button to keep the preferences minesize value
+       in sync with the real minesize value.
+       (main): Make main window resizable.
+       (gconf_key_change_cb): Shrink the main window when the minefield
+       reduces in size.
+       (new_game): Uncommented gtk_widget_show(minefield) because if you
+       are playing a game and open preferences - the "Press to resume" 
+       button pops up. If you change the field size, the minefield remains
+       hidden and is not displayed.
+       (main): Shrink the main window to recover the space that ralign was usin
+       before it was hidden.
+ 
 2003-06-24  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (install-data-local): Give the high score files the
