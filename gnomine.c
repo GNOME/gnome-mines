@@ -181,7 +181,12 @@ show_scores (gchar *level, guint pos)
 					       GAMES_SCORES_STYLE_TIME);
 	}
 
-	games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), pos);
+	if (pos > 0) {
+		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
+						   level);
+		games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), 
+						 pos);
+	}
 
 	gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_hide (dialog);

@@ -1,3 +1,8 @@
+2005-02-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (show_scores): Bug 168270. Show the correct high score 
+	category when we win a game.
+
 2005-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_get_type): Fill out the GTypeInfo
