@@ -1,6 +1,7 @@
 [Desktop Entry]
+Name=Gnome Mines
+Comment=Gnome Mines program
 Exec=gnomine
 Icon=gnome-gnomine.xpm
-Info=Gnome Mines program
 Terminal=0
 Type=Application
