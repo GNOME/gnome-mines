@@ -32,6 +32,7 @@
 #define KEY_NMINES "/apps/gnomine/geometry/nmines"
 #define KEY_MINESIZE "/apps/gnomine/geometry/minesize"
 #define KEY_MODE "/apps/gnomine/geometry/mode"
+#define KEY_USE_QUESTION_MARKS "/apps/gnomine/use_question_marks"
 
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog;
@@ -44,6 +45,7 @@ GtkWidget *xentry;
 GtkWidget *yentry;
 GtkWidget *mentry;
 GtkWidget *sentry;
+GtkWidget *question_toggle;
 GtkWidget *mbutton;
 GtkWidget *plabel;
 GtkWidget *cframe;
@@ -54,6 +56,7 @@ gint ysize = -1, xsize = -1;
 gint nmines = -1;
 gint fsize = -1;
 gint minesize = -1;
+gboolean use_question_marks = TRUE;
 
 GnomeUIInfo gamemenu[];
 GnomeUIInfo settingsmenu[];
@@ -420,6 +423,10 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 			new_game (mfield, NULL);
 		}
 	}
+	if (strcmp (key, KEY_USE_QUESTION_MARKS) == 0) {
+		use_question_marks = value ? gconf_value_get_bool (value) : TRUE;
+		gtk_minefield_set_use_question_marks(GTK_MINEFIELD(mfield), use_question_marks);
+	}
 }
 
 static void
@@ -488,6 +495,14 @@ minesize_spin_cb (GtkSpinButton *spin, gpointer data)
 
 }
 
+static void
+use_question_toggle_cb (GtkCheckButton *check, gpointer data)
+{
+	gboolean use_marks = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check));
+	gconf_client_set_bool (conf_client, KEY_USE_QUESTION_MARKS,
+				use_marks, NULL);
+}
+
 static void preferences_callback (GtkWidget *widget, gpointer data)
 {
 	GtkWidget *table;
@@ -504,7 +519,7 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 		return;
         }
 
-	table = gtk_table_new (2, 2, FALSE);
+	table = gtk_table_new (2, 3, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
 	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
 	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
@@ -618,6 +633,15 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 
 	gtk_table_attach (GTK_TABLE (table), hbox, 0, 1, 1, 2, GTK_EXPAND |
 			GTK_FILL, 0, 0, 0);
+
+	question_toggle = gtk_check_button_new_with_label(_("Use the unknown flag."));
+	g_signal_connect(GTK_OBJECT(question_toggle), "toggled",
+			GTK_SIGNAL_FUNC (use_question_toggle_cb), NULL);
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(question_toggle), use_question_marks);
+	gtk_widget_show(question_toggle);
+	
+	gtk_table_attach (GTK_TABLE (table), question_toggle, 0, 2, 2, 3, GTK_EXPAND | GTK_FILL, 0, 0, 0);
+
 
 	pref_dialog = gtk_dialog_new_with_buttons (_("GNOME Mines Preferences"),
 			GTK_WINDOW (window),
@@ -789,6 +813,10 @@ main (int argc, char *argv[])
 		fsize = gconf_client_get_int (conf_client,
 				KEY_MODE,
 				NULL);
+	use_question_marks = gconf_client_get_bool(conf_client, 
+				KEY_USE_QUESTION_MARKS,
+				NULL);
+	
 	verify_ranges ();
 
 #define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
@@ -868,6 +896,9 @@ main (int argc, char *argv[])
         gtk_container_add (GTK_CONTAINER (ralign), rbutton);
 
         setup_mode (mfield, fsize);
+
+	gtk_minefield_set_use_question_marks(GTK_MINEFIELD(mfield),
+					     use_question_marks);
 	
 	g_signal_connect(GTK_OBJECT(mfield), "marks_changed",
 			   GTK_SIGNAL_FUNC(marks_changed), NULL);

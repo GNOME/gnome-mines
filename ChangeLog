@@ -1,3 +1,18 @@
+2003-06-12  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c:
+	* gnomine.schemas.in: Fix up Stephen's patch since we don't use
+	question marks anymore. Also default to disabled since I have
+	never, ever, seen anyone use them.
+
+2003-06-12  Stephen Depooter  <sbdep@woot.net>
+
+	* minefield.h:
+	* minefield.c:
+	* gnomine.schemas.in
+	* gnomine.c: Added preference to use question marks or not.  The
+	default is to have them enabled.
+ 
 2003-06-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c : i18n fixes from Christian Neumair (bug #114875).

@@ -641,7 +641,11 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 		mfield->flag_count++;
 		break;
 	case MINE_MARKED:
-		mfield->mines[c].marked = MINE_QUESTION;
+		if (mfield->use_question_marks) {
+			mfield->mines[c].marked = MINE_QUESTION;
+		} else {
+			mfield->mines[c].marked = MINE_NOMARK;
+		}
 		mfield->flag_count--;
 		break;
 	case MINE_QUESTION:
@@ -1080,3 +1084,10 @@ void gtk_minefield_restart(GtkMineField *mfield)
 		gtk_minefield_draw(mfield, NULL);
 }
 
+void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_question_marks)
+{
+	g_return_if_fail(mfield != NULL);
+	g_return_if_fail(GTK_IS_MINEFIELD(mfield));
+	
+	mfield->use_question_marks = use_question_marks;
+}

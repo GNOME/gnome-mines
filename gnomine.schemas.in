@@ -61,6 +61,19 @@
       </locale>
       </schema>
 
+     <schema>
+     <key>/schemas/apps/gnomine/use_question_marks</key>
+     <applyto>/apps/gnomine/use_question_marks</applyto>
+     <owner>gnomine</owner>
+     <type>bool</type>
+     <default>FALSE</default>
+     <locale name="C">
+     <short>Use the unknown flag</short>
+     <long>Set to true to be able to mark squares as unknown.</long>
+     </locale>
+     </schema>
+								 
+								 
   </schemalist>
   
 </gconfschemafile>
