@@ -85,18 +85,22 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
-	GdkPixbuf *image, *scaledimage;;
+	GdkPixbuf *scaledimage;
 
-	/* TODO: catch GError */
-	image = gdk_pixbuf_new_from_file (file, NULL);
-        scaledimage = gdk_pixbuf_scale_simple (image, minesize - 2, minesize - 2,
+	if (signp->pixbuf == NULL) {
+		GError *error = NULL;
+		signp->pixbuf = gdk_pixbuf_new_from_file (file, &error);
+		if (signp->pixbuf == NULL)
+			g_error (error->message);
+	}	
+
+        scaledimage = gdk_pixbuf_scale_simple (signp->pixbuf, minesize - 2, minesize - 2,
                                                GDK_INTERP_BILINEAR);
         
 	gdk_pixbuf_render_pixmap_and_mask (scaledimage, &signp->pixmap,
 					   &signp->mask, 127);
 
         g_object_unref (scaledimage);
-	g_object_unref (image);
 	gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
 }
 
@@ -942,6 +946,10 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	mfield->mines = NULL;
 	mfield->started = FALSE;
 	mfield->cdown = -1;
+
+	mfield->flag.pixbuf = NULL;
+        mfield->mine.pixbuf = NULL;
+	mfield->question.pixbuf = NULL;
 }
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)

@@ -1,3 +1,16 @@
+2003-07-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_init): Made the assignments from
+	Steve's patch slightly more explicit. This is just a matter of
+	style and pedanticism.
+
+2003-07-24  Steve Chaplin
+	* minefield.h: Add a field to struct _Sign to hold a pixbuf.
+
+	* minefield.c (_setup_sign): Check for error when reading pixbuf.
+	Read each pixbuf from file just once, not at every expose event.
+	(gtk_minefield_init): Initialise the pixbuf pointers,
+
 2003-07-22  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.desktop.in (_Comment): Typo, see bug #117235.
