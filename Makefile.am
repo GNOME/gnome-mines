@@ -4,8 +4,8 @@ Gamesdir = $(datadir)/applications
 SUBDIRS = help
 
 INCLUDES = \
-	-Wall						\
 	-I$(top_srcdir)/libgames-support		\
+	$(WARN_CFLAGS)					\
 	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	-DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED \
