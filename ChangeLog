@@ -1,3 +1,8 @@
+2002-11-25  Ross Burton  <ross@burtonini.com>
+
+	* Makefile.am: Fixed the GConf install location, thanks to Loz
+	<gnome2@flower.powernet.co.uk>. Closes #99393.
+
 2002-11-18  Fernando Herrera <fherrera@onirica.com>
 
 	* gnomine.desktop.in: add X-GNOME-BUGZILLA stuff
