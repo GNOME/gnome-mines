@@ -1,3 +1,9 @@
+2004-08-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (fill_score_list): Change the high score reporting to
+	avoid a rounding error which could drop a second from the
+	times. See bug #149549.
+
 2004-07-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Fix memory leaks in the hint code (bug #146267).

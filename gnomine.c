@@ -27,6 +27,7 @@
 #include <gnome.h>
 #include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
+#include <math.h>
 #include <string.h>
 
 #include "minefield.h"
@@ -201,9 +202,11 @@ fill_score_list (GtkListStore *list, gint level)
 	name = names;
 	score = scores;
 	while (n--) {
+		int intscore;
+
+		intscore = rint (100*(*score));
 		/* Translators: this is for a minutes, seconds time display. */
-		ss = g_strdup_printf (_("%dm %ds"), (int)(100*(*score))/100, 
-				      (int)(100*(*score))%100);
+		ss = g_strdup_printf (_("%dm %ds"), intscore/100, intscore%100);
 		gtk_list_store_append (list, &iter);
 		gtk_list_store_set (list, &iter, 0, *name, 1, ss, -1);
 		g_free (ss);
