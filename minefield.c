@@ -1104,7 +1104,8 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	guint *case1list, *case2list, *case3list;
 	guint *case1ptr, *case2ptr, *case3ptr;
 	gint size;
-	
+	gint retval;
+
 	g_return_val_if_fail (mfield != NULL, MINEFIELD_HINT_NO_GAME);
 	g_return_val_if_fail (GTK_IS_MINEFIELD(mfield), MINEFIELD_HINT_NO_GAME);
 	if (!mfield->in_play)
@@ -1132,14 +1133,12 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	 * Is it me ?
 	 * Or is it just pathological ?
 	 */
-	
+
 	size = mfield->xsize*mfield->ysize;
 	case1ptr = case1list = g_malloc (size*sizeof(guint));
 	case2ptr = case2list = g_malloc (size*sizeof(guint));
 	case3ptr = case3list = g_malloc (size*sizeof(guint));
 	ncase1 = ncase2 = ncase3 = 0;
-	g_return_val_if_fail (case1ptr && case2ptr && case3ptr,
-			      MINEFIELD_HINT_NO_GAME);
 	
 	for (i = 0; i<size; i++) {
 		m = mfield->mines + i;
@@ -1174,7 +1173,10 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	} else if (ncase3 > 0) {
 		a = g_rand_int_range (mfield->grand, 0, ncase3);
 		i = case3list[a];
-	} else return MINEFIELD_HINT_ALL_MINES;
+	} else {
+		retval = MINEFIELD_HINT_ALL_MINES;
+		goto cleanup;
+	}
 
 	x = i % mfield->xsize;
 	y = i / mfield->xsize;
@@ -1187,5 +1189,12 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 
 	gtk_minefield_show (mfield, x, y);
 	gtk_mine_draw (mfield, x, y);
-	return MINEFIELD_HINT_ACCEPTED;
+	retval = MINEFIELD_HINT_ACCEPTED;
+
+ cleanup: 
+	g_free (case1list);
+	g_free (case2list);
+	g_free (case3list);
+
+	return retval;
 }

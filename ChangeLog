@@ -1,3 +1,7 @@
+2004-07-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Fix memory leaks in the hint code (bug #146267).
+
 2004-07-01  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am:
