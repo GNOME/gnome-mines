@@ -544,6 +544,7 @@ int main(int argc, char *argv[])
         GtkWidget *all_boxes;
 	GtkWidget *status_table;
 	GtkWidget *button_table;
+        GtkWidget *align;
         GtkWidget *label;
 	GnomeClient *client;
 
@@ -579,16 +580,8 @@ int main(int argc, char *argv[])
 
 	client = parse_args (argc, argv);
 
-        button_table = gtk_table_new(1, 3, TRUE);
+        button_table = gtk_table_new(2, 3, FALSE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
-
-	label = gtk_label_new("");
-	gtk_table_attach(GTK_TABLE(button_table), label,
-			 0, 1, 0, 1,
-			 GTK_FILL | GTK_EXPAND,
-			 GTK_FILL | GTK_EXPAND,
-			 0, 0);
-        gtk_widget_show(label);
 
         pm_current = NULL;
 
@@ -602,11 +595,11 @@ int main(int argc, char *argv[])
 	face_box = gtk_vbox_new(FALSE, 0);
 	gtk_container_add(GTK_CONTAINER(mbutton), face_box);
 	
-	pm_win     = gnome_create_pixmap_widget_d(window, mbutton, face_win_xpm);
-	pm_sad     = gnome_create_pixmap_widget_d(window, mbutton, face_sad_xpm);
-	pm_smile   = gnome_create_pixmap_widget_d(window, mbutton, face_smile_xpm);
-	pm_cool    = gnome_create_pixmap_widget_d(window, mbutton, face_cool_xpm);
-	pm_worried = gnome_create_pixmap_widget_d(window, mbutton, face_worried_xpm);
+	pm_win     = gnome_pixmap_new_from_xpm_d (face_win_xpm);
+	pm_sad     = gnome_pixmap_new_from_xpm_d (face_sad_xpm);
+	pm_smile   = gnome_pixmap_new_from_xpm_d (face_smile_xpm);
+	pm_cool    = gnome_pixmap_new_from_xpm_d (face_cool_xpm);
+	pm_worried = gnome_pixmap_new_from_xpm_d (face_worried_xpm);
 
         gtk_box_pack_start(GTK_BOX(face_box), pm_win, FALSE, FALSE, 0);
         gtk_box_pack_start(GTK_BOX(face_box), pm_sad, FALSE, FALSE, 0);
@@ -619,21 +612,17 @@ int main(int argc, char *argv[])
 	gtk_widget_show(face_box);
 	gtk_widget_show(mbutton);
 
-	label = gtk_label_new("");
-	gtk_table_attach(GTK_TABLE(button_table), label,
-			 2, 3, 0, 1,
-			 GTK_FILL | GTK_EXPAND,
-			 GTK_FILL | GTK_EXPAND,
-			 0, 0);
-        gtk_widget_show(label);
-
 	gtk_widget_show(button_table);
 	
-        mfieldbox = gtk_vbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(all_boxes), mfieldbox, TRUE, TRUE, 0);
-	gtk_widget_show(mfieldbox);
+        align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+	gtk_table_attach (GTK_TABLE (button_table), align, 1, 2, 1, 2,
+			  GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL,
+			  0, 0);
+        gtk_widget_show (align);
+  
+        mfield = gtk_minefield_new();
+        gtk_container_add (GTK_CONTAINER (align), mfield);
 
-	mfield = gtk_minefield_new();
         setup_mode(mfield, fsize);
 	
 	gtk_box_pack_start(GTK_BOX(mfieldbox), mfield, TRUE, TRUE, 0);

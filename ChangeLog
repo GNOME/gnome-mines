@@ -1,3 +1,12 @@
+Tue Feb 25 23:10 1998  Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
+	* gnomine.c (main): now minefield is always centered.
+
+Tue Feb 25 23:10 1998  Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
+	* gnomine.c (main): using gnome_pixmap_new_from_xpm_d instead of
+	                    gnome_create_pixmap_widget_d
+
 Tue Feb 17 21:50:19 1998  Miguel de Icaza  <miguel@nuclecu.unam.mx>
 
 	* gnomine.c (main): Remove spurious call to gtk_init
