@@ -568,10 +568,10 @@ main (int argc, char *argv[])
         GtkWidget *label;
 	GnomeClient *client;
 
+	gnome_score_init("gnomine");
+
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
-
-	gnome_score_init("gnomine");
 
         gnome_init_with_popt_table("gnomine", VERSION, argc, argv,
 				   options, 0, NULL);
