@@ -1,7 +1,6 @@
-<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
-        <!-- if not using PNG graphic, replace reference above with
-             .....PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
-         -->
+<?xml version="1.0"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+    "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 <!ENTITY version "1.2.0">
 ]>
 
@@ -18,7 +17,7 @@
 
 <article id="index">
 
-  <artheader>
+  <articleinfo>
     <title>GNOME Mines Manual</title>
     <copyright>
       <year>2001</year>
@@ -49,7 +48,7 @@
        This is version 1.0 of the GNOME Mines manual.
     </releaseinfo>
 
-  </artheader>
+  </articleinfo>
 
  <!-- ============= Document Body ============================= -->
 
@@ -100,16 +99,20 @@
 <!-- Add info on starting the app from the command line -->
         Starting <application>GNOME Mines</application> opens the
         <interface>Main window</interface>, shown in <xref
-        linkend="fresh-mainwindow-fig">.
+        linkend="fresh-mainwindow-fig"/>.
 
         <!-- ==== Figure ==== -->
         <figure id="fresh-mainwindow-fig">
 	  <title>GNOME Mines Main Window</title>
 	  <screenshot>
-	    <screeninfo>GNOME Mines Main Window</screeninfo>
-	    <graphic fileref="figures/gnomine-fresh"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnomine-fresh.png" format="PNG" srccredit="Tim Riehle"/>
+	     </imageobject>
+    <textobject> 
+      <phrase>GNOME Mines Main Window.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -124,7 +127,7 @@
         Play proceeds by uncovering squares with the left mouse button and
         placing flags with the right mouse button. Successfully uncovered
         squares yield information: the number of mines in the adjacent
-        squares. Figure <xref linkend="begin-play-fig"> shows a game
+        squares. Figure <xref linkend="begin-play-fig"/> shows a game
         in play. Note the numbers in the cleared squares and their relation
         to flags.
       </para>
@@ -133,10 +136,15 @@
         <figure id="begin-play-fig">
 	  <title>GNOME Mines In Play</title>
 	  <screenshot>
-	    <screeninfo>GNOME Mines In Play</screeninfo>
-	    <graphic fileref="figures/gnomine-begin-play"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnomine-begin-play.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+    </imageobject>
+    <textobject> 
+      <phrase>GNOME Mines In Play.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -150,7 +158,7 @@
         to that square satisfies the number expected 
         the middle mouse button will automatically uncover all remaining
         adjacent squares. If a flag has been placed by mistake this action
-        will uncover a mine and end play. Figure <xref linkend="fail-fig">
+        will uncover a mine and end play. Figure <xref linkend="fail-fig"/>
         shows the result of just such a mistake, note the flag in the
         top row.
 
@@ -158,10 +166,15 @@
         <figure id="fail-fig">
 	  <title>GNOME Mines Showing A Failed Game</title>
 	  <screenshot>
-	    <screeninfo>GNOME Mines Showing A Failed Game</screeninfo>
-	    <graphic fileref="figures/gnomine-fail"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnomine-fail.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>GNOME Mines Showing A Failed Game.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -170,16 +183,21 @@
       <para>
         If flags have been correctly placed on all the mines, and the
         remaining squares have been uncovered the game is won, as shown
-        in <xref linkend="won-fig">.
+        in <xref linkend="won-fig"/>.
 
         <!-- ==== Figure ==== -->
         <figure id="won-fig">
 	  <title>GNOME Mines Showing A Won Game</title>
 	  <screenshot>
-	    <screeninfo>GNOME Mines Showing A Won Game</screeninfo>
-	    <graphic fileref="gnomine-won"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="gnomine-won.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>GNOME Mines Showing A Won Game.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -194,7 +212,7 @@
       <para>
         The geometrical arrangement of uncovered and flagged squares
         often limits the possible locations that can contain hidden
-        mines. Figure <xref linkend="basic-corner"> shows how the location
+        mines. Figure <xref linkend="basic-corner"/> shows how the location
         of a mine, pointed to by the arrow, has been inferred using the
         square on the outside corner showing the numeral one. The geometry
         of the corner has left only one uncovered square next to the one.
@@ -202,10 +220,15 @@
         <figure id="basic-corner">
 	  <title>Inferring the location of a mine at a corner</title>
 	  <screenshot>
-	    <screeninfo>Inferring the location of a mine at a corner</screeninfo>
-	    <graphic fileref="figures/basic-corner"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/basic-corner.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+            </imageobject>
+    <textobject> 
+      <phrase>Inferring the location of a mine at a corner.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -213,17 +236,22 @@
 
       <para>
         The same strategy has been used in figure <xref
-        linkend="basic-wall"> where the square showing the number three
+        linkend="basic-wall"/> where the square showing the number three
         has only three remaining uncovered squares that can hold mines.
         to
         <!-- ==== Figure ==== -->
         <figure id="basic-wall">
 	  <title>Inferring the location of mines next along a wall</title>
 	  <screenshot>
-	    <screeninfo>Inferring the location of mines along a wall</screeninfo>
-	    <graphic fileref="figures/basic-wall"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/basic-wall.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>Inferring the location of mines next along a wall.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -234,15 +262,20 @@
          information from a single uncovered square. More advanced play
          comes from combining information from two or more uncovered
          squares. Consider the arrangement of squares in figure <xref
-         linkend="advanced-1">.
+         linkend="advanced-1"/>.
         <!-- ==== Figure ==== -->
         <figure id="advanced-1">
 	  <title>Inferring the location of mines using information from several squares</title>
 	  <screenshot>
-	    <screeninfo>Inferring the location of mines using information from several squares</screeninfo>
-	    <graphic fileref="figures/advanced_121_a"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/advanced_121_a.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>Inferring the location of mines using information from several squares.</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -251,17 +284,22 @@
       <para>
          If we focus on the leftmost square showing "1" we know that only
          a single flag can be contained in the three uncovered squares
-         highlighted in green in figure <xref linkend="advanced-2">,
+         highlighted in green in figure <xref linkend="advanced-2"/>,
          thus we can infer where the second flag for the square showing
          "2" must be placed.
         <!-- ==== Figure ==== -->
         <figure id="advanced-2">
 	  <title>finding the first mine by using the leftmost square showing "1"</title>
 	  <screenshot>
-	    <screeninfo>finding the first mine by using the leftmost square showing "1"</screeninfo>
-	    <graphic fileref="figures/advanced_121_b"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/advanced_121_b.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>finding the first mine by using the leftmost square showing "1".</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -269,15 +307,20 @@
 
       <para>
         We can now repeat the same process with the rightmost square showing "1" to place
-        the second flag, see Figure <xref linkend="advanced-3">.
+        the second flag, see Figure <xref linkend="advanced-3"/>.
         <!-- ==== Figure ==== -->
         <figure id="advanced-3">
 	  <title>finding the second mine by using the rightmost square showing "1"</title>
 	  <screenshot>
-	    <screeninfo>finding the second mine by using the rightmost square showing "1"</screeninfo>
-	    <graphic fileref="figures/advanced_121_c"
-                     format="png" srccredit="Tim Riehle">
-            </graphic>
+	     <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/advanced_121_c.png"
+                     format="PNG" srccredit="Tim Riehle"/>
+           </imageobject>
+    <textobject> 
+      <phrase>finding the second mine by using the rightmost square showing "1".</phrase> 
+    </textobject> 
+  </mediaobject>
 	  </screenshot>
 	</figure>
         <!-- ==== End of Figure ==== -->
@@ -352,7 +395,7 @@
 		     </menuchoice>
 	             &mdash; Bring up the <application>GNOME Mines</application>
                              <interface>Preferences</interface> dialog,
-                             as shown in <xref linkend="gnomine-preferences-fig">
+                             as shown in <xref linkend="gnomine-preferences-fig"/>
                              This allows you to choose the size of the
                              playing grid and the size of the squares.
 
@@ -360,10 +403,15 @@
                        <figure id="gnomine-preferences-fig">
 	                 <title>GNOME Mines Preferences Dialog</title>
 	                 <screenshot>
-	                   <screeninfo>GNOME Mines Preferences Dialog</screeninfo>
-	                   <graphic fileref="figures/gnomine-preferences"
-                                    format="png" srccredit="Tim Riehle">
-                           </graphic>
+	                    <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnomine-preferences.png"
+                                    format="PNG" srccredit="Tim Riehle"/>
+                          </imageobject>
+    <textobject> 
+      <phrase>GNOME Mines Preferences Dialog.</phrase> 
+    </textobject> 
+  </mediaobject>
 	                 </screenshot>
 	               </figure>
                        <!-- ==== End of Figure ==== -->
