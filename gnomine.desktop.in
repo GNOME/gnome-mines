@@ -1,6 +1,6 @@
 [Desktop Entry]
-_Name=Gnome Mines
-_Comment=Gnome Mines game
+_Name=GNOME Mines
+_Comment=Mines game
 Exec=gnomine
 Icon=gnome-gnomine.png
 Terminal=0
