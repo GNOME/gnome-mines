@@ -51,6 +51,9 @@
 #define KEY_WIDTH    	       "/apps/gnomine/geometry/width"
 #define KEY_HEIGHT   	       "/apps/gnomine/geometry/height"
 
+/* So that it is only one place if we re-order the menus. */
+#define HINT_MENU_LOC 1
+
 static GtkWidget *mf_frame;
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog = NULL;
@@ -119,6 +122,9 @@ show_face (GtkWidget *pm)
 	if (pm_current) {
 		gtk_widget_hide (pm_current); 
 	}
+
+	gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget, 
+				 (pm == pm_cool) || (pm == pm_smile));
 
 	gtk_widget_show (pm);
 	
@@ -265,6 +271,7 @@ focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 		gtk_widget_hide (mf_frame);
 		gtk_widget_show (ralign);
 		gtk_widget_grab_focus (rbutton);
+		gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget,FALSE);
 
 		games_clock_stop (GAMES_CLOCK (clk)); 
 	}
@@ -275,6 +282,7 @@ resume_game_cb (GtkButton *widget, gpointer data)
 {
 	gtk_widget_hide (ralign);
 	gtk_widget_show (mf_frame);
+	gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget,TRUE);
 
 	games_clock_start (GAMES_CLOCK (clk));
 }

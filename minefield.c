@@ -109,8 +109,6 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
-	GdkPixbuf *scaledimage;
-
 	if (signp->pixbuf == NULL) {
 		GError *error = NULL;
 		signp->pixbuf = gdk_pixbuf_new_from_file (file, &error);
@@ -1150,7 +1148,7 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	} else return MINEFIELD_HINT_ALL_MINES;
 
 	x = i % mfield->xsize;
-	y = i / mfield->ysize;
+	y = i / mfield->xsize;
 
 	gtk_minefield_show (mfield, x, y);
 	gtk_mine_draw (mfield, x, y);

@@ -1,3 +1,26 @@
+2004-02-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Adjusted the hint sensitivity patch again: make it
+	work in the fresh-game situation. It's not very helpful, but it
+	does make sense.
+
+2004-02-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Minor changes to Richard's patch. Future-proofing
+	(centralising the location of the hint array offset) and reducing
+	the textural size of the if statement so that it visually matches
+	it's importance in the routine. All in all, less than this
+	explanation.
+
+2004-02-07  Richard Hoelscher  <rah@rahga.com>
+
+	* gnomine.c (focus_out_cb, resume_game_cb, show_face):
+	Made the hint item insensitive when we're in "hide" mode, 
+	when the game is over, and before a new game.
+
+	* minefield.c (_setup_sign): Remove unused variable.
+	(gtk_minefield_hint): Fixed hints in non-square minefields.
+
 2004-01-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnome-gnomine.png: New graphic from Richard Hoelscher to fit in
