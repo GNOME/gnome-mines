@@ -1,3 +1,19 @@
+2003-06-29  Steve Chaplin   <stevech1097@yahoo.com.au>
+ 
+        * minefield.c (gtk_minefield_randomize): Replace the randomize
+	routine with the glib randomize functions. 
+	(gtk_minefield_restart): Remove the call to init_random(), clear
+	the mines but do not set new mines, leave that to
+	gtk_minefield_randomize().
+	(init_random): Delete unused function.
+	(get_random): Delete unused function.
+	(gtk_minefield_draw): Move draw routines to gtk_minefield_expose()
+	and remove the function. The draw method is now deprecated, the
+	preferred solution is to call gtk_widget_queue_draw() and let
+	gtk_<widget>_expose do the drawing.
+	(gtk_minefield_lose): Replace gtk_minefield_draw() call with
+	gtk_widget_queue_draw().
+
 2003-06-24  Steve Chaplin   <stevech1097@yahoo.com.au>
 
        * gnomine.c (create_preferences): New function to create preferences

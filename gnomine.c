@@ -431,7 +431,9 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 17;
 		if (minesize != i) {
 			minesize = range (i, MINESIZE_MIN, MINESIZE_MAX);
-			gtk_minefield_set_mines(GTK_MINEFIELD(mfield), nmines, minesize);
+			gtk_minefield_set_mines(GTK_MINEFIELD(mfield),
+						GTK_MINEFIELD(mfield)->mcount,
+						minesize);
 		}
 	}
 	if (strcmp (key, KEY_MODE) == 0) {

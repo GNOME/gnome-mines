@@ -49,7 +49,6 @@ static gint minefield_signals[LAST_SIGNAL] = { 0 };
 static GtkWidgetClass *parent_class;
 
 /*  Prototypes */
-static gulong get_random(gulong limit);
 static inline gint cell_idx(GtkMineField *mfield, guint x, guint y);
 static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y);
 static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event);
@@ -70,7 +69,6 @@ static void gtk_minefield_size_request(GtkWidget *widget, GtkRequisition *requis
 static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y);
 static void gtk_minefield_unrealize (GtkWidget *widget);
 static void gtk_minefield_win(GtkMineField *mfield);
-static void init_random(gulong seed);
 static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y);
 static void _setup_sign (sign *signp, const char *file, guint minesize);
 static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c);
@@ -408,55 +406,40 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	}
 }
 
-static void gtk_minefield_draw (GtkMineField *mfield, GdkRectangle *area)
+static gint gtk_minefield_expose (GtkWidget      *widget,
+				  GdkEventExpose *event)
 {
-	guint x1, y1, x2, y2, x, y;
-        guint minesize = mfield->minesize;
-
-	minesize = mfield->minesize;
-
-	if (area) {
-		x1 = area->x/minesize;
-		y1 = area->y/minesize;
-		x2 = (area->x + area->width - 1) / minesize;
-		y2 = (area->y + area->height - 1) / minesize;
-	} else {
-		x1 = 0; y1 = 0;
-		x2 = mfield->xsize - 1;
-		y2 = mfield->ysize - 1;
-	}
-
-        /* These are necessary because we get an expose call before a
-         * resize at the old size, but after we have changed our data. */
-        if (x2 >= mfield->xsize)
-          x2 = mfield->xsize - 1;
-        if (y2 >= mfield->ysize)
-          y2 = mfield->ysize - 1;
-
-	for (x = x1; x <= x2; x++)
-		for (y = y1; y <= y2; y++)
-			gtk_mine_draw (mfield, x, y);
-}
-
-static gint gtk_minefield_expose(GtkWidget *widget,
-				 GdkEventExpose *event)
-{
-        GtkMineField *mfield;
-	guint minesize;
-
 	g_return_val_if_fail (widget != NULL, FALSE);
-        g_return_val_if_fail (GTK_IS_MINEFIELD(widget), FALSE);
+        g_return_val_if_fail (GTK_IS_MINEFIELD (widget), FALSE);
         g_return_val_if_fail (event != NULL, FALSE);
 
-	if (!GTK_WIDGET_DRAWABLE (widget))
-                return FALSE;
+	if (GTK_WIDGET_DRAWABLE (widget)) {
+		guint x1, y1, x2, y2, x, y;
+		GtkMineField *mfield = GTK_MINEFIELD (widget);
+		GdkRectangle *area = &event->area;
 
-        mfield = GTK_MINEFIELD(widget);
-	
-	minesize = mfield->minesize;
+		if (area) {
+			x1 = area->x/mfield->minesize;
+			y1 = area->y/mfield->minesize;
+			x2 = (area->x + area->width - 1) / mfield->minesize;
+			y2 = (area->y + area->height - 1) / mfield->minesize;
+		} else {
+			x1 = 0; y1 = 0;
+			x2 = mfield->xsize - 1;
+			y2 = mfield->ysize - 1;
+		}
 
-	gtk_minefield_draw (GTK_MINEFIELD (widget), &event->area);
-
+		/* These are necessary because we get an expose call before a
+		 * resize at the old size, but after we have changed our data. */
+		if (x2 >= mfield->xsize)
+			x2 = mfield->xsize - 1;
+		if (y2 >= mfield->ysize)
+			y2 = mfield->ysize - 1;
+		
+		for (x = x1; x <= x2; x++)
+			for (y = y1; y <= y2; y++)
+				gtk_mine_draw (mfield, x, y);
+	}
 	return FALSE;
 }
 
@@ -527,13 +510,13 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
         } while (changed);
 }
 
-static void gtk_minefield_lose(GtkMineField *mfield)
+static void gtk_minefield_lose (GtkMineField *mfield)
 {
-        g_signal_emit(GTK_OBJECT(mfield),
+        g_signal_emit (G_OBJECT (mfield),
                         minefield_signals[EXPLODE_SIGNAL],
 			0, NULL );
         mfield->lose = 1;
-        gtk_minefield_draw(mfield, NULL);
+	gtk_widget_queue_draw (GTK_WIDGET (mfield));
 }
 
 static void gtk_minefield_win(GtkMineField *mfield)
@@ -565,28 +548,24 @@ static void gtk_minefield_win(GtkMineField *mfield)
         mfield->win = 1;
 }
 
-static void gtk_minefield_randomize(GtkMineField *mfield, int curloc)
+static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 {
-	guint i, j;
+	guint i;
 	guint x, y;
-	guint tmp;
 	guint n;
 	guint cidx;
+	static GRand *grand = NULL;
 
-	/* make sure curloc is not mined */
-	mfield->mines[mfield->xsize * mfield->ysize -1].mined =
-		mfield->mines[curloc].mined; /* last location is never mined */
-	mfield->mines[curloc].mined = 0;
+	if (grand == NULL)
+		grand = g_rand_new ();
 
-	/* swap mines randomly */
-	for (i=0; i<mfield->xsize * mfield->ysize; i++) {
-		j = (guint)get_random(mfield->xsize * mfield->ysize);
-		if (i == curloc || j == curloc) { /* skip current location */
-			continue;
+	/* randomly set the mines, but avoid the current location (why ?)*/
+	for (n = 0; n < mfield->mcount; ) {
+	        i = g_rand_int_range (grand, 0, mfield->xsize * mfield->ysize);
+		if (!mfield->mines[i].mined && i != curloc) {
+		        mfield->mines[i].mined = 1;
+			n++;
 		}
-		tmp = mfield->mines[i].mined;
-		mfield->mines[i].mined = mfield->mines[j].mined;
-		mfield->mines[j].mined = tmp;
 	}
 
 	/* load neighborhood numbers */
@@ -959,21 +938,6 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	gtk_minefield_setup_numbers(mfield);
 }
 
-static gulong random_seed;
-
-static void init_random(gulong seed)
-{
-	random_seed = seed;
-}
-
-static gulong get_random(gulong limit)
-{
-	do {
-		random_seed = (random_seed*1139113+10921)>>2;
-	} while (random_seed > ((gulong)(G_MAXLONG/limit))*limit);
-	return random_seed % limit;
-}
-
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 {
         g_return_if_fail(mfield != NULL);
@@ -1042,12 +1006,12 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 	}
 }
 
-void gtk_minefield_restart(GtkMineField *mfield)
+void gtk_minefield_restart (GtkMineField *mfield)
 {
 	guint i;
 
-        g_return_if_fail(mfield != NULL);
-        g_return_if_fail(GTK_IS_MINEFIELD(mfield));
+        g_return_if_fail (mfield != NULL);
+        g_return_if_fail (GTK_IS_MINEFIELD (mfield));
 
 	mfield->flag_count = 0;
 	mfield->shown = 0;
@@ -1060,17 +1024,11 @@ void gtk_minefield_restart(GtkMineField *mfield)
         mfield->multi_mode = 0;
 	mfield->in_play = 0;
 
-	/* set up mfield->mcount mines.  (randomize later) */
-	for (i=0; i<mfield->xsize * mfield->ysize; i++) {
-		mfield->mines[i].mined = i<mfield->mcount ? 1 : 0;
+	for (i=0; i < mfield->xsize * mfield->ysize; i++) {
 		mfield->mines[i].marked = MINE_NOMARK;
+		mfield->mines[i].mined  = 0;
                 mfield->mines[i].shown  = 0;
 		mfield->mines[i].down   = 0;
-	}
-
-	if (secs == 0) {	/* random not seeded yet */
-		time((time_t *)&secs);
-		init_random(secs);
 	}
 
         if (mfield->started == FALSE)
