@@ -502,24 +502,13 @@ unlook_cell (GtkWidget *widget, gpointer data)
 	show_face(pm_cool);
 }
 
-static int
-range (int val, int min, int max)
-{
-	if (val < min)
-		val = min;
-	if (val > max)
-		val = max;
-	return val;
-}
-
-
 static void
 verify_ranges (void)
 {
-	xsize    = range (xsize, XSIZE_MIN, XSIZE_MAX);
-	ysize    = range (ysize, YSIZE_MIN, YSIZE_MAX);
-	nmines   = range (nmines, 1, xsize * ysize - 2);
-	fsize    = range (fsize,  0, 3);
+	xsize    = CLAMP (xsize, XSIZE_MIN, XSIZE_MAX);
+	ysize    = CLAMP (ysize, YSIZE_MIN, YSIZE_MAX);
+	nmines   = CLAMP (nmines, 1, xsize * ysize - 2);
+	fsize    = CLAMP (fsize,  0, 3);
 }
 
 static void
@@ -605,7 +594,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		int i;
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != xsize) {
-			xsize = range (i, XSIZE_MIN, XSIZE_MAX);
+			xsize = CLAMP (i, XSIZE_MIN, XSIZE_MAX);
 			new_game (mfield, NULL);
 		}
 	}
@@ -613,7 +602,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		int i;
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != ysize) {
-			ysize = range (i, YSIZE_MIN, YSIZE_MAX);
+			ysize = CLAMP (i, YSIZE_MIN, YSIZE_MAX);
 			new_game (mfield, NULL);
 		}
 	}
@@ -621,7 +610,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		int i;
 		i = value ? gconf_value_get_int (value) : 40;
 		if (nmines != i) {
-			nmines = range (i, 1, xsize * ysize - 2);
+			nmines = CLAMP (i, 1, xsize * ysize - 2);
 			new_game (mfield, NULL);
 		}
 	}
@@ -629,7 +618,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		int i;
 		i = value ? gconf_value_get_int (value) : 0;
 		if (i != fsize) {
-			fsize = range (i, 0, 3);
+			fsize = CLAMP (i, 0, 3);
 			update_score_state ();
 			new_game (mfield, NULL);
 		}
@@ -970,9 +959,6 @@ main (int argc, char *argv[])
 	client = gnome_master_client ();
 	g_signal_connect (G_OBJECT (client), "save_yourself",
 			  G_CALLBACK (save_state), argv[0]);
-
-	if (xpos > 0 && ypos > 0)
-	  gdk_window_move (GTK_WIDGET (window)->window, xpos, ypos);
 		
 	if (xsize == -1)
 		xsize = gconf_client_get_int (conf_client,
@@ -994,9 +980,9 @@ main (int argc, char *argv[])
 						    KEY_USE_QUESTION_MARKS,
 						    NULL);
 	width = gconf_client_get_int (conf_client, KEY_WIDTH, NULL);
-	width = width ? width : WIDTH_DEFAULT;
+	width = width > 0 ? width : WIDTH_DEFAULT;
 	height = gconf_client_get_int (conf_client, KEY_HEIGHT, NULL);
-	height = height ? height : HEIGHT_DEFAULT;
+	height = height > 0 ? height : HEIGHT_DEFAULT;
 	
 	verify_ranges ();
 
@@ -1112,6 +1098,10 @@ main (int argc, char *argv[])
 	new_game (mfield, NULL);
 
         gtk_widget_show_all (window);
+
+	if (xpos >= 0 && ypos >= 0)
+	  gdk_window_move (GTK_WIDGET (window)->window, xpos, ypos);
+
 	/* All this hiding is a bit ugly, but it's better than a
 	 * ton of gtk_widget_show calls. */
 	gtk_widget_hide (ralign);

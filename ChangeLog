@@ -1,8 +1,14 @@
 2004-11-15  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (main): Fix the window placement check. && instead of
-	||, it allows a negative placement -> crasher. The cause of bug
-	#150186 ? If the session-management screwed up.
+	||, it allows a negative placement. Also move to later so that the
+	window->window dereference doesn't segfault. The cause of bug
+	#150186 ? Possibly, but they don't mention session-management.
+	
+	Also changed some checks to avoid GTK warnings when things are set
+	to negative values.
+
+	Also replace home-brew range () with glib's CLAMP ().
 
 2004-11-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
