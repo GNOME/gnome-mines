@@ -242,7 +242,7 @@ about(GtkWidget *widget, gpointer data)
 	};
 
         about = gnome_about_new (_("Gnome Mines"), VERSION,
-				 "(C) 1997-1998 the Free Software Fundation",
+				 "(C) 1997-1999 the Free Software Foundation",
 				 (const char **)authors,
 				 _("Minesweeper clone"),
 				 NULL);
