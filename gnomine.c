@@ -423,7 +423,7 @@ about (GtkWidget *widget, gpointer data)
        }
 
         about = gnome_about_new (_("GNOME Mines"), VERSION,
-				 "Copyright \xc2\xa9 1997-2003 Free Software "
+				 "Copyright \xc2\xa9 1997-2004 Free Software "
 				 "Foundation, Inc.",
 				 _("A Minesweeper clone."),
 				 (const char **)authors,
