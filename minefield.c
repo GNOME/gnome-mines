@@ -316,11 +316,12 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
 		if ((n = mfield->mines[c].neighbours) != 0) {
+			g_assert (n >= 0 && n <= 9);
 			gdk_draw_layout(widget->window,
 					widget->style->black_gc,
 					x*minesize + mfield->numstr[n].dx,
 					y*minesize + mfield->numstr[n].dy,
-					mfield->numstr[n].layout);
+					PANGO_LAYOUT(mfield->numstr[n].layout));
 		}
 
 	} else if (mfield->mines[c].marked == MINE_QUESTION) {

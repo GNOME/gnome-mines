@@ -1,3 +1,12 @@
+2002-10-16  Ross Burton  <ross@burtonini.com>
+
+	* gnomine.c: Re-write of the Preferences code. It's now instant
+	apply, has a clearer interface, etc etc. Closes #94873.
+	Also did a global s/Gnome/GNOME/ replacement.
+
+	* minefield.c (gtk_mine_draw): Cast to PangoLayout to prevent
+	warnings from Pango.
+
 2002-08-23  Ross Burton  <ross@burtonini.com>
 
 	* gnomine.c: Enable the high scores dialog. Patch from Andrew
