@@ -1,3 +1,10 @@
+2002-04-19  Bastien Nocera  <hadess@hadess.net>
+
+	* gnomine.c: (about), (main): remove ENABLE_NLS, add nice icon
+	* minefield.c: (gtk_minefield_setup_numbers):
+	move the numbers 4 pixels up, which should "fix" the numbers
+	appearing between cells
+
 2002-04-16  Bastien Nocera  <hadess@hadess.net>
 
 	* Makefile.am:

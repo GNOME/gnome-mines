@@ -144,7 +144,7 @@ gtk_minefield_setup_numbers(GtkMineField *mfield)
 
 		/* do the font */
 		font_desc = pango_font_description_new();
-		pango_font_description_set_family(font_desc, "monospace");
+		pango_font_description_set_family(font_desc, "Courier 8");
 		pango_font_description_set_size(font_desc,
 						pixel_sz * PANGO_SCALE);
 		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
@@ -172,7 +172,8 @@ gtk_minefield_setup_numbers(GtkMineField *mfield)
 		mfield->numstr[i].layout = layout;
 
 		mfield->numstr[i].dx = minesize / 2;
-		mfield->numstr[i].dy = (minesize - pixel_sz) / 2;
+		/* Hack to fix the number being too far down */
+		mfield->numstr[i].dy = (minesize - pixel_sz) / 2 - 4;
 	}
 }
 

@@ -221,6 +221,7 @@ void
 about(GtkWidget *widget, gpointer data)
 {
         static GtkWidget *about;
+	GdkPixbuf *pixbuf = NULL;
 
         const gchar *authors[] = {
 		N_("Code: Pista"),
@@ -239,12 +240,22 @@ about(GtkWidget *widget, gpointer data)
 		return;
 	}
 
-#ifdef ENABLE_NLS
        {
             int i=0;
             while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
        }
-#endif
+       {
+	       char *filename = NULL;
+
+	       filename = gnome_program_locate_file (NULL,
+			       GNOME_FILE_DOMAIN_PIXMAP,  ("gnome-gnomine.png"),
+			       TRUE, NULL);
+	       if (filename != NULL)
+	       {
+		       pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
+		       g_free (filename);
+	       }
+       }
 
         about = gnome_about_new (_("Gnome Mines"), VERSION,
 				 _("(C) 1997-1999 the Free Software Foundation"),
@@ -252,7 +263,7 @@ about(GtkWidget *widget, gpointer data)
 				 (const char **)authors,
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
-				 NULL);
+				 pixbuf);
 	gtk_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
 			(gtk_widget_destroyed), &about);
 	gtk_window_set_transient_for(GTK_WINDOW (about), GTK_WINDOW (window));
@@ -655,7 +666,6 @@ main (int argc, char *argv[])
 
 	verify_ranges ();
 
-#ifdef ENABLE_NLS 
 #define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
 	{
 		int i;
@@ -666,7 +676,6 @@ main (int argc, char *argv[])
 		for (i = 0; i < ELEMENTS(helpmenu); i++)
 			helpmenu[i].label = gettext(helpmenu[i].label);
 	}
-#endif /* ENABLE_NLS */
 
         window = gnome_app_new("gnomine", _("Gnome Mines"));
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
