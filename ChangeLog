@@ -1,3 +1,9 @@
+2004-11-15  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Fix the window placement check. && instead of
+	||, it allows a negative placement -> crasher. The cause of bug
+	#150186 ? If the session-management screwed up.
+
 2004-11-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (main): Use gtk_window_set_default_icon_name (via

@@ -971,7 +971,7 @@ main (int argc, char *argv[])
 	g_signal_connect (G_OBJECT (client), "save_yourself",
 			  G_CALLBACK (save_state), argv[0]);
 
-	if (xpos > 0 || ypos > 0)
+	if (xpos > 0 && ypos > 0)
 	  gdk_window_move (GTK_WIDGET (window)->window, xpos, ypos);
 		
 	if (xsize == -1)
