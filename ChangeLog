@@ -1,3 +1,8 @@
+2003-11-05  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Teaks to the main window to make it more
+	aesthetically pleasing.
+
 2003-11-04  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_toggle_mark): Removed an

@@ -772,7 +772,6 @@ static struct poptOption options[] = {
 int
 main (int argc, char *argv[])
 {
-        GnomeAppBar *appbar;
         GtkWidget *all_boxes;
 	GtkWidget *status_box;
 	GtkWidget *button_table;
@@ -841,9 +840,6 @@ main (int argc, char *argv[])
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
 	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
-	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, FALSE, GNOME_PREFERENCES_NEVER));
-	gnome_app_set_statusbar (GNOME_APP (window), GTK_WIDGET (appbar));
-	
 	g_signal_connect(G_OBJECT (window), "delete_event",
 			 G_CALLBACK (quit_game), NULL);
 	g_signal_connect(G_OBJECT (window), "focus_out_event",
@@ -885,6 +881,9 @@ main (int argc, char *argv[])
 	box = gtk_vbox_new (FALSE, 0);
 	gtk_table_attach_defaults (GTK_TABLE (button_table), box, 1, 2, 1, 2);
 
+	gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE,
+			    0);
+
 	mfield = gtk_minefield_new ();
 
 	/* It doesn't really matter what this widget is as long as it's a
@@ -915,10 +914,13 @@ main (int argc, char *argv[])
 			  G_CALLBACK (look_cell), NULL);
 	g_signal_connect (G_OBJECT (mfield), "unlook",
 			  G_CALLBACK (unlook_cell), NULL);
+
+	gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE,
+			    0);
 	
-	status_box = gtk_hbox_new (TRUE, GNOME_PAD); 
-	gtk_box_pack_start (GTK_BOX (appbar), status_box, 
-			    TRUE, TRUE, 0);
+	status_box = gtk_hbox_new (TRUE, 0); 
+	gtk_box_pack_start (GTK_BOX (box), status_box, 
+			    FALSE, FALSE, GNOME_PAD);
 
 	label = gtk_label_new(_("Flags:"));
 	gtk_box_pack_start (GTK_BOX (status_box), label, 
