@@ -1,3 +1,7 @@
+2003-07-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.desktop.in: Update name to fit HIG (bug 116916).
+
 2003-07-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gtkmfframe.c: 
