@@ -417,6 +417,15 @@
 		</listitem>
 		<listitem>
 		  <para>
+	            <menuchoice>
+		      <guimenuitem>Hint</guimenuitem>
+		     </menuchoice>
+	             &mdash; Uncovers one safe square, but adds ten
+	             seconds to your time.
+	           </para>
+		</listitem>
+		<listitem>
+		  <para>
 	             <menuchoice>
 		      <guimenuitem>Scores...</guimenuitem>
 		    </menuchoice>

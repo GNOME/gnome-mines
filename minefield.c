@@ -594,14 +594,10 @@ static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 	guint x, y;
 	guint n;
 	guint cidx;
-	static GRand *grand = NULL;
-
-	if (grand == NULL)
-		grand = g_rand_new ();
 
 	/* randomly set the mines, but avoid the current location (why ?)*/
 	for (n = 0; n < mfield->mcount; ) {
-	        i = g_rand_int_range (grand, 0, mfield->xsize * mfield->ysize);
+	        i = g_rand_int_range (mfield->grand, 0, mfield->xsize * mfield->ysize);
 		if (!mfield->mines[i].mined && i != curloc) {
 		        mfield->mines[i].mined = 1;
 			n++;
@@ -974,6 +970,7 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	mfield->flag.pixbuf = NULL;
         mfield->mine.pixbuf = NULL;
 	mfield->question.pixbuf = NULL;
+	mfield->grand = g_rand_new ();
 }
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
@@ -1064,4 +1061,50 @@ void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_que
 	g_return_if_fail(GTK_IS_MINEFIELD(mfield));
 	
 	mfield->use_question_marks = use_question_marks;
+}
+
+/* The hint function tries to find a cell which is adjacent to a mine and
+ * reveals that square. If it can't find a suitable square then it looks
+ * for a square adjacent to no mines, otherwise it
+ * doesn't do anything and returns the appropriate reason. */
+gint gtk_minefield_hint (GtkMineField *mfield)
+{
+	gint i,j;
+	gint x,y;
+	mine * m;
+	/* Phase 1 is searching for squares adjacent to mines, if none
+	 * are found we search for squares which are adjacent to no mines,
+	 * this is phase 2. */
+	gint phase = 1;
+	
+	g_return_val_if_fail (mfield != NULL, MINEFIELD_HINT_NO_GAME);
+	g_return_val_if_fail (GTK_IS_MINEFIELD(mfield), MINEFIELD_HINT_NO_GAME);
+
+	if (!mfield->in_play)
+		return MINEFIELD_HINT_NO_GAME;
+
+	i = g_rand_int_range (mfield->grand, 0, mfield->xsize*mfield->ysize);
+	j = i;
+	while (1) {
+		m = mfield->mines + i;
+		if (!m->mined && !m->marked && !m->shown
+		    && (((phase == 1) && (m->neighbours > 0))
+			|| (phase == 2))) {
+			x = i % mfield->xsize;
+			y = i / mfield->ysize;
+			gtk_minefield_show (mfield, x, y);
+			gtk_mine_draw (mfield, x, y);
+			
+			return MINEFIELD_HINT_ACCEPTED;
+		}
+		i--;
+		if (i == j) {
+			if (phase == 1)
+				phase = 2;
+			else
+				return MINEFIELD_HINT_ALL_MINES;
+		}
+		if (i < 0)
+			i = mfield->xsize*mfield->ysize + 1;
+	}
 }

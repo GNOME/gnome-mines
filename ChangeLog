@@ -1,3 +1,16 @@
+2003-08-12  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c:
+	* minefield.h:
+	Take the random number generator out of _randomize and make it a
+	property of the widget.
+	
+	* minefield.h:
+	* gnomine.c: Added support for giving a hint. If possible a spot
+	adjacent to a mine is cleared and a ten-second penalty is
+	imposed. If not then a helpful (?) message is given. This was
+	suggested by Juhani Heino <juhani.heino@1posti.net>.
+
 2003-08-11  William Jon McCann  <mccann@jhu.edu>
 
 	* gnomine.c:

@@ -16,6 +16,14 @@ enum {
 	MINE_QUESTION
 };
 
+/* Return valuse from the hint function. */
+enum {
+  MINEFIELD_HINT_ACCEPTED,  /* We successfully revealed a single square. */
+  MINEFIELD_HINT_NO_GAME,   /* The game hasn't started. */
+  MINEFIELD_HINT_ALL_MINES  /* All the remaining squares are mines. */
+};
+
+  
 #define GTK_TYPE_MINEFIELD            (gtk_minefield_get_type ())
 #define GTK_MINEFIELD(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GTK_TYPE_MINEFIELD, GtkMineField))
 #define GTK_MINEFIELD_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GTK_TYPE_MINEFIELD, GtkMineFieldClass))
@@ -65,7 +73,8 @@ struct _GtkMineField {
         sign flag;
         sign mine;
 	sign question;
-
+        GRand * grand;
+  
 	gboolean started;
 
 	struct {
@@ -87,8 +96,7 @@ struct _GtkMineFieldClass
 	void (*unlook)        (GtkMineField *mfield);
 	void (*win)           (GtkMineField *mfield);
 };
-
-
+  
 #define MINESIZE_MIN 12
 
 GType      gtk_minefield_get_type (void);
@@ -97,7 +105,8 @@ GtkWidget* gtk_minefield_new      (void);
 void gtk_minefield_set_size (GtkMineField *mfield, guint xsize, guint ysize);
 void gtk_minefield_restart (GtkMineField *mfield);
 void gtk_minefield_set_use_question_marks (GtkMineField *mfield, gboolean use_question_marks);
-
+gint gtk_minefield_hint (GtkMineField *mfield);
+  
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

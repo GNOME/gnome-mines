@@ -87,6 +87,10 @@ char *fsize2names[] = {
 	N_("Custom"),
 };
 
+/* It's a little ugly, but it stops the hint dialogs triggering the
+ * hide-the-window-to-stop cheating thing. */
+gboolean disable_hiding = FALSE;
+
 static void create_preferences (void);
 
 
@@ -221,9 +225,43 @@ new_game (GtkWidget *widget, gpointer data)
 }
 
 static void
+hint (GtkWidget *widget, gpointer data)
+{
+	int result;
+	gchar * message;
+	GtkWidget * dialog;
+	
+	result = gtk_minefield_hint (GTK_MINEFIELD (mfield));
+
+	if (result == MINEFIELD_HINT_ACCEPTED) {
+		/* There is a ten second penalty for accepting a hint. */
+		games_clock_add_seconds (GAMES_CLOCK (clk), 10);
+		return;
+	}
+
+	if (result == MINEFIELD_HINT_NO_GAME)
+		message = _("Click a square, any square");
+	else
+		message = _("Maybe they're all mines ...");
+
+	dialog = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_MODAL,
+					 GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
+					 message, NULL);
+	gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
+	gtk_label_set_use_markup (GTK_LABEL (GTK_MESSAGE_DIALOG (dialog)->label), TRUE);
+
+	disable_hiding = TRUE;
+	gtk_dialog_run (GTK_DIALOG (dialog));
+	gtk_widget_destroy (dialog);
+	disable_hiding = FALSE;
+
+}
+
+static void
 focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
-	if (GAMES_CLOCK (clk)->timer_id != -1) {
+	if ((GAMES_CLOCK (clk)->timer_id != -1) 
+	    && (!disable_hiding)) {
 		gtk_widget_hide (mf_frame);
 		gtk_widget_show (ralign);
 		gtk_widget_grab_focus (rbutton);
@@ -652,6 +690,7 @@ preferences_callback (GtkWidget *widget, gpointer data)
 
 GnomeUIInfo gamemenu[] = {
         GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game, NULL),
+	GNOMEUIINFO_MENU_HINT_ITEM(hint, NULL),
 	GNOMEUIINFO_SEPARATOR,
 	GNOMEUIINFO_MENU_SCORES_ITEM(top_ten, NULL),
 	GNOMEUIINFO_SEPARATOR,
