@@ -1063,10 +1063,9 @@ void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_que
 	mfield->use_question_marks = use_question_marks;
 }
 
-/* The hint function tries to find a cell which is adjacent to a mine and
- * reveals that square. If it can't find a suitable square then it looks
- * for a square adjacent to no mines, otherwise it
- * doesn't do anything and returns the appropriate reason. */
+/* Hunt for a hint to give the player. Revealed squares are handled here,
+ * everything else is passed back up. The comments below detail the
+ * strategy for revealing squares. */
 gint gtk_minefield_hint (GtkMineField *mfield)
 {
 	gint i,x,y;
@@ -1082,7 +1081,7 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	if (!mfield->in_play)
 		return MINEFIELD_HINT_NO_GAME;
 	
-	/* We search in three cases.
+	/* We search for three cases:
 	 *
 	 * Case 1: we look for squares adjacent to both a mine and a revealed
 	 * square since these are most likely to help the player and resolve
@@ -1097,6 +1096,14 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 	 * consequence of the previous cases this won't be adjacent to a
 	 * mine).
 	 */
+
+	/* This code is pretty diabolical,
+	 * Yet it is perfectly logical,
+	 * Is it C ?
+	 * Is it me ?
+	 * Or is it just pathological ?
+	 */
+	
 	size = mfield->xsize*mfield->ysize;
 	case1ptr = case1list = g_malloc (size*sizeof(guint));
 	case2ptr = case2list = g_malloc (size*sizeof(guint));
