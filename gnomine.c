@@ -10,6 +10,7 @@
 #include "face-win.xpm"
 
 static GtkWidget *mfield;
+GtkWidget *window;
 GtkWidget *flabel;
 GtkWidget *setupdialog;
 GtkWidget *mfieldbox;
@@ -22,10 +23,16 @@ GtkWidget *cframe;
 GtkWidget *clk;
 GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
 GtkWidget *face_box;
+GtkWidget *app;
 guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
 
+void toggle_menus(void)
+{
+  GnomeApp *app = window;
+  gnome_app_set_positions(app, !app->pos_menubar, POS_NOCHANGE);
+}
 
 void show_face(GtkWidget *pm)
 {
@@ -300,9 +307,21 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 }
 
+GnomeMenuInfo gamemenu[] = {
+  {MI_ITEM, "New", new_game, NULL},
+  {MI_ITEM, "Setup...", setup_game, NULL},
+  {MI_ITEM, "Move menus", toggle_menus, NULL},
+  {MI_ITEM, "Exit", quit_game, NULL},
+  {MI_ENDOFINFO, NULL, NULL, NULL}  
+};
+
+GnomeMenuInfo mainmenu[] = {
+  {MI_SUBMENU, "Game", gamemenu, NULL},
+  {MI_ENDOFINFO, NULL, NULL, NULL}
+};
+
 int main(int argc, char *argv[])
 {
-        GtkWidget *window;
         GtkWidget *all_boxes;
 	GtkWidget *menu_box;
 	GtkWidget *status_table;
@@ -316,51 +335,19 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
-        window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-        gtk_window_set_title(GTK_WINDOW(window), "Gnome mines");
+	window = gnome_app_new("Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
+	gnome_app_create_menu(GNOME_APP(window), mainmenu);
+	g_print("mainmenu[0].widget == %#x [%#x]\n", mainmenu[0].widget,
+		GNOME_APP(window)->menubar->parent);
+	gnome_app_set_positions(GNOME_APP(window), POS_TOP, POS_NOCHANGE);
         
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
 
         all_boxes = gtk_vbox_new(FALSE, 0);
-        gtk_container_add(GTK_CONTAINER(window), all_boxes);
-        
-        menu_box = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(all_boxes), menu_box, TRUE, TRUE, 0);
 
-        menu = gtk_menu_new();
-
-        menubar_item = gtk_menu_item_new_with_label("Game");
-
-	menu_item = gtk_menu_item_new_with_label("New");
-        gtk_signal_connect(GTK_OBJECT(menu_item), "activate",
-                           GTK_SIGNAL_FUNC(new_game), NULL);
-        gtk_menu_append(GTK_MENU(menu), menu_item);
-        gtk_widget_show(menu_item);
-
-	menu_item = gtk_menu_item_new_with_label("Setup...");
-        gtk_signal_connect(GTK_OBJECT(menu_item), "activate",
-                           GTK_SIGNAL_FUNC(setup_game), NULL);
-        gtk_menu_append(GTK_MENU(menu), menu_item);
-        gtk_widget_show(menu_item);
-
-	menu_item = gtk_menu_item_new_with_label("Exit");
-        gtk_signal_connect(GTK_OBJECT(menu_item), "activate",
-                           GTK_SIGNAL_FUNC(quit_game), NULL);
-        gtk_menu_append(GTK_MENU(menu), menu_item);
-        gtk_widget_show(menu_item);
-
-        gtk_menu_item_set_submenu(GTK_MENU_ITEM(menubar_item), menu);
-        gtk_widget_show(menubar_item);
-
-        menubar = gtk_menu_bar_new();
-        gtk_widget_show(menubar);
-        gtk_menu_bar_append(GTK_MENU_BAR(menubar), menubar_item);
-
-        gtk_box_pack_start(GTK_BOX(menu_box), menubar, TRUE, TRUE, 0);
-
-        gtk_widget_show(menu_box);
+	gnome_app_set_contents(GNOME_APP(window), all_boxes);
 
 	xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
 	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
