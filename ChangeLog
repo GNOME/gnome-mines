@@ -1,3 +1,8 @@
+2003-05-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (preferences_callback): Fixed code to make 
+	translation easier, fixes bug #113395.
+
 2003-05-18  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (EXTRA_DIST): Fixups so make distcheck works.

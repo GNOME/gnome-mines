@@ -475,7 +475,8 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	GtkWidget *table2;
 	GtkWidget *label2;
 	char *numstr;
-	
+        gchar * label;
+        
 	if (pref_dialog)
 		return;
 
@@ -485,7 +486,9 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
 	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
 
-	frame = gtk_frame_new (_("<b>Field size</b>"));
+        label = g_strdup_printf("<b>%s</b>",_("Field size"));
+	frame = gtk_frame_new (label);
+        g_free(label);
 	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
 	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget (GTK_FRAME (frame))), TRUE);
 	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
@@ -542,7 +545,9 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_EXPAND |
 			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
-	cframe = gtk_frame_new (_("<b>Custom size</b>"));
+        label = g_strdup_printf("<b>%s</b>",_("Custom size"));
+	cframe = gtk_frame_new (label);
+        g_free(label);
 	gtk_frame_set_shadow_type (GTK_FRAME (cframe), GTK_SHADOW_NONE);
 	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget (GTK_FRAME (cframe))), TRUE);
 	gtk_container_set_border_width (GTK_CONTAINER (cframe), 0);
