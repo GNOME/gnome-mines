@@ -1,5 +1,8 @@
 2003-05-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* gnomine.c (fix_nmines): Added code to ensure that the number of
+	mines is never greater than the number of cells. Fixes bug #97229.
+
 	* Makefile.am (install-data-local): Update the names of any old
 	high score files. High scores should work again.
 

@@ -414,13 +414,28 @@ size_radio_callback(GtkWidget *widget, gpointer data)
 	gtk_widget_set_sensitive(cframe, fsc == 3);
 }
 
+void fix_nmines (int xsize, int ysize)
+{
+  int maxmines;
+
+  /* Fix up the maximum number of mines so that there is always at least two
+   * free spaces. It could in theory be left at one, but that gives an
+   * instant win situation. */
+  maxmines = xsize*ysize - 2;
+  if (nmines > maxmines) {
+    gconf_client_set_int (conf_client, KEY_NMINES, maxmines, NULL);
+    gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), maxmines);
+  }
+  gtk_spin_button_set_range (GTK_SPIN_BUTTON(mentry), 1, maxmines);
+}
+
 static void
 xsize_spin_cb (GtkSpinButton *spin, gpointer data)
 {
 	int size = gtk_spin_button_get_value_as_int (spin);
 	gconf_client_set_int (conf_client, KEY_XSIZE,
 			      size, NULL);
-
+        fix_nmines(size,ysize);
 }
 
 static void
@@ -429,7 +444,7 @@ ysize_spin_cb (GtkSpinButton *spin, gpointer data)
 	int size = gtk_spin_button_get_value_as_int (spin);
 	gconf_client_set_int (conf_client, KEY_YSIZE,
 			      size, NULL);
-
+        fix_nmines(xsize,size);
 }
 
 static void
@@ -539,6 +554,20 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_widget_show (table2);
 	gtk_table_set_row_spacings (GTK_TABLE (table2), GNOME_PAD);
 
+	label2 = gtk_label_new (_("Number of mines:"));
+	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
+	gtk_widget_show (label2);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
+			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	/* TODO: fix this when gconfised correctly */
+	mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX*YSIZE_MAX, 1);
+	g_signal_connect (GTK_OBJECT (mentry), "value-changed",
+			GTK_SIGNAL_FUNC (nmines_spin_cb), NULL);
+	gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), nmines);
+	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
+			| GTK_FILL, 0, 0);
+	gtk_widget_show (mentry);
+
 	label2 = gtk_label_new (_("Horizontal:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
 	gtk_widget_show (label2);
@@ -566,20 +595,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, GTK_EXPAND
 			| GTK_FILL, 0, 0);
 	gtk_widget_show (yentry);
-
-	label2 = gtk_label_new (_("Number of mines:"));
-	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_widget_show (label2);
-	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
-			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
-	/* TODO: fix this when gconfised correctly */
-	mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX*YSIZE_MAX, 1);
-	g_signal_connect (GTK_OBJECT (mentry), "value-changed",
-			GTK_SIGNAL_FUNC (nmines_spin_cb), NULL);
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), nmines);
-	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
-			| GTK_FILL, 0, 0);
-	gtk_widget_show (mentry);
 
 	gtk_container_add (GTK_CONTAINER (cframe), table2);
 
