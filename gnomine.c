@@ -192,6 +192,27 @@ void do_setup(GtkWidget *widget, gpointer data)
 	gnome_config_sync();
 }
 
+void
+about(GtkWidget *widget, gpointer data)
+{
+        GtkWidget *about;
+        gchar *authors[] = {
+                        "Code: Pista",
+                        "Faces: tigert",
+                        "Score: HoraPe",
+                        NULL
+                        };
+
+        about = gnome_about_new (_("Gnome Mines"), VERSION,
+                        "(C) 1997-1998 the Free Software Fundation",
+                        authors,
+                        "Minesweeper clone",
+                        NULL);
+        gtk_widget_show (about);
+
+        return TRUE;
+}
+
 void size_radio_callback(GtkWidget *widget, gpointer data)
 {
 	fsc = (gint)data;
@@ -343,8 +364,14 @@ GnomeMenuInfo gamemenu[] = {
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
 };
 
+GnomeMenuInfo helpmenu[] = {
+  {GNOME_APP_MENU_ITEM, N_("About..."), about, NULL},
+  {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
+};
+
 GnomeMenuInfo mainmenu[] = {
   {GNOME_APP_MENU_SUBMENU, N_("Game"), gamemenu, NULL},
+  {GNOME_APP_MENU_SUBMENU, N_("Help"), helpmenu, NULL},
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}
 };
 

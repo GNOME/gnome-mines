@@ -28,4 +28,5 @@ install-data-local:
 	$(INSTALL_DATA) $(srcdir)/gnomine.desktop $(datadir)/apps/Games/"Gnome Mines.desktop"
 	touch $(scoredir)/gnomine.scores
 	chown games.games $(scoredir)/samegnome.scores
+	chmod 664 $(scoredir)/samegnome.scores
 
