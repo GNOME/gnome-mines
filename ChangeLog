@@ -1,3 +1,8 @@
+1999-03-12  Ian Peters  <itp@gnu.org>
+
+	* gnomine.c (lots of stuff): Moved gnomine to use a propbox for
+	configuration.
+
 1999-02-13  Ian Peters  <ipeters@acm.org>
 
 	* gnomine.c (verify_ranges): Fixed a coding typo - it was checking the

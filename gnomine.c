@@ -19,9 +19,9 @@
 #include "face-win.xpm"
 
 static GtkWidget *mfield;
+static GtkWidget *pref_dialog;
 GtkWidget *window;
 GtkWidget *flabel;
-GtkWidget *setupdialog;
 GtkWidget *xentry;
 GtkWidget *yentry;
 GtkWidget *mentry;
@@ -96,14 +96,6 @@ void new_game(GtkWidget *widget, gpointer data)
 	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
 /*        gtk_clock_start(GTK_CLOCK(clk)); */
-}
-
-void setupdialog_destroy(GtkWidget *widget, gint mode)
-{
-	if (mode == 1) {
-		gtk_widget_destroy(setupdialog);
-	}
-	setupdialog = NULL;
 }
 
 void marks_changed(GtkWidget *widget, gpointer data)
@@ -192,44 +184,6 @@ void verify_ranges (void)
 	nmines   = range (nmines, 1, xsize * ysize);
 }
 
-void do_setup(GtkWidget *widget, gpointer data)
-{
-        guint oldxsize, oldysize, oldnmines, oldfsize, oldminesize;
-  
-	oldxsize = xsize;
-	oldysize = ysize;
-	oldnmines = nmines;
-        oldfsize = fsize;
-	oldminesize = minesize;
-
-        xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
-	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
-        nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
-        minesize = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
-	fsize  = fsc;
-
-	verify_ranges ();
-        setup_mode(mfield, fsize);
-
-        if ((oldxsize != xsize) ||
-	    (oldysize != ysize) ||
-	    (oldfsize != fsize) ||
-	    (oldnmines != nmines))
-          {
-	    new_game(mfield, NULL);
-	  }
-
-	setupdialog_destroy(setupdialog, 1);
-
-	gnome_config_set_int("/gnomine/geometry/xsize",  xsize);
-	gnome_config_set_int("/gnomine/geometry/ysize",  ysize);
-	gnome_config_set_int("/gnomine/geometry/nmines", nmines);
-	gnome_config_set_int("/gnomine/geometry/minesize", minesize);
-	gnome_config_set_int("/gnomine/geometry/mode",   fsize);
-	gnome_config_sync();
-	
-}
-
 void
 about(GtkWidget *widget, gpointer data)
 {
@@ -258,83 +212,211 @@ about(GtkWidget *widget, gpointer data)
 
 void size_radio_callback(GtkWidget *widget, gpointer data)
 {
+	if (GPOINTER_TO_INT (data) == fsc)
+		return;
+
+	if (!pref_dialog)
+		return;
+
 	fsc = GPOINTER_TO_INT (data);
 
 	gtk_widget_set_sensitive(cframe, fsc == 3);
+
+	gnome_property_box_changed (GNOME_PROPERTY_BOX (pref_dialog));
 }
 
-void setup_game(GtkWidget *widget, gpointer data)
+static void apply_cb (GtkWidget *widget, gint pagenum, gpointer data)
 {
-        GtkWidget *all_boxes;
-	GtkWidget *box, *box2;
-        GtkWidget *label;
-	GtkWidget *button;
+        guint oldxsize, oldysize, oldnmines, oldfsize, oldminesize;
+
+	if (pagenum != -1)
+		return;
+  
+	oldxsize = xsize;
+	oldysize = ysize;
+	oldnmines = nmines;
+	oldfsize = fsize;
+	oldminesize = minesize;
+
+	xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
+	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
+	nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
+	minesize = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
+	fsize  = fsc;
+
+	verify_ranges ();
+	setup_mode(mfield, fsize);
+
+	if ((oldxsize != xsize) || (oldysize != ysize) || (oldfsize != fsize)
+			|| (oldnmines != nmines)) {
+		new_game(mfield, NULL);
+	}
+
+	gnome_config_set_int("/gnomine/geometry/xsize",  xsize);
+	gnome_config_set_int("/gnomine/geometry/ysize",  ysize);
+	gnome_config_set_int("/gnomine/geometry/nmines", nmines);
+	gnome_config_set_int("/gnomine/geometry/minesize", minesize);
+	gnome_config_set_int("/gnomine/geometry/mode",   fsize);
+	gnome_config_sync();
+}
+
+void prop_box_changed_callback (GtkWidget *widget, gpointer data)
+{
+	if (!pref_dialog)
+		return;
+
+	gnome_property_box_changed (GNOME_PROPERTY_BOX (pref_dialog));
+}
+
+void preferences_callback (GtkWidget *widget, gpointer data)
+{
+	GtkWidget *label;
+	GtkWidget *table;
 	GtkWidget *frame;
+	GtkWidget *vbox;
+	GtkWidget *hbox;
+	GtkWidget *button;
+	GtkWidget *table2;
+	GtkWidget *label2;
         GtkObject *adj;
         gchar numstr[8];
 	
-        if (setupdialog) return;
+	if (pref_dialog)
+		return;
 
-	setupdialog = gnome_dialog_new (_("Gnome Mines setup"),
-			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
-			NULL);
-	gnome_dialog_set_parent (GNOME_DIALOG (setupdialog),
-			GTK_WINDOW (window));
+	label = gtk_label_new (_("Game"));
+	gtk_widget_show (label);
 
-	gtk_signal_connect(GTK_OBJECT(setupdialog),
-			   "delete_event",
-			   GTK_SIGNAL_FUNC(setupdialog_destroy),
-			   0);
+	table = gtk_table_new (2, 2, FALSE);
+	gtk_container_border_width (GTK_CONTAINER (table), GNOME_PAD);
+	gtk_widget_show (table);
+	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
+	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
 
-	all_boxes = GNOME_DIALOG (setupdialog)->vbox;
+	frame = gtk_frame_new (_("Field size"));
+	gtk_container_border_width (GTK_CONTAINER (frame), 0);
+	gtk_widget_show (frame);
 
-        cframe = gtk_frame_new(_("Custom size"));
+	vbox = gtk_vbox_new (TRUE, 0);
+	gtk_container_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
+	gtk_widget_show (vbox);
 
-	frame = gtk_frame_new(_("Field size"));
-	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
-	
-	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_add(GTK_CONTAINER(frame), box);
-	
 	button = gtk_radio_button_new_with_label(NULL, _("Tiny"));
-	if (fsize == 0) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
-			   (gpointer) 0);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
+	if (fsize == 0)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+				TRUE);
+	gtk_signal_connect (GTK_OBJECT (button), "clicked",
+			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 0);
+	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
         gtk_widget_show(button);
 
-	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 _("Medium"));
-	if (fsize == 1) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
-			   (gpointer) 1);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
-        gtk_widget_show(button);
+	button = gtk_radio_button_new_with_label
+		(gtk_radio_button_group (GTK_RADIO_BUTTON(button)),
+		 _("Medium"));
+	if (fsize == 1)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+				TRUE);
+	gtk_signal_connect (GTK_OBJECT (button), "clicked",
+			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 1);
+	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+        gtk_widget_show (button);
 
-	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 _("Biiiig"));
-	if (fsize == 2) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
-			   (gpointer) 2);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
+	button = gtk_radio_button_new_with_label
+		(gtk_radio_button_group (GTK_RADIO_BUTTON (button)),
+		 _("Biiiig"));
+	if (fsize == 2)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+				TRUE);
+	gtk_signal_connect (GTK_OBJECT (button), "clicked",
+			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 2);
+	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
         gtk_widget_show(button);
 	
-	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 _("Custom"));
-	if (fsize == 3) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
-			   (gpointer) 3);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
+	button = gtk_radio_button_new_with_label
+		(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
+		 _("Custom"));
+	if (fsize == 3)
+		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
+				TRUE);
+	gtk_signal_connect (GTK_OBJECT (button), "clicked",
+			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 3);
+	gtk_box_pack_start (GTK_BOX (vbox), button, TRUE, TRUE, 0);
         gtk_widget_show(button);
 
-	gtk_widget_show(box);
-	gtk_widget_show(frame);
+	gtk_container_add (GTK_CONTAINER (frame), vbox);
 
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Mine Size:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
+	gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_EXPAND |
+			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+
+	cframe = gtk_frame_new (_("Custom size"));
+	gtk_container_border_width (GTK_CONTAINER (cframe), 0);
+	gtk_widget_set_sensitive (cframe, fsize == 3);
+	gtk_widget_show (cframe);
+
+	table2 = gtk_table_new (3, 2, FALSE);
+	gtk_container_border_width (GTK_CONTAINER (table2), GNOME_PAD);
+	gtk_widget_show (table2);
+	gtk_table_set_row_spacings (GTK_TABLE (table2), GNOME_PAD);
+
+	label2 = gtk_label_new (_("Horizontal:"));
+	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
+	gtk_widget_show (label2);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 0, 1,
+			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+
+	xentry = gtk_entry_new ();
+	gtk_widget_set_usize (xentry, 50, -1);
+	gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, GTK_EXPAND
+			| GTK_FILL, 0, 0);
+	sprintf(numstr, "%d", xsize);
+	gtk_entry_set_text(GTK_ENTRY(xentry),numstr);
+	gtk_widget_show (xentry);
+	gtk_signal_connect (GTK_OBJECT (xentry), "key_press_event",
+			GTK_SIGNAL_FUNC (prop_box_changed_callback), NULL);
+
+	label2 = gtk_label_new (_("Vertical:"));
+	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
+	gtk_widget_show (label2);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 1, 2,
+			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+
+	yentry = gtk_entry_new ();
+	gtk_widget_set_usize (yentry, 50, -1);
+	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, GTK_EXPAND
+			| GTK_FILL, 0, 0);
+	sprintf(numstr, "%d", ysize);
+	gtk_entry_set_text(GTK_ENTRY(yentry),numstr);
+	gtk_widget_show (yentry);
+	gtk_signal_connect (GTK_OBJECT (yentry), "key_press_event",
+			GTK_SIGNAL_FUNC (prop_box_changed_callback), NULL);
+
+	label2 = gtk_label_new (_("Number of mines:"));
+	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
+	gtk_widget_show (label2);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
+			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+
+	mentry = gtk_entry_new ();
+	gtk_widget_set_usize (mentry, 50, -1);
+	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
+			| GTK_FILL, 0, 0);
+	sprintf(numstr, "%d", nmines);
+	gtk_entry_set_text(GTK_ENTRY(mentry),numstr);
+	gtk_widget_show (mentry);
+	gtk_signal_connect (GTK_OBJECT (mentry), "key_press_event",
+			GTK_SIGNAL_FUNC (prop_box_changed_callback), NULL);
+
+	gtk_container_add (GTK_CONTAINER (cframe), table2);
+
+	gtk_table_attach (GTK_TABLE (table), cframe, 1, 2, 0, 1, GTK_EXPAND |
+			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+
+	hbox = gtk_hbox_new (FALSE, GNOME_PAD);
+	gtk_widget_show (hbox);
+
+	label2 = gtk_label_new(_("Mine size:"));
+	gtk_box_pack_start (GTK_BOX (hbox), label2, FALSE, FALSE, 0);
+	gtk_widget_show (label2);
 
         adj = gtk_adjustment_new(minesize, 2, 99, 1, 5, 10);
 	sentry = gtk_spin_button_new(GTK_ADJUSTMENT(adj), 10, 0);
@@ -347,71 +429,31 @@ void setup_game(GtkWidget *widget, gpointer data)
 #ifdef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
 	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(sentry), 1);
 #endif
-        gtk_box_pack_start(GTK_BOX(box2), sentry, FALSE, TRUE, 0);
+	gtk_signal_connect (GTK_OBJECT (adj), "value_changed", GTK_SIGNAL_FUNC
+			(prop_box_changed_callback), NULL);
+	gtk_box_pack_start (GTK_BOX (hbox), sentry, TRUE, TRUE, 0);
 	gtk_widget_show(sentry);
-	gtk_widget_show(box2);
 
-	gtk_box_pack_start(GTK_BOX(all_boxes), cframe, TRUE, TRUE, 0);
-        gtk_widget_set_sensitive(cframe, fsize == 3);
-	
-	box = gtk_vbox_new(FALSE, 0);
-	gtk_container_add(GTK_CONTAINER(cframe), box);
+	gtk_table_attach (GTK_TABLE (table), hbox, 0, 1, 1, 2, GTK_EXPAND |
+			GTK_FILL, 0, 0, 0);
 
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Horizontal:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
-	xentry = gtk_entry_new();
-	gtk_widget_set_usize(xentry, 50, -1);
-	gtk_box_pack_start(GTK_BOX(box2), xentry, FALSE, TRUE, 0);
-	sprintf(numstr, "%d", xsize);
-	gtk_entry_set_text(GTK_ENTRY(xentry),numstr);
-	gtk_widget_show(xentry);
-	gtk_widget_show(box2);
+	pref_dialog = gnome_property_box_new ();
+	gnome_dialog_set_parent (GNOME_DIALOG (pref_dialog),
+			GTK_WINDOW (window));
+	gtk_window_set_title (GTK_WINDOW (pref_dialog),
+			_("Gnome Mine Preferences"));
+	gtk_signal_connect (GTK_OBJECT (pref_dialog), "destroy",
+			GTK_SIGNAL_FUNC (gtk_widget_destroyed), &pref_dialog);
 
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Vertical:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
-	yentry = gtk_entry_new();
-	gtk_widget_set_usize(yentry, 50, -1);
-	gtk_box_pack_start(GTK_BOX(box2), yentry, FALSE, TRUE, 0);
-	sprintf(numstr, "%d", ysize);
-	gtk_entry_set_text(GTK_ENTRY(yentry),numstr);
-	gtk_widget_show(yentry);
-	gtk_widget_show(box2);
+	gnome_property_box_append_page (GNOME_PROPERTY_BOX (pref_dialog),
+			table, label);
 
-	box2 = gtk_hbox_new(FALSE, 0);
-	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new(_("Number of mines:"));
-	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
-	gtk_widget_show(label);
-	mentry = gtk_entry_new();
-	gtk_widget_set_usize(mentry, 50, -1);
-	gtk_box_pack_start(GTK_BOX(box2), mentry, FALSE, TRUE, 0);
-	sprintf(numstr, "%d", nmines);
-	gtk_entry_set_text(GTK_ENTRY(mentry),numstr);
-	gtk_widget_show(mentry);
-	gtk_widget_show(box2);
-
-	gtk_widget_show(box);
-        gtk_widget_show(cframe);
-	
-	box = gtk_hbox_new(TRUE, 5);
-	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-	gnome_dialog_button_connect (GNOME_DIALOG (setupdialog), 0,
-			GTK_SIGNAL_FUNC (do_setup), NULL);
-	gnome_dialog_button_connect (GNOME_DIALOG (setupdialog), 1,
-			GTK_SIGNAL_FUNC (setupdialog_destroy), (gpointer) 1);
-        gtk_widget_show(box);
-	
-	gtk_widget_show(all_boxes);
+	gtk_signal_connect (GTK_OBJECT (pref_dialog), "apply", GTK_SIGNAL_FUNC
+			(apply_cb), NULL);
 
         fsc = fsize;
 
-	gtk_widget_show(setupdialog);
+	gtk_widget_show (pref_dialog);
 }
 
 GnomeUIInfo gamemenu[] = {
@@ -424,7 +466,7 @@ GnomeUIInfo gamemenu[] = {
 };
 
 GnomeUIInfo settingsmenu[] = {
-	GNOMEUIINFO_MENU_PREFERENCES_ITEM(setup_game, NULL),
+	GNOMEUIINFO_MENU_PREFERENCES_ITEM(preferences_callback, NULL),
 	GNOMEUIINFO_END
 };
 
