@@ -574,7 +574,6 @@ main (int argc, char *argv[])
         window = gnome_app_new("gnomine", _("Gnome mines"));
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-        gtk_menu_item_right_justify(GTK_MENU_ITEM(mainmenu[1].widget));
 
 	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
