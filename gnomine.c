@@ -79,7 +79,7 @@ void set_flabel(GtkMineField *mfield)
 void
 show_scores (gchar *level, guint pos)
 {
-	gnome_scores_display (_("Gnome mines"), "gnomine", level, pos);
+	gnome_scores_display (_("Gnome Mines"), "gnomine", level, pos);
 }
 
 void top_ten(GtkWidget *widget, gpointer data)

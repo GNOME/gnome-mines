@@ -245,8 +245,8 @@ static gint gtk_minefield_expose(GtkWidget *widget,
         GtkMineField *mfield;
 	GdkColor color;
 	gint n;
-	int i;
-	
+        int i;
+  
 	g_return_val_if_fail(widget != NULL, FALSE);
         g_return_val_if_fail(GTK_IS_MINEFIELD(widget), FALSE);
         g_return_val_if_fail(event != NULL, FALSE);
@@ -257,7 +257,19 @@ static gint gtk_minefield_expose(GtkWidget *widget,
         mfield = GTK_MINEFIELD(widget);
 	
 	if (mfield->numstr[0].gc == 0) {
-		mfield->font = gdk_font_load("-misc-fixed-bold-r-normal--13-*-*-*-*-*-*");
+	        int pxlsz;
+	        char fontname[50];
+	  
+	        pxlsz = minesize - 4;
+	        if (pxlsz > 99) pxlsz = 99;
+                if (pxlsz < 2)  pxlsz = 2;
+  
+                sprintf(fontname, "-bitstream-courier-bold-r-*-*-%d-*-*-*-*-*-*-*", pxlsz);
+	
+		mfield->font = gdk_font_load(fontname);
+	  
+	            /* The font used to be "-misc-fixed-bold-r-normal--13-*-*-*-*-*-*" */
+	  
                 if (!mfield->font) mfield->font = widget->style->font;
 		for (i=0; i<9; i++) {
 			mfield->numstr[i].text[0] = i+'0';
@@ -265,8 +277,7 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			mfield->numstr[i].dx =
 				(minesize-gdk_string_width(mfield->font,
 							   mfield->numstr[i].text))/2;
-			mfield->numstr[i].dy = (minesize-mfield->font->ascent)/2
-				+10;
+			mfield->numstr[i].dy = (minesize + 5 * pxlsz / 8) / 2;
 			mfield->numstr[i].gc = gdk_gc_new(GTK_WIDGET(mfield)->window);
 
 			color.red   = num_colors[i][0] | (num_colors[i][0] << 8);
@@ -641,10 +652,8 @@ void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 GtkWidget* gtk_minefield_new(void)
 {
         GtkMineField *mfield;
-        GtkWidget *widget;
         
 	mfield = gtk_type_new(gtk_minefield_get_type());
-	widget = GTK_WIDGET(mfield);
 	mfield->mines = NULL;
 	gtk_minefield_set_size(mfield, 0, 0);
 
@@ -680,6 +689,7 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 {
         mfield->mcount = mcount;
         mfield->minesize = minesize;
+        mfield->numstr[0].gc = 0;
 }
 
 static gulong random_seed;

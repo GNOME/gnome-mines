@@ -1,5 +1,15 @@
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
+        * minefield.c (gtk_minefield_set_mines): font position is forced
+	              by setting numstr[0].gc to zero.
+	
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
+        * minefield.c (gtk_minefield_expose): Now the size of the font
+	              is proportional to minesize.
+	
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
         * gnomine.c (main): Using new scores stock pixmap and the
 	                    stock buttons for OK & CANCEL
 	
