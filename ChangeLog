@@ -1,3 +1,9 @@
+2004-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Explicitly use cell_idx rather than the explicit
+	conversion functions. Added some warnings to try and pick up on
+	#119043.
+
 2004-03-01  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_mine_draw): Drawing fixes. A patch thanks to

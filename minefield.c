@@ -632,7 +632,9 @@ static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 
 static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 {
-	int c = x + mfield->xsize * y;
+	int c = cell_idx (mfield, x, y);
+
+	g_return_if_fail (c != -1);
 
 	/* make sure first click isn't on a mine */
 	if (!mfield->in_play) {
@@ -659,6 +661,8 @@ static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 {
         int c = cell_idx(mfield, x, y);
+
+	g_return_if_fail (c != -1);
 
 	if (mfield->mines[c].shown != 0) { /* nothing to toggle */
 		return;
@@ -792,7 +796,8 @@ static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event
                 if (x < 0 || y < 0 || x > mfield->xsize-1 || y > mfield->ysize-1)
                         return 0;
 
-                c = x+y*(mfield->xsize);
+                c = cell_idx (mfield, x, y);
+		g_assert (c != -1);
 
                 if (c != mfield->cdown) {
                         mfield->mines[mfield->cdown].down = 0;
@@ -836,7 +841,8 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
         if (event->button <= 3 && !mfield->bdown[1]) {
                 x = event->x/minesize;
                 y = event->y/minesize;
-                c = x+y*(mfield->xsize);
+                c = cell_idx (mfield, x, y);
+		if (c == -1) return FALSE;
                 if (!mfield->bdown[0] && !mfield->bdown[1] && !mfield->bdown[2]) {
                         mfield->cdownx = x;
                         mfield->cdowny = y;
