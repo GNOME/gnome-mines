@@ -1,7 +1,8 @@
 2003-05-31  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (install-data-local): Implement setgid modifications
-	(see gnome-games/ChangeLog).
+	(see gnome-games/ChangeLog). Also undo the score directory
+	changes. It breaks more than it fixes.	
 
 2003-05-30  Callum McKenzie  <callum@physics.otago.ac.nz>
 
