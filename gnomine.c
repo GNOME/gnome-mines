@@ -638,7 +638,11 @@ int main(int argc, char *argv[])
 			  0, 0);
         gtk_widget_show (align);
   
+	gtk_widget_push_visual (gdk_imlib_get_visual ());
+	gtk_widget_push_colormap (gdk_imlib_get_colormap ());
         mfield = gtk_minefield_new();
+	gtk_widget_pop_colormap ();
+	gtk_widget_pop_visual ();
         gtk_container_add (GTK_CONTAINER (align), mfield);
 
         setup_mode(mfield, fsize);

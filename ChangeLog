@@ -1,3 +1,12 @@
+2018-03-02  Federico Mena Quintero  <federico@nuclecu.unam.mx>
+
+	* gnomine.c (main): Now the minefield is created with the correct
+	visual and colormap.
+
+	* minefield.c (_setup_sign): Now the image is only used here.
+
+	* minefield.h: Removed image field from sign structure.
+
 1998-02-28 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
 	* gnomine.c: Using a spinbutton for the properties dialog.
