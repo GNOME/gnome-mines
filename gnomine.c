@@ -263,7 +263,7 @@ void
 about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
-        gchar *authors[] = {
+        const gchar *authors[] = {
 		"Code: Pista",
 		"Faces: tigert",
 		"Score: HoraPe",
@@ -272,7 +272,7 @@ about(GtkWidget *widget, gpointer data)
 
         about = gnome_about_new (_("Gnome Mines"), VERSION,
 				 "(C) 1997-1998 the Free Software Fundation",
-				 authors,
+				 (const char **)authors,
 				 _("Minesweeper clone"),
 				 NULL);
         gtk_widget_show (about);
