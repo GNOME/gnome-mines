@@ -24,7 +24,7 @@ gnomine_LDADD = \
 	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
-schemadir   = $(sysconfdir)/gconf/schemas
+schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gnomine.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@

@@ -1,3 +1,7 @@
+2002-12-17  Ross Burton  <ross@burtonini.com>
+
+	* Makefile.am (schema_in_files): Fix the schema path.
+
 2002-12-11  Ross Burton  <ross@burtonini.com>
 
 	* minefield.c: Small changes to try and draw the labels at a
