@@ -1,3 +1,7 @@
+2002-11-18  Fernando Herrera <fherrera@onirica.com>
+
+	* gnomine.desktop.in: add X-GNOME-BUGZILLA stuff
+
 2002-10-16  Ross Burton  <ross@burtonini.com>
 
 	* gnomine.c: Re-write of the Preferences code. It's now instant
