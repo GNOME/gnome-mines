@@ -5,7 +5,7 @@
     tkriehle@citilink.com (Tim Riehle)
    </creator>
      <maintainer>
-    Callum McKenzie <callum.otago.ac.nz>
+    callum.otago.ac.nz (Callum McKenzie)
    </maintainer>
      <title>
      GNOME Mines Manual
@@ -22,7 +22,7 @@
      user's guide
    </type>
      <format mime="text/xml" dtd="-//OASIS//DTD DocBook XML V4.1.2//EN"/>
-     <identifier url="file://usr/share/gnome/help/gnomine/C/gnome-mines.xml"/>
+     <identifier url="gnomine.xml"/>
      <language code="C"/>
      <relation seriesid="54d3211e-6006-11d6-9a4c-97ceaf12a926"/>
      <rights type="GNU FDL" license.version="1.1" holder="Tim Riehle"/>
