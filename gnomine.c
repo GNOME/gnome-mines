@@ -369,7 +369,7 @@ verify_ranges (void)
 {
 	xsize    = CLAMP (xsize, XSIZE_MIN, XSIZE_MAX);
 	ysize    = CLAMP (ysize, YSIZE_MIN, YSIZE_MAX);
-	nmines   = CLAMP (nmines, 1, xsize * ysize - 2);
+	nmines   = CLAMP (nmines, 1, xsize * ysize - 9);
 	fsize    = CLAMP (fsize,  0, 3);
 }
 
@@ -513,7 +513,7 @@ fix_nmines (int xsize, int ysize)
 	/* Fix up the maximum number of mines so that there is always at least two
 	 * free spaces. It could in theory be left at one, but that gives an
 	 * instant win situation. */
-	maxmines = xsize*ysize - 2;
+	maxmines = xsize*ysize - 9;
 	if (nmines > maxmines) {
 		gconf_client_set_int (conf_client, KEY_NMINES, maxmines, NULL);
 		gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), maxmines);
@@ -565,16 +565,15 @@ create_preferences (void)
 	GtkWidget *button;
 	GtkWidget *table2;
 	GtkWidget *label2;
-        
-	table = gtk_table_new (2, 3, FALSE);
-	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
-	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
-	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
+	 
+	table = gtk_table_new (2, 2, FALSE);
+	gtk_container_set_border_width (GTK_CONTAINER (table), 5);
+	gtk_table_set_row_spacings (GTK_TABLE (table), 18);
+	gtk_table_set_col_spacings (GTK_TABLE (table), 18);
 
-	frame = games_frame_new (_("Field size"));
+	frame = games_frame_new (_("Field Size"));
 
-	vbox = gtk_vbox_new (TRUE, 0);
-	gtk_container_set_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
+	vbox = gtk_vbox_new (FALSE, 6);
 
 	button = gtk_radio_button_new_with_label(NULL, _("Small"));
 	if (fsize == 0)
@@ -612,69 +611,64 @@ create_preferences (void)
 				TRUE);
 	g_signal_connect (GTK_OBJECT (button), "clicked",
 			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 3);
-	gtk_box_pack_start (GTK_BOX (vbox), button, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
 	gtk_container_add (GTK_CONTAINER (frame), vbox);
 
-	gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_EXPAND |
-			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 1, 0, 1);
 
-	cframe = games_frame_new (_("Custom size"));
+	cframe = games_frame_new (_("Custom Size"));
 	gtk_widget_set_sensitive (cframe, fsize == 3);
 
 	table2 = gtk_table_new (3, 2, FALSE);
-	gtk_container_set_border_width (GTK_CONTAINER (table2), GNOME_PAD);
-	gtk_table_set_row_spacings (GTK_TABLE (table2), GNOME_PAD);
+	gtk_table_set_row_spacings (GTK_TABLE (table2), 6);
+	gtk_table_set_col_spacings (GTK_TABLE (table2), 12);
 
-	label2 = gtk_label_new (_("Number of mines:"));
+	label2 = gtk_label_new_with_mnemonic (_("_Number of mines:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
-			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3, GTK_EXPAND | GTK_FILL, 0, 0, 0);
 	
 	mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX*YSIZE_MAX, 1);
 	g_signal_connect (GTK_OBJECT (mentry), "value-changed",
 			GTK_SIGNAL_FUNC (nmines_spin_cb), NULL);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), nmines);
-	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
-			| GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, 0, 0, 0, 0);
 	fix_nmines (xsize, ysize);
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label2), mentry);
 
-	label2 = gtk_label_new (_("Horizontal:"));
+	label2 = gtk_label_new_with_mnemonic (_("_Horizontal:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 0, 1,
-			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 0, 1, GTK_EXPAND | GTK_FILL, 0, 0, 0);
 
 	xentry = gtk_spin_button_new_with_range (XSIZE_MIN, XSIZE_MAX, 1);
 	g_signal_connect (GTK_OBJECT (xentry), "value-changed",
 			GTK_SIGNAL_FUNC (xsize_spin_cb), NULL);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(xentry), xsize);
-	gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, GTK_EXPAND
-			| GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, 0, 0, 0);
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label2), xentry);
 
-	label2 = gtk_label_new (_("Vertical:"));
+	label2 = gtk_label_new_with_mnemonic (_("_Vertical:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 1, 2,
-			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 1, 2, GTK_EXPAND | GTK_FILL, 0, 0, 0);
 
 	yentry = gtk_spin_button_new_with_range (YSIZE_MIN, YSIZE_MAX, 1);
 	g_signal_connect (GTK_OBJECT (yentry), "value-changed",
 			GTK_SIGNAL_FUNC (ysize_spin_cb), NULL);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(yentry), ysize);
-	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, GTK_EXPAND
-			| GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, 0, 0, 0); 
+	gtk_label_set_mnemonic_widget (GTK_LABEL (label2), yentry);
 
 	gtk_container_add (GTK_CONTAINER (cframe), table2);
 
-	gtk_table_attach (GTK_TABLE (table), cframe, 1, 2, 0, 1, GTK_EXPAND |
-			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
+	gtk_table_attach (GTK_TABLE (table), cframe, 1, 2, 0, 1, GTK_FILL, GTK_FILL, 0, 0); 
 
-	question_toggle = gtk_check_button_new_with_label(_("Use \"I'm not sure\" flags."));
+	question_toggle = gtk_check_button_new_with_mnemonic(_("_Use \"I'm not sure\" flags"));
 	g_signal_connect(GTK_OBJECT(question_toggle), "toggled",
 			GTK_SIGNAL_FUNC (use_question_toggle_cb), NULL);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(question_toggle), use_question_marks);
 	gtk_widget_show(question_toggle);
 	
-	gtk_table_attach (GTK_TABLE (table), question_toggle, 0, 2, 2, 3, GTK_EXPAND | GTK_FILL, 0, 0, 0);
+	gtk_table_attach_defaults (GTK_TABLE (table), question_toggle, 0, 2, 1, 2);
 
 
 	pref_dialog = gtk_dialog_new_with_buttons (_("GNOME Mines Preferences"),
@@ -684,8 +678,10 @@ create_preferences (void)
 			NULL);
 
         gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
-	gtk_container_add (GTK_CONTAINER(GTK_DIALOG(pref_dialog)->vbox),
-			table);
+	gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
+	gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
+	gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
+	gtk_box_pack_start (GTK_BOX (GTK_DIALOG(pref_dialog)->vbox), table, FALSE, FALSE, 0);
 
 	g_signal_connect (G_OBJECT (pref_dialog), "destroy",
 			  G_CALLBACK (gtk_widget_destroyed), &pref_dialog);

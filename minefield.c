@@ -653,17 +653,30 @@ static void gtk_minefield_win(GtkMineField *mfield)
 
 static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 {
-	guint i;
+	guint i, j;
 	guint x, y;
 	guint n;
 	guint cidx;
+	gboolean adj_found;
+	
+	/* randomly set the mines, but avoid the current and adjacent locations */
 
-	/* randomly set the mines, but avoid the current location (why ?)*/
+	x = curloc % mfield->xsize;
+	y = curloc / mfield->xsize;
+
 	for (n = 0; n < mfield->mcount; ) {
 	        i = g_rand_int_range (mfield->grand, 0, mfield->xsize * mfield->ysize);
+
 		if (!mfield->mines[i].mined && i != curloc) {
-		        mfield->mines[i].mined = 1;
-			n++;
+			adj_found = FALSE;
+
+			for (j=0; j<8; j++)
+				adj_found |= (i == cell_idx(mfield, x+neighbour_map[j].x, y+neighbour_map[j].y));
+
+			if (!adj_found) {
+	        		mfield->mines[i].mined = 1;
+				n++;
+			}
 		}
 	}
 

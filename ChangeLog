@@ -1,3 +1,15 @@
+2005-03-13  Richard Hoelscher  <rah@rahga.com>
+ 
+ 	* minefield.c (gtk_minefield_randomize): Ensure that the first square
+ 	and adjacent ones are mine free. Should drasticly reduce the occurence
+ 	of dud games. Bug #170264
+ 	* gnomine.c (fix_nmines, verify_ranges): Mine limit of squares minus 9
+
+2005-03-23  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Patches from Dennis Cranston
+	<dennis_cranston@yahoo.com> to make the game more HIG compliant.
+
 2005-02-25  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (show_scores): Bug 168270. Show the correct high score 
