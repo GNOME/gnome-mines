@@ -1,9 +1,28 @@
+2005-03-30  Richard Hoelscher  <rah@rahga.com>
+
+	* gnomine.c: Port to GtkUIInfo. Callback expecting a GtkWidget param
+	rather than GtkAction now get neither. Uses games-stock menu items.
+	Removed include of math.h, since we no longer use the rint() function.
+	Many globlals have been moved to a more precise scope.
+	"resume_container" and "resume_button" replace the names for widgets
+	involving the button that appears when the game is paused.
+	(scores_callback): Gratuitous renaming, was "top_ten".
+	(about_callbak): Remove flawed i18n code, port to GtkAboutDialog.
+	(show_face),(quit_game),(focus_out_cb),(resume_game_cb): UI updates.
+	(new_game): Since *mfield is global, no need to pass it as a param.
+	(main): Call games_stock_init().
+	The status area, which same-gnome was modeled after, is now modeled
+	after same gnome. (Specifically, gulf between label and data removed.)
+	Make "Press to resume" comply with HIG (capitalized "Resume").
+
+	Mark "Press to resume" for translation. (Bug #172027, Marco Colombo)
+
 2005-03-13  Richard Hoelscher  <rah@rahga.com>
- 
- 	* minefield.c (gtk_minefield_randomize): Ensure that the first square
- 	and adjacent ones are mine free. Should drasticly reduce the occurence
- 	of dud games. Bug #170264
- 	* gnomine.c (fix_nmines, verify_ranges): Mine limit of squares minus 9
+
+	* minefield.c (gtk_minefield_randomize): Ensure that the first square
+	and adjacent ones are mine free. Should drasticly reduce the occurence
+	of dud games. Bug #170264
+	* gnomine.c (fix_nmines, verify_ranges): Mine limit of squares minus 9
 
 2005-03-23  Callum McKenzie  <callum@physics.otago.ac.nz>
 

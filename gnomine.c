@@ -26,13 +26,13 @@
 #include <config.h>
 #include <gnome.h>
 #include <gconf/gconf-client.h>
-#include <math.h>
 #include <string.h>
 
 #include "minefield.h"
 #include "games-clock.h"
 #include "games-frame.h"
 #include "games-scores-dialog.h"
+#include "games-stock.h"
 
 /* Limits for various minefield properties */
 #define XSIZE_MIN 4
@@ -52,37 +52,25 @@
 #define KEY_WIDTH    	       "/apps/gnomine/geometry/width"
 #define KEY_HEIGHT   	       "/apps/gnomine/geometry/height"
 
-/* So that it is only one place if we re-order the menus. */
-#define HINT_MENU_LOC 1
-
-static GtkWidget *mf_frame;
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog = NULL;
-static GtkWidget *rbutton;
-static GtkWidget *ralign;
+static GtkWidget *resume_button;
+static GtkWidget *resume_container;
+static GtkWidget *mfield_container;
 static GConfClient *conf_client;
 GtkWidget *window;
 GtkWidget *flabel;
-GtkWidget *xentry;
-GtkWidget *yentry;
 GtkWidget *mentry;
-GtkWidget *sentry;
-GtkWidget *question_toggle;
 GtkWidget *mbutton;
-GtkWidget *plabel;
 GtkWidget *cframe;
 GtkWidget *clk;
 GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
-GtkWidget *face_box;
 gint ysize = -1, xsize = -1;
 gint nmines = -1;
 gint fsize = -1;
 gboolean use_question_marks = TRUE;
 
-GnomeUIInfo gamemenu[];
-GnomeUIInfo settingsmenu[];
-GnomeUIInfo helpmenu[];
-GnomeUIInfo mainmenu[];
+GtkAction *hint_action;
 
 char *fsize2names[] = {
 	N_("Small"),
@@ -95,13 +83,9 @@ char *fsize2names[] = {
  * hide-the-window-to-stop cheating thing. */
 gboolean disable_hiding = FALSE;
 
-static void create_preferences (void);
-
-
 static GtkWidget *
 image_widget_setup (char *name)
 {
-	/*	GdkPixbuf *pixbuf = NULL; */
 	GtkWidget *image = NULL;
 	char *filename = NULL;
 
@@ -111,11 +95,9 @@ image_widget_setup (char *name)
 					      TRUE, NULL);
 	if (filename != NULL)
 		gtk_image_set_from_file (GTK_IMAGE (image), filename);
-	/*		pixbuf = gdk_pixbuf_new_from_file (filename, NULL); */
 
 	g_free (filename);
 
-	/*	return gtk_image_new_from_pixbuf (pixbuf); */
 	return image;
 }
 
@@ -127,17 +109,15 @@ show_face (GtkWidget *pm)
 	if (pm_current) {
 		gtk_widget_hide (pm_current); 
 	}
-
-	gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget, 
+	gtk_action_set_sensitive(hint_action,
 				 (pm == pm_cool) || (pm == pm_smile));
-
 	gtk_widget_show (pm);
 	
 	pm_current = pm;
 }
 
 static void
-quit_game (GtkWidget *widget, gpointer data)
+quit_game (void)
 {
 	gint width, height;
 
@@ -153,7 +133,7 @@ set_flabel (GtkMineField *mfield)
 {
 	char *val;
 
-	val = g_strdup_printf ("%d/%d", mfield->flag_count, mfield->mcount);
+	val = g_strdup_printf (_("Flags: %d/%d"), mfield->flag_count, mfield->mcount);
 	gtk_label_set_text (GTK_LABEL (flabel), val);
 	g_free (val);
 }
@@ -193,7 +173,7 @@ show_scores (gchar *level, guint pos)
 }
 
 static void
-top_ten (GtkWidget *widget, gpointer data)
+scores_callback (void)
 {
 	gchar buf[64];
 
@@ -204,7 +184,7 @@ top_ten (GtkWidget *widget, gpointer data)
 }
 
 static void
-new_game (GtkWidget *widget, gpointer data)
+new_game (void)
 {
 	gint width, height, w_diff, h_diff;
 	guint size;
@@ -236,8 +216,8 @@ new_game (GtkWidget *widget, gpointer data)
 
 	set_flabel (GTK_MINEFIELD (mfield));
 
-	gtk_widget_hide (ralign);
-	gtk_widget_show (mf_frame); 
+	gtk_widget_hide (resume_container);
+	gtk_widget_show (mfield_container); 
 }
 
 /* Add a penalty for a successful hint. */
@@ -249,7 +229,7 @@ hint_used (GtkWidget *widget, gpointer data)
 }
 
 static void
-hint (GtkWidget *widget, gpointer data)
+hint_callback (void)
 {
 	int result;
 	gchar * message;
@@ -284,11 +264,11 @@ focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
 	if ((GAMES_CLOCK (clk)->timer_id != -1) 
 	    && (!disable_hiding)) {
-		gtk_widget_hide (mf_frame);
-		gtk_widget_show (ralign);
-		gtk_widget_grab_focus (rbutton);
-		gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget,FALSE);
-
+		gtk_widget_hide (mfield_container);
+		gtk_widget_show (resume_container);
+		gtk_widget_grab_focus (resume_button);
+		
+		gtk_action_set_sensitive (hint_action, FALSE);
 		games_clock_stop (GAMES_CLOCK (clk)); 
 	}
 }
@@ -296,10 +276,9 @@ focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 static void
 resume_game_cb (GtkButton *widget, gpointer data)
 {
-	gtk_widget_hide (ralign);
-	gtk_widget_show (mf_frame);
-	gtk_widget_set_sensitive(gamemenu[HINT_MENU_LOC].widget,TRUE);
-
+	gtk_widget_hide (resume_container);
+	gtk_widget_show (mfield_container);
+	gtk_action_set_sensitive (hint_action, TRUE);
 	games_clock_start (GAMES_CLOCK (clk));
 }
 
@@ -374,12 +353,9 @@ verify_ranges (void)
 }
 
 static void
-about (GtkWidget *widget, gpointer data)
+about_callback (void)
 {
-        static GtkWidget *about;
-	GdkPixbuf *pixbuf = NULL;
-
-        const gchar *authors[] = {
+	const gchar *authors[] = {
 		_("Main game:"),
 		"Szekeres Istvan",
 		"",
@@ -397,49 +373,15 @@ about (GtkWidget *widget, gpointer data)
 		"Callum McKenzie",
 		NULL
 	};
-	const gchar *documenters[] = {
-                NULL
-        };
-	const gchar *translator_credits = _("translator-credits");
-	
-	if (about) {
-                gtk_window_present (GTK_WINDOW (about));
-		return;
-	}
 
-       {
-            int i=0;
-            while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
-       }
-       {
-	       char *filename = NULL;
-
-	       filename = gnome_program_locate_file (NULL,
-			       GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnome-gnomine.png"),
-			       TRUE, NULL);
-	       if (filename != NULL)
-	       {
-		       pixbuf = gdk_pixbuf_new_from_file(filename, NULL);
-		       g_free (filename);
-	       }
-       }
-
-        about = gnome_about_new (_("GNOME Mines"), VERSION,
-				 "Copyright \xc2\xa9 1997-2004 Free Software "
-				 "Foundation, Inc.",
-				 _("A Minesweeper clone."),
-				 (const char **)authors,
-				 (const char **)documenters,
-				 strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
-				 pixbuf);
-	
-	if (pixbuf != NULL)
-		g_object_unref (pixbuf);
-	
-	g_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
-			(gtk_widget_destroyed), &about);
-	gtk_window_set_transient_for(GTK_WINDOW (about), GTK_WINDOW (window));
-        gtk_widget_show (about);
+	gtk_show_about_dialog (GTK_WINDOW(window),
+			       "name", _("GNOME Mines"),
+			       "version", VERSION,
+			       "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
+			       "authors", authors,
+			       "translator_credits", _("translator-credits"),
+			       "logo-icon-name", "gnome-gnomine",
+			       NULL);
 }
 
 static void
@@ -457,7 +399,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != xsize) {
 			xsize = CLAMP (i, XSIZE_MIN, XSIZE_MAX);
-			new_game (mfield, NULL);
+			new_game ();
 		}
 	}
 	if (strcmp (key, KEY_YSIZE) == 0) {
@@ -465,7 +407,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != ysize) {
 			ysize = CLAMP (i, YSIZE_MIN, YSIZE_MAX);
-			new_game (mfield, NULL);
+			new_game ();
 		}
 	}
 	if (strcmp (key, KEY_NMINES) == 0) {
@@ -473,7 +415,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 40;
 		if (nmines != i) {
 			nmines = CLAMP (i, 1, xsize * ysize - 2);
-			new_game (mfield, NULL);
+			new_game ();
 		}
 	}
 	if (strcmp (key, KEY_MODE) == 0) {
@@ -481,7 +423,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 0;
 		if (i != fsize) {
 			fsize = CLAMP (i, 0, 3);
-			new_game (mfield, NULL);
+			new_game ();
 		}
 	}
 	if (strcmp (key, KEY_USE_QUESTION_MARKS) == 0) {
@@ -565,7 +507,10 @@ create_preferences (void)
 	GtkWidget *button;
 	GtkWidget *table2;
 	GtkWidget *label2;
-	 
+	GtkWidget *question_toggle;        
+	GtkWidget *xentry;
+	GtkWidget *yentry;
+
 	table = gtk_table_new (2, 2, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), 5);
 	gtk_table_set_row_spacings (GTK_TABLE (table), 18);
@@ -693,40 +638,69 @@ create_preferences (void)
 }
 
 static void
-preferences_callback (GtkWidget *widget, gpointer data)
+preferences_callback (void)
 {
 	if (pref_dialog == NULL)
 		create_preferences ();
 	gtk_window_present (GTK_WINDOW (pref_dialog));
 }
 
-GnomeUIInfo gamemenu[] = {
-        GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game, NULL),
-	GNOMEUIINFO_MENU_HINT_ITEM(hint, NULL),
-	GNOMEUIINFO_SEPARATOR,
-	GNOMEUIINFO_MENU_SCORES_ITEM(top_ten, NULL),
-	GNOMEUIINFO_SEPARATOR,
-	GNOMEUIINFO_MENU_QUIT_ITEM(quit_game, NULL),
-	GNOMEUIINFO_END
+static void
+help_callback (void)
+{
+	gnome_help_display ("gnomine.xml", NULL, NULL);
+}
+
+const GtkActionEntry actions[] = {
+	{ "GameMenu", NULL, N_("_Game") },
+	{ "SettingsMenu", NULL, N_("_Settings") },
+	{ "HelpMenu", NULL, N_("_Help") },
+	{ "NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL, G_CALLBACK (new_game) },
+	{ "Hint", GAMES_STOCK_HINT, NULL, NULL , NULL, G_CALLBACK (hint_callback) },
+	{ "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (scores_callback) },
+	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
+	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (preferences_callback) },
+	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_callback) },
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_callback) }
 };
 
-GnomeUIInfo settingsmenu[] = {
-	GNOMEUIINFO_MENU_PREFERENCES_ITEM(preferences_callback, NULL),
-	GNOMEUIINFO_END
-};
+const char *ui_description =
+"<ui>"
+"  <menubar name='MainMenu'>"
+"    <menu action='GameMenu'>"
+"      <menuitem action='NewGame'/>"
+"      <menuitem action='Hint'/>"
+"      <separator/>"
+"      <menuitem action='Scores'/>"
+"      <separator/>"
+"      <menuitem action='Quit'/>"
+"    </menu>"
+"    <menu action='SettingsMenu'>"
+"      <menuitem action='Preferences'/>"
+"    </menu>"
+"    <menu action='HelpMenu'>"
+"      <menuitem action='Contents'/>"
+"      <menuitem action='About'/>"
+"    </menu>"
+"  </menubar>"
+"</ui>";
 
-GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP("gnomine"),
-	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
-	GNOMEUIINFO_END
-};
+static GtkUIManager*
+create_ui_manager (const gchar *group)
+{
+	GtkActionGroup *action_group;
+	GtkUIManager *ui_manager;
+	
+	action_group = gtk_action_group_new ("group");
+	gtk_action_group_set_translation_domain(action_group, GETTEXT_PACKAGE);
+	gtk_action_group_add_actions (action_group, actions, G_N_ELEMENTS (actions), window);
 
-GnomeUIInfo mainmenu[] = {
-        GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
-	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
-        GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
-	GNOMEUIINFO_END
-};
+	ui_manager = gtk_ui_manager_new ();
+	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
+	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
+	hint_action = gtk_action_group_get_action (action_group, "Hint");
+	return ui_manager;
+}
 
 static int
 save_state (GnomeClient        *client,
@@ -789,7 +763,11 @@ main (int argc, char *argv[])
 	GtkWidget *button_table;
         GtkWidget *box;        
         GtkWidget *label;
+	GtkWidget *face_box;
 	GnomeClient *client;
+	GtkUIManager *ui_manager;
+	GtkAccelGroup *accel_group;
+
 	gint width, height;
 
 	gnome_score_init("gnomine");
@@ -803,7 +781,6 @@ main (int argc, char *argv[])
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
 			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
-
 	/* Get the default GConfClient */
 	conf_client = gconf_client_get_default ();
         gconf_client_add_dir (conf_client, 
@@ -850,7 +827,8 @@ main (int argc, char *argv[])
 	gtk_rc_parse_string ("style \"gnomine\" { GtkButton::interior-focus = 0 } class \"GtkButton\" style \"gnomine\"");
 
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
-	gnome_app_create_menus (GNOME_APP (window), mainmenu);
+	games_stock_init ();
+
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
 	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
@@ -859,12 +837,18 @@ main (int argc, char *argv[])
 	g_signal_connect(G_OBJECT (window), "focus_out_event",
 			 G_CALLBACK (focus_out_cb), NULL);
 
+
 	all_boxes = gtk_vbox_new (FALSE, 0);
 
 	gnome_app_set_contents (GNOME_APP (window), all_boxes);
+        ui_manager = create_ui_manager ("GnomineActions");
+        accel_group = gtk_ui_manager_get_accel_group (ui_manager);
+        gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
+        box = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
+        gtk_box_pack_start (GTK_BOX (all_boxes), box, FALSE, FALSE, 0);
 
 	button_table = gtk_table_new (1, 3, FALSE);
-	gtk_box_pack_start (GTK_BOX (all_boxes), button_table, TRUE, TRUE, 0);
+	gtk_box_pack_end (GTK_BOX (all_boxes), button_table, TRUE, TRUE, 0);
 
 	pm_current = NULL;
 
@@ -897,20 +881,24 @@ main (int argc, char *argv[])
 
 	mfield = gtk_minefield_new ();
 
-	/* It doesn't really matter what this widget is as long as it's a
-	 * container. */
-	mf_frame = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
-	gtk_container_add (GTK_CONTAINER (mf_frame), mfield);
+	/* These next two widgets are created as alignments, but it's more
+	 * important to know that these are containers, hence the names. */
+	mfield_container = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
+	gtk_container_add (GTK_CONTAINER (mfield_container), mfield);
+	gtk_box_pack_start (GTK_BOX (box), mfield_container, TRUE, TRUE, 0);
 
-	gtk_box_pack_start (GTK_BOX (box), mf_frame, TRUE, TRUE, 0);
+	resume_container = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+	gtk_box_pack_start (GTK_BOX (box), resume_container, TRUE, TRUE, 0);
 
-	ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-	gtk_box_pack_start (GTK_BOX (box), ralign, TRUE, TRUE, 0);
-
-	rbutton = gtk_button_new_with_label ("Press to resume");
-	g_signal_connect (G_OBJECT (rbutton), "clicked", 
+	resume_button = gtk_button_new_with_label (_("Press to Resume"));
+	g_signal_connect (G_OBJECT (resume_button), "clicked", 
 			  G_CALLBACK (resume_game_cb), NULL);
-        gtk_container_add (GTK_CONTAINER (ralign), rbutton);
+        gtk_container_add (GTK_CONTAINER (resume_container), resume_button);
+
+        g_signal_connect (G_OBJECT (window), "focus_out_event",
+                          G_CALLBACK (focus_out_cb), NULL);
+	
+
 
 	gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
 					      use_question_marks);
@@ -935,23 +923,23 @@ main (int argc, char *argv[])
 	gtk_box_pack_start (GTK_BOX (box), status_box, 
 			    FALSE, FALSE, GNOME_PAD);
 
-	label = gtk_label_new(_("Flags:"));
-	gtk_box_pack_start (GTK_BOX (status_box), label, 
-			    FALSE, FALSE, 0); 
-	
-	flabel = gtk_label_new ("0");
+	flabel = gtk_label_new ("");
 	gtk_box_pack_start (GTK_BOX (status_box), flabel, 
 			    FALSE, FALSE, 0);
 
-	label = gtk_label_new (_("Time:"));
-	gtk_box_pack_start (GTK_BOX (status_box), label, 
+	box = gtk_hbox_new (FALSE, 0);
+	label = gtk_label_new (_("Time: "));
+	gtk_box_pack_start (GTK_BOX (box), label, 
 	FALSE, FALSE, 0);
 
         clk = games_clock_new ();
-	gtk_box_pack_start (GTK_BOX (status_box), clk, 
+	gtk_box_pack_start (GTK_BOX (box), clk, 
 			    FALSE, FALSE, 0); 
 
-	new_game (mfield, NULL);
+	gtk_box_pack_start (GTK_BOX (status_box), box,
+			    FALSE, FALSE, 0);
+
+	new_game ();
 
         gtk_widget_show_all (window);
 
@@ -961,7 +949,7 @@ main (int argc, char *argv[])
 
 	/* All this hiding is a bit ugly, but it's better than a
 	 * ton of gtk_widget_show calls. */
-	gtk_widget_hide (ralign);
+	gtk_widget_hide (resume_container);
 	gtk_widget_hide (pm_win);
 	gtk_widget_hide (pm_sad);
 	gtk_widget_hide (pm_cool);
