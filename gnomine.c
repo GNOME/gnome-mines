@@ -209,8 +209,6 @@ about(GtkWidget *widget, gpointer data)
                         "Minesweeper clone",
                         NULL);
         gtk_widget_show (about);
-
-        return TRUE;
 }
 
 void size_radio_callback(GtkWidget *widget, gpointer data)
