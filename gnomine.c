@@ -316,12 +316,7 @@ GnomeMenuInfo mainmenu[] = {
 int main(int argc, char *argv[])
 {
         GtkWidget *all_boxes;
-	GtkWidget *menu_box;
 	GtkWidget *status_table;
-        GtkWidget *menu;
-        GtkWidget *menubar;
-        GtkWidget *menubar_item;
-	GtkWidget *menu_item;
 	GtkWidget *button_table;
         GtkWidget *label;
 	
