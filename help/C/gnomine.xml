@@ -181,7 +181,7 @@
         Play proceeds by uncovering squares with the left mouse button and
         placing flags with the right mouse button. Successfully uncovered
         squares yield information: the number of mines in the adjacent
-        squares. Figure <xref linkend="begin-play-fig"/> shows a game
+        squares. <xref linkend="begin-play-fig"/> shows a game
         in play. Note the numbers in the cleared squares and their relation
         to flags.
       </para>
@@ -212,7 +212,7 @@
         to that square satisfies the number expected 
         the middle mouse button will automatically uncover all remaining
         adjacent squares. If a flag has been placed by mistake this action
-        will uncover a mine and end play. Figure <xref linkend="fail-fig"/>
+        will uncover a mine and end play. <xref linkend="fail-fig"/>
         shows the result of just such a mistake, note the flag in the
         top row.
 
@@ -266,7 +266,7 @@
       <para>
         The geometrical arrangement of uncovered and flagged squares
         often limits the possible locations that can contain hidden
-        mines. Figure <xref linkend="basic-corner"/> shows how the location
+        mines. <xref linkend="basic-corner"/> shows how the location
         of a mine, pointed to by the arrow, has been inferred using the
         square on the outside corner showing the numeral one. The geometry
         of the corner has left only one uncovered square next to the one.
@@ -289,7 +289,7 @@
       </para>
 
       <para>
-        The same strategy has been used in figure <xref
+        The same strategy has been used in <xref
         linkend="basic-wall"/> where the square showing the number three
         has only three remaining uncovered squares that can hold mines.
         to
@@ -315,7 +315,7 @@
          In the previous cases we found the location of mines using the
          information from a single uncovered square. More advanced play
          comes from combining information from two or more uncovered
-         squares. Consider the arrangement of squares in figure <xref
+         squares. Consider the arrangement of squares in <xref
          linkend="advanced-1"/>.
         <!-- ==== Figure ==== -->
         <figure id="advanced-1">
@@ -338,7 +338,7 @@
       <para>
          If we focus on the leftmost square showing "1" we know that only
          a single flag can be contained in the three uncovered squares
-         highlighted in green in figure <xref linkend="advanced-2"/>,
+         highlighted in green in <xref linkend="advanced-2"/>,
          thus we can infer where the second flag for the square showing
          "2" must be placed.
         <!-- ==== Figure ==== -->
@@ -361,7 +361,7 @@
 
       <para>
         We can now repeat the same process with the rightmost square showing "1" to place
-        the second flag, see Figure <xref linkend="advanced-3"/>.
+        the second flag, see <xref linkend="advanced-3"/>.
         <!-- ==== Figure ==== -->
         <figure id="advanced-3">
 	  <title>finding the second mine by using the rightmost square showing "1"</title>

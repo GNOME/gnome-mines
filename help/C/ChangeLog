@@ -1,3 +1,8 @@
+2003-01-11  Ross Burton  <ross@burtonini.com>
+
+	* gnomine.xml: Remove the use of "figure <xref linkend..." as that
+	leads to "figure Figure 1". Closes #90497.
+
 2002-09-20  Ross Burton  <ross@burtonini.com>
 
 	* gnomine.xml: Fix the path to gnomine-won.png, fixing
