@@ -1,3 +1,13 @@
+2003-03-10  Ross Burton  <ross@burtonini.com>
+
+	* flag.png, flag-question.png, mine.png: New icons from Jimmac.
+
+	* flag-*.(gif|xpm): Removed, replaced by above.
+
+	* minefield.c: Open the field PNGs instead of embedding XPMs.
+
+	* Makefile.am: Install the new images.
+
 2002-12-17  Ross Burton  <ross@burtonini.com>
 
 	* Makefile.am (schema_in_files): Fix the schema path.

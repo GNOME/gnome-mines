@@ -31,10 +31,11 @@ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 
 pixmapdir   = $(datadir)/pixmaps/gnomine/
 pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
-	face-worried.xpm
+	face-worried.xpm \
+	flag.png flag-question.png mine.png
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_in_files) $(pixmap_DATA) flag.xpm mine.xpm question.xpm
+	$(schema_in_files) $(pixmap_DATA)
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)

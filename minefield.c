@@ -4,9 +4,6 @@
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gnome.h>
 #include "minefield.h"
-#include "flag.xpm"
-#include "mine.xpm"
-#include "question.xpm"
 
 static struct {
 	gint x;
@@ -75,7 +72,7 @@ static void gtk_minefield_unrealize (GtkWidget *widget);
 static void gtk_minefield_win(GtkMineField *mfield);
 static void init_random(gulong seed);
 static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y);
-static void _setup_sign (sign *signp, const char **data, guint minesize);
+static void _setup_sign (sign *signp, const char *file, guint minesize);
 static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c);
 /* end prototypes */
 
@@ -88,17 +85,17 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 	return -1;
 }
 
-static void _setup_sign (sign *signp, const char **data, guint minesize)
+static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
 	GdkPixbuf *image;
-
-	image = gdk_pixbuf_new_from_xpm_data ( (const char **) data);
+	/* TODO: catch GError */
+	image = gdk_pixbuf_new_from_file (file, NULL);
 
 	gdk_pixbuf_render_pixmap_and_mask (image, &signp->pixmap,
 					   &signp->mask, 127);
 
 	gdk_pixbuf_unref (image);
-        gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
+	gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
 }
 
 static void gtk_minefield_setup_signs(GtkWidget *widget)
@@ -107,9 +104,9 @@ static void gtk_minefield_setup_signs(GtkWidget *widget)
   
         mfield = GTK_MINEFIELD(widget);
   
-        _setup_sign(&mfield->flag, flag_xpm, mfield->minesize);
-        _setup_sign(&mfield->mine, mine_xpm, mfield->minesize);
-	_setup_sign(&mfield->question, question_xpm, mfield->minesize);
+        _setup_sign(&mfield->flag, DATADIR"/pixmaps/gnomine/flag.png", mfield->minesize);
+        _setup_sign(&mfield->mine, DATADIR"/pixmaps/gnomine/mine.png", mfield->minesize);
+        _setup_sign(&mfield->question, DATADIR"/pixmaps/gnomine/flag-question.png", mfield->minesize);
 }
 
 static void
