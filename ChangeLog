@@ -1,3 +1,8 @@
+1998-02-14  Carsten Schaar  <nhadcasc@fs-maphy.uni-hannover.de>
+
+	* gnomine.c (save_state): Changed to use new SM support.
+	(parse_args): Changed to use new SM support
+
 Sat Feb 14 09:27:05 1998  Tom Tromey  <tromey@cygnus.com>
 
 	* Makefile.am (gnomine_LDADD): Added INTLLIBS.
