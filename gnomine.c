@@ -159,17 +159,21 @@ void win_game(GtkWidget *widget, gpointer data)
         gtk_clock_stop(GTK_CLOCK(clk));
         show_face(pm_win);
 
-	if(fsize<3) 
+	if(fsize<3) {
 	    score = (gfloat) (GTK_CLOCK(clk)->stopped / 60) + 
 		    (gfloat) (GTK_CLOCK(clk)->stopped % 60) / 100;
 
-	else  
+            strncpy(buf, fsize2names[fsize], sizeof(buf));
+	    pos = gnome_score_log(score, buf, FALSE);
+
+	} else {
 	    score = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (GTK_CLOCK(clk)->stopped); 
 
-        strncpy(buf, fsize2names[fsize], sizeof(buf));
-	pos = gnome_score_log(score, buf, TRUE);
-	
+            strncpy(buf, fsize2names[fsize], sizeof(buf));
+	    pos = gnome_score_log(score, buf, TRUE);
+	}
+
 	show_scores(buf, pos);
 }
 

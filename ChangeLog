@@ -1,3 +1,8 @@
+1998-05-29 Kjartan Maraas <kmaraas@fib.hl.no>
+
+	* gnomine.c: Fixed scores getting better as time goes.
+		     No more "waiting for a new hiscore" :-)
+	
 1998-05-24 Kjartan Maraas <kmaraas@fib.hl.no>
 
 	* Makefile.am: New scorefiles gnomine.[Tiny,Medium,Biiiig].scores
