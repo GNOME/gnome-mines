@@ -1,3 +1,10 @@
+1999-01-09  Nat Friedman  <nat@nat.org>
+
+	* gnomine.c (main): Install an appbar.  Setup menu hints.  Not
+ 	quite working.
+
+	Standardized the menus.
+
 1999-01-01  Callum McKenzie <callum@physics.otago.ac.nz>
 
       * gnomine.c (marks_changed): Call gtk_clock_start.

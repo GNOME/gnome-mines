@@ -414,42 +414,35 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 }
 
+GnomeUIInfo filemenu[] = {
+	GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
+	GNOMEUIINFO_END
+};
+
 GnomeUIInfo gamemenu[] = {
-	{GNOME_APP_UI_ITEM, N_("_New"), NULL, new_game, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_NEW, 'n', GDK_CONTROL_MASK, NULL},
+        GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game, NULL),
+	GNOMEUIINFO_SEPARATOR,
+	GNOMEUIINFO_MENU_SCORES_ITEM(top_ten, NULL),
+	GNOMEUIINFO_END
+};
 
-	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
-
-	{GNOME_APP_UI_ITEM, N_("S_cores"), NULL, top_ten, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
-
-	{GNOME_APP_UI_ITEM, N_("E_xit"), NULL, quit_game, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'x', GDK_CONTROL_MASK, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+GnomeUIInfo settingsmenu[] = {
+	GNOMEUIINFO_MENU_PREFERENCES_ITEM(setup_game, NULL),
+	GNOMEUIINFO_END
 };
 
 GnomeUIInfo helpmenu[] = {
-	{GNOME_APP_UI_HELP, NULL, NULL, "gnomine", NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_ITEM, N_("_About..."), NULL, about, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+        GNOMEUIINFO_HELP("gnomine"),
+	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
+	GNOMEUIINFO_END
 };
 
 GnomeUIInfo mainmenu[] = {
-	{GNOME_APP_UI_SUBTREE, N_("_Game"), NULL, gamemenu, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_SUBTREE, N_("_Help"), NULL, helpmenu, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
-
-	{GNOME_APP_UI_ENDOFINFO}
+        GNOMEUIINFO_MENU_FILE_TREE(filemenu),
+        GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
+	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
+        GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
+	GNOMEUIINFO_END
 };
 
 /* A little helper function.  */
@@ -518,6 +511,7 @@ static struct poptOption options[] = {
 int
 main (int argc, char *argv[])
 {
+        GnomeAppBar *appbar;
         GtkWidget *all_boxes;
 	GtkWidget *status_table;
 	GtkWidget *button_table;
@@ -573,6 +567,9 @@ main (int argc, char *argv[])
 
         window = gnome_app_new("gnomine", _("Gnome Mines"));
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
+
+	appbar = GNOME_APPBAR (gnome_appbar_new(FALSE, FALSE, FALSE));
+	gnome_app_set_statusbar(GNOME_APP (window), GTK_WIDGET (appbar));
 	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
@@ -645,7 +642,6 @@ main (int argc, char *argv[])
 
         status_table = gtk_table_new(1, 4, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, TRUE, TRUE, 0);
-
 	label = gtk_label_new(_("Flags:"));
 	gtk_table_attach(GTK_TABLE(status_table), label,
 			 0, 1, 0, 1, 0, 0, 3, 3);
@@ -664,7 +660,7 @@ main (int argc, char *argv[])
 
         clk = gtk_clock_new(GTK_CLOCK_INCREASING);
 	gtk_table_attach(GTK_TABLE(status_table), clk,
-			 3, 4, 0, 1, 0, 0, 3 ,3);
+		3, 4, 0, 1, 0, 0, 3 ,3);
 	gtk_widget_show(clk);
 	
         gtk_widget_show(status_table);
