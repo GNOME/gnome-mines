@@ -501,6 +501,7 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
+	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
 #ifdef ENABLE_NLS 
 #define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 

@@ -1,3 +1,9 @@
+Mon Feb 16 19:58:06 KST 1998  Changwoo Ryu  <cwryu@adam.kaist.ac.kr>
+
+	* Makefile.am (INCLUDES): Define GNOMELOCALEDIR.
+
+	* gnomine.c (main): Added bindtextdomain().
+
 1998-02-14  Carsten Schaar  <nhadcasc@fs-maphy.uni-hannover.de>
 
 	* gnomine.c (save_state): Changed to use new SM support.

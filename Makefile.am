@@ -2,6 +2,7 @@ scoredir=$(localstatedir)/games
 Gamesdir = $(datadir)/apps/Games
 
 INCLUDES = 			\
+	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)
 
 bin_PROGRAMS = gnomine
