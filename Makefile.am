@@ -53,18 +53,11 @@ install-data-local:
 	# beaten us to it.
 	-if [ -f $(DESTDIR)$(scoredir)/gnomine.Tiny.scores -a ! -f $(DESTDIR)$(scoredir)/gnomine.Small.scores ]; then mv -f $(DESTDIR)$(scoredir)/gnomine.Tiny.scores $(DESTDIR)$(scoredir)/gnomine.Small.scores  ; fi
 	-if [ -f $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores -a ! -f $(DESTDIR)$(scoredir)/gnomine.Large.scores ]; then mv -f $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores $(DESTDIR)$(scoredir)/gnomine.Large.scores  ; fi
-	-touch $(DESTDIR)$(scoredir)/gnomine.Small.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Small.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Small.scores	
-	-touch $(DESTDIR)$(scoredir)/gnomine.Medium.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Medium.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Medium.scores	
-	-touch $(DESTDIR)$(scoredir)/gnomine.Large.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Large.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Large.scores	
-	-touch $(DESTDIR)$(scoredir)/gnomine.Custom.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Custom.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Custom.scores	
-	-chgrp games $(DESTDIR)$(bindir)/gnomine && chmod 2555 $(DESTDIR)$(bindir)/gnomine
+	-for i in Small Medium Large Custom ; do \
+	   touch $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
+	   chown $(scores_user).$(scores_group) $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
+	   chmod 644 $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
+	 done
+	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gnomine && chmod 2555 $(DESTDIR)$(bindir)/gnomine ; fi
 
 CLEANFILES = $(Games_DATA) $(schema_DATA)
