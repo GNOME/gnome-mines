@@ -6,6 +6,7 @@
 #include "minefield.h"
 #include "flag.xpm"
 #include "mine.xpm"
+#include "question.xpm"
 
 static struct {
 	gint x;
@@ -48,8 +49,37 @@ enum {
 };
 
 static gint minefield_signals[LAST_SIGNAL] = { 0 };
-
 static GtkWidgetClass *parent_class;
+
+/*  Prototypes */
+static gulong get_random(gulong limit);
+static inline gint cell_idx(GtkMineField *mfield, guint x, guint y);
+static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y);
+static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event);
+static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *event);
+static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y);
+static void gtk_minefield_class_init (GtkMineFieldClass *class);
+static gint gtk_minefield_expose(GtkWidget *widget, GdkEventExpose *event);
+static void gtk_minefield_init (GtkMineField *mfield);
+static void gtk_minefield_lose(GtkMineField *mfield);
+static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event);
+static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y, guint c, guint really);
+static void gtk_minefield_randomize(GtkMineField *mfield, int curloc);
+static void gtk_minefield_realize(GtkWidget *widget);
+static void gtk_minefield_setup_signs(GtkWidget *widget);
+static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y);
+static void gtk_minefield_size_allocate(GtkWidget *widget, GtkAllocation *allocation);
+static void gtk_minefield_size_request(GtkWidget *widget, GtkRequisition *requisition);
+static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y);
+static void gtk_minefield_unrealize (GtkWidget *widget);
+static void gtk_minefield_win(GtkMineField *mfield);
+static void init_random(gulong seed);
+static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y);
+static void _setup_sign (sign *signp, const char **data, guint minesize);
+static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c);
+/* end prototypes */
+
+
 
 static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 {
@@ -79,6 +109,7 @@ static void gtk_minefield_setup_signs(GtkWidget *widget)
   
         _setup_sign(&mfield->flag, flag_xpm, mfield->minesize);
         _setup_sign(&mfield->mine, mine_xpm, mfield->minesize);
+	_setup_sign(&mfield->question, question_xpm, mfield->minesize);
 }
 
 static void
@@ -166,13 +197,15 @@ static void gtk_minefield_realize(GtkWidget *widget)
         attributes.visual = gtk_widget_get_visual(widget);
         attributes.colormap = gtk_widget_get_colormap(widget);
         attributes.event_mask = gtk_widget_get_events(widget);
-	attributes.event_mask |= GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
+	attributes.event_mask |= GDK_EXPOSURE_MASK |
+	                         GDK_BUTTON_PRESS_MASK |
 		                 GDK_BUTTON_RELEASE_MASK |
                                  GDK_POINTER_MOTION_MASK;
         
         attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
         
-        widget->window = gdk_window_new(widget->parent->window, &attributes, attributes_mask);
+	widget->window = gdk_window_new(widget->parent->window,
+	                                &attributes, attributes_mask);
         gdk_window_set_user_data(widget->window, mfield);
         
         widget->style = gtk_style_attach(widget->style, widget->window);
@@ -218,6 +251,7 @@ static void gtk_minefield_size_request(GtkWidget *widget,
 {
         requisition->width  = GTK_MINEFIELD(widget)->xsize *
 		              GTK_MINEFIELD(widget)->minesize;
+
 	requisition->height = GTK_MINEFIELD(widget)->ysize * 
 		              GTK_MINEFIELD(widget)->minesize;
 }
@@ -239,31 +273,43 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		noshadow = mfield->mines[c].down || mfield->mines[c].shown;
 	}
 	
-	gdk_window_clear_area(widget->window,
-			      x*minesize, y*minesize,
-			      minesize,
-			      minesize);
+	gdk_window_clear_area(widget->window, x * minesize, y * minesize,
+	                      minesize, minesize);
 
-        if (!noshadow)
-        {
-                gtk_draw_shadow(widget->style, widget->window,
-                                GTK_WIDGET_STATE (widget), GTK_SHADOW_OUT,
-                                x*minesize, y*minesize,
-                                minesize,
-                                minesize);
-        } else {
-                gdk_draw_line(widget->window,
-                              widget->style->black_gc,
+	if (noshadow) { /* draw grid on ocean floor */
+		if (y == 0) {	/* top row only */
+			gdk_draw_line(widget->window,	/* top */
+			              widget->style->dark_gc[2],
+	                              x*minesize,
+	                              0,
+	                              x*minesize+minesize-1,
+	                              0);
+		}
+		if (x == 0) {	/* left column only */
+			gdk_draw_line(widget->window,	/* left */
+			              widget->style->dark_gc[2],
+	                              0,
+	                              y*minesize,
+	                              0,
+	                              y*minesize+minesize-1);
+		}
+		gdk_draw_line(widget->window,	/* right */
+		              widget->style->dark_gc[2],
                               x*minesize+minesize-1,
                               y*minesize,
                               x*minesize+minesize-1,
                               y*minesize+minesize-1);
-                gdk_draw_line(widget->window,
-                              widget->style->black_gc,
+		gdk_draw_line(widget->window,	/* bottom */
+		              widget->style->dark_gc[2],
                               x*minesize,
                               y*minesize+minesize-1,
                               x*minesize+minesize-1,
                               y*minesize+minesize-1);
+
+	} else {	/* draw shadow around possible mine location */
+		gtk_draw_shadow(widget->style, widget->window,
+		                GTK_WIDGET_STATE (widget), GTK_SHADOW_OUT,
+		                x*minesize, y*minesize, minesize, minesize);
         }
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
@@ -274,7 +320,22 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 					y*minesize + mfield->numstr[n].dy,
 					mfield->numstr[n].layout);
 		}
-	} else if (mfield->mines[c].marked == 1) {
+
+	} else if (mfield->mines[c].marked == MINE_QUESTION) {
+		gdk_gc_set_clip_mask(widget->style->black_gc,
+		                     mfield->question.mask);
+		gdk_gc_set_clip_origin(widget->style->black_gc,
+		                       x * minesize + (minesize - mfield->question.width) / 2, 
+		                       y * minesize + (minesize - mfield->question.height) / 2);
+		gdk_draw_pixmap (widget->window,
+		                 widget->style->black_gc,
+		                 mfield->question.pixmap, 0, 0,
+		                 x * minesize + (minesize - mfield->question.width) / 2, 
+		                 y * minesize + (minesize - mfield->question.height) / 2,
+		                 -1, -1);
+		gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
+	  
+	} else if (mfield->mines[c].marked == MINE_MARKED) {
 		gdk_gc_set_clip_mask(widget->style->black_gc,
 					     mfield->flag.mask);
 		gdk_gc_set_clip_origin(widget->style->black_gc,
@@ -282,9 +343,10 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 					       y * minesize + (minesize - mfield->flag.height) / 2);
 		gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
-				 mfield->flag.pixmap,
-				 0, 0, x * minesize + (minesize - mfield->flag.width) / 2, 
-				       y * minesize + (minesize - mfield->flag.height) / 2, -1, -1);
+		                 mfield->flag.pixmap, 0, 0,
+		                 x * minesize + (minesize - mfield->flag.width) / 2, 
+		                 y * minesize + (minesize - mfield->flag.height) / 2,
+		                 -1, -1);
 	        gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
 	  
 		if (mfield->lose && mfield->mines[c].mined != 1) {
@@ -313,7 +375,8 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 				      x*minesize+minesize-3,
 				      y*minesize+3);
 		}
-	} else if ( mfield->lose && mfield->mines[c].mined) {
+
+	} else if (mfield->lose && mfield->mines[c].mined) {
 		if (mfield->mine.mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc,
 					     mfield->mine.mask);
@@ -324,9 +387,10 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 
 	        gdk_draw_pixmap (widget->window,
 				 widget->style->black_gc,
-				 mfield->mine.pixmap,
-				 0, 0, x * minesize + (minesize - mfield->mine.width) / 2,
-				       y * minesize + (minesize - mfield->mine.height) / 2, -1, -1);
+		                 mfield->mine.pixmap, 0, 0,
+		                 x * minesize + (minesize - mfield->mine.width) / 2,
+		                 y * minesize + (minesize - mfield->mine.height) / 2,
+		                 -1, -1);
 		
 		if (mfield->flag.mask) {
 			gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
@@ -396,7 +460,7 @@ static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint 
                 ny = y+neighbour_map[i].y;
                 if ((c = cell_idx(mfield, nx, ny)) != -1) {
                         if (mfield->mines[c].shown == 0 &&
-                            mfield->mines[c].marked == 0) {
+			    mfield->mines[c].marked == MINE_NOMARK) {
 				mfield->mines[c].shown = 1;
                                 mfield->shown++;
 				gtk_mine_draw(mfield, nx, ny);
@@ -451,7 +515,7 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
         } while (changed);
 }
 
-static void gtk_minefield_loose(GtkMineField *mfield)
+static void gtk_minefield_lose(GtkMineField *mfield)
 {
         gtk_signal_emit(GTK_OBJECT(mfield),
                         minefield_signals[EXPLODE_SIGNAL]);
@@ -463,32 +527,86 @@ static void gtk_minefield_win(GtkMineField *mfield)
 {
         guint x, y, c;
 
-	for (x = 0; x < mfield->xsize; x++)
-		for (y = 0; y < mfield->ysize; y++)
-                {
-                        c = x+y*mfield->xsize;
-                        if (mfield->mines[c].shown == 0 && mfield->mines[c].marked == 0)
-                        {
-                                mfield->mines[c].marked = 1;
-                                gtk_mine_draw(mfield, x, y);
+	/* mark any unmarked mines and update displayed total */
+	for (x = 0; x < mfield->xsize; x++) {
+		for (y = 0; y < mfield->ysize; y++) {
+			c = x + y * mfield->xsize;
+			if (mfield->mines[c].shown == 0 && /* not shown & not marked */
+			    mfield->mines[c].marked != MINE_MARKED) {
+
+				mfield->mines[c].marked = MINE_MARKED; /* mark it */
+				gtk_mine_draw(mfield, x, y);           /* draw it */
+				mfield->flag_count++;                  /* up the count */
+				gtk_signal_emit(GTK_OBJECT(mfield),    /* display the count */
+						minefield_signals[MARKS_CHANGED_SIGNAL]);
+			}
                         }
                 }
 
+	/* now stop the clock.  (MARKS_CHANGED_SIGNAL starts it) */
         gtk_signal_emit(GTK_OBJECT(mfield),
                         minefield_signals[WIN_SIGNAL]);
+
         mfield->win = 1;
+}
+
+static void gtk_minefield_randomize(GtkMineField *mfield, int curloc)
+{
+	guint i, j;
+	guint x, y;
+	guint tmp;
+	guint n;
+	guint cidx;
+
+	/* make sure curloc is not mined */
+	mfield->mines[mfield->xsize * mfield->ysize -1].mined =
+		mfield->mines[curloc].mined; /* last location is never mined */
+	mfield->mines[curloc].mined = 0;
+
+	/* swap mines randomly */
+	for (i=0; i<mfield->xsize * mfield->ysize; i++) {
+		j = (guint)get_random(mfield->xsize * mfield->ysize);
+		if (i == curloc || j == curloc) { /* skip current location */
+			continue;
+		}
+		tmp = mfield->mines[i].mined;
+		mfield->mines[i].mined = mfield->mines[j].mined;
+		mfield->mines[j].mined = tmp;
+	}
+
+	/* load neighborhood numbers */
+	for (x=0; x<mfield->xsize; x++) {
+		for (y=0; y<mfield->ysize; y++) {
+			n = 0;
+			for (i=0; i<8; i++) {
+				if (((cidx = cell_idx(mfield, x + neighbour_map[i].x,
+				                      y+neighbour_map[i].y)) != -1) &&
+					mfield->mines[cidx].mined) {
+					n++;
+				}
+			}
+			mfield->mines[x+mfield->xsize * y].neighbours = n;
+		}
+	}
 }
 
 static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 {
-	int c = x+mfield->xsize*y;
+	int c = x + mfield->xsize * y;
+
+	/* make sure first click isn't on a mine */
+	if (!mfield->in_play) {
+		mfield->in_play = 1;
+		gtk_minefield_randomize(mfield, c);
+	}
 	
-        if (mfield->mines[c].marked != 1 && mfield->mines[c].shown != 1) {
+	if (mfield->mines[c].marked != MINE_MARKED &&
+	    mfield->mines[c].shown != 1) {
 		mfield->mines[c].shown = 1;
 		mfield->shown++;
                 gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);
                 if(mfield->mines[c].mined == 1) {
-                        gtk_minefield_loose(mfield);
+			gtk_minefield_lose(mfield);
                 } else {
 			gtk_minefield_check_field(mfield, x, y);
 			if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
@@ -501,21 +619,37 @@ static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 {
         int c = cell_idx(mfield, x, y);
-        if (mfield->mines[c].shown == 0) {
-		if ((mfield->mines[c].marked = 1-mfield->mines[c].marked) == 1) {
-			mfield->flags++;
-		} else {
-			mfield->flags--;
+
+	if (mfield->mines[c].shown != 0) { /* nothing to toggle */
+		return;
+	}
+
+	switch (mfield->mines[c].marked) {
+	case MINE_NOMARK:
+		mfield->mines[c].marked = MINE_MARKED;
+		mfield->flag_count++;
+		break;
+	case MINE_MARKED:
+		mfield->mines[c].marked = MINE_QUESTION;
+		mfield->flag_count--;
+		break;
+	case MINE_QUESTION:
+		mfield->mines[c].marked = MINE_NOMARK;
+		break;
+	default:
+		/* better not get here! */
+		break;
 		}
+
 		gtk_signal_emit(GTK_OBJECT(mfield),
 				minefield_signals[MARKS_CHANGED_SIGNAL]);
-                if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
+	if (mfield->shown == mfield->xsize * mfield->ysize-mfield->mcount) {
                         gtk_minefield_win(mfield);
 		}
-        }
 }
 
-static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c)
+static inline void gtk_minefield_multi_press(GtkMineField *mfield,
+                                             guint x, guint y, gint c)
 {
         guint i;
         gint nx, ny, c2;
@@ -525,7 +659,8 @@ static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guin
                 ny = y+neighbour_map[i].y;
                 if ((c2 = cell_idx(mfield, nx, ny)) == -1)
                         continue;
-                if (!mfield->mines[c2].marked && !mfield->mines[c2].shown) {
+		if (mfield->mines[c2].marked != MINE_MARKED &&
+		    !mfield->mines[c2].shown) {
                         mfield->mines[c2].down = 1;
                         gtk_mine_draw(mfield, nx, ny);
                 }
@@ -536,7 +671,7 @@ static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guin
 static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y, guint c, guint really)
 {
         gint n, nx, ny, i, c2;
-        guint loose = 0;
+	guint lose = 0;
 
         mfield->multi_mode = 0;
 
@@ -546,11 +681,13 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
                 ny = y+neighbour_map[i].y;
                 if ((c2 = cell_idx(mfield, nx, ny)) == -1)
                         continue;
-                if (mfield->mines[c2].marked) n++;
+		if (mfield->mines[c2].marked == MINE_MARKED)
+			n++;
         }
         if (mfield->mines[c].neighbours != n ||
-            mfield->mines[c].marked ||
-            !mfield->mines[c].shown) really = 0;
+	    mfield->mines[c].marked == MINE_MARKED ||
+	    !mfield->mines[c].shown)
+			really = 0;
 
         for (i=0; i<8; i++) {
                 nx = x+neighbour_map[i].x;
@@ -563,14 +700,14 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
 				mfield->mines[c2].shown = 1;
 				mfield->shown++;
                                 if (mfield->mines[c2].mined == 1) {
-                                        loose = 1;
+					lose = 1;
                                 }
                         }
                         gtk_mine_draw(mfield, nx ,ny);
                 }
         }
-        if (loose) {
-                gtk_minefield_loose(mfield);
+	if (lose) {
+		gtk_minefield_lose(mfield);
         } else if (really) {
                 gtk_minefield_check_field(mfield, x, y);
                 if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
@@ -611,14 +748,18 @@ static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event
                         gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);
 
                         multi = mfield->multi_mode;
-                        if (multi) gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 0);
+			if (multi)
+				gtk_minefield_multi_release(mfield, mfield->cdownx,
+				                            mfield->cdowny,
+				                            mfield->cdown, 0);
                         mfield->cdownx = x;
                         mfield->cdowny = y;
                         mfield->cdown = c;
                         mfield->mines[c].down = 1;
                         gtk_mine_draw(mfield, x, y);
 
-                        if (multi) gtk_minefield_multi_press(mfield, x, y, c);
+			if (multi)
+				gtk_minefield_multi_press(mfield, x, y, c);
                 }
         }
         return FALSE;
@@ -794,6 +935,21 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	gtk_minefield_setup_numbers(mfield);
 }
 
+static gulong random_seed;
+
+static void init_random(gulong seed)
+{
+	random_seed = seed;
+}
+
+static gulong get_random(gulong limit)
+{
+	do {
+		random_seed = (random_seed*1139113+10921)>>2;
+	} while (random_seed > ((gulong)(G_MAXLONG/limit))*limit);
+	return random_seed % limit;
+}
+
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 {
         g_return_if_fail(mfield != NULL);
@@ -829,8 +985,7 @@ guint gtk_minefield_get_type ()
 {
         static guint minefield_type = 0;
         
-        if (!minefield_type)
-        {
+	if (!minefield_type) {
                 GtkTypeInfo minefield_info =
                         {
                                 "GtkMineField",
@@ -866,21 +1021,6 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 	}
 }
 
-static gulong random_seed;
-
-void init_random(gulong seed)
-{
-        random_seed = seed;
-}
-
-gulong get_random(gulong limit)
-{
-	do {
-		random_seed = (random_seed*1139113+10921)>>2;
-	} while (random_seed > ((gulong)(G_MAXLONG/limit))*limit);
-	return random_seed % limit;
-}
-
 void gtk_minefield_restart(GtkMineField *mfield)
 {
 	guint i, j;
@@ -892,7 +1032,7 @@ void gtk_minefield_restart(GtkMineField *mfield)
         g_return_if_fail(mfield != NULL);
         g_return_if_fail(GTK_IS_MINEFIELD(mfield));
 
-	mfield->flags = 0;
+	mfield->flag_count = 0;
 	mfield->shown = 0;
 	mfield->lose  = 0;
 	mfield->win   = 0;
@@ -901,41 +1041,19 @@ void gtk_minefield_restart(GtkMineField *mfield)
 	mfield->bdown[2] = 0;
         mfield->cdown = -1;
         mfield->multi_mode = 0;
+	mfield->in_play = 0;
 
-	for (i=0; i<mfield->mcount; i++) {
-		mfield->mines[i].mined = 1;
-	}
-	for (i=mfield->mcount; i<mfield->xsize*mfield->ysize; i++) {
-		mfield->mines[i].mined = 0;
-	}
-
-	if (secs == 0) {
-		time((time_t *)&secs);
-		init_random(secs);
-	}
-			
-	
-	for (i=0; i<mfield->xsize*mfield->ysize; i++) {
-                mfield->mines[i].marked = 0;
+	/* set up mfield->mcount mines.  (randomize later) */
+	for (i=0; i<mfield->xsize * mfield->ysize; i++) {
+		mfield->mines[i].mined = i<mfield->mcount ? 1 : 0;
+		mfield->mines[i].marked = MINE_NOMARK;
                 mfield->mines[i].shown  = 0;
 		mfield->mines[i].down   = 0;
-		j = (guint)get_random(mfield->xsize*mfield->ysize);
-		tmp = mfield->mines[i].mined;
-		mfield->mines[i].mined = mfield->mines[j].mined;
-		mfield->mines[j].mined = tmp;
 	}
 
-	for (x=0; x<mfield->xsize; x++) {
-		for (y=0; y<mfield->ysize; y++) {
-			n = 0;
-			for (i=0; i<8; i++) {
-				if ((cidx = cell_idx(mfield, x+neighbour_map[i].x,
-						     y+neighbour_map[i].y)) != -1) {
-					if (mfield->mines[cidx].mined) n++;
-				}
-			}
-                        mfield->mines[x+mfield->xsize*y].neighbours = n;
-		}
+	if (secs == 0) {	/* random not seeded yet */
+		time((time_t *)&secs);
+		init_random(secs);
 	}
 }
 

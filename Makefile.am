@@ -4,10 +4,10 @@ Gamesdir = $(datadir)/applications
 SUBDIRS = help
 
 INCLUDES = \
-	-I$(top_srcdir)/libgames-support \
-	$(GNOME_GAMES_CFLAGS)		\
+	-I$(top_srcdir)/libgames-support		\
+	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
-	
+
 bin_PROGRAMS = gnomine
 
 gnomine_SOURCES =	\
@@ -20,8 +20,8 @@ gnomine_LDADD = \
 	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
-EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
-	face-smile.xpm face-win.xpm face-worried.xpm \
+EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm		\
+	face-smile.xpm face-win.xpm face-worried.xpm question.xpm	\
 	gnomine.desktop.in README AUTHORS
 
 Games_in_files = gnomine.desktop.in

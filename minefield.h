@@ -10,6 +10,11 @@
 extern "C" {
 #endif /* __cplusplus */
 
+enum {
+	MINE_NOMARK = 0,
+	MINE_MARKED,
+	MINE_QUESTION
+};
 
 #define GTK_MINEFIELD(obj) GTK_CHECK_CAST(obj, gtk_minefield_get_type(), GtkMineField)
 #define GTK_MINEFIELD_CLASS(klass) GTK_CHECK_CLASS_CAST(klass, gtk_minefield_get_type(), GtkMineFieldClass);
@@ -21,9 +26,9 @@ typedef struct _GtkMineFieldClass    GtkMineFieldClass;
 struct _Mine {
 	guint mined:1;
 	guint shown:1;
-	guint marked:1;
+	guint marked:2;
 	guint down:1;
-        guint neighbours;
+	guint neighbours;
 };
 
 typedef struct _Mine mine;
@@ -44,7 +49,7 @@ struct _GtkMineField {
         guint xsize, ysize;
         guint mcount;
 	mine *mines;
-	guint flags;
+	guint flag_count;
 	guint shown;
 	gint cdown;
         guint cdownx;
@@ -55,12 +60,14 @@ struct _GtkMineField {
 	gint multi_mode;
         sign flag;
         sign mine;
+	sign question;
 
 	struct {
 		PangoLayout *layout;
 		gint dx, dy;
 	} numstr[9];
 	guint minesize;
+	gint in_play;
 };
 
 struct _GtkMineFieldClass

@@ -35,10 +35,10 @@ GtkWidget *cframe;
 GtkWidget *clk;
 GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
 GtkWidget *face_box;
-gint ysize=-1, xsize=-1;
-gint nmines=-1;
-gint fsize=-1, fsc;
-gint minesize=-1;
+gint ysize = -1, xsize = -1;
+gint nmines = -1;
+gint fsize = -1, fsc;
+gint minesize = -1;
 
 char *fsize2names[] = {
 	N_("Tiny"),
@@ -69,7 +69,7 @@ void set_flabel(GtkMineField *mfield)
 {
 	char val[16];
 
-	sprintf(val, "%d/%d", mfield->flags, mfield->mcount);
+	sprintf(val, "%d/%d", mfield->flag_count, mfield->mcount);
 	gtk_label_set(GTK_LABEL(flabel), val);
 }
 
@@ -596,7 +596,7 @@ save_state (GnomeClient        *client,
 
 
 
-static int xpos=-1, ypos=-1;
+static int xpos = -1, ypos = -1;
 
 static struct poptOption options[] = {
   {NULL, 'x', POPT_ARG_INT, &xsize, 0, N_("Width of grid"), N_("X")},

@@ -1,3 +1,20 @@
+2002-04-16  Bastien Nocera  <hadess@hadess.net>
+
+	* Makefile.am:
+	* gnomine.c: (set_flabel):
+	* minefield.c: (gtk_minefield_setup_signs),
+	(gtk_minefield_realize), (gtk_minefield_size_request),
+	(gtk_mine_draw), (gtk_minefield_check_cell), (gtk_minefield_lose),
+	(gtk_minefield_win), (gtk_minefield_randomize),
+	(gtk_minefield_show), (gtk_minefield_toggle_mark),
+	(gtk_minefield_multi_press), (gtk_minefield_multi_release),
+	(gtk_minefield_motion_notify), (init_random), (get_random),
+	(gtk_minefield_get_type), (gtk_minefield_restart):
+	* minefield.h:
+	* question.xpm: gameplay enhancements adapted from patch by
+	wrstock@buckeye.cb.lucent.com (Bill Stock) (Closes: #78576,
+	#77751)
+
 2002-02-17  Chris Lyttle  <chris@wilddev.net>
 
 	* help/C/gnome-mines.xml: updated for new template.
