@@ -1,3 +1,7 @@
+2005-03-30  Marco Colombo  <m.colombo@ed.ac.uk>
+
+	* gnomine.c: Add fullscreen (Bug 172121)
+
 2005-03-30  Richard Hoelscher  <rah@rahga.com>
 
 	* gnomine.c: Port to GtkUIInfo. Callback expecting a GtkWidget param

@@ -71,6 +71,8 @@ gint fsize = -1;
 gboolean use_question_marks = TRUE;
 
 GtkAction *hint_action;
+GtkAction *fullscreen_action;
+GtkAction *leavefullscreen_action;
 
 char *fsize2names[] = {
 	N_("Small"),
@@ -499,6 +501,41 @@ use_question_toggle_cb (GtkCheckButton *check, gpointer data)
 }
 
 static void
+set_fullscreen_actions (gboolean is_fullscreen)
+{
+	/* We need to set sensitivity, else we don't get the shortcut key */
+	gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
+	gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
+
+	gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
+	gtk_action_set_visible (fullscreen_action, !is_fullscreen);
+}
+
+static void
+fullscreen_callback (GtkToggleAction *action)
+{
+	gboolean is_fullscreen;
+	is_fullscreen = (GTK_ACTION (action) == fullscreen_action);
+
+	set_fullscreen_actions (is_fullscreen);
+
+	if (is_fullscreen)
+		gtk_window_fullscreen (GTK_WINDOW (window));
+	else
+		gtk_window_unfullscreen (GTK_WINDOW (window));
+}
+  	 
+/* Just in case something else takes us to/from fullscreen. */
+static void
+window_state_callback (GtkWidget *widget, GdkEventWindowState *event)
+{
+	if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
+		return;
+
+	set_fullscreen_actions (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
+}
+
+static void
 create_preferences (void)
 {
 	GtkWidget *table;
@@ -661,7 +698,9 @@ const GtkActionEntry actions[] = {
 	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
 	{ "Preferences", GTK_STOCK_PREFERENCES, NULL, NULL, NULL, G_CALLBACK (preferences_callback) },
 	{ "Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL, G_CALLBACK (help_callback) },
-	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_callback) }
+	{ "About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_callback) },
+	{ "Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_callback) },
+	{ "LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_callback) }
 };
 
 const char *ui_description =
@@ -676,6 +715,8 @@ const char *ui_description =
 "      <menuitem action='Quit'/>"
 "    </menu>"
 "    <menu action='SettingsMenu'>"
+"      <menuitem action='Fullscreen'/>"
+"      <menuitem action='LeaveFullscreen'/>"
 "      <menuitem action='Preferences'/>"
 "    </menu>"
 "    <menu action='HelpMenu'>"
@@ -699,6 +740,11 @@ create_ui_manager (const gchar *group)
 	gtk_ui_manager_insert_action_group (ui_manager, action_group, 0);
 	gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
 	hint_action = gtk_action_group_get_action (action_group, "Hint");
+
+	fullscreen_action = gtk_action_group_get_action (action_group, "Fullscreen");
+	leavefullscreen_action = gtk_action_group_get_action (action_group, "LeaveFullscreen");
+	set_fullscreen_actions (FALSE);
+
 	return ui_manager;
 }
 
@@ -836,7 +882,8 @@ main (int argc, char *argv[])
 			 G_CALLBACK (quit_game), NULL);
 	g_signal_connect(G_OBJECT (window), "focus_out_event",
 			 G_CALLBACK (focus_out_cb), NULL);
-
+	g_signal_connect (G_OBJECT (window), "window_state_event",
+			  G_CALLBACK (window_state_callback), NULL);
 
 	all_boxes = gtk_vbox_new (FALSE, 0);
 
