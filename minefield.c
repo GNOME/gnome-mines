@@ -1069,75 +1069,81 @@ void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_que
  * doesn't do anything and returns the appropriate reason. */
 gint gtk_minefield_hint (GtkMineField *mfield)
 {
-	gint i,j;
-	gint x,y;
+	gint i,x,y;
 	gint a,c;
-	gboolean found;
 	mine * m;
-
+	guint ncase1, ncase2, ncase3;
+	guint *case1list, *case2list, *case3list;
+	guint *case1ptr, *case2ptr, *case3ptr;
+	gint size;
+	
 	g_return_val_if_fail (mfield != NULL, MINEFIELD_HINT_NO_GAME);
 	g_return_val_if_fail (GTK_IS_MINEFIELD(mfield), MINEFIELD_HINT_NO_GAME);
 	if (!mfield->in_play)
 		return MINEFIELD_HINT_NO_GAME;
 	
-	/* We search in three phases.
+	/* We search in three cases.
 	 *
-	 * Phase 1: we look for squares adjacent to both a mine and a revealed
+	 * Case 1: we look for squares adjacent to both a mine and a revealed
 	 * square since these are most likely to help the player and resolve
 	 * ambiguous situations.
 	 *
-	 * Phase 2: we look for squares that are adjacent to a mine.
+	 * Case 2: we look for squares that are adjacent to a mine
+	 * (this will only occur in the rare case that a square is completely
+	 * encircled by mines, but at that point this case is probably
+	 * useful).
 	 *
-	 * Phase 3: we look for any unrevealed square without a mine (as a
-	 * consequence of the previous phases this won't be adjacent to a
+	 * Case 3: we look for any unrevealed square without a mine (as a
+	 * consequence of the previous cases this won't be adjacent to a
 	 * mine).
 	 */
-	gint phase = 1;
+	size = mfield->xsize*mfield->ysize;
+	case1ptr = case1list = g_malloc (size*sizeof(guint));
+	case2ptr = case2list = g_malloc (size*sizeof(guint));
+	case3ptr = case3list = g_malloc (size*sizeof(guint));
+	ncase1 = ncase2 = ncase3 = 0;
+	g_return_val_if_fail (case1ptr && case2ptr && case3ptr,
+			      MINEFIELD_HINT_NO_GAME);
 	
-	i = g_rand_int_range (mfield->grand, 0, mfield->xsize*mfield->ysize);
-	j = i;
-	found = FALSE;
-	while (1) {
+	for (i = 0; i<size; i++) {
 		m = mfield->mines + i;
 		if (!m->mined && !m->marked && !m->shown) {
-			x = i % mfield->xsize;
-			y = i / mfield->ysize;
-			switch (phase) {
-			case 1:
-				if (m->neighbours < 0)
-					break;
+			ncase3++;
+			*case3ptr++ = i;
+			if (m->neighbours > 0) {
+				ncase2++;
+				*case2ptr++ = i;
 				for (a = 0; a < 8; a++) {
+					x = i % mfield->xsize;
+					y = i / mfield->ysize;
 					c = cell_idx (mfield,
 						      x + neighbour_map[a].x,
 						      y + neighbour_map[a].y);
 					if ((c != -1) &&
 					    mfield->mines[c].shown) {
-						found = TRUE;
-						break;
+						ncase1++;
+						*case1ptr++ = i;
 					}
 				}
-				break;
-			case 2:
-				found = m->neighbours > 0;
-				break;
-			case 3:
-			default:
-				found = TRUE;
 			}
 		}
-		if (found) {
-			gtk_minefield_show (mfield, x, y);
-			gtk_mine_draw (mfield, x, y);
-			
-			return MINEFIELD_HINT_ACCEPTED;
-		}
-		i--;
-		if (i == j) {
-			phase++;
-			if (phase == 4)
-				return MINEFIELD_HINT_ALL_MINES;
-		}
-		if (i < 0)
-			i = mfield->xsize*mfield->ysize - 1;
 	}
+
+	if (ncase1 > 0) {
+		a = g_rand_int_range (mfield->grand, 0, ncase1);
+		i = case1list[a];
+	} else if (ncase2 > 0) {
+		a = g_rand_int_range (mfield->grand, 0, ncase2);
+		i = case2list[a];
+	} else if (ncase3 > 0) {
+		a = g_rand_int_range (mfield->grand, 0, ncase3);
+		i = case3list[a];
+	} else return MINEFIELD_HINT_ALL_MINES;
+
+	x = i % mfield->xsize;
+	y = i / mfield->ysize;
+
+	gtk_minefield_show (mfield, x, y);
+	gtk_mine_draw (mfield, x, y);
+	return MINEFIELD_HINT_ACCEPTED;
 }

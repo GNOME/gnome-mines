@@ -1,3 +1,8 @@
+2003-08-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_hint): Complete rewrite to make the
+	selection far more random.
+
 2003-08-26  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_hint): Rewritten to be a 3-phase
