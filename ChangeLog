@@ -1,3 +1,8 @@
+2003-06-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (install-data-local): Give the high score files the
+	correct permissions.
+
 2003-06-22  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Tweaks to Steve's work to remove one unnecessary

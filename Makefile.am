@@ -58,7 +58,7 @@ endif
 	-for i in Small Medium Large Custom ; do \
 	   touch $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
 	   chown $(scores_user):$(scores_group) $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
-	   chmod 644 $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
+	   chmod 664 $(DESTDIR)$(scoredir)/gnomine.$$i.scores; \
 	 done
 	-if test "x$(setgid)" = "xtrue"; then chgrp $(scores_group) $(DESTDIR)$(bindir)/gnomine && chmod 2555 $(DESTDIR)$(bindir)/gnomine ; fi
 
