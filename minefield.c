@@ -115,8 +115,6 @@ static void gtk_minefield_realize(GtkWidget *widget)
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
         gtk_minefield_setup_signs(widget);
-
-	mfield->cmap = gtk_widget_get_colormap (widget);
 }
 
 static void gtk_minefield_unrealize (GtkWidget *widget)
@@ -127,10 +125,7 @@ static void gtk_minefield_unrealize (GtkWidget *widget)
 	g_return_if_fail (GTK_IS_MINEFIELD (widget));
 
 	mfield = GTK_MINEFIELD (widget);
-#if 0
-	gdk_color_context_free (mfield->cc);
-	mfield->cc = NULL;
-#endif
+
 	if (GTK_WIDGET_CLASS (parent_class)->unrealize)
 		(* GTK_WIDGET_CLASS (parent_class)->unrealize) (widget);
 }
@@ -352,15 +347,8 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 
 			n = 0;
 			
-			gdk_rgb_find_color (mfield->cmap, &color);
-
-			#if 0
-			gdk_color_context_get_pixels (mfield->cc,
-						      &color.red,#color.green, &color.blue,
-						      1,
-						      &color.pixel,
-						      &n);
-			#endif
+			gdk_rgb_find_color (gtk_widget_get_colormap (widget), &color);
+			
 			gdk_gc_set_foreground(mfield->numstr[i].gc, &color);
 		}
 	}
@@ -778,9 +766,6 @@ static void gtk_minefield_init (GtkMineField *mfield)
 #endif
         mfield->xsize = 0;
         mfield->ysize = 0;
-#if 0
-	mfield->cc = NULL;
-#endif
 
         GTK_WIDGET (mfield)->requisition.width = mfield->minesize;
         GTK_WIDGET (mfield)->requisition.height = mfield->minesize;

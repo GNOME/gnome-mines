@@ -1,3 +1,7 @@
+2001-12-14  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* gnomines.c, minefield.c: A little clean up, and removed some deprecated stuff.
+
 2001-12-08  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* minefield.c: Paint again the numbers with pretty colors.

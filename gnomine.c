@@ -378,7 +378,7 @@ void preferences_callback (GtkWidget *widget, gpointer data)
         gtk_widget_show(button);
 
 	button = gtk_radio_button_new_with_label
-		(gtk_radio_button_group (GTK_RADIO_BUTTON(button)),
+		(gtk_radio_button_get_group (GTK_RADIO_BUTTON(button)),
 		 _("Medium"));
 	if (fsize == 1)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
@@ -389,7 +389,7 @@ void preferences_callback (GtkWidget *widget, gpointer data)
         gtk_widget_show (button);
 
 	button = gtk_radio_button_new_with_label
-		(gtk_radio_button_group (GTK_RADIO_BUTTON (button)),
+		(gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)),
 		 _("Biiiig"));
 	if (fsize == 2)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
@@ -400,7 +400,7 @@ void preferences_callback (GtkWidget *widget, gpointer data)
         gtk_widget_show(button);
 	
 	button = gtk_radio_button_new_with_label
-		(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
+		(gtk_radio_button_get_group(GTK_RADIO_BUTTON(button)),
 		 _("Custom"));
 	if (fsize == 3)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
@@ -734,7 +734,7 @@ main (int argc, char *argv[])
         gtk_widget_show (align);
   
 	gtk_widget_push_visual (gdk_rgb_get_visual ());
-	gtk_widget_push_colormap (gdk_rgb_get_cmap ());
+	gtk_widget_push_colormap (gdk_rgb_get_colormap ());
 	gtk_widget_pop_colormap ();
 	gtk_widget_pop_visual ();
 
