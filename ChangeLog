@@ -1,8 +1,14 @@
 2002-02-16  James Henstridge  <james@daa.com.au>
 
+	* gnomine.c (about): GnomeAbout isn't a GnomeDialog
+
 	* minefield.c (gtk_minefield_setup_numbers): set up the pango
 	layouts for the numbers.
 	(gtk_mine_draw): use gdk_draw_layout() to draw the mine text.
+	(gtk_minefield_set_size): queue a resize when setting the size of
+	the field.
+	(gtk_minefield_set_mines): don't queue the resize if the minesize
+	is not changed.
 
 	* minefield.h: use pango layouts for drawing the numbers.
 

@@ -803,8 +803,14 @@ void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 		mfield->mines = g_realloc(mfield->mines,
 					  sizeof(mine)*xsize*ysize);
 	}
-	mfield->xsize = xsize;
-	mfield->ysize = ysize;
+
+	if (mfield->xsize != xsize || mfield->ysize != ysize) {
+		mfield->xsize = xsize;
+		mfield->ysize = ysize;
+		if (GTK_WIDGET_VISIBLE(mfield)) {
+			gtk_widget_queue_resize(GTK_WIDGET(mfield));
+		}
+	}
 }
 
 GtkWidget* gtk_minefield_new(void)
@@ -850,12 +856,13 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 	g_return_if_fail(minesize>0);
 	
         mfield->mcount = mcount;
-        mfield->minesize = minesize;
 
-	gtk_minefield_setup_numbers(mfield);
-
-	if (GTK_WIDGET_VISIBLE(mfield)) {
-		gtk_widget_queue_resize(GTK_WIDGET(mfield));
+	if (mfield->minesize != minesize) {
+		mfield->minesize = minesize;
+		gtk_minefield_setup_numbers(mfield);
+		if (GTK_WIDGET_VISIBLE(mfield)) {
+			gtk_widget_queue_resize(GTK_WIDGET(mfield));
+		}
 	}
 }
 

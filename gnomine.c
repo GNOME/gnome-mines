@@ -249,7 +249,7 @@ about(GtkWidget *widget, gpointer data)
 				 NULL);
 	gtk_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
 			(gtk_widget_destroyed), &about);
-	gnome_dialog_set_parent (GNOME_DIALOG (about), GTK_WINDOW (window));
+	gtk_window_set_transient_for(GTK_WINDOW (about), GTK_WINDOW (window));
         gtk_widget_show (about);
 }
 
