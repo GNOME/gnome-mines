@@ -718,16 +718,6 @@ GnomeUIInfo mainmenu[] = {
 	GNOMEUIINFO_END
 };
 
-/* A little helper function.  */
-static char *
-nstr (int n)
-{
-	char *buf;
-
-	buf = g_strdup_printf ("%d", n);
-	return buf;
-}
-
 static int
 save_state (GnomeClient        *client,
 	    gint                phase,
@@ -745,24 +735,24 @@ save_state (GnomeClient        *client,
 
 	argv[i++] = (char *) client_data;
 	argv[i++] = "-x";
-	argv[i++] = nstr (xsize);
+	argv[i++] = g_strdup_printf ("%d", xsize);
 	argv[i++] = "-y";
-	argv[i++] = nstr (ysize);
+	argv[i++] = g_strdup_printf ("%d", ysize);
 	argv[i++] = "-n";
-	argv[i++] = nstr (nmines);
+	argv[i++] = g_strdup_printf ("%d", nmines);
 	argv[i++] = "-f";
-	argv[i++] = nstr (fsize);
+	argv[i++] = g_strdup_printf ("%d", fsize);
 	argv[i++] = "-a";
-	argv[i++] = nstr (xpos);
+	argv[i++] = g_strdup_printf ("%d", xpos);
 	argv[i++] = "-b";
-	argv[i++] = nstr (ypos);
+	argv[i++] = g_strdup_printf ("%d", ypos);
 
 	gnome_client_set_restart_command (client, i, argv);
 	/* i.e. clone_command = restart_command - '--sm-client-id' */
 	gnome_client_set_clone_command (client, 0, NULL);
 
 	for (j = 2; j < i; j += 2)
-		free (argv[j]);
+		g_free (argv[j]);
 
 	return TRUE;
 }
