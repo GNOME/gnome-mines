@@ -59,7 +59,7 @@ void show_face(GtkWidget *pm)
 
 void quit_game(GtkWidget *widget, gpointer data)
 {
-//	gtk_widget_destroy(window);
+	/*gtk_widget_destroy(window);*/
 	gtk_main_quit();
 }
 
