@@ -23,9 +23,11 @@ gnomine_LDADD = \
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
 	face-smile.xpm face-win.xpm face-worried.xpm \
-	gnomine.desktop README AUTHORS
+	gnomine.desktop.in README AUTHORS
 
-Games_DATA = gnomine.desktop
+Games_in_files = gnomine.desktop.in
+Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+@INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
