@@ -1,3 +1,8 @@
+2004-09-06  callum  <callum@spooky-possum.org>
+
+	* gnomine.c (show_face): Remove debugging code and make the face
+	change again (Fixes bug 151931).
+
 2004-08-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c: Remove the explicit call to

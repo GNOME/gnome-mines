@@ -122,8 +122,6 @@ image_widget_setup (char *name)
 static void
 show_face (GtkWidget *pm)
 {
-	return;
-
         if (pm_current == pm) return;
 
 	if (pm_current) {
