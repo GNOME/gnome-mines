@@ -235,14 +235,21 @@ about(GtkWidget *widget, gpointer data)
 {
         GtkWidget *about;
         const gchar *authors[] = {
-		"Code: Pista",
-		"Faces: tigert",
-		"Score: HoraPe",
+		N_("Code: Pista"),
+		N_("Faces: tigert"),
+		N_("Score: HoraPe"),
 		NULL
 	};
 
+#ifdef ENABLE_NLS
+       {
+            int i=0;
+            while (authors[i] != NULL) { authors[i]=_(authors[i]); i++; }
+       }
+#endif
+
         about = gnome_about_new (_("Gnome Mines"), VERSION,
-				 "(C) 1997-1999 the Free Software Foundation",
+				 _("(C) 1997-1999 the Free Software Foundation"),
 				 (const char **)authors,
 				 _("Minesweeper clone"),
 				 NULL);
