@@ -21,6 +21,7 @@
 
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog;
+static GtkWidget *rbutton;
 GtkWidget *window;
 GtkWidget *flabel;
 GtkWidget *xentry;
@@ -60,7 +61,6 @@ void show_face(GtkWidget *pm)
 
 void quit_game(GtkWidget *widget, gpointer data)
 {
-	/*gtk_widget_destroy(window);*/
 	gtk_main_quit();
 }
 
@@ -96,7 +96,28 @@ void new_game(GtkWidget *widget, gpointer data)
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
-/*        gtk_clock_start(GTK_CLOCK(clk)); */
+
+	gtk_widget_hide (rbutton);
+	gtk_widget_show (mfield);
+}
+
+void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
+{
+	if (GTK_CLOCK(clk)->timer_id == -1)
+		return;
+
+	printf ("%i\n", GTK_CLOCK(clk)->timer_id);
+
+	gtk_widget_hide (mfield);
+	gtk_widget_show (rbutton);
+	gtk_clock_stop(GTK_CLOCK(clk)); 
+}
+
+void resume_game_cb (GtkWidget *widget, gpointer data)
+{
+	gtk_widget_hide (rbutton);
+	gtk_widget_show (mfield);
+	gtk_clock_start(GTK_CLOCK(clk));
 }
 
 void marks_changed(GtkWidget *widget, gpointer data)
@@ -134,7 +155,6 @@ void win_game(GtkWidget *widget, gpointer data)
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, TRUE);
 	}
-
 	show_scores(buf, pos);
 }
 
@@ -577,6 +597,7 @@ main (int argc, char *argv[])
 	GtkWidget *button_table;
         GtkWidget *align;
         GtkWidget *label;
+	GtkWidget *box;
 	GnomeClient *client;
 
 	gnome_score_init("gnomine");
@@ -634,6 +655,8 @@ main (int argc, char *argv[])
 	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
+	gtk_signal_connect(GTK_OBJECT(window), "focus_out_event",
+			    GTK_SIGNAL_FUNC(focus_out_cb), NULL);
 
         all_boxes = gtk_vbox_new(FALSE, 0);
 
@@ -681,10 +704,18 @@ main (int argc, char *argv[])
   
 	gtk_widget_push_visual (gdk_imlib_get_visual ());
 	gtk_widget_push_colormap (gdk_imlib_get_colormap ());
-        mfield = gtk_minefield_new();
 	gtk_widget_pop_colormap ();
 	gtk_widget_pop_visual ();
-        gtk_container_add (GTK_CONTAINER (align), mfield);
+
+	box = gtk_vbox_new(FALSE, 0);
+	gtk_container_add (GTK_CONTAINER (align), box);
+	mfield = gtk_minefield_new();
+	gtk_box_pack_start(GTK_BOX(box), mfield, FALSE, FALSE, 0);
+
+	rbutton = gtk_button_new_with_label ("Press to resume");
+	gtk_signal_connect (GTK_OBJECT(rbutton), "released", resume_game_cb, NULL);
+	gtk_box_pack_start(GTK_BOX(box), rbutton, TRUE, FALSE, 0);
+	gtk_widget_show (box);
 
         setup_mode(mfield, fsize);
 	
