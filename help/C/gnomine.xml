@@ -243,11 +243,11 @@
         <figure id="won-fig">
 	  <title>GNOME Mines Showing A Won Game</title>
 	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="gnomine-won.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
+            <mediaobject> 
+              <imageobject>
+                <imagedata fileref="figures/gnomine-won.png"
+                           format="PNG" srccredit="Tim Riehle"/>
+              </imageobject>
     <textobject> 
       <phrase>GNOME Mines Showing A Won Game.</phrase> 
     </textobject> 

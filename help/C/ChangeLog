@@ -1,3 +1,8 @@
+2002-09-20  Ross Burton  <ross@burtonini.com>
+
+	* gnomine.xml: Fix the path to gnomine-won.png, fixing
+	#93379. Thanks to Benjamin Thery for pointing this out.
+
 2001-03-20  Gregory Leblanc  <gleblanc@cu-portland.edu>
 
 	* gnome-mines.sgml: Added, fixed minor SGML error, moved images
