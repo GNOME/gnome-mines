@@ -144,9 +144,9 @@ gtk_minefield_setup_numbers(GtkMineField *mfield)
 
 		/* do the font */
 		font_desc = pango_font_description_new();
-		pango_font_description_set_family(font_desc, "Courier 8");
+		pango_font_description_set_family(font_desc, "Mono 8");
 		pango_font_description_set_size(font_desc,
-						pixel_sz * PANGO_SCALE);
+						pixel_sz * PANGO_SCALE * 0.7);
 		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
 		attr = pango_attr_font_desc_new(font_desc);
 		pango_font_description_free(font_desc);
@@ -320,7 +320,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 			gdk_draw_layout(widget->window,
 					widget->style->black_gc,
 					x*minesize + mfield->numstr[n].dx,
-					y*minesize + mfield->numstr[n].dy,
+					y*minesize + mfield->numstr[n].dy+1,
 					PANGO_LAYOUT(mfield->numstr[n].layout));
 		}
 
