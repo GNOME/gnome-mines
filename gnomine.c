@@ -39,9 +39,9 @@ guint fsize, fsc;
 guint minesize;
 
 char *fsize2names[] = {
-	"Tiny",
-	"Medium",
-	"Biiiig",
+	N_("Tiny"),
+	N_("Medium"),
+	N_("Biiiig"),
 };
 
 void show_face(GtkWidget *pm)
@@ -64,6 +64,7 @@ void show_face(GtkWidget *pm)
 
 void quit_game(GtkWidget *widget, gpointer data)
 {
+        gtk_widget_destroy(window);
         gtk_main_quit();
 }
 
@@ -370,23 +371,43 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 }
 
-GnomeMenuInfo gamemenu[] = {
-	{GNOME_APP_MENU_ITEM, N_("New"), new_game, NULL},
-	{GNOME_APP_MENU_ITEM, N_("Setup..."), setup_game, NULL},
-	{GNOME_APP_MENU_ITEM, N_("Top ten..."), top_ten, NULL},
-	{GNOME_APP_MENU_ITEM, N_("Exit"), quit_game, NULL},
-	{GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
+GnomeUIInfo gamemenu[] = {
+	{GNOME_APP_UI_ITEM, N_("New"), NULL, new_game,
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_NEW, 0, 0, NULL},
+
+	{GNOME_APP_UI_ITEM, N_("Properties..."), NULL, setup_game,
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
+
+	{GNOME_APP_UI_ITEM, N_("Scores..."), NULL, top_ten,
+	GNOME_APP_PIXMAP_STOCK, NULL, 0, 0, NULL},
+
+	{GNOME_APP_UI_ITEM, N_("Exit"), NULL, quit_game,
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 0, 0, NULL},
+
+	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
 };
 
-GnomeMenuInfo helpmenu[] = {
-	{GNOME_APP_MENU_ITEM, N_("About..."), about, NULL},
-	{GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
+GnomeUIInfo helpmenu[] = {
+	{GNOME_APP_UI_HELP, NULL, NULL, NULL,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+
+	{GNOME_APP_UI_ITEM, N_("About..."), NULL, about,
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
+
+	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
 };
 
-GnomeMenuInfo mainmenu[] = {
-	{GNOME_APP_MENU_SUBMENU, N_("Game"), gamemenu, NULL},
-	{GNOME_APP_MENU_SUBMENU, N_("Help"), helpmenu, NULL},
-	{GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}
+GnomeUIInfo mainmenu[] = {
+	{GNOME_APP_UI_SUBTREE, N_("Game"), NULL, gamemenu,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+
+	{GNOME_APP_UI_SUBTREE, N_("Help"), NULL, helpmenu,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
+
+	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL,
+	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
 };
 
 /* A little helper function.  */
@@ -437,15 +458,14 @@ save_state (GnomeClient        *client,
 	return TRUE;
 }
 
-static int
+static GnomeClient *
 parse_args (int argc, char *argv[])
 {
 	GnomeClient *client;
 	int x_set = 0, y_set = 0, nmines_set = 0, fsize_set = 0, minesize_set = 0;
 	int set_pos = 0;
 	int i;
-	char *id = NULL;
-	gint xpos, ypos;
+	gint xpos = 0, ypos = 0;
 
 	/* FIXME: use GNU getopt.  Add --help, --version.  Error if option
 	   unrecognized.  */
@@ -511,9 +531,12 @@ parse_args (int argc, char *argv[])
 		fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
 
 	client = gnome_client_new (argc, argv);
-  
+	gtk_object_ref(GTK_OBJECT(client));
+	gtk_object_sink(GTK_OBJECT(client));
+
 	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
 			    GTK_SIGNAL_FUNC (save_state), argv[0]);
+	return client;
 }
 
 int main(int argc, char *argv[])
@@ -522,6 +545,7 @@ int main(int argc, char *argv[])
 	GtkWidget *status_table;
 	GtkWidget *button_table;
         GtkWidget *label;
+	GnomeClient *client;
 
 	gnome_score_init("gnomine");
 	
@@ -554,7 +578,7 @@ int main(int argc, char *argv[])
 
 	gnome_app_set_contents(GNOME_APP(window), all_boxes);
 
-	parse_args (argc, argv);
+	client = parse_args (argc, argv);
 
         button_table = gtk_table_new(1, 3, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
@@ -660,8 +684,7 @@ int main(int argc, char *argv[])
 
         gtk_main();
 
+	gtk_object_unref(GTK_OBJECT(client));
+
 	return 0;
 }
-
-
-
