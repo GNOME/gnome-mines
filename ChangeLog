@@ -1,5 +1,10 @@
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
+	* minefield.[ch]: The bitmaps for the flags and the mines are now 
+	                  scaled.
+
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
 	* gnomine.c (main): Removed unused variable mfieldbox.
 	* minefield.c: Changed the type of the secs variable to time_t, as
 	               it was not being 64-bit clean. It was overwriting the minefield_signals[0]

@@ -175,15 +175,28 @@ void setup_mode(GtkWidget *widget, gint mode)
 
 void do_setup(GtkWidget *widget, gpointer data)
 {
+        guint oldxsize, oldysize, oldnmines, oldfsize;
+  
+	oldxsize = xsize;
+	oldysize = ysize;
+	oldnmines = nmines;
+        oldfsize = fsize;
 
-	xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
+        xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
 	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
         nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
         minesize = atoi(gtk_entry_get_text(GTK_ENTRY(sentry)));
 	fsize  = fsc;
 	
         setup_mode(mfield, fsize);
-	new_game(mfield, NULL);
+  
+        if ((oldxsize != xsize) ||
+	    (oldysize != ysize) ||
+	    (oldfsize != fsize) ||
+	    (oldnmines != nmines))
+          {
+	    new_game(mfield, NULL);
+	  }
 
 	setupdialog_destroy(setupdialog, 1);
 
@@ -550,6 +563,8 @@ int main(int argc, char *argv[])
 	
         gnome_init("gnomine", &argc, &argv);
 
+        gdk_imlib_init ();
+  
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
 #ifdef ENABLE_NLS 

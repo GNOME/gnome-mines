@@ -1,6 +1,7 @@
 
 #include <time.h>
 #include <gtk/gtk.h>
+#include <gdk_imlib.h>
 #include <gnome.h>
 #include "minefield.h"
 #include "flag.xpm"
@@ -57,6 +58,26 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 	return -1;
 }
 
+static void _setup_sign (sign *signp, char **data)
+{
+        signp->image = gdk_imlib_create_image_from_xpm_data(data);
+        gdk_imlib_render (signp->image, 5 * (minesize - 4) / 8, 
+			                5 * (minesize - 4) / 8);
+        signp->pixmap = gdk_imlib_move_image (signp->image);
+        signp->mask = gdk_imlib_move_mask (signp->image);
+        gdk_window_get_size(signp->pixmap, &(signp->width), &(signp->height));
+}
+
+static void gtk_minefield_setup_signs(GtkWidget *widget)
+{
+        GtkMineField *mfield;
+  
+        mfield = GTK_MINEFIELD(widget);
+  
+        _setup_sign(&mfield->flag, flag_xpm);
+        _setup_sign(&mfield->mine, mine_xpm);
+}
+
 static void gtk_minefield_realize(GtkWidget *widget)
 {
         GtkMineField *mfield;
@@ -79,7 +100,7 @@ static void gtk_minefield_realize(GtkWidget *widget)
         attributes.colormap = gtk_widget_get_colormap(widget);
         attributes.event_mask = gtk_widget_get_events(widget);
 	attributes.event_mask |= GDK_EXPOSURE_MASK | GDK_BUTTON_PRESS_MASK |
-		GDK_BUTTON_RELEASE_MASK;
+		                 GDK_BUTTON_RELEASE_MASK;
         
         attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
         
@@ -89,19 +110,9 @@ static void gtk_minefield_realize(GtkWidget *widget)
         widget->style = gtk_style_attach(widget->style, widget->window);
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
-	mfield->flag.pixmap = gdk_pixmap_create_from_xpm_d (widget->window,
-							    &mfield->flag.mask,
-							    &widget->style->bg[GTK_STATE_NORMAL],
-							    flag_xpm);
-        gdk_window_get_size(mfield->flag.pixmap, &(mfield->flag.width), &(mfield->flag.height));
-  
-	mfield->mine.pixmap = gdk_pixmap_create_from_xpm_d (widget->window,
-							  &mfield->mine.mask,
-							  &widget->style->bg[GTK_STATE_NORMAL],
-							  mine_xpm);
-        gdk_window_get_size(mfield->mine.pixmap, &(mfield->mine.width), &(mfield->mine.height));
+        gtk_minefield_setup_signs(widget);
 
-	mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
+        mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
 					    gtk_widget_get_colormap (widget));
 }
 
@@ -282,6 +293,8 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 	        int pxlsz;
 	        char fontname[50];
 	  
+	        gtk_minefield_setup_signs(widget);
+
 	        pxlsz = minesize - 4;
 	        if (pxlsz > 999) pxlsz = 999;
                 if (pxlsz < 2)  pxlsz = 2;

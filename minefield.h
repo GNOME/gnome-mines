@@ -32,6 +32,7 @@ typedef struct _Sign sign;
   
 struct _Sign
     {
+	GdkImlibImage *image;
 	GdkPixmap *pixmap;
 	GdkBitmap *mask;
       
