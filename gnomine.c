@@ -23,7 +23,6 @@ GtkWidget *cframe;
 GtkWidget *clk;
 GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
 GtkWidget *face_box;
-GtkWidget *app;
 guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
@@ -178,7 +177,7 @@ void setup_game(GtkWidget *widget, gpointer data)
         if (setupdialog) return;
 
 	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
-	g_print("setupdialog is %#x\n", setupdialog);
+
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
 	gtk_window_set_title(GTK_WINDOW(setupdialog), "Gnome mines setup");
@@ -329,7 +328,6 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
-	setupdialog = NULL;
 	window = gnome_app_new("Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
@@ -371,7 +369,6 @@ int main(int argc, char *argv[])
 	gtk_container_add(GTK_CONTAINER(mbutton), face_box);
 	
 	pm_win     = gnome_create_pixmap_widget_d(window, mbutton, face_win_xpm);
-	pm_sad     = gnome_create_pixmap_widget_d(window, mbutton, face_sad_xpm);
 	pm_sad     = gnome_create_pixmap_widget_d(window, mbutton, face_sad_xpm);
 	pm_smile   = gnome_create_pixmap_widget_d(window, mbutton, face_smile_xpm);
 	pm_cool    = gnome_create_pixmap_widget_d(window, mbutton, face_cool_xpm);
