@@ -1,3 +1,8 @@
+2003-05-30  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (scoredir): Changed score directory to fix bug
+	#113968.
+
 2003-05-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c: Use gtk_window_present for displaying dialogs.
