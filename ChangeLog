@@ -1,3 +1,8 @@
+2003-09-17  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Removed old i18n code that wasn't necessary
+	and was crashing on Solaris.
+
 2003-08-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_hint): Updated some comments, added a

@@ -836,17 +836,6 @@ main (int argc, char *argv[])
 	
 	verify_ranges ();
 
-#define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
-	{
-		int i;
-		for (i = 0; i < ELEMENTS(mainmenu); i++)
-			mainmenu[i].label = gettext (mainmenu[i].label);
-		for (i = 0; i < ELEMENTS(gamemenu); i++)
-			gamemenu[i].label = gettext (gamemenu[i].label);
-		for (i = 0; i < ELEMENTS(helpmenu); i++)
-			helpmenu[i].label = gettext (helpmenu[i].label);
-	}
-
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
