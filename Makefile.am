@@ -19,9 +19,11 @@ gnomine_LDADD = \
 	$(top_builddir)/libgnome/libgnome.la		\
         $(X_LIBS) $(x_libs)
 
-EXTRA_DIST = flag.xpm mine.xpm gnomine.desktop README AUTHORS
+EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm \
+	     gnomine.desktop README AUTHORS
 
-pixmap_DATA = flag.xpm mine.xpm
+pixmap_DATA = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm
+
 
 install-data-local:
 	$(mkinstalldirs) $(Gamesdir)

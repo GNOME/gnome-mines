@@ -234,7 +234,6 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 {
         GtkMineField *mfield;
 	GdkColor color;
-        GdkFont  *font;
 	int i;
 	
 	g_return_val_if_fail(widget != NULL, FALSE);
@@ -457,9 +456,7 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 {
         GtkMineField *mfield;
 	guint x, y;
-	guint c,c2;
-	guint i,n;
-	gint nx, ny;
+	guint c;
         
         g_return_val_if_fail(widget != NULL, 0);
         g_return_val_if_fail(GTK_IS_MINEFIELD(widget), 0);
@@ -616,7 +613,6 @@ GtkWidget* gtk_minefield_new(void)
 {
         GtkMineField *mfield;
         GtkWidget *widget;
-	int i;
         
 	mfield = gtk_type_new(gtk_minefield_get_type());
 	widget = GTK_WIDGET(mfield);

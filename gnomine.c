@@ -11,38 +11,33 @@ GtkWidget *xentry;
 GtkWidget *yentry;
 GtkWidget *mentry;
 GtkWidget *mbutton;
-GtkWidget *mlabel;
 GtkWidget *plabel;
 GtkWidget *cframe;
-gint timer_id;
-gint ptime;
+GtkWidget *clk;
+GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
+GtkWidget *face_box;
 guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
 
-int timer_callback(void *data)
-{
-        char tstr[6];
-	ptime++;
-	sprintf(tstr, "%d", ptime);
-	gtk_label_set(GTK_LABEL(plabel), tstr);
-}
 
-
-void timer_start(void)
+void show_face(GtkWidget *pm)
 {
-        if (timer_id == -1)
-		timer_id = gtk_timeout_add(1000, timer_callback, NULL);
-}
+        if (pm_current == pm) return;
 
-void timer_stop(void)
-{
-	if (timer_id != -1) {
-		gtk_timeout_remove(timer_id);
-		timer_id = -1;
+	if (pm_current) {
+                gtk_container_block_resize(GTK_CONTAINER(face_box));
+		gtk_widget_hide(pm_current);
 	}
-}
 
+	gtk_widget_show(pm);
+
+	if(pm_current) {
+		gtk_container_unblock_resize(GTK_CONTAINER(face_box));
+	}
+	
+	pm_current = pm;
+}
 
 void quit_game(GtkWidget *widget, gpointer data)
 {
@@ -59,15 +54,13 @@ void set_flabel(GtkMineField *mfield)
 
 void new_game(GtkWidget *widget, gpointer data)
 {
-        ptime = 0;
-	gtk_label_set(GTK_LABEL(mlabel), "New");
-        gtk_widget_draw(mlabel, NULL);
+        gtk_clock_stop(GTK_CLOCK(clk));
+	gtk_clock_set_seconds(GTK_CLOCK(clk), 0);
+        show_face(pm_smile);
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
-	gtk_label_set(GTK_LABEL(plabel), "0");
-        timer_stop();
-	timer_start();
+        gtk_clock_start(GTK_CLOCK(clk));
 }
 
 void setupdialog_destroy(GtkWidget *widget, gint mode)
@@ -85,43 +78,39 @@ void marks_changed(GtkWidget *widget, gpointer data)
 
 void lose_game(GtkWidget *widget, gpointer data)
 {
-	gtk_label_set(GTK_LABEL(mlabel), "Sux");
-        gtk_widget_draw(mlabel, NULL);
-        timer_stop();
+        show_face(pm_sad);
+        gtk_clock_stop(GTK_CLOCK(clk));
 }
 
 void win_game(GtkWidget *widget, gpointer data)
 {
-	gtk_label_set(GTK_LABEL(mlabel), "Win");
-        gtk_widget_draw(mlabel, NULL);
-        timer_stop();
+        show_face(pm_win);
+        gtk_clock_stop(GTK_CLOCK(clk));
 }
 
 void look_cell(GtkWidget *widget, gpointer data)
 {
-	gtk_label_set(GTK_LABEL(mlabel), "Um?");
-        gtk_widget_draw(mlabel, NULL);
+        show_face(pm_worried);
 }
 
 void unlook_cell(GtkWidget *widget, gpointer data)
 {
-	gtk_label_set(GTK_LABEL(mlabel), "New");
-        gtk_widget_draw(mlabel, NULL);
+	show_face(pm_cool);
 }
 
 void setup_mode(GtkWidget *widget, gint mode)
 {
-	gint stable[3][3] = {{ 10, 10, 10 }, {20, 20, 50}, {35, 35, 170}};
+	gint size_table[3][3] = {{ 10, 10, 10 }, {20, 20, 50}, {35, 35, 170}};
 	gint x,y,m;
 
-	if (fsize == 3) {
+	if (mode == 3) {
 		x = xsize;
 		y = ysize;
 		m = nmines;
 	} else {
-		x = stable[fsize][0];
-		y = stable[fsize][1];
-		m = stable[fsize][2];
+		x = size_table[mode][0];
+		y = size_table[mode][1];
+		m = size_table[mode][2];
 	}
 	gtk_minefield_set_size(GTK_MINEFIELD(mfield), x, y);
 	gtk_minefield_set_mines(GTK_MINEFIELD(mfield), m);
@@ -164,6 +153,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gchar numstr[8];
 	
         if (setupdialog) return;
+
 	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
@@ -282,6 +272,9 @@ void setup_game(GtkWidget *widget, gpointer data)
         gtk_widget_show(box);
 	
 	gtk_widget_show(all_boxes);
+
+        fsc = fsize;
+
 	gtk_widget_show(setupdialog);
 }
 
@@ -301,8 +294,6 @@ void main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
-        timer_id = -1;
-	
         window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
         gtk_window_set_title(GTK_WINDOW(window), "Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
@@ -365,17 +356,33 @@ void main(int argc, char *argv[])
 			 0, 0);
         gtk_widget_show(label);
 
-        mlabel = gtk_label_new("New");
-	gtk_misc_set_alignment(GTK_MISC(mlabel), 0.5, 0.5);
+        pm_current = NULL;
 
 	mbutton = gtk_button_new();
-	gtk_container_add(GTK_CONTAINER(mbutton), mlabel);
-	gtk_widget_show(mlabel);
 	gtk_signal_connect(GTK_OBJECT(mbutton), "clicked",
                            GTK_SIGNAL_FUNC(new_game), NULL);
-        gtk_widget_set_usize(mbutton, 35, 35);
+        gtk_widget_set_usize(mbutton, 38, 38);
 	gtk_table_attach(GTK_TABLE(button_table), mbutton, 1, 2, 0, 1,
 			 0, 0, 5, 5);
+
+	face_box = gtk_vbox_new(FALSE, 0);
+	gtk_container_add(GTK_CONTAINER(mbutton), face_box);
+	
+	pm_win     = gnome_create_pixmap_widget(window, mbutton, "face-win.xpm");
+	pm_sad     = gnome_create_pixmap_widget(window, mbutton, "face-sad.xpm");
+	pm_smile   = gnome_create_pixmap_widget(window, mbutton, "face-smile.xpm");
+	pm_cool    = gnome_create_pixmap_widget(window, mbutton, "face-cool.xpm");
+	pm_worried = gnome_create_pixmap_widget(window, mbutton, "face-worried.xpm");
+
+        gtk_box_pack_start(GTK_BOX(face_box), pm_win, FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(face_box), pm_sad, FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(face_box), pm_smile, FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(face_box), pm_cool, FALSE, FALSE, 0);
+        gtk_box_pack_start(GTK_BOX(face_box), pm_worried, FALSE, FALSE, 0);
+
+	show_face(pm_smile);
+
+	gtk_widget_show(face_box);
 	gtk_widget_show(mbutton);
 
 	label = gtk_label_new("");
@@ -428,10 +435,10 @@ void main(int argc, char *argv[])
 			 2, 3, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(label);
 
-	plabel = gtk_label_new("0");
-	gtk_table_attach(GTK_TABLE(status_table), plabel,
+        clk = gtk_clock_new(GTK_CLOCK_INCREASING);
+	gtk_table_attach(GTK_TABLE(status_table), clk,
 			 3, 4, 0, 1, 0, 0, 3 ,3);
-	gtk_widget_show(plabel);
+	gtk_widget_show(clk);
 	
         gtk_widget_show(status_table);
 	
