@@ -28,12 +28,6 @@ guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
 
-void toggle_menus(void)
-{
-  GnomeApp *app = window;
-  gnome_app_set_positions(app, !app->pos_menubar, POS_NOCHANGE);
-}
-
 void show_face(GtkWidget *pm)
 {
         if (pm_current == pm) return;
@@ -184,6 +178,7 @@ void setup_game(GtkWidget *widget, gpointer data)
         if (setupdialog) return;
 
 	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
+	g_print("setupdialog is %#x\n", setupdialog);
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
 	gtk_window_set_title(GTK_WINDOW(setupdialog), "Gnome mines setup");
@@ -310,7 +305,6 @@ void setup_game(GtkWidget *widget, gpointer data)
 GnomeMenuInfo gamemenu[] = {
   {MI_ITEM, "New", new_game, NULL},
   {MI_ITEM, "Setup...", setup_game, NULL},
-  {MI_ITEM, "Move menus", toggle_menus, NULL},
   {MI_ITEM, "Exit", quit_game, NULL},
   {MI_ENDOFINFO, NULL, NULL, NULL}  
 };
@@ -335,11 +329,10 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
+	setupdialog = NULL;
 	window = gnome_app_new("Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
-	gnome_app_create_menu(GNOME_APP(window), mainmenu);
-	g_print("mainmenu[0].widget == %#x [%#x]\n", mainmenu[0].widget,
-		GNOME_APP(window)->menubar->parent);
+	gnome_app_create_menus(GNOME_APP(window), mainmenu);
 	gnome_app_set_positions(GNOME_APP(window), POS_TOP, POS_NOCHANGE);
         
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
@@ -353,7 +346,6 @@ int main(int argc, char *argv[])
 	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
 	nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
 	fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
-	xsize = 20; ysize = 20; nmines = 3;
 
         button_table = gtk_table_new(1, 3, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
@@ -457,7 +449,7 @@ int main(int argc, char *argv[])
         gtk_widget_show(window);
 
 	new_game(mfield, NULL);
-	
+
         gtk_main();
 
 	return 0;
