@@ -261,19 +261,17 @@ void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
 	if (area) {
 		x1 = area->x/minesize;
 		y1 = area->y/minesize;
-		x2 = (area->x+area->width)/minesize;
-		y2 = (area->y+area->height)/minesize;
+		x2 = (area->x + area->width - 1) / minesize;
+		y2 = (area->y + area->height - 1) / minesize;
 	} else {
 		x1 = 0; y1 = 0;
 		x2 = mfield->xsize;
 		y2 = mfield->ysize;
 	}
 	
-	for (x = x1; x<x2; x++) {
-		for (y = y1; y<y2; y++) {
+	for (x = x1; x <= x2; x++)
+		for (y = y1; y <= y2; y++)
 			gtk_mine_draw(mfield, x, y);
-		}
-	}
 }
 
 static gint gtk_minefield_expose(GtkWidget *widget,
