@@ -101,8 +101,8 @@ void win_game(GtkWidget *widget, gpointer data)
 	  {
 	    GtkWidget *mb;
 	    gchar buf[512];
-	    snprintf(buf, sizeof(buf), "You got onto the high score list with a score of %.0f!", score);
-	    mb = gnome_messagebox_new(buf, GNOME_MESSAGEBOX_INFO, "OK",
+	    snprintf(buf, sizeof(buf), _("You got onto the high score list with a score of %.0f!"), score);
+	    mb = gnome_messagebox_new(buf, GNOME_MESSAGEBOX_INFO, _("OK"),
 				      NULL, NULL);
 	    gnome_messagebox_set_default(GNOME_MESSAGEBOX(mb), 0);
 	    gnome_messagebox_set_modal(GNOME_MESSAGEBOX(mb));
@@ -180,7 +180,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
-	gtk_window_set_title(GTK_WINDOW(setupdialog), "Gnome mines setup");
+	gtk_window_set_title(GTK_WINDOW(setupdialog), _("Gnome mines setup"));
 	gtk_signal_connect(GTK_OBJECT(setupdialog),
 			   "delete_event",
 			   GTK_SIGNAL_FUNC(setupdialog_destroy),
@@ -189,15 +189,15 @@ void setup_game(GtkWidget *widget, gpointer data)
 	all_boxes = gtk_vbox_new(FALSE, 5);
 	gtk_container_add(GTK_CONTAINER(setupdialog), all_boxes);
 
-        cframe = gtk_frame_new("Custom size");
+        cframe = gtk_frame_new(_("Custom size"));
 
-	frame = gtk_frame_new("Field size");
+	frame = gtk_frame_new(_("Field size"));
 	gtk_box_pack_start(GTK_BOX(all_boxes), frame, TRUE, TRUE, 0);
 	
 	box = gtk_vbox_new(FALSE, 0);
 	gtk_container_add(GTK_CONTAINER(frame), box);
 	
-	button = gtk_radio_button_new_with_label(NULL, "Tiny");
+	button = gtk_radio_button_new_with_label(NULL, _("Tiny"));
 	if (fsize == 0) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 0);
@@ -205,7 +205,7 @@ void setup_game(GtkWidget *widget, gpointer data)
         gtk_widget_show(button);
 
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 "Medium");
+						 _("Medium"));
 	if (fsize == 1) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 1);
@@ -213,7 +213,7 @@ void setup_game(GtkWidget *widget, gpointer data)
         gtk_widget_show(button);
 
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 "Biiiig");
+						 _("Biiiig"));
 	if (fsize == 2) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 2);
@@ -221,7 +221,7 @@ void setup_game(GtkWidget *widget, gpointer data)
         gtk_widget_show(button);
 	
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
-						 "Custom");
+						 _("Custom"));
 	if (fsize == 3) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 3);
@@ -239,7 +239,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	box2 = gtk_hbox_new(FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new("Horizontal:");
+	label = gtk_label_new(_("Horizontal:"));
 	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
 	gtk_widget_show(label);
 	xentry = gtk_entry_new();
@@ -252,7 +252,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	box2 = gtk_hbox_new(FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new("Vertical:");
+	label = gtk_label_new(_("Vertical:"));
 	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
 	gtk_widget_show(label);
 	yentry = gtk_entry_new();
@@ -265,7 +265,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	box2 = gtk_hbox_new(FALSE, 0);
 	gtk_box_pack_start(GTK_BOX(box), box2, TRUE, TRUE, 0);
-	label = gtk_label_new("Number of mines:");
+	label = gtk_label_new(_("Number of mines:"));
 	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
 	gtk_widget_show(label);
 	mentry = gtk_entry_new();
@@ -281,12 +281,12 @@ void setup_game(GtkWidget *widget, gpointer data)
 	
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-	button = gtk_button_new_with_label("Ok");
+	button = gtk_button_new_with_label(_("Ok"));
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
 			   GTK_SIGNAL_FUNC(do_setup), NULL);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
-	button = gtk_button_new_with_label("Cancel");
+	button = gtk_button_new_with_label(_("Cancel"));
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
                            (GtkSignalFunc)setupdialog_destroy,
 			   (gpointer)1);
@@ -302,14 +302,14 @@ void setup_game(GtkWidget *widget, gpointer data)
 }
 
 GnomeMenuInfo gamemenu[] = {
-  {GNOME_APP_MENU_ITEM, "New", new_game, NULL},
-  {GNOME_APP_MENU_ITEM, "Setup...", setup_game, NULL},
-  {GNOME_APP_MENU_ITEM, "Exit", quit_game, NULL},
+  {GNOME_APP_MENU_ITEM, _("New"), new_game, NULL},
+  {GNOME_APP_MENU_ITEM, _("Setup..."), setup_game, NULL},
+  {GNOME_APP_MENU_ITEM, _("Exit"), quit_game, NULL},
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
 };
 
 GnomeMenuInfo mainmenu[] = {
-  {GNOME_APP_MENU_SUBMENU, "Game", gamemenu, NULL},
+  {GNOME_APP_MENU_SUBMENU, _("Game"), gamemenu, NULL},
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}
 };
 
@@ -323,7 +323,7 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
-	window = gnome_app_new("gnomine", "Gnome mines");
+	window = gnome_app_new("gnomine", _("Gnome mines"));
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
 	
@@ -413,7 +413,7 @@ int main(int argc, char *argv[])
         status_table = gtk_table_new(1, 4, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, TRUE, TRUE, 0);
 
-	label = gtk_label_new("Flags:");
+	label = gtk_label_new(_("Flags:"));
 	gtk_table_attach(GTK_TABLE(status_table), label,
 			 0, 1, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(label);
@@ -424,7 +424,7 @@ int main(int argc, char *argv[])
 			 1, 2, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(flabel);
 
-	label = gtk_label_new("Time:");
+	label = gtk_label_new(_("Time:"));
 	gtk_table_attach(GTK_TABLE(status_table), label,
 			 2, 3, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(label);
