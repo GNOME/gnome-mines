@@ -17,7 +17,7 @@ gnomine_LDADD = \
 	$(top_builddir)/libgnomeui/libgnomeui.la 	\
 	$(top_builddir)/libgnome/libgnome.la		\
 	$(GTK_LIBS)					\
-        $(X_LIBS) $(x_libs) $(INTLLIBS)
+        $(X_LIBS) $(x_libs) $(INTLLIBS) $(DL_LIB)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm \
 	     gnomine.desktop README AUTHORS
