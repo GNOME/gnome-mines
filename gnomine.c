@@ -22,7 +22,6 @@ static GtkWidget *mfield;
 GtkWidget *window;
 GtkWidget *flabel;
 GtkWidget *setupdialog;
-GtkWidget *mfieldbox;
 GtkWidget *xentry;
 GtkWidget *yentry;
 GtkWidget *mentry;
@@ -625,8 +624,6 @@ int main(int argc, char *argv[])
         gtk_container_add (GTK_CONTAINER (align), mfield);
 
         setup_mode(mfield, fsize);
-	
-	gtk_box_pack_start(GTK_BOX(mfieldbox), mfield, TRUE, TRUE, 0);
 	
 	gtk_signal_connect(GTK_OBJECT(mfield), "marks_changed",
 			   GTK_SIGNAL_FUNC(marks_changed), NULL);

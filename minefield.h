@@ -84,15 +84,6 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 void gtk_minefield_restart(GtkMineField *mfield);
 extern guint minesize;
 
-enum {
-	MARKS_CHANGED_SIGNAL,
-	EXPLODE_SIGNAL,
-	LOOK_SIGNAL,
-	UNLOOK_SIGNAL,
-	WIN_SIGNAL,
-	LAST_SIGNAL
-};
-
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */

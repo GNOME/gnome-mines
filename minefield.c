@@ -35,7 +35,16 @@ static int num_colors[9][3] = {
 };
 
 
-int secs = 0;
+time_t secs = 0;
+
+enum {
+	MARKS_CHANGED_SIGNAL,
+	EXPLODE_SIGNAL,
+	LOOK_SIGNAL,
+	UNLOOK_SIGNAL,
+	WIN_SIGNAL,
+	LAST_SIGNAL
+};
 
 static gint minefield_signals[LAST_SIGNAL] = { 0 };
 
@@ -298,16 +307,12 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			color.blue  = num_colors[i][2] | (num_colors[i][2] << 8);
 			color.pixel = 0; /* required! */
 
-			printf("%04x %04x %04x -> ", color.red, color.green, color.blue);
-
 			n = 0;
 			gdk_color_context_get_pixels (mfield->cc,
 						      &color.red, &color.green, &color.blue,
 						      1,
 						      &color.pixel,
 						      &n);
-
-			printf("%08lx\n", color.pixel);
 
 			gdk_gc_set_foreground(mfield->numstr[i].gc, &color);
 		}
@@ -595,6 +600,13 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
         widget_class->expose_event = gtk_minefield_expose;
         widget_class->button_press_event = gtk_minefield_button_press;
 	widget_class->button_release_event = gtk_minefield_button_release;
+  
+        class->marks_changed = NULL;
+        class->explode = NULL;
+        class->look = NULL;
+        class->unlook = NULL;
+        class->win = NULL;
+  
 	minefield_signals[MARKS_CHANGED_SIGNAL] =
 		gtk_signal_new("marks_changed",
 			       GTK_RUN_FIRST,
@@ -637,8 +649,6 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 			       0);
 
 	gtk_object_class_add_signals(object_class, minefield_signals, LAST_SIGNAL);
-	
-
 }
 
 static void gtk_minefield_init (GtkMineField *mfield)

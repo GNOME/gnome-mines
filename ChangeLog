@@ -1,6 +1,14 @@
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
-        * minefield.h: Added sign structure to unclutter the GtkMineField
+	* gnomine.c (main): Removed unused variable mfieldbox.
+	* minefield.c: Changed the type of the secs variable to time_t, as
+	               it was not being 64-bit clean. It was overwriting the minefield_signals[0]
+	               and that's why there were warnings from Gtk.
+
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
+	* minefield.c: Moved signals enum to this file.
+	* minefield.h: Added sign structure to unclutter the GtkMineField
 	               struct.
 	* minefield.c (gtk_mine_draw): Mines and flags are now centered.
         * minefield.c (gtk_mine_draw): Added flag mask declaration.
