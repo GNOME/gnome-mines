@@ -36,6 +36,11 @@ gint nmines = -1;
 gint fsize = -1, fsc;
 gint minesize = -1;
 
+GnomeUIInfo gamemenu[];
+GnomeUIInfo settingsmenu[];
+GnomeUIInfo helpmenu[];
+GnomeUIInfo mainmenu[];
+
 char *fsize2names[] = {
 	N_("Tiny"),
 	N_("Medium"),
@@ -84,6 +89,28 @@ void set_flabel(GtkMineField *mfield)
 
 	val = g_strdup_printf ("%d/%d", mfield->flag_count, mfield->mcount);
 	gtk_label_set_text (GTK_LABEL(flabel), val);
+}
+
+void update_score_state ()
+{
+        gchar **names = NULL;
+        gfloat *scores = NULL;
+        time_t *scoretimes = NULL;
+	gint top;
+	gchar buf[64];
+
+	if(fsize<4)
+		strncpy(buf, fsize2names[fsize], sizeof(buf));
+
+	top = gnome_score_get_notable("gnomine", buf, &names, &scores, &scoretimes);
+	if (top > 0) {
+		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
+		g_strfreev(names);
+		g_free(scores);
+		g_free(scoretimes);
+	} else {
+		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
+	}
 }
 
 void
@@ -165,7 +192,7 @@ void win_game(GtkWidget *widget, gpointer data)
 
         show_face(pm_win);
 
-	if(fsize<3) {
+	if(fsize<4) {
 	    score = (gfloat) (GAMES_CLOCK(clk)->stopped / 60) + 
 		    (gfloat) (GAMES_CLOCK(clk)->stopped % 60) / 100;
 
@@ -178,6 +205,9 @@ void win_game(GtkWidget *widget, gpointer data)
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, TRUE);
 	}
+
+	update_score_state ();
+
 	show_scores(buf, pos);
 }
 
@@ -329,6 +359,8 @@ static void apply_cb (GtkDialog *widget, gint response, gpointer data)
 			minesize, NULL);
 	gconf_client_set_int (conf_client, "/apps/gnomine/geometry/mode",
 			fsize, NULL);
+
+	update_score_state ();
 
 	gtk_widget_destroy (GTK_WIDGET(widget));
 }
@@ -774,6 +806,8 @@ main (int argc, char *argv[])
         gtk_widget_show(status_table);
 	
 	gtk_widget_show(all_boxes);
+
+	update_score_state ();
 
 	new_game(mfield, NULL);
 
