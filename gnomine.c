@@ -763,9 +763,9 @@ static struct poptOption options[] = {
   {NULL, 'x', POPT_ARG_INT, &xsize, 0, N_("Width of grid"), N_("X")},
   {NULL, 'y', POPT_ARG_INT, &ysize, 0, N_("Height of grid"), N_("Y")},
   {NULL, 'n', POPT_ARG_INT, &nmines, 0, N_("Number of mines"), N_("NUMBER")},
-  {NULL, 'f', POPT_ARG_INT, &fsize, 0, NULL, NULL},
-  {NULL, 'a', POPT_ARG_INT, &xpos, 0, NULL, N_("X")},
-  {NULL, 'b', POPT_ARG_INT, &ypos, 0, NULL, N_("Y")},
+  {NULL, 'f', POPT_ARG_INT, &fsize, 0, N_("Size of the board (1=small, 3=large)"), NULL},
+  {NULL, 'a', POPT_ARG_INT, &xpos, 0, N_("X location of window"), N_("X")},
+  {NULL, 'b', POPT_ARG_INT, &ypos, 0, N_("Y location of window"), N_("Y")},
   {NULL, '\0', 0, NULL, 0}
 };
 
