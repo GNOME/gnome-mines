@@ -1,3 +1,25 @@
+1998-05-17 Timo Sirainen <a@sicom.fi>
+
+	* minefield.c: Marking two mines fast resulted as doubleclick and
+	               didn't work right
+	* minefield.c: Changed multi press behaviour so that it always
+	               displays what squares are about to be pressed
+	* minefield.c: Mine is now marked directly when button is pressed down
+	* minefield.c: You can't win anymore by marking mines to all squares.
+	               Also, you can win now when there's only left same
+	               amount of unopened and unmarked mines like you don't
+	               really have to mark any mines to win :)
+	* minefield.c: The previous fix "multi show didn't work if pressed
+	               over marked mine" wasn't actually good idea, removed..
+	* minefield.c: Colors of mines 4-8 changed
+	* minefield.c: Opened mines have now thin borders, I think this is
+	               somewhat clearer :) and bigger fonts can be used.
+	* minefield.c: Square presses follow now mouse.
+	* gnomine.c: Because of above, I removed the "off release" option
+	             since it didn't have anything to do anymore..
+	* gnomine.c: Minefield sizes changed to same as other minesweepers
+	             have
+
 1998-05-10 Timo Sirainen <a@sicom.fi>
 
         * minefield.c: multi show didn't work if pressed over marked mine

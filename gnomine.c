@@ -64,7 +64,6 @@ guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
 guint minesize;
-guint outrelease, outsetup;
 
 char *fsize2names[] = {
 	N_("Tiny"),
@@ -185,7 +184,7 @@ void unlook_cell(GtkWidget *widget, gpointer data)
 
 void setup_mode(GtkWidget *widget, gint mode)
 {
-	gint size_table[3][3] = {{ 10, 10, 10 }, {20, 20, 50}, {35, 35, 170}};
+	gint size_table[3][3] = {{ 8, 8, 10 }, {16, 16, 40}, {30, 16, 99}};
 	gint x,y,m,s;
 
 	if (mode == 3) {
@@ -232,7 +231,6 @@ void do_setup(GtkWidget *widget, gpointer data)
 	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
         nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
         minesize = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
-        outrelease = outsetup;
 	fsize  = fsc;
 
 	verify_ranges ();
@@ -253,7 +251,6 @@ void do_setup(GtkWidget *widget, gpointer data)
 	gnome_config_set_int("/gnomine/geometry/nmines", nmines);
 	gnome_config_set_int("/gnomine/geometry/minesize", minesize);
 	gnome_config_set_int("/gnomine/geometry/mode",   fsize);
-	gnome_config_set_int("/gnomine/general/outrelease", outrelease);
 	gnome_config_sync();
 }
 
@@ -283,11 +280,6 @@ void size_radio_callback(GtkWidget *widget, gpointer data)
 	gtk_widget_set_sensitive(cframe, fsc == 3);
 }
 
-void outrelease_callback(GtkWidget *widget, gpointer data)
-{
-    outsetup = !outsetup;
-}
-
 void setup_game(GtkWidget *widget, gpointer data)
 {
         GtkWidget *all_boxes;
@@ -313,13 +305,6 @@ void setup_game(GtkWidget *widget, gpointer data)
 	all_boxes = gtk_vbox_new(FALSE, 5);
 	gtk_container_add(GTK_CONTAINER(setupdialog), all_boxes);
 
-	button = gtk_check_button_new_with_label(_("off square button releases"));
-	if (outrelease) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(outrelease_callback),
-			   (gpointer) 0);
-	gtk_box_pack_start(GTK_BOX(all_boxes), button, TRUE, TRUE, 0);
-        gtk_widget_show(button);
-        
         cframe = gtk_frame_new(_("Custom size"));
 
 	frame = gtk_frame_new(_("Field size"));
@@ -443,7 +428,6 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(all_boxes);
 
         fsc = fsize;
-        outsetup = outrelease;
 
 	gtk_widget_show(setupdialog);
 }
@@ -523,8 +507,6 @@ save_state (GnomeClient        *client,
 	argv[i++] = nstr (xpos);
 	argv[i++] = "-b";
 	argv[i++] = nstr (ypos);
-	argv[i++] = "-o";
-	argv[i++] = nstr (outrelease);
 
 	gnome_client_set_restart_command (client, i, argv);
 	/* i.e. clone_command = restart_command - '--sm-client-id' */
@@ -552,9 +534,6 @@ static int nmines_set;
 
 /* Whether fsize has been set.  */
 static int fsize_set;
-
-/* Whether outrelease has been set.  */
-static int outrelease_set;
 
 /* Some positioning info.  */
 static int set_pos;
@@ -593,20 +572,16 @@ parse_an_arg (int key, char *arg, struct argp_state *state)
 		set_pos |= 2;
 		ypos = atoi (arg);
 		break;
-	case 'o':
-                outrelease_set = 1;
-                outrelease = atoi (arg);;
-		break;
 	case ARGP_KEY_SUCCESS:
 		if (set_pos == 3)
 			gtk_widget_set_uposition (window, xpos, ypos);
 		
 		if (! x_set)
-			xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
+			xsize  = gnome_config_get_int("/gnomine/geometry/xsize=16");
 		if (! y_set)
-			ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
+			ysize  = gnome_config_get_int("/gnomine/geometry/ysize=16");
 		if (! nmines_set)
-			nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
+			nmines = gnome_config_get_int("/gnomine/geometry/nmines=40");
 		if (! minesize_set){
 			minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
 			if (minesize < 0)
@@ -614,8 +589,6 @@ parse_an_arg (int key, char *arg, struct argp_state *state)
 		}
 		if (! fsize_set)
 			fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
-		if (! outrelease_set)
-			outrelease  = gnome_config_get_int("/gnomine/general/outrelease=1");
 		break;
 		
 	default:
