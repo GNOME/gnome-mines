@@ -406,8 +406,7 @@ GnomeUIInfo mainmenu[] = {
 	{GNOME_APP_UI_SUBTREE, N_("Help"), NULL, helpmenu, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
-	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
-	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
+	{GNOME_APP_UI_ENDOFINFO}
 };
 
 /* A little helper function.  */
@@ -567,9 +566,11 @@ int main(int argc, char *argv[])
 	}
 #endif /* ENABLE_NLS */
 
-	window = gnome_app_new("gnomine", _("Gnome mines"));
+        window = gnome_app_new("gnomine", _("Gnome mines"));
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
+        gtk_menu_item_right_justify(GTK_MENU_ITEM(mainmenu[1].widget));
+
 	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
