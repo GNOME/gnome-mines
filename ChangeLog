@@ -1,3 +1,7 @@
+2001-07-05  Christian Rose  <menthos@menthos.com>
+
+	* gnomine.desktop: Modified Swedish entries.
+
 2001-06-23  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* gnomine.c: (focus_out_cb), (resume_game_cb): New functions.
