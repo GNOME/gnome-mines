@@ -269,8 +269,8 @@ void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
 		y2 = mfield->ysize;
 	}
 	
-	for (x = x1; x<=x2; x++) {
-		for (y = y1; y<=y2; y++) {
+	for (x = x1; x<x2; x++) {
+		for (y = y1; y<y2; y++) {
 			gtk_mine_draw(mfield, x, y);
 		}
 	}
