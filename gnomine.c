@@ -855,16 +855,13 @@ main (int argc, char *argv[])
 	box = gtk_vbox_new (FALSE, 0);
 	gtk_table_attach_defaults (GTK_TABLE (button_table), box, 1, 2, 1, 2);
 
-#if 0
-	mf_frame = gtk_mf_frame_new ();
-	mfield = GTK_MF_FRAME (mf_frame)->minefield;
-#else
 	mfield = gtk_minefield_new ();
+
 	/* It doesn't really matter what this widget is as long as it's a
 	 * container. */
 	mf_frame = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
 	gtk_container_add (GTK_CONTAINER (mf_frame), mfield);
-#endif
+
 	gtk_box_pack_start (GTK_BOX (box), mf_frame, TRUE, TRUE, 0);
 
 	ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
