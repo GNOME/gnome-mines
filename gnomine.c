@@ -176,10 +176,138 @@ update_score_state (void)
 	}
 }
 
+static void 
+fill_score_list (GtkListStore *list, gint level)
+{
+	int i,n;
+	GtkTreeIter iter;
+	gchar **names = NULL;
+	gfloat *scores = NULL;
+	time_t *scoretimes = NULL;
+	gchar **name;
+	gfloat *score;
+	gchar * ss;
+
+	gtk_list_store_clear (list);
+
+	n = gnome_score_get_notable ("gnomine", fsize2names[level], &names, 
+				     &scores, &scoretimes);
+
+	i = 1;
+	name = names;
+	score = scores;
+	while (n--) {
+		/* Translators: this is for a minutes, seconds time display. */
+		ss = g_strdup_printf (_("%dm %ds"), (int)(100*(*score))/60, 
+				      (int)(100*(*score))%60);
+		gtk_list_store_append (list, &iter);
+		gtk_list_store_set (list, &iter, 0, *name, 1, ss, -1);
+		g_free (ss);
+		name++;
+		score++;
+	}
+	
+	g_free (names);
+	g_free (scores);
+	g_free (scoretimes);
+}
+
+static void 
+change_score_display (GtkWidget *widget, GtkListStore *list)
+{
+	fill_score_list (list, 
+			 gtk_combo_box_get_active (GTK_COMBO_BOX (widget)));
+}
+
 static void
 show_scores (gchar *level, guint pos)
 {
-	gnome_scores_display (_("GNOME Mines"), "gnomine", level, pos);
+	int i, n;
+	GtkWidget *dialog;
+	GtkWidget *hbox;
+	GtkWidget *vbox;
+	GtkWidget *combo;
+	GtkWidget *scroll;
+	GtkWidget *listview;
+	GtkTreeViewColumn *column;
+        GtkTreeSelection * select;
+        GtkListStore *list;
+	GtkCellRenderer *renderer;
+	GtkTreePath * path;
+	GtkWidget * label;
+
+	dialog = gtk_dialog_new_with_buttons (_("Mines Best Times"),
+					      GTK_WINDOW (window), 
+					      GTK_DIALOG_DESTROY_WITH_PARENT,
+					      GTK_STOCK_CLOSE, GTK_RESPONSE_ACCEPT, NULL);
+
+	vbox = gtk_vbox_new (FALSE, 5);
+	gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), vbox);
+
+	hbox = gtk_hbox_new (FALSE, 5);
+	gtk_box_pack_start_defaults (GTK_BOX (vbox), hbox);
+
+	label = gtk_label_new (_("Field Size"));
+	gtk_box_pack_start_defaults (GTK_BOX (hbox), label);	
+
+	combo = gtk_combo_box_new_text ();
+	gtk_box_pack_start_defaults (GTK_BOX (hbox), combo);
+	n = 0;
+	for (i=0; i<4; i++) {
+		if (g_utf8_collate (level, fsize2names[i]) == 0)
+			n = i;
+		gtk_combo_box_append_text (GTK_COMBO_BOX (combo),
+					   _(fsize2names[i]));
+	}
+	gtk_combo_box_set_active (GTK_COMBO_BOX (combo), n);
+
+	scroll = gtk_scrolled_window_new (NULL, NULL);
+	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll),
+					GTK_POLICY_AUTOMATIC,
+					GTK_POLICY_AUTOMATIC);
+	gtk_widget_set_size_request (scroll, 250, 265);
+	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll),
+					      GTK_SHADOW_ETCHED_IN);
+	gtk_box_pack_start_defaults (GTK_BOX (vbox), scroll);
+
+	list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
+
+	g_signal_connect (G_OBJECT (combo), "changed", 
+			  G_CALLBACK (change_score_display), list);
+
+	fill_score_list (list, n);
+
+        listview = gtk_tree_view_new_with_model (GTK_TREE_MODEL (list));
+	renderer = gtk_cell_renderer_text_new ();
+        column = gtk_tree_view_column_new_with_attributes (_("Name"),
+                                                           renderer,
+                                                           "text", 0,
+                                                           NULL);
+        gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
+                                     GTK_TREE_VIEW_COLUMN (column));
+	renderer = gtk_cell_renderer_text_new ();
+        column = gtk_tree_view_column_new_with_attributes (_("Time"),
+                                                           renderer,
+                                                           "text", 1,
+                                                           NULL);
+	g_object_set (G_OBJECT (renderer), "xalign", 1.0, NULL);
+        gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
+                                     GTK_TREE_VIEW_COLUMN (column));
+
+        select = gtk_tree_view_get_selection (GTK_TREE_VIEW (listview));
+	if (pos > 0) {
+		path = gtk_tree_path_new_from_indices (pos-1, -1);
+		gtk_tree_selection_select_path (select, path);
+	}
+	
+                                      
+	gtk_container_add (GTK_CONTAINER (scroll), listview);
+
+	gtk_widget_show_all (dialog);
+
+	gtk_dialog_run (GTK_DIALOG (dialog));
+
+	gtk_widget_destroy (dialog);
 }
 
 static void
