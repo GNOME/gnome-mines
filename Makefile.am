@@ -56,3 +56,5 @@ install-data-local:
 	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Custom.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Custom.scores	
 	-chgrp games $(DESTDIR)$(bindir)/gnomine && chmod 2555 $(DESTDIR)$(bindir)/gnomine
+
+CLEANFILES = $(Games_DATA) $(schema_DATA)
