@@ -69,6 +69,7 @@ char *fsize2names[] = {
 	N_("Tiny"),
 	N_("Medium"),
 	N_("Biiiig"),
+	N_("Custom"),
 };
 
 void show_face(GtkWidget *pm)
@@ -113,10 +114,8 @@ void top_ten(GtkWidget *widget, gpointer data)
 {
 	gchar buf[64];
 
-	if(fsize<3)
+	if(fsize<4)
 		strncpy(buf, fsize2names[fsize], sizeof(buf));
-	else
-		g_snprintf(buf, sizeof(buf), "%dx%dx%d",xsize,ysize,nmines);
 
 	show_scores(buf, 0);
 }
@@ -157,18 +156,20 @@ void win_game(GtkWidget *widget, gpointer data)
         int pos;
         gchar buf[64];
 
-        show_face(pm_win);
         gtk_clock_stop(GTK_CLOCK(clk));
+        show_face(pm_win);
 
-	score = (gfloat) (GTK_CLOCK(clk)->stopped / 60) + 
-		(gfloat) (GTK_CLOCK(clk)->stopped % 60) / 100; 
+	if(fsize<3) 
+	    score = (gfloat) (GTK_CLOCK(clk)->stopped / 60) + 
+		    (gfloat) (GTK_CLOCK(clk)->stopped % 60) / 100;
 
-	if(fsize<3)
-		strncpy(buf, fsize2names[fsize], sizeof(buf));
-	else
-		g_snprintf(buf, sizeof(buf), "%dx%dx%d",xsize,ysize,nmines);
+	else  
+	    score = ((nmines * 100) / (xsize * ysize)) /
+		    (gfloat) (GTK_CLOCK(clk)->stopped); 
 
-	pos = gnome_score_log(score, buf, FALSE);
+        strncpy(buf, fsize2names[fsize], sizeof(buf));
+	pos = gnome_score_log(score, buf, TRUE);
+	
 	show_scores(buf, pos);
 }
 

@@ -1,3 +1,8 @@
+1998-05-24 Kjartan Maraas <kmaraas@fib.hl.no>
+
+	* Makefile.am: New scorefiles gnomine.[Tiny,Medium,Biiiig].scores
+	* gnomine.c:   Made scores work in all modes.
+	
 1998-05-17 Timo Sirainen <a@sicom.fi>
 
 	* minefield.c: Marking two mines fast resulted as doubleclick and

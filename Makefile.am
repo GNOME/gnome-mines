@@ -26,7 +26,16 @@ Games_DATA = gnomine.desktop
 
 install-data-local:
 	-$(mkinstalldirs) $(scoredir)
-	-touch $(scoredir)/gnomine.scores
-	-chown games.games $(scoredir)/gnomine.scores
-	-chmod 664 $(scoredir)/gnomine.scores
+	-touch $(scoredir)/gnomine.Tiny.scores
+	-chown games.games $(scoredir)/gnomine.Tiny.scores
+	-chmod 664 $(scoredir)/gnomine.Tiny.scores	
+	-touch $(scoredir)/gnomine.Medium.scores
+	-chown games.games $(scoredir)/gnomine.Medium.scores
+	-chmod 664 $(scoredir)/gnomine.Medium.scores	
+	-touch $(scoredir)/gnomine.Biiiig.scores
+	-chown games.games $(scoredir)/gnomine.Biiiig.scores
+	-chmod 664 $(scoredir)/gnomine.Biiiig.scores	
+	-touch $(scoredir)/gnomine.Custom.scores
+	-chown games.games $(scoredir)/gnomine.Custom.scores
+	-chmod 664 $(scoredir)/gnomine.Custom.scores	
 	-chgrp games $(bindir)/gnomine && chmod 2111 $(bindir)/gnomine
