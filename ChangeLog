@@ -1,3 +1,8 @@
+2005-02-02  Richard Hoelscher  <rah@rahga.com>
+
+	* gnomine.c (create_preferences): Set mines spinbutton range here,
+	as it only relied on x/ysize spinbutton cb. Remove harmless FIXME.
+
 2005-01-10  Richard Hoelscher  <rah@rahga.com>
 
 	* minefield.c (_setup_sign) (gtk_minefield_setup_signs): 

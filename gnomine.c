@@ -625,13 +625,14 @@ create_preferences (void)
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
 	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
-	/* TODO: fix this when gconfised correctly */
+	
 	mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX*YSIZE_MAX, 1);
 	g_signal_connect (GTK_OBJECT (mentry), "value-changed",
 			GTK_SIGNAL_FUNC (nmines_spin_cb), NULL);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), nmines);
 	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
 			| GTK_FILL, 0, 0);
+	fix_nmines (xsize, ysize);
 
 	label2 = gtk_label_new (_("Horizontal:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
