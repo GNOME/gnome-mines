@@ -1,3 +1,8 @@
+2003-08-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (install-data-local): Make a little more compatible
+	with automake-1.7.
+
 2003-07-27  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_init): Made the assignments from
