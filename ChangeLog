@@ -1,3 +1,9 @@
+2001-06-06  Juan Pablo Mendoza Mendoza <pablo_juan@yahoo.com>
+
+	* minefield.c (gtk_minefield_button_press), 
+	  (gtk_minefield_button_release): If we get button 1 click + shift
+	  do a "multi press". Implent "bug" #50327.
+	
 2001-06-03  Juan Pablo Mendoza Mendoza <pablo_juan@yahoo.com>
 
 	* gnomine.c (main): Don't try to free the gnome_master_client to
