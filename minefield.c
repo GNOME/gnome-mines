@@ -115,10 +115,8 @@ static void gtk_minefield_realize(GtkWidget *widget)
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
         gtk_minefield_setup_signs(widget);
-#if 0
-        mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
-					    gtk_widget_get_colormap (widget));
-#endif
+
+	mfield->cmap = gtk_widget_get_colormap (widget);
 }
 
 static void gtk_minefield_unrealize (GtkWidget *widget)
@@ -353,9 +351,12 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			color.pixel = 0; /* required! */
 
 			n = 0;
+			
+			gdk_rgb_find_color (mfield->cmap, &color);
+
 			#if 0
 			gdk_color_context_get_pixels (mfield->cc,
-						      &color.red, &color.green, &color.blue,
+						      &color.red,#color.green, &color.blue,
 						      1,
 						      &color.pixel,
 						      &n);

@@ -1,3 +1,7 @@
+2001-12-08  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* minefield.c: Paint again the numbers with pretty colors.
+
 2001-11-24  Kevin Vandersloot <kfv101@psu.edu>
 
 	* gnomine.c, clock.[c,h]: bring back the clock
