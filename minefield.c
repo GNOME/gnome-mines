@@ -66,6 +66,7 @@ enum {
 	LOOK_SIGNAL,
 	UNLOOK_SIGNAL,
 	WIN_SIGNAL,
+	HINT_SIGNAL,
 	LAST_SIGNAL
 };
 
@@ -979,6 +980,16 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 			       g_cclosure_marshal_VOID__VOID,
 			       G_TYPE_NONE,
 			       0);
+	minefield_signals[HINT_SIGNAL] =
+		g_signal_new("hint-used",
+			       G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, hint_used),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
+			       0);
+
 }
 
 static void gtk_minefield_init (GtkMineField *mfield)
@@ -1171,6 +1182,12 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 
 	x = i % mfield->xsize;
 	y = i / mfield->xsize;
+
+	/* Makes sure that the program knows about the successful
+	 * hint before a possible win. */
+        g_signal_emit(GTK_OBJECT(mfield),
+                        minefield_signals[HINT_SIGNAL],
+			0, NULL);
 
 	gtk_minefield_show (mfield, x, y);
 	gtk_mine_draw (mfield, x, y);

@@ -1,3 +1,12 @@
+2004-03-06  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c:
+	* minefield.c:	
+	* minefield.h: Add a "hint_used" signal to the minefield widget so
+	that we can adjust the score before a potential win. This is the
+	fix for bug #136207 which does the least damage to the program
+	model.
+
 2004-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Explicitly use cell_idx rather than the explicit

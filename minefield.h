@@ -94,6 +94,7 @@ struct _GtkMineFieldClass
 	void (*look)          (GtkMineField *mfield);
 	void (*unlook)        (GtkMineField *mfield);
 	void (*win)           (GtkMineField *mfield);
+        void (*hint_used)     (GtkMineField *mfield);
 };
   
 #define MINESIZE_MIN 12

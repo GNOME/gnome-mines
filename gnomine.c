@@ -230,6 +230,14 @@ new_game (GtkWidget *widget, gpointer data)
 	gtk_widget_show (mf_frame); 
 }
 
+/* Add a penalty for a successful hint. */
+static void
+hint_used (GtkWidget *widget, gpointer data)
+{
+	/* There is a ten second penalty for accepting a hint. */
+	games_clock_add_seconds (GAMES_CLOCK (clk), 10);
+}
+
 static void
 hint (GtkWidget *widget, gpointer data)
 {
@@ -239,11 +247,9 @@ hint (GtkWidget *widget, gpointer data)
 	
 	result = gtk_minefield_hint (GTK_MINEFIELD (mfield));
 
-	if (result == MINEFIELD_HINT_ACCEPTED) {
-		/* There is a ten second penalty for accepting a hint. */
-		games_clock_add_seconds (GAMES_CLOCK (clk), 10);
+	/* Successful hints are handled by the callback. */
+	if (result == MINEFIELD_HINT_ACCEPTED)
 		return;
-	}
 
 	if (result == MINEFIELD_HINT_NO_GAME)
 		message = _("Click a square, any square");
@@ -922,6 +928,8 @@ main (int argc, char *argv[])
 			  G_CALLBACK (look_cell), NULL);
 	g_signal_connect (G_OBJECT (mfield), "unlook",
 			  G_CALLBACK (unlook_cell), NULL);
+	g_signal_connect (G_OBJECT (mfield), "hint_used",
+			  G_CALLBACK (hint_used), NULL);
 
 	gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE,
 			    0);
