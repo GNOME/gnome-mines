@@ -235,23 +235,34 @@ show_scores (gchar *level, guint pos)
 	GtkCellRenderer *renderer;
 	GtkTreePath * path;
 	GtkWidget * label;
+	gchar *lstr;
+	GtkWidget * button;
 
-	dialog = gtk_dialog_new_with_buttons (_("Mines Best Times"),
+	dialog = gtk_dialog_new_with_buttons (_("GNOME Mines Scores"),
 					      GTK_WINDOW (window), 
-					      GTK_DIALOG_DESTROY_WITH_PARENT,
-					      GTK_STOCK_CLOSE, GTK_RESPONSE_ACCEPT, NULL);
+					      GTK_DIALOG_DESTROY_WITH_PARENT |
+					      GTK_DIALOG_NO_SEPARATOR,
+					      NULL);
+	/* FIXME: There has to be an easier way to force the default
+	 * widget. */
+	button = gtk_dialog_add_button (GTK_DIALOG (dialog), 
+					GTK_STOCK_CLOSE, GTK_RESPONSE_ACCEPT);
+	gtk_widget_grab_focus (button);
 
-	vbox = gtk_vbox_new (FALSE, 5);
+	vbox = gtk_vbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), vbox);
 
 	hbox = gtk_hbox_new (FALSE, 5);
-	gtk_box_pack_start_defaults (GTK_BOX (vbox), hbox);
+	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 5);
 
-	label = gtk_label_new (_("Field Size"));
-	gtk_box_pack_start_defaults (GTK_BOX (hbox), label);	
+	lstr = g_strdup_printf ("<b>%s</b>", _("Size:"));
+	label = gtk_label_new (lstr);
+	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
+	g_free (lstr);
+	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);	
 
 	combo = gtk_combo_box_new_text ();
-	gtk_box_pack_start_defaults (GTK_BOX (hbox), combo);
+	gtk_box_pack_start (GTK_BOX (hbox), combo, TRUE, TRUE, 5);
 	n = 0;
 	for (i=0; i<4; i++) {
 		if (g_utf8_collate (level, fsize2names[i]) == 0)
@@ -268,7 +279,7 @@ show_scores (gchar *level, guint pos)
 	gtk_widget_set_size_request (scroll, 250, 265);
 	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll),
 					      GTK_SHADOW_ETCHED_IN);
-	gtk_box_pack_start_defaults (GTK_BOX (vbox), scroll);
+	gtk_box_pack_start (GTK_BOX (vbox), scroll, TRUE, TRUE, 0);
 
 	list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
 
@@ -299,8 +310,7 @@ show_scores (gchar *level, guint pos)
 		path = gtk_tree_path_new_from_indices (pos-1, -1);
 		gtk_tree_selection_select_path (select, path);
 	}
-	
-                                      
+	                                      
 	gtk_container_add (GTK_CONTAINER (scroll), listview);
 
 	gtk_widget_show_all (dialog);

@@ -1,3 +1,11 @@
+2004-05-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (show_scores): Further tweaks to the scores dialog.
+
+2004-05-09  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Implemented the new scores dialog.
+
 2004-04-26  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (about): Fix up the credits to include Richard's and
