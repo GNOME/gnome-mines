@@ -56,7 +56,7 @@ struct _GtkMineField {
         sign flag;
         sign mine;
         GdkFont   *font;
-	GdkColorContext *cc;
+	//GdkColorContext *cc;
 	struct {
 		char text[2];
 		gint dx, dy;

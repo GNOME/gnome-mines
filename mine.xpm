@@ -1,5 +1,5 @@
 /* XPM */
-static char *mine_xpm[] = {
+static const char *mine_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "12 12 3 1",
 "  c Black",

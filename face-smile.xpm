@@ -1,5 +1,5 @@
 /* XPM */
-static char *face_smile_xpm[] = {
+static const char *face_smile_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 245 2",
 "   c None",

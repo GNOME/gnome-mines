@@ -58,7 +58,7 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 	return -1;
 }
 
-static void _setup_sign (sign *signp, char **data, guint minesize)
+static void _setup_sign (sign *signp, const char **data, guint minesize)
 {
 	GdkPixbuf *image;
 
@@ -115,9 +115,10 @@ static void gtk_minefield_realize(GtkWidget *widget)
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
         gtk_minefield_setup_signs(widget);
-
+#if 0
         mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
 					    gtk_widget_get_colormap (widget));
+#endif
 }
 
 static void gtk_minefield_unrealize (GtkWidget *widget)
@@ -128,10 +129,10 @@ static void gtk_minefield_unrealize (GtkWidget *widget)
 	g_return_if_fail (GTK_IS_MINEFIELD (widget));
 
 	mfield = GTK_MINEFIELD (widget);
-
+#if 0
 	gdk_color_context_free (mfield->cc);
 	mfield->cc = NULL;
-
+#endif
 	if (GTK_WIDGET_CLASS (parent_class)->unrealize)
 		(* GTK_WIDGET_CLASS (parent_class)->unrealize) (widget);
 }
@@ -334,8 +335,9 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 		mfield->font = gdk_font_load(fontname);
 	  
 	            /* The font used to be "-misc-fixed-bold-r-normal--13-*-*-*-*-*-*" */
-	  
+#if 0	  
                 if (!mfield->font) mfield->font = widget->style->font;
+#endif
 		for (i=0; i<9; i++) {
 			mfield->numstr[i].text[0] = i+'0';
 			mfield->numstr[i].text[1] = '\0';
@@ -351,12 +353,13 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			color.pixel = 0; /* required! */
 
 			n = 0;
+			#if 0
 			gdk_color_context_get_pixels (mfield->cc,
 						      &color.red, &color.green, &color.blue,
 						      1,
 						      &color.pixel,
 						      &n);
-
+			#endif
 			gdk_gc_set_foreground(mfield->numstr[i].gc, &color);
 		}
 	}
@@ -723,7 +726,7 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	minefield_signals[MARKS_CHANGED_SIGNAL] =
 		gtk_signal_new("marks_changed",
 			       GTK_RUN_FIRST,
-			       object_class->type,
+			       GTK_CLASS_TYPE (object_class),
 			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, marks_changed),
 			       gtk_signal_default_marshaller,
 			       GTK_TYPE_NONE,
@@ -731,7 +734,7 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	minefield_signals[EXPLODE_SIGNAL] =
 		gtk_signal_new("explode",
 			       GTK_RUN_FIRST,
-			       object_class->type,
+			       GTK_CLASS_TYPE (object_class),
 			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, explode),
 			       gtk_signal_default_marshaller,
 			       GTK_TYPE_NONE,
@@ -739,7 +742,7 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	minefield_signals[LOOK_SIGNAL] =
 		gtk_signal_new("look",
 			       GTK_RUN_FIRST,
-			       object_class->type,
+			       GTK_CLASS_TYPE (object_class),
 			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, look),
 			       gtk_signal_default_marshaller,
 			       GTK_TYPE_NONE,
@@ -747,7 +750,7 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	minefield_signals[UNLOOK_SIGNAL] =
 		gtk_signal_new("unlook",
 			       GTK_RUN_FIRST,
-			       object_class->type,
+			       GTK_CLASS_TYPE (object_class),
 			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, unlook),
 			       gtk_signal_default_marshaller,
 			       GTK_TYPE_NONE,
@@ -755,23 +758,28 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	minefield_signals[WIN_SIGNAL] =
 		gtk_signal_new("win",
 			       GTK_RUN_FIRST,
-			       object_class->type,
+			       GTK_CLASS_TYPE (object_class),
 			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, win),
 			       gtk_signal_default_marshaller,
 			       GTK_TYPE_NONE,
 			       0);
-
+#if 0
 	gtk_object_class_add_signals(object_class, minefield_signals, LAST_SIGNAL);
+#endif
 }
 
 static void gtk_minefield_init (GtkMineField *mfield)
 {
 #ifndef GTK_HAVE_FEATURES_1_1_4
+  #if 0
         GTK_WIDGET_SET_FLAGS (mfield, GTK_BASIC);
+  #endif
 #endif
         mfield->xsize = 0;
         mfield->ysize = 0;
+#if 0
 	mfield->cc = NULL;
+#endif
 
         GTK_WIDGET (mfield)->requisition.width = mfield->minesize;
         GTK_WIDGET (mfield)->requisition.height = mfield->minesize;
@@ -816,8 +824,9 @@ guint gtk_minefield_get_type ()
                                 sizeof (GtkMineFieldClass),
                                 (GtkClassInitFunc) gtk_minefield_class_init,
                                 (GtkObjectInitFunc) gtk_minefield_init,
-                                (GtkArgSetFunc) NULL,
-                                (GtkArgGetFunc) NULL,
+                                /* reserved_1 */ NULL,
+        			/* reserved_2 */ NULL,
+        			(GtkClassInitFunc) NULL,
                         };
                         
                         minefield_type = gtk_type_unique (gtk_widget_get_type (), &minefield_info);

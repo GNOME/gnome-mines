@@ -3,11 +3,10 @@ Gamesdir = $(datadir)/gnome/apps/Games
 
 SUBDIRS = help
 
-INCLUDES = 			\
+INCLUDES = $(GNOME_GAMES_CFLAGS)		\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
-	-I$(includedir)				 \
-	$(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)
-
+	-I$(includedir)	
+	
 bin_PROGRAMS = gnomine
 
 gnomine_SOURCES =	\
@@ -16,9 +15,7 @@ gnomine_SOURCES =	\
 	minefield.c
 
 gnomine_LDADD = \
-	$(GNOME_LIBDIR) \
-	$(GNOMEUI_LIBS)	\
-	$(GDK_PIXBUF_LIBS) \
+	$(GNOME_GAMES_LIBS) \
 	$(INTLLIBS)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \

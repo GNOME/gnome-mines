@@ -1,5 +1,5 @@
 /* XPM */
-static char *face_win_xpm[] = {
+static const char *face_win_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 234 2",
 "   c None",

@@ -1,5 +1,5 @@
 /* XPM */
-static char *noname[] = {
+static const char *noname[] = {
 /* width height ncolors chars_per_pixel */
 "11 11 16 1",
 /* colors */

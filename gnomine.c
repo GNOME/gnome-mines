@@ -90,8 +90,10 @@ void top_ten(GtkWidget *widget, gpointer data)
 
 void new_game(GtkWidget *widget, gpointer data)
 {
+#if 0
         gtk_clock_stop(GTK_CLOCK(clk));
 	gtk_clock_set_seconds(GTK_CLOCK(clk), 0);
+#endif
         show_face(pm_smile);
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	gtk_widget_draw(mfield, NULL);
@@ -103,31 +105,40 @@ void new_game(GtkWidget *widget, gpointer data)
 
 void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
+#if 0
 	if (GTK_CLOCK(clk)->timer_id == -1)
 		return;
-
+#endif
 	gtk_widget_hide (mfield);
 	gtk_widget_show (rbutton);
+#if 0
 	gtk_clock_stop(GTK_CLOCK(clk)); 
+#endif
 }
 
-void resume_game_cb (GtkWidget *widget, gpointer data)
+void resume_game_cb (GtkButton *widget, gpointer data)
 {
 	gtk_widget_hide (rbutton);
 	gtk_widget_show (mfield);
+#if 0
 	gtk_clock_start(GTK_CLOCK(clk));
+#endif
 }
 
 void marks_changed(GtkWidget *widget, gpointer data)
 {
         set_flabel(GTK_MINEFIELD(widget));
+#if 0
 	gtk_clock_start(GTK_CLOCK(clk));
+#endif
 }
 
 void lose_game(GtkWidget *widget, gpointer data)
 {
         show_face(pm_sad);
+#if 0
         gtk_clock_stop(GTK_CLOCK(clk));
+#endif
 }
 
 void win_game(GtkWidget *widget, gpointer data)
@@ -136,20 +147,29 @@ void win_game(GtkWidget *widget, gpointer data)
         int pos;
         gchar buf[64];
 
+#if 0
         gtk_clock_stop(GTK_CLOCK(clk));
+#endif
         show_face(pm_win);
 
 	if(fsize<3) {
+#if 0
 	    score = (gfloat) (GTK_CLOCK(clk)->stopped / 60) + 
 		    (gfloat) (GTK_CLOCK(clk)->stopped % 60) / 100;
-
+#else
+	    score = 0;
+#endif
+	    
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, FALSE);
 
 	} else {
+#if 0
 	    score = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (GTK_CLOCK(clk)->stopped); 
-
+#else
+	    score = 100;
+#endif
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, TRUE);
 	}
@@ -159,7 +179,9 @@ void win_game(GtkWidget *widget, gpointer data)
 void look_cell(GtkWidget *widget, gpointer data)
 {
         show_face(pm_worried);
+#if 0
         gtk_clock_start(GTK_CLOCK(clk));
+#endif
 }
 
 void unlook_cell(GtkWidget *widget, gpointer data)
@@ -214,7 +236,11 @@ about(GtkWidget *widget, gpointer data)
 		N_("Score: HoraPe"),
 		NULL
 	};
-
+	const gchar *documenters[] = {
+                NULL
+        };
+	const gchar *translator_credits = _("");
+	
 	if (about) {
 		gdk_window_raise (about->window);
 		gdk_window_show (about->window);
@@ -230,8 +256,10 @@ about(GtkWidget *widget, gpointer data)
 
         about = gnome_about_new (_("Gnome Mines"), VERSION,
 				 _("(C) 1997-1999 the Free Software Foundation"),
-				 (const char **)authors,
 				 _("Minesweeper clone"),
+				 (const char **)authors,
+				 (const char **)documenters,
+                                 (const char *)translator_credits,
 				 NULL);
 	gtk_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
 			(gtk_widget_destroyed), &about);
@@ -256,10 +284,11 @@ void size_radio_callback(GtkWidget *widget, gpointer data)
 
 static void help_cb (GtkWidget * widget, gpointer data)
 {
-
+#if 0
   GnomeHelpMenuEntry help_entry = { "gnome-mines", "menubar.html" };
 
   gnome_help_display (NULL, &help_entry);
+#endif
 }
 
 static void apply_cb (GtkWidget *widget, gint pagenum, gpointer data)
@@ -457,14 +486,16 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 
         adj = gtk_adjustment_new(minesize, 2, 99, 1, 5, 10);
 	sentry = gtk_spin_button_new(GTK_ADJUSTMENT(adj), 10, 0);
+#if 0	
         gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(sentry),
 					  GTK_UPDATE_ALWAYS
-#ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+ ifndef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
 					  | GTK_UPDATE_SNAP_TO_TICKS
-#endif
+ endif
 					  );
-#ifdef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
+ ifdef HAVE_GTK_SPIN_BUTTON_SET_SNAP_TO_TICKS
 	gtk_spin_button_set_snap_to_ticks(GTK_SPIN_BUTTON(sentry), 1);
+ endif
 #endif
 	gtk_signal_connect (GTK_OBJECT (adj), "value_changed", GTK_SIGNAL_FUNC
 			(prop_box_changed_callback), NULL);
@@ -711,7 +742,8 @@ main (int argc, char *argv[])
 	gtk_box_pack_start(GTK_BOX(box), mfield, FALSE, FALSE, 0);
 
 	rbutton = gtk_button_new_with_label ("Press to resume");
-	gtk_signal_connect (GTK_OBJECT(rbutton), "released", resume_game_cb, NULL);
+	gtk_signal_connect (GTK_OBJECT(rbutton), "released", 
+			    GTK_SIGNAL_FUNC (resume_game_cb), NULL);
 	gtk_box_pack_start(GTK_BOX(box), rbutton, TRUE, FALSE, 0);
 	gtk_widget_show (box);
 
@@ -747,12 +779,12 @@ main (int argc, char *argv[])
 	gtk_table_attach(GTK_TABLE(status_table), label,
 			 2, 3, 0, 1, 0, 0, 3, 3);
 	gtk_widget_show(label);
-
+#if 0
         clk = gtk_clock_new(GTK_CLOCK_INCREASING);
 	gtk_table_attach(GTK_TABLE(status_table), clk,
 		3, 4, 0, 1, 0, 0, 3 ,3);
 	gtk_widget_show(clk);
-	
+#endif	
         gtk_widget_show(status_table);
 	
 	gtk_widget_show(all_boxes);
