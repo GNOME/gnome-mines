@@ -17,7 +17,7 @@ gnomine_SOURCES =	\
 gnomine_LDADD = \
 	$(top_builddir)/libgnomeui/libgnomeui.la 	\
 	$(top_builddir)/libgnome/libgnome.la		\
-        $(X_LIBS)
+        $(X_LIBS) $(x_libs)
 
 EXTRA_DIST = flag.xpm mine.xpm gnomine.desktop README AUTHORS
 
