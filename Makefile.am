@@ -30,4 +30,5 @@ install-data-local:
 	-touch $(scoredir)/gnomine.scores
 	-chown games.games $(scoredir)/gnomine.scores
 	-chmod 664 $(scoredir)/gnomine.scores
-
+	-chgrp games $(bindir)/gnomine
+	-chmod 2111 $(bindir)/gnomine
