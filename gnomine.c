@@ -630,7 +630,6 @@ main (int argc, char *argv[])
 	  fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
 
 	verify_ranges ();
-        gdk_imlib_init ();
 
 #ifdef ENABLE_NLS 
 #define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
@@ -700,8 +699,8 @@ main (int argc, char *argv[])
 			  0, 0);
         gtk_widget_show (align);
   
-	gtk_widget_push_visual (gdk_imlib_get_visual ());
-	gtk_widget_push_colormap (gdk_imlib_get_colormap ());
+	gtk_widget_push_visual (gdk_rgb_get_visual ());
+	gtk_widget_push_colormap (gdk_rgb_get_cmap ());
 	gtk_widget_pop_colormap ();
 	gtk_widget_pop_visual ();
 

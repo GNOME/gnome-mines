@@ -6,7 +6,7 @@ SUBDIRS = help
 INCLUDES = 			\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
 	-I$(includedir)				 \
-	$(GNOME_INCLUDEDIR)
+	$(GNOME_INCLUDEDIR) $(GDK_PIXBUF_CFLAGS)
 
 bin_PROGRAMS = gnomine
 
@@ -18,6 +18,7 @@ gnomine_SOURCES =	\
 gnomine_LDADD = \
 	$(GNOME_LIBDIR) \
 	$(GNOMEUI_LIBS)	\
+	$(GDK_PIXBUF_LIBS) \
 	$(INTLLIBS)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \

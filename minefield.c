@@ -1,7 +1,7 @@
 
 #include <time.h>
 #include <gtk/gtk.h>
-#include <gdk_imlib.h>
+#include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gnome.h>
 #include "minefield.h"
 #include "flag.xpm"
@@ -60,15 +60,14 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, char **data, guint minesize)
 {
-	GdkImlibImage *image;
+	GdkPixbuf *image;
 
-        image = gdk_imlib_create_image_from_xpm_data(data);
-        gdk_imlib_render (image,
-			  5 * (minesize - 2) / 8,
-			  5 * (minesize - 2) / 8);
-        signp->pixmap = gdk_imlib_move_image (image);
-        signp->mask = gdk_imlib_move_mask (image);
-	gdk_imlib_destroy_image (image);
+	image = gdk_pixbuf_new_from_xpm_data ( (const char **) data);
+
+	gdk_pixbuf_render_pixmap_and_mask (image, &signp->pixmap,
+					   &signp->mask, 127);
+
+	gdk_pixbuf_unref (image);
         gdk_window_get_size(signp->pixmap, &(signp->width), &(signp->height));
 }
 

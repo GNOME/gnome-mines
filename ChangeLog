@@ -1,3 +1,8 @@
+2001-07-06  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+       * gnomine.c:
+       * minefield.c: So long Imlib, hello GdkPixbuf!
+
 2001-07-05  Christian Rose  <menthos@menthos.com>
 
 	* gnomine.desktop: Modified Swedish entries.
