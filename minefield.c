@@ -154,6 +154,8 @@ gtk_minefield_setup_numbers (GtkMineField *mfield)
 		PangoAttrList *alist;
 		PangoAttribute *attr;
 		PangoFontDescription *font_desc;
+		PangoRectangle extent;
+		guint64 font_size;
 
 		/* free an existing layout ... */
 		if (mfield->numstr[i].layout)
@@ -167,19 +169,6 @@ gtk_minefield_setup_numbers (GtkMineField *mfield)
 		/* set attributes for the layout */
 		alist = pango_attr_list_new();
 
-		/* do the font */
-		font_desc = pango_font_description_new();
-		pango_font_description_set_family(font_desc, "Mono 8");
-		pango_font_description_set_size(font_desc,
-						pixel_sz * PANGO_SCALE * 0.7);
-		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
-		attr = pango_attr_font_desc_new(font_desc);
-		pango_font_description_free(font_desc);
-
-		attr->start_index = 0;
-		attr->end_index = G_MAXUINT;
-		pango_attr_list_insert(alist, attr);
-
 		/* colour */
 		attr = pango_attr_foreground_new(num_colors[i][0],
 						 num_colors[i][1],
@@ -188,17 +177,46 @@ gtk_minefield_setup_numbers (GtkMineField *mfield)
 		attr->end_index = G_MAXUINT;
 		pango_attr_list_insert(alist, attr);
 
-		pango_layout_set_attributes(layout, alist);
-		pango_attr_list_unref(alist);
+		/* do the font */
+		font_desc = pango_font_description_new();
+		pango_font_description_set_family(font_desc, "Mono 8");
+		/* Guess at the correct font size. */
+		font_size = pixel_sz * PANGO_SCALE;
+		pango_font_description_set_size(font_desc, font_size);
+		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
+		attr = pango_attr_font_desc_new(font_desc);
 
-		pango_layout_set_width(layout, minesize);
+		attr->start_index = 0;
+		attr->end_index = G_MAXUINT;
+		pango_attr_list_insert(alist, attr);
+
+		pango_layout_set_attributes(layout, alist);
 		pango_layout_set_alignment(layout, PANGO_ALIGN_CENTER);
+
+		/* Now correct the size to fit. */
+		pango_layout_get_extents (layout, &extent, NULL);
+		font_size = font_size*0.7*pixel_sz*PANGO_SCALE/extent.height;
+		pango_font_description_set_size(font_desc, font_size);
+		attr = pango_attr_font_desc_new(font_desc);
+		attr->start_index = 0;
+		attr->end_index = G_MAXUINT;
+		pango_attr_list_insert(alist, attr);		
+		pango_layout_set_attributes(layout, alist);
+
+		pango_font_description_free(font_desc);
+		pango_attr_list_unref(alist);
 
 		mfield->numstr[i].layout = layout;
 
-		mfield->numstr[i].dx = minesize / 2;
-		/* Hack to fix the number being too far down */
-		mfield->numstr[i].dy = (minesize - pixel_sz) / 2 - 4;
+		pango_layout_get_extents (layout, NULL, &extent);
+
+		/* The +1 is necessary since these coordinates are
+		 * with respect to minesize, not pixel_sz (the
+		 * difference is 2). */
+		mfield->numstr[i].dx = (pixel_sz - extent.width/PANGO_SCALE)/2 
+			+ 1;
+		mfield->numstr[i].dy = (pixel_sz - extent.height/PANGO_SCALE)/2
+			+ 1;
 	}
 }
 

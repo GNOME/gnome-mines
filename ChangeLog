@@ -1,3 +1,9 @@
+2004-02-16  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_setup_numbers): Dynamically adjust
+	the font size to take care of whatever scaling pango is using
+	today. This is otherwise known as "an ugly hack".
+
 2004-02-11  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (about): translator_credits ->
