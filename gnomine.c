@@ -95,7 +95,7 @@ void new_game(GtkWidget *widget, gpointer data)
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
-//        gtk_clock_start(GTK_CLOCK(clk));
+/*        gtk_clock_start(GTK_CLOCK(clk)); */
 }
 
 void setupdialog_destroy(GtkWidget *widget, gint mode)
@@ -109,6 +109,7 @@ void setupdialog_destroy(GtkWidget *widget, gint mode)
 void marks_changed(GtkWidget *widget, gpointer data)
 {
         set_flabel(GTK_MINEFIELD(widget));
+	gtk_clock_start(GTK_CLOCK(clk));
 }
 
 void lose_game(GtkWidget *widget, gpointer data)
