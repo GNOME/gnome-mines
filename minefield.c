@@ -116,23 +116,23 @@ static void _setup_sign (sign *signp, const char *file, guint minesize)
 		signp->pixbuf = gdk_pixbuf_new_from_file (file, &error);
 		if (signp->pixbuf == NULL)
 			g_error (error->message);
-	}	
+	} else {
+		g_object_unref (signp->scaledpixbuf);
+	}
 
-        scaledimage = gdk_pixbuf_scale_simple (signp->pixbuf, minesize - 2, minesize - 2,
-                                               GDK_INTERP_BILINEAR);
-        
-	gdk_pixbuf_render_pixmap_and_mask (scaledimage, &signp->pixmap,
-					   &signp->mask, 127);
-
-        g_object_unref (scaledimage);
-	gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
+        signp->scaledpixbuf = gdk_pixbuf_scale_simple (signp->pixbuf, 
+						       minesize - 2, 
+						       minesize - 2,
+						       GDK_INTERP_BILINEAR);
+	signp->width = gdk_pixbuf_get_width (signp->scaledpixbuf);
+	signp->height = gdk_pixbuf_get_height (signp->scaledpixbuf);
 }
 
 static void gtk_minefield_setup_signs(GtkMineField *mfield)
 {
-        _setup_sign(&mfield->flag, DATADIR"/pixmaps/gnomine/flag.png", mfield->minesize);
-        _setup_sign(&mfield->mine, DATADIR"/pixmaps/gnomine/mine.png", mfield->minesize);
-        _setup_sign(&mfield->question, DATADIR"/pixmaps/gnomine/flag-question.png", mfield->minesize);
+        _setup_sign(&mfield->flag, DATADIR"/pixmaps/gnomine/flag.svg", mfield->minesize);
+        _setup_sign(&mfield->mine, DATADIR"/pixmaps/gnomine/mine.svg", mfield->minesize);
+        _setup_sign(&mfield->question, DATADIR"/pixmaps/gnomine/flag-question.svg", mfield->minesize);
 }
 
 static void
@@ -387,33 +387,20 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		}
 
 	} else if (mfield->mines[c].marked == MINE_QUESTION) {
-		gdk_gc_set_clip_mask(widget->style->black_gc,
-		                     mfield->question.mask);
-		gdk_gc_set_clip_origin(widget->style->black_gc,
-		                       x * minesize + (minesize - mfield->question.width) / 2, 
-		                       y * minesize + (minesize - mfield->question.height) / 2);
-		gdk_draw_drawable (widget->window,
-		                 widget->style->black_gc,
-		                 mfield->question.pixmap, 0, 0,
-		                 x * minesize + (minesize - mfield->question.width) / 2, 
-		                 y * minesize + (minesize - mfield->question.height) / 2,
-		                 -1, -1);
-		gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
-	  
-	} else if (mfield->mines[c].marked == MINE_MARKED) {
-		gdk_gc_set_clip_mask(widget->style->black_gc,
-					     mfield->flag.mask);
-		gdk_gc_set_clip_origin(widget->style->black_gc,
-					       x * minesize + (minesize - mfield->flag.width) / 2, 
-					       y * minesize + (minesize - mfield->flag.height) / 2);
-		gdk_draw_drawable (widget->window,
-				 widget->style->black_gc,
-		                 mfield->flag.pixmap, 0, 0,
-		                 x * minesize + (minesize - mfield->flag.width) / 2, 
+		gdk_draw_pixbuf (widget->window, NULL,
+				 mfield->question.scaledpixbuf, 0, 0, 
+				 x * minesize + (minesize - mfield->flag.width) / 2, 
 		                 y * minesize + (minesize - mfield->flag.height) / 2,
-		                 -1, -1);
-	        gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
-	  
+				 mfield->flag.width, mfield->flag.height,
+		                 GDK_RGB_DITHER_NORMAL, 0, 0);
+	} else if (mfield->mines[c].marked == MINE_MARKED) {
+		gdk_draw_pixbuf (widget->window, NULL,
+				 mfield->flag.scaledpixbuf, 0, 0, 
+				 x * minesize + (minesize - mfield->flag.width) / 2, 
+		                 y * minesize + (minesize - mfield->flag.height) / 2,
+				 mfield->flag.width, mfield->flag.height,
+		                 GDK_RGB_DITHER_NORMAL, 0, 0);
+
 		if (mfield->lose && mfield->mines[c].mined != 1) {
 			gdk_draw_line(widget->window,
 				      widget->style->black_gc,
@@ -442,24 +429,12 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		}
 
 	} else if (mfield->lose && mfield->mines[c].mined) {
-		if (mfield->mine.mask) {
-			gdk_gc_set_clip_mask(widget->style->black_gc,
-					     mfield->mine.mask);
-			gdk_gc_set_clip_origin(widget->style->black_gc,
-					       x*minesize + (minesize - mfield->mine.width) / 2, 
-					       y*minesize + (minesize - mfield->mine.height) / 2);
-		}
-
-	        gdk_draw_drawable (widget->window,
-				 widget->style->black_gc,
-		                 mfield->mine.pixmap, 0, 0,
-		                 x * minesize + (minesize - mfield->mine.width) / 2,
-		                 y * minesize + (minesize - mfield->mine.height) / 2,
-		                 -1, -1);
-		
-		if (mfield->flag.mask) {
-			gdk_gc_set_clip_mask(widget->style->black_gc, NULL);
-		}
+		gdk_draw_pixbuf (widget->window, NULL,
+				 mfield->mine.scaledpixbuf, 0, 0, 
+				 x * minesize + (minesize - mfield->flag.width) / 2, 
+		                 y * minesize + (minesize - mfield->flag.height) / 2,
+				 mfield->flag.width, mfield->flag.height,
+		                 GDK_RGB_DITHER_NORMAL, 0, 0);
 	}
 }
 

@@ -49,8 +49,7 @@ typedef struct _Sign sign;
 struct _Sign
     {
 	GdkPixbuf *pixbuf;
-	GdkPixmap *pixmap;
-	GdkBitmap *mask;
+        GdkPixbuf *scaledpixbuf;
       
         gint width;
         gint height;

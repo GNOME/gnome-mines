@@ -1,3 +1,21 @@
+2004-01-24  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am: 
+	* minefield.c:
+	* flag.svg:
+	* mine.svg:
+	* flag-question.svg:
+	* flag.png:
+	* mine.png:
+	* flag-question.png: Replace the png graphics with SVG ones courtesy
+	of Richard Hoelscher.
+
+	* minefield.h:	
+	* minefield.c: Moved over the using pixbufs for the flags and
+	mines. This means a lot more client-server traffic until we cache
+	the results in pixbufs. However the iamge quality improvement is
+	immense.
+
 2003-11-05  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (main): Teaks to the main window to make it more
