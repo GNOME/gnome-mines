@@ -303,8 +303,7 @@ about(GtkWidget *widget, gpointer data)
 	const gchar *translator_credits = _("translator_credits");
 	
 	if (about) {
-		gdk_window_raise (about->window);
-		gdk_window_show (about->window);
+                gtk_window_present (GTK_WINDOW (about));
 		return;
 	}
 
@@ -477,8 +476,10 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	char *numstr;
         gchar * label;
         
-	if (pref_dialog)
+	if (pref_dialog) {
+                gtk_window_present (GTK_WINDOW (pref_dialog));
 		return;
+        }
 
 	table = gtk_table_new (2, 2, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
