@@ -100,7 +100,7 @@ void new_game(GtkWidget *widget, gpointer data)
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
-        gtk_clock_start(GTK_CLOCK(clk));
+//        gtk_clock_start(GTK_CLOCK(clk));
 }
 
 void setupdialog_destroy(GtkWidget *widget, gint mode)
@@ -152,6 +152,7 @@ void win_game(GtkWidget *widget, gpointer data)
 void look_cell(GtkWidget *widget, gpointer data)
 {
         show_face(pm_worried);
+        gtk_clock_start(GTK_CLOCK(clk));
 }
 
 void unlook_cell(GtkWidget *widget, gpointer data)
