@@ -1,3 +1,7 @@
+1998-02-19  Federico Mena Quintero  <federico@nuclecu.unam.mx>
+
+	* gnomine.c (main): Added app_id "gnomine".
+
 1998-02-16  Federico Mena Quintero  <federico@nuclecu.unam.mx>
 
 	* minefield.c: Modified the GtkMineField widget to use a
