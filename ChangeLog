@@ -1,3 +1,8 @@
+2002-06-09  Juan Pablo Mendoza <jpablo@gnulinux.org.mx>
+
+	* gnomime.c (image_widget_setup): Find the images on
+	  the correct location.
+
 2002-06-03  Bastien Nocera  <hadess@hadess.net>
 
 	* gnomine.c: made help work

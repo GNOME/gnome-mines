@@ -50,7 +50,7 @@ image_widget_setup (char *name)
 	char *filename = NULL;
 
 	filename = gnome_program_locate_file (NULL,
-			GNOME_FILE_DOMAIN_PIXMAP, name,
+			GNOME_FILE_DOMAIN_APP_PIXMAP, name,
 			TRUE, NULL);
 	if (filename != NULL)
 		pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
