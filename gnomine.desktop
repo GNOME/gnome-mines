@@ -10,6 +10,6 @@ Comment[de]=Gnome Variante von MineSweeper
 Comment[ko]=±×³ğ Áö·ÚÃ£±â °ÔÀÓ
 Comment[fr]=Clone Gnome du démineur
 Exec=gnomine
-Icon=gnome-gnomine.xpm
+Icon=gnome-gnomine.png
 Terminal=0
 Type=Application
