@@ -1,5 +1,7 @@
 [Desktop Entry]
 Name=Gnome Mines
+Name[lt]=Gnome Minos
+Name[pt_BR]=Campo Minado Gnome
 Name[cs]=Gnome miny
 Name[da]=Gnome Miner
 Name[de]=GNOME-Minen
@@ -29,6 +31,7 @@ Comment[gl]=Xogo de minas de Gnome
 Comment[it]=Clone di campo minato
 Comment[ja]=GNOMEÈÇ¥Ş¥¤¥ó¥¹¥¤¡¼¥Ñ
 Comment[ko]=±×³ğ Áö·ÚÃ£±â °ÔÀÓ
+Comment[lt]=Gnome şaidimas iğminuotojams
 Comment[no]=Minesveiperklone
 Comment[pt]=Versão GNOME do campo minado
 Comment[ru]=éÇÒÁ íÉÎÏÉÓËÁÔÅÌØ Gnome
