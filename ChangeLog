@@ -1,3 +1,8 @@
+2003-06-10  William Jon McCann  <mccann@jhu.edu>
+
+	* gnomine.c: HIG fixes for preferences dialog.  Moved
+	flags status and clock to appbar.
+
 2003-06-09  William Jon McCann  <mccann@jhu.edu>
 
 	* gnomine.c: Removed separator from dialogs as in HIG.

@@ -1,3 +1,5 @@
+/* -*- mode:C; tab-width:8; c-basic-offset:8; indent-tabs-mode:true -*- */
+
 /*
  *
  * Author:        Pista <szekeres@cyberspace.mht.bme.hu>
@@ -157,6 +159,22 @@ void new_game(GtkWidget *widget, gpointer data)
 
 	gtk_widget_hide (ralign);
 	gtk_widget_show (mfield);
+}
+
+gint
+configure_cb (GtkWidget *widget, GdkEventConfigure *event)
+{
+#if 0
+	/* FIXME: resize mines to fix window */
+	/* Need to resize mines when grid changes too */
+	gint mxsize, mysize, size;
+	mxsize = event->width / xsize;
+	mysize = event->height / ysize;
+	size = MIN (mxsize, mysize);
+	gconf_client_set_int (conf_client, KEY_MINESIZE,
+			      size, NULL);
+#endif
+	return FALSE;
 }
 
 void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
@@ -474,7 +492,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	GtkWidget *table2;
 	GtkWidget *label2;
 	char *numstr;
-        gchar * label;
         
 	if (pref_dialog) {
                 gtk_window_present (GTK_WINDOW (pref_dialog));
@@ -483,21 +500,13 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 
 	table = gtk_table_new (2, 2, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
-	gtk_widget_show (table);
 	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
 	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
 
-        label = g_strdup_printf("<b>%s</b>",_("Field size"));
-	frame = gtk_frame_new (label);
-        g_free(label);
-	gtk_frame_set_shadow_type (GTK_FRAME (frame), GTK_SHADOW_NONE);
-	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget (GTK_FRAME (frame))), TRUE);
-	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
-	gtk_widget_show (frame);
+	frame = games_frame_new (_("Field size"));
 
 	vbox = gtk_vbox_new (TRUE, 0);
 	gtk_container_set_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
-	gtk_widget_show (vbox);
 
 	button = gtk_radio_button_new_with_label(NULL, _("Small"));
 	if (fsize == 0)
@@ -506,7 +515,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (button), "clicked",
 			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 0);
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
-        gtk_widget_show(button);
 
 	button = gtk_radio_button_new_with_label
 		(gtk_radio_button_get_group (GTK_RADIO_BUTTON(button)),
@@ -517,7 +525,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (button), "clicked",
 			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 1);
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
-        gtk_widget_show (button);
 
 	button = gtk_radio_button_new_with_label
 		(gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)),
@@ -528,7 +535,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (button), "clicked",
 			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 2);
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
-        gtk_widget_show(button);
 	
 	button = gtk_radio_button_new_with_label
 		(gtk_radio_button_get_group(GTK_RADIO_BUTTON(button)),
@@ -539,30 +545,21 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (button), "clicked",
 			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 3);
 	gtk_box_pack_start (GTK_BOX (vbox), button, TRUE, TRUE, 0);
-        gtk_widget_show(button);
 
 	gtk_container_add (GTK_CONTAINER (frame), vbox);
 
 	gtk_table_attach (GTK_TABLE (table), frame, 0, 1, 0, 1, GTK_EXPAND |
 			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
-        label = g_strdup_printf("<b>%s</b>",_("Custom size"));
-	cframe = gtk_frame_new (label);
-        g_free(label);
-	gtk_frame_set_shadow_type (GTK_FRAME (cframe), GTK_SHADOW_NONE);
-	gtk_label_set_use_markup (GTK_LABEL (gtk_frame_get_label_widget (GTK_FRAME (cframe))), TRUE);
-	gtk_container_set_border_width (GTK_CONTAINER (cframe), 0);
+	cframe = games_frame_new (_("Custom size"));
 	gtk_widget_set_sensitive (cframe, fsize == 3);
-	gtk_widget_show (cframe);
 
 	table2 = gtk_table_new (3, 2, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table2), GNOME_PAD);
-	gtk_widget_show (table2);
 	gtk_table_set_row_spacings (GTK_TABLE (table2), GNOME_PAD);
 
 	label2 = gtk_label_new (_("Number of mines:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_widget_show (label2);
 	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 2, 3,
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 	/* TODO: fix this when gconfised correctly */
@@ -572,11 +569,9 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), nmines);
 	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	gtk_widget_show (mentry);
 
 	label2 = gtk_label_new (_("Horizontal:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_widget_show (label2);
 	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 0, 1,
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
@@ -586,11 +581,9 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(xentry), xsize);
 	gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	gtk_widget_show (xentry);
 
 	label2 = gtk_label_new (_("Vertical:"));
 	gtk_misc_set_alignment (GTK_MISC (label2), 0, 0.5);
-	gtk_widget_show (label2);
 	gtk_table_attach (GTK_TABLE (table2), label2, 0, 1, 1, 2,
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
@@ -600,7 +593,6 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(yentry), ysize);
 	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	gtk_widget_show (yentry);
 
 	gtk_container_add (GTK_CONTAINER (cframe), table2);
 
@@ -608,18 +600,15 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
 	hbox = gtk_hbox_new (FALSE, GNOME_PAD);
-	gtk_widget_show (hbox);
 
 	label2 = gtk_label_new(_("Mine size:"));
 	gtk_box_pack_start (GTK_BOX (hbox), label2, FALSE, FALSE, 0);
-	gtk_widget_show (label2);
 
 	sentry = gtk_spin_button_new_with_range(MINESIZE_MIN, MINESIZE_MAX, 1);
 	g_signal_connect (GTK_OBJECT (sentry), "value-changed",
 			GTK_SIGNAL_FUNC (minesize_spin_cb), NULL);
 	gtk_spin_button_set_value (GTK_SPIN_BUTTON(sentry), minesize);
 	gtk_box_pack_start (GTK_BOX (hbox), sentry, TRUE, TRUE, 0);
-	gtk_widget_show(sentry);
 
 	gtk_table_attach (GTK_TABLE (table), hbox, 0, 1, 1, 2, GTK_EXPAND |
 			GTK_FILL, 0, 0, 0);
@@ -639,7 +628,7 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (pref_dialog), "response",
 			GTK_SIGNAL_FUNC (gtk_widget_destroy), &pref_dialog);
 
-	gtk_widget_show (pref_dialog);
+	gtk_widget_show_all (pref_dialog);
 }
 
 GnomeUIInfo gamemenu[] = {
@@ -738,7 +727,7 @@ main (int argc, char *argv[])
 {
         GnomeAppBar *appbar;
         GtkWidget *all_boxes;
-	GtkWidget *status_table;
+	GtkWidget *status_box;
 	GtkWidget *button_table;
         GtkWidget *align;
         GtkWidget *box;        
@@ -807,36 +796,39 @@ main (int argc, char *argv[])
 			helpmenu[i].label = gettext(helpmenu[i].label);
 	}
 
-	window = gnome_app_new("gnomine", _("GNOME Mines"));
-	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-	gtk_window_set_resizable (GTK_WINDOW(window), FALSE);
+	window = gnome_app_new ("gnomine", _("GNOME Mines"));
+	gnome_app_create_menus (GNOME_APP (window), mainmenu);
+	/* FIXME: this should be resizable */
+	gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
 
-	appbar = GNOME_APPBAR (gnome_appbar_new(FALSE, FALSE, FALSE));
-	gnome_app_set_statusbar(GNOME_APP (window), GTK_WIDGET (appbar));
+	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_NEVER));
+	gnome_app_set_statusbar (GNOME_APP (window), GTK_WIDGET (appbar));
 	
 	g_signal_connect(GTK_OBJECT(window), "delete_event",
 			    GTK_SIGNAL_FUNC(quit_game), NULL);
 	g_signal_connect(GTK_OBJECT(window), "focus_out_event",
 			    GTK_SIGNAL_FUNC(focus_out_cb), NULL);
+	g_signal_connect (GTK_OBJECT (window), "configure_event",
+			  G_CALLBACK (configure_cb), NULL);
 
-	all_boxes = gtk_vbox_new(FALSE, 0);
+	all_boxes = gtk_vbox_new (FALSE, 0);
 
-	gnome_app_set_contents(GNOME_APP(window), all_boxes);
+	gnome_app_set_contents (GNOME_APP (window), all_boxes);
 
-        	button_table = gtk_table_new(2, 3, FALSE);
-	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
+        	button_table = gtk_table_new (2, 3, FALSE);
+	gtk_box_pack_start (GTK_BOX (all_boxes), button_table, TRUE, TRUE, 0);
 
         	pm_current = NULL;
 
-	mbutton = gtk_button_new();
-	g_signal_connect(GTK_OBJECT(mbutton), "clicked",
-                           GTK_SIGNAL_FUNC(new_game), NULL);
+	mbutton = gtk_button_new ();
+	g_signal_connect (GTK_OBJECT (mbutton), "clicked",
+			 GTK_SIGNAL_FUNC(new_game), NULL);
         gtk_widget_set_size_request (mbutton, 38, 38);
-	gtk_table_attach(GTK_TABLE(button_table), mbutton, 1, 2, 0, 1,
-			 0, 0, 5, 5);
+	gtk_table_attach (GTK_TABLE (button_table), mbutton, 1, 2, 0, 1,
+			  0, 0, 5, 5);
 
-	face_box = gtk_vbox_new(FALSE, 0);
-	gtk_container_add(GTK_CONTAINER(mbutton), face_box);
+	face_box = gtk_vbox_new (FALSE, 0);
+	gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 	
 	pm_win     = image_widget_setup ("gnomine/face-win.xpm");
 	pm_sad     = image_widget_setup ("gnomine/face-sad.xpm");
@@ -844,40 +836,32 @@ main (int argc, char *argv[])
 	pm_cool    = image_widget_setup ("gnomine/face-cool.xpm");
 	pm_worried = image_widget_setup ("gnomine/face-worried.xpm");
 
-        gtk_box_pack_start(GTK_BOX(face_box), pm_win, FALSE, FALSE, 0);
-        gtk_box_pack_start(GTK_BOX(face_box), pm_sad, FALSE, FALSE, 0);
-        gtk_box_pack_start(GTK_BOX(face_box), pm_smile, FALSE, FALSE, 0);
-        gtk_box_pack_start(GTK_BOX(face_box), pm_cool, FALSE, FALSE, 0);
-        gtk_box_pack_start(GTK_BOX(face_box), pm_worried, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(face_box), pm_win, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(face_box), pm_sad, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(face_box), pm_smile, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(face_box), pm_cool, FALSE, FALSE, 0);
+        gtk_box_pack_start (GTK_BOX(face_box), pm_worried, FALSE, FALSE, 0);
 
-	show_face(pm_smile);
+	show_face (pm_smile);
 
-	gtk_widget_show(face_box);
-	gtk_widget_show(mbutton);
-
-	gtk_widget_show(button_table);
-	
         align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
 	gtk_table_attach (GTK_TABLE (button_table), align, 1, 2, 1, 2,
 			  GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL,
 			  0, 0);
-        gtk_widget_show (align);
   
-	box = gtk_vbox_new(FALSE, 0);
+	box = gtk_vbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (align), box);
-	mfield = gtk_minefield_new();
-	gtk_box_pack_start(GTK_BOX(box), mfield, TRUE, TRUE, 0);
+	mfield = gtk_minefield_new ();
+	gtk_box_pack_start (GTK_BOX (box), mfield, TRUE, TRUE, 0);
 
         ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-	gtk_box_pack_start (GTK_BOX(box), ralign, TRUE, TRUE, 0);
+	gtk_box_pack_start (GTK_BOX (box), ralign, TRUE, TRUE, 0);
 	rbutton = gtk_button_new_with_label ("Press to resume");
-	g_signal_connect (GTK_OBJECT(rbutton), "clicked", 
-			    GTK_SIGNAL_FUNC (resume_game_cb), NULL);
-        gtk_container_add (GTK_CONTAINER(ralign), rbutton);
-        gtk_widget_show (rbutton);
-	gtk_widget_show (box);
+	g_signal_connect (GTK_OBJECT (rbutton), "clicked", 
+			  GTK_SIGNAL_FUNC (resume_game_cb), NULL);
+        gtk_container_add (GTK_CONTAINER (ralign), rbutton);
 
-        setup_mode(mfield, fsize);
+        setup_mode (mfield, fsize);
 	
 	g_signal_connect(GTK_OBJECT(mfield), "marks_changed",
 			   GTK_SIGNAL_FUNC(marks_changed), NULL);
@@ -890,42 +874,34 @@ main (int argc, char *argv[])
 	g_signal_connect(GTK_OBJECT(mfield), "unlook",
 			   GTK_SIGNAL_FUNC(unlook_cell), NULL);
 	
-	gtk_widget_show(mfield);
+	status_box = gtk_hbox_new (FALSE, GNOME_PAD);
+	gtk_box_pack_start (GTK_BOX (appbar), status_box, 
+			    FALSE, FALSE, 0);
 
-        status_table = gtk_table_new(1, 4, TRUE);
-	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, FALSE, TRUE, 0);
 	label = gtk_label_new(_("Flags:"));
-	gtk_table_attach(GTK_TABLE(status_table), label,
-			 0, 1, 0, 1, 0, 0, 3, 3);
-	gtk_widget_show(label);
+	gtk_box_pack_start (GTK_BOX (status_box), label, 
+			    FALSE, FALSE, 0);
 	
-	flabel = gtk_label_new("0");
-	
-	gtk_table_attach(GTK_TABLE(status_table), flabel,
-			 1, 2, 0, 1, 0, 0, 3, 3);
-	gtk_widget_show(flabel);
+	flabel = gtk_label_new ("0");
+	gtk_box_pack_start (GTK_BOX (status_box), flabel, 
+			    FALSE, FALSE, 0);
 
-	label = gtk_label_new(_("Time:"));
-	gtk_table_attach(GTK_TABLE(status_table), label,
-			 2, 3, 0, 1, 0, 0, 3, 3);
-	gtk_widget_show(label);
+	label = gtk_label_new (_("Time:"));
+	gtk_box_pack_start (GTK_BOX (status_box), label, 
+			    FALSE, FALSE, 0);
 
-        clk = games_clock_new();
-	gtk_table_attach(GTK_TABLE(status_table), clk,
-		3, 4, 0, 1, 0, 0, 3 ,3);
-	gtk_widget_show(clk);
-
-        gtk_widget_show(status_table);
-	
-	gtk_widget_show(all_boxes);
+        clk = games_clock_new ();
+	gtk_box_pack_start (GTK_BOX (status_box), clk, 
+			    FALSE, FALSE, 0);
 
 	update_score_state ();
 
-	new_game(mfield, NULL);
+	new_game (mfield, NULL);
 
-        gtk_widget_show(window);
+        gtk_widget_show_all (window);
+	gtk_widget_hide (ralign);
 
-        gtk_main();
+        gtk_main ();
 
 	return 0;
 }
