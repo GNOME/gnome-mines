@@ -201,6 +201,23 @@ void setup_mode(GtkWidget *widget, gint mode)
 	gtk_minefield_set_mines(GTK_MINEFIELD(mfield), m, s);
 }
 
+int range (int val, int min, int max)
+{
+	if (val < min)
+		val = min;
+	if (val > max)
+		val = max;
+	return val;
+}
+
+void verify_ranges (void)
+{
+	minesize = range (minesize, 2, 100);
+	xsize    = range (xsize, 4, 100);
+	ysize    = range (xsize, 4, 100);
+	nmines   = range (nmines, 1, xsize * ysize);
+}
+
 void do_setup(GtkWidget *widget, gpointer data)
 {
         guint oldxsize, oldysize, oldnmines, oldfsize;
@@ -215,7 +232,8 @@ void do_setup(GtkWidget *widget, gpointer data)
         nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
         minesize = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
 	fsize  = fsc;
-	
+
+	verify_ranges ();
         setup_mode(mfield, fsize);
   
         if ((oldxsize != xsize) ||
@@ -524,57 +542,60 @@ static int xpos, ypos;
 static error_t
 parse_an_arg (int key, char *arg, struct argp_state *state)
 {
-  switch (key)
-    {
-    case 'x':
-      x_set = 1;
-      xsize = atoi (arg);
-      break;
-    case 'y':
-      y_set = 1;
-      ysize = atoi (arg);
-      break;
-    case 's':
-      minesize_set = 1;
-      minesize = atoi (arg);
-      break;
-    case 'n':
-      nmines_set = 1;
-      nmines = atoi (arg);
-      break;
-    case 'f':
-      fsize_set = 1;
-      fsize = atoi (arg);
-      break;
-    case 'a':
-      set_pos |= 1;
-      xpos = atoi (arg);
-      break;
-    case 'b':
-      set_pos |= 2;
-      ypos = atoi (arg);
-      break;
-    case ARGP_KEY_SUCCESS:
-      if (set_pos == 3)
-	gtk_widget_set_uposition (window, xpos, ypos);
-
-      if (! x_set)
-	xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
-      if (! y_set)
-	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
-      if (! nmines_set)
-	nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
-      if (! minesize_set)
-	minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
-      if (! fsize_set)
-	fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
-      break;
-
-    default:
-      return ARGP_ERR_UNKNOWN;
-    }
-
-  return 0;
+	switch (key)
+	{
+	case 'x':
+		x_set = 1;
+		xsize = atoi (arg);
+		break;
+	case 'y':
+		y_set = 1;
+		ysize = atoi (arg);
+		break;
+	case 's':
+		minesize_set = 1;
+		minesize = atoi (arg);
+		break;
+	case 'n':
+		nmines_set = 1;
+		nmines = atoi (arg);
+		break;
+	case 'f':
+		fsize_set = 1;
+		fsize = atoi (arg);
+		break;
+	case 'a':
+		set_pos |= 1;
+		xpos = atoi (arg);
+		break;
+	case 'b':
+		set_pos |= 2;
+		ypos = atoi (arg);
+		break;
+	case ARGP_KEY_SUCCESS:
+		if (set_pos == 3)
+			gtk_widget_set_uposition (window, xpos, ypos);
+		
+		if (! x_set)
+			xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
+		if (! y_set)
+			ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
+		if (! nmines_set)
+			nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
+		if (! minesize_set){
+			minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
+			if (minesize < 0)
+				minesize = 1;
+		}
+		if (! fsize_set)
+			fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
+		break;
+		
+	default:
+		return ARGP_ERR_UNKNOWN;
+	}
+	
+	return 0;
 }
 
 int
@@ -598,6 +619,7 @@ main (int argc, char *argv[])
 
         gnome_init("gnomine", &parser, argc, argv, 0, NULL);
 
+	verify_ranges ();
         gdk_imlib_init ();
 
 #ifdef ENABLE_NLS 

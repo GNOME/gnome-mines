@@ -1,3 +1,7 @@
+1998-04-16  Miguel de Icaza  <miguel@nuclecu.unam.mx>
+
+	* gnomine.c: Add range verification.
+
 Sun Mar  8 19:51:20 1998  Tom Tromey  <tromey@cygnus.com>
 
 	* Makefile.am (INCLUDES): Added GNOME_INCLUDEDIR.
