@@ -82,7 +82,6 @@ GtkWidget* gtk_minefield_new      (void);
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize);
 void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize);
 void gtk_minefield_restart(GtkMineField *mfield);
-extern gint minesize;
 
 #ifdef __cplusplus
 }

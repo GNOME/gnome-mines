@@ -1,5 +1,19 @@
 1999-01-01  Callum McKenzie <callum@physics.otago.ac.nz>
 
+      * gnomine.c (marks_changed): Call gtk_clock_start.
+1999-01-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+      * minefield.c: Resizing now works properly. All public functions
+      check their arguments.
+      * minefield.h: Removed the global variable minesize (it was evil).
+      * gnomine.c:   More fixes to get resizing working properly.
+
+1999-01-01  Callum McKenzie <callum@physics.otago.ac.nz>
+  
+        * gnomine.c (marks_changed): Call gtk_clock_start.
+
+1999-01-01  Callum McKenzie <callum@physics.otago.ac.nz>
+
 	* gnomine.c (marks_changed): Call gtk_clock_start.
 
 1998-11-28  Herbert Valerio Riedel  <hvr@hvrlab.ml.org>

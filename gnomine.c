@@ -194,12 +194,13 @@ void verify_ranges (void)
 
 void do_setup(GtkWidget *widget, gpointer data)
 {
-        guint oldxsize, oldysize, oldnmines, oldfsize;
+        guint oldxsize, oldysize, oldnmines, oldfsize, oldminesize;
   
 	oldxsize = xsize;
 	oldysize = ysize;
 	oldnmines = nmines;
         oldfsize = fsize;
+	oldminesize = minesize;
 
         xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
 	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
@@ -226,6 +227,7 @@ void do_setup(GtkWidget *widget, gpointer data)
 	gnome_config_set_int("/gnomine/geometry/minesize", minesize);
 	gnome_config_set_int("/gnomine/geometry/mode",   fsize);
 	gnome_config_sync();
+	
 }
 
 void
@@ -546,6 +548,7 @@ main (int argc, char *argv[])
 	  nmines = gnome_config_get_int("/gnomine/geometry/nmines=40");
 	if (minesize == -1){
 	  minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
+	  /* XXX is this necessary, verify_ranges() is just below. */
 	  if (minesize < 0)
 	    minesize = 1;
 	}
