@@ -1,5 +1,10 @@
 2003-10-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* minefield.c (gtk_mine_draw): Convert the drawing functions to
+	use gtk_paint_* more. Also made the cleared and uncleared cells
+	use different GTK_STATEs to make them easier to distinguish (bug
+	122969).
+
 	* gnomine.c: Documented the undocumented command-line options.
 
 2003-09-17  Callum McKenzie  <callum@physics.otago.ac.nz>

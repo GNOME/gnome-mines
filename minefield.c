@@ -289,13 +289,15 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 {
         int c = cell_idx(mfield, x, y);
 	int noshadow;
+	gboolean clicked;
 	int n;
 	guint minesize;
         static GdkGC *dots;
         static char stipple_data[]  = { 0x03, 0x03, 0x0c, 0x0c };
         static GdkPixmap *stipple = NULL;
         GtkWidget *widget = GTK_WIDGET(mfield);
-
+	GdkRectangle rect;
+	
         /* This gives us a dotted line to increase the contrast between
          * buttons and the "sea". */
         if (stipple == NULL) {
@@ -308,17 +310,31 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
         }
                 
 	minesize = mfield->minesize;
-
+	
 	if (mfield->lose || mfield->win) {
 		noshadow = mfield->mines[c].shown;
 	} else {
-		noshadow = mfield->mines[c].down || mfield->mines[c].shown;
+		noshadow = mfield->mines[c].shown;
 	}
-	
-	gdk_window_clear_area(widget->window, x * minesize, y * minesize,
-	                      minesize, minesize);
+
+	clicked = mfield->mines[c].down;
+
+	/* gtk_paint_box needs a clipping rectangle. */
+	rect.x = x*minesize;
+	rect.y = y*minesize;
+	rect.width = minesize;
+	rect.height = minesize;
 
 	if (noshadow) { /* draw grid on ocean floor */
+		gtk_paint_box (widget->style,
+				    widget->window,
+				    GTK_STATE_NORMAL,
+				    clicked ? GTK_SHADOW_IN : GTK_SHADOW_NONE,
+				    &rect,
+				    widget,
+				    "button",
+				    x*minesize, y*minesize,
+				    minesize, minesize);
 		if (y == 0) {	/* top row only */
 			gdk_draw_line(widget->window,	/* top */
 			              dots,
@@ -349,10 +365,15 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
                               y*minesize+minesize-1);
 
 	} else {	/* draw shadow around possible mine location */
-		gtk_paint_shadow(widget->style, widget->window,
-		                GTK_WIDGET_STATE (widget), GTK_SHADOW_OUT,
-				NULL, widget, NULL,
-		                x*minesize, y*minesize, minesize, minesize);
+		gtk_paint_box (widget->style,
+			       widget->window,
+			       GTK_STATE_SELECTED,
+			       clicked ? GTK_SHADOW_IN : GTK_SHADOW_OUT,
+			       &rect,
+			       widget,
+			       "button",
+			       x*minesize, y*minesize,
+			       minesize, minesize);
         }
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
