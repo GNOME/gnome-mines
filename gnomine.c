@@ -418,11 +418,11 @@ GnomeUIInfo gamemenu[] = {
 	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("_Scores"), NULL, top_ten, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("S_cores"), NULL, top_ten, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
 
 	{GNOME_APP_UI_ITEM, N_("E_xit"), NULL, quit_game, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'q', GDK_CONTROL_MASK, NULL},
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'x', GDK_CONTROL_MASK, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL}
@@ -432,7 +432,7 @@ GnomeUIInfo helpmenu[] = {
 	{GNOME_APP_UI_HELP, NULL, NULL, "gnomine", NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("_About Gnome Mines"), NULL, about, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_About..."), NULL, about, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
@@ -568,9 +568,7 @@ main (int argc, char *argv[])
 #endif /* ENABLE_NLS */
 
         window = gnome_app_new("gnomine", _("Gnome Mines"));
-        gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-
 	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
@@ -640,6 +638,7 @@ main (int argc, char *argv[])
 			   GTK_SIGNAL_FUNC(unlook_cell), NULL);
 	
 	gtk_widget_show(mfield);
+
         status_table = gtk_table_new(1, 4, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, TRUE, TRUE, 0);
 
@@ -667,9 +666,12 @@ main (int argc, char *argv[])
         gtk_widget_show(status_table);
 	
 	gtk_widget_show(all_boxes);
-        gtk_widget_show(window);
 
 	new_game(mfield, NULL);
+
+        /* gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE); */
+
+        gtk_widget_show(window);
 
         gtk_main();
 
