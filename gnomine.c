@@ -34,7 +34,6 @@ GtkWidget *face_box;
 guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
-char *session_id;
 
 char *fsize2names[] = {
 	"Tiny",
@@ -381,9 +380,13 @@ nstr (int n)
 }
 
 static int
-save_state (gpointer client_data, GnomeSaveStyle save_style,
-	    int is_shutdown, GnomeInteractStyle interact_style,
-	    int is_fast)
+save_state (GnomeClient        *client,
+	    gint                phase,
+	    GnomeRestartStyle   save_style,
+	    gint                shutdown,
+	    GnomeInteractStyle  interact_style,
+	    gint                fast,
+	    gpointer            client_data)
 {
   char *argv[20];
   int i = 0, j;
@@ -404,21 +407,21 @@ save_state (gpointer client_data, GnomeSaveStyle save_style,
   argv[i++] = nstr (xpos);
   argv[i++] = "-b";
   argv[i++] = nstr (ypos);
-  argv[i++] = "-i";
-  argv[i++] = strdup (session_id);
 
-  gnome_session_set_restart_command (i, argv);
-  gnome_session_set_clone_command (i - 2, argv);
+  gnome_client_set_restart_command (client, i, argv);
+  /* i.e. clone_command = restart_command - '--sm-client-id' */
+  gnome_client_set_clone_command (client, 0, NULL);
 
   for (j = 2; j < i; j += 2)
     free (argv[j]);
 
-  return 1;
+  return TRUE;
 }
 
 static int
 parse_args (int argc, char *argv[])
 {
+  GnomeClient *client;
   int x_set = 0, y_set = 0, nmines_set = 0, fsize_set = 0;
   int set_pos = 0;
   int i;
@@ -461,10 +464,10 @@ parse_args (int argc, char *argv[])
 	  ypos = atoi (argv[++i]);
 	  set_pos |= 2;
 	}
-      else if (! strcmp (argv[i], "-i"))
+      else if (! strcmp (argv[i], "--sm-client-id"))
 	{
 	  /* Stupid argument name; will change with long opts.  */
-	  id = argv[++i];
+	  ++i;
 	}
     }
 
@@ -480,8 +483,10 @@ parse_args (int argc, char *argv[])
   if (! fsize_set)
     fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
 
-  session_id = gnome_session_init (save_state, argv[0], NULL, NULL, id);
-  gnome_session_set_program (argv[0]);
+  client = gnome_client_new (argc, argv);
+  
+  gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
+		      GTK_SIGNAL_FUNC (save_state), argv[0]);
 }
 
 int main(int argc, char *argv[])
