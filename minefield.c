@@ -1099,6 +1099,7 @@ GType gtk_minefield_get_type (void)
 				sizeof (GtkMineField),
 				0, /* n_preallocs */
                                 (GInstanceInitFunc) gtk_minefield_init,
+				NULL, /* value table */
                         };
                         
                         minefield_type = g_type_register_static (GTK_TYPE_WIDGET,

@@ -1,3 +1,9 @@
+2005-02-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_get_type): Fill out the GTypeInfo
+	structure completely. This looks like what has been causing the
+	start-up crashes.
+
 2005-02-02  Richard Hoelscher  <rah@rahga.com>
 
 	* gnomine.c (create_preferences): Set mines spinbutton range here,
