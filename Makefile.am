@@ -34,7 +34,7 @@ pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
 	face-worried.xpm
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_DATA) $(pixmap_DATA) flag.xpm mine.xpm question.xpm
+	$(schema_in_files) $(pixmap_DATA) flag.xpm mine.xpm question.xpm
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
