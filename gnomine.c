@@ -39,9 +39,9 @@ guint fsize, fsc;
 char *session_id;
 
 char *fsize2names[] = {
-	N_("Tiny"),
-	N_("Medium"),
-	N_("Biiiig"),
+	"Tiny",
+	"Medium",
+	"Biiiig",
 };
 
 void show_face(GtkWidget *pm)
@@ -507,8 +507,8 @@ int main(int argc, char *argv[])
 	    mainmenu[i].label = gettext(mainmenu[i].label);
 	  for (i = 0; i < ELEMENTS(gamemenu); i++)
 	    gamemenu[i].label = gettext(gamemenu[i].label);
-	  for (i = 0; i < ELEMENTS(fsize2names); i++)
-	    fsize2names[i] = gettext(fsize2names[i]);
+	  for (i = 0; i < ELEMENTS(helpmenu); i++)
+	    helpmenu[i].label = gettext(helpmenu[i].label);
 	}
 #endif /* ENABLE_NLS */
 
