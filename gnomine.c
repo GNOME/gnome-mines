@@ -250,7 +250,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
 	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
-	gtk_window_set_title(GTK_WINDOW(setupdialog), _("Gnome mines setup"));
+	gtk_window_set_title(GTK_WINDOW(setupdialog), _("Gnome Mines setup"));
 	gtk_signal_connect(GTK_OBJECT(setupdialog),
 			   "delete_event",
 			   GTK_SIGNAL_FUNC(setupdialog_destroy),
@@ -307,10 +307,12 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
 	gtk_widget_show(label);
 
-        adj = gtk_adjustment_new(minesize, 2, 99, 1, 1, 10);
+        adj = gtk_adjustment_new(minesize, 2, 99, 1, 5, 10);
 	sentry = gtk_spin_button_new(GTK_ADJUSTMENT(adj), 10, 0);
-	gtk_box_pack_start(GTK_BOX(box2), sentry, FALSE, TRUE, 0);
-	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(sentry), minesize);
+        gtk_spin_button_set_update_policy(GTK_SPIN_BUTTON(sentry),
+					  GTK_UPDATE_ALWAYS |
+					  GTK_UPDATE_SNAP_TO_TICKS);
+        gtk_box_pack_start(GTK_BOX(box2), sentry, FALSE, TRUE, 0);
 	gtk_widget_show(sentry);
 	gtk_widget_show(box2);
 
