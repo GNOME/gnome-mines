@@ -1,5 +1,5 @@
 /* XPM */
-static char *magick[] = {
+static char *mine_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "11 11 2 1",
 "  c Black",

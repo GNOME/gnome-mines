@@ -15,9 +15,6 @@ extern "C" {
 #define GTK_MINEFIELD_CLASS(klass) GTK_CHECK_CLASS_CAST(klass, gtk_minefield_get_type(), GtkMineFieldClass);
 #define GTK_IS_MINEFIELD(obj) GTK_CHECK_TYPE(obj, gtk_minefield_get_type())
 
-#define MARKED_SIGN_FILENAME "flag.xpm"
-#define MINE_SIGN_FILENAME   "mine.xpm"
-	
 typedef struct _GtkMineField         GtkMineField;
 typedef struct _GtkMineFieldClass    GtkMineFieldClass;
 

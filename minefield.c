@@ -3,6 +3,8 @@
 #include <gtk/gtk.h>
 #include <gnome.h>
 #include "minefield.h"
+#include "flag.xpm"
+#include "mine.xpm"
 
 #define MINESIZE 17
 
@@ -51,8 +53,6 @@ static void gtk_minefield_realize(GtkWidget *widget)
         GtkMineField *mfield;
         GdkWindowAttr attributes;
         gint attributes_mask;
-	char *marked_filename;
-	char *mine_filename;
         
         g_return_if_fail(widget != NULL);
         g_return_if_fail(GTK_IS_MINEFIELD (widget));
@@ -80,23 +80,14 @@ static void gtk_minefield_realize(GtkWidget *widget)
         widget->style = gtk_style_attach(widget->style, widget->window);
         gtk_style_set_background(widget->style, widget->window, GTK_STATE_ACTIVE);
 
-	marked_filename = gnome_unconditional_pixmap_file(MARKED_SIGN_FILENAME);
-	mine_filename = gnome_unconditional_pixmap_file(MINE_SIGN_FILENAME);
-
-	gnome_create_pixmap_gdk(widget->window,
-				&mfield->marked_sign,
-				&mfield->marked_sign_mask,
-				&widget->style->bg[GTK_STATE_NORMAL],
-				marked_filename);
-
-	gnome_create_pixmap_gdk(widget->window,
-				&mfield->mine_sign,
-				&mfield->mine_sign_mask,
-				&widget->style->bg[GTK_STATE_NORMAL],
-				mine_filename);
-
-	g_free(marked_filename);
-	g_free(mine_filename);
+	mfield->marked_sign = gdk_pixmap_create_from_xpm_d (widget->window,
+							    &mfield->marked_sign_mask,
+							    &widget->style->bg[GTK_STATE_NORMAL],
+							    flag_xpm);
+	mfield->mine_sign = gdk_pixmap_create_from_xpm_d (widget->window,
+							  &mfield->mine_sign_mask,
+							  &widget->style->bg[GTK_STATE_NORMAL],
+							  mine_xpm);
 }
 
 static void gtk_minefield_size_allocate(GtkWidget *widget,

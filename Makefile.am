@@ -1,4 +1,3 @@
-pixmapdir = $(datadir)/pixmaps
 Gamesdir = $(datadir)/apps/Games
 
 INCLUDES = 			\
@@ -17,13 +16,11 @@ gnomine_SOURCES =	\
 gnomine_LDADD = \
 	$(top_builddir)/libgnomeui/libgnomeui.la 	\
 	$(top_builddir)/libgnome/libgnome.la		\
+	$(GTK_LIBS)					\
         $(X_LIBS) $(x_libs)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm \
 	     gnomine.desktop README AUTHORS
-
-pixmap_DATA = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm
-
 
 install-data-local:
 	$(mkinstalldirs) $(Gamesdir)

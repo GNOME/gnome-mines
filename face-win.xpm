@@ -1,5 +1,5 @@
 /* XPM */
-static char *magick[] = {
+static char *face_win_xpm[] = {
 /* columns rows colors chars-per-pixel */
 "32 32 234 2",
 "   None",

@@ -3,6 +3,12 @@
 #include <gnome.h>
 #include "minefield.h"
 
+#include "face-worried.xpm"
+#include "face-smile.xpm"
+#include "face-cool.xpm"
+#include "face-sad.xpm"
+#include "face-win.xpm"
+
 static GtkWidget *mfield;
 GtkWidget *flabel;
 GtkWidget *setupdialog;
@@ -368,11 +374,12 @@ void main(int argc, char *argv[])
 	face_box = gtk_vbox_new(FALSE, 0);
 	gtk_container_add(GTK_CONTAINER(mbutton), face_box);
 	
-	pm_win     = gnome_create_pixmap_widget(window, mbutton, "face-win.xpm");
-	pm_sad     = gnome_create_pixmap_widget(window, mbutton, "face-sad.xpm");
-	pm_smile   = gnome_create_pixmap_widget(window, mbutton, "face-smile.xpm");
-	pm_cool    = gnome_create_pixmap_widget(window, mbutton, "face-cool.xpm");
-	pm_worried = gnome_create_pixmap_widget(window, mbutton, "face-worried.xpm");
+	pm_win     = gnome_create_pixmap_widget_d(window, mbutton, face_win_xpm);
+	pm_sad     = gnome_create_pixmap_widget_d(window, mbutton, face_sad_xpm);
+	pm_sad     = gnome_create_pixmap_widget_d(window, mbutton, face_sad_xpm);
+	pm_smile   = gnome_create_pixmap_widget_d(window, mbutton, face_smile_xpm);
+	pm_cool    = gnome_create_pixmap_widget_d(window, mbutton, face_cool_xpm);
+	pm_worried = gnome_create_pixmap_widget_d(window, mbutton, face_worried_xpm);
 
         gtk_box_pack_start(GTK_BOX(face_box), pm_win, FALSE, FALSE, 0);
         gtk_box_pack_start(GTK_BOX(face_box), pm_sad, FALSE, FALSE, 0);
