@@ -144,9 +144,9 @@ gtk_minefield_setup_numbers(GtkMineField *mfield)
 
 		/* do the font */
 		font_desc = pango_font_description_new();
-		pango_font_description_set_family(font_desc, "Sans 8");
+		pango_font_description_set_family(font_desc, "Courier 8");
 		pango_font_description_set_size(font_desc,
-						pixel_sz * 0.7 * PANGO_SCALE);
+						pixel_sz * PANGO_SCALE);
 		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
 		attr = pango_attr_font_desc_new(font_desc);
 		pango_font_description_free(font_desc);
