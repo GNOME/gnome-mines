@@ -13,6 +13,7 @@ gnomine_SOURCES =	\
 	minefield.c
 
 gnomine_LDADD = \
+	$(GNOME_LIBDIR) \
 	$(GNOMEUI_LIBS)	\
 	$(INTLLIBS)
 
