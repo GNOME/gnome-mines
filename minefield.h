@@ -55,12 +55,10 @@ struct _GtkMineField {
 	gint multi_mode;
         sign flag;
         sign mine;
-        GdkFont   *font;
 
 	struct {
-		char text[2];
+		PangoLayout *layout;
 		gint dx, dy;
-		GdkGC *gc;
 	} numstr[9];
 	guint minesize;
 };

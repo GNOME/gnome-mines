@@ -23,16 +23,16 @@ static struct {
 
 
 
-static int num_colors[9][3] = {
-	{ 0  , 0  , 0   }, /* Black, not used */
-	{ 0  , 0  , 255 }, /* Blue  */
-	{ 0  , 160, 0   }, /* Green */
-	{ 255, 0  , 0   }, /* Red   */
-	{ 0  , 0  , 127 }, /* DarkBlue */
-	{ 160, 0  , 0   }, /* DarkRed   */
-	{ 0  , 255, 255 }, /* Cyan */
-	{ 160, 0  , 160 }, /* DarkViolet */
-	{ 0  , 0  , 0   }  /* Black */
+static guint16 num_colors[9][3] = {
+	{ 0x0000, 0x0000, 0x0000 }, /* Black, not used */
+	{ 0x0000, 0x0000, 0xffff }, /* Blue  */
+	{ 0x0000, 0xa0a0, 0x0000 }, /* Green */
+	{ 0xffff, 0x0000, 0x0000 }, /* Red   */
+	{ 0x0000, 0x0000, 0x7fff }, /* DarkBlue */
+	{ 0xa0a0, 0x0000, 0x0000 }, /* DarkRed   */
+	{ 0x0000, 0xffff, 0xffff }, /* Cyan */
+	{ 0xa0a0, 0x0000, 0xa0a0 }, /* DarkViolet */
+	{ 0x0000, 0x0000, 0x0000 }  /* Black */
 };
 
 
@@ -79,6 +79,70 @@ static void gtk_minefield_setup_signs(GtkWidget *widget)
   
         _setup_sign(&mfield->flag, flag_xpm, mfield->minesize);
         _setup_sign(&mfield->mine, mine_xpm, mfield->minesize);
+}
+
+static void
+gtk_minefield_setup_numbers(GtkMineField *mfield)
+{
+	int minesize, pixel_sz, i;
+	  
+	minesize = mfield->minesize;
+
+	pixel_sz = minesize - 2;
+	if (pixel_sz > 999) pixel_sz = 999;
+	if (pixel_sz < 2)  pixel_sz = 2;
+  
+	for (i=0; i<9; i++) {
+		gchar text[2];
+		PangoLayout *layout;
+		PangoAttrList *alist;
+		PangoAttribute *attr;
+		PangoFontDescription *font_desc;
+
+		/* free an existing layout ... */
+		if (mfield->numstr[i].layout)
+			g_object_unref(mfield->numstr[i].layout);
+
+		text[0] = '0' + i;
+		text[1] = '\0';
+		layout = gtk_widget_create_pango_layout(GTK_WIDGET(mfield),
+							text);
+
+		/* set attributes for the layout */
+		alist = pango_attr_list_new();
+
+		/* do the font */
+		font_desc = pango_font_description_new();
+		pango_font_description_set_family(font_desc, "monospace");
+		pango_font_description_set_size(font_desc,
+						pixel_sz * PANGO_SCALE);
+		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
+		attr = pango_attr_font_desc_new(font_desc);
+		pango_font_description_free(font_desc);
+
+		attr->start_index = 0;
+		attr->end_index = G_MAXUINT;
+		pango_attr_list_insert(alist, attr);
+
+		/* colour */
+		attr = pango_attr_foreground_new(num_colors[i][0],
+						 num_colors[i][1],
+						 num_colors[i][2]);
+		attr->start_index = 0;
+		attr->end_index = G_MAXUINT;
+		pango_attr_list_insert(alist, attr);
+
+		pango_layout_set_attributes(layout, alist);
+		pango_attr_list_unref(alist);
+
+		pango_layout_set_width(layout, minesize);
+		pango_layout_set_alignment(layout, PANGO_ALIGN_CENTER);
+
+		mfield->numstr[i].layout = layout;
+
+		mfield->numstr[i].dx = minesize / 2;
+		mfield->numstr[i].dy = (minesize - pixel_sz) / 2;
+	}
 }
 
 static void gtk_minefield_realize(GtkWidget *widget)
@@ -204,12 +268,11 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
 		if ((n = mfield->mines[c].neighbours) != 0) {
-			gdk_draw_string(widget->window,
-					mfield->font,
-					mfield->numstr[n].gc,
-					x*minesize+mfield->numstr[n].dx,
-					y*minesize+mfield->numstr[n].dy,
-					mfield->numstr[n].text);
+			gdk_draw_layout(widget->window,
+					widget->style->black_gc,
+					x*minesize + mfield->numstr[n].dx,
+					y*minesize + mfield->numstr[n].dy,
+					mfield->numstr[n].layout);
 		}
 	} else if (mfield->mines[c].marked == 1) {
 		gdk_gc_set_clip_mask(widget->style->black_gc,
@@ -313,45 +376,6 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 	
 	minesize = mfield->minesize;
 
-	if (mfield->numstr[0].gc == 0) {
-	        int pxlsz;
-	        char fontname[50];
-	  
-	        gtk_minefield_setup_signs(widget);
-
-	        pxlsz = minesize - 2;
-	        if (pxlsz > 999) pxlsz = 999;
-                if (pxlsz < 2)  pxlsz = 2;
-  
-                sprintf(fontname, "-bitstream-courier-bold-r-*-*-%d-*-*-*-*-*-*-*", pxlsz);
-	
-		mfield->font = gdk_font_load(fontname);
-	  
-	            /* The font used to be "-misc-fixed-bold-r-normal--13-*-*-*-*-*-*" */
-#if 0	  
-                if (!mfield->font) mfield->font = widget->style->font;
-#endif
-		for (i=0; i<9; i++) {
-			mfield->numstr[i].text[0] = i+'0';
-			mfield->numstr[i].text[1] = '\0';
-			mfield->numstr[i].dx =
-				(minesize-gdk_string_width(mfield->font,
-							   mfield->numstr[i].text))/2;
-			mfield->numstr[i].dy = (minesize + 5 * pxlsz / 8) / 2;
-			mfield->numstr[i].gc = gdk_gc_new(GTK_WIDGET(mfield)->window);
-
-			color.red   = num_colors[i][0] | (num_colors[i][0] << 8);
-			color.green = num_colors[i][1] | (num_colors[i][1] << 8);
-			color.blue  = num_colors[i][2] | (num_colors[i][2] << 8);
-			color.pixel = 0; /* required! */
-
-			n = 0;
-			
-			gdk_rgb_find_color (gtk_widget_get_colormap (widget), &color);
-			
-			gdk_gc_set_foreground(mfield->numstr[i].gc, &color);
-		}
-	}
 
 	gtk_minefield_draw(GTK_MINEFIELD(widget), &event->area);
 
@@ -759,16 +783,15 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 
 static void gtk_minefield_init (GtkMineField *mfield)
 {
-#ifndef GTK_HAVE_FEATURES_1_1_4
-  #if 0
-        GTK_WIDGET_SET_FLAGS (mfield, GTK_BASIC);
-  #endif
-#endif
         mfield->xsize = 0;
         mfield->ysize = 0;
 
         GTK_WIDGET (mfield)->requisition.width = mfield->minesize;
         GTK_WIDGET (mfield)->requisition.height = mfield->minesize;
+
+	gtk_minefield_setup_signs(GTK_WIDGET(mfield));
+
+	gtk_minefield_setup_numbers(mfield);
 }
 
 void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
@@ -793,7 +816,6 @@ GtkWidget* gtk_minefield_new(void)
 	gtk_minefield_set_size(mfield, 0, 0);
 
 	mfield->cdown = -1;
-	mfield->numstr[0].gc = 0; /* Force GC generation */
 	return GTK_WIDGET(mfield);
 }
 
@@ -829,7 +851,8 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 	
         mfield->mcount = mcount;
         mfield->minesize = minesize;
-        mfield->numstr[0].gc = 0;
+
+	gtk_minefield_setup_numbers(mfield);
 
 	if (GTK_WIDGET_VISIBLE(mfield)) {
 		gtk_widget_queue_resize(GTK_WIDGET(mfield));
