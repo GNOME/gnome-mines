@@ -283,7 +283,7 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 	        char fontname[50];
 	  
 	        pxlsz = minesize - 4;
-	        if (pxlsz > 99) pxlsz = 99;
+	        if (pxlsz > 999) pxlsz = 999;
                 if (pxlsz < 2)  pxlsz = 2;
   
                 sprintf(fontname, "-bitstream-courier-bold-r-*-*-%d-*-*-*-*-*-*-*", pxlsz);
