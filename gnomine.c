@@ -106,8 +106,6 @@ void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 	if (GTK_CLOCK(clk)->timer_id == -1)
 		return;
 
-	printf ("%i\n", GTK_CLOCK(clk)->timer_id);
-
 	gtk_widget_hide (mfield);
 	gtk_widget_show (rbutton);
 	gtk_clock_stop(GTK_CLOCK(clk)); 

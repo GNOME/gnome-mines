@@ -3,7 +3,7 @@
 	* gnomine.c: (focus_out_cb), (resume_game_cb): New functions.
 	  (new_game): Hide button and show minefield.
 	  (main): Create the resume button, connect signal to
-	  focus_out_event.
+	  focus_out_event (Feature taken from kmines).
 
 2001-06-12  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
