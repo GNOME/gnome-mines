@@ -517,7 +517,7 @@ GnomeUIInfo settingsmenu[] = {
 };
 
 GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP("gnomine"),
+        GNOMEUIINFO_HELP("gnome-mines"),
 	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
 	GNOMEUIINFO_END
 };
@@ -615,7 +615,7 @@ main (int argc, char *argv[])
 			LIBGNOMEUI_MODULE,
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
-			NULL);
+			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
 
 	/* Get the default GConfClient */
 	conf_client = gconf_client_get_default ();
