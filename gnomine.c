@@ -290,7 +290,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_container_add(GTK_CONTAINER(frame), box);
 	
 	button = gtk_radio_button_new_with_label(NULL, _("Tiny"));
-	if (fsize == 0) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
+	if (fsize == 0) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 0);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
@@ -298,7 +298,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
 						 _("Medium"));
-	if (fsize == 1) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
+	if (fsize == 1) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 1);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
@@ -306,7 +306,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
 						 _("Biiiig"));
-	if (fsize == 2) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
+	if (fsize == 2) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 2);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
@@ -314,7 +314,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 	
 	button = gtk_radio_button_new_with_label(gtk_radio_button_group(GTK_RADIO_BUTTON(button)),
 						 _("Custom"));
-	if (fsize == 3) gtk_toggle_button_set_state(GTK_TOGGLE_BUTTON (button), TRUE);
+	if (fsize == 3) gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON (button), TRUE);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(size_radio_callback),
 			   (gpointer) 3);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 0);
