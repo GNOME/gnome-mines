@@ -1,3 +1,7 @@
+2003-06-09  William Jon McCann  <mccann@jhu.edu>
+
+	* gnomine.c: Removed separator from dialogs as in HIG.
+
 2003-06-05  William Jon McCann  <mccann@jhu.edu>
 
 	* Makefile.am (install-data-local): Only install schemas

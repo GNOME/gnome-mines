@@ -630,6 +630,7 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
 			NULL);
 
+        gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
 	gtk_container_add (GTK_CONTAINER(GTK_DIALOG(pref_dialog)->vbox),
 			table);
 
