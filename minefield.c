@@ -226,10 +226,11 @@ static void gtk_minefield_unrealize (GtkWidget *widget)
 static void gtk_minefield_size_allocate (GtkWidget     *widget,
 				 	 GtkAllocation *allocation)
 {
-        widget->allocation = *allocation;
         guint minesize, width, height;
         guint xofs, yofs;
         GtkMineField * mfield;
+
+        widget->allocation = *allocation;
 
         mfield = GTK_MINEFIELD (widget);
         
