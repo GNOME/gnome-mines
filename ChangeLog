@@ -1,0 +1,92 @@
+Mon Feb  2 23:50:12 EST 1998 Nathan Bryant <bryant@cs.usm.maine.edu>
+
+	* Makefile.am: install gnomine setgid games.
+
+Mon Feb  2 22:08:05 EST 1998 Nathan Bryant <bryant@cs.usm.maine.edu>
+
+	* gnomine.c: added gnome_score_init
+
+Fri Jan 30 13:26:55 1998  Tom Tromey  <tromey@cygnus.com>
+
+	* programs/gnomine/gnomine.c (about): Don't return a value.
+
+1998-01-28  Raja R Harinath  <harinath@cs.umn.edu>
+
+	* Makefile.am: Misc. fixes.
+
+Tue Jan 27 13:57:26 1998  Federico Mena  <federico@bananoid.nuclecu.unam.mx>
+
+	* Makefile.am (install-data-local): Updated installation of
+	.desktop files.
+
+Tue Jan 27 21:03:01 ART 1998  Horacio J. Peña  <horape@compendium.com.ar>
+
+	* gnomine.c: Disable i18n of fsize2names.
+
+Tue Jan 27 13:59:41 ART 1998  Horacio J. Peña  <horape@compendium.com.ar>
+
+	* gnomine.c: Added Help menu and About dialog.
+
+Tue Jan 27 03:56:10 ART 1998  Horacio J. Peña (n.) <horape@compendium.com.ar>
+
+	* Makefile.am: Creates $(scoredir)/gnomine.scores
+
+1998-01-26  Mark Galassi  <rosalia@cygnus.com>
+
+	* Makefile.am (LDADD): added $(DL_LIB) since these are now
+	required for any user of libgnome.a.
+
+Sun Jan 25 23:38:30 1998  Miguel de Icaza  <miguel@nuclecu.unam.mx>
+
+	* gnomine.c: Replaced "Quit" with "Exit".
+
+Tue Jan 27 09:00:32 1998  Changwoo Ryu  <cwryu@adam.kaist.ac.kr>
+
+	* gnomine.c: include <config.h>
+ 	(main): call textdomain().
+	(main): make it translate static strings, `mainmenu', `gamemenu',
+	and `fsize2names' (some tricky).
+	gnomine is i18ned...
+
+Wed Jan 21 20:11:45 1998  Miguel de Icaza  <miguel@nuclecu.unam.mx>
+
+	* gnomine.c (show_scores): Use simplified `gnome_scores_display'
+	routine.
+
+Wed Jan 21 01:18:34 1998  Federico Mena  <federico@bananoid.nuclecu.unam.mx>
+
+	* gnomine.c (show_scores): cast hs to GNOME_SCORES.
+
+Wed Jan 21 00:41:27 1998  Federico Mena <federico@bananoid.nuclecu.unam.mx>
+
+	* gnomine.c (top_ten, win_game): Replace snprintf with g_snprintf.
+
+Sun Jan 18 11:17:27 1998  Tom Tromey  <tromey@cygnus.com>
+
+	* gnomine.c (gamemenu, mainmenu): Use `N_' macro, not `_' macro.
+	(session_id): New global.
+	(nstr): New function.
+	(save_state): New function.
+	(parse_args): New function.
+
+Sun Jan 18 03:10:15 1998  Horacio J. Peña (n.) <horape@compendium.com.ar>
+
+	(Warning: All this changes have a lot of memory leaks.)
+	* gnomine.c: (fsize2names): new global array. Used in top_ten and
+	win_game.
+	(show_scores): New function.
+	(top_ten): New function.
+	(win_game): New way of computing score. Replaced messagebox with
+	a call to show_scores.
+
+Wed Jan 14 12:44:20 1998  Miguel de Icaza  <miguel@nuclecu.unam.mx>
+
+	* gnomine.c: Internationalization changes. 
+
+Fri Jan  2 14:53:14 1998  Federico Mena  <federico@bananoid.nuclecu.unam.mx>
+
+	* gnomine.c: Removed some unused variables.
+	
+Sun Dec  7 12:05:25 1997  Tom Tromey  <tromey@cygnus.com>
+
+	* Makefile.am (gnomine_LDADD): Added x_libs.
