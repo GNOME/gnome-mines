@@ -49,15 +49,10 @@ void show_face(GtkWidget *pm)
         if (pm_current == pm) return;
 
 	if (pm_current) {
-                gtk_container_block_resize(GTK_CONTAINER(face_box));
 		gtk_widget_hide(pm_current);
 	}
 
 	gtk_widget_show(pm);
-
-	if(pm_current) {
-		gtk_container_unblock_resize(GTK_CONTAINER(face_box));
-	}
 	
 	pm_current = pm;
 }
