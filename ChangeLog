@@ -1,3 +1,14 @@
+2004-03-01  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_mine_draw): Drawing fixes. A patch thanks to
+	ed@catmur.co.uk (bug #135615). Also removed some redundant code.
+	(gtk_minefield_multi_release): Fixed the long-standing "incorrect
+	counts" bug (#103125), multi release wasn't checking whether the
+	mines were shown or not.	
+	(gtk_mine_draw): Solved a drawing problem where the cleared mines
+	weren't being drawn if they were auto-cleared. The gorilla theme
+	really higlighted this.
+
 2004-02-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_minefield_setup_numbers): Dynamically adjust

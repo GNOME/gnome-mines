@@ -327,13 +327,9 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
                 
 	minesize = mfield->minesize;
 	
-	if (mfield->lose || mfield->win) {
-		noshadow = mfield->mines[c].shown;
-	} else {
-		noshadow = mfield->mines[c].shown;
-	}
+	noshadow = mfield->mines[c].shown;
 
-	clicked = mfield->mines[c].down;
+	clicked = mfield->mines[c].down; 
 
 	/* gtk_paint_box needs a clipping rectangle. */
 	rect.x = x*minesize;
@@ -343,14 +339,14 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 
 	if (noshadow) { /* draw grid on ocean floor */
 		gtk_paint_box (widget->style,
-				    widget->window,
-				    GTK_STATE_NORMAL,
-				    clicked ? GTK_SHADOW_IN : GTK_SHADOW_NONE,
-				    &rect,
-				    widget,
-				    "button",
-				    x*minesize, y*minesize,
-				    minesize, minesize);
+			       widget->window,
+			       clicked ? GTK_STATE_ACTIVE : GTK_STATE_NORMAL,
+			       GTK_SHADOW_IN,
+			       &rect,
+			       widget,
+			       "button",
+			       x*minesize, y*minesize,
+			       minesize, minesize);
 		if (y == 0) {	/* top row only */
 			gdk_draw_line(widget->window,	/* top */
 			              dots,
@@ -383,7 +379,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	} else {	/* draw shadow around possible mine location */
 		gtk_paint_box (widget->style,
 			       widget->window,
-			       GTK_STATE_SELECTED,
+			       clicked ? GTK_STATE_ACTIVE : GTK_STATE_SELECTED,
 			       clicked ? GTK_SHADOW_IN : GTK_SHADOW_OUT,
 			       &rect,
 			       widget,
@@ -749,7 +745,7 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
                         continue;
                 if (mfield->mines[c2].down) {
                         mfield->mines[c2].down = 0;
-                        if (really) {
+                        if (really && (mfield->mines[c2].shown == 0)) {
 				mfield->mines[c2].shown = 1;
 				mfield->shown++;
                                 if (mfield->mines[c2].mined == 1) {
