@@ -646,6 +646,7 @@ main (int argc, char *argv[])
 
         window = gnome_app_new("gnomine", _("Gnome Mines"));
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
+	gtk_window_set_policy(GTK_WINDOW (window), TRUE, TRUE, TRUE);
 
 	appbar = GNOME_APPBAR (gnome_appbar_new(FALSE, FALSE, FALSE));
 	gnome_app_set_statusbar(GNOME_APP (window), GTK_WIDGET (appbar));
@@ -757,8 +758,6 @@ main (int argc, char *argv[])
 	gtk_widget_show(all_boxes);
 
 	new_game(mfield, NULL);
-
-        /* gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE); */
 
         gtk_widget_show(window);
 

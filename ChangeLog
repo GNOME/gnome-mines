@@ -1,3 +1,8 @@
+2001-07-10  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* gnomine.c (main): Set windows policy to allow_shrink and
+	  allow_grow.
+
 2001-07-06  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
        * gnomine.c:
