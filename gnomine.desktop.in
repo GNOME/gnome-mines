@@ -1,0 +1,8 @@
+[Desktop Entry]
+_Name=Gnome Mines
+_Comment=Gnome Mines game
+Exec=gnomine
+Icon=gnome-gnomine.png
+Terminal=0
+Type=Application
+Categories=Application;Game;
