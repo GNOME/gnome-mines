@@ -1,3 +1,9 @@
+2003-07-02  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Disabled window resizing for the 2.3.4 release
+	because it doesn't quite work right (sorry Steve, didn't get the
+	fixes done in time).
+
 2003-06-29  Steve Chaplin   <stevech1097@yahoo.com.au>
  
         * minefield.c (gtk_minefield_randomize): Replace the randomize
