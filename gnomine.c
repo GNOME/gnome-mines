@@ -5,6 +5,7 @@
  * Score support: horape@compendium.com.ar
  *
  */
+#include <config.h>
 #include <gtk/gtk.h>
 #include <gnome.h>
 #include <libgnomeui/gnome-session.h>
@@ -469,6 +470,20 @@ int main(int argc, char *argv[])
 	
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
+
+	textdomain (PACKAGE);
+#ifdef ENABLE_NLS
+#define ELEMENTS(x) (sizeof(x) / sizeof(x[0]))
+	{
+	  int i;
+	  for (i = 0; i < ELEMENTS(mainmenu); i++)
+	    mainmenu[i].label = gettext(mainmenu[i].label);
+	  for (i = 0; i < ELEMENTS(gamemenu); i++)
+	    gamemenu[i].label = gettext(gamemenu[i].label);
+	  for (i = 0; i < ELEMENTS(fsize2names); i++)
+	    fsize2names[i] = gettext(fsize2names[i]);
+	}
+#endif /* ENABLE_NLS */
 
 	window = gnome_app_new("gnomine", _("Gnome mines"));
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
