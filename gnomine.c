@@ -111,6 +111,8 @@ void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 	gtk_widget_hide (mfield);
 	gtk_widget_show (rbutton);
 
+	gtk_widget_grab_focus(rbutton);
+
 	games_clock_stop(GAMES_CLOCK(clk)); 
 }
 
@@ -133,6 +135,8 @@ void lose_game(GtkWidget *widget, gpointer data)
 {
         show_face(pm_sad);
 
+	gtk_widget_grab_focus(mbutton);
+
         games_clock_stop(GAMES_CLOCK(clk));
 }
 
@@ -144,6 +148,8 @@ void win_game(GtkWidget *widget, gpointer data)
 
 
         games_clock_stop(GAMES_CLOCK(clk));
+
+	gtk_widget_grab_focus(mbutton);
 
         show_face(pm_win);
 
@@ -718,20 +724,15 @@ main (int argc, char *argv[])
 			  0, 0);
         gtk_widget_show (align);
   
-	gtk_widget_push_visual (gdk_rgb_get_visual ());
-	gtk_widget_push_colormap (gdk_rgb_get_colormap ());
-	gtk_widget_pop_colormap ();
-	gtk_widget_pop_visual ();
-
 	box = gtk_vbox_new(FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (align), box);
 	mfield = gtk_minefield_new();
-	gtk_box_pack_start(GTK_BOX(box), mfield, FALSE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(box), mfield, TRUE, TRUE, 0);
 
 	rbutton = gtk_button_new_with_label ("Press to resume");
-	gtk_signal_connect (GTK_OBJECT(rbutton), "released", 
+	gtk_signal_connect (GTK_OBJECT(rbutton), "clicked", 
 			    GTK_SIGNAL_FUNC (resume_game_cb), NULL);
-	gtk_box_pack_start(GTK_BOX(box), rbutton, TRUE, FALSE, 0);
+	gtk_box_pack_start(GTK_BOX(box), rbutton, TRUE, TRUE, 0);
 	gtk_widget_show (box);
 
         setup_mode(mfield, fsize);
@@ -750,7 +751,7 @@ main (int argc, char *argv[])
 	gtk_widget_show(mfield);
 
         status_table = gtk_table_new(1, 4, TRUE);
-	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, TRUE, TRUE, 0);
+	gtk_box_pack_start(GTK_BOX(all_boxes), status_table, FALSE, TRUE, 0);
 	label = gtk_label_new(_("Flags:"));
 	gtk_table_attach(GTK_TABLE(status_table), label,
 			 0, 1, 0, 1, 0, 0, 3, 3);

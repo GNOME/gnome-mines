@@ -1,3 +1,17 @@
+2002-02-17  James Henstridge  <james@daa.com.au>
+
+	* gnomine.c (main): use the "clicked" signal for the "Press to
+	resume" button rather than released.  This means you can resume
+	the game with spacebar.
+	(main): don't bother pushing the RGB visual.  This is all handled
+	for us by gtk these days.
+	(main): turn off expand for the status bar.  Makes things lay out
+	better.
+	(focus_out_cb): make the resume button grab focus when we focus
+	out.
+	(lose_game): make the face button grab focus when you lose.
+	(win_game): and when you win.
+
 2002-02-16  James Henstridge  <james@daa.com.au>
 
 	* gnomine.c (about): GnomeAbout isn't a GnomeDialog
