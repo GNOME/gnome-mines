@@ -1,3 +1,10 @@
+2003-10-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (install-data-local): Change the way gconf files are
+	installed. This should improve things for people building outside
+	the source tree. Also consolidated the score file list under a
+	variable. See bug #123192.
+
 2003-10-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c (gtk_mine_draw): Convert the drawing functions to
