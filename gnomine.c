@@ -8,6 +8,7 @@
  */
 #include <config.h>
 #include <gnome.h>
+#include <libgnomeui/gnome-window-icon.h>
 #include <string.h>
 
 #include "minefield.h"
@@ -575,6 +576,7 @@ main (int argc, char *argv[])
         gnome_init_with_popt_table("gnomine", VERSION, argc, argv,
 				   options, 0, NULL);
 
+	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gnomine.png");
 	client = gnome_master_client ();
 	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
 			    GTK_SIGNAL_FUNC (save_state), argv[0]);
