@@ -1,3 +1,10 @@
+2001-06-03  Juan Pablo Mendoza Mendoza <pablo_juan@yahoo.com>
+
+	* gnomine.c (main): Don't try to free the gnome_master_client to
+	  silent a gtk warning on exit.
+	* minefield.c (gtk_minefield_motion_notify): Don't do anything if
+	  x/y passes the minefiled boundarys, to a fix crash bug.
+
 2000-05-12  andreas Hyden  <a.hyden@cyberpoint.se>
 
 	* gnomine.desktop: Added Swedish translation.
