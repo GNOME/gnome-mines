@@ -1,5 +1,10 @@
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
+        * gnomine.c (main): Using new scores stock pixmap and the
+	                    stock buttons for OK & CANCEL
+	
+1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
 	* gnomine.c (main): Help is right-justified.
 
 Tue Feb 25 23:10 1998  Arturo Espinosa  <arturo@nuclecu.unam.mx>

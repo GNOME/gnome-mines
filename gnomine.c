@@ -351,12 +351,12 @@ void setup_game(GtkWidget *widget, gpointer data)
 	
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-	button = gtk_button_new_with_label(_("Ok"));
+        button = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
 			   GTK_SIGNAL_FUNC(do_setup), NULL);
 	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
         gtk_widget_show(button);
-	button = gtk_button_new_with_label(_("Cancel"));
+        button = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
 	gtk_signal_connect(GTK_OBJECT(button), "clicked",
                            (GtkSignalFunc)setupdialog_destroy,
 			   (gpointer)1);
@@ -379,7 +379,7 @@ GnomeUIInfo gamemenu[] = {
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
 
 	{GNOME_APP_UI_ITEM, N_("Scores..."), NULL, top_ten, NULL, NULL,
-	GNOME_APP_PIXMAP_STOCK, NULL, 0, 0, NULL},
+	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
 
 	{GNOME_APP_UI_ITEM, N_("Exit"), NULL, quit_game, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 0, 0, NULL},
