@@ -1,6 +1,9 @@
 
 #include <gtk/gtk.h>
 #include <gnome.h>
+#include <libgnomeui/gnome-session.h>
+#include <string.h>
+
 #include "minefield.h"
 
 #include "face-worried.xpm"
@@ -26,6 +29,7 @@ GtkWidget *face_box;
 guint ysize, xsize;
 guint nmines;
 guint fsize, fsc;
+char *session_id;
 
 void show_face(GtkWidget *pm)
 {
@@ -302,16 +306,129 @@ void setup_game(GtkWidget *widget, gpointer data)
 }
 
 GnomeMenuInfo gamemenu[] = {
-  {GNOME_APP_MENU_ITEM, _("New"), new_game, NULL},
-  {GNOME_APP_MENU_ITEM, _("Setup..."), setup_game, NULL},
-  {GNOME_APP_MENU_ITEM, _("Exit"), quit_game, NULL},
+  {GNOME_APP_MENU_ITEM, N_("New"), new_game, NULL},
+  {GNOME_APP_MENU_ITEM, N_("Setup..."), setup_game, NULL},
+  {GNOME_APP_MENU_ITEM, N_("Exit"), quit_game, NULL},
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
 };
 
 GnomeMenuInfo mainmenu[] = {
-  {GNOME_APP_MENU_SUBMENU, _("Game"), gamemenu, NULL},
+  {GNOME_APP_MENU_SUBMENU, N_("Game"), gamemenu, NULL},
   {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}
 };
+
+/* A little helper function.  */
+static char *
+nstr (int n)
+{
+  char buf[20];
+  sprintf (buf, "%d", n);
+  return strdup (buf);
+}
+
+static int
+save_state (gpointer client_data, GnomeSaveStyle save_style,
+	    int is_shutdown, GnomeInteractStyle interact_style,
+	    int is_fast)
+{
+  char *argv[20];
+  int i = 0, j;
+  gint xpos, ypos;
+
+  gdk_window_get_origin (window->window, &xpos, &ypos);
+
+  argv[i++] = (char *) client_data;
+  argv[i++] = "-x";
+  argv[i++] = nstr (xsize);
+  argv[i++] = "-y";
+  argv[i++] = nstr (ysize);
+  argv[i++] = "-n";
+  argv[i++] = nstr (nmines);
+  argv[i++] = "-f";
+  argv[i++] = nstr (fsize);
+  argv[i++] = "-a";
+  argv[i++] = nstr (xpos);
+  argv[i++] = "-b";
+  argv[i++] = nstr (ypos);
+  argv[i++] = "-i";
+  argv[i++] = strdup (session_id);
+
+  gnome_session_set_restart_command (i, argv);
+  gnome_session_set_clone_command (i - 2, argv);
+
+  for (j = 2; j < i; j += 2)
+    free (argv[j]);
+
+  return 1;
+}
+
+static int
+parse_args (int argc, char *argv[])
+{
+  int x_set = 0, y_set = 0, nmines_set = 0, fsize_set = 0;
+  int set_pos = 0;
+  int i;
+  char *id = NULL;
+  gint xpos, ypos;
+
+  /* FIXME: use GNU getopt.  Add --help, --version.  Error if option
+     unrecognized.  */
+  for (i = 0; i < argc - 1; ++i)
+    {
+      if (! strcmp (argv[i], "-x"))
+	{
+	  x_set = 1;
+	  xsize = atoi (argv[++i]);
+	}
+      else if (! strcmp (argv[i], "-y"))
+	{
+	  y_set = 1;
+	  ysize = atoi (argv[++i]);
+	}
+      else if (! strcmp (argv[i], "-n"))
+	{
+	  nmines_set = 1;
+	  nmines = atoi (argv[++i]);
+	}
+      else if (! strcmp (argv[i], "-f"))
+	{
+	  fsize_set = 1;
+	  fsize = atoi (argv[++i]);
+	}
+      else if (! strcmp (argv[i], "-a"))
+	{
+	  /* Stupid argument name; will change with long opts.  */
+	  xpos = atoi (argv[++i]);
+	  set_pos |= 1;
+	}
+      else if (! strcmp (argv[i], "-b"))
+	{
+	  /* Stupid argument name; will change with long opts.  */
+	  ypos = atoi (argv[++i]);
+	  set_pos |= 2;
+	}
+      else if (! strcmp (argv[i], "-i"))
+	{
+	  /* Stupid argument name; will change with long opts.  */
+	  id = argv[++i];
+	}
+    }
+
+  if (set_pos == 3)
+    gtk_widget_set_uposition (window, xpos, ypos);
+
+  if (! x_set)
+    xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
+  if (! y_set)
+    ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
+  if (! nmines_set)
+    nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
+  if (! fsize_set)
+    fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
+
+  session_id = gnome_session_init (save_state, argv[0], NULL, NULL, id);
+  gnome_session_set_program (argv[0]);
+}
 
 int main(int argc, char *argv[])
 {
@@ -334,10 +451,7 @@ int main(int argc, char *argv[])
 
 	gnome_app_set_contents(GNOME_APP(window), all_boxes);
 
-	xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
-	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
-	nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
-	fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
+	parse_args (argc, argv);
 
         button_table = gtk_table_new(1, 3, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
