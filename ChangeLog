@@ -1,3 +1,7 @@
+1998-02-28 Arturo Espinosa  <arturo@nuclecu.unam.mx>
+
+	* gnomine.c: Using a spinbutton for the properties dialog.
+
 1998-02-26 Arturo Espinosa  <arturo@nuclecu.unam.mx>
 
 	* minefield.[ch]: The bitmaps for the flags and the mines are now 

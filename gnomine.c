@@ -185,7 +185,7 @@ void do_setup(GtkWidget *widget, gpointer data)
         xsize  = atoi(gtk_entry_get_text(GTK_ENTRY(xentry)));
 	ysize  = atoi(gtk_entry_get_text(GTK_ENTRY(yentry)));
         nmines = atoi(gtk_entry_get_text(GTK_ENTRY(mentry)));
-        minesize = atoi(gtk_entry_get_text(GTK_ENTRY(sentry)));
+        minesize = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(sentry));
 	fsize  = fsc;
 	
         setup_mode(mfield, fsize);
@@ -241,7 +241,8 @@ void setup_game(GtkWidget *widget, gpointer data)
         GtkWidget *label;
 	GtkWidget *button;
 	GtkWidget *frame;
-	gchar numstr[8];
+        GtkObject *adj;
+        gchar numstr[8];
 	
         if (setupdialog) return;
 
@@ -305,11 +306,11 @@ void setup_game(GtkWidget *widget, gpointer data)
 	label = gtk_label_new(_("Mine Size:"));
 	gtk_box_pack_start(GTK_BOX(box2), label, TRUE, TRUE, 0);
 	gtk_widget_show(label);
-	sentry = gtk_entry_new();
-	gtk_widget_set_usize(sentry, 50, -1);
+
+        adj = gtk_adjustment_new(minesize, 2, 99, 1, 1, 10);
+	sentry = gtk_spin_button_new(GTK_ADJUSTMENT(adj), 10, 0);
 	gtk_box_pack_start(GTK_BOX(box2), sentry, FALSE, TRUE, 0);
-	sprintf(numstr, "%d", minesize);
-	gtk_entry_set_text(GTK_ENTRY(sentry),numstr);
+	gtk_spin_button_set_digits(GTK_SPIN_BUTTON(sentry), minesize);
 	gtk_widget_show(sentry);
 	gtk_widget_show(box2);
 
