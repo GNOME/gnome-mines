@@ -1,3 +1,17 @@
+2002-04-20  Bastien Nocera  <hadess@hadess.net>
+
+	* Makefile.am:
+	* gnomine.c: (set_flabel), (new_game), (preferences_callback),
+	(nstr), (main):
+	* minefield.c: (_setup_sign), (gtk_mine_draw),
+	(gtk_minefield_lose), (gtk_minefield_win),
+	(gtk_minefield_toggle_mark), (gtk_minefield_button_press),
+	(gtk_minefield_button_release), (gtk_minefield_class_init),
+	(gtk_minefield_new), (gtk_minefield_get_type),
+	(gtk_minefield_restart):
+	* minefield.h: ported to GObject, fixed resize bug, it's now
+	fully ported to Gnome2
+
 2002-04-19  Bastien Nocera  <hadess@hadess.net>
 
 	* Makefile.am:

@@ -16,6 +16,7 @@ enum {
 	MINE_QUESTION
 };
 
+#define TYPE_GTK_MINEFIELD (gtk_minefield_get_type ())
 #define GTK_MINEFIELD(obj) GTK_CHECK_CAST(obj, gtk_minefield_get_type(), GtkMineField)
 #define GTK_MINEFIELD_CLASS(klass) GTK_CHECK_CLASS_CAST(klass, gtk_minefield_get_type(), GtkMineFieldClass);
 #define GTK_IS_MINEFIELD(obj) GTK_CHECK_TYPE(obj, gtk_minefield_get_type())
@@ -45,9 +46,9 @@ struct _Sign
     };
   
 struct _GtkMineField {
-        GtkWidget widget;
-        guint xsize, ysize;
-        guint mcount;
+	GtkWidget widget;
+	guint xsize, ysize;
+	guint mcount;
 	mine *mines;
 	guint flag_count;
 	guint shown;
@@ -61,6 +62,8 @@ struct _GtkMineField {
         sign flag;
         sign mine;
 	sign question;
+
+	gboolean started;
 
 	struct {
 		PangoLayout *layout;

@@ -98,7 +98,7 @@ static void _setup_sign (sign *signp, const char **data, guint minesize)
 					   &signp->mask, 127);
 
 	gdk_pixbuf_unref (image);
-        gdk_window_get_size(signp->pixmap, &(signp->width), &(signp->height));
+        gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
 }
 
 static void gtk_minefield_setup_signs(GtkWidget *widget)
@@ -308,8 +308,9 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
                               y*minesize+minesize-1);
 
 	} else {	/* draw shadow around possible mine location */
-		gtk_draw_shadow(widget->style, widget->window,
+		gtk_paint_shadow(widget->style, widget->window,
 		                GTK_WIDGET_STATE (widget), GTK_SHADOW_OUT,
+				NULL, widget, NULL,
 		                x*minesize, y*minesize, minesize, minesize);
         }
 
@@ -328,7 +329,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		gdk_gc_set_clip_origin(widget->style->black_gc,
 		                       x * minesize + (minesize - mfield->question.width) / 2, 
 		                       y * minesize + (minesize - mfield->question.height) / 2);
-		gdk_draw_pixmap (widget->window,
+		gdk_draw_drawable (widget->window,
 		                 widget->style->black_gc,
 		                 mfield->question.pixmap, 0, 0,
 		                 x * minesize + (minesize - mfield->question.width) / 2, 
@@ -342,7 +343,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		gdk_gc_set_clip_origin(widget->style->black_gc,
 					       x * minesize + (minesize - mfield->flag.width) / 2, 
 					       y * minesize + (minesize - mfield->flag.height) / 2);
-		gdk_draw_pixmap (widget->window,
+		gdk_draw_drawable (widget->window,
 				 widget->style->black_gc,
 		                 mfield->flag.pixmap, 0, 0,
 		                 x * minesize + (minesize - mfield->flag.width) / 2, 
@@ -386,7 +387,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 					       y*minesize + (minesize - mfield->mine.height) / 2);
 		}
 
-	        gdk_draw_pixmap (widget->window,
+	        gdk_draw_drawable (widget->window,
 				 widget->style->black_gc,
 		                 mfield->mine.pixmap, 0, 0,
 		                 x * minesize + (minesize - mfield->mine.width) / 2,
@@ -515,8 +516,9 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
 
 static void gtk_minefield_lose(GtkMineField *mfield)
 {
-        gtk_signal_emit(GTK_OBJECT(mfield),
-                        minefield_signals[EXPLODE_SIGNAL]);
+        g_signal_emit(GTK_OBJECT(mfield),
+                        minefield_signals[EXPLODE_SIGNAL],
+			0, NULL );
         mfield->lose = 1;
         gtk_minefield_draw(mfield, NULL);
 }
@@ -535,15 +537,17 @@ static void gtk_minefield_win(GtkMineField *mfield)
 				mfield->mines[c].marked = MINE_MARKED; /* mark it */
 				gtk_mine_draw(mfield, x, y);           /* draw it */
 				mfield->flag_count++;                  /* up the count */
-				gtk_signal_emit(GTK_OBJECT(mfield),    /* display the count */
-						minefield_signals[MARKS_CHANGED_SIGNAL]);
+				g_signal_emit(GTK_OBJECT(mfield),    /* display the count */
+						minefield_signals[MARKS_CHANGED_SIGNAL],
+						0, NULL);
 			}
                         }
                 }
 
 	/* now stop the clock.  (MARKS_CHANGED_SIGNAL starts it) */
-        gtk_signal_emit(GTK_OBJECT(mfield),
-                        minefield_signals[WIN_SIGNAL]);
+        g_signal_emit(GTK_OBJECT(mfield),
+                        minefield_signals[WIN_SIGNAL],
+			0, NULL);
 
         mfield->win = 1;
 }
@@ -639,8 +643,9 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 		break;
 		}
 
-		gtk_signal_emit(GTK_OBJECT(mfield),
-				minefield_signals[MARKS_CHANGED_SIGNAL]);
+		g_signal_emit(GTK_OBJECT(mfield),
+				minefield_signals[MARKS_CHANGED_SIGNAL],
+				0, NULL);
 	if (mfield->shown == mfield->xsize * mfield->ysize-mfield->mcount) {
                         gtk_minefield_win(mfield);
 		}
@@ -802,8 +807,9 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
                         gtk_mine_draw(mfield, x, y);
                 }
 		if (event->button == 1 || event->button == 2) {
-			gtk_signal_emit(GTK_OBJECT(mfield),
-					minefield_signals[LOOK_SIGNAL]);
+			g_signal_emit(GTK_OBJECT(mfield),
+					minefield_signals[LOOK_SIGNAL],
+					0, NULL);
 		}
         }
         return FALSE;
@@ -838,8 +844,9 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
                         break;
                 }
 		if (!mfield->lose && !mfield->win) {
-			gtk_signal_emit(GTK_OBJECT(mfield),
-					minefield_signals[UNLOOK_SIGNAL]);
+			g_signal_emit(GTK_OBJECT(mfield),
+					minefield_signals[UNLOOK_SIGNAL],
+					0, NULL);
 		}
 		mfield->mines[mfield->cdown].down = 0;
                 mfield->cdown = -1;
@@ -876,48 +883,51 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
         class->win = NULL;
   
 	minefield_signals[MARKS_CHANGED_SIGNAL] =
-		gtk_signal_new("marks_changed",
-			       GTK_RUN_FIRST,
-			       GTK_CLASS_TYPE (object_class),
-			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, marks_changed),
-			       gtk_signal_default_marshaller,
-			       GTK_TYPE_NONE,
+		g_signal_new("marks_changed",
+				G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, marks_changed),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
 			       0);
+
 	minefield_signals[EXPLODE_SIGNAL] =
-		gtk_signal_new("explode",
-			       GTK_RUN_FIRST,
-			       GTK_CLASS_TYPE (object_class),
-			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, explode),
-			       gtk_signal_default_marshaller,
-			       GTK_TYPE_NONE,
+		g_signal_new("explode",
+				G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, explode),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
 			       0);
 	minefield_signals[LOOK_SIGNAL] =
-		gtk_signal_new("look",
-			       GTK_RUN_FIRST,
-			       GTK_CLASS_TYPE (object_class),
-			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, look),
-			       gtk_signal_default_marshaller,
-			       GTK_TYPE_NONE,
+		g_signal_new("look",
+				G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, look),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
 			       0);
 	minefield_signals[UNLOOK_SIGNAL] =
-		gtk_signal_new("unlook",
-			       GTK_RUN_FIRST,
-			       GTK_CLASS_TYPE (object_class),
-			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, unlook),
-			       gtk_signal_default_marshaller,
-			       GTK_TYPE_NONE,
+		g_signal_new("unlook",
+				G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, unlook),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
 			       0);
 	minefield_signals[WIN_SIGNAL] =
-		gtk_signal_new("win",
-			       GTK_RUN_FIRST,
-			       GTK_CLASS_TYPE (object_class),
-			       GTK_SIGNAL_OFFSET(GtkMineFieldClass, win),
-			       gtk_signal_default_marshaller,
-			       GTK_TYPE_NONE,
+		g_signal_new("win",
+				G_OBJECT_CLASS_TYPE (object_class),
+			       G_SIGNAL_RUN_FIRST,
+			       G_STRUCT_OFFSET(GtkMineFieldClass, win),
+			       NULL, NULL,
+			       g_cclosure_marshal_VOID__VOID,
+			       G_TYPE_NONE,
 			       0);
-#if 0
-	gtk_object_class_add_signals(object_class, minefield_signals, LAST_SIGNAL);
-#endif
 }
 
 static void gtk_minefield_init (GtkMineField *mfield)
@@ -971,8 +981,10 @@ GtkWidget* gtk_minefield_new(void)
 {
         GtkMineField *mfield;
         
-	mfield = gtk_type_new(gtk_minefield_get_type());
+	mfield = GTK_MINEFIELD (g_object_new (TYPE_GTK_MINEFIELD,
+				NULL));
 	mfield->mines = NULL;
+	mfield->started = FALSE;
 	gtk_minefield_set_size(mfield, 0, 0);
 
 	mfield->cdown = -1;
@@ -981,22 +993,26 @@ GtkWidget* gtk_minefield_new(void)
 
 guint gtk_minefield_get_type ()
 {
-        static guint minefield_type = 0;
+        static GType minefield_type = 0;
         
-	if (!minefield_type) {
-                GtkTypeInfo minefield_info =
+	if (minefield_type == 0) {
+                static GTypeInfo minefield_info =
                         {
-                                "GtkMineField",
-                                sizeof (GtkMineField),
                                 sizeof (GtkMineFieldClass),
-                                (GtkClassInitFunc) gtk_minefield_class_init,
-                                (GtkObjectInitFunc) gtk_minefield_init,
-                                /* reserved_1 */ NULL,
-        			/* reserved_2 */ NULL,
-        			(GtkClassInitFunc) NULL,
+				NULL, /* base_init */
+				NULL, /* base_finalize */
+                                (GClassInitFunc) gtk_minefield_class_init,
+				NULL, /* class_finalize */
+				NULL, /* class_data */
+				sizeof (GtkMineField),
+				0, /* n_preallocs */
+                                (GInstanceInitFunc) gtk_minefield_init,
                         };
                         
-                        minefield_type = gtk_type_unique (gtk_widget_get_type (), &minefield_info);
+                        minefield_type = g_type_register_static (GTK_TYPE_WIDGET,
+					"GtkMineField",
+					&minefield_info,
+					0);
         }
         
         return minefield_type;
@@ -1049,5 +1065,9 @@ void gtk_minefield_restart(GtkMineField *mfield)
 		time((time_t *)&secs);
 		init_random(secs);
 	}
+	if (mfield->started == FALSE)
+		mfield->started = TRUE;
+	else
+		gtk_minefield_draw(mfield, NULL);
 }
 

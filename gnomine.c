@@ -80,10 +80,10 @@ void quit_game(GtkWidget *widget, gpointer data)
 
 void set_flabel(GtkMineField *mfield)
 {
-	char val[16];
+	char *val;
 
-	sprintf(val, "%d/%d", mfield->flag_count, mfield->mcount);
-	gtk_label_set(GTK_LABEL(flabel), val);
+	val = g_strdup_printf ("%d/%d", mfield->flag_count, mfield->mcount);
+	gtk_label_set_text (GTK_LABEL(flabel), val);
 }
 
 void
@@ -109,7 +109,6 @@ void new_game(GtkWidget *widget, gpointer data)
 
         show_face(pm_smile);
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
-	gtk_widget_draw(mfield, NULL);
 	set_flabel(GTK_MINEFIELD(mfield));
 
 	gtk_widget_hide (rbutton);
@@ -344,23 +343,23 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 	GtkWidget *table2;
 	GtkWidget *label2;
         GtkObject *adj;
-        gchar numstr[8];
+        char *numstr;
 	
 	if (pref_dialog)
 		return;
 
 	table = gtk_table_new (2, 2, FALSE);
-	gtk_container_border_width (GTK_CONTAINER (table), GNOME_PAD);
+	gtk_container_set_border_width (GTK_CONTAINER (table), GNOME_PAD);
 	gtk_widget_show (table);
 	gtk_table_set_row_spacings (GTK_TABLE (table), GNOME_PAD);
 	gtk_table_set_col_spacings (GTK_TABLE (table), GNOME_PAD);
 
 	frame = gtk_frame_new (_("Field size"));
-	gtk_container_border_width (GTK_CONTAINER (frame), 0);
+	gtk_container_set_border_width (GTK_CONTAINER (frame), 0);
 	gtk_widget_show (frame);
 
 	vbox = gtk_vbox_new (TRUE, 0);
-	gtk_container_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
+	gtk_container_set_border_width (GTK_CONTAINER (vbox), GNOME_PAD);
 	gtk_widget_show (vbox);
 
 	button = gtk_radio_button_new_with_label(NULL, _("Tiny"));
@@ -411,12 +410,12 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
 	cframe = gtk_frame_new (_("Custom size"));
-	gtk_container_border_width (GTK_CONTAINER (cframe), 0);
+	gtk_container_set_border_width (GTK_CONTAINER (cframe), 0);
 	gtk_widget_set_sensitive (cframe, fsize == 3);
 	gtk_widget_show (cframe);
 
 	table2 = gtk_table_new (3, 2, FALSE);
-	gtk_container_border_width (GTK_CONTAINER (table2), GNOME_PAD);
+	gtk_container_set_border_width (GTK_CONTAINER (table2), GNOME_PAD);
 	gtk_widget_show (table2);
 	gtk_table_set_row_spacings (GTK_TABLE (table2), GNOME_PAD);
 
@@ -427,10 +426,10 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
 	xentry = gtk_entry_new ();
-	gtk_widget_set_usize (xentry, 50, -1);
+	gtk_widget_set_size_request (xentry, 50, -1);
 	gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	sprintf(numstr, "%d", xsize);
+	numstr = g_strdup_printf ("%d", xsize);
 	gtk_entry_set_text(GTK_ENTRY(xentry),numstr);
 	gtk_widget_show (xentry);
 
@@ -441,10 +440,10 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
 	yentry = gtk_entry_new ();
-	gtk_widget_set_usize (yentry, 50, -1);
+	gtk_widget_set_size_request (yentry, 50, -1);
 	gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	sprintf(numstr, "%d", ysize);
+	numstr = g_strdup_printf("%d", ysize);
 	gtk_entry_set_text(GTK_ENTRY(yentry),numstr);
 	gtk_widget_show (yentry);
 
@@ -455,10 +454,10 @@ void preferences_callback (GtkWidget *widget, gpointer data)
 			GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
 
 	mentry = gtk_entry_new ();
-	gtk_widget_set_usize (mentry, 50, -1);
+	gtk_widget_set_size_request (mentry, 50, -1);
 	gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, GTK_FILL, GTK_EXPAND
 			| GTK_FILL, 0, 0);
-	sprintf(numstr, "%d", nmines);
+	numstr = g_strdup_printf ("%d", nmines);
 	gtk_entry_set_text(GTK_ENTRY(mentry),numstr);
 	gtk_widget_show (mentry);
 
@@ -534,9 +533,10 @@ GnomeUIInfo mainmenu[] = {
 static char *
 nstr (int n)
 {
-	char buf[20];
-	sprintf (buf, "%d", n);
-	return strdup (buf);
+	char *buf;
+
+	buf = g_strdup_printf ("%d", n);
+	return buf;
 }
 
 static int
@@ -611,8 +611,11 @@ main (int argc, char *argv[])
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-        gnome_init_with_popt_table("gnomine", VERSION, argc, argv,
-				   options, 0, NULL);
+	gnome_program_init ("gnomine", VERSION,
+			LIBGNOMEUI_MODULE,
+			argc, argv,
+			GNOME_PARAM_POPT_TABLE, options,
+			NULL);
 
 	/* Get the default GConfClient */
 	conf_client = gconf_client_get_default ();
@@ -623,7 +626,7 @@ main (int argc, char *argv[])
 			    GTK_SIGNAL_FUNC (save_state), argv[0]);
 
 	if (xpos > 0 || ypos > 0)
-	  gtk_widget_set_uposition (window, xpos, ypos);
+	  gdk_window_move (GTK_WIDGET(window)->window, xpos, ypos);
 		
 	if (xsize == -1)
 		xsize = gconf_client_get_int (conf_client,
@@ -665,7 +668,7 @@ main (int argc, char *argv[])
 
         window = gnome_app_new("gnomine", _("Gnome Mines"));
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-	gtk_window_set_policy(GTK_WINDOW (window), TRUE, TRUE, TRUE);
+	gtk_window_set_resizable (GTK_WINDOW(window), FALSE);
 
 	appbar = GNOME_APPBAR (gnome_appbar_new(FALSE, FALSE, FALSE));
 	gnome_app_set_statusbar(GNOME_APP (window), GTK_WIDGET (appbar));
@@ -687,7 +690,7 @@ main (int argc, char *argv[])
 	mbutton = gtk_button_new();
 	g_signal_connect(GTK_OBJECT(mbutton), "clicked",
                            GTK_SIGNAL_FUNC(new_game), NULL);
-        gtk_widget_set_usize(mbutton, 38, 38);
+        gtk_widget_set_size_request (mbutton, 38, 38);
 	gtk_table_attach(GTK_TABLE(button_table), mbutton, 1, 2, 0, 1,
 			 0, 0, 5, 5);
 
