@@ -411,7 +411,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	}
 }
 
-void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
+static void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
 {
 	guint x1, y1, x2, y2, x, y, minesize;
 

@@ -1,3 +1,8 @@
+2003-06-17  William Jon McCann  <mccann@jhu.edu>
+
+	* minefield.c: 
+	* gnomine.c: Fixed compiler warnings.
+
 2003-06-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c: Fixed silly bug where the face didn't change. It
