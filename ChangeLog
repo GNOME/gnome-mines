@@ -1,3 +1,8 @@
+2004-08-17  callum  <callum@spooky-possum.org>
+
+	* gnomine.c: Fix up the checking code for nmines so that we can't
+	set nmines too high with gconf-editor.
+
 2004-08-08  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (fill_score_list): Change the high score reporting to

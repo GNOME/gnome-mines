@@ -519,7 +519,7 @@ verify_ranges (void)
 {
 	xsize    = range (xsize, XSIZE_MIN, XSIZE_MAX);
 	ysize    = range (ysize, YSIZE_MIN, YSIZE_MAX);
-	nmines   = range (nmines, 1, xsize * ysize);
+	nmines   = range (nmines, 1, xsize * ysize - 2);
 	fsize    = range (fsize,  0, 3);
 }
 
