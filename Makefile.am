@@ -25,7 +25,7 @@ EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-wi
 
 install-data-local:
 	$(mkinstalldirs) $(Gamesdir)
-	$(INSTALL_DATA) $(srcdir)/gnomine.desktop $(datadir)/apps/Games/"Gnome Mines.desktop"
+	$(INSTALL_DATA) $(srcdir)/gnomine.desktop $(Gamesdir)/gnomine.desktop
 	touch $(scoredir)/gnomine.scores
 	chown games.games $(scoredir)/samegnome.scores
 	chmod 664 $(scoredir)/samegnome.scores
