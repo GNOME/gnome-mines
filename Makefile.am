@@ -25,7 +25,9 @@ gnomine_LDADD = \
 	$(INTLLIBS)
 
 schemadir   = $(sysconfdir)/gconf/schemas
-schema_DATA = gnomine.schemas
+schema_in_files = gnomine.schemas.in
+schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+@INTLTOOL_SCHEMAS_RULE@
 
 pixmapdir   = $(datadir)/pixmaps/gnomine/
 pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
