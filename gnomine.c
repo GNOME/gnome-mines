@@ -32,6 +32,7 @@
 #include "minefield.h"
 #include "games-clock.h"
 #include "games-frame.h"
+#include "games-scores-dialog.h"
 
 /* Limits for various minefield properties */
 #define XSIZE_MIN 4
@@ -158,172 +159,32 @@ set_flabel (GtkMineField *mfield)
 }
 
 static void
-update_score_state (void)
-{
-        gchar **names = NULL;
-        gfloat *scores = NULL;
-	time_t *scoretimes = NULL;
-	gint top;
-	gchar buf[64];
-
-	if (fsize<4)
-		strncpy (buf, fsize2names[fsize], sizeof(buf));
-
-	top = gnome_score_get_notable ("gnomine", buf, &names, &scores, &scoretimes);
-	if (top > 0) {
-		gtk_widget_set_sensitive (gamemenu[2].widget, TRUE);
-		g_strfreev (names);
-		g_free (scores);
-		g_free (scoretimes);
-	} else { 
-		gtk_widget_set_sensitive (gamemenu[2].widget, FALSE);
-	}
-}
-
-static void 
-fill_score_list (GtkListStore *list, gint level)
-{
-	int i,n;
-	GtkTreeIter iter;
-	gchar **names = NULL;
-	gfloat *scores = NULL;
-	time_t *scoretimes = NULL;
-	gchar **name;
-	gfloat *score;
-	gchar * ss;
-
-	gtk_list_store_clear (list);
-
-	n = gnome_score_get_notable ("gnomine", fsize2names[level], &names, 
-				     &scores, &scoretimes);
-
-	i = 1;
-	name = names;
-	score = scores;
-	while (n--) {
-		int intscore;
-
-		intscore = rint (100*(*score));
-		/* Translators: this is for a minutes, seconds time display. */
-		ss = g_strdup_printf (_("%dm %ds"), intscore/100, intscore%100);
-		gtk_list_store_append (list, &iter);
-		gtk_list_store_set (list, &iter, 0, *name, 1, ss, -1);
-		g_free (ss);
-		name++;
-		score++;
-	}
-	
-	g_free (names);
-	g_free (scores);
-	g_free (scoretimes);
-}
-
-static void 
-change_score_display (GtkWidget *widget, GtkListStore *list)
-{
-	fill_score_list (list, 
-			 gtk_combo_box_get_active (GTK_COMBO_BOX (widget)));
-}
-
-static void
 show_scores (gchar *level, guint pos)
 {
-	int i, n;
-	GtkWidget *dialog;
-	GtkWidget *hbox;
-	GtkWidget *vbox;
-	GtkWidget *combo;
-	GtkWidget *scroll;
-	GtkWidget *listview;
-	GtkTreeViewColumn *column;
-        GtkTreeSelection * select;
-        GtkListStore *list;
-	GtkCellRenderer *renderer;
-	GtkTreePath * path;
-	GtkWidget * label;
-	gchar *lstr;
-	GtkWidget * button;
+	int i;
+	static GtkWidget *dialog = NULL;
 
-	dialog = gtk_dialog_new_with_buttons (_("GNOME Mines Scores"),
-					      GTK_WINDOW (window), 
-					      GTK_DIALOG_DESTROY_WITH_PARENT |
-					      GTK_DIALOG_NO_SEPARATOR,
-					      NULL);
-	/* FIXME: There has to be an easier way to force the default
-	 * widget. */
-	button = gtk_dialog_add_button (GTK_DIALOG (dialog), 
-					GTK_STOCK_CLOSE, GTK_RESPONSE_ACCEPT);
-	gtk_widget_grab_focus (button);
-
-	vbox = gtk_vbox_new (FALSE, 0);
-	gtk_container_add (GTK_CONTAINER (GTK_DIALOG (dialog)->vbox), vbox);
-
-	hbox = gtk_hbox_new (FALSE, 5);
-	gtk_box_pack_start (GTK_BOX (vbox), hbox, FALSE, FALSE, 5);
-
-	lstr = g_strdup_printf ("<b>%s</b>", _("Size:"));
-	label = gtk_label_new (lstr);
-	gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
-	g_free (lstr);
-	gtk_box_pack_start (GTK_BOX (hbox), label, FALSE, FALSE, 5);	
-
-	combo = gtk_combo_box_new_text ();
-	gtk_box_pack_start (GTK_BOX (hbox), combo, TRUE, TRUE, 5);
-	n = 0;
-	for (i=0; i<4; i++) {
-		if (g_utf8_collate (level, fsize2names[i]) == 0)
-			n = i;
-		gtk_combo_box_append_text (GTK_COMBO_BOX (combo),
-					   _(fsize2names[i]));
+	if (dialog != NULL) {
+		gtk_window_present (GTK_WINDOW (dialog));
+	} else {
+		dialog = games_scores_dialog_new ("gnomine", _("GNOME Mines Scores"));
+		for (i=0; i<4; i++) {
+			games_scores_dialog_add_category (GAMES_SCORES_DIALOG (dialog),
+							  fsize2names[i],
+							  _(fsize2names[i]));
+		}
+		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
+						  fsize2names[fsize]);
+		games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (dialog),
+							      _("Size:"));	
+		games_scores_dialog_set_style (GAMES_SCORES_DIALOG (dialog),
+					       GAMES_SCORES_STYLE_TIME);
 	}
-	gtk_combo_box_set_active (GTK_COMBO_BOX (combo), n);
 
-	scroll = gtk_scrolled_window_new (NULL, NULL);
-	gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scroll),
-					GTK_POLICY_AUTOMATIC,
-					GTK_POLICY_AUTOMATIC);
-	gtk_widget_set_size_request (scroll, 250, 265);
-	gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scroll),
-					      GTK_SHADOW_ETCHED_IN);
-	gtk_box_pack_start (GTK_BOX (vbox), scroll, TRUE, TRUE, 0);
-
-	list = gtk_list_store_new (2, G_TYPE_STRING, G_TYPE_STRING);
-
-	g_signal_connect (G_OBJECT (combo), "changed", 
-			  G_CALLBACK (change_score_display), list);
-
-	fill_score_list (list, n);
-
-        listview = gtk_tree_view_new_with_model (GTK_TREE_MODEL (list));
-	renderer = gtk_cell_renderer_text_new ();
-        column = gtk_tree_view_column_new_with_attributes (_("Name"),
-                                                           renderer,
-                                                           "text", 0,
-                                                           NULL);
-        gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
-                                     GTK_TREE_VIEW_COLUMN (column));
-	renderer = gtk_cell_renderer_text_new ();
-        column = gtk_tree_view_column_new_with_attributes (_("Time"),
-                                                           renderer,
-                                                           "text", 1,
-                                                           NULL);
-	g_object_set (G_OBJECT (renderer), "xalign", 1.0, NULL);
-        gtk_tree_view_append_column (GTK_TREE_VIEW (listview),
-                                     GTK_TREE_VIEW_COLUMN (column));
-
-        select = gtk_tree_view_get_selection (GTK_TREE_VIEW (listview));
-	if (pos > 0) {
-		path = gtk_tree_path_new_from_indices (pos-1, -1);
-		gtk_tree_selection_select_path (select, path);
-	}
-	                                      
-	gtk_container_add (GTK_CONTAINER (scroll), listview);
-
-	gtk_widget_show_all (dialog);
+	games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), pos);
 
 	gtk_dialog_run (GTK_DIALOG (dialog));
-
-	gtk_widget_destroy (dialog);
+	gtk_widget_hide (dialog);
 }
 
 static void
@@ -460,8 +321,6 @@ win_game (GtkWidget *widget, gpointer data)
 {
         gfloat score;
         int pos;
-        gchar buf[64];
-
 
         games_clock_stop (GAMES_CLOCK (clk));
 
@@ -473,19 +332,17 @@ win_game (GtkWidget *widget, gpointer data)
 	    score = (gfloat) (GAMES_CLOCK (clk)->stopped / 60) + 
 		    (gfloat) (GAMES_CLOCK (clk)->stopped % 60) / 100;
 
-            strncpy(buf, fsize2names[fsize], sizeof(buf));
-	    pos = gnome_score_log (score, buf, FALSE);
+	    pos = gnome_score_log (score, fsize2names[fsize], FALSE);
 	} else {
+	    /* FIXME: This is actually slightly broken by the new,
+	     * uniform high score widget which displays it as a time. */
 	    score = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (GAMES_CLOCK (clk)->stopped); 
 
-            strncpy(buf, fsize2names[fsize], sizeof(buf));
-	    pos = gnome_score_log (score, buf, TRUE);
+	    pos = gnome_score_log (score, fsize2names[fsize], TRUE);
 	}
 
-	update_score_state ();
-
-	show_scores (buf, pos);
+	show_scores (fsize2names[fsize], pos);
 }
 
 static void
@@ -619,7 +476,6 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 0;
 		if (i != fsize) {
 			fsize = CLAMP (i, 0, 3);
-			update_score_state ();
 			new_game (mfield, NULL);
 		}
 	}
@@ -1092,8 +948,6 @@ main (int argc, char *argv[])
         clk = games_clock_new ();
 	gtk_box_pack_start (GTK_BOX (status_box), clk, 
 			    FALSE, FALSE, 0); 
-
-	update_score_state ();
 
 	new_game (mfield, NULL);
 

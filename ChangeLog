@@ -1,3 +1,10 @@
+2005-01-05  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Use the generic games-scores-dialog rather than our
+	custom one. Also make scores permanently sensitive so people can
+	view the high score lists for the other sizes. Also cleanup some
+	unnecessarily compilcated code to do with the scoring.
+
 2005-01-03  Richard Hoelscher  <rah@rahga.com>
 
 	* minefield.c (_setup_sign): Preimage API update, uri -> file.
