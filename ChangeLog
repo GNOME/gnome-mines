@@ -11,7 +11,7 @@
 2003-05-28  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c: Use gtk_window_present for displaying dialogs.
-	Fixes bug #113893, thanks Steve.
+	Fixes bug #113893, thanks to Steve Chaplin.
 
 2003-05-21  Callum McKenzie  <callum@physics.otago.ac.nz>
 
