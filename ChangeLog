@@ -1,3 +1,11 @@
+2002-05-26  Chris Lyttle <chris@wilddev.net>
+
+	* help/C/Makefile.am: updated for docs move
+	* help/C/gnome-mines-C.omf: delete for docs move
+	* help/C/gnome-mines.xml: delete for docs move
+	* help/C/gnomine-C.omf: add for docs move
+	* help/C/gnomine.xml: add for docs move
+	
 2002-05-05  Chris Lyttle <chris@wilddev.net>
 
 	* help/C/Makefile.am: updated for new format of SK 0.3.8.

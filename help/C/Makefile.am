@@ -1,7 +1,7 @@
 figdir = figures
-docname = gnome-mines
+docname = gnomine
 lang = C
-omffile = gnome-mines-C.omf
+omffile = gnomine-C.omf
 entities = legal.xml
 include $(top_srcdir)/xmldocs.make
 dist-hook: app-dist-hook
