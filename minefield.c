@@ -27,6 +27,7 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 #include <gnome.h>
+#include <games-preimage.h>
 #include "minefield.h"
 
 static struct {
@@ -110,19 +111,19 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
-	if (signp->pixbuf == NULL) {
+	if (signp->preimage == NULL) {
 		GError *error = NULL;
-		signp->pixbuf = gdk_pixbuf_new_from_file (file, &error);
-		if (signp->pixbuf == NULL)
+		signp->preimage = games_preimage_new_from_uri (file, &error);
+		if (signp->preimage == NULL)
 			g_error (error->message);
 	} else {
 		g_object_unref (signp->scaledpixbuf);
 	}
 
-        signp->scaledpixbuf = gdk_pixbuf_scale_simple (signp->pixbuf, 
+        signp->scaledpixbuf = games_preimage_render (signp->preimage, 
 						       minesize - 2, 
 						       minesize - 2,
-						       GDK_INTERP_BILINEAR);
+						       NULL);
 	signp->width = gdk_pixbuf_get_width (signp->scaledpixbuf);
 	signp->height = gdk_pixbuf_get_height (signp->scaledpixbuf);
 }
@@ -995,9 +996,9 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	mfield->started = FALSE;
 	mfield->cdown = -1;
 
-	mfield->flag.pixbuf = NULL;
-        mfield->mine.pixbuf = NULL;
-	mfield->question.pixbuf = NULL;
+	mfield->flag.preimage = NULL;
+        mfield->mine.preimage = NULL;
+	mfield->question.preimage = NULL;
 	mfield->grand = g_rand_new ();
 	mfield->thick_line = NULL;
 }

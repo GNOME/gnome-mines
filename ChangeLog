@@ -1,3 +1,10 @@
+2004-09-25  Richard Hoelscher  <rah@rahga.com>
+
+	* minefield.h
+	* minefield.c (gtk_minefield_init): switch to GamesPreimage.
+	(_setup_sign): Replace gdk_pixbuf_scale_simple with
+	games_preimage_render.
+	
 2004-09-06  callum  <callum@spooky-possum.org>
 
 	* gnomine.c (show_face): Remove debugging code and make the face

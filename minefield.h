@@ -5,6 +5,7 @@
 #include <gdk/gdk.h>
 #include <gtk/gtkwidget.h>
 #include <glib.h>
+#include <games-preimage.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -48,7 +49,7 @@ typedef struct _Sign sign;
   
 struct _Sign
     {
-	GdkPixbuf *pixbuf;
+	GamesPreimage *preimage;
         GdkPixbuf *scaledpixbuf;
       
         gint width;
