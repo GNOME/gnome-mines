@@ -260,7 +260,7 @@ about(GtkWidget *widget, gpointer data)
 	       char *filename = NULL;
 
 	       filename = gnome_program_locate_file (NULL,
-			       GNOME_FILE_DOMAIN_PIXMAP,  ("gnome-gnomine.png"),
+			       GNOME_FILE_DOMAIN_APP_PIXMAP,  ("gnome-gnomine.png"),
 			       TRUE, NULL);
 	       if (filename != NULL)
 	       {

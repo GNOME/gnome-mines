@@ -1,3 +1,8 @@
+2002-06-19  Ross Burton  <ross@burtonini.com>
+
+	* gnomine.c (about): Load the image from the application pixmap
+	path, not the system path.
+
 2002-06-09  Juan Pablo Mendoza <jpablo@gnulinux.org.mx>
 
 	* gnomime.c (image_widget_setup): Find the images on
