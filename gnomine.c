@@ -131,7 +131,8 @@ void win_game(GtkWidget *widget, gpointer data)
         show_face(pm_win);
         gtk_clock_stop(GTK_CLOCK(clk));
 
-	score = (gfloat)GTK_CLOCK(clk)->stopped;
+	score = (gfloat) (GTK_CLOCK(clk)->stopped / 60) + 
+		(gfloat) (GTK_CLOCK(clk)->stopped % 60) / 100; 
 
 	if(fsize<3)
 		strncpy(buf, fsize2names[fsize], sizeof(buf));
