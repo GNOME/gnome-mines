@@ -225,7 +225,7 @@ about(GtkWidget *widget, gpointer data)
 	const gchar *documenters[] = {
                 NULL
         };
-	const gchar *translator_credits = _("");
+	const gchar *translator_credits = _("translator_credits");
 	
 	if (about) {
 		gdk_window_raise (about->window);
@@ -245,7 +245,7 @@ about(GtkWidget *widget, gpointer data)
 				 _("Minesweeper clone"),
 				 (const char **)authors,
 				 (const char **)documenters,
-                                 (const char *)translator_credits,
+				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
 				 NULL);
 	gtk_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
 			(gtk_widget_destroyed), &about);
