@@ -1099,6 +1099,7 @@ main (int argc, char *argv[])
 
         gtk_widget_show_all (window);
 
+	/* Must be after the window has been created. */
 	if (xpos >= 0 && ypos >= 0)
 	  gdk_window_move (GTK_WIDGET (window)->window, xpos, ypos);
 
