@@ -25,7 +25,6 @@
 
 #include <config.h>
 #include <gnome.h>
-#include <libgnomeui/gnome-window-icon.h>
 #include <gconf/gconf-client.h>
 #include <math.h>
 #include <string.h>
@@ -967,7 +966,7 @@ main (int argc, char *argv[])
 	gconf_client_notify_add (conf_client, KEY_DIR,
 				 gconf_key_change_cb, NULL, NULL, NULL);
 
-	gnome_window_icon_set_default_from_file (GNOME_ICONDIR"/gnome-gnomine.png");
+	gtk_window_set_default_icon_name ("gnome-gnomine");
 	client = gnome_master_client ();
 	g_signal_connect (G_OBJECT (client), "save_yourself",
 			  G_CALLBACK (save_state), argv[0]);
