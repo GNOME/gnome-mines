@@ -252,7 +252,7 @@ about(GtkWidget *widget, gpointer data)
 
 void size_radio_callback(GtkWidget *widget, gpointer data)
 {
-	fsc = (gint)data;
+	fsc = GPOINTER_TO_INT (data);
 
 	gtk_widget_set_sensitive(cframe, fsc == 3);
 }

@@ -1,3 +1,7 @@
+1998-11-28  Herbert Valerio Riedel  <hvr@hvrlab.ml.org>
+
+	* gnomine.c: added GPOINTER_TO_INT / GINT_TO_POINTER
+
 Mon Nov 23 15:10:07 EST 1998 Gregory McLean <gregm@comstar.net>
 
 	* minefield.c : GTK_BASIC got removed from gtk, ifdef'd this
