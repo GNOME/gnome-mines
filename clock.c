@@ -72,18 +72,29 @@ clock_new (void)
 	return GTK_WIDGET (clock);
 }
 
+static void
+clock_paint (Clock *clock)
+{
+	char str[10]; 
+	struct tm tm;
+	int secs = clock->seconds;
+
+	tm.tm_hour = secs/3600;
+	secs -= tm.tm_hour*3600;
+	tm.tm_min = secs/60;
+	tm.tm_sec = secs - tm.tm_min*60;
+
+	strftime(str, 10, "%H:%M:%S", &tm);
+        gtk_label_set (GTK_LABEL (clock), str);
+}
+
 static gboolean
 update_clock (gpointer data)
 {
 	Clock *clock = (Clock *) data;
-	char str[10];
-	struct tm *tm;
 
 	clock->seconds++;
-	tm = localtime (&clock->seconds);
-
-	strftime (str, 10, "%s", tm);
-	gtk_label_set (GTK_LABEL (clock), str);
+	clock_paint (clock);
 
 	return TRUE;
 }
@@ -115,4 +126,5 @@ clock_set_seconds (Clock *clock,
 		   time_t seconds)
 {
 	clock->seconds = seconds;
+	clock_paint (clock);
 }

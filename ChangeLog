@@ -1,3 +1,8 @@
+2001-12-17  Juan Pablo Mendoza <jpablo@gnome.org>
+
+	* clock.h: Fix the clock to look like the old one.
+	* gnomines.c: Scores works again.	  
+
 2001-12-14  Juan Pablo Mendoza <pablo_juan@yahoo.com>
 
 	* gnomines.c, minefield.c: A little clean up, and removed some deprecated stuff.

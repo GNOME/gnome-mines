@@ -91,7 +91,6 @@ void top_ten(GtkWidget *widget, gpointer data)
 
 void new_game(GtkWidget *widget, gpointer data)
 {
-
         clock_stop(CLOCK(clk));
 	clock_set_seconds(CLOCK(clk), 0);
 
@@ -106,7 +105,6 @@ void new_game(GtkWidget *widget, gpointer data)
 
 void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
-
 	if (CLOCK(clk)->timer_id == -1)
 		return;
 
@@ -114,7 +112,6 @@ void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 	gtk_widget_show (rbutton);
 
 	clock_stop(CLOCK(clk)); 
-
 }
 
 void resume_game_cb (GtkButton *widget, gpointer data)
@@ -123,7 +120,6 @@ void resume_game_cb (GtkButton *widget, gpointer data)
 	gtk_widget_show (mfield);
 
 	clock_start(CLOCK(clk));
-
 }
 
 void marks_changed(GtkWidget *widget, gpointer data)
@@ -131,7 +127,6 @@ void marks_changed(GtkWidget *widget, gpointer data)
         set_flabel(GTK_MINEFIELD(widget));
 
 	clock_start(CLOCK(clk));
-
 }
 
 void lose_game(GtkWidget *widget, gpointer data)
@@ -139,7 +134,6 @@ void lose_game(GtkWidget *widget, gpointer data)
         show_face(pm_sad);
 
         clock_stop(CLOCK(clk));
-
 }
 
 void win_game(GtkWidget *widget, gpointer data)
@@ -154,22 +148,14 @@ void win_game(GtkWidget *widget, gpointer data)
         show_face(pm_win);
 
 	if(fsize<3) {
-
 	    score = (gfloat) (CLOCK(clk)->stopped / 60) + 
 		    (gfloat) (CLOCK(clk)->stopped % 60) / 100;
 
-	    score = 0;
-
-	    
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, FALSE);
-
 	} else {
-
 	    score = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (CLOCK(clk)->stopped); 
-
-	    score = 100;
 
             strncpy(buf, fsize2names[fsize], sizeof(buf));
 	    pos = gnome_score_log(score, buf, TRUE);
@@ -182,7 +168,6 @@ void look_cell(GtkWidget *widget, gpointer data)
         show_face(pm_worried);
 
         clock_start(CLOCK(clk));
-
 }
 
 void unlook_cell(GtkWidget *widget, gpointer data)
