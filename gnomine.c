@@ -6,9 +6,7 @@
  *
  */
 #include <config.h>
-#include <gtk/gtk.h>
 #include <gnome.h>
-#include <libgnomeui/gnome-session.h>
 #include <string.h>
 
 #include "minefield.h"
@@ -206,7 +204,7 @@ about(GtkWidget *widget, gpointer data)
         about = gnome_about_new (_("Gnome Mines"), VERSION,
                         "(C) 1997-1998 the Free Software Fundation",
                         authors,
-                        "Minesweeper clone",
+                        _("Minesweeper clone"),
                         NULL);
         gtk_widget_show (about);
 }
@@ -497,8 +495,8 @@ int main(int argc, char *argv[])
         gnome_init(&argc, &argv);
 
 	textdomain (PACKAGE);
-#ifdef ENABLE_NLS
-#define ELEMENTS(x) (sizeof(x) / sizeof(x[0]))
+#ifdef ENABLE_NLS 
+#define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
 	{
 	  int i;
 	  for (i = 0; i < ELEMENTS(mainmenu); i++)
