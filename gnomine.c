@@ -391,8 +391,15 @@ about (GtkWidget *widget, gpointer data)
 		_("Faces:"),
 		"Tuomas Kuosmanen",
 		"",
+		_("Graphics:"),
+		"Richard Hoelscher",
+		"",
 		_("Score:"),
 		"Horacio J. Pe\xc3\xb1""a",
+		"",
+		_("Resizing and SVG support:"),
+		"Steve Chaplin",
+		"Callum McKenzie",
 		NULL
 	};
 	const gchar *documenters[] = {
