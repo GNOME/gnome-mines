@@ -12,6 +12,13 @@
 
 	* minefield.h: use pango layouts for drawing the numbers.
 
+2002-02-14  Chris Lyttle    <chris@wilddev.net>
+
+	* help/C/gnomine.xml : move to XML.
+	* help/C/gnomine-C.omf : move to XML.
+	* help/C/gnomine.sgml : deleted, move to XML.
+	* help/C/Makefile.am : move to XML.
+
 2002-02-02  Zbigniew Chyla  <cyba@gnome.pl>
 
 	* gnomine.c (about): Don't try to translate empty string.
