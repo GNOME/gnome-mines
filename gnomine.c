@@ -18,34 +18,6 @@
 #include "face-sad.xpm"
 #include "face-win.xpm"
 
-static error_t parse_an_arg (int key, char *arg, struct argp_state *state);
-
-/* This describes all the arguments we understand.  */
-static struct argp_option options[] =
-{
-  { NULL, 'x', N_("X"), 0, N_("Width of grid"), 1 },
-  { NULL, 'y', N_("Y"), 0, N_("Height of grid"), 1 },
-  { NULL, 's', N_("SIZE"), 0, N_("Size of mines"), 1 },
-  { NULL, 'n', N_("NUMBER"), 0, N_("Number of mines"), 1 },
-  { NULL, 'f', N_("F?"), OPTION_HIDDEN, NULL, 1 },
-  { NULL, 'a', N_("X"), OPTION_HIDDEN, NULL, 1 },
-  { NULL, 'b', N_("Y"), OPTION_HIDDEN, NULL, 1 },
-
-  { NULL, 0, NULL, 0, NULL, 0 }
-};
-
-/* Our parser.  */
-static struct argp parser =
-{
-  options,
-  parse_an_arg,
-  NULL,
-  NULL,
-  NULL,
-  NULL,
-  NULL
-};
-
 static GtkWidget *mfield;
 GtkWidget *window;
 GtkWidget *flabel;
@@ -60,10 +32,10 @@ GtkWidget *cframe;
 GtkWidget *clk;
 GtkWidget *pm_win, *pm_sad, *pm_smile, *pm_cool, *pm_worried, *pm_current;
 GtkWidget *face_box;
-guint ysize, xsize;
-guint nmines;
-guint fsize, fsc;
-guint minesize;
+gint ysize=-1, xsize=-1;
+gint nmines=-1;
+gint fsize=-1, fsc;
+gint minesize=-1;
 
 char *fsize2names[] = {
 	N_("Tiny"),
@@ -531,83 +503,18 @@ save_state (GnomeClient        *client,
 
 
 
-/* Argument parsing.  */
+static int xpos=-1, ypos=-1;
 
-/* X and Y sizes of the grid.  */
-static int x_set;
-static int y_set;
-
-/* Mine size.  */
-static int minesize_set;
-
-/* Number of mines.  */
-static int nmines_set;
-
-/* Whether fsize has been set.  */
-static int fsize_set;
-
-/* Some positioning info.  */
-static int set_pos;
-static int xpos, ypos;
-
-static error_t
-parse_an_arg (int key, char *arg, struct argp_state *state)
-{
-	switch (key)
-	{
-	case 'x':
-		x_set = 1;
-		xsize = atoi (arg);
-		break;
-	case 'y':
-		y_set = 1;
-		ysize = atoi (arg);
-		break;
-	case 's':
-		minesize_set = 1;
-		minesize = atoi (arg);
-		break;
-	case 'n':
-		nmines_set = 1;
-		nmines = atoi (arg);
-		break;
-	case 'f':
-		fsize_set = 1;
-		fsize = atoi (arg);
-		break;
-	case 'a':
-		set_pos |= 1;
-		xpos = atoi (arg);
-		break;
-	case 'b':
-		set_pos |= 2;
-		ypos = atoi (arg);
-		break;
-	case ARGP_KEY_SUCCESS:
-		if (set_pos == 3)
-			gtk_widget_set_uposition (window, xpos, ypos);
-		
-		if (! x_set)
-			xsize  = gnome_config_get_int("/gnomine/geometry/xsize=16");
-		if (! y_set)
-			ysize  = gnome_config_get_int("/gnomine/geometry/ysize=16");
-		if (! nmines_set)
-			nmines = gnome_config_get_int("/gnomine/geometry/nmines=40");
-		if (! minesize_set){
-			minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
-			if (minesize < 0)
-				minesize = 1;
-		}
-		if (! fsize_set)
-			fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
-		break;
-		
-	default:
-		return ARGP_ERR_UNKNOWN;
-	}
-	
-	return 0;
-}
+static struct poptOption options[] = {
+  {NULL, 'x', POPT_ARG_INT, &xsize, 0, N_("Width of grid"), N_("X")},
+  {NULL, 'y', POPT_ARG_INT, &ysize, 0, N_("Height of grid"), N_("Y")},
+  {NULL, 's', POPT_ARG_INT, &minesize, 0, N_("Size of mines"), N_("SIZE")},
+  {NULL, 'n', POPT_ARG_INT, &nmines, 0, N_("Number of mines"), N_("NUMBER")},
+  {NULL, 'f', POPT_ARG_INT, &fsize, 0, NULL, NULL},
+  {NULL, 'a', POPT_ARG_INT, &xpos, 0, NULL, N_("X")},
+  {NULL, 'b', POPT_ARG_INT, &ypos, 0, NULL, N_("Y")},
+  {NULL, '\0', 0, NULL, 0}
+};
 
 int
 main (int argc, char *argv[])
@@ -628,7 +535,25 @@ main (int argc, char *argv[])
 	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
 			    GTK_SIGNAL_FUNC (save_state), argv[0]);
 
-        gnome_init("gnomine", &parser, argc, argv, 0, NULL);
+        gnome_init_with_popt_table("gnomine", VERSION, argc, argv,
+				   options, 0, NULL);
+
+	if (xpos > 0 || ypos > 0)
+	  gtk_widget_set_uposition (window, xpos, ypos);
+		
+	if (xsize == -1)
+	  xsize  = gnome_config_get_int("/gnomine/geometry/xsize=16");
+	if (ysize == -1)
+	  ysize = gnome_config_get_int("/gnomine/geometry/ysize=16");
+	if (nmines == -1)
+	  nmines = gnome_config_get_int("/gnomine/geometry/nmines=40");
+	if (minesize == -1){
+	  minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
+	  if (minesize < 0)
+	    minesize = 1;
+	}
+	if (fsize == -1)
+	  fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
 
 	verify_ranges ();
         gdk_imlib_init ();
