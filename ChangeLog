@@ -5,6 +5,8 @@
 	the worst case with the old line-style. See bug #97732. Thanks go
 	to Feiyun Wang for suggesting the solution and to Jonathan
 	Blandford who suggested using a stipple.
+	(gtk_minefield_check_field): Applied the patch in bug #97524, a
+	minor optimisation.
 
 2003-05-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 

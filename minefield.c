@@ -488,13 +488,11 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
         guint changed;
 
         gint x1, y1, x2, y2;
-	gint cx1,cy1,cx2,cy2;
-	
-	cx1 = x-2;
-	cy1 = y-2;
-	cx2 = x+2;
-	cy2 = y+2;
+        gint cx1, cx2, cy1, cy2;
 
+        cx1 = cx2 = x;
+        cy1 = cy2 = y;
+        
         do {
 		x1 = cx1-1;
 		y1 = cy1-1;
