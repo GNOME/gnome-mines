@@ -1,3 +1,10 @@
+2004-05-19  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (fill_score_list): Calculate times for the score 
+	list correctly. The scores are not in hundredths of a second, 
+	they are a decimal number of the form: minutes.seconds. Fixes
+	bug #142716.
+
 2004-05-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (show_scores): Further tweaks to the scores dialog.
