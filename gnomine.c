@@ -100,18 +100,22 @@ static void create_preferences (void);
 static GtkWidget *
 image_widget_setup (char *name)
 {
-	GdkPixbuf *pixbuf = NULL;
+	/*	GdkPixbuf *pixbuf = NULL; */
+	GtkWidget *image = NULL;
 	char *filename = NULL;
 
+	image = gtk_image_new ();
 	filename = gnome_program_locate_file (NULL,
 					      GNOME_FILE_DOMAIN_APP_PIXMAP, name,
 					      TRUE, NULL);
 	if (filename != NULL)
-		pixbuf = gdk_pixbuf_new_from_file (filename, NULL);
+		gtk_image_set_from_file (GTK_IMAGE (image), filename);
+	/*		pixbuf = gdk_pixbuf_new_from_file (filename, NULL); */
 
 	g_free (filename);
 
-	return gtk_image_new_from_pixbuf (pixbuf);
+	/*	return gtk_image_new_from_pixbuf (pixbuf); */
+	return image;
 }
 
 static void
@@ -994,6 +998,11 @@ main (int argc, char *argv[])
 	
 	verify_ranges ();
 
+	/* This is evil, but the normal button focus indicator 
+	 * interferes with the face (but we still want the button
+	 * to be the default). */
+	gtk_rc_parse_string ("style \"gnomine\" { GtkButton::interior-focus = 0 } class \"GtkButton\" style \"gnomine\"");
+
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
@@ -1023,11 +1032,11 @@ main (int argc, char *argv[])
 	face_box = gtk_vbox_new (FALSE, 0);
 	gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 	
-	pm_win     = image_widget_setup ("gnomine/face-win.xpm");
-	pm_sad     = image_widget_setup ("gnomine/face-sad.xpm");
-	pm_smile   = image_widget_setup ("gnomine/face-smile.xpm");
-	pm_cool    = image_widget_setup ("gnomine/face-cool.xpm");
-	pm_worried = image_widget_setup ("gnomine/face-worried.xpm");
+	pm_win     = image_widget_setup ("gnomine/face-win.png");
+	pm_sad     = image_widget_setup ("gnomine/face-sad.png");
+	pm_smile   = image_widget_setup ("gnomine/face-smile.png");
+	pm_cool    = image_widget_setup ("gnomine/face-cool.png");
+	pm_worried = image_widget_setup ("gnomine/face-worried.png");
 
         gtk_box_pack_start (GTK_BOX (face_box), pm_win, FALSE, FALSE, 0);
         gtk_box_pack_start (GTK_BOX (face_box), pm_sad, FALSE, FALSE, 0);

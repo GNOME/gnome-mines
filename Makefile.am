@@ -30,8 +30,8 @@ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
 pixmapdir   = $(datadir)/pixmaps/gnomine/
-pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
-	face-worried.xpm \
+pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
+	face-worried.png \
 	flag.svg flag-question.svg mine.svg
 
 sharedpixmapdir=$(datadir)/pixmaps
