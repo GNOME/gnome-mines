@@ -1,3 +1,8 @@
+2001-11-24  Kevin Vandersloot <kfv101@psu.edu>
+
+	* gnomine.c, clock.[c,h]: bring back the clock
+	functionality
+
 2001-07-27  Abel Cheung  <maddog@linux.org.hk>
 
 	* gnomine.desktop: Added traditional Chinese translation.

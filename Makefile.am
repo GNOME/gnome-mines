@@ -12,7 +12,9 @@ bin_PROGRAMS = gnomine
 gnomine_SOURCES =	\
 	gnomine.c	\
 	minefield.h	\
-	minefield.c
+	minefield.c	\
+	clock.c		\
+	clock.h
 
 gnomine_LDADD = \
 	$(GNOME_GAMES_LIBS) \
