@@ -841,7 +841,7 @@ main (int argc, char *argv[])
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
 	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
-	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_NEVER));
+	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, FALSE, GNOME_PREFERENCES_NEVER));
 	gnome_app_set_statusbar (GNOME_APP (window), GTK_WIDGET (appbar));
 	
 	g_signal_connect(G_OBJECT (window), "delete_event",
@@ -916,13 +916,13 @@ main (int argc, char *argv[])
 	g_signal_connect (G_OBJECT (mfield), "unlook",
 			  G_CALLBACK (unlook_cell), NULL);
 	
-	status_box = gtk_hbox_new (FALSE, GNOME_PAD);
+	status_box = gtk_hbox_new (TRUE, GNOME_PAD); 
 	gtk_box_pack_start (GTK_BOX (appbar), status_box, 
-			    FALSE, FALSE, 0);
+			    TRUE, TRUE, 0);
 
 	label = gtk_label_new(_("Flags:"));
 	gtk_box_pack_start (GTK_BOX (status_box), label, 
-			    FALSE, FALSE, 0);
+			    FALSE, FALSE, 0); 
 	
 	flabel = gtk_label_new ("0");
 	gtk_box_pack_start (GTK_BOX (status_box), flabel, 
@@ -930,11 +930,11 @@ main (int argc, char *argv[])
 
 	label = gtk_label_new (_("Time:"));
 	gtk_box_pack_start (GTK_BOX (status_box), label, 
-			    FALSE, FALSE, 0);
+	FALSE, FALSE, 0);
 
         clk = games_clock_new ();
 	gtk_box_pack_start (GTK_BOX (status_box), clk, 
-			    FALSE, FALSE, 0);
+			    FALSE, FALSE, 0); 
 
 	update_score_state ();
 

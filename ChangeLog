@@ -1,3 +1,14 @@
+2003-11-04  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_toggle_mark): Removed an
+	impossible-to-satisfy game-over check. Also limit the number of
+	possible flags planted to be the same as the number of mines. This
+	removes another odd-ball case where the player becomes confused
+	(see bug #103125).
+	
+	* gnomine.c (main): Repackage the status bar to stop the
+	"shuffling widgets" effect from the timer.
+
 2003-10-30  Callum McKenzie  <callum@localhost.localdomain>
 
 	* Makefile.am: Removed *_DISABLE_DEPRECATED.

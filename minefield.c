@@ -677,6 +677,15 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 
 	switch (mfield->mines[c].marked) {
 	case MINE_NOMARK:
+		/* If we've used all the flags don't plant any more,
+		 * this should be an indication to the player that they
+		 * have made a mistake. */
+		if (mfield->flag_count == mfield->mcount) {
+			if (mfield->use_question_marks) {
+				mfield->mines[c].marked = MINE_QUESTION;
+			}
+			break;
+		}
 		mfield->mines[c].marked = MINE_MARKED;
 		mfield->flag_count++;
 		break;
@@ -699,9 +708,6 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 		g_signal_emit(GTK_OBJECT(mfield),
 				minefield_signals[MARKS_CHANGED_SIGNAL],
 				0, NULL);
-	if (mfield->shown == mfield->xsize * mfield->ysize-mfield->mcount) {
-                        gtk_minefield_win(mfield);
-		}
 }
 
 static inline void gtk_minefield_multi_press(GtkMineField *mfield,
