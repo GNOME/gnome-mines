@@ -1,3 +1,8 @@
+2004-01-29  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnome-gnomine.png: New graphic from Richard Hoelscher to fit in
+	with the "nautical" theme we've decided on.
+
 2004-01-24  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am: 
