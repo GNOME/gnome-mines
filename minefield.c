@@ -39,6 +39,8 @@ int secs = 0;
 
 static gint minefield_signals[LAST_SIGNAL] = { 0 };
 
+static GtkWidgetClass *parent_class;
+
 static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 {
 	if (x>=0 && x<mfield->xsize && y>=0 && y<mfield->ysize)
@@ -86,6 +88,25 @@ static void gtk_minefield_realize(GtkWidget *widget)
 							  &mfield->mine_sign_mask,
 							  &widget->style->bg[GTK_STATE_NORMAL],
 							  mine_xpm);
+
+	mfield->cc = gdk_color_context_new (gtk_widget_get_visual (widget),
+					    gtk_widget_get_colormap (widget));
+}
+
+static void gtk_minefield_unrealize (GtkWidget *widget)
+{
+	GtkMineField *mfield;
+
+	g_return_if_fail (widget != NULL);
+	g_return_if_fail (GTK_IS_MINEFIELD (widget));
+
+	mfield = GTK_MINEFIELD (widget);
+
+	gdk_color_context_free (mfield->cc);
+	mfield->cc = NULL;
+
+	if (GTK_WIDGET_CLASS (parent_class)->unrealize)
+		(* GTK_WIDGET_CLASS (parent_class)->unrealize) (widget);
 }
 
 static void gtk_minefield_size_allocate(GtkWidget *widget,
@@ -223,6 +244,7 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 {
         GtkMineField *mfield;
 	GdkColor color;
+	gint n;
 	int i;
 	
 	g_return_val_if_fail(widget != NULL, FALSE);
@@ -246,9 +268,23 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 			mfield->numstr[i].dy = (minesize-mfield->font->ascent)/2
 				+10;
 			mfield->numstr[i].gc = gdk_gc_new(GTK_WIDGET(mfield)->window);
-			color.pixel  = gnome_colors_get_pixel(num_colors[i][0], /* R */
-							      num_colors[i][1], /* G */
-							      num_colors[i][2]);
+
+			color.red   = num_colors[i][0] | (num_colors[i][0] << 8);
+			color.green = num_colors[i][1] | (num_colors[i][1] << 8);
+			color.blue  = num_colors[i][2] | (num_colors[i][2] << 8);
+			color.pixel = 0; /* required! */
+
+			printf("%04x %04x %04x -> ", color.red, color.green, color.blue);
+
+			n = 0;
+			gdk_color_context_get_pixels (mfield->cc,
+						      &color.red, &color.green, &color.blue,
+						      1,
+						      &color.pixel,
+						      &n);
+
+			printf("%08lx\n", color.pixel);
+
 			gdk_gc_set_foreground(mfield->numstr[i].gc, &color);
 		}
 	}
@@ -525,8 +561,11 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 	
         widget_class = (GtkWidgetClass *)class;
 	object_class = (GtkObjectClass *)class;
+
+	parent_class = gtk_type_class (gtk_widget_get_type ());
 	
         widget_class->realize = gtk_minefield_realize;
+	widget_class->unrealize = gtk_minefield_unrealize;
         widget_class->size_allocate = gtk_minefield_size_allocate;
         widget_class->size_request = gtk_minefield_size_request;
         widget_class->expose_event = gtk_minefield_expose;
@@ -583,6 +622,7 @@ static void gtk_minefield_init (GtkMineField *mfield)
         GTK_WIDGET_SET_FLAGS (mfield, GTK_BASIC);
         mfield->xsize = 0;
         mfield->ysize = 0;
+	mfield->cc = NULL;
         
         GTK_WIDGET (mfield)->requisition.width = minesize;
         GTK_WIDGET (mfield)->requisition.height = minesize;

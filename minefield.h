@@ -47,6 +47,7 @@ struct _GtkMineField {
 	GdkPixmap *mine_sign;
 	GdkBitmap *mine_sign_mask;
         GdkFont   *font;
+	GdkColorContext *cc;
 	struct {
 		char text[2];
 		gint dx, dy;

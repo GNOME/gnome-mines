@@ -1,3 +1,8 @@
+1998-02-16  Federico Mena Quintero  <federico@nuclecu.unam.mx>
+
+	* minefield.c: Modified the GtkMineField widget to use a
+	GdkColorContext for color allocation instead of the old (broken!
+	stupid! brain-dead!) gnome-colors stuff :-)
 
 Donnie Barnes <djb@redhat.com>:
 
