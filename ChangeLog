@@ -1,3 +1,11 @@
+1998-05-10 Timo Sirainen <a@sicom.fi>
+
+        * minefield.c: multi show didn't work if pressed over marked mine
+        * minefield.c: left+right button works as multi show (like middle) 
+        * gnomine.c: New option to let mouse button be released off the
+                    square it was pressed in. 
+        * minefield.c: Implemented the above
+
 1998-04-24  Federico Mena Quintero  <federico@nuclecu.unam.mx>
 
 	* minefield.c (gtk_minefield_draw): Fixed off-by-one mine

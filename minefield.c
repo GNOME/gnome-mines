@@ -535,17 +535,20 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 
 	if (mfield->lose || mfield->win) return FALSE;
 	
-        if (!mfield->bdown) {
+        if (event->button <= 3 && !mfield->bdown[1]) {
                 x = event->x/minesize;
                 y = event->y/minesize;
                 c = x+y*(mfield->xsize);
+                if (!mfield->bdown[0] && !mfield->bdown[1] && !mfield->bdown[2]) {
                 mfield->cdownx = x;
                 mfield->cdowny = y;
                 mfield->cdown = c;
                 mfield->mines[c].down = 1;
-		mfield->bdown = event->button;
+                }
+		mfield->bdown[event->button-1] = 1;
 		gtk_mine_draw(mfield, x, y);
-		if (event->button == 2 && mfield->mines[c].shown == 1) { /* multi show */
+                if ((event->button == 2 || (mfield->bdown[0] && mfield->bdown[2]))
+                    && (mfield->mines[c].shown == 1 || mfield->mines[c].marked == 1)) { /* multi show */
                         gtk_minefield_multi_press(mfield, x, y, c);
 		}
 		if (event->button == 1 || event->button == 2) {
@@ -569,17 +572,23 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 
 	if (mfield->lose || mfield->win) return FALSE;
 
-        if (event->button == mfield->bdown) {
+        if (event->button <= 3 && mfield->bdown[event->button-1]) {
                 x = event->x/minesize;
                 y = event->y/minesize;
-		if (x+y*(mfield->xsize) == mfield->cdown) {
+                if (mfield->bdown[0] && mfield->bdown[2] && event->button != 2) {
+                    /* left+right click = multi show */
+                    mfield->bdown[0] = 0;
+                    mfield->bdown[1] = 1;
+                    mfield->bdown[2] = 0;
+                    event->button = 2;
+                }
+		if (x+y*(mfield->xsize) == mfield->cdown || outrelease) {
                         switch (event->button) {
-			case 1: gtk_minefield_show(mfield, x, y);
+                        case 1: gtk_minefield_show(mfield, mfield->cdownx, mfield->cdowny);
                                 break;
-			case 2: if (mfield->multi_mode) gtk_minefield_multi_release(mfield, x, y, 1);
-
+                        case 2: if (mfield->multi_mode) gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, 1);
                                 break;
-                        case 3: gtk_minefield_toggle_mark(mfield, x, y);
+                        case 3: gtk_minefield_toggle_mark(mfield, mfield->cdownx, mfield->cdowny);
                                 break;
 			}
                 } else if (mfield->multi_mode) {
@@ -591,7 +600,7 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 		}
 		mfield->mines[mfield->cdown].down = 0;
                 mfield->cdown = -1;
-		mfield->bdown = 0;
+		mfield->bdown[event->button-1] = 0;
 		gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);
         }
         return FALSE;
@@ -757,7 +766,9 @@ void gtk_minefield_restart(GtkMineField *mfield)
 	mfield->shown = 0;
 	mfield->lose  = 0;
 	mfield->win   = 0;
-	mfield->bdown = 0;
+	mfield->bdown[0] = 0;
+	mfield->bdown[1] = 0;
+	mfield->bdown[2] = 0;
         mfield->cdown = -1;
         mfield->multi_mode = 0;
 
