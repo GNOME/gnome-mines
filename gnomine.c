@@ -90,8 +90,24 @@ void lose_game(GtkWidget *widget, gpointer data)
 
 void win_game(GtkWidget *widget, gpointer data)
 {
+        gfloat score;
         show_face(pm_win);
         gtk_clock_stop(GTK_CLOCK(clk));
+
+	score = (1000 * (gfloat)nmines /
+		 ((gfloat)xsize * (gfloat)ysize * (gfloat)GTK_CLOCK(clk)->stopped));
+
+	if(gnome_score_log(score))
+	  {
+	    GtkWidget *mb;
+	    gchar buf[512];
+	    snprintf(buf, sizeof(buf), "You got onto the high score list with a score of %.0f!", score);
+	    mb = gnome_messagebox_new(buf, GNOME_MESSAGEBOX_INFO, "OK",
+				      NULL, NULL);
+	    gnome_messagebox_set_default(GNOME_MESSAGEBOX(mb), 0);
+	    gnome_messagebox_set_modal(GNOME_MESSAGEBOX(mb));
+	    gtk_widget_show(mb);
+	  }
 }
 
 void look_cell(GtkWidget *widget, gpointer data)
@@ -284,7 +300,7 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 }
 
-void main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
         GtkWidget *window;
         GtkWidget *all_boxes;
@@ -350,6 +366,7 @@ void main(int argc, char *argv[])
 	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
 	nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
 	fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
+	xsize = 20; ysize = 20; nmines = 3;
 
         button_table = gtk_table_new(1, 3, TRUE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);
@@ -455,6 +472,8 @@ void main(int argc, char *argv[])
 	new_game(mfield, NULL);
 	
         gtk_main();
+
+	return 0;
 }
 
 
