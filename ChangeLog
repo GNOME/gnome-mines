@@ -1,3 +1,7 @@
+Tue Feb 17 21:50:19 1998  Miguel de Icaza  <miguel@nuclecu.unam.mx>
+
+	* gnomine.c (main): Remove spurious call to gtk_init
+
 1998-02-19  Federico Mena Quintero  <federico@nuclecu.unam.mx>
 
 	* gnomine.c (main): Added app_id "gnomine".
@@ -10,7 +14,7 @@
 
 Donnie Barnes <djb@redhat.com>:
 
-* Added resizing of squares
+	* Added resizing of squares
 
 Mon Feb 16 19:58:06 KST 1998  Changwoo Ryu  <cwryu@adam.kaist.ac.kr>
 
