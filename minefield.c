@@ -628,7 +628,8 @@ guint gtk_minefield_get_type ()
                                 sizeof (GtkMineFieldClass),
                                 (GtkClassInitFunc) gtk_minefield_class_init,
                                 (GtkObjectInitFunc) gtk_minefield_init,
-                                (GtkArgFunc) NULL,
+                                (GtkArgSetFunc) NULL,
+                                (GtkArgGetFunc) NULL,
                         };
                         
                         minefield_type = gtk_type_unique (gtk_widget_get_type (), &minefield_info);
