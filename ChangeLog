@@ -1,3 +1,9 @@
+2002-02-17  Chris Lyttle  <chris@wilddev.net>
+
+	* help/C/gnome-mines.xml: updated for new template.
+	* help/C/Makefile.am:  added legal.xml
+	* help/C/legal.xml:  added to comply with new template
+
 2002-02-17  James Henstridge  <james@daa.com.au>
 
 	* gnomine.c (main): use the "clicked" signal for the "Press to
@@ -28,9 +34,9 @@
 
 2002-02-14  Chris Lyttle    <chris@wilddev.net>
 
-	* help/C/gnomine.xml : move to XML.
-	* help/C/gnomine-C.omf : move to XML.
-	* help/C/gnomine.sgml : deleted, move to XML.
+	* help/C/gnome-mines.xml : move to XML.
+	* help/C/gnome-mines-C.omf : move to XML.
+	* help/C/gnome-mines.sgml : deleted, move to XML.
 	* help/C/Makefile.am : move to XML.
 
 2002-02-02  Zbigniew Chyla  <cyba@gnome.pl>
