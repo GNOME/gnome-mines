@@ -3,7 +3,8 @@ Gamesdir = $(datadir)/apps/Games
 
 INCLUDES = 			\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\" \
-	-I$(includedir)
+	-I$(includedir)				 \
+	$(GNOME_INCLUDEDIR)
 
 bin_PROGRAMS = gnomine
 

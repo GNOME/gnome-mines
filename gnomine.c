@@ -18,6 +18,34 @@
 #include "face-sad.xpm"
 #include "face-win.xpm"
 
+static error_t parse_an_arg (int key, char *arg, struct argp_state *state);
+
+/* This describes all the arguments we understand.  */
+static struct argp_option options[] =
+{
+  { NULL, 'x', N_("X"), 0, N_("Width of grid"), 1 },
+  { NULL, 'y', N_("Y"), 0, N_("Height of grid"), 1 },
+  { NULL, 's', N_("SIZE"), 0, N_("Size of mines"), 1 },
+  { NULL, 'n', N_("NUMBER"), 0, N_("Number of mines"), 1 },
+  { NULL, 'f', N_("F?"), OPTION_HIDDEN, NULL, 1 },
+  { NULL, 'a', N_("X"), OPTION_HIDDEN, NULL, 1 },
+  { NULL, 'b', N_("Y"), OPTION_HIDDEN, NULL, 1 },
+
+  { NULL, 0, NULL, 0, NULL, 0 }
+};
+
+/* Our parser.  */
+static struct argp parser =
+{
+  options,
+  parse_an_arg,
+  NULL,
+  NULL,
+  NULL,
+  NULL,
+  NULL
+};
+
 static GtkWidget *mfield;
 GtkWidget *window;
 GtkWidget *flabel;
@@ -472,88 +500,85 @@ save_state (GnomeClient        *client,
 	return TRUE;
 }
 
-static GnomeClient *
-parse_args (int argc, char *argv[])
+
+
+/* Argument parsing.  */
+
+/* X and Y sizes of the grid.  */
+static int x_set;
+static int y_set;
+
+/* Mine size.  */
+static int minesize_set;
+
+/* Number of mines.  */
+static int nmines_set;
+
+/* Whether fsize has been set.  */
+static int fsize_set;
+
+/* Some positioning info.  */
+static int set_pos;
+static int xpos, ypos;
+
+static error_t
+parse_an_arg (int key, char *arg, struct argp_state *state)
 {
-	GnomeClient *client;
-	int x_set = 0, y_set = 0, nmines_set = 0, fsize_set = 0, minesize_set = 0;
-	int set_pos = 0;
-	int i;
-	gint xpos = 0, ypos = 0;
+  switch (key)
+    {
+    case 'x':
+      x_set = 1;
+      xsize = atoi (arg);
+      break;
+    case 'y':
+      y_set = 1;
+      ysize = atoi (arg);
+      break;
+    case 's':
+      minesize_set = 1;
+      minesize = atoi (arg);
+      break;
+    case 'n':
+      nmines_set = 1;
+      nmines = atoi (arg);
+      break;
+    case 'f':
+      fsize_set = 1;
+      fsize = atoi (arg);
+      break;
+    case 'a':
+      set_pos |= 1;
+      xpos = atoi (arg);
+      break;
+    case 'b':
+      set_pos |= 2;
+      ypos = atoi (arg);
+      break;
+    case ARGP_KEY_SUCCESS:
+      if (set_pos == 3)
+	gtk_widget_set_uposition (window, xpos, ypos);
 
-	/* FIXME: use GNU getopt.  Add --help, --version.  Error if option
-	   unrecognized.  */
-	for (i = 0; i < argc - 1; ++i)
-	{
-		if (! strcmp (argv[i], "-x"))
-		{
-			x_set = 1;
-			xsize = atoi (argv[++i]);
-		}
-		else if (! strcmp (argv[i], "-y"))
-		{
-			y_set = 1;
-			ysize = atoi (argv[++i]);
-		}
-		else if (! strcmp (argv[i], "-s"))
-		{
-			/* Stupid argument name; will change with long opts.  */
-			minesize_set = 1;
-			minesize = atoi (argv[++i]);
-		}
-		else if (! strcmp (argv[i], "-n"))
-		{
-			nmines_set = 1;
-			nmines = atoi (argv[++i]);
-		}
-		else if (! strcmp (argv[i], "-f"))
-		{
-			fsize_set = 1;
-			fsize = atoi (argv[++i]);
-		}
-		else if (! strcmp (argv[i], "-a"))
-		{
-			/* Stupid argument name; will change with long opts.  */
-			xpos = atoi (argv[++i]);
-			set_pos |= 1;
-		}
-		else if (! strcmp (argv[i], "-b"))
-		{
-			/* Stupid argument name; will change with long opts.  */
-			ypos = atoi (argv[++i]);
-			set_pos |= 2;
-		}
-		else if (! strcmp (argv[i], "--sm-client-id"))
-		{
-			/* Stupid argument name; will change with long opts.  */
-			++i;
-		}
-	}
+      if (! x_set)
+	xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
+      if (! y_set)
+	ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
+      if (! nmines_set)
+	nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
+      if (! minesize_set)
+	minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
+      if (! fsize_set)
+	fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
+      break;
 
-	if (set_pos == 3)
-		gtk_widget_set_uposition (window, xpos, ypos);
+    default:
+      return ARGP_ERR_UNKNOWN;
+    }
 
-	if (! x_set)
-		xsize  = gnome_config_get_int("/gnomine/geometry/xsize=20");
-	if (! y_set)
-		ysize  = gnome_config_get_int("/gnomine/geometry/ysize=20");
-	if (! nmines_set)
-		nmines = gnome_config_get_int("/gnomine/geometry/nmines=50");
-	if (! minesize_set)
-		minesize = gnome_config_get_int("/gnomine/geometry/minesize=17");
-	if (! fsize_set)
-		fsize  = gnome_config_get_int("/gnomine/geometry/mode=0");
-
-	client = gnome_client_new (argc, argv);
-	gtk_object_ref(GTK_OBJECT(client));
-	gtk_object_sink(GTK_OBJECT(client));
-
-	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
-			    GTK_SIGNAL_FUNC (save_state), argv[0]);
-	return client;
+  return 0;
 }
 
-int main(int argc, char *argv[])
+int
+main (int argc, char *argv[])
 {
         GtkWidget *all_boxes;
 	GtkWidget *status_table;
@@ -562,14 +587,19 @@ int main(int argc, char *argv[])
         GtkWidget *label;
 	GnomeClient *client;
 
-	gnome_score_init("gnomine");
-	
-        gnome_init("gnomine", &argc, &argv);
-
-        gdk_imlib_init ();
-  
 	bindtextdomain (PACKAGE, GNOMELOCALEDIR);
 	textdomain (PACKAGE);
+
+	gnome_score_init("gnomine");
+
+	client = gnome_client_new_default ();
+	gtk_signal_connect (GTK_OBJECT (client), "save_yourself",
+			    GTK_SIGNAL_FUNC (save_state), argv[0]);
+
+        gnome_init("gnomine", &parser, argc, argv, 0, NULL);
+
+        gdk_imlib_init ();
+
 #ifdef ENABLE_NLS 
 #define ELEMENTS(x) (sizeof(x) / sizeof(x[0])) 
 	{
@@ -595,8 +625,6 @@ int main(int argc, char *argv[])
         all_boxes = gtk_vbox_new(FALSE, 0);
 
 	gnome_app_set_contents(GNOME_APP(window), all_boxes);
-
-	client = parse_args (argc, argv);
 
         button_table = gtk_table_new(2, 3, FALSE);
 	gtk_box_pack_start(GTK_BOX(all_boxes), button_table, TRUE, TRUE, 0);

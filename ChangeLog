@@ -1,3 +1,14 @@
+Sun Mar  8 19:51:20 1998  Tom Tromey  <tromey@cygnus.com>
+
+	* Makefile.am (INCLUDES): Added GNOME_INCLUDEDIR.
+
+Sat Mar  7 22:26:22 1998  Tom Tromey  <tromey@cygnus.com>
+
+	* gnomine.c (parse_an_arg): New function.
+	(parse_args): Removed.
+	(options): New structure.
+	(parser): Likewise.
+
 2018-03-02  Federico Mena Quintero  <federico@nuclecu.unam.mx>
 
 	* gnomine.c (main): Now the minefield is created with the correct
