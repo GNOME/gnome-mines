@@ -1,0 +1,66 @@
+<gconfschemafile>
+    <schemalist>    
+
+      <schema>
+      <key>/schemas/apps/gnomine/geometry/xsize</key>
+      <applyto>/apps/gnomine/geometry/xsize</applyto>
+      <owner>gnomine</owner>
+      <type>int</type>
+      <default>16</default>
+      <locale name="C">
+      <short></short>
+      <long></long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnomine/geometry/ysize</key>
+      <applyto>/apps/gnomine/geometry/ysize</applyto>
+      <owner>gnomine</owner>
+      <type>int</type>
+      <default>16</default>
+      <locale name="C">
+      <short></short>
+      <long></long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnomine/geometry/nmines</key>
+      <applyto>/apps/gnomine/geometry/nmines</applyto>
+      <owner>gnomine</owner>
+      <type>int</type>
+      <default>40</default>
+      <locale name="C">
+      <short></short>
+      <long></long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnomine/geometry/minesize</key>
+      <applyto>/apps/gnomine/geometry/minesize</applyto>
+      <owner>gnomine</owner>
+      <type>int</type>
+      <default>17</default>
+      <locale name="C">
+      <short></short>
+      <long></long>
+      </locale>
+      </schema>
+
+      <schema>
+      <key>/schemas/apps/gnomine/geometry/mode</key>
+      <applyto>/apps/gnomine/geometry/mode</applyto>
+      <owner>gnomine</owner>  
+      <type>int</type>                
+      <default>0</default>
+      <locale name="C">
+      <short></short>
+      <long></long>
+      </locale>
+      </schema>
+
+  </schemalist>
+  
+</gconfschemafile>
