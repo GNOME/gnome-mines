@@ -1,3 +1,7 @@
+2003-06-11  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c : i18n fixes from Christian Neumair (bug #114875).
+
 2003-06-10  William Jon McCann  <mccann@jhu.edu>
 
 	* gnomine.c: HIG fixes for preferences dialog.  Moved

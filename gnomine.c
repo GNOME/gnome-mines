@@ -310,9 +310,14 @@ about(GtkWidget *widget, gpointer data)
 	GdkPixbuf *pixbuf = NULL;
 
         const gchar *authors[] = {
-		N_("Code: Pista"),
-		N_("Faces: tigert"),
-		N_("Score: HoraPe"),
+		_("Main game:"),
+		"Szekeres Istvan",
+		"",
+		_("Faces:"),
+		"Tuomas Kuosmanen",
+		"",
+		_("Score:"),
+		"Horacio J. Pe\xc3\xb1""a",
 		NULL
 	};
 	const gchar *documenters[] = {
@@ -343,8 +348,9 @@ about(GtkWidget *widget, gpointer data)
        }
 
         about = gnome_about_new (_("GNOME Mines"), VERSION,
-				 _("(C) 1997-1999 the Free Software Foundation"),
-				 _("Minesweeper clone"),
+				 "Copyright \xc2\xa9 1997-2003 Free Software "
+				 "Foundation, Inc.",
+				 _("A Minesweeper clone."),
 				 (const char **)authors,
 				 (const char **)documenters,
 				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
