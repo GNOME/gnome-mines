@@ -12,15 +12,16 @@ gnomine_SOURCES =	\
 	minefield.c
 
 gnomine_LDADD = \
-	$(GNOMEUI_LIBS)
+	$(GNOMEUI_LIBS)	\
+	$(INTLLIBS)
 
 EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
 	face-smile.xpm face-win.xpm face-worried.xpm \
 	gnomine.desktop README AUTHORS
 
+Games_DATA = gnomine.desktop
+
 install-data-local:
-	-$(mkinstalldirs) $(Gamesdir)
-	$(INSTALL_DATA) $(srcdir)/gnomine.desktop $(Gamesdir)/gnomine.desktop
 	-$(mkinstalldirs) $(scoredir)
 	-touch $(scoredir)/gnomine.scores
 	-chown games.games $(scoredir)/gnomine.scores

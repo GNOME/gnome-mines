@@ -1,3 +1,9 @@
+Sat Feb 14 09:27:05 1998  Tom Tromey  <tromey@cygnus.com>
+
+	* Makefile.am (gnomine_LDADD): Added INTLLIBS.
+	(Games_DATA): New macro.
+	(install-data-local): Don't install gnomine.desktop.
+
 1998-02-07  Raja R Harinath  <harinath@cs.umn.edu>
 
 	* Makefile.am (install-data-local): Install game `setgid' only if
