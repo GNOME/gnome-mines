@@ -1,3 +1,8 @@
+1998-02-07  Raja R Harinath  <harinath@cs.umn.edu>
+
+	* Makefile.am (install-data-local): Install game `setgid' only if
+	chown to `games' succeeded.
+
 Mon Feb  2 23:50:12 EST 1998 Nathan Bryant <bryant@cs.usm.maine.edu>
 
 	* Makefile.am: install gnomine setgid games.

@@ -20,8 +20,9 @@ gnomine_LDADD = \
 	$(GTK_LIBS)					\
         $(X_LIBS) $(x_libs) $(INTLLIBS) $(DL_LIB)
 
-EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm face-worried.xpm \
-	     gnomine.desktop README AUTHORS
+EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
+	face-smile.xpm face-win.xpm face-worried.xpm \
+	gnomine.desktop README AUTHORS
 
 install-data-local:
 	-$(mkinstalldirs) $(Gamesdir)
@@ -30,5 +31,4 @@ install-data-local:
 	-touch $(scoredir)/gnomine.scores
 	-chown games.games $(scoredir)/gnomine.scores
 	-chmod 664 $(scoredir)/gnomine.scores
-	-chgrp games $(bindir)/gnomine
-	-chmod 2111 $(bindir)/gnomine
+	-chgrp games $(bindir)/gnomine && chmod 2111 $(bindir)/gnomine
