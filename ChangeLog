@@ -1,3 +1,15 @@
+2003-08-26  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_minefield_hint): Rewritten to be a 3-phase
+	scheme. It uses Juhani Heino's code to first do a check for
+	squares which are both near a mine *and* an uncleared square to
+	try and give the player a bit of a hand when they are stuck with
+	ambiguous hints. Unfortunately this highlights a failing with the
+	previous algorithm where the location of the revealed tile is
+	heavily influenced by the geometry of the revealed squares
+	(e.g. the revealed square is highly likely to be at the bottom
+	right of the revealed area.
+	
 2003-08-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c:

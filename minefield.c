@@ -1071,27 +1071,61 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 {
 	gint i,j;
 	gint x,y;
+	gint a,c;
+	gboolean found;
 	mine * m;
-	/* Phase 1 is searching for squares adjacent to mines, if none
-	 * are found we search for squares which are adjacent to no mines,
-	 * this is phase 2. */
-	gint phase = 1;
-	
+
 	g_return_val_if_fail (mfield != NULL, MINEFIELD_HINT_NO_GAME);
 	g_return_val_if_fail (GTK_IS_MINEFIELD(mfield), MINEFIELD_HINT_NO_GAME);
-
 	if (!mfield->in_play)
 		return MINEFIELD_HINT_NO_GAME;
-
+	
+	/* We search in three phases.
+	 *
+	 * Phase 1: we look for squares adjacent to both a mine and a revealed
+	 * square since these are most likely to help the player and resolve
+	 * ambiguous situations.
+	 *
+	 * Phase 2: we look for squares that are adjacent to a mine.
+	 *
+	 * Phase 3: we look for any unrevealed square without a mine (as a
+	 * consequence of the previous phases this won't be adjacent to a
+	 * mine).
+	 */
+	gint phase = 1;
+	
 	i = g_rand_int_range (mfield->grand, 0, mfield->xsize*mfield->ysize);
 	j = i;
+	found = FALSE;
 	while (1) {
 		m = mfield->mines + i;
-		if (!m->mined && !m->marked && !m->shown
-		    && (((phase == 1) && (m->neighbours > 0))
-			|| (phase == 2))) {
+		if (!m->mined && !m->marked && !m->shown) {
 			x = i % mfield->xsize;
 			y = i / mfield->ysize;
+			switch (phase) {
+			case 1:
+				if (m->neighbours < 0)
+					break;
+				for (a = 0; a < 8; a++) {
+					c = cell_idx (mfield,
+						      x + neighbour_map[a].x,
+						      y + neighbour_map[a].y);
+					if ((c != -1) &&
+					    mfield->mines[c].shown) {
+						found = TRUE;
+						break;
+					}
+				}
+				break;
+			case 2:
+				found = m->neighbours > 0;
+				break;
+			case 3:
+			default:
+				found = TRUE;
+			}
+		}
+		if (found) {
 			gtk_minefield_show (mfield, x, y);
 			gtk_mine_draw (mfield, x, y);
 			
@@ -1099,12 +1133,11 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 		}
 		i--;
 		if (i == j) {
-			if (phase == 1)
-				phase = 2;
-			else
+			phase++;
+			if (phase == 4)
 				return MINEFIELD_HINT_ALL_MINES;
 		}
 		if (i < 0)
-			i = mfield->xsize*mfield->ysize + 1;
+			i = mfield->xsize*mfield->ysize - 1;
 	}
 }
