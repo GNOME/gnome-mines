@@ -1,3 +1,11 @@
+2003-08-11  William Jon McCann  <mccann@jhu.edu>
+
+	* gnomine.c:
+	* minefield.c: Added license header comments.
+
+	* gnomine.c (new_game): Make the game window stay the
+	same size when the dimensions of the field change.
+
 2003-08-10  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* Makefile.am (install-data-local): Make a little more compatible

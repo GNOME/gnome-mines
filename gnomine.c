@@ -1,13 +1,28 @@
 /* -*- mode:C; tab-width:8; c-basic-offset:8; indent-tabs-mode:true -*- */
 
 /*
- *
+ * Mines for GNOME
  * Author:        Pista <szekeres@cyberspace.mht.bme.hu>
  *
  * Score support: horape@compendium.com.ar
  * Mine Resizing: djb@redhat.com
  *
+ * This game is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2, or (at your option)
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307
+ * USA
  */
+
 #include <config.h>
 #include <gnome.h>
 #include <libgnomeui/gnome-window-icon.h>
@@ -171,8 +186,6 @@ top_ten (GtkWidget *widget, gpointer data)
 static void
 new_game (GtkWidget *widget, gpointer data)
 {
-	static guint oldx = -1;
-	static guint oldy = -1;
 	gint width, height, w_diff, h_diff;
 	guint size;
 	gint x, y;
@@ -203,17 +216,6 @@ new_game (GtkWidget *widget, gpointer data)
 
 	set_flabel (GTK_MINEFIELD (mfield));
 
-	if ((oldx != -1) && (oldy != -1) &&
-	    ((oldx != x) || (oldy != y))) {
-		/* preserve the existing mine square size */
-		/* preserve any spacing around the minefield also */
-		width  = size * mf->xsize + w_diff;
-		height = size * mf->ysize + h_diff;
-		gtk_window_resize (GTK_WINDOW (window), width, height);
-	}
-	oldx = x;
-	oldy = y;
-	
 	gtk_widget_hide (ralign);
 	gtk_widget_show (mf_frame); 
 }
@@ -445,7 +447,7 @@ size_radio_callback (GtkWidget *widget, gpointer data)
 	fsc = GPOINTER_TO_INT (data);
 
 	gconf_client_set_int (conf_client, KEY_MODE,
-			fsc, NULL);
+			      fsc, NULL);
 
 	gtk_widget_set_sensitive(cframe, fsc == 3);
 }
@@ -453,17 +455,17 @@ size_radio_callback (GtkWidget *widget, gpointer data)
 static void
 fix_nmines (int xsize, int ysize)
 {
-  int maxmines;
+	int maxmines;
 
-  /* Fix up the maximum number of mines so that there is always at least two
-   * free spaces. It could in theory be left at one, but that gives an
-   * instant win situation. */
-  maxmines = xsize*ysize - 2;
-  if (nmines > maxmines) {
-    gconf_client_set_int (conf_client, KEY_NMINES, maxmines, NULL);
-    gtk_spin_button_set_value (GTK_SPIN_BUTTON(mentry), maxmines);
-  }
-  gtk_spin_button_set_range (GTK_SPIN_BUTTON(mentry), 1, maxmines);
+	/* Fix up the maximum number of mines so that there is always at least two
+	 * free spaces. It could in theory be left at one, but that gives an
+	 * instant win situation. */
+	maxmines = xsize*ysize - 2;
+	if (nmines > maxmines) {
+		gconf_client_set_int (conf_client, KEY_NMINES, maxmines, NULL);
+		gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), maxmines);
+	}
+	gtk_spin_button_set_range (GTK_SPIN_BUTTON (mentry), 1, maxmines);
 }
 
 static void
@@ -472,7 +474,7 @@ xsize_spin_cb (GtkSpinButton *spin, gpointer data)
 	int size = gtk_spin_button_get_value_as_int (spin);
 	gconf_client_set_int (conf_client, KEY_XSIZE,
 			      size, NULL);
-        fix_nmines(size,ysize);
+        fix_nmines (size,ysize);
 }
 
 static void
@@ -496,7 +498,7 @@ nmines_spin_cb (GtkSpinButton *spin, gpointer data)
 static void
 use_question_toggle_cb (GtkCheckButton *check, gpointer data)
 {
-	gboolean use_marks = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check));
+	gboolean use_marks = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check));
 	gconf_client_set_bool (conf_client, KEY_USE_QUESTION_MARKS,
 				use_marks, NULL);
 }
