@@ -517,7 +517,7 @@ GnomeUIInfo settingsmenu[] = {
 };
 
 GnomeUIInfo helpmenu[] = {
-        GNOMEUIINFO_HELP("gnome-mines"),
+        GNOMEUIINFO_HELP("gnomine"),
 	GNOMEUIINFO_MENU_ABOUT_ITEM(about, NULL),
 	GNOMEUIINFO_END
 };
