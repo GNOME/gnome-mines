@@ -34,6 +34,7 @@
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog;
 static GtkWidget *rbutton;
+static GtkWidget *ralign;
 static GConfClient *conf_client;
 GtkWidget *window;
 GtkWidget *flabel;
@@ -111,7 +112,7 @@ void update_score_state ()
 {
         gchar **names = NULL;
         gfloat *scores = NULL;
-        time_t *scoretimes = NULL;
+       time_t *scoretimes = NULL;
 	gint top;
 	gchar buf[64];
 
@@ -154,17 +155,25 @@ void new_game(GtkWidget *widget, gpointer data)
 	gtk_minefield_restart(GTK_MINEFIELD(mfield));
 	set_flabel(GTK_MINEFIELD(mfield));
 
-	gtk_widget_hide (rbutton);
+	gtk_widget_hide (ralign);
 	gtk_widget_show (mfield);
 }
 
 void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
+        GtkRequisition req;
+
 	if (GAMES_CLOCK(clk)->timer_id == -1)
 		return;
 
+        /* This is a complete abuse of the sizing system, but it seems to
+         * be the only way to keep the window the same size when we substitute
+         * the "Press to resume" button, but still allow it to resize when we 
+         * resize the field. */
+        gtk_widget_size_request (mfield, &req);
+        gtk_widget_set_size_request (ralign, req.width, req.height);
 	gtk_widget_hide (mfield);
-	gtk_widget_show (rbutton);
+	gtk_widget_show (ralign);
 
 	gtk_widget_grab_focus(rbutton);
 
@@ -173,7 +182,7 @@ void focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 
 void resume_game_cb (GtkButton *widget, gpointer data)
 {
-	gtk_widget_hide (rbutton);
+	gtk_widget_hide (ralign);
 	gtk_widget_show (mfield);
 
 	games_clock_start(GAMES_CLOCK(clk));
@@ -710,8 +719,8 @@ main (int argc, char *argv[])
 	GtkWidget *status_table;
 	GtkWidget *button_table;
         GtkWidget *align;
+        GtkWidget *box;        
         GtkWidget *label;
-	GtkWidget *box;
 	GnomeClient *client;
 
 	gnome_score_init("gnomine");
@@ -837,10 +846,13 @@ main (int argc, char *argv[])
 	mfield = gtk_minefield_new();
 	gtk_box_pack_start(GTK_BOX(box), mfield, TRUE, TRUE, 0);
 
+        ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+	gtk_box_pack_start (GTK_BOX(box), ralign, TRUE, TRUE, 0);
 	rbutton = gtk_button_new_with_label ("Press to resume");
 	g_signal_connect (GTK_OBJECT(rbutton), "clicked", 
 			    GTK_SIGNAL_FUNC (resume_game_cb), NULL);
-	gtk_box_pack_start(GTK_BOX(box), rbutton, TRUE, TRUE, 0);
+        gtk_container_add (GTK_CONTAINER(ralign), rbutton);
+        gtk_widget_show (rbutton);
 	gtk_widget_show (box);
 
         setup_mode(mfield, fsize);

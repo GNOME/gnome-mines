@@ -44,15 +44,19 @@ Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 install-data-local:
 	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
-	-touch $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Tiny.scores	
+	# Change the names of the high score files, unless the local user has 
+	# beaten us to it.
+	-if [ -f $(DESTDIR)$(scoredir)/gnomine.Tiny.scores -a ! -f $(DESTDIR)$(scoredir)/gnomine.Small.scores ]; then mv -f $(DESTDIR)$(scoredir)/gnomine.Tiny.scores $(DESTDIR)$(scoredir)/gnomine.Small.scores  ; fi
+	-if [ -f $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores -a ! -f $(DESTDIR)$(scoredir)/gnomine.Large.scores ]; then mv -f $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores $(DESTDIR)$(scoredir)/gnomine.Large.scores  ; fi
+	-touch $(DESTDIR)$(scoredir)/gnomine.Small.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Small.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Small.scores	
 	-touch $(DESTDIR)$(scoredir)/gnomine.Medium.scores
 	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Medium.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Medium.scores	
-	-touch $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores
-	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores
-	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores	
+	-touch $(DESTDIR)$(scoredir)/gnomine.Large.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Large.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Large.scores	
 	-touch $(DESTDIR)$(scoredir)/gnomine.Custom.scores
 	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Custom.scores
 	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Custom.scores	

@@ -1,3 +1,12 @@
+2003-05-07  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am (install-data-local): Update the names of any old
+	high score files. High scores should work again.
+
+	* gnomine.c: Added dodgy code to ensure that the window doesn't
+	shrink when it looses focus and displays the "press here" message.
+	Fixes bug #83317.
+
 2003-04-30  Abel Cheung  <maddog@linux.org.hk>
 
 	* ChangeLog: Convert to UTF-8.
