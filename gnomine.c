@@ -374,7 +374,7 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		int i;
 		i = value ? gconf_value_get_int (value) : 40;
 		if (nmines != i) {
-			nmines = range (i, 1, xsize * ysize);
+			nmines = range (i, 1, xsize * ysize - 2);
 			gtk_minefield_set_mines(GTK_MINEFIELD(mfield), nmines, minesize);
 			new_game (mfield, NULL);
 		}
