@@ -302,15 +302,15 @@ void setup_game(GtkWidget *widget, gpointer data)
 }
 
 GnomeMenuInfo gamemenu[] = {
-  {MI_ITEM, "New", new_game, NULL},
-  {MI_ITEM, "Setup...", setup_game, NULL},
-  {MI_ITEM, "Exit", quit_game, NULL},
-  {MI_ENDOFINFO, NULL, NULL, NULL}  
+  {GNOME_APP_MENU_ITEM, "New", new_game, NULL},
+  {GNOME_APP_MENU_ITEM, "Setup...", setup_game, NULL},
+  {GNOME_APP_MENU_ITEM, "Exit", quit_game, NULL},
+  {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}  
 };
 
 GnomeMenuInfo mainmenu[] = {
-  {MI_SUBMENU, "Game", gamemenu, NULL},
-  {MI_ENDOFINFO, NULL, NULL, NULL}
+  {GNOME_APP_MENU_SUBMENU, "Game", gamemenu, NULL},
+  {GNOME_APP_MENU_ENDOFINFO, NULL, NULL, NULL}
 };
 
 int main(int argc, char *argv[])
@@ -328,10 +328,9 @@ int main(int argc, char *argv[])
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
 
-	window = gnome_app_new("Gnome mines");
+	window = gnome_app_new("gnomine", "Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-	gnome_app_set_positions(GNOME_APP(window), POS_TOP, POS_NOCHANGE);
         
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
