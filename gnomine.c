@@ -326,7 +326,7 @@ int main(int argc, char *argv[])
 	window = gnome_app_new("gnomine", "Gnome mines");
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
-        
+	
         gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                            GTK_SIGNAL_FUNC(quit_game), NULL);
 
