@@ -2,9 +2,11 @@
 Name=Gnome Mines
 Name[es]=Gnome Minas
 Name[de]=Gnome Mines
+Name[ko]=±×³ğ Áö·ÚÃ£±â
 Comment=Gnome Mines game
 Comment[es]=Juego Gnome Minas
 Comment[de]=Gnome Variante von MineSweeper
+Comment[ko]=±×³ğ Áö·ÚÃ£±â °ÔÀÓ
 Exec=gnomine
 Icon=gnome-gnomine.xpm
 Terminal=0
