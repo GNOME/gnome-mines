@@ -122,6 +122,8 @@ image_widget_setup (char *name)
 static void
 show_face (GtkWidget *pm)
 {
+	return;
+
         if (pm_current == pm) return;
 
 	if (pm_current) {
@@ -1020,7 +1022,7 @@ main (int argc, char *argv[])
 
 	gnome_app_set_contents (GNOME_APP (window), all_boxes);
 
-	button_table = gtk_table_new (2, 3, FALSE);
+	button_table = gtk_table_new (1, 3, FALSE);
 	gtk_box_pack_start (GTK_BOX (all_boxes), button_table, TRUE, TRUE, 0);
 
 	pm_current = NULL;
@@ -1028,11 +1030,10 @@ main (int argc, char *argv[])
 	mbutton = gtk_button_new ();
 	g_signal_connect (G_OBJECT (mbutton), "clicked",
 			  G_CALLBACK (new_game), NULL);
-        gtk_widget_set_size_request (mbutton, 38, 38);
 	gtk_table_attach (GTK_TABLE (button_table), mbutton, 1, 2, 0, 1,
 			  0, 0, 5, 5);
 
-	face_box = gtk_vbox_new (FALSE, 0);
+	face_box = gtk_vbox_new (FALSE, 5);
 	gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 	
 	pm_win     = image_widget_setup ("gnomine/face-win.png");
@@ -1041,13 +1042,11 @@ main (int argc, char *argv[])
 	pm_cool    = image_widget_setup ("gnomine/face-cool.png");
 	pm_worried = image_widget_setup ("gnomine/face-worried.png");
 
-        gtk_box_pack_start (GTK_BOX (face_box), pm_win, FALSE, FALSE, 0);
-        gtk_box_pack_start (GTK_BOX (face_box), pm_sad, FALSE, FALSE, 0);
-        gtk_box_pack_start (GTK_BOX (face_box), pm_smile, FALSE, FALSE, 0);
-        gtk_box_pack_start (GTK_BOX (face_box), pm_cool, FALSE, FALSE, 0);
-        gtk_box_pack_start (GTK_BOX (face_box), pm_worried, FALSE, FALSE, 0);
-
-	show_face (pm_smile); 
+	gtk_box_pack_start (GTK_BOX (face_box), pm_win, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (face_box), pm_sad, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (face_box), pm_smile, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (face_box), pm_cool, FALSE, FALSE, 0);
+	gtk_box_pack_start (GTK_BOX (face_box), pm_worried, FALSE, FALSE, 0);
 
 	box = gtk_vbox_new (FALSE, 0);
 	gtk_table_attach_defaults (GTK_TABLE (button_table), box, 1, 2, 1, 2);
@@ -1123,6 +1122,8 @@ main (int argc, char *argv[])
 	gtk_widget_hide (pm_sad);
 	gtk_widget_hide (pm_cool);
 	gtk_widget_hide (pm_worried);
+
+	show_face (pm_smile); 
 
         gtk_main ();
 

@@ -1,3 +1,9 @@
+2004-08-28  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Remove the explicit call to
+	gtk_widget_set_size_request for the face button. This clips the
+	image badly. Fixes bug #144801.
+
 2004-08-17  callum  <callum@spooky-possum.org>
 
 	* gnomine.c: Fix up the checking code for nmines so that we can't
