@@ -59,8 +59,8 @@ void show_face(GtkWidget *pm)
 
 void quit_game(GtkWidget *widget, gpointer data)
 {
-        gtk_widget_destroy(window);
-        gtk_main_quit();
+//	gtk_widget_destroy(window);
+	gtk_main_quit();
 }
 
 void set_flabel(GtkMineField *mfield)
@@ -268,18 +268,18 @@ void setup_game(GtkWidget *widget, gpointer data)
 	
         if (setupdialog) return;
 
-	setupdialog = gtk_window_new(GTK_WINDOW_DIALOG);
+	setupdialog = gnome_dialog_new (_("Gnome Mines setup"),
+			GNOME_STOCK_BUTTON_OK, GNOME_STOCK_BUTTON_CANCEL,
+			NULL);
+	gnome_dialog_set_parent (GNOME_DIALOG (setupdialog),
+			GTK_WINDOW (window));
 
-	gtk_container_border_width(GTK_CONTAINER(setupdialog), 10);
-	GTK_WINDOW(setupdialog)->position = GTK_WIN_POS_MOUSE;
-	gtk_window_set_title(GTK_WINDOW(setupdialog), _("Gnome Mines setup"));
 	gtk_signal_connect(GTK_OBJECT(setupdialog),
 			   "delete_event",
 			   GTK_SIGNAL_FUNC(setupdialog_destroy),
 			   0);
 
-	all_boxes = gtk_vbox_new(FALSE, 5);
-	gtk_container_add(GTK_CONTAINER(setupdialog), all_boxes);
+	all_boxes = GNOME_DIALOG (setupdialog)->vbox;
 
         cframe = gtk_frame_new(_("Custom size"));
 
@@ -394,17 +394,10 @@ void setup_game(GtkWidget *widget, gpointer data)
 	
 	box = gtk_hbox_new(TRUE, 5);
 	gtk_box_pack_start(GTK_BOX(all_boxes), box, TRUE, TRUE, 0);
-        button = gnome_stock_button(GNOME_STOCK_BUTTON_OK);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked",
-			   GTK_SIGNAL_FUNC(do_setup), NULL);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
-        gtk_widget_show(button);
-        button = gnome_stock_button(GNOME_STOCK_BUTTON_CANCEL);
-	gtk_signal_connect(GTK_OBJECT(button), "clicked",
-                           (GtkSignalFunc)setupdialog_destroy,
-			   (gpointer)1);
-	gtk_box_pack_start(GTK_BOX(box), button, TRUE, TRUE, 5);
-        gtk_widget_show(button);
+	gnome_dialog_button_connect (GNOME_DIALOG (setupdialog), 0,
+			GTK_SIGNAL_FUNC (do_setup), NULL);
+	gnome_dialog_button_connect (GNOME_DIALOG (setupdialog), 1,
+			GTK_SIGNAL_FUNC (setupdialog_destroy), (gpointer) 1);
         gtk_widget_show(box);
 	
 	gtk_widget_show(all_boxes);
