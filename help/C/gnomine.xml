@@ -2,12 +2,12 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.4">
-  <!ENTITY manrevision "2.4">
+  <!ENTITY appversion "2.6">
+  <!ENTITY manrevision "2.6">
   <!ENTITY date "March 2002">
   <!ENTITY app "<application>GNOME Mines</application>">
   <!ENTITY appname "GNOME Mines">
-  <!ENTITY version "2.4">
+  <!ENTITY version "2.6">
 ]>
 
 <!-- 
