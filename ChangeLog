@@ -8,6 +8,8 @@
 	(gtk_mine_draw): Solved a drawing problem where the cleared mines
 	weren't being drawn if they were auto-cleared. The gorilla theme
 	really higlighted this.
+	(gtk_mine_draw): Add a warning to guard against a bug I suspect is
+	still there.
 
 2004-02-16  Callum McKenzie  <callum@physics.otago.ac.nz>
 

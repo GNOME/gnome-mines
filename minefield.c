@@ -314,6 +314,8 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
         GtkWidget *widget = GTK_WIDGET(mfield);
 	GdkRectangle rect;
 	
+	g_return_if_fail (c != -1);
+
         /* This gives us a dotted line to increase the contrast between
          * buttons and the "sea". */
         if (stipple == NULL) {
