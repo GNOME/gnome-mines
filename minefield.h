@@ -88,11 +88,12 @@ struct _GtkMineFieldClass
 };
 
 
+#define MINESIZE_MIN 12
+
 GType      gtk_minefield_get_type (void);
 GtkWidget* gtk_minefield_new      (void);
 
 void gtk_minefield_set_size (GtkMineField *mfield, guint xsize, guint ysize);
-void gtk_minefield_set_mines (GtkMineField *mfield, guint mcount, guint minesize);
 void gtk_minefield_restart (GtkMineField *mfield);
 void gtk_minefield_set_use_question_marks (GtkMineField *mfield, gboolean use_question_marks);
 

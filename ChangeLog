@@ -1,3 +1,76 @@
+2003-07-08  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gtkmfframe.c: 
+	* gtkmfframe.h:
+	Removed since they are unnecessary.
+	
+	* gnomine.c (new_game): Add a conditional on the resizing code so
+	the window is only resized if the grid size changes, this prevents
+	unexpected window shrinkage when starting a new game and there was
+	some space around the grid.
+
+	* Makefile.am (gnomine_SOURCES): Removed the now unnecessary
+	auxiliary widget files.
+
+	* minefield.c (gtk_minefield_size_allocate): Let the minefield
+	widget deal with the details of it's own size, the container only
+	makes sure nothing stupid happens.
+
+	* minefield.c (_setup_sign): Scale the pixmaps as per Jon's
+	suggestion.
+
+2003-07-07  Steve Chaplin  <stevech1097@yahoo.com.au>
+
+	* minefield.c (gtk_minefield_size_request): Make the size request for
+	the minimum size, to allow the widget to be reduced in size.
+	(gtk_minefield_init): Remove lines setting requisition width and height
+	- this is the job of gtk_minefield_size_request().
+	(gtk_minefield_setup_numbers): Call from gtk_minefield_expose () only,
+	delete other calls to this function.
+	Return immediately if the number size is already set correctly.
+	(gtk_minefield_size_allocate): Accept the size allocation given, the
+	frame widget that the minefield is inside will make sure its the 
+	correct size.
+	(gtk_minefield_set_mines): Deleted - minesize no longer needs to be 
+	set and mcount can be set in one line of code.
+
+	* minefield.h: Remove declaration of gtk_minefield_set_mines().
+	Remove MINESIZE_MAX - the minesize is now dependant on the size of the 
+	application window.
+
+	* gnomine.c Add gconf keys for window width and height.
+	Move MINESIZE_MIN, MINESIZE_MAX to minefield.h so that minefield.c
+	can use them also. Increase MINESIZE_MIN from 2 to 12, I think it
+	should probably go even larger.
+	Remove KEY_MINESIZE, minesize is now set by sizing main window.
+	(main): Comment out "configure_event".
+	Read in window width and height from gconf and set default window size.
+	Put the minefield inside the new frame widget.
+	Remove the GtkAlignment that holds the vbox, its no longer required.
+	(configure_cb): Remove function, not required any more.
+	(quit_game): Save current window size to gconf.
+	(new_game): Save the mine square size and use it to resize 
+	the window after starting the new game.
+	(setup_mode): Call from new_game() only, remove all other calls to 
+	setup_mode().
+	Substitute setup_mode() code into new_game() and delete setup_mode()
+	(gconf_key_change_cb): Delete calls to gtk_minefield_set_size() and 
+	gtk_minefield_set_mines() since they are both called now by new_game()
+	Add range check for fsize.
+	Remove KEY_MINESIZE section.
+	(verify_ranges): Add range check for fsize. Remove minesize.
+	(resume_game_cb): Show 'mf_frame' not 'mfield'.
+	(focus_out_cb): Hide 'mf_frame' not 'mfield', simplify function.
+	(create_preferences): Remove minesize spinbutton.
+	(minesize_spin_cb): Delete, minesize is now controlled by resizing the 
+	main window.
+
+	* Makefile.am (gnomine_SOURCES): Update to use the two new files.
+
+	* gtkmfframe.h: 
+	* gtkmfframe.c: New files that define a widget derived from GtkFrame
+	that resizes the minefield.
+
 2003-07-05  Steve Chaplin  <stevech1097@yahoo.com.au>
  
         * gnomine.c (nstr): Remove and substitute the one line of code

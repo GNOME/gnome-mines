@@ -19,22 +19,24 @@
 #include "games-frame.h"
 
 /* Limits for various minefield properties */
-#define MINESIZE_MIN 2
-#define MINESIZE_MAX 100
 #define XSIZE_MIN 4
 #define XSIZE_MAX 100
 #define YSIZE_MIN 4
 #define YSIZE_MAX 100
+#define WIDTH_DEFAULT  300
+#define HEIGHT_DEFAULT 300
 
 /* GConf key paths */
 #define KEY_DIR "/apps/gnomine"
 #define KEY_XSIZE "/apps/gnomine/geometry/xsize"
 #define KEY_YSIZE "/apps/gnomine/geometry/ysize"
 #define KEY_NMINES "/apps/gnomine/geometry/nmines"
-#define KEY_MINESIZE "/apps/gnomine/geometry/minesize"
 #define KEY_MODE "/apps/gnomine/geometry/mode"
 #define KEY_USE_QUESTION_MARKS "/apps/gnomine/use_question_marks"
+#define KEY_WIDTH    	       "/apps/gnomine/geometry/width"
+#define KEY_HEIGHT   	       "/apps/gnomine/geometry/height"
 
+static GtkWidget *mf_frame;
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog = NULL;
 static GtkWidget *rbutton;
@@ -56,7 +58,6 @@ GtkWidget *face_box;
 gint ysize = -1, xsize = -1;
 gint nmines = -1;
 gint fsize = -1;
-gint minesize = -1;
 gboolean use_question_marks = TRUE;
 
 GnomeUIInfo gamemenu[];
@@ -108,6 +109,12 @@ show_face (GtkWidget *pm)
 static void
 quit_game (GtkWidget *widget, gpointer data)
 {
+	gint width, height;
+
+	gtk_window_get_size (GTK_WINDOW (window), &width, &height);
+	gconf_client_set_int (conf_client, KEY_WIDTH,  width, NULL);
+	gconf_client_set_int (conf_client, KEY_HEIGHT, height, NULL);
+
 	gtk_main_quit ();
 }
 
@@ -118,6 +125,7 @@ set_flabel (GtkMineField *mfield)
 
 	val = g_strdup_printf ("%d/%d", mfield->flag_count, mfield->mcount);
 	gtk_label_set_text (GTK_LABEL (flabel), val);
+	g_free (val);
 }
 
 static void
@@ -163,62 +171,70 @@ top_ten (GtkWidget *widget, gpointer data)
 static void
 new_game (GtkWidget *widget, gpointer data)
 {
+	static guint oldx = -1;
+	static guint oldy = -1;
+	gint width, height, w_diff, h_diff;
+	guint size;
+	gint x, y;
+	static gint size_table[3][3] = {{ 8, 8, 10 }, {16, 16, 40}, {30, 16, 99}};
+	GtkMineField *mf = GTK_MINEFIELD (mfield);
+
 	games_clock_stop (GAMES_CLOCK (clk));
 	games_clock_set_seconds (GAMES_CLOCK (clk), 0);
-
 	show_face (pm_smile);
+
+	/* get window size and mine square size (gtk_minefield_restart() may change it) */
+	gtk_window_get_size (GTK_WINDOW (window), &width, &height);
+	size = mf->minesize;
+	w_diff = width  - mfield->allocation.width;
+	h_diff = height - mfield->allocation.height;
+
+	if (fsize == 3) {
+		x = xsize;
+		y = ysize;
+		mf->mcount = nmines;
+	} else {
+		x = size_table[fsize][0];
+		y = size_table[fsize][1];
+		mf->mcount = size_table[fsize][2];
+	}
+	gtk_minefield_set_size (GTK_MINEFIELD (mfield), x, y);
 	gtk_minefield_restart (GTK_MINEFIELD (mfield));
+
 	set_flabel (GTK_MINEFIELD (mfield));
 
-	gtk_widget_hide (ralign);
-	gtk_widget_show (mfield); 
-}
-
-static gboolean
-configure_cb (GtkWidget *widget, GdkEventConfigure *event)
-{
-	GtkMineField *mf = GTK_MINEFIELD (mfield);
-	gint size = MIN (event->width / mf->xsize, event->height / mf->ysize);
-
-	/* problem? configure_cb expands minefield to fit the window, so it
-	   does not allow you to reduce (in preferences) minefield smaller than
-	   the statusbar min width */
-	if (mf->minesize != size) {
-		if (pref_dialog == NULL)
-			create_preferences ();
-		/* make sure preferences dialog updates the minesize value */
-		gtk_spin_button_set_value (GTK_SPIN_BUTTON (sentry), size);
+	if ((oldx != -1) && (oldy != -1) &&
+	    ((oldx != x) || (oldy != y))) {
+		/* preserve the existing mine square size */
+		/* preserve any spacing around the minefield also */
+		width  = size * mf->xsize + w_diff;
+		height = size * mf->ysize + h_diff;
+		gtk_window_resize (GTK_WINDOW (window), width, height);
 	}
-	return FALSE;
+	oldx = x;
+	oldy = y;
+	
+	gtk_widget_hide (ralign);
+	gtk_widget_show (mf_frame); 
 }
 
 static void
 focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
-        GtkRequisition req;
+	if (GAMES_CLOCK (clk)->timer_id != -1) {
+		gtk_widget_hide (mf_frame);
+		gtk_widget_show (ralign);
+		gtk_widget_grab_focus (rbutton);
 
-	if (GAMES_CLOCK (clk)->timer_id == -1)
-		return;
-
-        /* This is a complete abuse of the sizing system, but it seems to
-         * be the only way to keep the window the same size when we substitute
-         * the "Press to resume" button, but still allow it to resize when we 
-         * resize the field. */
-        gtk_widget_size_request (mfield, &req);
-        gtk_widget_set_size_request (ralign, req.width, req.height);
-	gtk_widget_hide (mfield);
-	gtk_widget_show (ralign);
-
-	gtk_widget_grab_focus (rbutton);
-
-	games_clock_stop (GAMES_CLOCK (clk)); 
+		games_clock_stop (GAMES_CLOCK (clk)); 
+	}
 }
 
 static void
 resume_game_cb (GtkButton *widget, gpointer data)
 {
 	gtk_widget_hide (ralign);
-	gtk_widget_show (mfield);
+	gtk_widget_show (mf_frame);
 
 	games_clock_start (GAMES_CLOCK (clk));
 }
@@ -288,25 +304,6 @@ unlook_cell (GtkWidget *widget, gpointer data)
 	show_face(pm_cool);
 }
 
-static void
-setup_mode (GtkWidget *widget, gint mode)
-{
-	static gint size_table[3][3] = {{ 8, 8, 10 }, {16, 16, 40}, {30, 16, 99}};
-	gint x,y,m;
-
-	if (mode == 3) {
-		x = xsize;
-		y = ysize;
-		m = nmines;
-	} else {
-		x = size_table[mode][0];
-		y = size_table[mode][1];
-		m = size_table[mode][2];
-	}
-	gtk_minefield_set_size (GTK_MINEFIELD (mfield), x, y);
-	gtk_minefield_set_mines (GTK_MINEFIELD (mfield), m, minesize); 
-}
-
 static int
 range (int val, int min, int max)
 {
@@ -321,10 +318,10 @@ range (int val, int min, int max)
 static void
 verify_ranges (void)
 {
-	minesize = range (minesize, MINESIZE_MIN, MINESIZE_MAX);
 	xsize    = range (xsize, XSIZE_MIN, XSIZE_MAX);
 	ysize    = range (ysize, YSIZE_MIN, YSIZE_MAX);
 	nmines   = range (nmines, 1, xsize * ysize);
+	fsize    = range (fsize,  0, 3);
 }
 
 static void
@@ -404,7 +401,6 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != xsize) {
 			xsize = range (i, XSIZE_MIN, XSIZE_MAX);
-			gtk_minefield_set_size(GTK_MINEFIELD(mfield), xsize, ysize);
 			new_game (mfield, NULL);
 		}
 	}
@@ -413,7 +409,6 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 16;
 		if (i != ysize) {
 			ysize = range (i, YSIZE_MIN, YSIZE_MAX);
-			gtk_minefield_set_size(GTK_MINEFIELD(mfield), xsize, ysize);
 			new_game (mfield, NULL);
 		}
 	}
@@ -422,26 +417,14 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		i = value ? gconf_value_get_int (value) : 40;
 		if (nmines != i) {
 			nmines = range (i, 1, xsize * ysize - 2);
-			gtk_minefield_set_mines(GTK_MINEFIELD(mfield), nmines, minesize);
 			new_game (mfield, NULL);
-		}
-	}
-	if (strcmp (key, KEY_MINESIZE) == 0) {
-		int i;
-		i = value ? gconf_value_get_int (value) : 17;
-		if (minesize != i) {
-			minesize = range (i, MINESIZE_MIN, MINESIZE_MAX);
-			gtk_minefield_set_mines(GTK_MINEFIELD(mfield),
-						GTK_MINEFIELD(mfield)->mcount,
-						minesize);
 		}
 	}
 	if (strcmp (key, KEY_MODE) == 0) {
 		int i;
 		i = value ? gconf_value_get_int (value) : 0;
 		if (i != fsize) {
-			fsize = i;
-			setup_mode (mfield, fsize);
+			fsize = range (i, 0, 3);
 			update_score_state ();
 			new_game (mfield, NULL);
 		}
@@ -450,8 +433,6 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		use_question_marks = value ? gconf_value_get_bool (value) : TRUE;
 		gtk_minefield_set_use_question_marks(GTK_MINEFIELD(mfield), use_question_marks);
 	}
-	/* now window is resizable we need to shrink it when changing minesize etc */
-	gtk_window_resize (GTK_WINDOW (window), 1, 1);
 }
 
 static void
@@ -513,15 +494,6 @@ nmines_spin_cb (GtkSpinButton *spin, gpointer data)
 }
 
 static void
-minesize_spin_cb (GtkSpinButton *spin, gpointer data)
-{
-	int size = gtk_spin_button_get_value_as_int (spin);
-	gconf_client_set_int (conf_client, KEY_MINESIZE,
-			      size, NULL);
-
-}
-
-static void
 use_question_toggle_cb (GtkCheckButton *check, gpointer data)
 {
 	gboolean use_marks = gtk_toggle_button_get_active(GTK_TOGGLE_BUTTON(check));
@@ -535,7 +507,6 @@ create_preferences (void)
 	GtkWidget *table;
 	GtkWidget *frame;
 	GtkWidget *vbox;
-	GtkWidget *hbox;
 	GtkWidget *button;
 	GtkWidget *table2;
 	GtkWidget *label2;
@@ -640,20 +611,6 @@ create_preferences (void)
 
 	gtk_table_attach (GTK_TABLE (table), cframe, 1, 2, 0, 1, GTK_EXPAND |
 			GTK_FILL, GTK_EXPAND | GTK_FILL, 0, 0);
-
-	hbox = gtk_hbox_new (FALSE, GNOME_PAD);
-
-	label2 = gtk_label_new(_("Mine size:"));
-	gtk_box_pack_start (GTK_BOX (hbox), label2, FALSE, FALSE, 0);
-
-	sentry = gtk_spin_button_new_with_range(MINESIZE_MIN, MINESIZE_MAX, 1);
-	g_signal_connect (GTK_OBJECT (sentry), "value-changed",
-			GTK_SIGNAL_FUNC (minesize_spin_cb), NULL);
-	gtk_spin_button_set_value (GTK_SPIN_BUTTON(sentry), minesize);
-	gtk_box_pack_start (GTK_BOX (hbox), sentry, TRUE, TRUE, 0);
-
-	gtk_table_attach (GTK_TABLE (table), hbox, 0, 1, 1, 2, GTK_EXPAND |
-			GTK_FILL, 0, 0, 0);
 
 	question_toggle = gtk_check_button_new_with_label(_("Use \"I'm not sure\" flags."));
 	g_signal_connect(GTK_OBJECT(question_toggle), "toggled",
@@ -764,7 +721,6 @@ static int xpos = -1, ypos = -1;
 static struct poptOption options[] = {
   {NULL, 'x', POPT_ARG_INT, &xsize, 0, N_("Width of grid"), N_("X")},
   {NULL, 'y', POPT_ARG_INT, &ysize, 0, N_("Height of grid"), N_("Y")},
-  {NULL, 's', POPT_ARG_INT, &minesize, 0, N_("Size of mines"), N_("SIZE")},
   {NULL, 'n', POPT_ARG_INT, &nmines, 0, N_("Number of mines"), N_("NUMBER")},
   {NULL, 'f', POPT_ARG_INT, &fsize, 0, NULL, NULL},
   {NULL, 'a', POPT_ARG_INT, &xpos, 0, NULL, N_("X")},
@@ -779,10 +735,10 @@ main (int argc, char *argv[])
         GtkWidget *all_boxes;
 	GtkWidget *status_box;
 	GtkWidget *button_table;
-        GtkWidget *align;
         GtkWidget *box;        
         GtkWidget *label;
 	GnomeClient *client;
+	gint width, height;
 
 	gnome_score_init("gnomine");
 
@@ -825,10 +781,6 @@ main (int argc, char *argv[])
 		nmines = gconf_client_get_int (conf_client,
 					       KEY_NMINES,
 					       NULL);
-	if (minesize == -1)
-		minesize = gconf_client_get_int (conf_client,
-						 KEY_MINESIZE,
-						 NULL);
 	if (fsize == -1)
 		fsize = gconf_client_get_int (conf_client,
 					      KEY_MODE,
@@ -836,6 +788,10 @@ main (int argc, char *argv[])
 	use_question_marks = gconf_client_get_bool (conf_client, 
 						    KEY_USE_QUESTION_MARKS,
 						    NULL);
+	width = gconf_client_get_int (conf_client, KEY_WIDTH, NULL);
+	width = width ? width : WIDTH_DEFAULT;
+	height = gconf_client_get_int (conf_client, KEY_HEIGHT, NULL);
+	height = height ? height : HEIGHT_DEFAULT;
 	
 	verify_ranges ();
 
@@ -852,6 +808,7 @@ main (int argc, char *argv[])
 
 	window = gnome_app_new ("gnomine", _("GNOME Mines"));
 	gnome_app_create_menus (GNOME_APP (window), mainmenu);
+	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	
 	gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
 	appbar = GNOME_APPBAR (gnome_appbar_new (FALSE, TRUE, GNOME_PREFERENCES_NEVER));
@@ -861,17 +818,15 @@ main (int argc, char *argv[])
 			 G_CALLBACK (quit_game), NULL);
 	g_signal_connect(G_OBJECT (window), "focus_out_event",
 			 G_CALLBACK (focus_out_cb), NULL);
-	g_signal_connect (GTK_OBJECT (window), "configure_event",
-			  G_CALLBACK (configure_cb), NULL);
 
 	all_boxes = gtk_vbox_new (FALSE, 0);
 
 	gnome_app_set_contents (GNOME_APP (window), all_boxes);
 
-        	button_table = gtk_table_new (2, 3, FALSE);
+	button_table = gtk_table_new (2, 3, FALSE);
 	gtk_box_pack_start (GTK_BOX (all_boxes), button_table, TRUE, TRUE, 0);
 
-        	pm_current = NULL;
+	pm_current = NULL;
 
 	mbutton = gtk_button_new ();
 	g_signal_connect (G_OBJECT (mbutton), "clicked",
@@ -897,24 +852,28 @@ main (int argc, char *argv[])
 
 	show_face (pm_smile); 
 
-        align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
-	gtk_table_attach (GTK_TABLE (button_table), align, 1, 2, 1, 2,
-			  GTK_EXPAND | GTK_FILL, GTK_EXPAND | GTK_FILL,
-			  0, 0);
-  
 	box = gtk_vbox_new (FALSE, 0);
-	gtk_container_add (GTK_CONTAINER (align), box);
-	mfield = gtk_minefield_new ();
-	gtk_box_pack_start (GTK_BOX (box), mfield, TRUE, TRUE, 0);
+	gtk_table_attach_defaults (GTK_TABLE (button_table), box, 1, 2, 1, 2);
 
-        ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
+#if 0
+	mf_frame = gtk_mf_frame_new ();
+	mfield = GTK_MF_FRAME (mf_frame)->minefield;
+#else
+	mfield = gtk_minefield_new ();
+	/* It doesn't really matter what this widget is as long as it's a
+	 * container. */
+	mf_frame = gtk_alignment_new (0.5, 0.5, 1.0, 1.0);
+	gtk_container_add (GTK_CONTAINER (mf_frame), mfield);
+#endif
+	gtk_box_pack_start (GTK_BOX (box), mf_frame, TRUE, TRUE, 0);
+
+	ralign = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
 	gtk_box_pack_start (GTK_BOX (box), ralign, TRUE, TRUE, 0);
+
 	rbutton = gtk_button_new_with_label ("Press to resume");
 	g_signal_connect (G_OBJECT (rbutton), "clicked", 
 			  G_CALLBACK (resume_game_cb), NULL);
         gtk_container_add (GTK_CONTAINER (ralign), rbutton);
-
-        setup_mode (mfield, fsize);
 
 	gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
 					      use_question_marks);
@@ -963,9 +922,6 @@ main (int argc, char *argv[])
 	gtk_widget_hide (pm_cool);
 	gtk_widget_hide (pm_worried);
 
-	/* shrink the window to recover the space that ralign was using */
-	gtk_window_resize (GTK_WINDOW (window), 1, 1);
-	
         gtk_main ();
 
 	return 0;
