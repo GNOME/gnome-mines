@@ -407,15 +407,12 @@ void setup_game(GtkWidget *widget, gpointer data)
 	gtk_widget_show(setupdialog);
 }
 
-GnomeUIInfo filemenu[] = {
-	GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
-	GNOMEUIINFO_END
-};
-
 GnomeUIInfo gamemenu[] = {
         GNOMEUIINFO_MENU_NEW_GAME_ITEM(new_game, NULL),
 	GNOMEUIINFO_SEPARATOR,
 	GNOMEUIINFO_MENU_SCORES_ITEM(top_ten, NULL),
+	GNOMEUIINFO_SEPARATOR,
+	GNOMEUIINFO_MENU_EXIT_ITEM(quit_game, NULL),
 	GNOMEUIINFO_END
 };
 
@@ -431,7 +428,6 @@ GnomeUIInfo helpmenu[] = {
 };
 
 GnomeUIInfo mainmenu[] = {
-        GNOMEUIINFO_MENU_FILE_TREE(filemenu),
         GNOMEUIINFO_MENU_GAME_TREE(gamemenu),
 	GNOMEUIINFO_MENU_SETTINGS_TREE(settingsmenu),
         GNOMEUIINFO_MENU_HELP_TREE(helpmenu),
