@@ -490,6 +490,8 @@ int main(int argc, char *argv[])
 	GtkWidget *status_table;
 	GtkWidget *button_table;
         GtkWidget *label;
+
+	gnome_score_init("gnomine");
 	
         gtk_init(&argc, &argv);
         gnome_init(&argc, &argv);
