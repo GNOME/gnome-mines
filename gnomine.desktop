@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=Gnome Mines
-Comment=Gnome Mines program
+Name[es]=Gnome Minas
+Comment=Gnome Mines game
+Comment[es]=Juego Gnome Minas
 Exec=gnomine
 Icon=gnome-gnomine.xpm
 Terminal=0
