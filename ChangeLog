@@ -1,3 +1,8 @@
+2005-01-10  Richard Hoelscher  <rah@rahga.com>
+
+	* minefield.c (_setup_sign) (gtk_minefield_setup_signs): 
+	Provide warnings for image loading failure and missing images.
+
 2005-01-05  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c: Use the generic games-scores-dialog rather than our

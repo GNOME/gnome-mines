@@ -111,28 +111,84 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
-	if (signp->preimage == NULL) {
-		GError *error = NULL;
-		signp->preimage = games_preimage_new_from_file (file, &error);
-		if (signp->preimage == NULL)
-			g_error (error->message);
-	} else {
+	if (!signp->preimage && file != NULL)
+		signp->preimage = games_preimage_new_from_file (file, NULL);
+	
+	if (signp->scaledpixbuf)
 		g_object_unref (signp->scaledpixbuf);
+	
+	signp->scaledpixbuf = NULL;
+	signp->width = signp->height = minesize - 2;
+
+	if (signp->preimage) {
+		signp->scaledpixbuf = games_preimage_render (signp->preimage, 
+							     signp->width,
+						             signp->height,
+						             NULL);
 	}
 
-        signp->scaledpixbuf = games_preimage_render (signp->preimage, 
-						       minesize - 2, 
-						       minesize - 2,
-						       NULL);
-	signp->width = gdk_pixbuf_get_width (signp->scaledpixbuf);
-	signp->height = gdk_pixbuf_get_height (signp->scaledpixbuf);
+	if (!signp->scaledpixbuf) {
+		signp->scaledpixbuf = gdk_pixbuf_new (GDK_COLORSPACE_RGB,
+						      TRUE, 8,
+						      signp->width, 
+						      signp->height);
+		gdk_pixbuf_fill (signp->scaledpixbuf, 0x00000000);
+		if (signp->preimage) g_object_unref (signp->preimage);
+		signp->preimage = NULL;
+	}
+
 }
 
 static void gtk_minefield_setup_signs(GtkMineField *mfield)
 {
-        _setup_sign(&mfield->flag, DATADIR"/pixmaps/gnomine/flag.svg", mfield->minesize);
-        _setup_sign(&mfield->mine, DATADIR"/pixmaps/gnomine/mine.svg", mfield->minesize);
-        _setup_sign(&mfield->question, DATADIR"/pixmaps/gnomine/flag-question.svg", mfield->minesize);
+	static GtkWidget * warning_dialog = NULL;
+	static gchar * warning_message = NULL;
+	gchar * flagfile, * minefile, * questionfile;
+
+	flagfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+					      "gnomine/flag.svg", TRUE, NULL);
+	minefile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+					      "gnomine/mine.svg", TRUE, NULL);
+	questionfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+					      "gnomine/flag-question.svg", TRUE, NULL); 
+
+        _setup_sign(&mfield->flag, flagfile, mfield->minesize);
+        _setup_sign(&mfield->mine, minefile, mfield->minesize);
+        _setup_sign(&mfield->question, questionfile, mfield->minesize);
+
+	if ((!flagfile || !minefile || !questionfile) &&
+	    (warning_message == NULL)) {
+		warning_message = _("Unable to find required images.\n\nPlease check your gnome-games installation.");
+	}
+
+	if ( (!mfield->flag.preimage || 
+	      !mfield->mine.preimage || 
+	      !mfield->question.preimage) && 
+	     (warning_message == NULL) ) {
+		warning_message = _("Required images have been found, but refused to load.\n\nPlease check your installation of gnome-games and its dependencies.");
+	}
+	
+	
+	if (warning_message && !warning_dialog) {
+		GtkWindow *parent = GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (mfield)));
+		warning_dialog = gtk_message_dialog_new (parent,
+							 GTK_DIALOG_MODAL,
+							 GTK_MESSAGE_ERROR,
+							 GTK_BUTTONS_NONE,
+							 _("Could not load images"));
+
+		gtk_dialog_add_button (GTK_DIALOG (warning_dialog),
+				       GTK_STOCK_QUIT, GTK_RESPONSE_CLOSE);
+
+		gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG (warning_dialog), 
+							  warning_message);
+		g_signal_connect (warning_dialog, 
+				  "response", 
+				  G_CALLBACK (gtk_main_quit), 
+				  NULL);
+		gtk_widget_show (warning_dialog);
+	}
+
 }
 
 static void
