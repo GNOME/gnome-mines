@@ -392,7 +392,7 @@ about (GtkWidget *widget, gpointer data)
 	const gchar *documenters[] = {
                 NULL
         };
-	const gchar *translator_credits = _("translator_credits");
+	const gchar *translator_credits = _("translator-credits");
 	
 	if (about) {
                 gtk_window_present (GTK_WINDOW (about));
@@ -422,7 +422,7 @@ about (GtkWidget *widget, gpointer data)
 				 _("A Minesweeper clone."),
 				 (const char **)authors,
 				 (const char **)documenters,
-				 strcmp (translator_credits, "translator_credits") != 0 ? translator_credits : NULL,
+				 strcmp (translator_credits, "translator-credits") != 0 ? translator_credits : NULL,
 				 pixbuf);
 	
 	if (pixbuf != NULL)
