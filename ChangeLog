@@ -1,3 +1,11 @@
+2003-05-12  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c (gtk_mine_draw): Added a dotted line to the
+	background grid to increase contrast. Amusingly high-contrast was
+	the worst case with the old line-style. See bug #97732. Thanks go
+	to Feiyun Wang for suggesting the solution and to Jonathan
+	Blandford who suggested using a stipple.
+
 2003-05-07  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (fix_nmines): Added code to ensure that the number of

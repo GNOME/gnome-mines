@@ -260,9 +260,22 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	int noshadow;
 	int n;
 	guint minesize;
-
+        static GdkGC *dots;
+        static char stipple_data[]  = { 0x03, 0x03, 0x0c, 0x0c };
+        static GdkPixmap *stipple = NULL;
         GtkWidget *widget = GTK_WIDGET(mfield);
 
+        /* This gives us a dotted line to increase the contrast between
+         * buttons and the "sea". */
+        if (stipple == NULL) {
+          stipple = gdk_bitmap_create_from_data (NULL, stipple_data, 4, 4);
+          dots = gdk_gc_new (widget->window);
+          gdk_gc_copy (dots, widget->style->dark_gc[2]);
+          gdk_gc_set_stipple (dots, stipple);
+          g_object_unref (stipple);
+          gdk_gc_set_fill (dots, GDK_STIPPLED);
+        }
+                
 	minesize = mfield->minesize;
 
 	if (mfield->lose || mfield->win) {
@@ -277,7 +290,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	if (noshadow) { /* draw grid on ocean floor */
 		if (y == 0) {	/* top row only */
 			gdk_draw_line(widget->window,	/* top */
-			              widget->style->dark_gc[2],
+			              dots,
 	                              x*minesize,
 	                              0,
 	                              x*minesize+minesize-1,
@@ -285,20 +298,20 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 		}
 		if (x == 0) {	/* left column only */
 			gdk_draw_line(widget->window,	/* left */
-			              widget->style->dark_gc[2],
+			              dots,
 	                              0,
 	                              y*minesize,
 	                              0,
 	                              y*minesize+minesize-1);
 		}
 		gdk_draw_line(widget->window,	/* right */
-		              widget->style->dark_gc[2],
+                              dots,
                               x*minesize+minesize-1,
                               y*minesize,
                               x*minesize+minesize-1,
                               y*minesize+minesize-1);
 		gdk_draw_line(widget->window,	/* bottom */
-		              widget->style->dark_gc[2],
+		              dots,
                               x*minesize,
                               y*minesize+minesize-1,
                               x*minesize+minesize-1,
