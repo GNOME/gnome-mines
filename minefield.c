@@ -741,7 +741,9 @@ static void gtk_minefield_class_init (GtkMineFieldClass *class)
 
 static void gtk_minefield_init (GtkMineField *mfield)
 {
+#ifndef GTK_HAVE_FEATURES_1_1_4
         GTK_WIDGET_SET_FLAGS (mfield, GTK_BASIC);
+#endif
         mfield->xsize = 0;
         mfield->ysize = 0;
 	mfield->cc = NULL;
