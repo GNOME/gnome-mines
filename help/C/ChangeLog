@@ -1,0 +1,4 @@
+2001-03-20  Gregory Leblanc  <gleblanc@cu-portland.edu>
+
+	* gnome-mines.sgml: Added, fixed minor SGML error, moved images
+	into the figures subdirectory, and updated sgml accordingly.

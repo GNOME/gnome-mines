@@ -1,0 +1,487 @@
+<!DOCTYPE article PUBLIC "-//GNOME//DTD DocBook PNG Variant V1.1//EN"[
+        <!-- if not using PNG graphic, replace reference above with
+             .....PUBLIC "-//OASIS//DTD DocBook V3.1//EN"[
+         -->
+<!ENTITY version "1.2.0">
+]>
+
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 1.0.3
+  Template last modified: Nov 16, 2000
+-->
+
+
+<!-- =============Document Header ============================= -->
+
+<article id="index">
+
+  <artheader>
+    <title>GNOME Mines Manual</title>
+    <copyright>
+      <year>2001</year>
+      <holder>Tim Riehle</holder>
+    </copyright>
+
+  <legalnotice id="legalnotice">
+   <para>
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the <ulink type="help" 
+    url="gnome-help:fdl"><citetitle>GNU Free Documentation
+    License</citetitle></ulink>, Version 1.1 or any later version 
+    published by the Free Software Foundation with no Invariant Sections, 
+    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
+    can be found <ulink type="help" url="gnome-help:fdl">here</ulink>.
+   </para>
+   <para>
+    Many of the names used by companies to distinguish their products and
+    services are claimed as trademarks. Where those names appear in any
+    GNOME documentation, and those trademarks are made aware to the members
+    of the GNOME Documentation Project, the names have been printed in caps
+    or initial caps.
+   </para>
+  </legalnotice>
+
+  <!-- This is the manual version, not application version. --> 
+    <releaseinfo>
+       This is version 1.0 of the GNOME Mines manual.
+    </releaseinfo>
+
+  </artheader>
+
+ <!-- ============= Document Body ============================= -->
+
+ <!-- ============= Introduction ============================== -->
+  <sect1 id="intro">
+    <title>Introduction</title>
+
+    <para>
+     <application>GNOME Mines</application> is a variation of the
+     popular logic puzzle minesweeper.
+    </para>
+    <para>
+      <application>GNOME Mines</application> is included in the
+      <filename>gnome-games</filename> package, which is part of the
+      GNOME desktop environment. This document describes version
+      &version; of <application>GNOME Mines</application>.
+    </para>
+  </sect1>
+
+
+ <!-- ================ Objective ============================== -->
+
+  <sect1 id="objective">
+    <title>Objective</title>
+
+    <para>
+      The object of <application>GNOME Mines</application> is for the
+      player to flag all mines hidden on the playing grid and to uncover
+      all the remaining squares.  If the player mistakenly uncovers
+      a square containing a mine the game is lost.  Winning games are
+      ranked by how quickly the play was completed.
+    </para>
+  </sect1>
+
+ <!-- ================ Usage ================================ -->
+
+  <sect1 id="usage">
+    <title>Usage</title>
+
+    <para>
+     This section describes how to use this application.
+    </para>
+
+    <!-- ========= Basic Usage =========================== -->
+    <sect2 id="basic-usage">
+      <title>Basic usage</title>
+      <para>
+<!-- Add info on starting the app from the command line -->
+        Starting <application>GNOME Mines</application> opens the
+        <interface>Main window</interface>, shown in <xref
+        linkend="fresh-mainwindow-fig">.
+
+        <!-- ==== Figure ==== -->
+        <figure id="fresh-mainwindow-fig">
+	  <title>GNOME Mines Main Window</title>
+	  <screenshot>
+	    <screeninfo>GNOME Mines Main Window</screeninfo>
+	    <graphic fileref="figures/gnomine-fresh"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+        The bottom of the window shows a game timer on the right and a
+        counter on the left showing how many flags have been placed and
+        how many mines exist.
+      </para>
+      <para>
+        Play proceeds by uncovering squares with the left mouse button and
+        placing flags with the right mouse button. Successfully uncovered
+        squares yield information: the number of mines in the adjacent
+        squares. Figure <xref linkend="begin-play-fig"> shows a game
+        in play. Note the numbers in the cleared squares and their relation
+        to flags.
+      </para>
+   <para>
+        <!-- ==== Figure ==== -->
+        <figure id="begin-play-fig">
+	  <title>GNOME Mines In Play</title>
+	  <screenshot>
+	    <screeninfo>GNOME Mines In Play</screeninfo>
+	    <graphic fileref="figures/gnomine-begin-play"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+
+        Using the information gathered from the uncovered squares the
+        player forms hypotheses about the location of undiscovered mines.
+      </para>
+      <para>
+        As flags are added the middle mouse button may be used on the
+        previously uncovered squares. If the number of flags adjacent
+        to that square satisfies the number expected 
+        the middle mouse button will automatically uncover all remaining
+        adjacent squares. If a flag has been placed by mistake this action
+        will uncover a mine and end play. Figure <xref linkend="fail-fig">
+        shows the result of just such a mistake, note the flag in the
+        top row.
+
+        <!-- ==== Figure ==== -->
+        <figure id="fail-fig">
+	  <title>GNOME Mines Showing A Failed Game</title>
+	  <screenshot>
+	    <screeninfo>GNOME Mines Showing A Failed Game</screeninfo>
+	    <graphic fileref="figures/gnomine-fail"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+        If flags have been correctly placed on all the mines, and the
+        remaining squares have been uncovered the game is won, as shown
+        in <xref linkend="won-fig">.
+
+        <!-- ==== Figure ==== -->
+        <figure id="won-fig">
+	  <title>GNOME Mines Showing A Won Game</title>
+	  <screenshot>
+	    <screeninfo>GNOME Mines Showing A Won Game</screeninfo>
+	    <graphic fileref="gnomine-won"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+    </sect2>
+  
+    <!-- ================ Basic Strategy======================== -->
+
+    <sect2 id="basic-strategy">
+      <title>Basic Strategy</title>
+
+      <para>
+        The geometrical arrangement of uncovered and flagged squares
+        often limits the possible locations that can contain hidden
+        mines. Figure <xref linkend="basic-corner"> shows how the location
+        of a mine, pointed to by the arrow, has been inferred using the
+        square on the outside corner showing the numeral one. The geometry
+        of the corner has left only one uncovered square next to the one.
+        <!-- ==== Figure ==== -->
+        <figure id="basic-corner">
+	  <title>Inferring the location of a mine at a corner</title>
+	  <screenshot>
+	    <screeninfo>Inferring the location of a mine at a corner</screeninfo>
+	    <graphic fileref="figures/basic-corner"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+        The same strategy has been used in figure <xref
+        linkend="basic-wall"> where the square showing the number three
+        has only three remaining uncovered squares that can hold mines.
+        to
+        <!-- ==== Figure ==== -->
+        <figure id="basic-wall">
+	  <title>Inferring the location of mines next along a wall</title>
+	  <screenshot>
+	    <screeninfo>Inferring the location of mines along a wall</screeninfo>
+	    <graphic fileref="figures/basic-wall"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+         In the previous cases we found the location of mines using the
+         information from a single uncovered square. More advanced play
+         comes from combining information from two or more uncovered
+         squares. Consider the arrangement of squares in figure <xref
+         linkend="advanced-1">.
+        <!-- ==== Figure ==== -->
+        <figure id="advanced-1">
+	  <title>Inferring the location of mines using information from several squares</title>
+	  <screenshot>
+	    <screeninfo>Inferring the location of mines using information from several squares</screeninfo>
+	    <graphic fileref="figures/advanced_121_a"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+         If we focus on the leftmost square showing "1" we know that only
+         a single flag can be contained in the three uncovered squares
+         highlighted in green in figure <xref linkend="advanced-2">,
+         thus we can infer where the second flag for the square showing
+         "2" must be placed.
+        <!-- ==== Figure ==== -->
+        <figure id="advanced-2">
+	  <title>finding the first mine by using the leftmost square showing "1"</title>
+	  <screenshot>
+	    <screeninfo>finding the first mine by using the leftmost square showing "1"</screeninfo>
+	    <graphic fileref="figures/advanced_121_b"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+      <para>
+        We can now repeat the same process with the rightmost square showing "1" to place
+        the second flag, see Figure <xref linkend="advanced-3">.
+        <!-- ==== Figure ==== -->
+        <figure id="advanced-3">
+	  <title>finding the second mine by using the rightmost square showing "1"</title>
+	  <screenshot>
+	    <screeninfo>finding the second mine by using the rightmost square showing "1"</screeninfo>
+	    <graphic fileref="figures/advanced_121_c"
+                     format="png" srccredit="Tim Riehle">
+            </graphic>
+	  </screenshot>
+	</figure>
+        <!-- ==== End of Figure ==== -->
+      </para>
+
+       </sect2>
+
+    </sect1>
+
+    <!-- ========= Menus =========================== --> 
+    <sect1 id="menubar">
+      <title>Menus</title>
+      <para>
+	The menu bar, located at the top of the <interface>Main
+	Window</interface>, contains the following menus:
+       </para>
+      <variablelist>
+	<varlistentry>
+	  <term><guimenu>Game</guimenu></term>
+	  <listitem>
+	    <para>
+	       This menu contains:
+	       <itemizedlist>
+		<listitem>
+		  <para>
+	            <menuchoice>
+		      <shortcut>
+			<keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>
+		      </shortcut>
+		      <guimenuitem>New game</guimenuitem>
+		     </menuchoice>
+	             &mdash; Start a new game of
+                             <application>GNOME Mines</application>.
+	           </para>
+		</listitem>
+		<listitem>
+		  <para>
+	             <menuchoice>
+		      <guimenuitem>Scores...</guimenuitem>
+		    </menuchoice>
+	            &mdash; Display the local
+                            <application>GNOME Mines</application>
+                            score statistics.
+	          </para>
+		</listitem>
+		<listitem>
+		  <para>
+	            <menuchoice>
+		      <shortcut>
+			<keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>
+		      </shortcut>
+		      <guimenuitem>Exit</guimenuitem>
+		    </menuchoice>
+	            &mdash; Quit; exit from
+                            <application>GNOME Mines</application>.
+	          </para>
+		</listitem>
+	      </itemizedlist>
+	  </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guimenu>Settings</guimenu></term>
+	  <listitem>
+	    <para>
+	       This menu contains:
+	       <itemizedlist>
+		<listitem>
+		  <para>
+	            <menuchoice>
+		      <guimenuitem>Preferences...</guimenuitem>
+		     </menuchoice>
+	             &mdash; Bring up the <application>GNOME Mines</application>
+                             <interface>Preferences</interface> dialog,
+                             as shown in <xref linkend="gnomine-preferences-fig">
+                             This allows you to choose the size of the
+                             playing grid and the size of the squares.
+
+                       <!-- ==== Figure ==== -->
+                       <figure id="gnomine-preferences-fig">
+	                 <title>GNOME Mines Preferences Dialog</title>
+	                 <screenshot>
+	                   <screeninfo>GNOME Mines Preferences Dialog</screeninfo>
+	                   <graphic fileref="figures/gnomine-preferences"
+                                    format="png" srccredit="Tim Riehle">
+                           </graphic>
+	                 </screenshot>
+	               </figure>
+                       <!-- ==== End of Figure ==== -->
+	           </para>
+		</listitem>
+	      </itemizedlist>
+	  </para>
+	  </listitem>
+	</varlistentry>
+	<varlistentry>
+	  <term><guimenu>Help</guimenu></term>
+	  <listitem>
+	    <para>
+	       This menu contains:
+	       <itemizedlist>
+<!--		<listitem>
+		  <para>
+	            <menuchoice>
+		      <guimenuitem>Help</guimenuitem>
+		     </menuchoice>
+	             &mdash; Bring up this help.
+	           </para>
+		</listitem> -->
+		<listitem>
+		  <para>
+	            <menuchoice>
+		      <guimenuitem>About...</guimenuitem>
+		     </menuchoice>
+<!--	             &mdash; Display version, copyright, and authorship
+                             information, and a brief explanation of what
+                             GNOME Mines is. -->
+	             &mdash; Bring up the <application>GNOME Mines</application>
+                             <interface>About</interface> window.
+                             If you need to know what version of GNOME Mines
+                             you are running, who wrote it and who owns the
+                             copyright, or you just want it summed up
+                             in a pithy sentence then this menu item
+                             is for you.  No rambling; no beating about the
+                             bush. The <interface>About</interface> window
+                             tells it like it is.
+	           </para>
+		</listitem>
+	      </itemizedlist>
+	  </para>
+	  </listitem>
+	</varlistentry>
+      </variablelist>
+    </sect1>
+
+ <!-- ============= Bugs ================================== -->
+
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title>
+  <para>
+   This application has no known bugs.
+  </para>
+ </sect1>
+
+
+<!-- ============= Authors ================================ -->
+
+ <sect1 id="authors">
+  <title>Authors</title>
+  <para>
+   <application>GNOME Mines</application> was written by Pista
+   (<email>szekeres@cyberspace.mht.bme.hu</email>). Please send all comments,
+   suggestions, and bug reports to the
+   <ulink url="http://bugzilla.gnome.org" type="http">GNOME bug
+   tracking database</ulink>. You can also use <application>Bug Report
+   Tool</application> (<command>bug-buddy</command>), available in the
+   <guisubmenu>Utilities</guisubmenu> submenu of
+   <guimenu>Main Menu</guimenu>, for submitting bug reports.
+  </para>
+  <para>
+   This manual was written by Tim Riehle
+   (<email>tkriehle@citilink.com</email>). Please send all comments and
+   suggestions regarding this manual to the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp">GNOME Documentation
+   Project</ulink> by sending an email to
+   <email>docs@gnome.org</email>. You can also add your comments
+   online by using the <ulink type="http"
+   url="http://developer.gnome.org/projects/gdp/doctable/">GNOME
+   Documentation Status Table</ulink>.
+  </para>
+ </sect1>
+
+
+ <!-- ============= Application License ============================= -->
+
+ <sect1 id="license">
+  <title>License</title>
+  <para>
+   This program is free software; you can redistribute it and/or
+   modify it under the terms of the  <ulink type="help" url="gnome-help:gpl">
+    <citetitle>GNU General Public License</citetitle></ulink> as
+   published by the Free Software Foundation; 
+   either version 2 of the License, or (at your option) any later
+   version.
+  </para>
+  <para>
+   This program is distributed in the hope that it will be useful, but
+   WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   <citetitle>GNU General Public License</citetitle> for more details.
+  </para>
+  <para>
+   A copy of the <citetitle>GNU General Public License</citetitle> is
+   included as an appendix to the <citetitle>GNOME Users
+   Guide</citetitle>.  You may also obtain a copy of the
+   <citetitle>GNU General Public License</citetitle> from the Free
+   Software Foundation by visiting <ulink type="http"
+   url="http://www.fsf.org">their Web site</ulink> or by writing to
+   <address>
+    Free Software Foundation, Inc.
+    <street>59 Temple Place</street> - Suite 330
+    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>
+    <country>USA</country>
+   </address>
+  </para>
+ </sect1>
+</article>
