@@ -1,7 +1,7 @@
 [Desktop Entry]
 Encoding=UTF-8
-_Name=GNOME Mines
-_Comment=Mines game
+_Name=Mines
+_Comment=Clear a mines from a minefield
 Exec=gnomine
 Icon=gnome-gnomine.png
 Terminal=false
