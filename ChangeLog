@@ -1,3 +1,8 @@
+2005-03-31  Richard Hoelscher  <rah@rahga.com>
+
+	* glines.c (fullscreen_callback): Leave setting of the fullscreen
+	actions visibility to the callback that handles window state events.
+
 2005-03-30  Marco Colombo  <m.colombo@ed.ac.uk>
 
 	* gnomine.c: Add fullscreen (Bug 172121)
