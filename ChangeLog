@@ -1,3 +1,8 @@
+2001-06-12  Juan Pablo Mendoza <pablo_juan@yahoo.com>
+
+	* minefield.c (gtk_minefield_motion_notify): We was passing for 1
+	  the minefield size.
+
 2001-06-06  Juan Pablo Mendoza Mendoza <pablo_juan@yahoo.com>
 
 	* minefield.c (gtk_minefield_button_press), 

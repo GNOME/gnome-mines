@@ -586,7 +586,7 @@ static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event
                 x = event->x/minesize;
                 y = event->y/minesize;
 
-                if (x < 0 || y < 0 || x > mfield->xsize || y > mfield->ysize)
+                if (x < 0 || y < 0 || x > mfield->xsize-1 || y > mfield->ysize-1)
                         return 0;
 
                 c = x+y*(mfield->xsize);
