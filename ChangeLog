@@ -1,5 +1,8 @@
 2003-06-12  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* gnomine.c: Fixed silly bug where the face didn't change. It
+	helps to hid them all first.
+
 	* gnomine.c:
 	* gnomine.schemas.in: Fix up Stephen's patch since we don't use
 	question marks anymore. Also default to disabled since I have

@@ -16,6 +16,7 @@
 
 #include "minefield.h"
 #include "games-clock.h"
+#include "games-frame.h"
 
 /* Limits for various minefield properties */
 #define MINESIZE_MIN 2
@@ -75,6 +76,7 @@ image_widget_setup (char *name)
 {
 	GdkPixbuf *pixbuf = NULL;
 	char *filename = NULL;
+	GtkWidget * l;
 
 	filename = gnome_program_locate_file (NULL,
 			GNOME_FILE_DOMAIN_APP_PIXMAP, name,
@@ -92,7 +94,7 @@ void show_face(GtkWidget *pm)
         if (pm_current == pm) return;
 
 	if (pm_current) {
-		gtk_widget_hide(pm_current);
+		gtk_widget_hide(pm_current); 
 	}
 
 	gtk_widget_show(pm);
@@ -634,7 +636,7 @@ static void preferences_callback (GtkWidget *widget, gpointer data)
 	gtk_table_attach (GTK_TABLE (table), hbox, 0, 1, 1, 2, GTK_EXPAND |
 			GTK_FILL, 0, 0, 0);
 
-	question_toggle = gtk_check_button_new_with_label(_("Use the unknown flag."));
+	question_toggle = gtk_check_button_new_with_label(_("Use \"I'm not sure\" flags."));
 	g_signal_connect(GTK_OBJECT(question_toggle), "toggled",
 			GTK_SIGNAL_FUNC (use_question_toggle_cb), NULL);
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(question_toggle), use_question_marks);
@@ -876,7 +878,7 @@ main (int argc, char *argv[])
         gtk_box_pack_start (GTK_BOX(face_box), pm_cool, FALSE, FALSE, 0);
         gtk_box_pack_start (GTK_BOX(face_box), pm_worried, FALSE, FALSE, 0);
 
-	show_face (pm_smile);
+	show_face (pm_smile); 
 
         align = gtk_alignment_new (0.5, 0.5, 0.0, 0.0);
 	gtk_table_attach (GTK_TABLE (button_table), align, 1, 2, 1, 2,
@@ -936,8 +938,14 @@ main (int argc, char *argv[])
 	new_game (mfield, NULL);
 
         gtk_widget_show_all (window);
+	/* All this hiding is a bit ugly, but it's better than a
+	 * ton of gtk_widget_show calls. */
 	gtk_widget_hide (ralign);
-
+	gtk_widget_hide (pm_win);
+	gtk_widget_hide (pm_sad);
+	gtk_widget_hide (pm_cool);
+	gtk_widget_hide (pm_worried);
+	
         gtk_main ();
 
 	return 0;
