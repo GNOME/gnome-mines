@@ -34,6 +34,9 @@ pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
 	face-worried.xpm \
 	flag.png flag-question.png mine.png
 
+sharedpixmapdir=$(datadir)/pixmaps
+sharedpixmap_DATA = gnome-gnomine.png
+
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
 	$(schema_in_files) $(pixmap_DATA)
 
