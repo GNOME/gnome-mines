@@ -422,10 +422,10 @@ GnomeUIInfo gamemenu[] = {
 	{GNOME_APP_UI_ITEM, N_("_Properties..."), NULL, setup_game, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_PROP, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("_Scores..."), NULL, top_ten, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_Scores"), NULL, top_ten, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_SCORES, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("Quit"), NULL, quit_game, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("E_xit"), NULL, quit_game, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_EXIT, 'q', GDK_CONTROL_MASK, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
@@ -436,7 +436,7 @@ GnomeUIInfo helpmenu[] = {
 	{GNOME_APP_UI_HELP, NULL, NULL, "gnomine", NULL, NULL,
 	GNOME_APP_PIXMAP_NONE, NULL, 0, 0, NULL},
 
-	{GNOME_APP_UI_ITEM, N_("_About..."), NULL, about, NULL, NULL,
+	{GNOME_APP_UI_ITEM, N_("_About Gnome Mines"), NULL, about, NULL, NULL,
 	GNOME_APP_PIXMAP_STOCK, GNOME_STOCK_MENU_ABOUT, 0, 0, NULL},
 
 	{GNOME_APP_UI_ENDOFINFO, NULL, NULL, NULL, NULL, NULL,
@@ -571,7 +571,7 @@ main (int argc, char *argv[])
 	}
 #endif /* ENABLE_NLS */
 
-        window = gnome_app_new("gnomine", _("Gnome mines"));
+        window = gnome_app_new("gnomine", _("Gnome Mines"));
         gtk_window_set_policy(GTK_WINDOW(window), FALSE, FALSE, TRUE);
 	gnome_app_create_menus(GNOME_APP(window), mainmenu);
 
