@@ -25,17 +25,17 @@ EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm \
 Games_DATA = gnomine.desktop
 
 install-data-local:
-	-$(mkinstalldirs) $(scoredir)
-	-touch $(scoredir)/gnomine.Tiny.scores
-	-chown games.games $(scoredir)/gnomine.Tiny.scores
-	-chmod 664 $(scoredir)/gnomine.Tiny.scores	
-	-touch $(scoredir)/gnomine.Medium.scores
-	-chown games.games $(scoredir)/gnomine.Medium.scores
-	-chmod 664 $(scoredir)/gnomine.Medium.scores	
-	-touch $(scoredir)/gnomine.Biiiig.scores
-	-chown games.games $(scoredir)/gnomine.Biiiig.scores
-	-chmod 664 $(scoredir)/gnomine.Biiiig.scores	
-	-touch $(scoredir)/gnomine.Custom.scores
-	-chown games.games $(scoredir)/gnomine.Custom.scores
-	-chmod 664 $(scoredir)/gnomine.Custom.scores	
-	-chgrp games $(bindir)/gnomine && chmod 2111 $(bindir)/gnomine
+	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
+	-touch $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Tiny.scores	
+	-touch $(DESTDIR)$(scoredir)/gnomine.Medium.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Medium.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Medium.scores	
+	-touch $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Biiiig.scores	
+	-touch $(DESTDIR)$(scoredir)/gnomine.Custom.scores
+	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Custom.scores
+	-chmod 664 $(DESTDIR)$(scoredir)/gnomine.Custom.scores	
+	-chgrp games $(DESTDIR)$(bindir)/gnomine && chmod 2111 $(DESTDIR)$(bindir)/gnomine
