@@ -188,7 +188,7 @@ void verify_ranges (void)
 {
 	minesize = range (minesize, 2, 100);
 	xsize    = range (xsize, 4, 100);
-	ysize    = range (xsize, 4, 100);
+	ysize    = range (ysize, 4, 100);
 	nmines   = range (nmines, 1, xsize * ysize);
 }
 
@@ -210,7 +210,7 @@ void do_setup(GtkWidget *widget, gpointer data)
 
 	verify_ranges ();
         setup_mode(mfield, fsize);
-  
+
         if ((oldxsize != xsize) ||
 	    (oldysize != ysize) ||
 	    (oldfsize != fsize) ||

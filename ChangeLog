@@ -1,3 +1,8 @@
+1999-02-13  Ian Peters  <ipeters@acm.org>
+
+	* gnomine.c (verify_ranges): Fixed a coding typo - it was checking the
+	xsize twice, instead of the xsize and the ysize in a custom board.
+
 1999-02-06  Federico Mena Quintero  <federico@nuclecu.unam.mx>
 
 	* gnomine.c (about): Fixed a Fundation -> Foundation typo and
