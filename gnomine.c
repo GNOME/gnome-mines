@@ -168,7 +168,7 @@ new_game (GtkWidget *widget, gpointer data)
 	set_flabel (GTK_MINEFIELD (mfield));
 
 	gtk_widget_hide (ralign);
-	gtk_widget_show (mfield);
+/*	gtk_widget_show (mfield); */
 }
 
 static gint
@@ -286,8 +286,8 @@ unlook_cell (GtkWidget *widget, gpointer data)
 static void
 setup_mode (GtkWidget *widget, gint mode)
 {
-	gint size_table[3][3] = {{ 8, 8, 10 }, {16, 16, 40}, {30, 16, 99}};
-	gint x,y,m,s;
+	static gint size_table[3][3] = {{ 8, 8, 10 }, {16, 16, 40}, {30, 16, 99}};
+	gint x,y,m;
 
 	if (mode == 3) {
 		x = xsize;
@@ -298,9 +298,8 @@ setup_mode (GtkWidget *widget, gint mode)
 		y = size_table[mode][1];
 		m = size_table[mode][2];
 	}
-	s = minesize;
 	gtk_minefield_set_size (GTK_MINEFIELD (mfield), x, y);
-	gtk_minefield_set_mines (GTK_MINEFIELD (mfield), m, s);
+	gtk_minefield_set_mines (GTK_MINEFIELD (mfield), m, minesize); 
 }
 
 static int
@@ -377,7 +376,7 @@ about (GtkWidget *widget, gpointer data)
 				 pixbuf);
 	
 	if (pixbuf != NULL)
-		gdk_pixbuf_unref (pixbuf);
+		g_object_unref (pixbuf);
 	
 	g_signal_connect (GTK_OBJECT (about), "destroy", GTK_SIGNAL_FUNC
 			(gtk_widget_destroyed), &about);
@@ -674,7 +673,7 @@ preferences_callback (GtkWidget *widget, gpointer data)
 	g_signal_connect (GTK_OBJECT (pref_dialog), "destroy",
 			GTK_SIGNAL_FUNC (gtk_widget_destroyed), &pref_dialog);
 	g_signal_connect (GTK_OBJECT (pref_dialog), "response",
-			GTK_SIGNAL_FUNC (gtk_widget_destroy), &pref_dialog);
+			GTK_SIGNAL_FUNC (gtk_widget_destroy), NULL);
 
 	gtk_widget_show_all (pref_dialog);
 }

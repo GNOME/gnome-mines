@@ -16,10 +16,12 @@ enum {
 	MINE_QUESTION
 };
 
-#define TYPE_GTK_MINEFIELD (gtk_minefield_get_type ())
-#define GTK_MINEFIELD(obj) GTK_CHECK_CAST(obj, gtk_minefield_get_type(), GtkMineField)
-#define GTK_MINEFIELD_CLASS(klass) GTK_CHECK_CLASS_CAST(klass, gtk_minefield_get_type(), GtkMineFieldClass);
-#define GTK_IS_MINEFIELD(obj) GTK_CHECK_TYPE(obj, gtk_minefield_get_type())
+#define GTK_TYPE_MINEFIELD            (gtk_minefield_get_type ())
+#define GTK_MINEFIELD(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), GTK_TYPE_MINEFIELD, GtkMineField))
+#define GTK_MINEFIELD_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), GTK_TYPE_MINEFIELD, GtkMineFieldClass))
+#define GTK_IS_MINEFIELD(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), GTK_TYPE_MINEFIELD))
+#define GTK_IS_MINEFIELD_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), GTK_TYPE_MINEFIELD))
+#define GTK_MINEFIELD_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), GTK_TYPE_MINEFIELD, GtkMineFieldClass))
 
 typedef struct _GtkMineField         GtkMineField;
 typedef struct _GtkMineFieldClass    GtkMineFieldClass;
@@ -79,14 +81,14 @@ struct _GtkMineFieldClass
 {
 	GtkWidgetClass parent_class;
 	void (*marks_changed) (GtkMineField *mfield);
-	void (*explode) (GtkMineField *mfield);
-	void (*look) (GtkMineField *mfield);
-	void (*unlook) (GtkMineField *mfield);
-	void (*win) (GtkMineField *mfield);
+	void (*explode)       (GtkMineField *mfield);
+	void (*look)          (GtkMineField *mfield);
+	void (*unlook)        (GtkMineField *mfield);
+	void (*win)           (GtkMineField *mfield);
 };
 
 
-guint      gtk_minefield_get_type (void);
+GType      gtk_minefield_get_type (void);
 GtkWidget* gtk_minefield_new      (void);
 
 void gtk_minefield_set_size (GtkMineField *mfield, guint xsize, guint ysize);
@@ -100,7 +102,3 @@ void gtk_minefield_set_use_question_marks (GtkMineField *mfield, gboolean use_qu
 
 
 #endif /* __GTK_MINEFIELD_H__ */
-
-
-
-

@@ -87,6 +87,7 @@ static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
 
 static void _setup_sign (sign *signp, const char *file, guint minesize)
 {
+        /* minesize parameter is not used */
 	GdkPixbuf *image;
 	/* TODO: catch GError */
 	image = gdk_pixbuf_new_from_file (file, NULL);
@@ -94,7 +95,7 @@ static void _setup_sign (sign *signp, const char *file, guint minesize)
 	gdk_pixbuf_render_pixmap_and_mask (image, &signp->pixmap,
 					   &signp->mask, 127);
 
-	gdk_pixbuf_unref (image);
+	g_object_unref (image);
 	gdk_drawable_get_size(signp->pixmap, &(signp->width), &(signp->height));
 }
 
@@ -214,12 +215,8 @@ static void gtk_minefield_realize(GtkWidget *widget)
 
 static void gtk_minefield_unrealize (GtkWidget *widget)
 {
-	GtkMineField *mfield;
-
 	g_return_if_fail (widget != NULL);
 	g_return_if_fail (GTK_IS_MINEFIELD (widget));
-
-	mfield = GTK_MINEFIELD (widget);
 
 	if (GTK_WIDGET_CLASS (parent_class)->unrealize)
 		(* GTK_WIDGET_CLASS (parent_class)->unrealize) (widget);
@@ -411,9 +408,10 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	}
 }
 
-static void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
+static void gtk_minefield_draw (GtkMineField *mfield, GdkRectangle *area)
 {
-	guint x1, y1, x2, y2, x, y, minesize;
+	guint x1, y1, x2, y2, x, y;
+        guint minesize = mfield->minesize;
 
 	minesize = mfield->minesize;
 
@@ -424,13 +422,20 @@ static void gtk_minefield_draw(GtkMineField *mfield, GdkRectangle *area)
 		y2 = (area->y + area->height - 1) / minesize;
 	} else {
 		x1 = 0; y1 = 0;
-		x2 = mfield->xsize;
-		y2 = mfield->ysize;
+		x2 = mfield->xsize - 1;
+		y2 = mfield->ysize - 1;
 	}
-	
+
+        /* These are necessary because we get an expose call before a
+         * resize at the old size, but after we have changed our data. */
+        if (x2 >= mfield->xsize)
+          x2 = mfield->xsize - 1;
+        if (y2 >= mfield->ysize)
+          y2 = mfield->ysize - 1;
+
 	for (x = x1; x <= x2; x++)
 		for (y = y1; y <= y2; y++)
-			gtk_mine_draw(mfield, x, y);
+			gtk_mine_draw (mfield, x, y);
 }
 
 static gint gtk_minefield_expose(GtkWidget *widget,
@@ -439,19 +444,18 @@ static gint gtk_minefield_expose(GtkWidget *widget,
         GtkMineField *mfield;
 	guint minesize;
 
-	g_return_val_if_fail(widget != NULL, FALSE);
-        g_return_val_if_fail(GTK_IS_MINEFIELD(widget), FALSE);
-        g_return_val_if_fail(event != NULL, FALSE);
+	g_return_val_if_fail (widget != NULL, FALSE);
+        g_return_val_if_fail (GTK_IS_MINEFIELD(widget), FALSE);
+        g_return_val_if_fail (event != NULL, FALSE);
 
-	if (!GTK_WIDGET_DRAWABLE(widget))
+	if (!GTK_WIDGET_DRAWABLE (widget))
                 return FALSE;
 
         mfield = GTK_MINEFIELD(widget);
 	
 	minesize = mfield->minesize;
 
-
-	gtk_minefield_draw(GTK_MINEFIELD(widget), &event->area);
+	gtk_minefield_draw (GTK_MINEFIELD (widget), &event->area);
 
 	return FALSE;
 }
@@ -872,11 +876,8 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 
 static void gtk_minefield_class_init (GtkMineFieldClass *class)
 {
-	GtkWidgetClass *widget_class;
-	GtkObjectClass *object_class;
-	
-        widget_class = (GtkWidgetClass *)class;
-	object_class = (GtkObjectClass *)class;
+ 	GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
+ 	GtkObjectClass *object_class = GTK_OBJECT_CLASS (class);
 
 	parent_class = gtk_type_class (gtk_widget_get_type ());
 	
@@ -947,12 +948,14 @@ static void gtk_minefield_init (GtkMineField *mfield)
 {
         mfield->xsize = 0;
         mfield->ysize = 0;
+	mfield->mines = NULL;
+	mfield->started = FALSE;
+	mfield->cdown = -1;
 
         GTK_WIDGET (mfield)->requisition.width = mfield->minesize;
         GTK_WIDGET (mfield)->requisition.height = mfield->minesize;
 
 	gtk_minefield_setup_signs(GTK_WIDGET(mfield));
-
 	gtk_minefield_setup_numbers(mfield);
 }
 
@@ -985,31 +988,22 @@ void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 		mfield->xsize = xsize;
 		mfield->ysize = ysize;
 		if (GTK_WIDGET_VISIBLE(mfield)) {
-			gtk_widget_queue_resize(GTK_WIDGET(mfield));
+			gtk_widget_queue_resize(GTK_WIDGET(mfield)); 
 		}
 	}
 }
 
-GtkWidget* gtk_minefield_new(void)
+GtkWidget* gtk_minefield_new (void)
 {
-        GtkMineField *mfield;
-        
-	mfield = GTK_MINEFIELD (g_object_new (TYPE_GTK_MINEFIELD,
-				NULL));
-	mfield->mines = NULL;
-	mfield->started = FALSE;
-	gtk_minefield_set_size(mfield, 0, 0);
-
-	mfield->cdown = -1;
-	return GTK_WIDGET(mfield);
+	return GTK_WIDGET (g_object_new (GTK_TYPE_MINEFIELD, NULL));
 }
 
-guint gtk_minefield_get_type ()
+GType gtk_minefield_get_type (void)
 {
         static GType minefield_type = 0;
         
 	if (minefield_type == 0) {
-                static GTypeInfo minefield_info =
+                static const GTypeInfo minefield_info =
                         {
                                 sizeof (GtkMineFieldClass),
 				NULL, /* base_init */
@@ -1043,7 +1037,7 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 		mfield->minesize = minesize;
 		gtk_minefield_setup_numbers(mfield);
 		if (GTK_WIDGET_VISIBLE(mfield)) {
-			gtk_widget_queue_resize(GTK_WIDGET(mfield));
+                  gtk_widget_queue_resize(GTK_WIDGET(mfield));
 		}
 	}
 }
@@ -1078,10 +1072,11 @@ void gtk_minefield_restart(GtkMineField *mfield)
 		time((time_t *)&secs);
 		init_random(secs);
 	}
-	if (mfield->started == FALSE)
+
+        if (mfield->started == FALSE)
 		mfield->started = TRUE;
 	else
-		gtk_minefield_draw(mfield, NULL);
+                gtk_widget_queue_draw (GTK_WIDGET (mfield));
 }
 
 void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_question_marks)

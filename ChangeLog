@@ -1,3 +1,22 @@
+2003-06-22  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Tweaks to Steve's work to remove one unnecessary
+	redraw and one or two other minor things.
+
+2003-06-21  Steve Chaplin   <stevech1097@yahoo.com.au>
+
+	* minefield.c (gtk_minefield_unrealize): Remove unused variable.
+	(gtk_mine_draw): Ignore a request to draw a mine outside the minefield.
+	(gtk_minefield_draw): x2, y2 changed to fix array indexing bug.
+	(gtk_minefield_expose): Remove unused variables.
+	(gtk_minefield_new): Simplify and move some code to gtk_minefield_init().	
+	(_setup_sign): replace deprecated gdk_pixbuf_unref ();
+
+	* minefield.h (GTK_TYPE_MINEFIELD): make GTK_* macros consistent
+	with the GTK source files.
+
+	* gnomine.c (about): replace deprecated gdk_pixbuf_unref ();
+
 2003-06-17  William Jon McCann  <mccann@jhu.edu>
 
 	* minefield.c: 
