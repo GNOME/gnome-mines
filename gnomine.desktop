@@ -1,8 +1,10 @@
 [Desktop Entry]
 Name=Gnome Mines
 Name[es]=Gnome Minas
+Name[de]=Gnome Mines
 Comment=Gnome Mines game
 Comment[es]=Juego Gnome Minas
+Comment[de]=Gnome Variante von MineSweeper
 Exec=gnomine
 Icon=gnome-gnomine.xpm
 Terminal=0
