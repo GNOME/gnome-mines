@@ -1,3 +1,7 @@
+2003-04-30  Abel Cheung  <maddog@linux.org.hk>
+
+	* ChangeLog: Convert to UTF-8.
+
 2003-03-10  Ross Burton  <ross@burtonini.com>
 
 	* flag.png, flag-question.png, mine.png: New icons from Jimmac.
@@ -505,15 +509,15 @@ Tue Jan 27 13:57:26 1998  Federico Mena  <federico@bananoid.nuclecu.unam.mx>
 	* Makefile.am (install-data-local): Updated installation of
 	.desktop files.
 
-Tue Jan 27 21:03:01 ART 1998  Horacio J. Peña  <horape@compendium.com.ar>
+Tue Jan 27 21:03:01 ART 1998  Horacio J. PeÃ±a  <horape@compendium.com.ar>
 
 	* gnomine.c: Disable i18n of fsize2names.
 
-Tue Jan 27 13:59:41 ART 1998  Horacio J. Peña  <horape@compendium.com.ar>
+Tue Jan 27 13:59:41 ART 1998  Horacio J. PeÃ±a  <horape@compendium.com.ar>
 
 	* gnomine.c: Added Help menu and About dialog.
 
-Tue Jan 27 03:56:10 ART 1998  Horacio J. Peña (n.) <horape@compendium.com.ar>
+Tue Jan 27 03:56:10 ART 1998  Horacio J. PeÃ±a (n.) <horape@compendium.com.ar>
 
 	* Makefile.am: Creates $(scoredir)/gnomine.scores
 
@@ -555,7 +559,7 @@ Sun Jan 18 11:17:27 1998  Tom Tromey  <tromey@cygnus.com>
 	(save_state): New function.
 	(parse_args): New function.
 
-Sun Jan 18 03:10:15 1998  Horacio J. Peña (n.) <horape@compendium.com.ar>
+Sun Jan 18 03:10:15 1998  Horacio J. PeÃ±a (n.) <horape@compendium.com.ar>
 
 	(Warning: All this changes have a lot of memory leaks.)
 	* gnomine.c: (fsize2names): new global array. Used in top_ten and
