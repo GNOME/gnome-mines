@@ -1,3 +1,7 @@
+1998-07-25  Nuno Ferreira  <nmrf@rnl.ist.utl.pt>
+
+	* gnomine.desktop: Added Portuguese translation.
+
 1998-06-24  Raja R Harinath  <harinath@cs.umn.edu>
 
 	* gnomine.c (setup_game): Use new API for GtkSpinButton.
