@@ -90,11 +90,14 @@ show_scores ( gchar *level, guint pos )
 
  hs = gnome_scores_new(top, names, scores, scoretimes, 0);
  gnome_scores_set_logo_label (GNOME_SCORES(hs), _("Gnome Mines"), 0, 
- 	&ctitle);
+			      &ctitle);
  if(pos)
    gnome_scores_set_color(hs, pos-1, &col);
 
  gtk_widget_show (hs);
+ gnome_string_array_free(names);
+ g_free(scores);
+ g_free(scoretimes);
 }
 
 void top_ten(GtkWidget *widget, gpointer data)
@@ -155,7 +158,7 @@ void win_game(GtkWidget *widget, gpointer data)
 	else
 		snprintf(buf, sizeof(buf), "%dx%dx%d",xsize,ysize,nmines);
 
-	pos = gnome_score_log(score, buf, 0);
+	pos = gnome_score_log(score, buf, FALSE);
 	show_scores(buf, pos);
 }
 
