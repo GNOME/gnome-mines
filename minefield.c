@@ -425,10 +425,7 @@ static gint gtk_minefield_expose(GtkWidget *widget,
 				 GdkEventExpose *event)
 {
         GtkMineField *mfield;
-	GdkColor color;
-	gint n;
 	guint minesize;
-        int i;
 
 	g_return_val_if_fail(widget != NULL, FALSE);
         g_return_val_if_fail(GTK_IS_MINEFIELD(widget), FALSE);
@@ -1024,11 +1021,7 @@ void gtk_minefield_set_mines(GtkMineField *mfield, guint mcount, guint minesize)
 
 void gtk_minefield_restart(GtkMineField *mfield)
 {
-	guint i, j;
-        guint x, y;
-	guint tmp;
-	guint n;
-	guint cidx;
+	guint i;
 
         g_return_if_fail(mfield != NULL);
         g_return_if_fail(GTK_IS_MINEFIELD(mfield));

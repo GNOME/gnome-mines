@@ -4,6 +4,7 @@ Gamesdir = $(datadir)/applications
 SUBDIRS = help
 
 INCLUDES = \
+	-Wall						\
 	-I$(top_srcdir)/libgames-support		\
 	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"
@@ -20,15 +21,22 @@ gnomine_LDADD = \
 	../libgames-support/libgames-support.la \
 	$(INTLLIBS)
 
-EXTRA_DIST = flag.xpm mine.xpm face-cool.xpm face-sad.xpm		\
-	face-smile.xpm face-win.xpm face-worried.xpm question.xpm	\
-	gnomine.desktop.in README AUTHORS
+schemadir   = $(sysconfdir)/gconf/schemas
+schema_DATA = gnomine.schemas
+
+pixmapdir   = $(datadir)/pixmaps/gnomine/
+pixmap_DATA = face-cool.xpm face-sad.xpm face-smile.xpm face-win.xpm 	\
+	face-worried.xpm
+
+EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
+	$(schema_DATA) $(pixmap_DATA) flag.xpm mine.xpm question.xpm
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 install-data-local:
+	GCONF_CONFIG_SOURCE=$(GCONF_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(srcdir)/$(schema_DATA)
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	-touch $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
 	-chown games.games $(DESTDIR)$(scoredir)/gnomine.Tiny.scores
