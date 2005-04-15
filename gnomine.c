@@ -934,12 +934,7 @@ main (int argc, char *argv[])
 	g_signal_connect (G_OBJECT (resume_button), "clicked", 
 			  G_CALLBACK (resume_game_cb), NULL);
         gtk_container_add (GTK_CONTAINER (resume_container), resume_button);
-
-        g_signal_connect (G_OBJECT (window), "focus_out_event",
-                          G_CALLBACK (focus_out_cb), NULL);
 	
-
-
 	gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
 					      use_question_marks);
 	

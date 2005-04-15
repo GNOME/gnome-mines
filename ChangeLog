@@ -1,3 +1,8 @@
+2005-04-13  Richard Hoelscher  <rah@rahga.com>
+
+	* gnomine.c (main): Clean up the signal for focus out that was 
+	connected twice by accident during the UI changeup. 
+
 2005-03-31  Richard Hoelscher  <rah@rahga.com>
 
 	* glines.c (fullscreen_callback): Leave setting of the fullscreen
