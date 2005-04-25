@@ -1,3 +1,12 @@
+2005-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Fix all cases where the return value of cell_idx
+	either wasn't being checked or was stored in an unsigned integer
+	(and was then being checked for equality to -1!).	
+	(gtk_minefield_hint): Case 3 was finding duplicates and could
+	potentially overflow its memory allocation - make sure it doesn't
+	do either.
+
 2005-04-13  Richard Hoelscher  <rah@rahga.com>
 
 	* gnomine.c (main): Clean up the signal for focus out that was 

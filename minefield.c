@@ -574,7 +574,7 @@ static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint 
 
 static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
 {
-        guint c;
+        gint c;
         guint changed;
 
         gint x1, y1, x2, y2;
@@ -656,7 +656,7 @@ static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 	guint i, j;
 	guint x, y;
 	guint n;
-	guint cidx;
+	gint cidx;
 	gboolean adj_found;
 	
 	/* randomly set the mines, but avoid the current and adjacent locations */
@@ -841,7 +841,7 @@ static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event
 {
         GtkMineField *mfield;
 	guint x, y;
-        guint c;
+        gint c;
         guint multi;
 	guint minesize;
 	
@@ -859,11 +859,9 @@ static gint gtk_minefield_motion_notify(GtkWidget *widget, GdkEventMotion *event
                 x = event->x/minesize;
                 y = event->y/minesize;
 
-                if (x < 0 || y < 0 || x > mfield->xsize-1 || y > mfield->ysize-1)
-                        return 0;
-
                 c = cell_idx (mfield, x, y);
-		g_assert (c != -1);
+		if (c == -1)
+			return 0;
 
                 if (c != mfield->cdown) {
                         mfield->mines[mfield->cdown].down = 0;
@@ -891,7 +889,7 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 {
         GtkMineField *mfield;
 	guint x, y;
-	guint c;
+	gint c;
 	guint minesize;
         
         g_return_val_if_fail(widget != NULL, 0);
@@ -1219,9 +1217,9 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 			if (m->neighbours > 0) {
 				ncase2++;
 				*case2ptr++ = i;
+				x = i % mfield->xsize;
+				y = i / mfield->ysize;
 				for (a = 0; a < 8; a++) {
-					x = i % mfield->xsize;
-					y = i / mfield->ysize;
 					c = cell_idx (mfield,
 						      x + neighbour_map[a].x,
 						      y + neighbour_map[a].y);
@@ -1229,6 +1227,7 @@ gint gtk_minefield_hint (GtkMineField *mfield)
 					    mfield->mines[c].shown) {
 						ncase1++;
 						*case1ptr++ = i;
+						break;
 					}
 				}
 			}
