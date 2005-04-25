@@ -632,16 +632,17 @@ static void gtk_minefield_win(GtkMineField *mfield)
 			c = x + y * mfield->xsize;
 			if (mfield->mines[c].shown == 0 && /* not shown & not marked */
 			    mfield->mines[c].marked != MINE_MARKED) {
-
+				
 				mfield->mines[c].marked = MINE_MARKED; /* mark it */
 				gtk_mine_draw(mfield, x, y);           /* draw it */
 				mfield->flag_count++;                  /* up the count */
 				g_signal_emit(GTK_OBJECT(mfield),    /* display the count */
-						minefield_signals[MARKS_CHANGED_SIGNAL],
-						0, NULL);
+					      minefield_signals[MARKS_CHANGED_SIGNAL],
+					      0, NULL);
 			}
-                        }
-                }
+		}
+	}
+	
 
 	/* now stop the clock.  (MARKS_CHANGED_SIGNAL starts it) */
         g_signal_emit(GTK_OBJECT(mfield),
@@ -712,7 +713,7 @@ static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 	    mfield->mines[c].shown != 1) {
 		mfield->mines[c].shown = 1;
 		mfield->shown++;
-                gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);
+                gtk_mine_draw(mfield, x, y);
                 if(mfield->mines[c].mined == 1) {
 			gtk_minefield_lose(mfield);
                 } else {
@@ -955,8 +956,10 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
                 }
                 switch (event->button) {
                 case 1:
-			if (event->state & GDK_SHIFT_MASK) gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
-			else gtk_minefield_show(mfield, mfield->cdownx, mfield->cdowny);
+			if (event->state & GDK_SHIFT_MASK) 
+				gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
+			else 
+				gtk_minefield_show(mfield, mfield->cdownx, mfield->cdowny);
                         break;
                 case 2: if (mfield->multi_mode) gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
                         break;
@@ -1256,7 +1259,6 @@ gint gtk_minefield_hint (GtkMineField *mfield)
         g_signal_emit(GTK_OBJECT(mfield),
                         minefield_signals[HINT_SIGNAL],
 			0, NULL);
-
 	gtk_minefield_show (mfield, x, y);
 	gtk_mine_draw (mfield, x, y);
 	retval = MINEFIELD_HINT_ACCEPTED;

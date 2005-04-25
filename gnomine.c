@@ -454,10 +454,11 @@ fix_nmines (int xsize, int ysize)
 {
 	int maxmines;
 
-	/* Fix up the maximum number of mines so that there is always at least two
-	 * free spaces. It could in theory be left at one, but that gives an
-	 * instant win situation. */
-	maxmines = xsize*ysize - 9;
+	/* Fix up the maximum number of mines so that there is always at least
+	   ten free spaces. Nine are so we can clear at least the immediate
+	   eight neighbours at the start and one more so the game isn't over 
+	   immediately. */
+	maxmines = xsize*ysize - 10;
 	if (nmines > maxmines) {
 		gconf_client_set_int (conf_client, KEY_NMINES, maxmines, NULL);
 		gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), maxmines);

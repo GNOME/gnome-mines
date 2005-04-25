@@ -1,5 +1,11 @@
 2005-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
 
+	* minefield.c: Make sure that the cell is drawn properly if the
+	last move before winning the game was from a hint.
+
+	* gnomine.c (fix_nmines): Adjust the maimum number of mines down 1
+	so that we have at least one square for the player to reveal.
+
 	* minefield.c: Fix all cases where the return value of cell_idx
 	either wasn't being checked or was stored in an unsigned integer
 	(and was then being checked for equality to -1!).	
