@@ -237,10 +237,9 @@ gtk_minefield_setup_numbers (GtkMineField *mfield)
 
 		/* do the font */
 		font_desc = pango_font_description_new();
-		pango_font_description_set_family(font_desc, "Mono 8");
-		/* Guess at the correct font size. */
-		font_size = pixel_sz * PANGO_SCALE;
-		pango_font_description_set_size(font_desc, font_size);
+		pango_font_description_set_family(font_desc, "Sans");
+		font_size = pixel_sz * PANGO_SCALE * .85;
+		pango_font_description_set_absolute_size(font_desc, font_size);
 		pango_font_description_set_weight(font_desc,PANGO_WEIGHT_BOLD);
 		attr = pango_attr_font_desc_new(font_desc);
 
@@ -250,16 +249,6 @@ gtk_minefield_setup_numbers (GtkMineField *mfield)
 
 		pango_layout_set_attributes(layout, alist);
 		pango_layout_set_alignment(layout, PANGO_ALIGN_CENTER);
-
-		/* Now correct the size to fit. */
-		pango_layout_get_extents (layout, &extent, NULL);
-		font_size = font_size*0.7*pixel_sz*PANGO_SCALE/extent.height;
-		pango_font_description_set_size(font_desc, font_size);
-		attr = pango_attr_font_desc_new(font_desc);
-		attr->start_index = 0;
-		attr->end_index = G_MAXUINT;
-		pango_attr_list_insert(alist, attr);		
-		pango_layout_set_attributes(layout, alist);
 
 		pango_font_description_free(font_desc);
 		pango_attr_list_unref(alist);
@@ -463,7 +452,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 			gdk_draw_layout(widget->window,
 					widget->style->black_gc,
 					x*minesize + mfield->numstr[n].dx,
-					y*minesize + mfield->numstr[n].dy+1,
+					y*minesize + mfield->numstr[n].dy,
 					PANGO_LAYOUT(mfield->numstr[n].layout));
 		}
 

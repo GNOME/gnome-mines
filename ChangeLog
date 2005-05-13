@@ -1,3 +1,10 @@
+2005-05-11  Richard Hoelscher  <rah@rahga.com>
+
+	* minefield.c (gtk_minefield_setup_numbers): Remove the workaround
+	for pango absolute font sizes. Specify "Sans" rather than "Mono 8"
+	for the font family, since it seems like it wasn't a valid name
+	anyway and "Mono" is uglier.
+
 2005-04-25  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Make sure that the cell is drawn properly if the
