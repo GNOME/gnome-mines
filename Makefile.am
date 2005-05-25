@@ -32,7 +32,7 @@ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 pixmapdir   = $(datadir)/pixmaps/gnomine/
 pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
 	face-worried.png \
-	flag.svg flag-question.svg mine.svg
+	flag.svg flag-question.svg mine.svg bang.svg
 
 sharedpixmapdir=$(datadir)/pixmaps
 sharedpixmap_DATA = gnome-gnomine.png

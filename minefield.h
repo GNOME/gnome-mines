@@ -70,9 +70,11 @@ struct _GtkMineField {
         gint lose;
         gint win;
 	gint multi_mode;
+        gint action;
         sign flag;
         sign mine;
 	sign question;
+        sign bang;
         GRand * grand;
 	GdkGC *thick_line;
   

@@ -1,3 +1,37 @@
+2005-05-21  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Create an unchecked version of cell_idx and make it
+	inline. Use it where we call often and can guarantee the range.
+	(gtk_minefield_set_size): Consolidate the size checking at the
+	beginning.
+
+2005-05-15  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Make sure that the correct level always appears in
+	the scores dialog, even when we don't set a high score.
+
+	* minefield.c: Refactoring the calls to gtk_minefield_win into
+	gtk_minefield_check_field. Cleaned up the declarations and added
+	some comments. "secs" has been removed. Removed all use of inline,
+	we have no need of speed and it was adding 4% to the size of the
+	binary (especially cell_idx which was called a lot). cell_idx was
+	explicitly inlined in gtk_minefield_check_field (without the
+	unnecessary range checks).
+
+2005-05-14  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Cleaned up the button press code by adding an
+	action field to the minefield structure that remembers what we are
+	trying to do rather than trying to guess from button states. Also
+	made left-clicking on a number the same as middle clicking. This
+	is to make play even easier on a two-button mouse (i.e. my laptop).
+
+2005-05-12  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* Makefile.am:
+	* minefield.c:	
+	* minefield.h: Draw an explosion over a mine when it blows up.
+
 2005-05-11  Richard Hoelscher  <rah@rahga.com>
 
 	* minefield.c (gtk_minefield_setup_numbers): Remove the workaround

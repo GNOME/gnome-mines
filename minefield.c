@@ -30,7 +30,9 @@
 #include <games-preimage.h>
 #include "minefield.h"
 
-static struct {
+/* Auxillary data so we can use a single index to reference
+   surrounding cells. */
+static const struct {
 	gint x;
 	gint y;
 } neighbour_map[8] = {
@@ -44,25 +46,23 @@ static struct {
 	{ -1, 0  }
 };
 
-
-
+/* The colours for the numbers. The empty first entry allows us
+ * to use the number as a direct index. */
 static guint16 num_colors[9][3] = {
 	{ 0x0000, 0x0000, 0x0000 }, /* Black, not used */
 	{ 0x0000, 0x0000, 0xffff }, /* Blue  */
 	{ 0x0000, 0xa0a0, 0x0000 }, /* Green */
 	{ 0xffff, 0x0000, 0x0000 }, /* Red   */
-	{ 0x0000, 0x0000, 0x7fff }, /* DarkBlue */
-	{ 0xa0a0, 0x0000, 0x0000 }, /* DarkRed   */
+	{ 0x0000, 0x0000, 0x7fff }, /* Dark Blue */
+	{ 0xa0a0, 0x0000, 0x0000 }, /* Dark Red   */
 	{ 0x0000, 0xffff, 0xffff }, /* Cyan */
-	{ 0xa0a0, 0x0000, 0xa0a0 }, /* DarkViolet */
+	{ 0xa0a0, 0x0000, 0xa0a0 }, /* Dark Violet */
 	{ 0x0000, 0x0000, 0x0000 }  /* Black */
 };
 
-
-time_t secs = 0;
-
+/* The signal list for the widget. */
 enum {
-	MARKS_CHANGED_SIGNAL,
+	MARKS_CHANGED_SIGNAL = 0,
 	EXPLODE_SIGNAL,
 	LOOK_SIGNAL,
 	UNLOOK_SIGNAL,
@@ -71,11 +71,23 @@ enum {
 	LAST_SIGNAL
 };
 
-static gint minefield_signals[LAST_SIGNAL] = { 0 };
+/* The list of actions that can be performed when a mose button is
+   pressed. */
+enum {
+	NO_ACTION,
+	SHOW_ACTION,
+	CLEAR_ACTION,
+	FLAG_ACTION
+};
+
+/* Static data for the minefield class. */
+static gint minefield_signals[LAST_SIGNAL];
 static GtkWidgetClass *parent_class;
 
 /*  Prototypes */
-static inline gint cell_idx(GtkMineField *mfield, guint x, guint y);
+G_INLINE_FUNC gint cell_idx_no_checks(GtkMineField *mfield, guint x, guint y);
+static gint cell_idx(GtkMineField *mfield, guint x, guint y);
+static void setup_sign (sign *signp, const char *file, guint minesize);
 static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y);
 static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event);
 static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *event);
@@ -95,21 +107,37 @@ static void gtk_minefield_size_request(GtkWidget *widget, GtkRequisition *requis
 static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y);
 static void gtk_minefield_unrealize (GtkWidget *widget);
 static void gtk_minefield_win(GtkMineField *mfield);
-static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y);
-static void _setup_sign (sign *signp, const char *file, guint minesize);
-static inline void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c);
+static int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y);
+static void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gint c);
 /* end prototypes */
 
 
-
-static inline gint cell_idx(GtkMineField *mfield, guint x, guint y)
+/* The abstraction of the coordinate system. Note that this is inline
+   code that does no checking, use it sparsely. If in doubt, use
+   cell_idx instead. */
+G_INLINE_FUNC gint cell_idx_no_checks (GtkMineField *mfield, guint x, guint y)
 {
-	if (x>=0 && x<mfield->xsize && y>=0 && y<mfield->ysize)
-		return x+y*mfield->xsize;
+	return x+y*mfield->xsize;
+}
+
+/* Converts 2D minefield coordinates into a 1D array index. Note that
+   this is used extensively for checking the validity of
+   coordinates. If the coordinates are not valid then it returns
+   -1. */
+static gint cell_idx(GtkMineField *mfield, guint x, guint y)
+{
+	if (x >= 0 && x < mfield->xsize && 
+	    y >= 0 && y < mfield->ysize)
+		return cell_idx_no_checks (mfield, x, y);
+
 	return -1;
 }
 
-static void _setup_sign (sign *signp, const char *file, guint minesize)
+/* Set up a pixbuf containing an object we overlay a cell with: flags,
+  mines and explosions, but not numbers. This also takes care of
+  any dmemory previously allocated to the sign. This function 
+  should be treated as local to gtk_minefield_setup_signs. */
+static void setup_sign (sign *signp, const char *file, guint minesize)
 {
 	if (!signp->preimage && file != NULL)
 		signp->preimage = games_preimage_new_from_file (file, NULL);
@@ -136,14 +164,13 @@ static void _setup_sign (sign *signp, const char *file, guint minesize)
 		if (signp->preimage) g_object_unref (signp->preimage);
 		signp->preimage = NULL;
 	}
-
 }
 
 static void gtk_minefield_setup_signs(GtkMineField *mfield)
 {
 	static GtkWidget * warning_dialog = NULL;
 	static gchar * warning_message = NULL;
-	gchar * flagfile, * minefile, * questionfile;
+	gchar * flagfile, * minefile, * questionfile, * bangfile;
 
 	flagfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 					      "gnomine/flag.svg", TRUE, NULL);
@@ -152,18 +179,23 @@ static void gtk_minefield_setup_signs(GtkMineField *mfield)
 	questionfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 					      "gnomine/flag-question.svg", TRUE, NULL); 
 
-        _setup_sign(&mfield->flag, flagfile, mfield->minesize);
-        _setup_sign(&mfield->mine, minefile, mfield->minesize);
-        _setup_sign(&mfield->question, questionfile, mfield->minesize);
+	bangfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+					      "gnomine/bang.svg", TRUE, NULL); 
 
-	if ((!flagfile || !minefile || !questionfile) &&
+        setup_sign (&mfield->flag, flagfile, mfield->minesize);
+        setup_sign (&mfield->mine, minefile, mfield->minesize);
+        setup_sign (&mfield->question, questionfile, mfield->minesize);
+	setup_sign (&mfield->bang, bangfile, mfield->minesize);
+
+	if ((!flagfile || !minefile || !questionfile || !bangfile) &&
 	    (warning_message == NULL)) {
 		warning_message = _("Unable to find required images.\n\nPlease check your gnome-games installation.");
 	}
 
 	if ( (!mfield->flag.preimage || 
 	      !mfield->mine.preimage || 
-	      !mfield->question.preimage) && 
+	      !mfield->question.preimage ||
+	      !mfield->bang.preimage) && 
 	     (warning_message == NULL) ) {
 		warning_message = _("Required images have been found, but refused to load.\n\nPlease check your installation of gnome-games and its dependencies.");
 	}
@@ -365,7 +397,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 	int n;
 	guint minesize;
         static GdkGC *dots;
-        static char stipple_data[]  = { 0x03, 0x03, 0x0c, 0x0c };
+        static const char stipple_data[]  = { 0x03, 0x03, 0x0c, 0x0c };
         static GdkPixmap *stipple = NULL;
         GtkWidget *widget = GTK_WIDGET(mfield);
 	GdkRectangle rect;
@@ -492,6 +524,15 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
 				 mfield->flag.width, mfield->flag.height,
 		                 GDK_RGB_DITHER_NORMAL, 0, 0);
 	}
+	if (mfield->lose && mfield->mines[c].mined && mfield->mines[c].shown) {
+		gdk_draw_pixbuf (widget->window, NULL,
+				 mfield->bang.scaledpixbuf, 0, 0, 
+				 x * minesize + (minesize - mfield->bang.width) / 2, 
+		                 y * minesize + (minesize - mfield->bang.height) / 2,
+				 mfield->bang.width, mfield->bang.height,
+		                 GDK_RGB_DITHER_NORMAL, 0, 0);
+		
+	}
 }
 
 static gint gtk_minefield_expose (GtkWidget      *widget,
@@ -535,7 +576,7 @@ static gint gtk_minefield_expose (GtkWidget      *widget,
 	return FALSE;
 }
 
-static inline int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y)
+static int gtk_minefield_check_cell(GtkMineField *mfield, guint x, guint y)
 {
         guint changed;
         gint c;
@@ -586,7 +627,7 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
 		changed = 0;
                 for (x=x1; x<=x2; x++) {
                         for (y=y1; y<=y2; y++) {
-                                c = cell_idx(mfield, x, y);
+				c = cell_idx_no_checks (mfield, x, y);
                                 if (mfield->mines[c].neighbours == 0 &&
                                     mfield->mines[c].shown == 1) {
 					changed |= gtk_minefield_check_cell(mfield, x, y);
@@ -600,6 +641,10 @@ static void gtk_minefield_check_field(GtkMineField *mfield, gint x, gint y)
                         }
                 }
         } while (changed);
+
+	if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
+		gtk_minefield_win(mfield);
+	}
 }
 
 static void gtk_minefield_lose (GtkMineField *mfield)
@@ -707,9 +752,6 @@ static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 			gtk_minefield_lose(mfield);
                 } else {
 			gtk_minefield_check_field(mfield, x, y);
-			if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
-                                gtk_minefield_win(mfield);
-			}
 		}
         }
 }
@@ -759,7 +801,7 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 				0, NULL);
 }
 
-static inline void gtk_minefield_multi_press(GtkMineField *mfield,
+static void gtk_minefield_multi_press(GtkMineField *mfield,
                                              guint x, guint y, gint c)
 {
         guint i;
@@ -821,9 +863,6 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
 		gtk_minefield_lose(mfield);
         } else if (really) {
                 gtk_minefield_check_field(mfield, x, y);
-                if (mfield->shown == mfield->xsize*mfield->ysize-mfield->mcount) {
-			gtk_minefield_win(mfield);
-		}
         }
 }
 
@@ -881,7 +920,7 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 	guint x, y;
 	gint c;
 	guint minesize;
-        
+	
         g_return_val_if_fail(widget != NULL, 0);
         g_return_val_if_fail(GTK_IS_MINEFIELD(widget), 0);
         g_return_val_if_fail(event != NULL, 0);
@@ -893,10 +932,15 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
 	if (mfield->lose || mfield->win) return FALSE;
 	
         if (event->button <= 3 && !mfield->bdown[1]) {
+		/* Translate mouse coordinates to minefield coordinates
+		 * and do some sanity checking. */
                 x = event->x/minesize;
                 y = event->y/minesize;
                 c = cell_idx (mfield, x, y);
 		if (c == -1) return FALSE;
+
+		/* If this is the first button pressed (on a cell),
+		 * record where it was pressed. */
                 if (!mfield->bdown[0] && !mfield->bdown[1] && !mfield->bdown[2]) {
                         mfield->cdownx = x;
                         mfield->cdowny = y;
@@ -904,17 +948,49 @@ static gint gtk_minefield_button_press(GtkWidget *widget, GdkEventButton *event)
                         mfield->mines[c].down = 1;
                 }
 		mfield->bdown[event->button-1]++;
+
                 gtk_mine_draw(mfield, x, y);
-                if (((event->button == 2) || (event->button == 1 && event->state & GDK_SHIFT_MASK)) ||
-		   (mfield->bdown[0] && mfield->bdown[2]) ) { /* multi show */
+
+		/* Determine what action to do. Normally this is
+		 * left button = show, middle = clear and right = flag.
+		 * Unfortunately we have to detect left+right because
+		 * MS Minesweeper did this and some people will be used to
+		 * it. As well as that left + shift is also clear for people
+		 * with two button mice and less dexterity. In addition
+		 * we also want left = clear when that is the only 
+		 * reasonable action (i.e. we click on a cleared square)
+		 * since this makes it even easier for two-button mice,
+		 * but we didn't think of it soon enough not to have to worry 
+		 * about all the extra legacy crap. */
+		switch (event->button) {
+		case 1:
+			mfield->action = SHOW_ACTION;
+			if ((event->state & GDK_SHIFT_MASK) ||
+			    (mfield->bdown[2]) ||
+			    mfield->mines[c].shown)
+				mfield->action = CLEAR_ACTION;
+			break;
+		case 2:
+			mfield->action = CLEAR_ACTION;
+			break;
+		case 3:
+			mfield->action = FLAG_ACTION;
+			if (mfield->bdown[0])
+				mfield->action = CLEAR_ACTION;			
+			break;
+		}
+
+		/* Now actually do the actions. Most of the real work
+		 * is done in the button_release handler. */
+		if (mfield->action == CLEAR_ACTION) {
                         gtk_minefield_multi_press(mfield, x, y, c);
                 }
-                else if (event->button == 3 && mfield->bdown[2] == 1)
+                else if (mfield->action == FLAG_ACTION && mfield->bdown[2] == 1)
                 {
                         gtk_minefield_toggle_mark(mfield, x, y);
                         gtk_mine_draw(mfield, x, y);
                 }
-		if (event->button == 1 || event->button == 2) {
+		if (mfield->action != FLAG_ACTION) {
 			g_signal_emit(GTK_OBJECT(mfield),
 					minefield_signals[LOOK_SIGNAL],
 					0, NULL);
@@ -936,21 +1012,12 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 	if (mfield->lose || mfield->win) return FALSE;
 
         if (event->button <= 3 && mfield->bdown[event->button-1]) {
-                if (mfield->bdown[0] && mfield->bdown[2] && event->button != 2) {
-                    /* left+right click = multi show */
-                    mfield->bdown[0] = 0;
-                    mfield->bdown[1] = 1;
-                    mfield->bdown[2] = 0;
-                    event->button = 2;
-                }
-                switch (event->button) {
-                case 1:
-			if (event->state & GDK_SHIFT_MASK) 
-				gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
-			else 
-				gtk_minefield_show(mfield, mfield->cdownx, mfield->cdowny);
+                switch (mfield->action) {
+                case SHOW_ACTION:
+			gtk_minefield_show(mfield, mfield->cdownx, mfield->cdowny);
                         break;
-                case 2: if (mfield->multi_mode) gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
+                case CLEAR_ACTION: 
+			gtk_minefield_multi_release(mfield, mfield->cdownx, mfield->cdowny, mfield->cdown, 1);
                         break;
                 }
 		if (!mfield->lose && !mfield->win) {
@@ -960,6 +1027,7 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 		}
 		mfield->mines[mfield->cdown].down = 0;
                 mfield->cdown = -1;
+		mfield->action = NO_ACTION;
 		mfield->bdown[event->button-1] = 0;
 		gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);
         }
@@ -1054,10 +1122,12 @@ static void gtk_minefield_init (GtkMineField *mfield)
 	mfield->mines = NULL;
 	mfield->started = FALSE;
 	mfield->cdown = -1;
+	mfield->action = NO_ACTION;
 
 	mfield->flag.preimage = NULL;
         mfield->mine.preimage = NULL;
 	mfield->question.preimage = NULL;
+	mfield->bang.preimage = NULL;
 	mfield->grand = g_rand_new ();
 	mfield->thick_line = NULL;
 }
@@ -1067,17 +1137,17 @@ void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
         g_return_if_fail(mfield != NULL);
         g_return_if_fail(GTK_IS_MINEFIELD(mfield));
 
-	if (mfield->xsize*mfield->ysize != xsize*ysize) {
-		mfield->mines = g_realloc(mfield->mines,
-					  sizeof(mine)*xsize*ysize);
-	}
+	if ((mfield->xsize == xsize) && (mfield->ysize == ysize))
+		return;
 
-	if (mfield->xsize != xsize || mfield->ysize != ysize) {
-		mfield->xsize = xsize;
-		mfield->ysize = ysize;
-		if (GTK_WIDGET_VISIBLE(mfield)) {
-			gtk_widget_queue_resize(GTK_WIDGET(mfield)); 
-		}
+	mfield->mines = g_realloc(mfield->mines,
+				  sizeof(mine)*xsize*ysize);
+
+	mfield->xsize = xsize;
+	mfield->ysize = ysize;
+
+	if (GTK_WIDGET_VISIBLE(mfield)) {
+		gtk_widget_queue_resize(GTK_WIDGET(mfield)); 
 	}
 }
 

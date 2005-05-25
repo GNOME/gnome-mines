@@ -1,3 +1,8 @@
+2005-05-15  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.xml: Document the change in the button that reveals
+	surrounding squares.
+
 2005-03-02  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.xml: Bump the app version number. No revisions.

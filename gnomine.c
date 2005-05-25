@@ -140,8 +140,10 @@ set_flabel (GtkMineField *mfield)
 	g_free (val);
 }
 
+/* Show the high scores dialog - creating it if necessary. If pos is 
+ * greater than 0 the appropriate score is highlighted. */
 static void
-show_scores (gchar *level, guint pos)
+show_scores (gchar *level, gint pos)
 {
 	int i;
 	static GtkWidget *dialog = NULL;
@@ -163,12 +165,11 @@ show_scores (gchar *level, guint pos)
 					       GAMES_SCORES_STYLE_TIME);
 	}
 
-	if (pos > 0) {
-		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
-						   level);
+	games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
+					  level);
+	if (pos > 0) 
 		games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), 
 						 pos);
-	}
 
 	gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_hide (dialog);
@@ -821,7 +822,7 @@ main (int argc, char *argv[])
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
 			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
-	/* Get the default GConfClient */
+	/* We hold one global reference to the default gconf client. */
 	conf_client = gconf_client_get_default ();
         gconf_client_add_dir (conf_client, 
                               KEY_DIR,

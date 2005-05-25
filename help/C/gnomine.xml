@@ -207,14 +207,20 @@
         player forms hypotheses about the location of undiscovered mines.
       </para>
       <para>
-        As flags are added the middle mouse button may be used on the
+        As flags are added the left mouse button may be used on the
         previously uncovered squares. If the number of flags adjacent
         to that square satisfies the number expected 
-        the middle mouse button will automatically uncover all remaining
+        the clicking on the number will automatically uncover all remaining
         adjacent squares. If a flag has been placed by mistake this action
         will uncover a mine and end play. <xref linkend="fail-fig"/>
         shows the result of just such a mistake, note the flag in the
-        top row.
+        bottom row.
+
+      <tip>Other versions of Mines use a different button to
+      reveal adjacent squares. We also support using the middle
+      button, clicking both left and right buttons together, and
+      shift+left button.
+      </tip>
 
         <!-- ==== Figure ==== -->
         <figure id="fail-fig">
@@ -233,6 +239,7 @@
 	</figure>
         <!-- ==== End of Figure ==== -->
       </para>
+
 
       <para>
         If flags have been correctly placed on all the mines, and the
