@@ -141,38 +141,90 @@ set_flabel (GtkMineField *mfield)
 }
 
 /* Show the high scores dialog - creating it if necessary. If pos is 
- * greater than 0 the appropriate score is highlighted. */
-static void
-show_scores (gchar *level, gint pos)
+ * greater than 0 the appropriate score is highlighted. If the score isn't
+ * a high score and this isn't a direct request to see the scores, we 
+ * only show a simple dialog. */
+static gint
+show_scores (gchar *level, gint pos, gboolean endofgame)
 {
 	int i;
-	static GtkWidget *dialog = NULL;
+	gchar *message;
+	static GtkWidget *scoresdialog = NULL;
+	static GtkWidget *sorrydialog = NULL;
+	GtkWidget *dialog;
+	gint result;
 
-	if (dialog != NULL) {
-		gtk_window_present (GTK_WINDOW (dialog));
-	} else {
-		dialog = games_scores_dialog_new ("gnomine", _("GNOME Mines Scores"));
-		for (i=0; i<4; i++) {
-			games_scores_dialog_add_category (GAMES_SCORES_DIALOG (dialog),
-							  fsize2names[i],
-							  _(fsize2names[i]));
+	if (endofgame && (pos <= 0)) {
+		if (sorrydialog != NULL) {
+			gtk_window_present (GTK_WINDOW (sorrydialog));
+		} else {
+			sorrydialog = gtk_message_dialog_new_with_markup (
+					  GTK_WINDOW (window),
+					  GTK_DIALOG_DESTROY_WITH_PARENT,
+					  GTK_MESSAGE_INFO,
+					  GTK_BUTTONS_NONE, 
+					  "<b>%s</b>\n%s", 
+					  _("The Mines Have Been Cleared!"), 
+					  _("Great work, but unfortunately your score did not make the top ten."));
+			gtk_dialog_add_buttons (GTK_DIALOG (sorrydialog),
+						GTK_STOCK_QUIT, GTK_RESPONSE_REJECT,
+						_("New Game"),
+						GTK_RESPONSE_ACCEPT,
+						NULL);
+			gtk_dialog_set_default_response (GTK_DIALOG (sorrydialog),
+							 GTK_RESPONSE_ACCEPT);
 		}
-		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
-						  fsize2names[fsize]);
-		games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (dialog),
-							      _("Size:"));	
-		games_scores_dialog_set_style (GAMES_SCORES_DIALOG (dialog),
-					       GAMES_SCORES_STYLE_TIME);
+		dialog = sorrydialog;
+	} else {
+
+		if (scoresdialog != NULL) {
+			gtk_window_present (GTK_WINDOW (scoresdialog));
+		} else {
+			scoresdialog = games_scores_dialog_new ("gnomine", _("Mines Scores"));
+			for (i=0; i<4; i++) {
+				games_scores_dialog_add_category (GAMES_SCORES_DIALOG (scoresdialog),
+								  fsize2names[i],
+								  _(fsize2names[i]));
+			}
+			games_scores_dialog_set_category (GAMES_SCORES_DIALOG (scoresdialog),
+							  fsize2names[fsize]);
+			games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (scoresdialog),
+								      _("Size:"));	
+			games_scores_dialog_set_style (GAMES_SCORES_DIALOG (scoresdialog),
+						       GAMES_SCORES_STYLE_TIME);
+		}
+		
+		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (scoresdialog),
+						  level);
+		if (pos > 0) {
+			games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (scoresdialog), 
+							 pos);
+			message = g_strdup_printf ("<b>%s</b>\n\n%s", 
+						   _("Congratulations!"),
+						   _("Your score has made the top ten."));
+			games_scores_dialog_set_message (GAMES_SCORES_DIALOG (scoresdialog),
+							 message);
+			g_free (message);
+		} else {
+			games_scores_dialog_set_message (GAMES_SCORES_DIALOG (scoresdialog),
+							 NULL);
+		}
+
+		if (endofgame) {
+			games_scores_dialog_set_buttons (GAMES_SCORES_DIALOG (scoresdialog),
+							 GAMES_SCORES_QUIT_BUTTON |
+							 GAMES_SCORES_NEW_GAME_BUTTON);
+		} else {
+			games_scores_dialog_set_buttons (GAMES_SCORES_DIALOG (scoresdialog),
+							 0);
+		}
+		dialog = scoresdialog;
 	}
-
-	games_scores_dialog_set_category (GAMES_SCORES_DIALOG (dialog),
-					  level);
-	if (pos > 0) 
-		games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (dialog), 
-						 pos);
-
-	gtk_dialog_run (GTK_DIALOG (dialog));
+		
+	result = gtk_dialog_run (GTK_DIALOG (dialog));
 	gtk_widget_hide (dialog);
+
+	return result;
 }
 
 static void
@@ -183,7 +235,7 @@ scores_callback (void)
 	if(fsize<4)
 		strncpy (buf, fsize2names[fsize], sizeof(buf));
 
-	show_scores (buf, 0);
+	show_scores (buf, 0, FALSE);
 }
 
 static void
@@ -329,7 +381,8 @@ win_game (GtkWidget *widget, gpointer data)
 	    pos = gnome_score_log (score, fsize2names[fsize], TRUE);
 	}
 
-	show_scores (fsize2names[fsize], pos);
+	if (show_scores (fsize2names[fsize], pos, TRUE) == GTK_RESPONSE_REJECT)
+		quit_game ();
 }
 
 static void
@@ -378,7 +431,7 @@ about_callback (void)
 	};
 
 	gtk_show_about_dialog (GTK_WINDOW(window),
-			       "name", _("GNOME Mines"),
+			       "name", _("Mines"),
 			       "version", VERSION,
 			       "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
 			       "authors", authors,
@@ -648,7 +701,7 @@ create_preferences (void)
 	gtk_table_attach_defaults (GTK_TABLE (table), question_toggle, 0, 2, 1, 2);
 
 
-	pref_dialog = gtk_dialog_new_with_buttons (_("GNOME Mines Preferences"),
+	pref_dialog = gtk_dialog_new_with_buttons (_("Mines Preferences"),
 			GTK_WINDOW (window),
 			0,
 			GTK_STOCK_CLOSE, GTK_RESPONSE_CLOSE,
@@ -822,6 +875,7 @@ main (int argc, char *argv[])
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
 			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
 	/* We hold one global reference to the default gconf client. */
 	conf_client = gconf_client_get_default ();
         gconf_client_add_dir (conf_client, 
@@ -867,7 +921,7 @@ main (int argc, char *argv[])
 	 * to be the default). */
 	gtk_rc_parse_string ("style \"gnomine\" { GtkButton::interior-focus = 0 } class \"GtkButton\" style \"gnomine\"");
 
-	window = gnome_app_new ("gnomine", _("GNOME Mines"));
+	window = gnome_app_new ("gnomine", _("Mines"));
 	games_stock_init ();
 
 	gtk_window_set_default_size (GTK_WINDOW (window), width, height);	

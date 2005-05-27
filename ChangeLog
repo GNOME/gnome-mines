@@ -1,3 +1,15 @@
+2005-05-27  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (show_scores): Use a message dialog for non top-ten
+	games. Just like Same GNOME. Also hook up the quit button so it
+	does the right thing.
+
+2005-05-25  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Debrand: GNOME Mines -> Mines.
+	(show_scores): First steps towards quit/new games actions on the
+	end-of game high-scores dialog.
+
 2005-05-21  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Create an unchecked version of cell_idx and make it
