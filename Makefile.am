@@ -10,7 +10,8 @@ INCLUDES = \
 	$(WARN_CFLAGS)					\
 	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-DDATADIR=\""$(datadir)"\"
+	-DDATADIR=\""$(datadir)"\" \
+	`pkg-config --cflags gstreamer-0.8`
 
 bin_PROGRAMS = gnomine
 
@@ -22,7 +23,9 @@ gnomine_SOURCES =	\
 gnomine_LDADD = \
 	$(GNOME_GAMES_LIBS) \
 	../libgames-support/libgames-support.la \
-	$(INTLLIBS)
+	$(INTLLIBS) 
+
+gnomine_LDFLAGS = `pkg-config --libs gstreamer-0.8`
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gnomine.schemas.in

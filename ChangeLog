@@ -1,3 +1,14 @@
+2005-06-05  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c (main): Commented out some experimental sound code. It
+	will be deleted later when I figure out how to play overlapping 
+	copies of the same sound.
+
+2005-06-03  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Make sure the New Game button actually starts a new
+	game.
+
 2005-05-27  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.c (show_scores): Use a message dialog for non top-ten

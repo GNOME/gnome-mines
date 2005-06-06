@@ -678,12 +678,14 @@ static void gtk_minefield_win(GtkMineField *mfield)
 	}
 	
 
+        mfield->win = 1;
+
 	/* now stop the clock.  (MARKS_CHANGED_SIGNAL starts it) */
+	/* Make sure this is the last thing called so it is safe to
+	 * start a new game in the win_signal handler. */
         g_signal_emit(GTK_OBJECT(mfield),
                         minefield_signals[WIN_SIGNAL],
 			0, NULL);
-
-        mfield->win = 1;
 }
 
 static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)

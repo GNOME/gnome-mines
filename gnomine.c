@@ -27,6 +27,7 @@
 #include <gnome.h>
 #include <gconf/gconf-client.h>
 #include <string.h>
+/*#include <gst/gst.h>*/
 
 #include "minefield.h"
 #include "games-clock.h"
@@ -74,6 +75,8 @@ GtkAction *hint_action;
 GtkAction *fullscreen_action;
 GtkAction *leavefullscreen_action;
 
+/*GstElement *sound_player;*/
+
 char *fsize2names[] = {
 	N_("Small"),
 	N_("Medium"),
@@ -84,6 +87,17 @@ char *fsize2names[] = {
 /* It's a little ugly, but it stops the hint dialogs triggering the
  * hide-the-window-to-stop cheating thing. */
 gboolean disable_hiding = FALSE;
+
+#if 0
+static void
+play_sound (int id)
+{
+	/* FIXME: We ignore the id */
+
+	/* To play, do this: */
+	gst_element_set_state (sound_player, GST_STATE_PLAYING);	
+}
+#endif
 
 static GtkWidget *
 image_widget_setup (char *name)
@@ -173,6 +187,7 @@ show_scores (gchar *level, gint pos, gboolean endofgame)
 						NULL);
 			gtk_dialog_set_default_response (GTK_DIALOG (sorrydialog),
 							 GTK_RESPONSE_ACCEPT);
+			gtk_window_set_title (GTK_WINDOW (sorrydialog), "");
 		}
 		dialog = sorrydialog;
 	} else {
@@ -383,6 +398,8 @@ win_game (GtkWidget *widget, gpointer data)
 
 	if (show_scores (fsize2names[fsize], pos, TRUE) == GTK_RESPONSE_REJECT)
 		quit_game ();
+	else
+		new_game ();
 }
 
 static void
@@ -849,6 +866,29 @@ static struct poptOption options[] = {
   {NULL, '\0', 0, NULL, 0}
 };
 
+#if 0
+static void 
+sound_eos (GstElement *sound_player, gpointer data)
+{
+	/* Reset the sound. */
+	gst_element_set_state (sound_player, GST_STATE_NULL);
+}
+
+static void 
+sound_init (int * argcp, char ** argvp[])
+{
+
+	gst_init (argcp, argvp);
+	sound_player = gst_element_factory_make ("playbin", "play");
+	g_object_set (G_OBJECT (sound_player), "uri", "file:///home/callum/Desktop/Development/CVS/gnome/gnome-games/gnometris/sounds/land.wav", NULL);
+
+	/* Attach the signal for end-of-stream. */
+	g_signal_connect (G_OBJECT (sound_player), "eos", G_CALLBACK (sound_eos), 
+			  NULL);
+
+}
+#endif
+
 int
 main (int argc, char *argv[])
 {
@@ -875,6 +915,8 @@ main (int argc, char *argv[])
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
 			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+	/* sound_init (&argc, &argv); */
 
 	/* We hold one global reference to the default gconf client. */
 	conf_client = gconf_client_get_default ();
