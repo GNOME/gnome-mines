@@ -562,13 +562,14 @@
 
  <!-- ============= Bugs ================================== -->
 
+<!-- Better to omit this than give false impression of perfection
  <sect1 id="bugs">
   <title>Known Bugs and Limitations</title>
   <para>
    This application has no known bugs.
   </para>
  </sect1>
-
+-->
 
 <!-- ============= Authors ================================ -->
 
