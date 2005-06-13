@@ -1,3 +1,7 @@
+2005-05-09  Alan Horkan <horkana tcd ie>
+
+	* gnomine.xml: Removed Known Bugs sections where not needed.	
+
 2005-05-15  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* gnomine.xml: Document the change in the button that reveals
