@@ -206,7 +206,7 @@ show_scores (gchar *level, gint pos, gboolean endofgame)
 			games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (scoresdialog),
 								      _("Size:"));	
 			games_scores_dialog_set_style (GAMES_SCORES_DIALOG (scoresdialog),
-						       GAMES_SCORES_STYLE_TIME);
+						       GAMES_SCORES_STYLE_TIME_ASCENDING);
 		}
 		
 		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (scoresdialog),
