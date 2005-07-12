@@ -768,7 +768,7 @@ const GtkActionEntry actions[] = {
 	{ "LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL, G_CALLBACK (fullscreen_callback) }
 };
 
-const char *ui_description =
+const char ui_description[] =
 "<ui>"
 "  <menubar name='MainMenu'>"
 "    <menu action='GameMenu'>"

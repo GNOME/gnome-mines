@@ -1,3 +1,7 @@
+2005-07-11  Richard Hoelscher  <rah@rahga.com>
+
+	* gnomine.c: Make ui_description readonly.
+
 2005-07-10  Richard Hoelscher  <rah@rahga.com>
 
 	* gnomine.c (show_scores): Set dialog style as ascending time (#309958)
