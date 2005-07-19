@@ -1,3 +1,8 @@
+2005-07-19  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* minefield.c: Do the inline thing properly. The glib docs are not
+	just "vague", but actively misleading.
+
 2005-07-11  Richard Hoelscher  <rah@rahga.com>
 
 	* gnomine.c: Make ui_description readonly.

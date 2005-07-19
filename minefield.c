@@ -85,7 +85,7 @@ static gint minefield_signals[LAST_SIGNAL];
 static GtkWidgetClass *parent_class;
 
 /*  Prototypes */
-G_INLINE_FUNC gint cell_idx_no_checks(GtkMineField *mfield, guint x, guint y);
+static inline gint cell_idx_no_checks(GtkMineField *mfield, guint x, guint y);
 static gint cell_idx(GtkMineField *mfield, guint x, guint y);
 static void setup_sign (sign *signp, const char *file, guint minesize);
 static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y);
@@ -115,7 +115,7 @@ static void gtk_minefield_multi_press(GtkMineField *mfield, guint x, guint y, gi
 /* The abstraction of the coordinate system. Note that this is inline
    code that does no checking, use it sparsely. If in doubt, use
    cell_idx instead. */
-G_INLINE_FUNC gint cell_idx_no_checks (GtkMineField *mfield, guint x, guint y)
+static inline gint cell_idx_no_checks (GtkMineField *mfield, guint x, guint y)
 {
 	return x+y*mfield->xsize;
 }
