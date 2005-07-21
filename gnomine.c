@@ -182,7 +182,7 @@ show_scores (gchar *level, gint pos, gboolean endofgame)
 					  _("Great work, but unfortunately your score did not make the top ten."));
 			gtk_dialog_add_buttons (GTK_DIALOG (sorrydialog),
 						GTK_STOCK_QUIT, GTK_RESPONSE_REJECT,
-						_("New Game"),
+						_("_New Game"),
 						GTK_RESPONSE_ACCEPT,
 						NULL);
 			gtk_dialog_set_default_response (GTK_DIALOG (sorrydialog),

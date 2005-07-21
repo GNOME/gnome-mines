@@ -1,3 +1,7 @@
+2005-07-20  Dennis Cranston <dennis_cranston@yahoo.com>
+
+	* gnomine/gnomine.c: Add a mnemonic to the new game button.
+
 2005-07-19  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* minefield.c: Do the inline thing properly. The glib docs are not
