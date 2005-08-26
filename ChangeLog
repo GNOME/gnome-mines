@@ -1,3 +1,11 @@
+2005-08-26  Callum McKenzie  <callum@spooky-possum.org>
+
+	* minefield.c: Decide what to do with a left-click when the button
+	is released. This fixes a reversion in behaviour when "sweeping"
+	the board. See bug #314403. As a side-effect the highlight of
+	surrounding squares also behaves properly when sweeping from a
+	cleared square to an uncleared one.
+
 2005-07-20  Dennis Cranston <dennis_cranston@yahoo.com>
 
 	* gnomine/gnomine.c: Add a mnemonic to the new game button.
