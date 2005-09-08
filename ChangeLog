@@ -1,3 +1,11 @@
+2005-09-08  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c: Remove calls to the old games-scores-dialog API.
+
+2005-09-07  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c: Migrate to the new high scores API.
+
 2005-08-26  Callum McKenzie  <callum@spooky-possum.org>
 
 	* minefield.c: Decide what to do with a left-click when the button
@@ -5,6 +13,11 @@
 	the board. See bug #314403. As a side-effect the highlight of
 	surrounding squares also behaves properly when sweeping from a
 	cleared square to an uncleared one.
+
+2005-08-10  Callum McKenzie  <callum@physics.otago.ac.nz>
+
+	* gnomine.c: Added context tags as per the request in bug
+	#312802. 
 
 2005-07-20  Dennis Cranston <dennis_cranston@yahoo.com>
 

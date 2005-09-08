@@ -25,6 +25,7 @@
 
 #include <config.h>
 #include <gnome.h>
+#include <glib/gi18n.h>
 #include <gconf/gconf-client.h>
 #include <string.h>
 /*#include <gst/gst.h>*/
@@ -32,6 +33,7 @@
 #include "minefield.h"
 #include "games-clock.h"
 #include "games-frame.h"
+#include "games-scores.c"
 #include "games-scores-dialog.h"
 #include "games-stock.h"
 
@@ -77,12 +79,18 @@ GtkAction *leavefullscreen_action;
 
 /*GstElement *sound_player;*/
 
-char *fsize2names[] = {
-	N_("Small"),
-	N_("Medium"),
-	N_("Large"),
-	N_("Custom"),
-};
+static const GamesScoresCategory scorecats[] = {{"Small", N_("Small")},
+						{"Medium", N_("gnomine|Medium")},
+						{"Large", N_("Large")},
+						{"Custom", N_("Custom")},
+						GAMES_SCORES_LAST_CATEGORY};
+
+static const GamesScoresDescription scoredesc = {scorecats,
+						 "Small",
+						 "gnomine",
+						 GAMES_SCORES_STYLE_TIME_ASCENDING};
+
+GamesScores *highscores;
 
 /* It's a little ugly, but it stops the hint dialogs triggering the
  * hide-the-window-to-stop cheating thing. */
@@ -159,9 +167,8 @@ set_flabel (GtkMineField *mfield)
  * a high score and this isn't a direct request to see the scores, we 
  * only show a simple dialog. */
 static gint
-show_scores (gchar *level, gint pos, gboolean endofgame)
+show_scores (gint pos, gboolean endofgame)
 {
-	int i;
 	gchar *message;
 	static GtkWidget *scoresdialog = NULL;
 	static GtkWidget *sorrydialog = NULL;
@@ -195,22 +202,12 @@ show_scores (gchar *level, gint pos, gboolean endofgame)
 		if (scoresdialog != NULL) {
 			gtk_window_present (GTK_WINDOW (scoresdialog));
 		} else {
-			scoresdialog = games_scores_dialog_new ("gnomine", _("Mines Scores"));
-			for (i=0; i<4; i++) {
-				games_scores_dialog_add_category (GAMES_SCORES_DIALOG (scoresdialog),
-								  fsize2names[i],
-								  _(fsize2names[i]));
-			}
-			games_scores_dialog_set_category (GAMES_SCORES_DIALOG (scoresdialog),
-							  fsize2names[fsize]);
+			scoresdialog = games_scores_dialog_new (highscores, 
+								_("Mines Scores"));
 			games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG (scoresdialog),
 								      _("Size:"));	
-			games_scores_dialog_set_style (GAMES_SCORES_DIALOG (scoresdialog),
-						       GAMES_SCORES_STYLE_TIME_ASCENDING);
 		}
 		
-		games_scores_dialog_set_category (GAMES_SCORES_DIALOG (scoresdialog),
-						  level);
 		if (pos > 0) {
 			games_scores_dialog_set_hilight (GAMES_SCORES_DIALOG (scoresdialog), 
 							 pos);
@@ -245,12 +242,7 @@ show_scores (gchar *level, gint pos, gboolean endofgame)
 static void
 scores_callback (void)
 {
-	gchar buf[64];
-
-	if(fsize<4)
-		strncpy (buf, fsize2names[fsize], sizeof(buf));
-
-	show_scores (buf, 0, FALSE);
+	show_scores (0, FALSE);
 }
 
 static void
@@ -281,6 +273,7 @@ new_game (void)
 		y = size_table[fsize][1];
 		mf->mcount = size_table[fsize][2];
 	}
+	games_scores_set_category (highscores, scorecats[fsize].key);
 	gtk_minefield_set_size (GTK_MINEFIELD (mfield), x, y);
 	gtk_minefield_restart (GTK_MINEFIELD (mfield));
 
@@ -373,7 +366,7 @@ lose_game (GtkWidget *widget, gpointer data)
 static void
 win_game (GtkWidget *widget, gpointer data)
 {
-        gfloat score;
+        gdouble score;
         int pos;
 
         games_clock_stop (GAMES_CLOCK (clk));
@@ -386,17 +379,17 @@ win_game (GtkWidget *widget, gpointer data)
 	    score = (gfloat) (GAMES_CLOCK (clk)->stopped / 60) + 
 		    (gfloat) (GAMES_CLOCK (clk)->stopped % 60) / 100;
 
-	    pos = gnome_score_log (score, fsize2names[fsize], FALSE);
+	    pos = games_scores_add_score (highscores, (GamesScoreValue) score);
 	} else {
-	    /* FIXME: This is actually slightly broken by the new,
-	     * uniform high score widget which displays it as a time. */
+	    /* FIXME: This is actually broken by the new high score code,
+	     * which interprets it as a time. */
 	    score = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (GAMES_CLOCK (clk)->stopped); 
 
-	    pos = gnome_score_log (score, fsize2names[fsize], TRUE);
+	    pos = games_scores_add_score (highscores, (GamesScoreValue) score);
 	}
 
-	if (show_scores (fsize2names[fsize], pos, TRUE) == GTK_RESPONSE_REJECT)
+	if (show_scores (pos, TRUE) == GTK_RESPONSE_REJECT)
 		quit_game ();
 	else
 		new_game ();
@@ -632,7 +625,7 @@ create_preferences (void)
 
 	button = gtk_radio_button_new_with_label
 		(gtk_radio_button_get_group (GTK_RADIO_BUTTON(button)),
-		 _("Medium"));
+		 Q_("gnomine|Medium"));
 	if (fsize == 1)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
 				TRUE);
@@ -904,8 +897,6 @@ main (int argc, char *argv[])
 
 	gint width, height;
 
-	gnome_score_init("gnomine");
-
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
@@ -915,6 +906,8 @@ main (int argc, char *argv[])
 			argc, argv,
 			GNOME_PARAM_POPT_TABLE, options,
 			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+
+	highscores = games_scores_new (&scoredesc);
 
 	/* sound_init (&argc, &argv); */
 
