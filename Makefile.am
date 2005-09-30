@@ -21,9 +21,8 @@ gnomine_SOURCES =	\
 	minefield.c
 
 gnomine_LDADD = \
-	$(GNOME_GAMES_LIBS) \
 	../libgames-support/libgames-support.la \
-	$(INTLLIBS) 
+	$(GNOME_GAMES_LIBS)
 
 gnomine_LDFLAGS = `pkg-config --libs gstreamer-0.8`
 
