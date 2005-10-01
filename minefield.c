@@ -829,6 +829,8 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
         gint n, nx, ny, i, c2;
 	guint lose = 0;
 
+	g_return_if_fail (c > 0);
+
         mfield->multi_mode = 0;
 
         n = 0;
@@ -1036,7 +1038,6 @@ static gint gtk_minefield_button_release(GtkWidget *widget, GdkEventButton *even
 					0, NULL);
 		}
 		mfield->mines[mfield->cdown].down = 0;
-                mfield->cdown = -1;
 		mfield->action = NO_ACTION;
 		mfield->bdown[event->button-1] = 0;
 		gtk_mine_draw(mfield, mfield->cdownx, mfield->cdowny);

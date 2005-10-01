@@ -1,3 +1,9 @@
+2005-10-02  Callum McKenzie  <callum@spooky-possum.org>
+
+	* minefield.c (gtk_minefield_motion_notify): Don't reset c to -1
+	when a button is release: other buttons may still be pressed. Also
+	add a check on the value of c to _multi_release. See bug 315767.
+
 2005-09-08  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.c: Remove calls to the old games-scores-dialog API.
