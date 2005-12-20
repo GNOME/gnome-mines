@@ -1,3 +1,7 @@
+2005-12-20  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c (main): Add setgid_io_init ().
+
 2005-10-02  Callum McKenzie  <callum@spooky-possum.org>
 
 	* minefield.c (gtk_minefield_motion_notify): Don't reset c to -1
