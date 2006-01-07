@@ -1,3 +1,8 @@
+2006-01-08  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c: Patch to allow compilation with the Forte C
+	compiler. (Damien Carbery, Bug #326024.)
+
 2005-12-20  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.c (main): Add setgid_io_init ().

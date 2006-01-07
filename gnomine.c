@@ -366,7 +366,7 @@ lose_game (GtkWidget *widget, gpointer data)
 static void
 win_game (GtkWidget *widget, gpointer data)
 {
-        gdouble score;
+        GamesScoreValue score;
         int pos;
 
         games_clock_stop (GAMES_CLOCK (clk));
@@ -376,17 +376,17 @@ win_game (GtkWidget *widget, gpointer data)
         show_face (pm_win);
 
 	if(fsize<4) {
-	    score = (gfloat) (GAMES_CLOCK (clk)->stopped / 60) + 
+	    score.time_double = (gfloat) (GAMES_CLOCK (clk)->stopped / 60) + 
 		    (gfloat) (GAMES_CLOCK (clk)->stopped % 60) / 100;
 
-	    pos = games_scores_add_score (highscores, (GamesScoreValue) score);
+	    pos = games_scores_add_score (highscores, score);
 	} else {
 	    /* FIXME: This is actually broken by the new high score code,
 	     * which interprets it as a time. */
-	    score = ((nmines * 100) / (xsize * ysize)) /
+	    score.time_double = ((nmines * 100) / (xsize * ysize)) /
 		    (gfloat) (GAMES_CLOCK (clk)->stopped); 
 
-	    pos = games_scores_add_score (highscores, (GamesScoreValue) score);
+	    pos = games_scores_add_score (highscores, score);
 	}
 
 	if (show_scores (pos, TRUE) == GTK_RESPONSE_REJECT)
