@@ -477,8 +477,11 @@
                              sizes on the left or create your own by
                              selecting
                              <guimenuitem>custom</guimenuitem> and
-                             selecting the value you want on the
-                             right.
+                             setting the parameters you want on the
+                             right.</para>
+			     <tip>High scores are recorded when
+    playing custom mode, but because the board size can be changed
+    they don't mean a lot.</tip>
                              <para>
                              Also there is an option to use an extra
                              "I'm not sure" flag with a question mark
@@ -512,7 +515,6 @@
 	                 </screenshot>
 	               </figure>
                        <!-- ==== End of Figure ==== -->
-	           </para>
 		</listitem>
 	      </itemizedlist>
 	  </para>

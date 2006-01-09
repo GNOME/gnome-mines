@@ -1,3 +1,8 @@
+2006-01-09  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.xml: Add a note about the pointlessness of high scores
+	in custom mode. Minor word tweaks.
+
 2005-07-29  Callum McKenzie  <callum@physics.otago.ac.nz>
 
 	* figures/*:

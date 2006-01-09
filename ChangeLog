@@ -1,3 +1,13 @@
+2006-01-09  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c (win_game): Remove the scaling code for the custom
+	scores. Due to a stuff-up on my part it hasn't actually been
+	called for the entirety of the last release cycle. On top of that
+	it makes for a UI nightmare (how do you explain the jump from a
+	time to a score?). Given no-one has complained I think it is best
+	that people realise that custom scores are just there to give some
+	sort of metric and not something that should be competed over.
+
 2006-01-08  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.c: Patch to allow compilation with the Forte C
