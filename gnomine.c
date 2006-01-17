@@ -1077,6 +1077,8 @@ main (int argc, char *argv[])
 	show_face (pm_smile); 
 
         gtk_main ();
+	
+	gnome_accelerators_sync();
 
 	return 0;
 }
