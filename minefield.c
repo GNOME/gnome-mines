@@ -829,7 +829,9 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
         gint n, nx, ny, i, c2;
 	guint lose = 0;
 
-	g_return_if_fail (c > 0);
+	
+	if (c == 0) /* The release was outside the main area. */
+		return;
 
         mfield->multi_mode = 0;
 
