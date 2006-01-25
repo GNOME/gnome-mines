@@ -1,3 +1,8 @@
+2006-01-25  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c: (gpointer) cast -> GINT_TO_POINTER. This should fix
+	bug #320713.
+
 2006-01-22  Callum McKenzie  <callum@spooky-possum.org>
 
 	* minefield.c (gtk_minefield_multi_release): Remove a spurious

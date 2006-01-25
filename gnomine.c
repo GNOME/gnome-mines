@@ -611,7 +611,8 @@ create_preferences (void)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
 				TRUE);
 	g_signal_connect (GTK_OBJECT (button), "clicked",
-			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 0);
+			  GTK_SIGNAL_FUNC (size_radio_callback), 
+			  GINT_TO_POINTER (0));
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
 	button = gtk_radio_button_new_with_label
@@ -621,7 +622,8 @@ create_preferences (void)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
 				TRUE);
 	g_signal_connect (GTK_OBJECT (button), "clicked",
-			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 1);
+			  GTK_SIGNAL_FUNC (size_radio_callback), 
+			  GINT_TO_POINTER (1));
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
 	button = gtk_radio_button_new_with_label
@@ -631,7 +633,8 @@ create_preferences (void)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
 				TRUE);
 	g_signal_connect (GTK_OBJECT (button), "clicked",
-			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 2);
+			  GTK_SIGNAL_FUNC (size_radio_callback), 
+			  GINT_TO_POINTER (2));
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 	
 	button = gtk_radio_button_new_with_label
@@ -641,7 +644,8 @@ create_preferences (void)
 		gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button),
 				TRUE);
 	g_signal_connect (GTK_OBJECT (button), "clicked",
-			GTK_SIGNAL_FUNC (size_radio_callback), (gpointer) 3);
+			  GTK_SIGNAL_FUNC (size_radio_callback),
+			  GINT_TO_POINTER (3));
 	gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
 	gtk_container_add (GTK_CONTAINER (frame), vbox);
