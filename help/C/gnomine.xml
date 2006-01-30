@@ -2,12 +2,12 @@
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
     "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
   <!ENTITY legal SYSTEM "legal.xml">
-  <!ENTITY appversion "2.12">
-  <!ENTITY manrevision "2.8">
-  <!ENTITY date "September 2004">
-  <!ENTITY app "<application>GNOME Mines</application>">
-  <!ENTITY appname "GNOME Mines">
-  <!ENTITY version "2.8">
+  <!ENTITY appversion "2.14">
+  <!ENTITY manrevision "2.9">
+  <!ENTITY date "January 2006">
+  <!ENTITY app "<application>Mines</application>">
+  <!ENTITY appname "Mines">
+  <!ENTITY version "2.14">
 ]>
 
 <!-- 
@@ -26,8 +26,9 @@
   <articleinfo>
     <title>&app; Manual V&manrevision;</title>
     <copyright>
-      <year>2001</year>
-      <holder>Tim Riehle</holder>
+      <year>2006</year>
+      <holder>Callum McKenzie</holder>
+<!--   Based on an earlier manual by   <holder>Tim Riehle</holder> -->
     </copyright>
 <!-- translators: uncomment this:
 
@@ -48,13 +49,14 @@
    <!-- This file  contains link to license for the documentation (GNU FDL), and 
         other legal stuff such as "NO WARRANTY" statement. Please do not change 
 	any of this. -->
+	<!-- FIXME: I want to dual-license with GPL. -->
 
     <authorgroup> 
       <author> 
-	<firstname>Tim</firstname> 
-	<surname>Riehle</surname> 
+	<firstname>Callum</firstname> 
+	<surname>McKenzie</surname> 
 	<affiliation> 
-	  <address> <email>tkriehle@citilink.com</email> </address> 
+	  <address> <email>callum@spooky-possum.org</email> </address> 
 	</affiliation> 
       </author> 
 <!-- This is appropriate place for other contributors: translators,
@@ -75,8 +77,8 @@
 	<revnumber>&appname; Manual V&manrevision;</revnumber> 
 	<date>&date;</date> 
 	<revdescription> 
-	  <para role="author">Tim Riehle
-	    <email>tkriehle@citilink.com</email>
+	  <para role="author">Callum McKenzie
+	    <email>callum@spooky-possum.org</email>
 	  </para>
 	  <para role="publisher">GNOME Documentation Project</para>
 	</revdescription> 
@@ -85,7 +87,7 @@
 
     <releaseinfo>This manual describes version &appversion; of &appname;.
     </releaseinfo>
-    <!-- The following feedback information only applies to appliactions
+    <!-- The following feedback information only applies to applications
     listed in bugzilla.gnome.org and bugzilla.ximian.com. For other
     applications, please provide your own feedback info or remove thsi
     section altogether -->
@@ -93,8 +95,7 @@
       <title>Feedback</title> 
       <para>To report a bug or make a suggestion regarding the &app; application or
 	this manual, follow the directions in the 
-	<ulink url="ghelp:gnome-feedback"
-	  type="help">GNOME Feedback Page</ulink>. 
+	<ulink url="http://bugzilla.gnome.org">GNOME bug reporting database.</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice>
@@ -111,469 +112,327 @@
     <title>Introduction</title>
 
     <para>
-     <application>GNOME Mines</application> is a variation of the
-     popular logic puzzle minesweeper.
+     <application>&app;</application> is a puzzle game where you try
+     and find the location of mines floating in an ocean using only
+     your brain and a little bit of luck.
     </para>
+
     <para>
-      <application>GNOME Mines</application> is included in the
-      <filename>gnome-games</filename> package, which is part of the
-      GNOME desktop environment. This document describes version
-      &version; of <application>GNOME Mines</application>.
+      You start the game with a grid of blank squares - you
+      have no idea what is in them. Clicking on a square shows you
+      what is under it, either empty ocean or a mine. If you
+      find a mine bad things happen and the game is over. To make the
+      game longer and more fun, if you find an empty piece of ocean
+      a number is printed there telling you how many mines are in the 
+      adjacent squares (or no number if there are no nearby
+      mines). Once you find a few clear squares you can start to
+      deduce which squares have mines in them and which don't. You win
+      the game once you have revealed all the un-mined squares and
+      marked where all the mines are.
     </para>
+
+    <figure id="main-window">
+      <screenshot>
+        <mediaobject>
+	  <imageobject>
+	    <imagedata fileref="figures/main-window.png"
+	    format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+      </screenshot>
+      <title>The games. As you start it, while playing, when you lose,
+	    and when you win.</title>
+    </figure>
+
+    <para>
+      To mark a square as having a mine you right-click on it and a
+      flag is placed there. If you click on a square with a number and
+      you have placed precisely that number of flags on adjacent
+      squares then the remaining squares are revealed. If you didn't
+      mark the mines correctly then an explosion will occur and
+      once-again the game is over. Squares with no adjacent mines
+      (i.e. blank squares) have the adjacent squares automatically cleared.
+    </para>
+
+    <figure id="status-bar">
+      <screenshot>
+        <mediaobject>
+	  <imageobject>
+	    <imagedata fileref="figures/statusbar.png"
+	    format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+      </screenshot>
+      <title>Important information.</title>
+    </figure>
+
+    <para>
+      Also, you are being timed. You have to work quickly - and
+      correctly. Once you have found all the mines and revealed all
+      the un-mined squares the timer is stopped. The shorter the time
+      you take, the better.
+    </para>
+
+    <para>
+      The time you have taken is displayed on the bottom right of the
+      window. Beside it on the left is a count of the number of mines 
+      you have cleared and the total number hidden on the board.
+    </para>
+
+    <figure id="faces">
+      <screenshot>
+        <mediaobject>
+	  <imageobject>
+	    <imagedata fileref="figures/faces.png"
+	    format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+      </screenshot>
+      <title>There is also a big yellow face. Don't be frightened - it's harmless.</title>
+    </figure>
+
+    <!-- Face graphics image. -->
+
   </sect1>
 
 
- <!-- ================ Objective ============================== -->
-
-  <sect1 id="objective">
-    <title>Objective</title>
+  <sect1 id="details">
+    <title>The Details</title>
 
     <para>
-      The object of <application>GNOME Mines</application> is for the
-      player to flag all mines hidden on the playing grid and to uncover
-      all the remaining squares.  If the player mistakenly uncovers
-      a square containing a mine the game is lost.  Winning games are
-      ranked by how quickly the game was completed.
+      The intro is short, so here are the gory details.
     </para>
+
+    <sect2>
+      <title>The Goal</title>
+
+      <para>
+        Starting from an ocean of squares with unknown contents
+	you must mark all the squares with mines and reveal all the
+	clear squares. Actually you don't have to mark the squares with mines,
+	but it is a lot easier if you do. Once you have cleared all
+	the un-mined squares, any remaining mined squares will be
+	marked for you.
+      </para>
+
+      <para>
+	If you left click on a mine, or auto-clear a square with a mine
+        in it you lose. To help prevent accidents, you aren't allowed
+        to auto-clear around a square unless the number of marked
+        mines equals the number given in the square.
+      </para>
+
+    </sect2>
+
+    <sect2>
+      <title>Using the Mouse</title>
+      
+      <informaltable>
+        <tgroup cols="2">
+	<!-- FIXME: proper headers. -->
+	  <thead>
+	    <row>
+	      <entry>Action</entry><entry>Result</entry>
+	    </row>
+	  </thead>
+	  <tbody>
+	    <row>
+	      <entry>Left click on an un-revealed square.</entry>
+	      <entry>Reveals that square for better or for
+	      worse.</entry>
+	    </row>
+	    <row>
+	      <entry>Left click in a revealed square.</entry>
+	      <entry>Reveals the unmarked squares around the square,
+	      but only if enough squares have been marked to match the
+	      number in the revealed square.</entry>
+	    </row>
+	    <row>
+	      <entry>Right click on an un-revealed square.</entry>
+	      <entry>Marks the square as a mine. If it is already
+	      marked, it will clear it.</entry>
+	    </row>
+	  </tbody>
+	</tgroup>
+      </informaltable>
+
+      <tip>If you are used to the more traditional mouse controls
+           don't worry; they still work.</tip>
+    </sect2>
+
+    <sect2>
+      <title>Game Size and Difficulty</title>
+
+      <para>
+        By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from the 
+	 menu you can
+        change the size of the games. Larger sizes obviously take longer
+        and require more concentration. Smaller games are more
+        frantic. We provide Small, Medium, Large and Custom
+        sizes.
+      </para> 
+
+    <figure id="preferences-img">
+      <screenshot>
+        <mediaobject>
+	  <imageobject>
+	    <imagedata fileref="figures/preferences.png"
+	    format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+      </screenshot>
+      <title>The preferences dialog.</title>
+    </figure>
+
+      <para>
+        On the right hand side of the dialog there are three
+        parameters for controlling the custom size. Horizontal and
+        Vertical are the width and height of the desired custom grid in
+        squares. The number of mines is - obviously - the number of
+        mines you need to find. If this number is set too high or too
+        low then the game becomes very easy. The number of mines is
+        limited to slightly less than the total number of squares.
+      </para>
+
+    </sect2>
+    
+    <sect2>
+      <title>"I'm not sure" Flags</title>
+
+      <figure id="imnotsureflagsimg">
+        <screenshot>
+          <mediaobject>
+  	    <imageobject>
+  	      <imagedata fileref="figures/imnotsureflagscheckbox.png"
+  	        format="PNG"/>
+  	    </imageobject>
+       	  </mediaobject>
+        </screenshot>
+      </figure>
+
+      <para>
+        There is one other check-box in the properties dialog entitled
+        Use "I'm not sure" flags. If you enable this then when
+        right-clicking on a square it cycles between the normal flags
+        used to mark the square as mined, a flag with a question mark
+        on it and no flag. This new flag is to help you with your
+        reasoning, to mark mines you think might be a mine. These
+        flags have no effect on the game; you still have to use the 
+	appropriate  number of red marker flags to be able to clear
+        around a numbered square.
+      </para>
+
+      <figure id="flags-img">
+        <screenshot>
+          <mediaobject>
+  	    <imageobject>
+  	      <imagedata fileref="figures/flags.png"
+  	        format="PNG"/>
+  	    </imageobject>
+       	  </mediaobject>
+        </screenshot>
+	<title>The sequence of flags when "I'm not sure" flags are enabled.</title>
+      </figure>
+
+    </sect2>
+
+    <sect2>
+      <title>Hints</title>
+    
+      <para>
+        If you get stuck - it is reasonably common to end up with two
+        options that you can't logically resolve - then you can either
+        guess, or ask for a hint. When you choose 
+	<guimenuitem>Hint</guimenuitem> from the <guimenu>Game</guimenu>
+        menu then a single square will be revealed (plus surrounding
+        squares if it is blank). The choice of square is not deterministic, but
+        should be helpful. There is 10 second penalty added to your
+        time whenever you use a hint.
+      </para>
+
+    </sect2>
+
+    <sect2>
+      <title>High Scores</title>
+
+      <para>
+        If your score is in the top ten then, when the game is over,
+        you will be shown the list of top scores and have an
+        opportunity to change the name you use in the list. You can
+        also review the scores later by choosing 
+	<guimenuitem>Scores</guimenuitem> from the <guimenu>Game</guimenu>
+        menu. The drop-down menu at the top of the dialog lets you
+        look at other categories.
+      </para>
+
+    <figure id="high-score-img">
+      <screenshot>
+        <mediaobject>
+	  <imageobject>
+	    <imagedata fileref="figures/highscores.png"
+	    format="PNG"/>
+	  </imageobject>
+	</mediaobject>
+      </screenshot>
+      <title>The high scores dialog.</title>
+    </figure>
+
+      <tip>
+        The high score for the custom size is usually meaningless. Any
+	other player can make the game size smaller and get a better time. If
+        you only ever play one custom size then it will tell you how
+	well you are doing. This is the reason it is still recorded.
+      </tip>
+    </sect2>
+
+    <sect2>
+      <title>Window Size</title>
+      
+      <para>Resizing the window makes the squares bigger or smaller to
+    suit. If you want to make maximum use of the screen then the
+    <guimenuitem>Fullscreen</guimenuitem> option under the
+    <guimenu>Settings</guimenu> menu will do what you want. You can
+    also use <keycap>F11</keycap> key to toggle full-screen mode.
+      </para>
+    </sect2>
+
   </sect1>
 
  <!-- ================ Usage ================================ -->
 
-  <sect1 id="usage">
-    <title>Usage</title>
+  <sect1 id="strategy">
+    <title>Strategy</title>
 
-    <para>
-     This section describes how to use this application.
-    </para>
-
-    <!-- ========= Basic Usage =========================== -->
-    <sect2 id="basic-usage">
-      <title>Basic usage</title>
+    <sect2>
+      <title>The Basics</title>
       <para>
-<!-- Add info on starting the app from the command line -->
-        Starting <application>GNOME Mines</application> opens the
-        <interface>Main window</interface>, shown in <xref
-        linkend="fresh-mainwindow-fig"/>.
-
-        <!-- ==== Figure ==== -->
-        <figure id="fresh-mainwindow-fig">
-	  <title>GNOME Mines Main Window</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/gnomine-fresh.png" format="PNG" srccredit="Tim Riehle"/>
-	     </imageobject>
-    <textobject> 
-      <phrase>GNOME Mines Main Window.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-      <para>
-        The bottom of the window shows a game timer on the right and a
-        counter on the left showing how many flags have been placed and
-        how many mines exist.
+        There are a few basic situations which should be incredibly
+      obvious, but if you're struggling with how to play this game,
+      they should be useful. The first is the case where you have an
+      isolated uncovered square and every square around it reads
+      1. That uncovered square is a mine. 
       </para>
       <para>
-        Play proceeds by uncovering squares with the left mouse button and
-        placing flags with the right mouse button. Successfully uncovered
-        squares yield information: the number of mines in the adjacent
-        squares. <xref linkend="begin-play-fig"/> shows a game
-        in play. Note the numbers in the cleared squares and their relation
-        to flags.
-      </para>
-   <para>
-        <!-- ==== Figure ==== -->
-        <figure id="begin-play-fig">
-	  <title>GNOME Mines In Play</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/gnomine-begin-play.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-    </imageobject>
-    <textobject> 
-      <phrase>GNOME Mines In Play.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-
-        Using the information gathered from the uncovered squares the
-        player forms hypotheses about the location of undiscovered mines.
+        The next simplest case is where you have two uncovered squares
+        adjacent to each other and both squares on one side are marked
+        with a 2. If they have no other uncleared neighbours, then
+        both squares are mines.
       </para>
       <para>
-        As flags are added the left mouse button may be used on the
-        previously uncovered squares. If the number of flags adjacent
-        to that square satisfies the number expected 
-        the clicking on the number will automatically uncover all remaining
-        adjacent squares. If a flag has been placed by mistake this action
-        will uncover a mine and end play. <xref linkend="fail-fig"/>
-        shows the result of just such a mistake, note the flag in the
-        bottom row.
-
-      <tip>Other versions of Mines use a different button to
-      reveal adjacent squares. We also support using the middle
-      button, clicking both left and right buttons together, and
-      shift+left button.
-      </tip>
-
-        <!-- ==== Figure ==== -->
-        <figure id="fail-fig">
-	  <title>GNOME Mines Showing A Failed Game</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/gnomine-fail.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
-    <textobject> 
-      <phrase>GNOME Mines Showing A Failed Game.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-
-      <para>
-        If flags have been correctly placed on all the mines, and the
-        remaining squares have been uncovered the game is won, as shown
-        in <xref linkend="won-fig"/>.
-
-        <!-- ==== Figure ==== -->
-        <figure id="won-fig">
-	  <title>GNOME Mines Showing A Won Game</title>
-	  <screenshot>
-            <mediaobject> 
-              <imageobject>
-                <imagedata fileref="figures/gnomine-won.png"
-                           format="PNG" srccredit="Tim Riehle"/>
-              </imageobject>
-    <textobject> 
-      <phrase>GNOME Mines Showing A Won Game.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-      <para>
-      When the focus moves away from the <application>GNOME
-      Mines</application> window the game is paused and the playing
-      area hidden.
+        Finally, when there are three uncovered squares in a row and
+        the clear square beside the middle one is a 3 (once again this
+        square should have no other neighbours) then all three are mines.
       </para>
     </sect2>
-  
-    <!-- ================ Basic Strategy======================== -->
 
-    <sect2 id="basic-strategy">
-      <title>Basic Strategy</title>
-
+    <sect2>
+      <title>More Advanced Situations</title>
+      
       <para>
-        The geometrical arrangement of uncovered and flagged squares
-        often limits the possible locations that can contain hidden
-        mines. <xref linkend="basic-corner"/> shows how the location
-        of a mine, pointed to by the arrow, has been inferred using the
-        square on the outside corner showing the numeral one. The geometry
-        of the corner has left only one uncovered square next to the one.
-        <!-- ==== Figure ==== -->
-        <figure id="basic-corner">
-	  <title>Inferring the location of a mine at a corner</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/basic-corner.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-            </imageobject>
-    <textobject> 
-      <phrase>Inferring the location of a mine at a corner.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
+        Below are some more advanced situations.
       </para>
-
-      <para>
-        The same strategy has been used in <xref
-        linkend="basic-wall"/> where the square showing the number three
-        has only three remaining uncovered squares that can hold mines.
-        to
-        <!-- ==== Figure ==== -->
-        <figure id="basic-wall">
-	  <title>Inferring the location of mines next along a wall</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/basic-wall.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
-    <textobject> 
-      <phrase>Inferring the location of mines next along a wall.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-      <para>
-         In the previous cases we found the location of mines using the
-         information from a single uncovered square. More advanced play
-         comes from combining information from two or more uncovered
-         squares. Consider the arrangement of squares in <xref
-         linkend="advanced-1"/>.
-        <!-- ==== Figure ==== -->
-        <figure id="advanced-1">
-	  <title>Inferring the location of mines using information from several squares</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/advanced_121_a.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
-    <textobject> 
-      <phrase>Inferring the location of mines using information from several squares.</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-      <para>
-         If we focus on the leftmost square showing "1" we know that only
-         a single flag can be contained in the three uncovered squares
-         highlighted in green in <xref linkend="advanced-2"/>,
-         thus we can infer where the second flag for the square showing
-         "2" must be placed.
-        <!-- ==== Figure ==== -->
-        <figure id="advanced-2">
-	  <title>finding the first mine by using the leftmost square showing "1"</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/advanced_121_b.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
-    <textobject> 
-      <phrase>finding the first mine by using the leftmost square showing "1".</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-      <para>
-        We can now repeat the same process with the rightmost square showing "1" to place
-        the second flag, see <xref linkend="advanced-3"/>.
-        <!-- ==== Figure ==== -->
-        <figure id="advanced-3">
-	  <title>finding the second mine by using the rightmost square showing "1"</title>
-	  <screenshot>
-	     <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/advanced_121_c.png"
-                     format="PNG" srccredit="Tim Riehle"/>
-           </imageobject>
-    <textobject> 
-      <phrase>finding the second mine by using the rightmost square showing "1".</phrase> 
-    </textobject> 
-  </mediaobject>
-	  </screenshot>
-	</figure>
-        <!-- ==== End of Figure ==== -->
-      </para>
-
-       </sect2>
-
-    </sect1>
-
-    <!-- ========= Menus =========================== --> 
-    <sect1 id="menubar">
-      <title>Menus</title>
-      <para>
-	The menu bar, located at the top of the <interface>Main
-	Window</interface>, contains the following menus:
-       </para>
-      <variablelist>
-	<varlistentry>
-	  <term><guimenu>Game</guimenu></term>
-	  <listitem>
-	    <para>
-	       This menu contains:
-	       <itemizedlist>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <shortcut>
-			<keycombo><keycap>Ctrl</keycap><keycap>N</keycap></keycombo>
-		      </shortcut>
-		      <guimenuitem>New game</guimenuitem>
-		     </menuchoice>
-	             &mdash; Start a new game of
-                             <application>GNOME Mines</application>.
-	           </para>
-		</listitem>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <guimenuitem>Hint</guimenuitem>
-		     </menuchoice>
-	             &mdash; Uncovers one safe square, but adds ten
-	             seconds to your time.
-	           </para>
-		</listitem>
-		<listitem>
-		  <para>
-	             <menuchoice>
-		      <guimenuitem>Scores...</guimenuitem>
-		    </menuchoice>
-	            &mdash; Display the local
-                            <application>GNOME Mines</application>
-                            score statistics.
-	          </para>
-		</listitem>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <shortcut>
-			<keycombo><keycap>Ctrl</keycap><keycap>Q</keycap></keycombo>
-		      </shortcut>
-		      <guimenuitem>Exit</guimenuitem>
-		    </menuchoice>
-	            &mdash; Quit; exit from
-                            <application>GNOME Mines</application>.
-	          </para>
-		</listitem>
-	      </itemizedlist>
-	  </para>
-	  </listitem>
-	</varlistentry>
-	<varlistentry>
-	  <term><guimenu>Settings</guimenu></term>
-	  <listitem>
-	    <para>
-	       This menu contains:
-	       <itemizedlist>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <guimenuitem>Preferences...</guimenuitem>
-		     </menuchoice>
-	             &mdash; Bring up the <application>GNOME Mines</application>
-                             <interface>Preferences</interface> dialog,
-                             as shown in <xref linkend="gnomine-preferences-fig"/>
-                             This allows you to choose the size of the
-                             playing grid and the number of mines. You
-                             can either use one of the pre-defined
-                             sizes on the left or create your own by
-                             selecting
-                             <guimenuitem>custom</guimenuitem> and
-                             setting the parameters you want on the
-                             right.</para>
-			     <tip>High scores are recorded when
-    playing custom mode, but because the board size can be changed
-    they don't mean a lot.</tip>
-                             <para>
-                             Also there is an option to use an extra
-                             "I'm not sure" flag with a question mark
-                             for squares you aren't sure about. These
-                             are there for your convenience and are
-                             treated as unflagged squares by the
-                             game. To mark a square in this way right
-                             click on a square already marked with a
-                             flag (i.e. right click twice). Clicking
-                             it again will clear it.
-                             </para>
-                             <para>
-                             All preferences are applied and saved the
-                             moment you change them. If you change the
-                             size of the grid, a new game is started.
-                             </para>
-
-                       <!-- ==== Figure ==== -->
-                       <figure id="gnomine-preferences-fig">
-	                 <title>GNOME Mines Preferences Dialog</title>
-	                 <screenshot>
-	                    <mediaobject> 
-    <imageobject>
-  <imagedata fileref="figures/gnomine-preferences.png"
-                                    format="PNG" srccredit="Tim Riehle"/>
-                          </imageobject>
-    <textobject> 
-      <phrase>GNOME Mines Preferences Dialog.</phrase> 
-    </textobject> 
-  </mediaobject>
-	                 </screenshot>
-	               </figure>
-                       <!-- ==== End of Figure ==== -->
-		</listitem>
-	      </itemizedlist>
-	  </para>
-	  </listitem>
-	</varlistentry>
-	<varlistentry>
-	  <term><guimenu>Help</guimenu></term>
-	  <listitem>
-	    <para>
-	       This menu contains:
-	       <itemizedlist>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <guimenuitem>Contents</guimenuitem>
-		     </menuchoice>
-	             &mdash; Bring up this help.
-	           </para>
-		</listitem>
-		<listitem>
-		  <para>
-	            <menuchoice>
-		      <guimenuitem>About...</guimenuitem>
-		     </menuchoice>
-<!--	             &mdash; Display version, copyright, and authorship
-                             information, and a brief explanation of what
-                             GNOME Mines is. -->
-	             &mdash; Bring up the <application>GNOME Mines</application>
-                             <interface>About</interface> window.
-                             If you need to know what version of GNOME Mines
-                             you are running, who wrote it and who owns the
-                             copyright, or you just want it summed up
-                             in a pithy sentence then this menu item
-                             is for you.  No rambling; no beating about the
-                             bush. The <interface>About</interface> window
-                             tells it like it is. In fact there is
-                             more words in this description than
-                             in the entire about box !
-	           </para>
-		</listitem>
-	      </itemizedlist>
-	  </para>
-	  </listitem>
-	</varlistentry>
-      </variablelist>
-    </sect1>
-
- <!-- ============= Bugs ================================== -->
-
-<!-- Better to omit this than give false impression of perfection
- <sect1 id="bugs">
-  <title>Known Bugs and Limitations</title>
-  <para>
-   This application has no known bugs.
-  </para>
+    </sect2>
  </sect1>
--->
-
-<!-- ============= Authors ================================ -->
 
  <sect1 id="authors">
   <title>Authors</title>
@@ -584,19 +443,20 @@
    <ulink url="http://bugzilla.gnome.org" type="http">GNOME bug
    tracking database</ulink>. You can also use <application>Bug Report
    Tool</application> (<command>bug-buddy</command>), available in the
-   <guisubmenu>Utilities</guisubmenu> submenu of
-   <guimenu>Main Menu</guimenu>, for submitting bug reports.
+   <guisubmenu>Development</guisubmenu> sub-menu of the 
+   <guimenu>Applications</guimenu> menu, for submitting bug reports.
   </para>
   <para>
-   This manual was written by Tim Riehle
+   This manual was written by Callum McKenzie
+  (<email>callum@spooky-possum.org</email>) based on an earlier manual
+  by Tim Riehle
    (<email>tkriehle@citilink.com</email>). Please send all comments and
-   suggestions regarding this manual to the <ulink type="http"
+   suggestions regarding this manual to the 
+   <ulink url="http://bugzilla.gnome.org" type="http">GNOME bug
+   tracking database</ulink>. Further information about GNOME
+  documentation can be found at the <ulink type="http"
    url="http://developer.gnome.org/projects/gdp">GNOME Documentation
-   Project</ulink> by sending an email to
-   <email>docs@gnome.org</email>. You can also add your comments
-   online by using the <ulink type="http"
-   url="http://developer.gnome.org/projects/gdp/doctable/">GNOME
-   Documentation Status Table</ulink>.
+   Project</ulink> web-page.
   </para>
  </sect1>
 
@@ -607,9 +467,9 @@
   <title>License</title>
   <para>
    This program is free software; you can redistribute it and/or
-   modify it under the terms of the  <ulink type="help" url="gnome-help:gpl">
-    <citetitle>GNU General Public License</citetitle></ulink> as
-   published by the Free Software Foundation; 
+   modify it under the terms of the <citetitle><ulink type="help" url="gnome-help:gpl">GNU General Public License</ulink></citetitle> as
+   published by the <ulink type="http"
+   url="http://www.fsf.org">Free Software Foundation</ulink>;
    either version 2 of the License, or (at your option) any later
    version.
   </para>
@@ -617,13 +477,13 @@
    This program is distributed in the hope that it will be useful, but
    WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-   <citetitle>GNU General Public License</citetitle> for more details.
+   <citetitle><ulink type="help" url="gnome-help:gpl">GNU General Public License</ulink></citetitle> for more details.
   </para>
   <para>
-   A copy of the <citetitle>GNU General Public License</citetitle> is
+   A copy of the <citetitle><ulink type="help" url="gnome-help:gpl">GNU General Public License</ulink></citetitle> is
    included as an appendix to the <citetitle>GNOME Users
    Guide</citetitle>.  You may also obtain a copy of the
-   <citetitle>GNU General Public License</citetitle> from the Free
+   <citetitle><ulink type="help" url="gnome-help:gpl">GNU General Public License</ulink></citetitle> from the Free
    Software Foundation by visiting <ulink type="http"
    url="http://www.fsf.org">their Web site</ulink> or by writing to
    <address>
