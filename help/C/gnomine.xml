@@ -431,6 +431,41 @@
       <para>
         Below are some more advanced situations.
       </para>
+
+<para>
+
+<!-- From Voncent Povirk <madewokherd@gmail.com> -->
+
+In this situation, you can deduce the identity of the square next to
+the 2 and 3. Since one mine has already been flagged next to the 2,
+one of the two uncleared spaces next to the 2 must be a mine. Both of
+these uncleared spaces are next to the 3.
+
+We now know where two of the mines next to the 3 are: one has been
+flagged, and the other is on one of the uncleared spaces next to the
+2. The third mine must be in the only remaining uncleared space next
+to the 3. So in this situation, you could put a flag on the third
+uncleared space from the right edge.
+
+
+It's REALLY hard to be clear when talking about this stuff.
+
+The only other situation I can think of that's worth talking about is
+something like
+
+_3111_
+______
+
+where a _ is an uncleared space.
+
+Oh, and there are situations where you can make a very good guess by
+figuring out probabilities. But the new help seems to indicate that
+you're just supposed to use the hint when you're stuck. Where's the
+fun in that? ;p
+
+
+</para>
+
     </sect2>
  </sect1>
 
