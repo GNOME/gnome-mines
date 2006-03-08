@@ -405,9 +405,9 @@
     <sect2>
       <title>The Basics</title>
       <para>
-        There are a few basic situations which should be incredibly
+        These are a few basic situations which should be incredibly
       obvious, but if you're struggling with how to play this game,
-      they should be useful. The first is the case where you have an
+      they could be useful. The first is the case where you have an
       isolated uncovered square and every square around it reads
       1. That uncovered square is a mine. 
       </para>
@@ -422,6 +422,14 @@
         the clear square beside the middle one is a 3 (once again this
         square should have no other neighbours) then all three are mines.
       </para>
+      <para>
+        These are the simplest cases, other permutations on these
+        simple situations are possible and a few are illustrated
+        below. This simple-minded analysis will solve most of the
+        puizzle, but not all. Before going on to the next sections
+        where we give you more advanced hints you might like to play
+        for a bit and see what you can work out for yourself.
+      </para>
     </sect2>
 
     <sect2>
@@ -433,7 +441,7 @@
 
 <para>
 
-<!-- From Voncent Povirk <madewokherd@gmail.com> -->
+<!-- From Vincent Povirk <madewokherd@gmail.com> -->
 
 In this situation, you can deduce the identity of the square next to
 the 2 and 3. Since one mine has already been flagged next to the 2,
@@ -464,6 +472,23 @@ fun in that? ;p
 
 
 </para>
+
+    <para>
+      Sometimes you end up in a situation where there is no way to
+      deduce what the configuration is. In these cases you either have
+      to guess or use the hint function
+      (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</guimenuitem></menuchoice>).
+      Sometimes it isn't a 50/50 situation, instead of taking a hint
+      you might like to gamble on the most likely outcome.
+    </para>
+
+    <para>
+      One final hint: see the counter on the bottom left of the window
+      that tells you how many mines you have left. Often, near the end
+      of the game, this number can help you figure out what possible
+      places mines can be. How to do this is something we'll leave up
+      to you to figure out.
+    </para>
 
     </sect2>
  </sect1>
