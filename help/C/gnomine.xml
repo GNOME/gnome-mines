@@ -395,6 +395,17 @@
       </para>
     </sect2>
 
+    <sect2>
+      <title>Pausing the Game</title>
+
+      <para>
+        The game automatically pauses when you start using another
+        window. The playing area is blanked so you can't think ahead
+        while the clock is stopped. To
+        start playing again press the button labelled "Press to Resume".
+      </para>
+    </sect2>
+
   </sect1>
 
  <!-- ================ Usage ================================ -->
@@ -436,10 +447,61 @@
       <title>More Advanced Situations</title>
       
       <para>
-        Below are some more advanced situations.
+        Below are some more complicated situations. If you are still
+        feeling mystified by the game, these should inspire you.
       </para>
 
+<!-- 1 2 1 -> the middle is blank and the outer two are mined. -->
+
 <para>
+In the example below we know that the mines are beneath the 1s. If the
+square beneath the 2 was a mine then the squares underneath the ones
+would have to be clear, but that leaves nowhere for the second mine
+associated with the 2.
+</para>
+
+<!-- ...
+     121
+     ???  -->
+
+<para>
+This situation can be disguised, for example consider the figure
+below. It is the same situation, but the extra flagged square has
+increased all the numbers by 1.
+</para>
+
+<!-- .X.
+     232
+     ???  -->
+
+
+<para>
+Ready for an example that will really twist your mind? Try this next one.
+</para>
+
+<para>
+You needn't stop at deducing where the mines are, you can
+also deduce where the blank squares are. In the next example. The
+left-most 2 implies that one - and only one - of the two squares
+beneath it is mined. Which-ever it is, it will also keep the next 2
+satisfied. This means that the second twos bottom right neighbor has
+to be blank, otherwise there would be too-many neighbors. This leaves
+the four with only four neighbours - all of which must be
+mined. Finally this satisfies this tells us which of the two squares
+on the left are mined. So starting from the knowledge that one of two
+squares is mined we can deduced which aren't and use that new
+knowledge to find out which of the original two is mined.
+</para>
+
+<!--  .X.X
+      2242
+      ????  -->
+
+
+
+<para>
+
+
 
 <!-- From Vincent Povirk <madewokherd@gmail.com> -->
 
@@ -472,6 +534,12 @@ fun in that? ;p
 
 
 </para>
+
+    <para>
+      Remember, the edge of the board is just the same as a large
+      cleared area (without the number unfortunately). Often working
+      at the edge of the board is easiest way forward. 
+    </para>
 
     <para>
       Sometimes you end up in a situation where there is no way to
