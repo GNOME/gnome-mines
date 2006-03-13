@@ -1,7 +1,10 @@
 2006-03-12  Callum McKenzie  <callum@spooky-possum.org>
 
-	* gnomine.xml: More doc updates. The words are almost there
-	now. Pictures still need work.
+	* figures/easy-hints-*.png
+	* figures/hard-hints-*.png
+	* gnomine.xml: Finish off the documentation and redo the
+	screenshots to have the correct theme and avoid dark corners.
+	Add images for the strategy section.
 
 2006-03-07  Callum McKenzie  <callum@spooky-possum.org>
 

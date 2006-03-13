@@ -111,36 +111,30 @@
     <title>Introduction</title>
 
     <para>
-     <application>&app;</application> is a puzzle game where you try
-     and find the location of mines floating in an ocean using only
-     your brain and a little bit of luck.
+     <application>&app;</application> is a puzzle game where you
+     locate mines floating in an ocean using only your brain and a
+     little bit of luck.  
     </para>
 
     <para>
-      You start the game with a grid of blank squares - you
-      have no idea what is in them. Clicking on a square shows you
-      what is under it, either empty ocean or a mine. If you
-      find a mine bad things happen and the game is over. To make the
-      game longer and more fun, if you find an empty piece of ocean
+      You start the game with a grid of covered squares and no idea what is in them. Clicking on a square reveals
+      what is in it: either empty ocean or a mine. If you
+      find a mine bad things happen and the game is over. If you
+      uncover an empty square, you survive and get to try again. We do
+      give you a bit of help; if you find an empty piece of ocean
       a number is printed there telling you how many mines are in the 
       adjacent squares (or no number if there are no nearby
       mines). Once you find a few clear squares you can start to
       deduce which squares have mines in them and which don't. You win
       the game once you have revealed all the un-mined squares and
-      marked where all the mines are.
+      marked all the mined squares.
     </para>
 
     <figure id="main-window">
-      <screenshot>
-        <mediaobject>
-	  <imageobject>
-	    <imagedata fileref="figures/main-window.png"
+    	    <imagedata fileref="figures/main-window.png"
 	    format="PNG"/>
-	  </imageobject>
-	</mediaobject>
-      </screenshot>
-      <title>The games. As you start it, while playing, when you lose,
-	    and when you win.</title>
+      <title>The stages of the game: the start, playing, losing,
+	    and winning.</title>
     </figure>
 
     <para>
@@ -148,46 +142,34 @@
       flag is placed there. If you click on a square with a number and
       you have placed precisely that number of flags on adjacent
       squares then the remaining squares are revealed. If you didn't
-      mark the mines correctly then an explosion will occur and
-      once-again the game is over. Squares with no adjacent mines
-      (i.e. blank squares) have the adjacent squares automatically cleared.
+      mark the mines correctly then an explosion will occur and the game
+      is over. Squares with no adjacent mines (i.e. blank squares)
+      have their adjacent squares automatically cleared.  
     </para>
 
     <figure id="status-bar">
-      <screenshot>
-        <mediaobject>
-	  <imageobject>
 	    <imagedata fileref="figures/statusbar.png"
 	    format="PNG"/>
-	  </imageobject>
-	</mediaobject>
-      </screenshot>
       <title>Important information.</title>
     </figure>
 
     <para>
-      Also, you are being timed. You have to work quickly - and
-      correctly. Once you have found all the mines and revealed all
-      the un-mined squares the timer is stopped. The shorter the time
-      you take, the better.
+      You are being timed. To be good at this game you have to work
+      both quickly and correctly. Once you have found all the mines
+      and revealed all the un-mined squares the clock is stopped. Your
+      score is the time you took; the shorter the better.
     </para>
 
     <para>
       The time you have taken is displayed on the bottom right of the
-      window. Beside it on the left is a count of the number of mines 
+      window. Beside it, on the left, is a count of the number of mines 
       you have cleared and the total number hidden on the board.
     </para>
 
     <figure id="faces">
-      <screenshot>
-        <mediaobject>
-	  <imageobject>
 	    <imagedata fileref="figures/faces.png"
 	    format="PNG"/>
-	  </imageobject>
-	</mediaobject>
-      </screenshot>
-      <title>There is also a big yellow face. Don't be frightened - it's harmless.</title>
+      <title>The yellow face shows you how well you are going.</title>
     </figure>
 
     <!-- Face graphics image. -->
@@ -199,7 +181,9 @@
     <title>The Details</title>
 
     <para>
-      The intro is short, so here are the gory details.
+      This section provides information on the controls and the
+    important menu items. If you need help figuring where the
+    mines are, see the <link linkend="strategy">strategy section</link>.
     </para>
 
     <sect2>
@@ -208,7 +192,7 @@
       <para>
         Starting from an ocean of squares with unknown contents
 	you must mark all the squares with mines and reveal all the
-	clear squares. Actually you don't have to mark the squares with mines,
+	clear squares. You don't actually have to mark the squares with mines,
 	but it is a lot easier if you do. Once you have cleared all
 	the un-mined squares, any remaining mined squares will be
 	marked for you.
@@ -237,26 +221,27 @@
 	  <tbody>
 	    <row>
 	      <entry>Left click on an un-revealed square.</entry>
-	      <entry>Reveals that square for better or for
+	      <entry>Reveals the contents of that square. For better or for
 	      worse.</entry>
 	    </row>
 	    <row>
 	      <entry>Left click in a revealed square.</entry>
-	      <entry>Reveals the unmarked squares around the square,
+	      <entry>Auto-clear. Reveals the unmarked squares around
+              the clicked square,
 	      but only if enough squares have been marked to match the
-	      number in the revealed square.</entry>
+	      number in the square.</entry>
 	    </row>
 	    <row>
 	      <entry>Right click on an un-revealed square.</entry>
 	      <entry>Marks the square as a mine. If it is already
-	      marked, it will clear it.</entry>
+	      marked, the mark will be removed.</entry>
 	    </row>
 	  </tbody>
 	</tgroup>
       </informaltable>
 
-      <tip>If you are used to the more traditional mouse controls
-           don't worry; they still work.</tip>
+      <tip>If you are used to the more traditional mouse controls,
+           don't worry, they still work.</tip>
     </sect2>
 
     <sect2>
@@ -272,21 +257,15 @@
       </para> 
 
     <figure id="preferences-img">
-      <screenshot>
-        <mediaobject>
-	  <imageobject>
 	    <imagedata fileref="figures/preferences.png"
 	    format="PNG"/>
-	  </imageobject>
-	</mediaobject>
-      </screenshot>
       <title>The preferences dialog.</title>
     </figure>
 
       <para>
         On the right hand side of the dialog there are three
         parameters for controlling the custom size. Horizontal and
-        Vertical are the width and height of the desired custom grid in
+        Vertical are the width and height of the desired grid in
         squares. The number of mines is - obviously - the number of
         mines you need to find. If this number is set too high or too
         low then the game becomes very easy. The number of mines is
@@ -299,37 +278,26 @@
       <title>"I'm not sure" Flags</title>
 
       <figure id="imnotsureflagsimg">
-        <screenshot>
-          <mediaobject>
-  	    <imageobject>
   	      <imagedata fileref="figures/imnotsureflagscheckbox.png"
   	        format="PNG"/>
-  	    </imageobject>
-       	  </mediaobject>
-        </screenshot>
       </figure>
 
       <para>
         There is one other check-box in the properties dialog entitled
-        Use "I'm not sure" flags. If you enable this then when
-        right-clicking on a square it cycles between the normal flags
+        Use "I'm not sure" flags. If you enable this then, when
+        right-clicking on a square, it cycles between the normal flags
         used to mark the square as mined, a flag with a question mark
         on it and no flag. This new flag is to help you with your
-        reasoning, to mark mines you think might be a mine. These
+        reasoning, to mark mines you think might be a mine but aren't
+        sure about. These
         flags have no effect on the game; you still have to use the 
 	appropriate  number of red marker flags to be able to clear
         around a numbered square.
       </para>
 
       <figure id="flags-img">
-        <screenshot>
-          <mediaobject>
-  	    <imageobject>
   	      <imagedata fileref="figures/flags.png"
   	        format="PNG"/>
-  	    </imageobject>
-       	  </mediaobject>
-        </screenshot>
 	<title>The sequence of flags when "I'm not sure" flags are enabled.</title>
       </figure>
 
@@ -343,8 +311,8 @@
         options that you can't logically resolve - then you can either
         guess, or ask for a hint. When you choose 
 	<guimenuitem>Hint</guimenuitem> from the <guimenu>Game</guimenu>
-        menu then a single square will be revealed (plus surrounding
-        squares if it is blank). The choice of square is not deterministic, but
+        menu a single square is revealed (plus surrounding
+        squares if it is blank). The choice of square is random, but
         should be helpful. There is 10 second penalty added to your
         time whenever you use a hint.
       </para>
@@ -355,24 +323,17 @@
       <title>High Scores</title>
 
       <para>
-        If your score is in the top ten then, when the game is over,
-        you will be shown the list of top scores and have an
-        opportunity to change the name you use in the list. You can
+        If your score is in the top ten you will be shown the list of top scores and have an
+        opportunity to change the name recorded in the high score table. You can
         also review the scores later by choosing 
 	<guimenuitem>Scores</guimenuitem> from the <guimenu>Game</guimenu>
         menu. The drop-down menu at the top of the dialog lets you
-        look at other categories.
+        look at the scores for other board sizes.
       </para>
 
     <figure id="high-score-img">
-      <screenshot>
-        <mediaobject>
-	  <imageobject>
 	    <imagedata fileref="figures/highscores.png"
 	    format="PNG"/>
-	  </imageobject>
-	</mediaobject>
-      </screenshot>
       <title>The high scores dialog.</title>
     </figure>
 
@@ -380,7 +341,7 @@
         The high score for the custom size is usually meaningless. Any
 	other player can make the game size smaller and get a better time. If
         you only ever play one custom size then it will tell you how
-	well you are doing. This is the reason it is still recorded.
+	well you are doing. This is the only reason it is still recorded.
       </tip>
     </sect2>
 
@@ -388,10 +349,10 @@
       <title>Window Size</title>
       
       <para>Resizing the window makes the squares bigger or smaller to
-    suit. If you want to make maximum use of the screen then the
+    suit. If you want to make maximum use of the screen then there is a
     <guimenuitem>Fullscreen</guimenuitem> option under the
-    <guimenu>Settings</guimenu> menu will do what you want. You can
-    also use <keycap>F11</keycap> key to toggle full-screen mode.
+    <guimenu>Settings</guimenu> menu. You can
+    also use the <keycap>F11</keycap> key to toggle full-screen mode.
       </para>
     </sect2>
 
@@ -413,132 +374,146 @@
   <sect1 id="strategy">
     <title>Strategy</title>
 
+    <para>
+      The first half of this section explains the very basics of
+    deducing where mines are. If you are familiar with how to play the
+    game skip down to the <link linkend="advanced">Advanced Situations</link> subsection.
+    </para>
+
     <sect2>
       <title>The Basics</title>
       <para>
         These are a few basic situations which should be incredibly
-      obvious, but if you're struggling with how to play this game,
-      they could be useful. The first is the case where you have an
-      isolated uncovered square and every square around it reads
-      1. That uncovered square is a mine. 
+      obvious, but if you're struggling with how to play the game,
+      they should be useful. The first case is where you have an
+      isolated covered square and most of the squares around it read
+      1. That covered square is a mine. 
       </para>
+
+      <figure>
+        <imagedata  format="png" fileref="figures/easy-hints-1.png"/>
+        <title>The simplest case.</title>
+      </figure>
+
       <para>
-        The next simplest case is where you have two uncovered squares
+        The next simplest case is where you have two covered squares
         adjacent to each other and both squares on one side are marked
-        with a 2. If they have no other uncleared neighbours, then
+        with a 2. If they have no other uncleared neighbors, then
         both squares are mines.
       </para>
+
+      <figure>
+        <imagedata  format="png" fileref="figures/easy-hints-2.png"/>
+        <title>The two mine case.</title>
+      </figure>
+
       <para>
         Finally, when there are three uncovered squares in a row and
         the clear square beside the middle one is a 3 (once again this
-        square should have no other neighbours) then all three are mines.
+        square should have no other neighbors) then all three are mines.
+      </para>
+
+      <figure>
+        <imagedata  format="png" fileref="figures/easy-hints-3.png"/>
+        <title>The three mine case.</title>
+      </figure>
+
+      <para>
+        These are the simplest cases. Other permutations on these
+        simple situations are possible, for example the three squares
+        in the previous example could be in an L shape. 
       </para>
       <para>
-        These are the simplest cases, other permutations on these
-        simple situations are possible and a few are illustrated
-        below. This simple-minded analysis will solve most of the
-        puizzle, but not all. Before going on to the next sections
-        where we give you more advanced hints you might like to play
+        Simple analysis will solve most of the
+        puzzle, but not all. Before going on to the next sections,
+        where we give you more advanced hints, you should play
         for a bit and see what you can work out for yourself.
       </para>
     </sect2>
 
-    <sect2>
-      <title>More Advanced Situations</title>
+    <sect2 id="advanced">
+      <title>Advanced Situations</title>
       
       <para>
-        Below are some more complicated situations. If you are still
-        feeling mystified by the game, these should inspire you.
+        These are some more complicated situations. They are a bit of
+        a step up from the last section, so we hope you took our
+        advice and played for a bit first.
       </para>
 
-<!-- 1 2 1 -> the middle is blank and the outer two are mined. -->
+      <para>
+      In the example below the mines are to the left of
+      the ones. We figure this out by a process of elimination. If the
+      square to the left of the 2 was a mine then the 1s
+      would both have their maximum number of mines leaving no free square for
+      the second mine adjacent to the 2 (since they would also be
+      adjacent to the 1s). Having eliminated the middle square we are
+      left with two squares we require for the 2 so they are both mined.
+      </para>
+
+      <figure>
+        <imagedata  format="png" fileref="figures/hard-hints-1.png"/>
+        <title>A not-so-obvious pattern.</title>
+      </figure>
+
+      <para>
+      This situation can be disguised, for example consider the figure
+      below. It is the same situation, but the extra mined square on
+      the right has increased all the numbers by 1.
+      </para>
+
+      <figure>
+        <imagedata  format="png" fileref="figures/hard-hints-2.png"/>
+        <title>The extra mine disguises a copy of the previous example.</title>
+      </figure>
 
 <para>
-In the example below we know that the mines are beneath the 1s. If the
-square beneath the 2 was a mine then the squares underneath the ones
-would have to be clear, but that leaves nowhere for the second mine
-associated with the 2.
-</para>
-
-<!-- ...
-     121
-     ???  -->
-
-<para>
-This situation can be disguised, for example consider the figure
-below. It is the same situation, but the extra flagged square has
-increased all the numbers by 1.
-</para>
-
-<!-- .X.
-     232
-     ???  -->
-
-
-<para>
-Ready for an example that will really twist your mind? Try this next one.
+Now we're going to try a complicated example. It illustrates two
+points. The first is that even if you aren't sure which squares are
+mined, restricting the possibilities is helpful. The second is that
+knowing which squares aren't mined is nearly as good as knowing which
+are mined.
 </para>
 
 <para>
-You needn't stop at deducing where the mines are, you can
-also deduce where the blank squares are. In the next example. The
-left-most 2 implies that one - and only one - of the two squares
-beneath it is mined. Which-ever it is, it will also keep the next 2
-satisfied. This means that the second twos bottom right neighbor has
-to be blank, otherwise there would be too-many neighbors. This leaves
-the four with only four neighbours - all of which must be
-mined. Finally this satisfies this tells us which of the two squares
-on the left are mined. So starting from the knowledge that one of two
-squares is mined we can deduced which aren't and use that new
-knowledge to find out which of the original two is mined.
+Assume that, in the figure below, we start off knowing that the top
+left square is mined and so the two squares marked 2 on the left only
+require one more mine. Next observe that the left-most 2 implies that
+one of the covered squares beneath it is mined, but we don't yet know
+which one. Since at least one of these squares is mined and they are
+both neighbors of the second 2 then we know that that 2 is also
+satisfied by one of these two squares (we still don't know which
+one). This means that the square beneath the 4 is clear because it is
+also a neighbor of the second 2 and not one of the two squares we
+identified previously. 
+This one blank square now leaves the 4 with only four neighbors - all
+of which must be mines. Not only does it tell us which mines surround
+the 4, it now tells us which of the squares beside the 2 is mined!
 </para>
 
-<!--  .X.X
-      2242
-      ????  -->
-
+      <figure>
+        <imagedata  format="png" fileref="figures/hard-hints-3.png"/>
+        <title>The extra mine disguises a copy of the previous example.</title>
+      </figure>
 
 
 <para>
-
-
-
-<!-- From Vincent Povirk <madewokherd@gmail.com> -->
-
-In this situation, you can deduce the identity of the square next to
-the 2 and 3. Since one mine has already been flagged next to the 2,
-one of the two uncleared spaces next to the 2 must be a mine. Both of
-these uncleared spaces are next to the 3.
-
-We now know where two of the mines next to the 3 are: one has been
-flagged, and the other is on one of the uncleared spaces next to the
-2. The third mine must be in the only remaining uncleared space next
-to the 3. So in this situation, you could put a flag on the third
-uncleared space from the right edge.
-
-
-It's REALLY hard to be clear when talking about this stuff.
-
-The only other situation I can think of that's worth talking about is
-something like
-
-_3111_
-______
-
-where a _ is an uncleared space.
-
-Oh, and there are situations where you can make a very good guess by
-figuring out probabilities. But the new help seems to indicate that
-you're just supposed to use the hint when you're stuck. Where's the
-fun in that? ;p
-
-
+This sort of situation is tricky. In all the other examples you can
+learn to look for patterns and avoid thinking hard. Situations like
+the one in the figure don't crop up easily or in easily recognisable
+places. Often it is easier to just ignore them and keep playing
+elsewhere in the hope that you can start clearing the squares from the
+other side.
 </para>
+
+</sect2>
+<sect2>
+
+    <title>Tips</title>
 
     <para>
       Remember, the edge of the board is just the same as a large
-      cleared area (without the number unfortunately). Often working
-      at the edge of the board is easiest way forward. 
+      cleared area (but without the numbers). Often working
+      at the edge of the board is the easiest way forward. 
     </para>
 
     <para>
@@ -546,15 +521,15 @@ fun in that? ;p
       deduce what the configuration is. In these cases you either have
       to guess or use the hint function
       (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</guimenuitem></menuchoice>).
-      Sometimes it isn't a 50/50 situation, instead of taking a hint
+      Sometimes it isn't a 50/50 situation and instead of taking a hint
       you might like to gamble on the most likely outcome.
     </para>
 
     <para>
-      One final hint: see the counter on the bottom left of the window
-      that tells you how many mines you have left. Often, near the end
+      One final hint: remember the counter on the bottom left of the window
+      that tells you how many mines you have left? Often, near the end
       of the game, this number can help you figure out what possible
-      places mines can be. How to do this is something we'll leave up
+      places mines can be. How to do this is  up
       to you to figure out.
     </para>
 
