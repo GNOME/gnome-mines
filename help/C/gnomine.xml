@@ -540,26 +540,13 @@ other side.
   <title>Authors</title>
   <para>
    <application>GNOME Mines</application> was written by Pista
-   (<email>szekeres@cyberspace.mht.bme.hu</email>). Please send all comments,
-   suggestions, and bug reports to the
-   <ulink url="http://bugzilla.gnome.org" type="http">GNOME bug
-   tracking database</ulink>. You can also use <application>Bug Report
-   Tool</application> (<command>bug-buddy</command>), available in the
-   <guisubmenu>Development</guisubmenu> sub-menu of the 
-   <guimenu>Applications</guimenu> menu, for submitting bug reports.
-  </para>
-  <para>
-   This manual was written by Callum McKenzie
+   (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie
   (<email>callum@spooky-possum.org</email>) with help from Vincent
-  Povirk and based on an earlier manual
-  by Tim Riehle
-   (<email>tkriehle@citilink.com</email>). Please send all comments and
-   suggestions regarding this manual to the 
-   <ulink url="http://bugzilla.gnome.org" type="http">GNOME bug
-   tracking database</ulink>. Further information about GNOME
-  documentation can be found at the <ulink type="http"
-   url="http://developer.gnome.org/projects/gdp">GNOME Documentation
-   Project</ulink> web-page.
+  Povirk and based on an earlier manual by Tim Riehle
+   (<email>tkriehle@citilink.com</email>).
+   To report a bug or make a suggestion regarding this application or
+   this manual, follow the directions in this 
+   <ulink url="ghelp:gnome-feedback" type="help">document</ulink>.
   </para>
  </sect1>
 
