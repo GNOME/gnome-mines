@@ -1149,7 +1149,7 @@ void gtk_minefield_set_size(GtkMineField *mfield, guint xsize, guint ysize)
 {
         g_return_if_fail(mfield != NULL);
         g_return_if_fail(GTK_IS_MINEFIELD(mfield));
-
+	
 	if ((mfield->xsize == xsize) && (mfield->ysize == ysize))
 		return;
 

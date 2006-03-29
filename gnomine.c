@@ -273,6 +273,7 @@ new_game (void)
 		y = size_table[fsize][1];
 		mf->mcount = size_table[fsize][2];
 	}
+
 	games_scores_set_category (highscores, scorecats[fsize].key);
 	gtk_minefield_set_size (GTK_MINEFIELD (mfield), x, y);
 	gtk_minefield_restart (GTK_MINEFIELD (mfield));
@@ -844,16 +845,6 @@ save_state (GnomeClient        *client,
 
 static int xpos = -1, ypos = -1;
 
-static struct poptOption options[] = {
-  {NULL, 'x', POPT_ARG_INT, &xsize, 0, N_("Width of grid"), N_("X")},
-  {NULL, 'y', POPT_ARG_INT, &ysize, 0, N_("Height of grid"), N_("Y")},
-  {NULL, 'n', POPT_ARG_INT, &nmines, 0, N_("Number of mines"), N_("NUMBER")},
-  {NULL, 'f', POPT_ARG_INT, &fsize, 0, N_("Size of the board (1=small, 3=large)"), NULL},
-  {NULL, 'a', POPT_ARG_INT, &xpos, 0, N_("X location of window"), N_("X")},
-  {NULL, 'b', POPT_ARG_INT, &ypos, 0, N_("Y location of window"), N_("Y")},
-  {NULL, '\0', 0, NULL, 0}
-};
-
 #if 0
 static void 
 sound_eos (GstElement *sound_player, gpointer data)
@@ -880,6 +871,9 @@ sound_init (int * argcp, char ** argvp[])
 int
 main (int argc, char *argv[])
 {
+       GnomeProgram *program;
+       GOptionContext *context;
+
         GtkWidget *all_boxes;
 	GtkWidget *status_box;
 	GtkWidget *button_table;
@@ -892,17 +886,30 @@ main (int argc, char *argv[])
 
 	gint width, height;
 
+        static const GOptionEntry options[] = {
+                {"width", 'x', 0, G_OPTION_ARG_INT, &xsize,  N_("Width of grid"), N_("X")},
+                {"height", 'y', 0, G_OPTION_ARG_INT, &ysize,  N_("Height of grid"), N_("Y")},
+                {"mines", 'n', 0, G_OPTION_ARG_INT, &nmines, N_("Number of mines"), N_("NUMBER")},
+                {"size", 'f', 0, G_OPTION_ARG_INT, &fsize,  N_("Size of the board (0-2 = small-large, 3=custom)"), NULL},
+                {"a", 'a', 0, G_OPTION_ARG_INT, &xpos,   N_("X location of window"), N_("X")},
+                {"b", 'b', 0, G_OPTION_ARG_INT, &ypos,   N_("Y location of window"), N_("Y")},
+                {NULL}
+        };
+
 	setgid_io_init ();
 
 	bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
 	bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 	textdomain (GETTEXT_PACKAGE);
 
-	gnome_program_init ("gnomine", VERSION,
-			LIBGNOMEUI_MODULE,
-			argc, argv,
-			GNOME_PARAM_POPT_TABLE, options,
-			GNOME_PARAM_APP_DATADIR, DATADIR, NULL);
+        context = g_option_context_new ("");
+        g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
+	
+        program = gnome_program_init ("gnomine", VERSION, LIBGNOMEUI_MODULE,
+				      argc, argv,
+				      GNOME_PARAM_APP_DATADIR, DATADIR,
+				      GNOME_PARAM_GOPTION_CONTEXT, context,
+				      NULL);
 
 	highscores = games_scores_new (&scoredesc);
 
@@ -1083,6 +1090,8 @@ main (int argc, char *argv[])
         gtk_main ();
 	
 	gnome_accelerators_sync();
+
+	g_object_unref (program);
 
 	return 0;
 }
