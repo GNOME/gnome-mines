@@ -1,3 +1,8 @@
+2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.desktop.in: 
+	* Makefile.am: Update the icon handling to use icon themes.
+
 2006-03-29  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.c (main): Patch from Thomas Andersen to upgrade popt to

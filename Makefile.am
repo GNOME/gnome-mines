@@ -33,11 +33,11 @@ pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
 	face-worried.png \
 	flag.svg flag-question.svg mine.svg bang.svg
 
-sharedpixmapdir=$(datadir)/pixmaps
-sharedpixmap_DATA = gnome-gnomine.png
+icondir=$(datadir)/icons/hicolor/48x48/apps/
+icon_DATA = gnome-gnomine.png
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_in_files) $(pixmap_DATA) $(sharedpixmap_DATA)
+	$(schema_in_files) $(pixmap_DATA) $(icon_DATA)
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
