@@ -1,3 +1,11 @@
+2006-04-11  Callum McKenzie  <callum@spooky-possum.org>
+
+	* gnomine.c: Tweak the about info.
+
+2006-04-06  Thomas Andersen  <phomes@gmail.com>
+
+	* gnomine.c: Update About dialog
+
 2006-04-03  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.desktop.in: 

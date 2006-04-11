@@ -417,12 +417,6 @@ about_callback (void)
 		_("Main game:"),
 		"Szekeres Istvan",
 		"",
-		_("Faces:"),
-		"Tuomas Kuosmanen",
-		"",
-		_("Graphics:"),
-		"Richard Hoelscher",
-		"",
 		_("Score:"),
 		"Horacio J. Pe\xc3\xb1""a",
 		"",
@@ -432,13 +426,35 @@ about_callback (void)
 		NULL
 	};
 
+	const gchar *artists[] = {
+		_("Faces:"),
+		"Tuomas Kuosmanen",
+		"",
+		_("Graphics:"),
+		"Richard Hoelscher",
+		NULL
+	};
+
+	const gchar *documenters[] = {
+		"Callum McKenzie",
+		NULL
+	};
+
 	gtk_show_about_dialog (GTK_WINDOW(window),
 			       "name", _("Mines"),
 			       "version", VERSION,
-			       "copyright", "Copyright \xc2\xa9 1997-2004 Free Software Foundation, Inc.",
+			       "comments", _("The popular logic puzzle minesweeper. "
+					     "Clear mines from a board using hints from "
+					     "squares you have already uncovered."),
+			       "copyright", "Copyright \xc2\xa9 1997-2006 Free Software Foundation, Inc.",
+			       "license", "GPL 2+",
 			       "authors", authors,
+			       "artists", artists,
+			       "documenters", documenters,
 			       "translator_credits", _("translator-credits"),
 			       "logo-icon-name", "gnome-gnomine",
+			       "website", "http://www.gnome.org/projects/gnome-games/",
+			       "wrap-license", TRUE,
 			       NULL);
 }
 
