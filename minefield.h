@@ -41,6 +41,7 @@ struct _Mine {
 	guint marked:2;
 	guint down:1;
 	guint neighbours;
+	guint neighbourmarks;
 };
 
 typedef struct _Mine mine;
@@ -75,6 +76,7 @@ struct _GtkMineField {
         sign mine;
 	sign question;
         sign bang;
+	sign warning;
         GRand * grand;
 	GdkGC *thick_line;
   
@@ -88,6 +90,7 @@ struct _GtkMineField {
 	gint in_play;
 	
 	gboolean use_question_marks;
+	gboolean use_overmine_warning;
 };
 
 struct _GtkMineFieldClass
@@ -109,6 +112,7 @@ GtkWidget* gtk_minefield_new      (void);
 void gtk_minefield_set_size (GtkMineField *mfield, guint xsize, guint ysize);
 void gtk_minefield_restart (GtkMineField *mfield);
 void gtk_minefield_set_use_question_marks (GtkMineField *mfield, gboolean use_question_marks);
+void gtk_minefield_set_use_overmine_warning (GtkMineField *mfield, gboolean use_overmine_warning);
 gint gtk_minefield_hint (GtkMineField *mfield);
   
 #ifdef __cplusplus

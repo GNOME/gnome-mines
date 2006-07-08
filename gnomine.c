@@ -52,6 +52,7 @@
 #define KEY_NMINES "/apps/gnomine/geometry/nmines"
 #define KEY_MODE "/apps/gnomine/geometry/mode"
 #define KEY_USE_QUESTION_MARKS "/apps/gnomine/use_question_marks"
+#define KEY_USE_OVERMINE_WARNING "/apps/gnomine/use_overmine_warning"
 #define KEY_WIDTH    	       "/apps/gnomine/geometry/width"
 #define KEY_HEIGHT   	       "/apps/gnomine/geometry/height"
 
@@ -72,6 +73,7 @@ gint ysize = -1, xsize = -1;
 gint nmines = -1;
 gint fsize = -1;
 gboolean use_question_marks = TRUE;
+gboolean use_overmine_warning = TRUE;
 
 GtkAction *hint_action;
 GtkAction *fullscreen_action;
@@ -504,6 +506,10 @@ gconf_key_change_cb (GConfClient *client, guint cnxn_id,
 		use_question_marks = value ? gconf_value_get_bool (value) : TRUE;
 		gtk_minefield_set_use_question_marks(GTK_MINEFIELD(mfield), use_question_marks);
 	}
+	if (strcmp (key, KEY_USE_OVERMINE_WARNING) == 0) {
+		use_overmine_warning = value ? gconf_value_get_bool (value) : TRUE;
+		gtk_minefield_set_use_overmine_warning(GTK_MINEFIELD(mfield), use_overmine_warning);
+	}
 }
 
 static void
@@ -574,6 +580,14 @@ use_question_toggle_cb (GtkCheckButton *check, gpointer data)
 }
 
 static void
+use_overmine_toggle_cb (GtkCheckButton *check, gpointer data)
+{
+	gboolean use_overmine = gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check));
+	gconf_client_set_bool (conf_client, KEY_USE_OVERMINE_WARNING,
+				use_overmine, NULL);
+}
+
+static void
 set_fullscreen_actions (gboolean is_fullscreen)
 {
 	gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
@@ -611,10 +625,11 @@ create_preferences (void)
 	GtkWidget *table2;
 	GtkWidget *label2;
 	GtkWidget *question_toggle;        
+	GtkWidget *overmine_toggle;
 	GtkWidget *xentry;
 	GtkWidget *yentry;
 
-	table = gtk_table_new (2, 2, FALSE);
+	table = gtk_table_new (3, 2, FALSE);
 	gtk_container_set_border_width (GTK_CONTAINER (table), 5);
 	gtk_table_set_row_spacings (GTK_TABLE (table), 18);
 	gtk_table_set_col_spacings (GTK_TABLE (table), 18);
@@ -721,6 +736,15 @@ create_preferences (void)
 	gtk_widget_show(question_toggle);
 	
 	gtk_table_attach_defaults (GTK_TABLE (table), question_toggle, 0, 2, 1, 2);
+
+
+	overmine_toggle = gtk_check_button_new_with_mnemonic(_("_Use \"Too many flags\" warning"));
+	g_signal_connect(GTK_OBJECT(overmine_toggle), "toggled",
+			GTK_SIGNAL_FUNC (use_overmine_toggle_cb), NULL);
+	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(overmine_toggle), use_overmine_warning);
+	gtk_widget_show(overmine_toggle);
+	
+	gtk_table_attach_defaults (GTK_TABLE (table), overmine_toggle, 0, 2, 2, 3);
 
 
 	pref_dialog = gtk_dialog_new_with_buttons (_("Mines Preferences"),
@@ -964,6 +988,9 @@ main (int argc, char *argv[])
 	use_question_marks = gconf_client_get_bool (conf_client, 
 						    KEY_USE_QUESTION_MARKS,
 						    NULL);
+	use_overmine_warning = gconf_client_get_bool (conf_client, 
+						      KEY_USE_OVERMINE_WARNING,
+						      NULL);
 	width = gconf_client_get_int (conf_client, KEY_WIDTH, NULL);
 	width = width > 0 ? width : WIDTH_DEFAULT;
 	height = gconf_client_get_int (conf_client, KEY_HEIGHT, NULL);
@@ -1048,6 +1075,9 @@ main (int argc, char *argv[])
 	
 	gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
 					      use_question_marks);
+	
+	gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
+					      use_overmine_warning);
 	
 	g_signal_connect (G_OBJECT (mfield), "marks_changed",
 			  G_CALLBACK (marks_changed), NULL);

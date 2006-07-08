@@ -171,7 +171,7 @@ static void gtk_minefield_setup_signs(GtkMineField *mfield)
 {
 	static GtkWidget * warning_dialog = NULL;
 	static gchar * warning_message = NULL;
-	gchar * flagfile, * minefile, * questionfile, * bangfile;
+	gchar * flagfile, * minefile, * questionfile, * bangfile, * warningfile;
 
 	flagfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 					      "gnomine/flag.svg", TRUE, NULL);
@@ -183,12 +183,16 @@ static void gtk_minefield_setup_signs(GtkMineField *mfield)
 	bangfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
 					      "gnomine/bang.svg", TRUE, NULL); 
 
+	warningfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
+						 "gnomine/warning.svg", TRUE, NULL);
+
         setup_sign (&mfield->flag, flagfile, mfield->minesize);
         setup_sign (&mfield->mine, minefile, mfield->minesize);
         setup_sign (&mfield->question, questionfile, mfield->minesize);
 	setup_sign (&mfield->bang, bangfile, mfield->minesize);
+	setup_sign (&mfield->warning, warningfile, mfield->minesize);
 
-	if ((!flagfile || !minefile || !questionfile || !bangfile) &&
+	if ((!flagfile || !minefile || !questionfile || !bangfile || !warningfile) &&
 	    (warning_message == NULL)) {
 		warning_message = _("Unable to find required images.\n\nPlease check your gnome-games installation.");
 	}
@@ -196,7 +200,8 @@ static void gtk_minefield_setup_signs(GtkMineField *mfield)
 	if ( (!mfield->flag.preimage || 
 	      !mfield->mine.preimage || 
 	      !mfield->question.preimage ||
-	      !mfield->bang.preimage) && 
+	      !mfield->bang.preimage ||
+	      !mfield->warning.preimage) && 
 	     (warning_message == NULL) ) {
 		warning_message = _("Required images have been found, but refused to load.\n\nPlease check your installation of gnome-games and its dependencies.");
 	}
@@ -395,7 +400,7 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
         int c = cell_idx(mfield, x, y);
 	int noshadow;
 	gboolean clicked;
-	int n;
+	int n, nm;
 	guint minesize;
         static GdkGC *dots;
         static const char stipple_data[]  = { 0x03, 0x03, 0x0c, 0x0c };
@@ -480,8 +485,22 @@ static void gtk_mine_draw(GtkMineField *mfield, guint x, guint y)
         }
 
 	if (mfield->mines[c].shown && !mfield->mines[c].mined) {
-		if ((n = mfield->mines[c].neighbours) != 0) {
-			g_assert (n >= 0 && n <= 9);
+		n = mfield->mines[c].neighbours;
+		g_assert (n >= 0 && n <= 9);
+
+		nm = mfield->mines[c].neighbourmarks;
+		g_assert (nm >= 0 && nm <= 9);
+
+		if (mfield->use_overmine_warning && n < nm) {
+			gdk_draw_pixbuf (widget->window, NULL,
+					 mfield->warning.scaledpixbuf, 0, 0, 
+					 x * minesize + (minesize - mfield->warning.width) / 2, 
+					 y * minesize + (minesize - mfield->warning.height) / 2,
+					 mfield->warning.width, mfield->warning.height,
+					 GDK_RGB_DITHER_NORMAL, 0, 0);
+		}
+
+		if (n != 0) {
 			gdk_draw_layout(widget->window,
 					widget->style->black_gc,
 					x*minesize + mfield->numstr[n].dx,
@@ -730,6 +749,16 @@ static void gtk_minefield_randomize (GtkMineField *mfield, int curloc)
 				}
 			}
 			mfield->mines[x+mfield->xsize * y].neighbours = n;
+
+			n = 0;
+			for (i=0; i<8; i++) {
+				if (((cidx = cell_idx(mfield, x + neighbour_map[i].x,
+				                      y+neighbour_map[i].y)) != -1) &&
+					mfield->mines[cidx].marked == MINE_MARKED) {
+					n++;
+				}
+			}
+			mfield->mines[x+mfield->xsize * y].neighbourmarks = n;
 		}
 	}
 }
@@ -762,6 +791,7 @@ static void gtk_minefield_show(GtkMineField *mfield, guint x, guint y)
 static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 {
         int c = cell_idx(mfield, x, y);
+	int nx, ny, i, c2;
 
 	g_return_if_fail (c != -1);
 
@@ -782,6 +812,17 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 		}
 		mfield->mines[c].marked = MINE_MARKED;
 		mfield->flag_count++;
+
+		for (i=0; i<8; i++) {
+			nx = x+neighbour_map[i].x;
+			ny = y+neighbour_map[i].y;
+			if ((c2 = cell_idx(mfield, nx, ny)) == -1)
+				continue;
+			mfield->mines[c2].neighbourmarks++;
+			if (mfield->mines[c2].neighbourmarks == (mfield->mines[c2].neighbours+1))
+				gtk_mine_draw(mfield, nx, ny);
+		}
+
 		break;
 	case MINE_MARKED:
 		if (mfield->use_question_marks) {
@@ -790,6 +831,17 @@ static void gtk_minefield_toggle_mark(GtkMineField *mfield, guint x, guint y)
 			mfield->mines[c].marked = MINE_NOMARK;
 		}
 		mfield->flag_count--;
+
+		for (i=0; i<8; i++) {
+			nx = x+neighbour_map[i].x;
+			ny = y+neighbour_map[i].y;
+			if ((c2 = cell_idx(mfield, nx, ny)) == -1)
+				continue;
+			mfield->mines[c2].neighbourmarks--;
+			if (mfield->mines[c2].neighbourmarks == mfield->mines[c2].neighbours)
+				gtk_mine_draw(mfield, nx, ny);
+		}
+
 		break;
 	case MINE_QUESTION:
 		mfield->mines[c].marked = MINE_NOMARK;
@@ -826,7 +878,7 @@ static void gtk_minefield_multi_press(GtkMineField *mfield,
 
 static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y, guint c, guint really)
 {
-        gint n, nx, ny, i, c2;
+        gint nx, ny, i, c2;
 	guint lose = 0;
 
 	
@@ -835,16 +887,7 @@ static void gtk_minefield_multi_release (GtkMineField *mfield, guint x, guint y,
 
         mfield->multi_mode = 0;
 
-        n = 0;
-        for (i=0; i<8; i++) {
-                nx = x+neighbour_map[i].x;
-                ny = y+neighbour_map[i].y;
-                if ((c2 = cell_idx(mfield, nx, ny)) == -1)
-                        continue;
-		if (mfield->mines[c2].marked == MINE_MARKED)
-			n++;
-        }
-        if (mfield->mines[c].neighbours != n ||
+        if (mfield->mines[c].neighbours != mfield->mines[c].neighbourmarks ||
 	    mfield->mines[c].marked == MINE_MARKED ||
 	    !mfield->mines[c].shown)
 			really = 0;
@@ -1141,6 +1184,7 @@ static void gtk_minefield_init (GtkMineField *mfield)
         mfield->mine.preimage = NULL;
 	mfield->question.preimage = NULL;
 	mfield->bang.preimage = NULL;
+	mfield->warning.preimage = NULL;
 	mfield->grand = g_rand_new ();
 	mfield->thick_line = NULL;
 }
@@ -1234,6 +1278,16 @@ void gtk_minefield_set_use_question_marks(GtkMineField *mfield, gboolean use_que
 	g_return_if_fail(GTK_IS_MINEFIELD(mfield));
 	
 	mfield->use_question_marks = use_question_marks;
+}
+
+void gtk_minefield_set_use_overmine_warning(GtkMineField *mfield, gboolean use_overmine_warning)
+{
+	g_return_if_fail(mfield != NULL);
+	g_return_if_fail(GTK_IS_MINEFIELD(mfield));
+	
+	mfield->use_overmine_warning = use_overmine_warning;
+
+	gtk_widget_queue_draw(GTK_WIDGET(mfield));
 }
 
 /* Hunt for a hint to give the player. Revealed squares are handled here,

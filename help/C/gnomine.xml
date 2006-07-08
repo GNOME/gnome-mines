@@ -283,7 +283,7 @@
       </figure>
 
       <para>
-        There is one other check-box in the properties dialog entitled
+        There is a check-box in the properties dialog entitled
         Use "I'm not sure" flags. If you enable this then, when
         right-clicking on a square, it cycles between the normal flags
         used to mark the square as mined, a flag with a question mark
@@ -300,6 +300,19 @@
   	        format="PNG"/>
 	<title>The sequence of flags when "I'm not sure" flags are enabled.</title>
       </figure>
+
+    </sect2>
+
+    <sect2>
+      <title>Use \"Too many flags\" warning</title>
+
+      <para>
+        The other check-box in the properties dialog is entitled
+        Use "Too many flags" warning. This feature will show you a
+        warning when you have placed too many flags. This is disabled
+        by default, ans is provides so much hint that it could be
+        considered "cheating".
+      </para>
 
     </sect2>
 

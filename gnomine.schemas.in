@@ -72,6 +72,18 @@
      <long>Set to true to be able to mark squares as unknown.</long>
      </locale>
      </schema>
+
+     <schema>
+     <key>/schemas/apps/gnomine/use_overmine_warning</key>
+     <applyto>/apps/gnomine/use_overmine_warning</applyto>
+     <owner>gnomine</owner>
+     <type>bool</type>
+     <default>FALSE</default>
+     <locale name="C">
+     <short>Warning about too many flags</short>
+     <long>Set to true to enable warning icons when too many flags are placed.</long>
+     </locale>
+     </schema>
 								 
 								 
   </schemalist>
