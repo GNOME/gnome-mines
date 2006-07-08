@@ -310,7 +310,7 @@
         The other check-box in the properties dialog is entitled
         Use "Too many flags" warning. This feature will show you a
         warning when you have placed too many flags. This is disabled
-        by default, ans is provides so much hint that it could be
+        by default, as it provides so much hint that it could be
         considered "cheating".
       </para>
 
