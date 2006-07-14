@@ -78,6 +78,8 @@ gboolean use_overmine_warning = TRUE;
 GtkAction *hint_action;
 GtkAction *fullscreen_action;
 GtkAction *leavefullscreen_action;
+GtkAction *pause_action;
+GtkAction *resume_action;
 
 /*GstElement *sound_player;*/
 
@@ -326,7 +328,7 @@ hint_callback (void)
 }
 
 static void
-focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
+pause_callback (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 {
 	if ((GAMES_CLOCK (clk)->timer_id != -1) 
 	    && (!disable_hiding)) {
@@ -336,6 +338,9 @@ focus_out_cb (GtkWidget *widget, GdkEventFocus *event, gpointer data)
 		
 		gtk_action_set_sensitive (hint_action, FALSE);
 		games_clock_stop (GAMES_CLOCK (clk)); 
+
+		gtk_action_set_visible (pause_action, FALSE);
+		gtk_action_set_visible (resume_action, TRUE);
 	}
 }
 
@@ -346,6 +351,9 @@ resume_game_cb (GtkButton *widget, gpointer data)
 	gtk_widget_show (mfield_container);
 	gtk_action_set_sensitive (hint_action, TRUE);
 	games_clock_start (GAMES_CLOCK (clk));
+
+	gtk_action_set_visible (pause_action, TRUE);
+	gtk_action_set_visible (resume_action, FALSE);
 }
 
 static void
@@ -787,6 +795,8 @@ const GtkActionEntry actions[] = {
 	{ "SettingsMenu", NULL, N_("_Settings") },
 	{ "HelpMenu", NULL, N_("_Help") },
 	{ "NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL, G_CALLBACK (new_game) },
+	{ "PauseGame", GAMES_STOCK_PAUSE_GAME, NULL, NULL, NULL, G_CALLBACK (pause_callback) },
+	{ "ResumeGame", GAMES_STOCK_RESUME_GAME, NULL, NULL, NULL, G_CALLBACK (resume_game_cb) },
 	{ "Hint", GAMES_STOCK_HINT, NULL, NULL , NULL, G_CALLBACK (hint_callback) },
 	{ "Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL, G_CALLBACK (scores_callback) },
 	{ "Quit", GTK_STOCK_QUIT, NULL, NULL, NULL, G_CALLBACK (quit_game) },
@@ -803,6 +813,8 @@ const char ui_description[] =
 "    <menu action='GameMenu'>"
 "      <menuitem action='NewGame'/>"
 "      <menuitem action='Hint'/>"
+"      <menuitem action='PauseGame'/>"
+"      <menuitem action='ResumeGame'/>"
 "      <separator/>"
 "      <menuitem action='Scores'/>"
 "      <separator/>"
@@ -838,6 +850,10 @@ create_ui_manager (const gchar *group)
 	fullscreen_action = gtk_action_group_get_action (action_group, "Fullscreen");
 	leavefullscreen_action = gtk_action_group_get_action (action_group, "LeaveFullscreen");
 	set_fullscreen_actions (FALSE);
+
+	pause_action = gtk_action_group_get_action (action_group, "PauseGame");
+	resume_action = gtk_action_group_get_action (action_group, "ResumeGame");
+	gtk_action_set_visible (resume_action, FALSE);
 
 	return ui_manager;
 }
@@ -1012,7 +1028,7 @@ main (int argc, char *argv[])
 	g_signal_connect(G_OBJECT (window), "delete_event",
 			 G_CALLBACK (quit_game), NULL);
 	g_signal_connect(G_OBJECT (window), "focus_out_event",
-			 G_CALLBACK (focus_out_cb), NULL);
+			 G_CALLBACK (pause_callback), NULL);
 	g_signal_connect (G_OBJECT (window), "window_state_event",
 			  G_CALLBACK (window_state_callback), NULL);
 

@@ -373,9 +373,10 @@
       <title>Pausing the Game</title>
 
       <para>
-        The game automatically pauses when you start using another
-        window. The playing area is blanked so you can't think ahead
-        while the clock is stopped. To
+        The game can be paused automatically when you start using another
+        window, or paused by choosing <guimenuitem>Pause</guimenuitem> 
+	from the <guimenu>Game</guimenu> menu. The playing area is 
+	blanked so you can't think ahead while the clock is stopped. To
         start playing again press the button labelled "Press to Resume".
       </para>
     </sect2>

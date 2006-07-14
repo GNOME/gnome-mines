@@ -1,3 +1,8 @@
+2006-07-14  Andreas Røsdal  <andrearo@stud.ntnu.no>
+
+	* help/C/gnomine.xml:
+	* gnomine.c: Add a Pause/Resume menu item. See Bug #346969.
+
 2006-07-08  Andreas Røsdal  <andrearo@stud.ntnu.no>
 
         * Makefile.am:
