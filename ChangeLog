@@ -1,3 +1,9 @@
+2006-08-04  Andreas Røsdal  <andrearo@stud.ntnu.no>
+
+	* minefield.c: Fix removal of prelight in top-left corner tile.
+	Bug reported by Shaun McCance in Bug #349696. 
+
+
 2006-07-14  Andreas Røsdal  <andrearo@stud.ntnu.no>
 
 	* help/C/gnomine.xml:
