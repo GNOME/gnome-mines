@@ -39,7 +39,7 @@ svgicondir = $(datadir)/icons/hicolor/scalable/apps/
 svgicon_DATA = gnome-gnomine.svg
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_in_files) $(pixmap_DATA) $(icon_DATA)
+	$(schema_in_files) $(pixmap_DATA) $(icon_DATA) $(svgicon_DATA)
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
