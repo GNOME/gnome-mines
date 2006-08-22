@@ -1,3 +1,9 @@
+2006-08-21  Jason Clinton  <me@jasonclinton.com>
+
+	* gnome-gnomines.png:
+	* gnome-gnomines.svg:
+	* Makefile.am: Added pixmap and SVG icons from Daniel Derozier <dcubed20@gmail.com>
+
 2006-08-04  Andreas Røsdal  <andrearo@stud.ntnu.no>
 
 	* minefield.c: Fix removal of prelight in top-left corner tile.

@@ -35,6 +35,8 @@ pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
 
 icondir=$(datadir)/icons/hicolor/48x48/apps/
 icon_DATA = gnome-gnomine.png
+svgicondir = $(datadir)/icons/hicolor/scalable/apps/
+svgicon_DATA = gnome-gnomine.svg
 
 EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
 	$(schema_in_files) $(pixmap_DATA) $(icon_DATA)
