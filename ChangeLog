@@ -808,7 +808,7 @@
 	high score files. High scores should work again.
 
 	* gnomine.c: Added dodgy code to ensure that the window doesn't
-	shrink when it looses focus and displays the "press here" message.
+	shrink when it loses focus and displays the "press here" message.
 	Fixes bug #83317.
 
 2003-04-30  Abel Cheung  <maddog@linux.org.hk>
