@@ -450,6 +450,8 @@ about_callback (void)
 		NULL
 	};
 
+	gchar *license = games_get_license (_("Mines"));
+
 	gtk_show_about_dialog (GTK_WINDOW(window),
 			       "name", _("Mines"),
 			       "version", VERSION,
@@ -457,7 +459,7 @@ about_callback (void)
 					     "Clear mines from a board using hints from "
 					     "squares you have already uncovered."),
 			       "copyright", "Copyright \xc2\xa9 1997-2006 Free Software Foundation, Inc.",
-			       "license", "GPL 2+",
+			       "license", license,
 			       "authors", authors,
 			       "artists", artists,
 			       "documenters", documenters,
@@ -466,6 +468,7 @@ about_callback (void)
 			       "website", "http://www.gnome.org/projects/gnome-games/",
 			       "wrap-license", TRUE,
 			       NULL);
+	g_free (license);
 }
 
 static void
