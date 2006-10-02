@@ -37,8 +37,6 @@ icon16dir = $(datadir)/icons/hicolor/16x16/apps/
 icon16_DATA = 16x16/gnome-gnomine.png
 icon22dir = $(datadir)/icons/hicolor/22x22/apps/
 icon22_DATA = 22x22/gnome-gnomine.png
-icon24dir = $(datadir)/icons/hicolor/24x24/apps/
-icon24_DATA = 24x24/gnome-gnomine.png
 icon32dir = $(datadir)/icons/hicolor/32x32/apps/
 icon32_DATA = 32x32/gnome-gnomine.png
 icon48dir = $(datadir)/icons/hicolor/48x48/apps/
@@ -46,8 +44,13 @@ icon48_DATA = 48x48/gnome-gnomine.png
 svgicondir = $(datadir)/icons/hicolor/scalable/apps/
 svgicon_DATA = scalable/gnome-gnomine.svg
 
-EXTRA_DIST = gnomine.desktop.in README AUTHORS				\
-	$(schema_in_files) $(pixmap_DATA) $(icon_DATA) $(svgicon_DATA)
+EXTRA_DIST = gnomine.desktop.in README AUTHORS \
+	$(schema_in_files) $(pixmap_DATA) \
+	$(icon16_DATA) \
+	$(icon22_DATA) \
+	$(icon32_DATA) \
+	$(icon48_DATA) \
+	$(svgicon_DATA)
 
 Games_in_files = gnomine.desktop.in
 Games_DATA = $(Games_in_files:.desktop.in=.desktop)
