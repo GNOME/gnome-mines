@@ -90,6 +90,7 @@ extern "C" {
 
     gboolean use_question_marks;
     gboolean use_overmine_warning;
+    gboolean use_autoflag;
   };
 
   struct _GtkMineFieldClass {
@@ -114,6 +115,8 @@ extern "C" {
 					     gboolean use_question_marks);
   void gtk_minefield_set_use_overmine_warning (GtkMineField * mfield,
 					       gboolean use_overmine_warning);
+  void gtk_minefield_set_use_autoflag (GtkMineField * mfield,
+				       gboolean use_autoflag);
   gint gtk_minefield_hint (GtkMineField * mfield);
 
 #ifdef __cplusplus

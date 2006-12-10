@@ -53,6 +53,7 @@
 #define KEY_MODE "/apps/gnomine/geometry/mode"
 #define KEY_USE_QUESTION_MARKS "/apps/gnomine/use_question_marks"
 #define KEY_USE_OVERMINE_WARNING "/apps/gnomine/use_overmine_warning"
+#define KEY_USE_AUTOFLAG "/apps/gnomine/use_autoflag"
 #define KEY_WIDTH    	       "/apps/gnomine/geometry/width"
 #define KEY_HEIGHT   	       "/apps/gnomine/geometry/height"
 
@@ -74,6 +75,7 @@ gint nmines = -1;
 gint fsize = -1;
 gboolean use_question_marks = TRUE;
 gboolean use_overmine_warning = TRUE;
+gboolean use_autoflag = FALSE;
 
 GtkAction *hint_action;
 GtkAction *fullscreen_action;
@@ -523,6 +525,11 @@ gconf_key_change_cb (GConfClient * client, guint cnxn_id,
     use_overmine_warning = value ? gconf_value_get_bool (value) : TRUE;
     gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
 					    use_overmine_warning);
+  }
+  if (strcmp (key, KEY_USE_AUTOFLAG) == 0) {
+    use_autoflag = value ? gconf_value_get_bool (value) : TRUE;
+    gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
+				    use_autoflag);
   }
 }
 
@@ -1016,6 +1023,9 @@ main (int argc, char *argv[])
   use_overmine_warning = gconf_client_get_bool (conf_client,
 						KEY_USE_OVERMINE_WARNING,
 						NULL);
+  use_autoflag = gconf_client_get_bool (conf_client,
+					KEY_USE_AUTOFLAG,
+					NULL);
   width = gconf_client_get_int (conf_client, KEY_WIDTH, NULL);
   width = width > 0 ? width : WIDTH_DEFAULT;
   height = gconf_client_get_int (conf_client, KEY_HEIGHT, NULL);
@@ -1103,6 +1113,9 @@ main (int argc, char *argv[])
 
   gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
 					  use_overmine_warning);
+   
+  gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
+				  use_autoflag);
 
   g_signal_connect (G_OBJECT (mfield), "marks_changed",
 		    G_CALLBACK (marks_changed), NULL);

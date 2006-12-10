@@ -113,6 +113,8 @@ static void gtk_minefield_size_allocate (GtkWidget * widget,
 					 GtkAllocation * allocation);
 static void gtk_minefield_size_request (GtkWidget * widget,
 					GtkRequisition * requisition);
+static void gtk_minefield_set_mark (GtkMineField * mfield, guint x,
+				    guint y, int mark);
 static void gtk_minefield_toggle_mark (GtkMineField * mfield, guint x,
 				       guint y);
 static void gtk_minefield_unrealize (GtkWidget * widget);
@@ -120,6 +122,8 @@ static void gtk_minefield_win (GtkMineField * mfield);
 static int gtk_minefield_check_cell (GtkMineField * mfield, guint x, guint y);
 static void gtk_minefield_multi_press (GtkMineField * mfield, guint x,
 				       guint y, gint c);
+static gboolean gtk_minefield_solve_square (GtkMineField * mfield, guint x,
+					    guint y, guint c);
 /* end prototypes */
 
 
@@ -792,72 +796,82 @@ gtk_minefield_show (GtkMineField * mfield, guint x, guint y)
 }
 
 static void
-gtk_minefield_toggle_mark (GtkMineField * mfield, guint x, guint y)
+gtk_minefield_set_mark (GtkMineField * mfield, guint x, guint y, int mark)
 {
   int c = cell_idx (mfield, x, y);
-  int nx, ny, i, c2;
-
+  int change_count, i, nx, ny, c2;
+  gboolean was_valid, is_valid;
+   
   g_return_if_fail (c != -1);
 
-  if (mfield->mines[c].shown != 0) {	/* nothing to toggle */
+  /* Cannot mark if square already revealed */
+  if (mfield->mines[c].shown != 0)
     return;
+
+  /* Don't change if already has this mark */
+  if (mfield->mines[c].marked == mark)
+    return;
+   
+  /* Decide if we are adding or removing a mark */
+  if (mark == MINE_MARKED) {
+    change_count = 1;
+  } else {
+    if (mfield->mines[c].marked == MINE_MARKED)
+      change_count = -1;
+    else
+      change_count = 0;
   }
+   
+  /* If mark count changed update counters in adjacent squares */
+  if (change_count != 0)
+  {
+    mfield->flag_count += change_count;
+    for (i = 0; i < 8; i++) {
+      nx = x + neighbour_map[i].x;
+      ny = y + neighbour_map[i].y;
+      if ((c2 = cell_idx (mfield, nx, ny)) == -1)
+	continue;
+       
+      was_valid = mfield->mines[c2].neighbourmarks <= mfield->mines[c2].neighbours;
+      mfield->mines[c2].neighbourmarks += change_count;
+      is_valid = mfield->mines[c2].neighbourmarks <= mfield->mines[c2].neighbours;
+
+      /* Redraw if too many marks placed */
+      if (is_valid != was_valid)
+	gtk_mine_draw (mfield, nx, ny);
+    }
+  }
+
+  /* Update marking */
+  mfield->mines[c].marked = mark;
+  gtk_mine_draw (mfield, x, y);
+  g_signal_emit (GTK_OBJECT (mfield),
+		 minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
+}
+    
+static void
+gtk_minefield_toggle_mark (GtkMineField * mfield, guint x, guint y)
+{
+  int mark = MINE_NOMARK, c = cell_idx (mfield, x, y);
 
   switch (mfield->mines[c].marked) {
   case MINE_NOMARK:
     /* If we've used all the flags don't plant any more,
      * this should be an indication to the player that they
      * have made a mistake. */
-    if (mfield->flag_count == mfield->mcount) {
-      if (mfield->use_question_marks) {
-	mfield->mines[c].marked = MINE_QUESTION;
-      }
-      break;
-    }
-    mfield->mines[c].marked = MINE_MARKED;
-    mfield->flag_count++;
-
-    for (i = 0; i < 8; i++) {
-      nx = x + neighbour_map[i].x;
-      ny = y + neighbour_map[i].y;
-      if ((c2 = cell_idx (mfield, nx, ny)) == -1)
-	continue;
-      mfield->mines[c2].neighbourmarks++;
-      if (mfield->mines[c2].neighbourmarks ==
-	  (mfield->mines[c2].neighbours + 1))
-	gtk_mine_draw (mfield, nx, ny);
-    }
-
+    if (mfield->flag_count == mfield->mcount && mfield->use_question_marks)
+      mark = MINE_QUESTION;
+    else
+      mark = MINE_MARKED;
     break;
+
   case MINE_MARKED:
-    if (mfield->use_question_marks) {
-      mfield->mines[c].marked = MINE_QUESTION;
-    } else {
-      mfield->mines[c].marked = MINE_NOMARK;
-    }
-    mfield->flag_count--;
-
-    for (i = 0; i < 8; i++) {
-      nx = x + neighbour_map[i].x;
-      ny = y + neighbour_map[i].y;
-      if ((c2 = cell_idx (mfield, nx, ny)) == -1)
-	continue;
-      mfield->mines[c2].neighbourmarks--;
-      if (mfield->mines[c2].neighbourmarks == mfield->mines[c2].neighbours)
-	gtk_mine_draw (mfield, nx, ny);
-    }
-
-    break;
-  case MINE_QUESTION:
-    mfield->mines[c].marked = MINE_NOMARK;
-    break;
-  default:
-    /* better not get here! */
+    if (mfield->use_question_marks)
+      mark = MINE_QUESTION;
     break;
   }
 
-  g_signal_emit (GTK_OBJECT (mfield),
-		 minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
+  gtk_minefield_set_mark (mfield, x, y, mark);
 }
 
 static void
@@ -879,13 +893,43 @@ gtk_minefield_multi_press (GtkMineField * mfield, guint x, guint y, gint c)
   mfield->multi_mode = 1;
 }
 
+static gboolean
+gtk_minefield_solve_square (GtkMineField * mfield, guint x, guint y, guint c)
+{
+   gint nc, i, nx, ny, empty_count = 0, unknown[8][2], set_count = 0;
+
+   /* Look for unmarked neighbour squares */
+   for(i = 0; i < 8; i++) {
+      nx = x + neighbour_map[i].x;
+      ny = y + neighbour_map[i].y;
+      nc = cell_idx (mfield, nx, ny);
+      if(nc < 0)
+	continue;
+      if(!mfield->mines[nc].shown) {
+	 if(mfield->mines[nc].marked != MINE_MARKED) {
+	    unknown[set_count][0] = nx;
+	    unknown[set_count][1] = ny;
+	    set_count++;
+	 }
+	 empty_count++;
+      }
+   }
+
+   if(mfield->mines[c].neighbours != empty_count || set_count == 0)
+     return FALSE;
+
+   for(i = 0; i < set_count; i++)
+     gtk_minefield_set_mark (mfield, unknown[i][0], unknown[i][1], MINE_MARKED);
+   
+   return TRUE;
+}
+
 static void
 gtk_minefield_multi_release (GtkMineField * mfield, guint x, guint y, guint c,
 			     guint really)
 {
   gint nx, ny, i, c2;
   guint lose = 0;
-
 
   if (c < 0)			/* The release was outside the main area. */
     return;
@@ -1044,7 +1088,6 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
       gtk_minefield_multi_press (mfield, x, y, c);
     } else if (mfield->action == FLAG_ACTION && mfield->bdown[2] == 1) {
       gtk_minefield_toggle_mark (mfield, x, y);
-      gtk_mine_draw (mfield, x, y);
     }
     if (mfield->action != FLAG_ACTION) {
       g_signal_emit (GTK_OBJECT (mfield),
@@ -1058,6 +1101,7 @@ static gint
 gtk_minefield_button_release (GtkWidget * widget, GdkEventButton * event)
 {
   GtkMineField *mfield;
+   gboolean really;
 
   g_return_val_if_fail (widget != NULL, FALSE);
   g_return_val_if_fail (GTK_IS_MINEFIELD (widget), FALSE);
@@ -1078,9 +1122,13 @@ gtk_minefield_button_release (GtkWidget * widget, GdkEventButton * event)
       gtk_minefield_show (mfield, mfield->cdownx, mfield->cdowny);
       break;
     case CLEAR_ACTION:
-      gtk_minefield_multi_release (mfield, mfield->cdownx, mfield->cdowny,
-				   mfield->cdown, 1);
-      break;
+       if (mfield->use_autoflag)
+	 really = ! gtk_minefield_solve_square (mfield, mfield->cdownx, mfield->cdowny, mfield->cdown);
+       else
+	 really = TRUE;
+       gtk_minefield_multi_release (mfield, mfield->cdownx, mfield->cdowny,
+				      mfield->cdown, really);
+       break;
     }
     if (!mfield->lose && !mfield->win) {
       g_signal_emit (GTK_OBJECT (mfield),
@@ -1279,6 +1327,18 @@ gtk_minefield_set_use_overmine_warning (GtkMineField * mfield,
   g_return_if_fail (GTK_IS_MINEFIELD (mfield));
 
   mfield->use_overmine_warning = use_overmine_warning;
+
+  gtk_widget_queue_draw (GTK_WIDGET (mfield));
+}
+
+void
+gtk_minefield_set_use_autoflag (GtkMineField * mfield,
+				gboolean use_autoflag)
+{
+  g_return_if_fail (mfield != NULL);
+  g_return_if_fail (GTK_IS_MINEFIELD (mfield));
+
+  mfield->use_autoflag = use_autoflag;
 
   gtk_widget_queue_draw (GTK_WIDGET (mfield));
 }
