@@ -464,7 +464,7 @@ about_callback (void)
 			   "Clear mines from a board using hints from "
 			   "squares you have already uncovered."),
 			 "copyright",
-			 "Copyright \xc2\xa9 1997-2006 Free Software Foundation, Inc.",
+			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors, "artists",
 			 artists, "documenters", documenters,
 			 "translator_credits", _("translator-credits"),
