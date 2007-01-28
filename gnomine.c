@@ -85,10 +85,10 @@ GtkAction *resume_action;
 
 /*GstElement *sound_player;*/
 
-static const GamesScoresCategory scorecats[] = { {"Small", N_("Small")},
+static const GamesScoresCategory scorecats[] = { {"Small", N_("gnomine|Small")},
 {"Medium", N_("gnomine|Medium")},
-{"Large", N_("Large")},
-{"Custom", N_("Custom")},
+{"Large", N_("gnomine|Large")},
+{"Custom", N_("gnomine|Custom")},
 GAMES_SCORES_LAST_CATEGORY
 };
 
@@ -658,7 +658,7 @@ create_preferences (void)
 
   vbox = gtk_vbox_new (FALSE, 6);
 
-  button = gtk_radio_button_new_with_label (NULL, _("Small"));
+  button = gtk_radio_button_new_with_label (NULL, _("gnomine|Small"));
   if (fsize == 0)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
@@ -677,7 +677,7 @@ create_preferences (void)
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
   button = gtk_radio_button_new_with_label
-    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("Large"));
+    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("gnomine|Large"));
   if (fsize == 2)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
@@ -686,7 +686,7 @@ create_preferences (void)
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
   button = gtk_radio_button_new_with_label
-    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("Custom"));
+    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("gnomine|Custom"));
   if (fsize == 3)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
