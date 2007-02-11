@@ -210,7 +210,7 @@ show_scores (gint pos, gboolean endofgame)
     if (scoresdialog != NULL) {
       gtk_window_present (GTK_WINDOW (scoresdialog));
     } else {
-      scoresdialog = games_scores_dialog_new (highscores, _("Mines Scores"));
+      scoresdialog = games_scores_dialog_new (GTK_WINDOW (window), highscores, _("Mines Scores"));
       games_scores_dialog_set_category_description (GAMES_SCORES_DIALOG
 						    (scoresdialog),
 						    _("Size:"));
