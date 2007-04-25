@@ -334,7 +334,7 @@ hint_callback (void)
 static void
 pause_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
 {
-  if ((GAMES_CLOCK (clk)->timer_id != -1)
+  if ((GAMES_CLOCK (clk)->timer_id != 0)
       && (!disable_hiding)) {
     gtk_widget_hide (mfield_container);
     gtk_widget_show (resume_container);

@@ -1,4 +1,9 @@
+2007-04-25  Robert Ancell  <robert.ancell@gmail.com>
+
+	* gnomine.c: Don't hide minefield if game not started (Bug #433036)
+
 2006-12-10  Robert Ancell  <robert.ancell@gmail.com>
+
 	* minefield.c: Refactored to add gtk_minefield_set_mark() (simpler to understand)
 	* minefield.c: Added gtk_minefield_solve_square() (Bug #307245) (disabled by default)
 	* gnomine.schemas.in: Added missing schema entries
