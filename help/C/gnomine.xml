@@ -131,10 +131,12 @@
     </para>
 
     <figure id="main-window">
-    	    <imagedata fileref="figures/main-window.png"
-	    format="PNG"/>
       <title>The stages of the game: the start, playing, losing,
 	    and winning.</title>
+    	    <mediaobject><imageobject>
+    	      <imagedata fileref="figures/main-window.png"
+	    format="PNG"/>
+	    </imageobject></mediaobject>
     </figure>
 
     <para>
@@ -148,9 +150,11 @@
     </para>
 
     <figure id="status-bar">
+      <title>Important information.</title>
+    	    <mediaobject><imageobject>
 	    <imagedata fileref="figures/statusbar.png"
 	    format="PNG"/>
-      <title>Important information.</title>
+	    </imageobject></mediaobject>
     </figure>
 
     <para>
@@ -167,9 +171,11 @@
     </para>
 
     <figure id="faces">
+      <title>The yellow face shows you how well you are going.</title>
+    	    <mediaobject><imageobject>
 	    <imagedata fileref="figures/faces.png"
 	    format="PNG"/>
-      <title>The yellow face shows you how well you are going.</title>
+	    </imageobject></mediaobject>
     </figure>
 
     <!-- Face graphics image. -->
@@ -240,8 +246,8 @@
 	</tgroup>
       </informaltable>
 
-      <tip>If you are used to the more traditional mouse controls,
-           don't worry, they still work.</tip>
+      <tip><para>If you are used to the more traditional mouse controls,
+           don't worry, they still work.</para></tip>
     </sect2>
 
     <sect2>
@@ -257,9 +263,11 @@
       </para> 
 
     <figure id="preferences-img">
-	    <imagedata fileref="figures/preferences.png"
-	    format="PNG"/>
       <title>The preferences dialog.</title>
+    	    <mediaobject><imageobject>
+	      <imagedata fileref="figures/preferences.png"
+	    format="PNG"/>
+	    </imageobject></mediaobject>
     </figure>
 
       <para>
@@ -277,10 +285,12 @@
     <sect2>
       <title>"I'm not sure" Flags</title>
 
-      <figure id="imnotsureflagsimg">
+      <informalfigure id="imnotsureflagsimg">
+    	    <mediaobject><imageobject>
   	      <imagedata fileref="figures/imnotsureflagscheckbox.png"
   	        format="PNG"/>
-      </figure>
+	    </imageobject></mediaobject>
+      </informalfigure>
 
       <para>
         There is a check-box in the properties dialog entitled
@@ -296,9 +306,11 @@
       </para>
 
       <figure id="flags-img">
+	<title>The sequence of flags when "I'm not sure" flags are enabled.</title>
+    	    <mediaobject><imageobject>
   	      <imagedata fileref="figures/flags.png"
   	        format="PNG"/>
-	<title>The sequence of flags when "I'm not sure" flags are enabled.</title>
+	    </imageobject></mediaobject>
       </figure>
 
     </sect2>
@@ -345,16 +357,18 @@
       </para>
 
     <figure id="high-score-img">
+      <title>The high scores dialog.</title>
+    	    <mediaobject><imageobject>
 	    <imagedata fileref="figures/highscores.png"
 	    format="PNG"/>
-      <title>The high scores dialog.</title>
+	    </imageobject></mediaobject>
     </figure>
 
       <tip>
-        The high score for the custom size is usually meaningless. Any
+        <para>The high score for the custom size is usually meaningless. Any
 	other player can make the game size smaller and get a better time. If
         you only ever play one custom size then it will tell you how
-	well you are doing. This is the only reason it is still recorded.
+	well you are doing. This is the only reason it is still recorded.</para>
       </tip>
     </sect2>
 
@@ -405,8 +419,10 @@
       </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/easy-hints-1.png"/>
         <title>The simplest case.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/easy-hints-1.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
       <para>
@@ -417,8 +433,10 @@
       </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/easy-hints-2.png"/>
         <title>The two mine case.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/easy-hints-2.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
       <para>
@@ -428,8 +446,10 @@
       </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/easy-hints-3.png"/>
         <title>The three mine case.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/easy-hints-3.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
       <para>
@@ -465,8 +485,10 @@
       </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/hard-hints-1.png"/>
         <title>A not-so-obvious pattern.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/hard-hints-1.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
       <para>
@@ -476,8 +498,10 @@
       </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/hard-hints-2.png"/>
         <title>The extra mine disguises a copy of the previous example.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/hard-hints-2.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
 <para>
@@ -505,8 +529,10 @@ the 4, it now tells us which of the squares beside the 2 is mined!
 </para>
 
       <figure>
-        <imagedata  format="png" fileref="figures/hard-hints-3.png"/>
         <title>As tricky as it gets.</title>
+    	    <mediaobject><imageobject>
+            <imagedata  format="PNG" fileref="figures/hard-hints-3.png"/>
+	    </imageobject></mediaobject>
       </figure>
 
 

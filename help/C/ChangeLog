@@ -1,3 +1,9 @@
+2007-04-26  Claude Paroz  <claude@2xlibre.net>
+
+	* gnomine.xml: Corrected DocBook syntax to make the document
+	validate.
+	Fixes bug #406816.
+
 2006-03-22  Callum McKenzie  <callum@spooky-possum.org>
 
 	* gnomine.xml: Replace the bugzilla link with a
