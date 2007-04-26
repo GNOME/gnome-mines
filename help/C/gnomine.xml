@@ -25,6 +25,11 @@
 <!-- appropriate code -->
   <articleinfo>
     <title>&app; Manual V&manrevision;</title>
+    <abstract role="description">
+      <para>
+      GNOME Mines is a variation of the popular logic puzzle minesweeper.
+      </para>
+    </abstract>
     <copyright>
       <year>2006</year>
       <holder>Callum McKenzie</holder>
@@ -51,7 +56,7 @@
 	any of this. -->
 
     <authorgroup> 
-      <author> 
+      <author role="maintainer"> 
 	<firstname>Callum</firstname> 
 	<surname>McKenzie</surname> 
 	<affiliation> 
