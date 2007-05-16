@@ -468,7 +468,7 @@ about_callback (void)
 			 "license", license, "authors", authors, "artists",
 			 artists, "documenters", documenters,
 			 "translator_credits", _("translator-credits"),
-			 "logo-icon-name", "gnome-gnomine", "website",
+			 "logo-icon-name", "gnome-mines", "website",
 			 "http://www.gnome.org/projects/gnome-games/",
 			 "wrap-license", TRUE, NULL);
   g_free (license);
@@ -1007,7 +1007,7 @@ main (int argc, char *argv[])
   gconf_client_notify_add (conf_client, KEY_DIR,
 			   gconf_key_change_cb, NULL, NULL, NULL);
 
-  gtk_window_set_default_icon_name ("gnome-gnomine");
+  gtk_window_set_default_icon_name ("gnome-mines");
   client = gnome_master_client ();
   g_signal_connect (G_OBJECT (client), "save_yourself",
 		    G_CALLBACK (save_state), argv[0]);
