@@ -168,7 +168,7 @@ setup_sign (sign * signp, const char *file, guint minesize)
   if (signp->preimage) {
     signp->scaledpixbuf = games_preimage_render (signp->preimage,
 						 signp->width,
-						 signp->height, NULL);
+						 signp->height);
   }
 
   if (!signp->scaledpixbuf) {
