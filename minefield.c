@@ -676,10 +676,21 @@ gtk_minefield_check_field (GtkMineField * mfield, gint x, gint y)
 static void
 gtk_minefield_lose (GtkMineField * mfield)
 {
+  guint i, x, y;
+
   g_signal_emit (G_OBJECT (mfield),
 		 minefield_signals[EXPLODE_SIGNAL], 0, NULL);
+
   mfield->lose = 1;
-  gtk_widget_queue_draw (GTK_WIDGET (mfield));
+
+  /* draw mines and wrong markings */
+  for (i = 0; i <mfield->xsize * mfield->ysize; i++) {
+    if (mfield->mines[i].mined || mfield->mines[i].marked) {
+      y = i / mfield->xsize;
+      x = i % mfield->xsize;
+      gtk_mine_draw (mfield, x, y);
+    }
+  }
 }
 
 static void

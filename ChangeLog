@@ -1,3 +1,8 @@
+2007-06-05  Andreas Røsdal  <andreasr@gnome.org>
+
+	* minefield.c: Only redraw the necessary fields when clicking on
+	a mine. Patch from Thomas Andersen in bug #375691. 
+
 2007-04-25  Robert Ancell  <robert.ancell@gmail.com>
 
 	* gnomine.c: Don't hide minefield if game not started (Bug #433036)
