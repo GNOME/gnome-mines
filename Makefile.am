@@ -1,6 +1,3 @@
-
-
-
 Gamesdir = $(datadir)/applications
 
 SUBDIRS = help
@@ -33,11 +30,11 @@ pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
 	face-worried.png \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
-EXTRA_DIST = gnomine.desktop.in README AUTHORS \
+EXTRA_DIST = README AUTHORS \
 	$(schema_in_files) $(pixmap_DATA)
 
-Games_in_files = gnomine.desktop.in
-Games_DATA = $(Games_in_files:.desktop.in=.desktop)
+Games_in_files = gnomine.desktop.in.in
+Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 SCOREFILES = Small Medium Large Custom

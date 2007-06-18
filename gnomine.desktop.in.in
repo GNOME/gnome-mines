@@ -10,4 +10,5 @@ Categories=GNOME;GTK;Game;LogicGame;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-games
 X-GNOME-Bugzilla-Component=gnomine
+X-GNOME-Bugzilla-Version=@VERSION@
 StartupNotify=true
