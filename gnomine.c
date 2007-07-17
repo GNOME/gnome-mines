@@ -467,7 +467,7 @@ about_callback (void)
 			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors, "artists",
 			 artists, "documenters", documenters,
-			 "translator_credits", _("translator-credits"),
+			 "translator-credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-mines", "website",
 			 "http://www.gnome.org/projects/gnome-games/",
 			 "wrap-license", TRUE, NULL);
