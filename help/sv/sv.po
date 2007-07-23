@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine doc\n"
-"POT-Creation-Date: 2007-04-30 03:22+0100\n"
-"PO-Revision-Date: 2007-04-30 12:58+0100\n"
+"POT-Creation-Date: 2007-04-30 12:04+0100\n"
+"PO-Revision-Date: 2007-07-23 00:05+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -110,7 +110,7 @@ msgstr "Dokumentationsprojekt för GNOME"
 
 #: C/gnomine.xml:2(para)
 msgid "This document is dual-licensed. You may either distribute and/or modify it under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink>, which the <link linkend=\"license\">program is licensed</link> under, or you can distribute it under the terms of the GNU Free Documentation License. A copy of this follows."
-msgstr ""
+msgstr "Det här dokumentet är dubbellicensierat. Du kan antingen distribuera och/eller ändra det under villkoren för <ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink>, som <link linkend=\"license\">programmer är licensierat</link> under, eller du kan distribuera det under villkoren för GNU Free Documentation License. En kopia av dessa följer."
 
 #: C/gnomine.xml:11(para)
 msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
@@ -170,7 +170,7 @@ msgstr "Återkoppling"
 
 #: C/gnomine.xml:100(para)
 msgid "To report a bug or make a suggestion regarding the <application>Mines</application> application or this manual, follow the directions in the <ulink url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
-msgstr ""
+msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>Minor</application> eller den här handboken, följ anvisningarna i <ulink url=\"http://bugzilla.gnome.org\">GNOME:s felrapporteringsdatabas.</ulink>."
 
 #: C/gnomine.xml:109(primary)
 msgid "GNOME Mines"
@@ -182,131 +182,131 @@ msgstr "Introduktion"
 
 #: C/gnomine.xml:118(para)
 msgid "<application><application>Mines</application></application> is a puzzle game where you locate mines floating in an ocean using only your brain and a little bit of luck."
-msgstr ""
+msgstr "<application><application>Minor</application></application> är ett pusselspel där du lokaliserar minor som flyter runt i en ocean, endast med hjälp av din hjärna och med lite tur."
 
 #: C/gnomine.xml:124(para)
 msgid "You start the game with a grid of covered squares and no idea what is in them. Clicking on a square reveals what is in it: either empty ocean or a mine. If you find a mine bad things happen and the game is over. If you uncover an empty square, you survive and get to try again. We do give you a bit of help; if you find an empty piece of ocean a number is printed there telling you how many mines are in the adjacent squares (or no number if there are no nearby mines). Once you find a few clear squares you can start to deduce which squares have mines in them and which don't. You win the game once you have revealed all the un-mined squares and marked all the mined squares."
-msgstr ""
+msgstr "Du startar spelet med ett rutnät fyllt av täckta rutor och har ingen aning vad som döljer sig i dem. Klicka på en ruta för att se vad som finns där: antingen ingenting eller en mina. Om du hittar en mina går det dåligt för dig och spelet är över. Om du avtäcker en tom ruta, överlever du och får försöka igen. Vi ger dig dock lite hjälp; om du hittar en tom ruta kommer en siffra att skrivas ut som berättar för dig hur många minor som finns i de angränsande rutorna (eller ingen siffra om det inte finns några minor i närheten). När du har hittat ett par tomma rutor kan du börja att fundera på vilka rutor som innehåller minor och vilka som inte gör det. Du vinner spelet när du har avtäckt alla rutor som inte innehåller minor och markerat alla rutor som innehåller minor."
 
 #: C/gnomine.xml:139(title)
 msgid "The stages of the game: the start, playing, losing, and winning."
-msgstr ""
+msgstr "Etapperna i spelet: starten, spelandet, förlorandet och vinsten."
 
 #: C/gnomine.xml:147(para)
 msgid "To mark a square as having a mine you right-click on it and a flag is placed there. If you click on a square with a number and you have placed precisely that number of flags on adjacent squares then the remaining squares are revealed. If you didn't mark the mines correctly then an explosion will occur and the game is over. Squares with no adjacent mines (i.e. blank squares) have their adjacent squares automatically cleared."
-msgstr ""
+msgstr "För att markera en ruta som en mina så högerklickar du på den och en flagga kommer att placeras där. Om du klickar på en ruta med en siffra på dig och du har placerat det antalet flaggor på angränsande rutor kommer resten av rutorna att avtäckas. Om du inte markerade minorna korrekt kommer en explosion att inträffa och spelet är över. Rutor som inte har några angränsande minor (alltså tomma rutor) får sina angränsande rutor avtäckta automatiskt."
 
 #: C/gnomine.xml:158(title)
 msgid "Important information."
-msgstr ""
+msgstr "Viktig information."
 
 #: C/gnomine.xml:165(para)
 msgid "You are being timed. To be good at this game you have to work both quickly and correctly. Once you have found all the mines and revealed all the un-mined squares the clock is stopped. Your score is the time you took; the shorter the better."
-msgstr ""
+msgstr "Du spelar på tid. För att vara bra på det här spelet måste du både arbeta snabbt och korrekt. När du har hittat alla minorna och avtäckt alla rutor som inte innehåller minor kommer klockan att stoppas. Din poäng är den tid som du använde; ju kortare, desto bättre."
 
 #: C/gnomine.xml:172(para)
 msgid "The time you have taken is displayed on the bottom right of the window. Beside it, on the left, is a count of the number of mines you have cleared and the total number hidden on the board."
-msgstr ""
+msgstr "Tiden som du använt visas i högra nederkanten av fönstret. Förutom den, på vänster sida, finns en räknare för antal minor som du har hittat och det totala antalet dolda minor på brädet. "
 
 #: C/gnomine.xml:179(title)
 msgid "The yellow face shows you how well you are going."
-msgstr ""
+msgstr "Det gula ansiktet visar hur bra det går för dig."
 
 #: C/gnomine.xml:192(title)
 msgid "The Details"
-msgstr ""
+msgstr "Detaljerna"
 
 #: C/gnomine.xml:194(para)
 msgid "This section provides information on the controls and the important menu items. If you need help figuring where the mines are, see the <link linkend=\"strategy\">strategy section</link>."
-msgstr ""
+msgstr "Det här avsnittet tillhandahåller information om styrningen och de viktiga menyobjekten. Om du behöver hjälp med att lista ut var minorna finns, se <link linkend=\"strategy\">strategiavsnittet</link>."
 
 #: C/gnomine.xml:201(title)
 msgid "The Goal"
-msgstr ""
+msgstr "Målet"
 
 #: C/gnomine.xml:203(para)
 msgid "Starting from an ocean of squares with unknown contents you must mark all the squares with mines and reveal all the clear squares. You don't actually have to mark the squares with mines, but it is a lot easier if you do. Once you have cleared all the un-mined squares, any remaining mined squares will be marked for you."
-msgstr ""
+msgstr "Med början i en ocean av rutor med okänt innehåller måste du markera alla rutor som innehåller minor och avtäcka alla rutor som inte innehåller några minor. Du måste faktiskt inte markera rutorna med minor men det är mycket enklare för dig om du gör det. När du har hittat alla rutor utan minor kommer återstående minerade rutor att markeras åt dig."
 
 #: C/gnomine.xml:212(para)
 msgid "If you left click on a mine, or auto-clear a square with a mine in it you lose. To help prevent accidents, you aren't allowed to auto-clear around a square unless the number of marked mines equals the number given in the square."
-msgstr ""
+msgstr "Om du vänsterklickar på en mina, eller automatiskt rensar en ruta som innehåller en mina, kommer du att förlora. För att undvika olyckor så tillåts du inte att automatiskt rensa runt en ruta såvida inte antalet markerade minor är samma som siffran som angivits i rutan."
 
 #: C/gnomine.xml:222(title)
 msgid "Using the Mouse"
-msgstr ""
+msgstr "Användning av musen"
 
 #: C/gnomine.xml:229(entry)
 msgid "Action"
-msgstr ""
+msgstr "Åtgärd"
 
 #: C/gnomine.xml:229(entry)
 msgid "Result"
-msgstr ""
+msgstr "Resultat"
 
 #: C/gnomine.xml:234(entry)
 msgid "Left click on an un-revealed square."
-msgstr ""
+msgstr "Vänsterklicka på en täckt ruta."
 
 #: C/gnomine.xml:235(entry)
 msgid "Reveals the contents of that square. For better or for worse."
-msgstr ""
+msgstr "Avtäcker innehållet i den rutan. Kan gå bra, kan gå mindre bra."
 
 #: C/gnomine.xml:239(entry)
 msgid "Left click in a revealed square."
-msgstr ""
+msgstr "Vänsterklicka på en avtäckt ruta."
 
 #: C/gnomine.xml:240(entry)
 msgid "Auto-clear. Reveals the unmarked squares around the clicked square, but only if enough squares have been marked to match the number in the square."
-msgstr ""
+msgstr "Rensa automatiskt. Avtäcker de omarkerade rutorna runt den klickade rutan, men endast om tillräckligt många rutor har markerats för att matcha antalet i rutan."
 
 #: C/gnomine.xml:246(entry)
 msgid "Right click on an un-revealed square."
-msgstr ""
+msgstr "Högerklicka på en täckt ruta."
 
 #: C/gnomine.xml:247(entry)
 msgid "Marks the square as a mine. If it is already marked, the mark will be removed."
-msgstr ""
+msgstr "Markerar rutan som en mina. Om den redan är markerad kommer markeringen att tas bort."
 
 #: C/gnomine.xml:254(para)
 msgid "If you are used to the more traditional mouse controls, don't worry, they still work."
-msgstr ""
+msgstr "Om du är van vid den mer traditionella musstyrningen, var lugn, de fungerar fortfarande."
 
 #: C/gnomine.xml:259(title)
 msgid "Game Size and Difficulty"
-msgstr ""
+msgstr "Spelets storlek och svårighetsgrad"
 
 #: C/gnomine.xml:261(para)
 msgid "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from the menu you can change the size of the games. Larger sizes obviously take longer and require more concentration. Smaller games are more frantic. We provide Small, Medium, Large and Custom sizes."
-msgstr ""
+msgstr "Genom att välja <menuchoice><guimenu>Inställningar</guimenu><guimenuitem>Inställningar</guimenuitem></menuchoice> från menyn kan du ändra storleken på spelen. Större storlekar tar så klart längre tid och kräver mer koncentration. Mindre spel är mer hektiska. Vi tillhandahåller storlekarna Liten, Mellan, Stor och Egen storlek."
 
 #: C/gnomine.xml:271(title)
 msgid "The preferences dialog."
-msgstr ""
+msgstr "Inställningsdialogrutan."
 
 #: C/gnomine.xml:278(para)
 msgid "On the right hand side of the dialog there are three parameters for controlling the custom size. Horizontal and Vertical are the width and height of the desired grid in squares. The number of mines is - obviously - the number of mines you need to find. If this number is set too high or too low then the game becomes very easy. The number of mines is limited to slightly less than the total number of squares."
-msgstr ""
+msgstr "På högra sidan av dialogrutan finns det tre parametrar för att styra den anpassade storleken. Horisontellt och vertikalt är bredden och höjden för det önskade rutnätet. Antalet minor är - så klart - antalet minor som du ska hitta. Om det här antalet är för högt eller för lågt inställt kommer spelet att bli mycket enkelt. Antalet minor är begränsat till ett fåtal mindre än det totala antalet rutor."
 
 #: C/gnomine.xml:291(title)
 msgid "\"I'm not sure\" Flags"
-msgstr ""
+msgstr "\"Jag är inte säker\"-flaggor"
 
 #: C/gnomine.xml:300(para)
 msgid "There is a check-box in the properties dialog entitled Use \"I'm not sure\" flags. If you enable this then, when right-clicking on a square, it cycles between the normal flags used to mark the square as mined, a flag with a question mark on it and no flag. This new flag is to help you with your reasoning, to mark mines you think might be a mine but aren't sure about. These flags have no effect on the game; you still have to use the appropriate number of red marker flags to be able to clear around a numbered square."
-msgstr ""
+msgstr "Det finns en kryssruta i egenskapsdialogrutan som heter Använd \"Jag är inte säker\"-flaggor. Om du aktiverar den kommer, vid högerklick på en ruta, den att växla mellan normala flaggor som används för att markera rutan som minerad, en flagga med ett frågetecken samt ingen flagga. Den här nya flaggan finns där för att hjälpa dig att bestämma dig, för att markera minor som du tror kan vara en mina men inte helt säker på det. Dessa flaggor har ingen effekt på spelet, du har fortfarande det lämpliga antalet röda markeringsflaggor för att kunna rensa runt en numrerad ruta."
 
 #: C/gnomine.xml:314(title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
-msgstr ""
+msgstr "Sekvensen för flaggor när \"Jag är inte säker\"-flaggor är aktiverat."
 
 #: C/gnomine.xml:324(title)
 msgid "Use \"Too many flags\" warning"
-msgstr ""
+msgstr "Använd varning för \"många flaggor\""
 
 #: C/gnomine.xml:326(para)
 msgid "The other check-box in the properties dialog is entitled Use \"Too many flags\" warning. This feature will show you a warning when you have placed too many flags. This is disabled by default, as it provides so much hint that it could be considered \"cheating\"."
-msgstr ""
+msgstr "Den andra kryssrutan i egenskapsdialogrutan heter Använd varning för \"många flaggor\". Den här funktionen kommer att visa en varning när du har placerat ut för många flaggor. Den är inaktiverad som standard eftersom den ger en stor fingervisning och som kan anses vara \"fusk\"."
 
 #: C/gnomine.xml:337(title)
 msgid "Hints"
@@ -318,7 +318,7 @@ msgstr ""
 
 #: C/gnomine.xml:353(title)
 msgid "High Scores"
-msgstr ""
+msgstr "Poänglistan"
 
 #: C/gnomine.xml:355(para)
 msgid "If your score is in the top ten you will be shown the list of top scores and have an opportunity to change the name recorded in the high score table. You can also review the scores later by choosing <guimenuitem>Scores</guimenuitem> from the <guimenu>Game</guimenu> menu. The drop-down menu at the top of the dialog lets you look at the scores for other board sizes."
@@ -326,7 +326,7 @@ msgstr ""
 
 #: C/gnomine.xml:365(title)
 msgid "The high scores dialog."
-msgstr ""
+msgstr "Poänglistdialogrutan."
 
 #: C/gnomine.xml:373(para)
 msgid "The high score for the custom size is usually meaningless. Any other player can make the game size smaller and get a better time. If you only ever play one custom size then it will tell you how well you are doing. This is the only reason it is still recorded."
@@ -334,7 +334,7 @@ msgstr ""
 
 #: C/gnomine.xml:381(title)
 msgid "Window Size"
-msgstr ""
+msgstr "Fönsterstorlek"
 
 #: C/gnomine.xml:383(para)
 msgid "Resizing the window makes the squares bigger or smaller to suit. If you want to make maximum use of the screen then there is a <guimenuitem>Fullscreen</guimenuitem> option under the <guimenu>Settings</guimenu> menu. You can also use the <keycap>F11</keycap> key to toggle full-screen mode."
@@ -342,11 +342,11 @@ msgstr ""
 
 #: C/gnomine.xml:392(title)
 msgid "Pausing the Game"
-msgstr ""
+msgstr "Pausa spelet"
 
 #: C/gnomine.xml:394(para)
 msgid "The game can be paused automatically when you start using another window, or paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</guimenu> menu. The playing area is blanked so you can't think ahead while the clock is stopped. To start playing again press the button labelled \"Press to Resume\"."
-msgstr ""
+msgstr "Spelet kan pausas automatiskt när du börjar använda ett annat fönster, eller pausas genom att välja <guimenuitem>Gör paus</guimenuitem> från menyn <guimenu>Spel</guimenu>. Spelområdet döljs så att du inte kan tänka i förväg under tiden klockan är stoppad. För att börja spela igen så trycker du på knappen \"Tryck för att återuppta\"."
 
 #: C/gnomine.xml:408(title)
 msgid "Strategy"
@@ -358,7 +358,7 @@ msgstr ""
 
 #: C/gnomine.xml:417(title)
 msgid "The Basics"
-msgstr ""
+msgstr "Grunderna"
 
 #: C/gnomine.xml:418(para)
 msgid "These are a few basic situations which should be incredibly obvious, but if you're struggling with how to play the game, they should be useful. The first case is where you have an isolated covered square and most of the squares around it read 1. That covered square is a mine."
@@ -366,7 +366,7 @@ msgstr ""
 
 #: C/gnomine.xml:427(title)
 msgid "The simplest case."
-msgstr ""
+msgstr "Den enklaste situationen."
 
 #: C/gnomine.xml:433(para)
 msgid "The next simplest case is where you have two covered squares adjacent to each other and both squares on one side are marked with a 2. If they have no other uncleared neighbors, then both squares are mines."
@@ -394,7 +394,7 @@ msgstr ""
 
 #: C/gnomine.xml:474(title)
 msgid "Advanced Situations"
-msgstr ""
+msgstr "Avancerade situationer"
 
 #: C/gnomine.xml:476(para)
 msgid "These are some more complicated situations. They are a bit of a step up from the last section, so we hope you took our advice and played for a bit first."
@@ -434,7 +434,7 @@ msgstr ""
 
 #: C/gnomine.xml:556(title)
 msgid "Tips"
-msgstr ""
+msgstr "Tips"
 
 #: C/gnomine.xml:558(para)
 msgid "Remember, the edge of the board is just the same as a large cleared area (but without the numbers). Often working at the edge of the board is the easiest way forward."
@@ -454,7 +454,7 @@ msgstr "Upphovsmän"
 
 #: C/gnomine.xml:586(para)
 msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr ""
+msgstr "<application>GNOME Minor</application> skrevs av Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs av Callum McKenzie (<email>callum@spooky-possum.org</email>) med hjälp från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle (<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
 
 #: C/gnomine.xml:602(title)
 msgid "License"
@@ -462,15 +462,15 @@ msgstr "Licens"
 
 #: C/gnomine.xml:603(para)
 msgid "This program is free software; you can redistribute it and/or modify it under the terms of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> as published by the <ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; either version 2 of the License, or (at your option) any later version."
-msgstr ""
+msgstr "Det här programmet är fri programvara; du kan distribuera det och/eller ändra det under villkoren för <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> som publicerats av <ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; antingen version 2 av licensen, eller (upp till dig) någon senare version."
 
 #: C/gnomine.xml:611(para)
 msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> for more details."
-msgstr ""
+msgstr "Det här programmet distribueras i hopp om att det ska vara användbart, men UTAN NÅGRA GARANTIER; även utan garanti för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SPECIFIKT ÄNDAMÅL. Se <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> för mer information."
 
 #: C/gnomine.xml:617(para)
 msgid "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> is included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> from the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing to <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
-msgstr ""
+msgstr "En kopia av <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> finns inkluderad som en bilaga till <citetitle>Användarguide för GNOME</citetitle>. Du kan även få en kopia av <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> från Free Software Foundation genom att besöka <ulink type=\"http\" url=\"http://www.fsf.org\">deras webbplats</ulink> eller genom att skriva till <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/gnomine.xml:0(None)
