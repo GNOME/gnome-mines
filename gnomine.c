@@ -462,7 +462,8 @@ about_callback (void)
 			 "comments",
 			 _("The popular logic puzzle minesweeper. "
 			   "Clear mines from a board using hints from "
-			   "squares you have already uncovered."),
+			   "squares you have already uncovered.\n\n"
+			   "Mines is a part of GNOME Games."),
 			 "copyright",
 			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors, "artists",
