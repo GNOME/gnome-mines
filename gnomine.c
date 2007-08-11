@@ -471,6 +471,7 @@ about_callback (void)
 			 "translator-credits", _("translator-credits"),
 			 "logo-icon-name", "gnome-mines", "website",
 			 "http://www.gnome.org/projects/gnome-games/",
+			 "website-label", _("GNOME Games web site"),
 			 "wrap-license", TRUE, NULL);
   g_free (license);
 }
