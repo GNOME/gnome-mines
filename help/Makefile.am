@@ -1,6 +1,6 @@
 include $(top_srcdir)/gnome-doc-utils.make
 
-DOC_LINGUAS = de es fr oc sv
+DOC_LINGUAS = ca de es fr oc sv
 
 DOC_MODULE = gnomine
 
