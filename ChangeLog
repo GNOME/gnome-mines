@@ -2,6 +2,7 @@
 
 	* minefield.c: Fix redraw error when holiding right and repeatedly clicking left
 	  button. Adapted patch from WuSonghai in Bug #420643.
+	* gnomine.c: Change from GConf to GamesConf (Bug #449505)
 
 2007-06-05  Andreas Røsdal  <andreasr@gnome.org>
 

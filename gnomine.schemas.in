@@ -1,30 +1,6 @@
 <gconfschemafile>
     <schemalist>    
      <schema>
-     <key>/schemas/apps/gnomine/geometry/width</key>
-     <applyto>/apps/gnomine/geometry/width</applyto>
-     <owner>gnomine</owner>
-     <type>int</type>
-     <default>320</default>
-     <locale name="C">
-     <short>The width of the window</short>
-     <long>The width of the playing window in pixels.</long>
-     </locale>
-     </schema>
-
-     <schema>
-     <key>/schemas/apps/gnomine/geometry/height</key>
-     <applyto>/apps/gnomine/geometry/height</applyto>
-     <owner>gnomine</owner>
-     <type>int</type>
-     <default>240</default>
-     <locale name="C">
-     <short>The height of the window</short>
-     <long>The height of the playing window in pixels.</long>
-     </locale>
-     </schema>
-
-     <schema>
      <key>/schemas/apps/gnomine/geometry/xsize</key>
      <applyto>/apps/gnomine/geometry/xsize</applyto>
      <owner>gnomine</owner>
