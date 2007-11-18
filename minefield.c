@@ -77,7 +77,6 @@ enum {
 enum {
   NO_ACTION,
   SHOW_ACTION,
-  MAYBE_SHOW_ACTION,
   CLEAR_ACTION,
   FLAG_ACTION
 };
@@ -981,7 +980,6 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
   GtkMineField *mfield;
   guint x, y;
   gint c;
-  guint multi;
   guint minesize;
 
   g_return_val_if_fail (widget != NULL, 0);
@@ -1016,10 +1014,8 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
       mfield->mines[c].down = 1;
       gtk_mine_draw (mfield, x, y);
 
-      multi = (mfield->action == MAYBE_SHOW_ACTION) && mfield->mines[c].shown;
-
-      if (multi)
-	gtk_minefield_multi_press (mfield, x, y, c);
+      if (mfield->action == CLEAR_ACTION && mfield->mines[c].shown)
+        gtk_minefield_multi_press (mfield, x, y, c);
     }
   }
   return FALSE;
@@ -1052,10 +1048,10 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
     c = cell_idx (mfield, x, y);
     if (c == -1)
       return FALSE;
-
+      
     /* If this is the first button pressed (on a cell),
      * record where it was pressed. */
-    if (!mfield->bdown[0] && !mfield->bdown[1] && !mfield->bdown[2]) {
+    if (!mfield->bdown[0] && !mfield->bdown[1]) {
       mfield->cdownx = x;
       mfield->cdowny = y;
       mfield->cdown = c;
@@ -1078,9 +1074,9 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
      * about all the extra legacy crap. */
     switch (event->button) {
     case 1:
-      mfield->action = MAYBE_SHOW_ACTION;
-      if ((event->state & GDK_SHIFT_MASK) || (mfield->bdown[2]))
-	mfield->action = CLEAR_ACTION;
+      mfield->action = SHOW_ACTION;
+      if ((event->state & GDK_SHIFT_MASK) || (mfield->bdown[2]) || (mfield->mines[c].shown))
+        mfield->action = CLEAR_ACTION;
       break;
     case 2:
       mfield->action = CLEAR_ACTION;
@@ -1094,8 +1090,7 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
 
     /* Now actually do the actions. Most of the real work
      * is done in the button_release handler. */
-    if ((mfield->action == CLEAR_ACTION) ||
-	((mfield->action == MAYBE_SHOW_ACTION) && mfield->mines[c].shown)) {
+    if (mfield->action == CLEAR_ACTION) {
       gtk_minefield_multi_press (mfield, x, y, c);
     } else if (mfield->action == FLAG_ACTION && mfield->bdown[2] == 1) {
       gtk_minefield_toggle_mark (mfield, x, y);
@@ -1122,10 +1117,6 @@ gtk_minefield_button_release (GtkWidget * widget, GdkEventButton * event)
 
   if (mfield->lose || mfield->win)
     return FALSE;
-
-  if (mfield->action == MAYBE_SHOW_ACTION)
-    mfield->action = mfield->mines[mfield->cdown].shown ?
-      CLEAR_ACTION : SHOW_ACTION;
 
   if (event->button <= 3 && mfield->bdown[event->button - 1]) {
     switch (mfield->action) {

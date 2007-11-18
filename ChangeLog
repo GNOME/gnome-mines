@@ -1,3 +1,8 @@
+2007-11-18  Robert Ancell  <robert.ancell@gmail.com>
+
+	* minefield.c: Fix redraw error when holiding right and repeatedly clicking left
+	  button. Adapted patch from WuSonghai in Bug #420643.
+
 2007-06-05  Andreas Røsdal  <andreasr@gnome.org>
 
 	* minefield.c: Only redraw the necessary fields when clicking on
