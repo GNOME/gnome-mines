@@ -437,7 +437,7 @@ about_callback (void)
 
   const gchar *artists[] = {
     _("Faces:"),
-    "Tuomas Kuosmanen",
+    "Lapo Calamandrei and Ulisse Perusin",
     "",
     _("Graphics:"),
     "Richard Hoelscher",
@@ -1059,11 +1059,11 @@ main (int argc, char *argv[])
   face_box = gtk_vbox_new (FALSE, 5);
   gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 
-  pm_win = image_widget_setup ("gnomine/face-win.png");
-  pm_sad = image_widget_setup ("gnomine/face-sad.png");
-  pm_smile = image_widget_setup ("gnomine/face-smile.png");
-  pm_cool = image_widget_setup ("gnomine/face-cool.png");
-  pm_worried = image_widget_setup ("gnomine/face-worried.png");
+  pm_win = image_widget_setup ("gnomine/face-win.svg");
+  pm_sad = image_widget_setup ("gnomine/face-sad.svg");
+  pm_smile = image_widget_setup ("gnomine/face-smile.svg");
+  pm_cool = image_widget_setup ("gnomine/face-cool.svg");
+  pm_worried = image_widget_setup ("gnomine/face-worried.svg");
 
   gtk_box_pack_start (GTK_BOX (face_box), pm_win, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (face_box), pm_sad, FALSE, FALSE, 0);

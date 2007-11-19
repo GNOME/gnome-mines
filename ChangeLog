@@ -1,3 +1,7 @@
+2007-11-19  Robert Ancell  <robert.ancell@gmail.com>
+	* face-*.svg: Use new tangoified faces from Lapo Calamandrei and
+          Ulisse Perusin (Bug #400386)
+
 2007-11-18  Robert Ancell  <robert.ancell@gmail.com>
 
 	* minefield.c: Fix redraw error when holiding right and repeatedly clicking left

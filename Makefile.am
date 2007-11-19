@@ -26,8 +26,8 @@ schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
 pixmapdir   = $(datadir)/pixmaps/gnomine/
-pixmap_DATA = face-cool.png face-sad.png face-smile.png face-win.png 	\
-	face-worried.png \
+pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg 	\
+	face-worried.svg \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 EXTRA_DIST = README AUTHORS \
