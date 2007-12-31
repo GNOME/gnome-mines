@@ -1,4 +1,7 @@
-2007-11-16  Gil Forcada  <gforcada@svn.gnome.org>
+2007-12-31  Yannig Marchegay <yannig@marchegay.org>
+
+	* oc.po: Updated Occitan translation.
+2007-11-16  Gil Forcada  <gforcada@svn.gnome.org>
 
 	* ca/ca.po: Added Catalan translation by Joan Duran.
 	* ca/figures/*: Added screenshots for Catalan translation.
