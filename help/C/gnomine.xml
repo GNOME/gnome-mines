@@ -24,10 +24,12 @@
 <!-- please do not change the id; for translations, change lang to -->
 <!-- appropriate code -->
   <articleinfo>
-    <title>&app; Manual V&manrevision;</title>
+    <title>&app; Manual</title>
     <abstract role="description">
       <para>
-      GNOME Mines is a variation of the popular logic puzzle minesweeper.
+	Mines is GNOME's take on the popular logic puzzle minesweeper, 
+	which includes avoiding mines while receiving clues for 
+	the location of the mines.
       </para>
     </abstract>
     <copyright>
