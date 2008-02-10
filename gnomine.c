@@ -460,7 +460,7 @@ about_callback (void)
 			   "squares you have already uncovered.\n\n"
 			   "Mines is a part of GNOME Games."),
 			 "copyright",
-			 "Copyright \xc2\xa9 1997-2007 Free Software Foundation, Inc.",
+			 "Copyright \xc2\xa9 1997-2008 Free Software Foundation, Inc.",
 			 "license", license, "authors", authors, "artists",
 			 artists, "documenters", documenters,
 			 "translator-credits", _("translator-credits"),
