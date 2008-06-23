@@ -1077,6 +1077,8 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
       mfield->action = SHOW_ACTION;
       if ((event->state & GDK_SHIFT_MASK) || (mfield->bdown[2]) || (mfield->mines[c].shown))
         mfield->action = CLEAR_ACTION;
+      if (event->state & GDK_CONTROL_MASK)
+        mfield->action = FLAG_ACTION;
       break;
     case 2:
       mfield->action = CLEAR_ACTION;
@@ -1092,7 +1094,7 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
      * is done in the button_release handler. */
     if (mfield->action == CLEAR_ACTION) {
       gtk_minefield_multi_press (mfield, x, y, c);
-    } else if (mfield->action == FLAG_ACTION && mfield->bdown[2] == 1) {
+    } else if (mfield->action == FLAG_ACTION) {
       gtk_minefield_toggle_mark (mfield, x, y);
     }
     if (mfield->action != FLAG_ACTION) {
