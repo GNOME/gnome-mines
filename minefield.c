@@ -993,15 +993,15 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
   if (mfield->lose || mfield->win)
     return FALSE;
 
-  if (mfield->bdown[0] || mfield->bdown[1]) {
-    x = event->x / minesize;
-    y = event->y / minesize;
+  x = event->x / minesize;
+  y = event->y / minesize;
 
-    c = cell_idx (mfield, x, y);
-    if (c == -1)
-      return 0;
+  c = cell_idx (mfield, x, y);
+  if (c == -1)
+    return 0;
 
-    if (c != mfield->cdown) {
+  if (c != mfield->cdown) {
+    if (mfield->bdown[0] || mfield->bdown[1]) {
       mfield->mines[mfield->cdown].down = 0;
       gtk_mine_draw (mfield, mfield->cdownx, mfield->cdowny);
 
@@ -1016,6 +1016,16 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
 
       if (mfield->action == CLEAR_ACTION && mfield->mines[c].shown)
         gtk_minefield_multi_press (mfield, x, y, c);
+    } else if (mfield->bdown[2]) {
+      /*  Update clicked field on right click drag. See bug #  */
+      mfield->mines[mfield->cdown].down = 0;
+      mfield->action = NO_ACTION;
+      gtk_mine_draw (mfield, mfield->cdownx, mfield->cdowny);
+
+      mfield->cdownx = x;
+      mfield->cdowny = y;
+      mfield->cdown = c;
+      mfield->mines[c].down = 1;
     }
   }
   return FALSE;
