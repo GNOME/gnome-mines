@@ -1,47 +1,47 @@
 # Florian Purucker <florian@purucker.net>, 2007.
-# 
-# 
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2008.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual 2.9\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-29 03:30+0100\n"
-"PO-Revision-Date: 2008-06-08 20:24+0200\n"
+"POT-Creation-Date: 2008-08-29 04:15+0000\n"
+"PO-Revision-Date: 2008-08-29 15:53+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@t-online.de>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:143(None)
+#: C/gnomine.xml:145(None)
 msgid "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
 msgstr ""
 "@@image: 'figures/main-window.png'; md5=1fd69244e4ab3103a9116874e724451c"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:161(None)
+#: C/gnomine.xml:163(None)
 msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
 msgstr "@@image: 'figures/statusbar.png'; md5=7a9c9ac54b504415c8db14902c02265a"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:182(None)
+#: C/gnomine.xml:184(None)
 msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:274(None)
+#: C/gnomine.xml:276(None)
 msgid "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
 msgstr ""
 "@@image: 'figures/preferences.png'; md5=72fe9c519b2823399311bc9f03a4942a"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:296(None)
+#: C/gnomine.xml:298(None)
 msgid ""
 "@@image: 'figures/imnotsureflagscheckbox.png'; "
 "md5=58be021ed1cf90add08931282ec19bad"
@@ -51,19 +51,19 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:317(None)
+#: C/gnomine.xml:319(None)
 msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:368(None)
+#: C/gnomine.xml:370(None)
 msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
 msgstr "@@image: 'figures/highscores.png'; md5=a2f20f1928471adce71746fa1e9f521a"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:429(None)
+#: C/gnomine.xml:431(None)
 msgid ""
 "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgstr ""
@@ -71,7 +71,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:443(None)
+#: C/gnomine.xml:445(None)
 msgid ""
 "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
 msgstr ""
@@ -79,7 +79,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:456(None)
+#: C/gnomine.xml:458(None)
 msgid ""
 "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
 msgstr ""
@@ -87,7 +87,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:495(None)
+#: C/gnomine.xml:497(None)
 msgid ""
 "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:508(None)
+#: C/gnomine.xml:510(None)
 msgid ""
 "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
 msgstr ""
@@ -103,31 +103,36 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:539(None)
+#: C/gnomine.xml:541(None)
 msgid ""
 "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
 msgstr ""
 "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
 
 #: C/gnomine.xml:27(title)
-msgid "<application>Mines</application> Manual V2.9"
+msgid "<application>Mines</application> Manual"
 msgstr "<application>Minen</application>-Handbuch"
 
 #: C/gnomine.xml:29(para)
-msgid "GNOME Mines is a variation of the popular logic puzzle minesweeper."
-msgstr "Minen ist eine Ausgabe des beliebten Logikpuzzles Minesweeper."
+msgid ""
+"Mines is GNOME's take on the popular logic puzzle minesweeper, which includes "
+"avoiding mines while receiving clues for the location of the mines."
+msgstr ""
+"Minen ist die GNOME-Version des populären Logikpuzzles Minesweeper, dessen "
+"Spielidee auf dem Suchen von Minen beruht, wobei der Spieler dafür Hinweise "
+"erhält."
 
-#: C/gnomine.xml:34(year)
+#: C/gnomine.xml:36(year)
 msgid "2006"
 msgstr "2006"
 
-#: C/gnomine.xml:35(holder)
+#: C/gnomine.xml:37(holder)
 msgid "Callum McKenzie"
 msgstr "Callum McKenzie"
 
-#: C/gnomine.xml:50(publishername) C/gnomine.xml:87(para)
+#: C/gnomine.xml:52(publishername) C/gnomine.xml:89(para)
 msgid "GNOME Documentation Project"
-msgstr "GNOME Documentation Project"
+msgstr "GNOME-Dokumentationsprojekt"
 
 #: C/gnomine.xml:2(para)
 msgid ""
@@ -159,7 +164,7 @@ msgstr ""
 "sowie ohne Texte auf dem vorderen und hinteren Buchdeckel kopiert, verteilt "
 "und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem "
 "<ulink type=\"help\" url=\"ghelp:fdl\">Link</ulink> oder in der mit diesem "
-"Handbuch gelieferten Datei COPYING-DOCs."
+"Handbuch gelieferten Datei COPYING-DOCS."
 
 #: C/gnomine.xml:21(para)
 msgid ""
@@ -203,15 +208,15 @@ msgid ""
 "LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS "
 "AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
-"DIESES DOKUMENT WIRD \"WIE ES IST\" ZUR VERFÜGUNG GESTELLT, OHNE GARANTIEN "
-"IRGENDEINER ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES "
-"BEZIEHT SICH AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER "
-"VERÄNDERTE FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN "
-"BESTIMMTEN ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS "
-"VOLLE RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER "
-"VERÄNDERTE FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER "
-"EINE VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE "
-"(NICHT DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR "
+"DIESES DOKUMENT WIRD »WIE VORLIEGEND« GELIEFERT, OHNE GARANTIEN IRGENDEINER "
+"ART, SOWOHL AUSDRÜCKLICH GENANNTE ALS AUCH ANGEDEUTETE. DIES BEZIEHT SICH "
+"AUCH OHNE EINSCHRÄNKUNG AUF GARANTIEN, DASS DIESES DOKUMENT ODER VERÄNDERTE "
+"FASSUNGEN DIESES DOKUMENTS FREI VON HANDELSDEFEKTEN, FÜR EINEN BESTIMMTEN "
+"ZWECK GEEIGNET IST ODER DASS ES KEINE RECHTE DRITTER VERLETZT. DAS VOLLE "
+"RISIKO WAS QUALITÄT, GENAUIGKEIT UND LEISTUNG DES DOKUMENTS ODER VERÄNDERTE "
+"FASSUNGEN DES DOKUMENTS LIEGT BEI IHNEN. SOLLTE EIN DOKUMENT ODER EINE "
+"VERÄNDERTE FASSUNG DAVON FEHLER IRGENDEINER ART BEINHALTEN, TRAGEN SIE (NICHT "
+"DER URSPRUNGSAUTOR, DER AUTOR ODER EIN MITWIRKENDER) DIE KOSTEN FÜR "
 "NOTWENDIGE DIENSTLEISTUNGEN, REPARATUREN ODER FEHLERKORREKTUREN. DIESER "
 "HAFTUNGSAUSSCHLUSS IST EIN ESSENZIELLER TEIL DIESER LIZENZ. DIE VERWENDUNG "
 "EINES DOKUMENTS ODER EINER VERÄNDERTEN VERSION DES DOKUMENTS IST NICHT "
@@ -253,39 +258,39 @@ msgstr ""
 "BEDINGUNGEN DER GNU FREE DOCUMENTATION LICENSE ZUR VERFÜGUNG GESTELLT MIT DEM "
 "WEITERGEHENDEN VERSTÄNDNIS, DASS: <placeholder-1/>"
 
-#: C/gnomine.xml:60(firstname)
+#: C/gnomine.xml:62(firstname)
 msgid "Callum"
 msgstr "Callum"
 
-#: C/gnomine.xml:61(surname)
+#: C/gnomine.xml:63(surname)
 msgid "McKenzie"
 msgstr "McKenzie"
 
-#: C/gnomine.xml:63(email)
+#: C/gnomine.xml:65(email)
 msgid "callum@spooky-possum.org"
 msgstr "callum@spooky-possum.org"
 
-#: C/gnomine.xml:81(revnumber)
+#: C/gnomine.xml:83(revnumber)
 msgid "Mines Manual V2.9"
-msgstr "Minen Handbuch V2.9"
+msgstr "Minen-Handbuch V2.9"
 
-#: C/gnomine.xml:82(date)
+#: C/gnomine.xml:84(date)
 msgid "January 2006"
 msgstr "Januar 2006"
 
-#: C/gnomine.xml:84(para)
+#: C/gnomine.xml:86(para)
 msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
 msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
 
-#: C/gnomine.xml:92(releaseinfo)
+#: C/gnomine.xml:94(releaseinfo)
 msgid "This manual describes version 2.14 of Mines."
 msgstr "Dieses Handbuch beschreibt Version 2.14 von Minen."
 
-#: C/gnomine.xml:99(title)
+#: C/gnomine.xml:101(title)
 msgid "Feedback"
 msgstr "Rückmeldungen"
 
-#: C/gnomine.xml:100(para)
+#: C/gnomine.xml:102(para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Mines</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -293,17 +298,17 @@ msgid ""
 msgstr ""
 "Um Fehler zu melden oder einen Vorschlag zur Anwendung <application>Minen</"
 "application> oder zu diesem Handbuch zu machen, folgen Sie den Anweisungen in "
-"der <ulink url=\"http://bugzilla.gnome.org\">GNOME Fehlerdatenbank</ulink>."
+"der <ulink url=\"http://bugzilla.gnome.org\">GNOME-Fehlerdatenbank</ulink>."
 
-#: C/gnomine.xml:109(primary)
+#: C/gnomine.xml:111(primary)
 msgid "GNOME Mines"
 msgstr "Minen"
 
-#: C/gnomine.xml:116(title)
+#: C/gnomine.xml:118(title)
 msgid "Introduction"
 msgstr "Einführung"
 
-#: C/gnomine.xml:118(para)
+#: C/gnomine.xml:120(para)
 msgid ""
 "<application><application>Mines</application></application> is a puzzle game "
 "where you locate mines floating in an ocean using only your brain and a "
@@ -313,7 +318,7 @@ msgstr ""
 "Puzzlespiel, bei dem Sie im Meer schwimmende Minen finden müssen und bei dem "
 "Sie lediglich ihr Gehirn und etwas Glück benötigen."
 
-#: C/gnomine.xml:124(para)
+#: C/gnomine.xml:126(para)
 msgid ""
 "You start the game with a grid of covered squares and no idea what is in "
 "them. Clicking on a square reveals what is in it: either empty ocean or a "
@@ -330,20 +335,20 @@ msgstr ""
 "Ahnung was sich darunter verbirgt. Wenn Sie auf ein Feld klicken, wird "
 "aufgedeckt was darunter ist: Entweder nur Wasser oder eine Mine. Wenn Sie "
 "eine Mine finden, passieren schlimme Dinge und das Spiel ist vorüber. Wenn "
-"Sie ein leeres Feld aufdecken, überleben Sie und dürfen es erneut versuchen. Sie "
-"erhalten dabei etwas Hilfe; wenn Sie ein leeres Feld Ozean entdecken, wird "
-"dort eine Nummer angezeigt, die Ihnen verrät wie viele Minen in den "
+"Sie ein leeres Feld aufdecken, überleben Sie und dürfen es erneut versuchen. "
+"Sie erhalten dabei etwas Hilfe; wenn Sie ein leeres Feld Ozean entdecken, "
+"wird dort eine Nummer angezeigt, die Ihnen verrät wie viele Minen in den "
 "angrenzenden Feldern liegen (oder es wird keine Nummer angezeigt, wenn keine "
 "Minen in der Nähe sind). Wenn Sie erst einmal ein paar freie Felder entdeckt "
-"haben, können Sie anfangen zu überlegen unter welchen Feldern Minen liegen und "
-"unter welchen nicht. Sie haben das Spiel gewonnen sobald Sie alle nicht verminten "
-"Felder aufgedeckt und alle verminten Felder markiert haben."
+"haben, können Sie anfangen zu überlegen unter welchen Feldern Minen liegen "
+"und unter welchen nicht. Sie haben das Spiel gewonnen, sobald Sie alle nicht "
+"verminten Felder aufgedeckt und alle verminten Felder markiert haben."
 
-#: C/gnomine.xml:139(title)
+#: C/gnomine.xml:141(title)
 msgid "The stages of the game: the start, playing, losing, and winning."
 msgstr "Die Stufen des Spiels: Anfang, Spielen, Verlieren und Gewinnen."
 
-#: C/gnomine.xml:147(para)
+#: C/gnomine.xml:149(para)
 msgid ""
 "To mark a square as having a mine you right-click on it and a flag is placed "
 "there. If you click on a square with a number and you have placed precisely "
@@ -355,16 +360,16 @@ msgstr ""
 "Um ein Feld als vermint zu markieren, klicken Sie mit der rechten Maustaste "
 "darauf und es erscheint eine Fahne. Wenn Sie auf ein Feld mit einer Nummer "
 "klicken und Sie genau die richtige Anzahl an Fahnen auf angrenzenden Feldern "
-"gesetzt haben, werden die verbleibenden Felder aufgedeckt. Wenn Sie die Felder "
-"nicht richtig markiert haben, gibt es eine Explosion und das Spiel ist "
+"gesetzt haben, werden die verbleibenden Felder aufgedeckt. Wenn Sie die "
+"Felder nicht richtig markiert haben, gibt es eine Explosion und das Spiel ist "
 "vorüber. Klicken Sie auf Felder ohne angrenzende Minen (d.h. Felder ohne "
 "Beschriftung), werden die angrenzenden Felder automatisch aufgedeckt."
 
-#: C/gnomine.xml:158(title)
+#: C/gnomine.xml:160(title)
 msgid "Important information."
 msgstr "Wichtiger Hinweis."
 
-#: C/gnomine.xml:165(para)
+#: C/gnomine.xml:167(para)
 msgid ""
 "You are being timed. To be good at this game you have to work both quickly "
 "and correctly. Once you have found all the mines and revealed all the un-"
@@ -376,7 +381,7 @@ msgstr ""
 "unverminten Felder aufgedeckt haben, wird die Uhr angehalten. Ihre Punktzahl "
 "ist die Zeit, die sie gebraucht haben; je kürzer desto besser."
 
-#: C/gnomine.xml:172(para)
+#: C/gnomine.xml:174(para)
 msgid ""
 "The time you have taken is displayed on the bottom right of the window. "
 "Beside it, on the left, is a count of the number of mines you have cleared "
@@ -386,15 +391,15 @@ msgstr ""
 "wird die Anzahl der gefundenen Minen und die Gesamtzahl der Minen auf dem "
 "Spielfeld angezeigt."
 
-#: C/gnomine.xml:179(title)
+#: C/gnomine.xml:181(title)
 msgid "The yellow face shows you how well you are going."
 msgstr "Das gelbe Gesicht zeigt an, wie gut Sie spielen."
 
-#: C/gnomine.xml:192(title)
+#: C/gnomine.xml:194(title)
 msgid "The Details"
 msgstr "Die Feinheiten"
 
-#: C/gnomine.xml:194(para)
+#: C/gnomine.xml:196(para)
 msgid ""
 "This section provides information on the controls and the important menu "
 "items. If you need help figuring where the mines are, see the <link linkend="
@@ -404,11 +409,11 @@ msgstr ""
 "Hilfe benötigen, um herauszufinden wo die Minen sind, lesen Sie im <link "
 "linkend=\"strategy\">Abschnitt Strategie</link> weiter."
 
-#: C/gnomine.xml:201(title)
+#: C/gnomine.xml:203(title)
 msgid "The Goal"
 msgstr "Ziel des Spiels"
 
-#: C/gnomine.xml:203(para)
+#: C/gnomine.xml:205(para)
 msgid ""
 "Starting from an ocean of squares with unknown contents you must mark all the "
 "squares with mines and reveal all the clear squares. You don't actually have "
@@ -416,13 +421,13 @@ msgid ""
 "have cleared all the un-mined squares, any remaining mined squares will be "
 "marked for you."
 msgstr ""
-"Ausgehend von einem Ozean voller Felder mit unbekanntem Inhalt, müssen Sie alle "
-"verminten Felder markieren und die unverminten aufdecken. Eigentlich "
+"Ausgehend von einem Ozean voller Felder mit unbekanntem Inhalt, müssen Sie "
+"alle verminten Felder markieren und die unverminten aufdecken. Eigentlich "
 "müssen Sie die verminten Felder nicht markieren, aber es ist viel einfacher, "
-"wenn Sie es tun. Sobald Sie alle unverminten Felder aufgedeckt haben, werden alle "
-"verbleibenden verminten Felder für Sie markiert."
+"wenn Sie es tun. Sobald Sie alle unverminten Felder aufgedeckt haben, werden "
+"alle verbleibenden verminten Felder für Sie markiert."
 
-#: C/gnomine.xml:212(para)
+#: C/gnomine.xml:214(para)
 msgid ""
 "If you left click on a mine, or auto-clear a square with a mine in it you "
 "lose. To help prevent accidents, you aren't allowed to auto-clear around a "
@@ -434,31 +439,31 @@ msgstr ""
 "können Sie die angrenzenden Felder nur dann automatisch aufdecken, wenn die "
 "Anzahl der markierten Minen der Nummer auf dem Feld entspricht."
 
-#: C/gnomine.xml:222(title)
+#: C/gnomine.xml:224(title)
 msgid "Using the Mouse"
 msgstr "Verwendung der Maus"
 
-#: C/gnomine.xml:229(entry)
+#: C/gnomine.xml:231(entry)
 msgid "Action"
 msgstr "Aktion"
 
-#: C/gnomine.xml:229(entry)
+#: C/gnomine.xml:231(entry)
 msgid "Result"
 msgstr "Ergebnis"
 
-#: C/gnomine.xml:234(entry)
+#: C/gnomine.xml:236(entry)
 msgid "Left click on an un-revealed square."
 msgstr "Linksklick auf ein verdecktes Feld."
 
-#: C/gnomine.xml:235(entry)
+#: C/gnomine.xml:237(entry)
 msgid "Reveals the contents of that square. For better or for worse."
 msgstr "Deckt den Inhalt des Felds auf, egal ob es gut oder schlecht ausgeht."
 
-#: C/gnomine.xml:239(entry)
+#: C/gnomine.xml:241(entry)
 msgid "Left click in a revealed square."
 msgstr "Linksklick auf ein aufgedecktes Feld."
 
-#: C/gnomine.xml:240(entry)
+#: C/gnomine.xml:242(entry)
 msgid ""
 "Auto-clear. Reveals the unmarked squares around the clicked square, but only "
 "if enough squares have been marked to match the number in the square."
@@ -467,18 +472,18 @@ msgstr ""
 "Feld auf, aber nur wenn so viele angrenzende Felder markiert sind, dass es "
 "der Zahl im Feld entspricht."
 
-#: C/gnomine.xml:246(entry)
+#: C/gnomine.xml:248(entry)
 msgid "Right click on an un-revealed square."
 msgstr "Rechtsklick auf ein verdecktes Feld."
 
-#: C/gnomine.xml:247(entry)
+#: C/gnomine.xml:249(entry)
 msgid ""
 "Marks the square as a mine. If it is already marked, the mark will be removed."
 msgstr ""
 "Markiert das Feld als vermint. Wenn das Feld bereits markiert ist, wird die "
 "Markierung entfernt."
 
-#: C/gnomine.xml:254(para)
+#: C/gnomine.xml:256(para)
 msgid ""
 "If you are used to the more traditional mouse controls, don't worry, they "
 "still work."
@@ -486,11 +491,11 @@ msgstr ""
 "Wenn Sie die traditionelle Maussteuerung gewohnt sind, ist das kein Problem, "
 "sie funktioniert auch noch."
 
-#: C/gnomine.xml:259(title)
+#: C/gnomine.xml:261(title)
 msgid "Game Size and Difficulty"
 msgstr "Feldgröße und Schwierigkeitsgrad"
 
-#: C/gnomine.xml:261(para)
+#: C/gnomine.xml:263(para)
 msgid ""
 "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
 "guimenuitem></menuchoice> from the menu you can change the size of the games. "
@@ -503,11 +508,11 @@ msgstr ""
 "Konzentration. Kleinere Felder sind schneller. Es gibt kleine, mittlere, "
 "große und benutzerdefinierte Feldgrößen."
 
-#: C/gnomine.xml:271(title)
+#: C/gnomine.xml:273(title)
 msgid "The preferences dialog."
 msgstr "Der Einstellungsdialog."
 
-#: C/gnomine.xml:278(para)
+#: C/gnomine.xml:280(para)
 msgid ""
 "On the right hand side of the dialog there are three parameters for "
 "controlling the custom size. Horizontal and Vertical are the width and height "
@@ -519,15 +524,16 @@ msgstr ""
 "Auf der rechten Seite des Fensters gibt es drei Einträge, die die "
 "benutzerdefinierte Größe bestimmen. Horizontal und Vertikal sind die Breite "
 "und Höhe des gewünschten Gitters in Feldern. Die Anzahl der Minen ist "
-"natürlich die Anzahl der Minen, die Sie finden müssen. Wenn diese Zahl zu hoch "
-"oder zu niedrig eingestellt wird, wird das Spiel sehr einfach. Die Obergrenze "
-"für die Anzahl der Minen liegt leicht unter der Gesamtzahl der Felder."
+"natürlich die Anzahl der Minen, die Sie finden müssen. Wenn diese Zahl zu "
+"hoch oder zu niedrig eingestellt wird, wird das Spiel sehr einfach. Die "
+"Obergrenze für die Anzahl der Minen liegt leicht unter der Gesamtzahl der "
+"Felder."
 
-#: C/gnomine.xml:291(title)
+#: C/gnomine.xml:293(title)
 msgid "\"I'm not sure\" Flags"
 msgstr "»Ich bin mir nicht sicher«-Fahnen"
 
-#: C/gnomine.xml:300(para)
+#: C/gnomine.xml:302(para)
 msgid ""
 "There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
 "flags. If you enable this then, when right-clicking on a square, it cycles "
@@ -537,27 +543,26 @@ msgid ""
 "These flags have no effect on the game; you still have to use the appropriate "
 "number of red marker flags to be able to clear around a numbered square."
 msgstr ""
-"Es gibt im Einstellungsdialog ein Ankreuzfeld, das »Ich bin mir nicht "
-"sicher«-Fahnen verwenden heißt. Wenn es aktiviert ist, wechselt das Symbol "
-"bei Rechtsklick auf ein Feld zwischen den normalen Fahnen, die ein vermintes "
-"Feld markieren, einer Fahne mit einem Fragezeichen darauf und keiner Fahne. "
-"Diese neue Fahne ist eine Denkhilfe, mit der Sie die Felder markieren, unter "
-"denen Sie eine Mine vermuten, sich aber nicht sicher sind. Diese Fahnen haben "
-"keinen Einfluss auf das Spiel; Sie müssen immer noch die richtige Anzahl roter "
-"Fahnen verwenden um die Felder um ein beschriftetes Feld automatisch "
+"Es gibt im Einstellungsdialog ein Ankreuzfeld, das »Ich bin mir nicht sicher«-"
+"Fahnen verwenden heißt. Wenn es aktiviert ist, wechselt das Symbol bei "
+"Rechtsklick auf ein Feld zwischen den normalen Fahnen, die ein vermintes Feld "
+"markieren, einer Fahne mit einem Fragezeichen darauf und keiner Fahne. Diese "
+"neue Fahne ist eine Denkhilfe, mit der Sie die Felder markieren, unter denen "
+"Sie eine Mine vermuten, sich aber nicht sicher sind. Diese Fahnen haben "
+"keinen Einfluss auf das Spiel; Sie müssen immer noch die richtige Anzahl "
+"roter Fahnen verwenden um die Felder um ein beschriftetes Feld automatisch "
 "aufzudecken."
 
-#: C/gnomine.xml:314(title)
+#: C/gnomine.xml:316(title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 msgstr ""
-"Die Abfolge der Fahnen wenn »Ich bin mir nicht sicher«-Fahnen aktiviert "
-"sind."
+"Die Abfolge der Fahnen wenn »Ich bin mir nicht sicher«-Fahnen aktiviert sind."
 
-#: C/gnomine.xml:324(title)
+#: C/gnomine.xml:326(title)
 msgid "Use \"Too many flags\" warning"
 msgstr "»Zu viele Fahnen«-Warnung verwenden"
 
-#: C/gnomine.xml:326(para)
+#: C/gnomine.xml:328(para)
 msgid ""
 "The other check-box in the properties dialog is entitled Use \"Too many flags"
 "\" warning. This feature will show you a warning when you have placed too "
@@ -569,11 +574,11 @@ msgstr ""
 "wurden. Sie ist standardmäßig deaktiviert, weil sie so viel verrät, dass man "
 "es als Betrug ansehen könnte."
 
-#: C/gnomine.xml:337(title)
+#: C/gnomine.xml:339(title)
 msgid "Hints"
 msgstr "Hinweise"
 
-#: C/gnomine.xml:339(para)
+#: C/gnomine.xml:341(para)
 msgid ""
 "If you get stuck - it is reasonably common to end up with two options that "
 "you can't logically resolve - then you can either guess, or ask for a hint. "
@@ -591,11 +596,11 @@ msgstr ""
 "wenn Sie sich einen Hinweis geben lassen, werden auf die Zeit zehn Sekunden "
 "aufgeschlagen."
 
-#: C/gnomine.xml:353(title)
+#: C/gnomine.xml:355(title)
 msgid "High Scores"
 msgstr "Ergebnisse"
 
-#: C/gnomine.xml:355(para)
+#: C/gnomine.xml:357(para)
 msgid ""
 "If your score is in the top ten you will be shown the list of top scores and "
 "have an opportunity to change the name recorded in the high score table. You "
@@ -610,11 +615,11 @@ msgstr ""
 "<guimenu>Spiel</guimenu> wählen. Im Auswahlfeld an der Oberseite des Fensters "
 "können Sie sich die Ergebnisse der anderen Feldgrößen anzeigen lassen."
 
-#: C/gnomine.xml:365(title)
+#: C/gnomine.xml:367(title)
 msgid "The high scores dialog."
 msgstr "Die Ergebnisliste."
 
-#: C/gnomine.xml:373(para)
+#: C/gnomine.xml:375(para)
 msgid ""
 "The high score for the custom size is usually meaningless. Any other player "
 "can make the game size smaller and get a better time. If you only ever play "
@@ -627,11 +632,11 @@ msgstr ""
 "zeigt Ihnen die Ergebnisliste, wie gut Sie spielen. Das ist der einzige Grund "
 "dafür, dass diese Liste noch geführt wird."
 
-#: C/gnomine.xml:381(title)
+#: C/gnomine.xml:383(title)
 msgid "Window Size"
 msgstr "Fenstergröße"
 
-#: C/gnomine.xml:383(para)
+#: C/gnomine.xml:385(para)
 msgid ""
 "Resizing the window makes the squares bigger or smaller to suit. If you want "
 "to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
@@ -644,11 +649,11 @@ msgstr ""
 "<guimenu>Einstellungen</guimenu>. Sie können auch <keycap>F11</keycap> "
 "verwenden um den bildschirmfüllenden Modus an- und auszuschalten."
 
-#: C/gnomine.xml:392(title)
+#: C/gnomine.xml:394(title)
 msgid "Pausing the Game"
 msgstr "Das Spiel unterbrechen"
 
-#: C/gnomine.xml:394(para)
+#: C/gnomine.xml:396(para)
 msgid ""
 "The game can be paused automatically when you start using another window, or "
 "paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
@@ -662,26 +667,26 @@ msgstr ""
 "dass Sie nicht vorausplanen können, während die Uhr nicht läuft. Um "
 "weiterzuspielen, klicken Sie auf die Schaltfläche »Spiel fortsetzen«."
 
-#: C/gnomine.xml:408(title)
+#: C/gnomine.xml:410(title)
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/gnomine.xml:410(para)
+#: C/gnomine.xml:412(para)
 msgid ""
 "The first half of this section explains the very basics of deducing where "
 "mines are. If you are familiar with how to play the game skip down to the "
 "<link linkend=\"advanced\">Advanced Situations</link> subsection."
 msgstr ""
-"Die erste Hälfte dieses Abschnitts erklärt die Grundlagen, wie Sie herauszufinden können,"
-"wo die Minen sind. Wenn Sie mit den Spielregeln vertraut sind, lesen Sie im "
-"Abschnitt <link linkend=\"advanced\">Situationen für Fortgeschrittene</link> "
-"weiter."
+"Die erste Hälfte dieses Abschnitts erklärt die Grundlagen, wie Sie "
+"herausfinden können,wo die Minen sind. Wenn Sie mit den Spielregeln vertraut "
+"sind, lesen Sie im Abschnitt <link linkend=\"advanced\">Situationen für "
+"Fortgeschrittene</link> weiter."
 
-#: C/gnomine.xml:417(title)
+#: C/gnomine.xml:419(title)
 msgid "The Basics"
 msgstr "Grundlagen"
 
-#: C/gnomine.xml:418(para)
+#: C/gnomine.xml:420(para)
 msgid ""
 "These are a few basic situations which should be incredibly obvious, but if "
 "you're struggling with how to play the game, they should be useful. The first "
@@ -694,11 +699,11 @@ msgstr ""
 "Feld haben und die meisten angrenzenden Felder mit 1 beschriftet sind. Dann "
 "ist dieses verdeckte Feld eine Mine."
 
-#: C/gnomine.xml:427(title)
+#: C/gnomine.xml:429(title)
 msgid "The simplest case."
 msgstr "Der einfachste Fall."
 
-#: C/gnomine.xml:433(para)
+#: C/gnomine.xml:435(para)
 msgid ""
 "The next simplest case is where you have two covered squares adjacent to each "
 "other and both squares on one side are marked with a 2. If they have no other "
@@ -709,26 +714,26 @@ msgstr ""
 "sind. Wenn diese Felder keine weiteren verdeckten Nachbarfelder haben, dann "
 "sind beide Felder Minen."
 
-#: C/gnomine.xml:441(title)
+#: C/gnomine.xml:443(title)
 msgid "The two mine case."
 msgstr "Der Zwei-Minen-Fall."
 
-#: C/gnomine.xml:447(para)
+#: C/gnomine.xml:449(para)
 msgid ""
 "Finally, when there are three uncovered squares in a row and the clear square "
 "beside the middle one is a 3 (once again this square should have no other "
 "neighbors) then all three are mines."
 msgstr ""
 "Schließlich gibt es den Fall, bei dem drei verdeckte Felder nebeneinander "
-"sind und das aufgedeckte Feld in der Mitte der dreien ist mit einer 3 "
+"liegen und das aufgedeckte Feld in der Mitte der dreien ist mit einer 3 "
 "beschriftet (auch hier sollte dieses Feld keine verdeckten Nachbarfelder "
 "haben). In dem Fall sind alle drei Felder Minen."
 
-#: C/gnomine.xml:454(title)
+#: C/gnomine.xml:456(title)
 msgid "The three mine case."
 msgstr "Der Drei-Minen-Fall."
 
-#: C/gnomine.xml:460(para)
+#: C/gnomine.xml:462(para)
 msgid ""
 "These are the simplest cases. Other permutations on these simple situations "
 "are possible, for example the three squares in the previous example could be "
@@ -738,7 +743,7 @@ msgstr ""
 "Situationen sind möglich, zum Beispiel könnten die drei Felder im "
 "vorhergehenden Beispiel ein L bilden."
 
-#: C/gnomine.xml:465(para)
+#: C/gnomine.xml:467(para)
 msgid ""
 "Simple analysis will solve most of the puzzle, but not all. Before going on "
 "to the next sections, where we give you more advanced hints, you should play "
@@ -746,14 +751,14 @@ msgid ""
 msgstr ""
 "Einfaches Nachdenken wird den Großteil des Puzzles lösen, aber nicht alles. "
 "Bevor Sie die nächsten Abschnitte lesen, in denen wir komplexere Hinweise "
-"geben, sollten Sie eine Weile spielen und sehen was Sie selbst herausfinden "
+"geben, sollten Sie eine Weile spielen und sehen, was Sie selbst herausfinden "
 "können."
 
-#: C/gnomine.xml:474(title)
+#: C/gnomine.xml:476(title)
 msgid "Advanced Situations"
 msgstr "Situationen für Fortgeschrittene"
 
-#: C/gnomine.xml:476(para)
+#: C/gnomine.xml:478(para)
 msgid ""
 "These are some more complicated situations. They are a bit of a step up from "
 "the last section, so we hope you took our advice and played for a bit first."
@@ -762,7 +767,7 @@ msgstr ""
 "die im letzten Abschnitt, also sind Sie hoffentlich unserem Rat gefolgt und "
 "haben erst etwas gespielt."
 
-#: C/gnomine.xml:482(para)
+#: C/gnomine.xml:484(para)
 msgid ""
 "In the example below the mines are to the left of the ones. We figure this "
 "out by a process of elimination. If the square to the left of the 2 was a "
@@ -772,17 +777,17 @@ msgid ""
 "squares we require for the 2 so they are both mined."
 msgstr ""
 "Im untenstehenden Beispiel sind die Minen links neben den Einsen. Dies können "
-"Sie im Ausschlussverfahren herausfinden. Wenn das Feld links eine Zwei wäre, dann "
-"hätten beide Einsen schon ihre Höchstzahl an Minen und es wäre kein Feld mehr "
-"frei für die zweite Mine, die an die Zwei angrenzen soll (weil sie auch an "
-"die Einsen angrenzen würde). Da nun das mittlere Feld ausgeschlossen ist, "
+"Sie im Ausschlussverfahren herausfinden. Wenn das Feld links eine Zwei wäre, "
+"dann hätten beide Einsen schon ihre Höchstzahl an Minen und es wäre kein Feld "
+"mehr frei für die zweite Mine, die an die Zwei angrenzen soll (weil sie auch "
+"an die Einsen angrenzen würde). Da nun das mittlere Feld ausgeschlossen ist, "
 "bleiben noch zwei Felder für zwei Minen, also sind beide vermint."
 
-#: C/gnomine.xml:493(title)
+#: C/gnomine.xml:495(title)
 msgid "A not-so-obvious pattern."
 msgstr "Ein nicht so offensichtliches Muster."
 
-#: C/gnomine.xml:499(para)
+#: C/gnomine.xml:501(para)
 msgid ""
 "This situation can be disguised, for example consider the figure below. It is "
 "the same situation, but the extra mined square on the right has increased all "
@@ -792,11 +797,11 @@ msgstr ""
 "Abbildung unten. Es ist die gleiche Situation, aber das zusätzliche verminte "
 "Feld rechts hat alle Zahlen um eins erhöht."
 
-#: C/gnomine.xml:506(title)
+#: C/gnomine.xml:508(title)
 msgid "The extra mine disguises a copy of the previous example."
 msgstr "Die zusätzliche Mine verschleiert das vorherige Beispiel."
 
-#: C/gnomine.xml:512(para)
+#: C/gnomine.xml:514(para)
 msgid ""
 "Now we're going to try a complicated example. It illustrates two points. The "
 "first is that even if you aren't sure which squares are mined, restricting "
@@ -808,7 +813,7 @@ msgstr ""
 "Sie nicht sicher wissen, welche Felder vermint sind. Der zweite Punkt ist, "
 "dass es beinahe so gut ist zu wissen, welche Felder nicht vermint sind wie zu "
 
-#: C/gnomine.xml:520(para)
+#: C/gnomine.xml:522(para)
 msgid ""
 "Assume that, in the figure below, we start off knowing that the top left "
 "square is mined and so the two squares marked 2 on the left only require one "
@@ -837,11 +842,11 @@ msgstr ""
 "Minen sein müssen. Das verrät uns nicht nur welche Minen die Vier umgeben, "
 "sondern auch welches der Felder, die an die Zwei angrenzen, vermint ist."
 
-#: C/gnomine.xml:537(title)
+#: C/gnomine.xml:539(title)
 msgid "As tricky as it gets."
 msgstr "So verzwickt kann es werden."
 
-#: C/gnomine.xml:544(para)
+#: C/gnomine.xml:546(para)
 msgid ""
 "This sort of situation is tricky. In all the other examples you can learn to "
 "look for patterns and avoid thinking hard. Situations like the one in the "
@@ -856,21 +861,21 @@ msgstr ""
 "ignorieren und an einer anderen Stelle weiterzuspielen, in der Hoffnung, dass "
 "Sie die Felder von der anderen Seite her aufdecken können."
 
-#: C/gnomine.xml:556(title)
+#: C/gnomine.xml:558(title)
 msgid "Tips"
 msgstr "Tipps"
 
-#: C/gnomine.xml:558(para)
+#: C/gnomine.xml:560(para)
 msgid ""
 "Remember, the edge of the board is just the same as a large cleared area (but "
 "without the numbers). Often working at the edge of the board is the easiest "
 "way forward."
 msgstr ""
-"Denken Sie daran, dass der Rand des Spielfelds genauso zählt wie ein großer "
+"Denken Sie daran, dass der Rand des Spielfeldes genauso zählt wie ein großer "
 "aufgedeckter Bereich (aber ohne Zahlen). Oftmals ist der einfachste Weg zum "
-"Ziel am Rand des Spielfelds zu arbeiten."
+"Ziel, am Rand des Spielfeldes zu arbeiten."
 
-#: C/gnomine.xml:564(para)
+#: C/gnomine.xml:566(para)
 msgid ""
 "Sometimes you end up in a situation where there is no way to deduce what the "
 "configuration is. In these cases you either have to guess or use the hint "
@@ -885,7 +890,7 @@ msgstr ""
 "Chancen dabei nicht 50/50, und anstatt einen Hinweis zu nehmen, setzen Sie "
 "vielleicht lieber auf die wahrscheinlichste Möglichkeit."
 
-#: C/gnomine.xml:573(para)
+#: C/gnomine.xml:575(para)
 msgid ""
 "One final hint: remember the counter on the bottom left of the window that "
 "tells you how many mines you have left? Often, near the end of the game, this "
@@ -897,11 +902,11 @@ msgstr ""
 "diese Zahl gegen Ende des Spiels dabei helfen herauszufinden, wo Minen sein "
 "können. Wie das geht, müssen Sie selbst herausfinden."
 
-#: C/gnomine.xml:585(title)
+#: C/gnomine.xml:587(title)
 msgid "Authors"
 msgstr "Autoren"
 
-#: C/gnomine.xml:586(para)
+#: C/gnomine.xml:588(para)
 msgid ""
 "<application>GNOME Mines</application> was written by Pista "
 "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
@@ -917,14 +922,14 @@ msgstr ""
 "geschrieben und basiert auf einem früheren Handbuch von Tim Riehle "
 "(<email>tkriehle@citilink.com</email>). Um einen Fehler zu melden oder einen "
 "Vorschlag zu dieser Anwendung oder diesem Handbuch zu machen, folgen Sie den "
-"Hinweisen unter <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Dokument</"
-"ulink>."
+"Hinweisen in diesem <ulink url=\"ghelp:gnome-feedback\" type=\"help"
+"\">Dokument</ulink>."
 
-#: C/gnomine.xml:602(title)
+#: C/gnomine.xml:604(title)
 msgid "License"
 msgstr "Lizenz"
 
-#: C/gnomine.xml:603(para)
+#: C/gnomine.xml:605(para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it under "
 "the terms of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
@@ -939,7 +944,7 @@ msgstr ""
 "ulink> veröffentlicht wurde; entweder in Version 2 der Lizenz oder (nach "
 "Ihrer Wahl) jeder neueren Version."
 
-#: C/gnomine.xml:611(para)
+#: C/gnomine.xml:613(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
@@ -952,7 +957,7 @@ msgstr ""
 "<citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public "
 "License</ulink></citetitle> für genauere Hinweise."
 
-#: C/gnomine.xml:617(para)
+#: C/gnomine.xml:619(para)
 msgid ""
 "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
 "General Public License</ulink></citetitle> is included as an appendix to the "
@@ -978,6 +983,9 @@ msgstr ""
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: C/gnomine.xml:0(None)
 msgid "translator-credits"
-msgstr "Florian Purucker <florian@purucker.net>, 2007.\n"
+msgstr ""
+"Florian Purucker <florian@purucker.net>, 2007.\n"
 "Mario Blättermann <mario.blaettermann@t-online.de, 2008."
 
+#~ msgid "GNOME Mines is a variation of the popular logic puzzle minesweeper."
+#~ msgstr "Minen ist eine Ausgabe des beliebten Logikpuzzles Minesweeper."
