@@ -36,6 +36,7 @@
 #include <games-scores-dialog.h>
 #include <games-stock.h>
 #include <games-conf.h>
+#include <games-runtime.h>
 
 #define APP_NAME "gnomine"
 #define APP_NAME_LONG N_("Mines")
@@ -977,7 +978,10 @@ main (int argc, char *argv[])
   bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
   textdomain (GETTEXT_PACKAGE);
 
-  context = g_option_context_new ("");
+  if (!games_runtime_init ("gnomine"))
+    return 1;
+
+  context = g_option_context_new (NULL);
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 
   program = gnome_program_init (APP_NAME, VERSION, LIBGNOMEUI_MODULE,
@@ -1154,6 +1158,8 @@ main (int argc, char *argv[])
   gnome_accelerators_sync ();
 
   g_object_unref (program);
+
+  games_runtime_shutdown ();
 
   return 0;
 }
