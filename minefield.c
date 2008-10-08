@@ -231,14 +231,14 @@ gtk_minefield_setup_signs (GtkMineField * mfield)
       GTK_WINDOW (gtk_widget_get_toplevel (GTK_WIDGET (mfield)));
     warning_dialog =
       gtk_message_dialog_new (parent, GTK_DIALOG_MODAL, GTK_MESSAGE_ERROR,
-			      GTK_BUTTONS_NONE, _("Could not load images"));
+			      GTK_BUTTONS_NONE, "%s", _("Could not load images"));
 
     gtk_dialog_add_button (GTK_DIALOG (warning_dialog),
 			   GTK_STOCK_QUIT, GTK_RESPONSE_CLOSE);
 
     gtk_message_dialog_format_secondary_text (GTK_MESSAGE_DIALOG
 					      (warning_dialog),
-					      warning_message);
+					      "%s", warning_message);
     g_signal_connect (warning_dialog, "response", G_CALLBACK (gtk_main_quit),
 		      NULL);
     gtk_widget_show (warning_dialog);
