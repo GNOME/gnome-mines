@@ -24,19 +24,21 @@
  */
 
 #include <config.h>
+
+#include <string.h>
+
 #include <gnome.h>
 #include <glib/gi18n.h>
-#include <string.h>
-/*#include <gst/gst.h>*/
+
+#include <libgames-support/games-clock.h>
+#include <libgames-support/games-conf.h>
+#include <libgames-support/games-frame.h>
+#include <libgames-support/games-runtime.h>
+#include <libgames-support/games-scores.c>
+#include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-stock.h>
 
 #include "minefield.h"
-#include <games-clock.h>
-#include <games-frame.h>
-#include <games-scores.c>
-#include <games-scores-dialog.h>
-#include <games-stock.h>
-#include <games-conf.h>
-#include <games-runtime.h>
 
 #define APP_NAME "gnomine"
 #define APP_NAME_LONG N_("Mines")
@@ -122,11 +124,12 @@ image_widget_setup (char *name)
 {
   GtkWidget *image = NULL;
   char *filename = NULL;
+  const char *dname;
 
   image = gtk_image_new ();
-  filename = gnome_program_locate_file (NULL,
-					GNOME_FILE_DOMAIN_APP_PIXMAP, name,
-					TRUE, NULL);
+  dname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
+  filename = g_build_filename (dname, name, NULL);
+
   if (filename != NULL)
     gtk_image_set_from_file (GTK_IMAGE (image), filename);
 
@@ -932,7 +935,6 @@ save_state (GnomeClient * client,
 
   return TRUE;
 }
-
 
 
 static int xpos = -1, ypos = -1;
@@ -1046,7 +1048,8 @@ main (int argc, char *argv[])
   gtk_rc_parse_string
     ("style \"gnomine\" { GtkButton::interior-focus = 0 } class \"GtkButton\" style \"gnomine\"");
 
-  window = gnome_app_new (APP_NAME, APP_NAME_LONG);
+  window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+  gtk_window_set_title (GTK_WINDOW (window), _(APP_NAME_LONG));
     
   games_conf_add_window (GTK_WINDOW (window), NULL);
 
@@ -1063,7 +1066,8 @@ main (int argc, char *argv[])
 
   all_boxes = gtk_vbox_new (FALSE, 0);
 
-  gnome_app_set_contents (GNOME_APP (window), all_boxes);
+  gtk_container_add (GTK_CONTAINER (window), all_boxes);
+
   ui_manager = create_ui_manager ("GnomineActions");
   accel_group = gtk_ui_manager_get_accel_group (ui_manager);
   gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
@@ -1084,11 +1088,11 @@ main (int argc, char *argv[])
   face_box = gtk_vbox_new (FALSE, 5);
   gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 
-  pm_win = image_widget_setup ("gnomine/face-win.svg");
-  pm_sad = image_widget_setup ("gnomine/face-sad.svg");
-  pm_smile = image_widget_setup ("gnomine/face-smile.svg");
-  pm_cool = image_widget_setup ("gnomine/face-cool.svg");
-  pm_worried = image_widget_setup ("gnomine/face-worried.svg");
+  pm_win = image_widget_setup ("face-win.svg");
+  pm_sad = image_widget_setup ("face-sad.svg");
+  pm_smile = image_widget_setup ("face-smile.svg");
+  pm_cool = image_widget_setup ("face-cool.svg");
+  pm_worried = image_widget_setup ("face-worried.svg");
 
   gtk_box_pack_start (GTK_BOX (face_box), pm_win, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (face_box), pm_sad, FALSE, FALSE, 0);
@@ -1140,7 +1144,7 @@ main (int argc, char *argv[])
   gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE, 0);
 
   status_box = gtk_hbox_new (TRUE, 0);
-  gtk_box_pack_start (GTK_BOX (box), status_box, FALSE, FALSE, GNOME_PAD);
+  gtk_box_pack_start (GTK_BOX (box), status_box, FALSE, FALSE, 8);
 
   flabel = gtk_label_new ("");
   gtk_box_pack_start (GTK_BOX (status_box), flabel, FALSE, FALSE, 0);
@@ -1175,8 +1179,6 @@ main (int argc, char *argv[])
   gtk_main ();
     
   games_conf_shutdown ();
-
-  gnome_accelerators_sync ();
 
   g_object_unref (program);
 

@@ -23,11 +23,17 @@
  * USA
  */
 
+#include <config.h>
+
 #include <time.h>
+
+#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
-#include <gnome.h>
-#include <games-preimage.h>
+
+#include <libgames-support/games-runtime.h>
+#include <libgames-support/games-preimage.h>
+
 #include "minefield.h"
 
 /* Auxillary data so we can use a single index to reference
@@ -187,26 +193,13 @@ gtk_minefield_setup_signs (GtkMineField * mfield)
   static GtkWidget *warning_dialog = NULL;
   static gchar *warning_message = NULL;
   gchar *flagfile, *minefile, *questionfile, *bangfile, *warningfile;
+  const char *dname = games_runtime_get_directory (GAMES_RUNTIME_GAME_PIXMAP_DIRECTORY);
 
-  flagfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-					"gnomine/flag.svg", TRUE, NULL);
-  minefile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-					"gnomine/mine.svg", TRUE, NULL);
-  questionfile =
-    gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-			       "gnomine/flag-question.svg", TRUE, NULL);
-
-  bangfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-					"gnomine/bang.svg", TRUE, NULL);
-
-  warningfile = gnome_program_locate_file (NULL, GNOME_FILE_DOMAIN_APP_PIXMAP,
-					   "gnomine/warning.svg", TRUE, NULL);
-
-  setup_sign (&mfield->flag, flagfile, mfield->minesize);
-  setup_sign (&mfield->mine, minefile, mfield->minesize);
-  setup_sign (&mfield->question, questionfile, mfield->minesize);
-  setup_sign (&mfield->bang, bangfile, mfield->minesize);
-  setup_sign (&mfield->warning, warningfile, mfield->minesize);
+  flagfile = g_build_filename (dname, "flag.svg", NULL);
+  minefile = g_build_filename (dname, "mine.svg", NULL);
+  questionfile = g_build_filename (dname, "flag-question.svg", NULL);
+  bangfile = g_build_filename (dname, "bang.svg", NULL);
+  warningfile = g_build_filename (dname, "warning.svg", NULL);
 
   if ((!flagfile || !minefile || !questionfile || !bangfile || !warningfile)
       && (warning_message == NULL)) {
@@ -214,6 +207,18 @@ gtk_minefield_setup_signs (GtkMineField * mfield)
       _
       ("Unable to find required images.\n\nPlease check your gnome-games installation.");
   }
+
+  setup_sign (&mfield->flag, flagfile, mfield->minesize);
+  setup_sign (&mfield->mine, minefile, mfield->minesize);
+  setup_sign (&mfield->question, questionfile, mfield->minesize);
+  setup_sign (&mfield->bang, bangfile, mfield->minesize);
+  setup_sign (&mfield->warning, warningfile, mfield->minesize);
+
+  g_free(flagfile);
+  g_free(minefile);
+  g_free(questionfile);
+  g_free(bangfile);
+  g_free(warningfile);
 
   if ((!mfield->flag.preimage ||
        !mfield->mine.preimage ||

@@ -25,7 +25,7 @@ schema_in_files = gnomine.schemas.in
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
 @INTLTOOL_SCHEMAS_RULE@
 
-pixmapdir   = $(datadir)/pixmaps/gnomine/
+pixmapdir   = $(datadir)/gnome-games/gnomine/pixmaps
 pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg 	\
 	face-worried.svg \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
