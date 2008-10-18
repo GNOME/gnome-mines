@@ -27,8 +27,8 @@
 
 #include <string.h>
 
-#include <gnome.h>
 #include <glib/gi18n.h>
+#include <gtk/gtk.h>
 
 #include <libgames-support/games-clock.h>
 #include <libgames-support/games-conf.h>
@@ -37,6 +37,10 @@
 #include <libgames-support/games-scores.c>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-stock.h>
+
+#ifdef WITH_SMCLIENT
+#include <libgames-support/eggsmclient.h>
+#endif /* WITH_SMCLIENT */
 
 #include "minefield.h"
 
@@ -898,44 +902,50 @@ create_ui_manager (const gchar * group)
   return ui_manager;
 }
 
+#ifdef WITH_SMCLIENT
 static int
-save_state (GnomeClient * client,
-	    gint phase,
-	    GnomeRestartStyle save_style,
-	    gint shutdown,
-	    GnomeInteractStyle interact_style,
-	    gint fast, gpointer client_data)
+save_state_cb (EggSMClient *client,
+	    GKeyFile* keyfile,
+	    gpointer client_data)
 {
   char *argv[20];
-  int i = 0, j;
+  int argc = 0, j;
   gint xpos, ypos;
 
   gdk_window_get_origin (window->window, &xpos, &ypos);
 
-  argv[i++] = (char *) client_data;
-  argv[i++] = "-x";
-  argv[i++] = g_strdup_printf ("%d", xsize);
-  argv[i++] = "-y";
-  argv[i++] = g_strdup_printf ("%d", ysize);
-  argv[i++] = "-n";
-  argv[i++] = g_strdup_printf ("%d", nmines);
-  argv[i++] = "-f";
-  argv[i++] = g_strdup_printf ("%d", fsize);
-  argv[i++] = "-a";
-  argv[i++] = g_strdup_printf ("%d", xpos);
-  argv[i++] = "-b";
-  argv[i++] = g_strdup_printf ("%d", ypos);
+  argv[argc++] = g_get_prgname ();
+  argv[argc++] = "-x";
+  argv[argc++] = g_strdup_printf ("%d", xsize);
+  argv[argc++] = "-y";
+  argv[argc++] = g_strdup_printf ("%d", ysize);
+  argv[argc++] = "-n";
+  argv[argc++] = g_strdup_printf ("%d", nmines);
+  argv[argc++] = "-f";
+  argv[argc++] = g_strdup_printf ("%d", fsize);
+  argv[argc++] = "-a";
+  argv[argc++] = g_strdup_printf ("%d", xpos);
+  argv[argc++] = "-b";
+  argv[argc++] = g_strdup_printf ("%d", ypos);
 
-  gnome_client_set_restart_command (client, i, argv);
-  /* i.e. clone_command = restart_command - '--sm-client-id' */
-  gnome_client_set_clone_command (client, 0, NULL);
+  egg_sm_client_set_restart_command (client, argc, (const char **) argv);
 
-  for (j = 2; j < i; j += 2)
+  for (j = 2; j < argc; j += 2)
     g_free (argv[j]);
 
   return TRUE;
 }
 
+static gint
+quit_cb (EggSMClient *client,
+         gpointer client_data)
+{
+  gtk_main_quit ();
+
+  return FALSE;
+}
+
+#endif /* WITH_SMCLIENT */
 
 static int xpos = -1, ypos = -1;
 
@@ -967,7 +977,6 @@ sound_init (int *argcp, char **argvp[])
 int
 main (int argc, char *argv[])
 {
-  GnomeProgram *program;
   GOptionContext *context;
 
   GtkWidget *all_boxes;
@@ -976,9 +985,13 @@ main (int argc, char *argv[])
   GtkWidget *box;
   GtkWidget *label;
   GtkWidget *face_box;
-  GnomeClient *client;
   GtkUIManager *ui_manager;
   GtkAccelGroup *accel_group;
+  gboolean retval;
+  GError *error = NULL;
+#ifdef WITH_SMCLIENT
+  EggSMClient *sm_client;
+#endif /* WITH_SMCLIENT */
 
   static const GOptionEntry options[] = {
     {"width", 'x', 0, G_OPTION_ARG_INT, &xsize, N_("Width of grid"), N_("X")},
@@ -995,22 +1008,41 @@ main (int argc, char *argv[])
     {NULL}
   };
 
-  setgid_io_init ();
-
-  bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
-  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-  textdomain (GETTEXT_PACKAGE);
+#if defined(HAVE_GNOME) || defined(HAVE_RSVG_GNOMEVFS)
+  /* If we're going to use gnome-vfs, we need to init threads before
+   * calling any glib functions.
+   */
+  g_thread_init (NULL);
+#endif
 
   if (!games_runtime_init ("gnomine"))
     return 1;
 
+  setgid_io_init ();
+
+  bindtextdomain (GETTEXT_PACKAGE, games_runtime_get_directory (GAMES_RUNTIME_LOCALE_DIRECTORY));
+  bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+  textdomain (GETTEXT_PACKAGE);
+
   context = g_option_context_new (NULL);
+#if GLIB_CHECK_VERSION (2, 12, 0)
+  g_option_context_set_translation_domain (context, GETTEXT_PACKAGE);
+#endif
+  g_option_context_add_group (context, gtk_get_option_group (TRUE));
+#ifdef WITH_SMCLIENT
+  g_option_context_add_group (context, egg_sm_client_get_option_group ());
+#endif /* WITH_SMCLIENT */
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 
-  program = gnome_program_init (APP_NAME, VERSION, LIBGNOMEUI_MODULE,
-				argc, argv,
-				GNOME_PARAM_APP_DATADIR, DATADIR,
-				GNOME_PARAM_GOPTION_CONTEXT, context, NULL);
+  retval = g_option_context_parse (context, &argc, &argv, &error);
+  g_option_context_free (context);
+  if (!retval) {
+    g_print ("%s", error->message);
+    g_error_free (error);
+    exit (1);
+  }
+
+  g_set_application_name (_(APP_NAME_LONG));
     
   games_conf_initialise (APP_NAME);
 
@@ -1022,9 +1054,15 @@ main (int argc, char *argv[])
                     G_CALLBACK (conf_value_changed_cb), NULL);
 
   gtk_window_set_default_icon_name ("gnome-mines");
-  client = gnome_master_client ();
-  g_signal_connect (G_OBJECT (client), "save_yourself",
-		    G_CALLBACK (save_state), argv[0]);
+
+#ifdef WITH_SMCLIENT
+  sm_client = egg_sm_client_get ();
+  g_signal_connect (sm_client, "save-state",
+		    G_CALLBACK (save_state_cb), NULL);
+  g_signal_connect (sm_client, "quit",
+                    G_CALLBACK (quit_cb), NULL);
+#endif /* WITH_SMCLIENT */
+
 
   if (xsize == -1)
     xsize = games_conf_get_integer (KEY_GEOMETRY_GROUP, KEY_XSIZE, NULL);
@@ -1179,8 +1217,6 @@ main (int argc, char *argv[])
   gtk_main ();
     
   games_conf_shutdown ();
-
-  g_object_unref (program);
 
   games_runtime_shutdown ();
 
