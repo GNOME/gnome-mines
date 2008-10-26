@@ -24,6 +24,7 @@
  */
 
 #include <config.h>
+#include <stdlib.h>
 
 #include <string.h>
 
@@ -665,7 +666,7 @@ create_preferences (void)
   if (fsize == 0)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
-		    GTK_SIGNAL_FUNC (size_radio_callback),
+		    G_CALLBACK (size_radio_callback),
 		    GINT_TO_POINTER (0));
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
@@ -675,7 +676,7 @@ create_preferences (void)
   if (fsize == 1)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
-		    GTK_SIGNAL_FUNC (size_radio_callback),
+		    G_CALLBACK (size_radio_callback),
 		    GINT_TO_POINTER (1));
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
@@ -684,7 +685,7 @@ create_preferences (void)
   if (fsize == 2)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
-		    GTK_SIGNAL_FUNC (size_radio_callback),
+		    G_CALLBACK (size_radio_callback),
 		    GINT_TO_POINTER (2));
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
@@ -693,7 +694,7 @@ create_preferences (void)
   if (fsize == 3)
     gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
   g_signal_connect (GTK_OBJECT (button), "clicked",
-		    GTK_SIGNAL_FUNC (size_radio_callback),
+		    G_CALLBACK (size_radio_callback),
 		    GINT_TO_POINTER (3));
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
@@ -715,7 +716,7 @@ create_preferences (void)
 
   mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
   g_signal_connect (GTK_OBJECT (mentry), "value-changed",
-		    GTK_SIGNAL_FUNC (nmines_spin_cb), NULL);
+		    G_CALLBACK (nmines_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), nmines);
   gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, 0, 0, 0, 0);
   fix_nmines (xsize, ysize);
@@ -728,7 +729,7 @@ create_preferences (void)
 
   xentry = gtk_spin_button_new_with_range (XSIZE_MIN, XSIZE_MAX, 1);
   g_signal_connect (GTK_OBJECT (xentry), "value-changed",
-		    GTK_SIGNAL_FUNC (xsize_spin_cb), NULL);
+		    G_CALLBACK (xsize_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (xentry), xsize);
   gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, 0, 0, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label2), xentry);
@@ -740,7 +741,7 @@ create_preferences (void)
 
   yentry = gtk_spin_button_new_with_range (YSIZE_MIN, YSIZE_MAX, 1);
   g_signal_connect (GTK_OBJECT (yentry), "value-changed",
-		    GTK_SIGNAL_FUNC (ysize_spin_cb), NULL);
+		    G_CALLBACK (ysize_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (yentry), ysize);
   gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, 0, 0, 0);
   gtk_label_set_mnemonic_widget (GTK_LABEL (label2), yentry);
@@ -753,7 +754,7 @@ create_preferences (void)
   question_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"I'm not sure\" flags"));
   g_signal_connect (GTK_OBJECT (question_toggle), "toggled",
-		    GTK_SIGNAL_FUNC (use_question_toggle_cb), NULL);
+		    G_CALLBACK (use_question_toggle_cb), NULL);
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (question_toggle),
 				use_question_marks);
   gtk_widget_show (question_toggle);
@@ -764,7 +765,7 @@ create_preferences (void)
   overmine_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"Too many flags\" warning"));
   g_signal_connect (GTK_OBJECT (overmine_toggle), "toggled",
-		    GTK_SIGNAL_FUNC (use_overmine_toggle_cb), NULL);
+		    G_CALLBACK (use_overmine_toggle_cb), NULL);
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (overmine_toggle),
 				use_overmine_warning);
   gtk_widget_show (overmine_toggle);

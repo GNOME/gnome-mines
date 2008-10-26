@@ -3,7 +3,7 @@
 #define __GTK_MINEFIELD_H__
 
 #include <gdk/gdk.h>
-#include <gtk/gtkwidget.h>
+#include <gtk/gtk.h>
 #include <glib.h>
 #include <games-preimage.h>
 

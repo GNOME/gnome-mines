@@ -1171,7 +1171,7 @@ gtk_minefield_class_init (GtkMineFieldClass * class)
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
   GtkObjectClass *object_class = GTK_OBJECT_CLASS (class);
 
-  parent_class = gtk_type_class (gtk_widget_get_type ());
+  parent_class = g_type_class_peek_parent (class);
 
   widget_class->realize = gtk_minefield_realize;
   widget_class->unrealize = gtk_minefield_unrealize;
