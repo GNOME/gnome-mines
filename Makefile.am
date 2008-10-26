@@ -3,7 +3,7 @@ Gamesdir = $(datadir)/applications
 SUBDIRS = help
 
 INCLUDES = \
-	-I$(top_srcdir)/libgames-support		\
+	-I$(top_srcdir) \
 	$(WARN_CFLAGS)					\
 	$(GNOME_GAMES_CFLAGS)				\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
