@@ -1,13 +1,4 @@
-Gamesdir = $(datadir)/applications
-
 SUBDIRS = help
-
-INCLUDES = \
-	-I$(top_srcdir) \
-	$(WARN_CFLAGS)					\
-	$(GNOME_GAMES_CFLAGS)				\
-	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
-	-DDATADIR=\""$(datadir)"\" 
 
 bin_PROGRAMS = gnomine
 
@@ -16,8 +7,17 @@ gnomine_SOURCES =	\
 	minefield.h	\
 	minefield.c
 
+gnomine_CPPFLAGS = \
+	-I$(top_srcdir) \
+	$(AM_CPPFLAGS)
+
+gnomine_CFLAGS = \
+	$(WARN_CFLAGS) \
+	$(GNOME_GAMES_CFLAGS) \
+	$(AM_CFLAGS)
+
 gnomine_LDADD = \
-	../libgames-support/libgames-support.la \
+	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GNOME_GAMES_LIBS)
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
@@ -33,6 +33,7 @@ pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg 	\
 EXTRA_DIST = README AUTHORS \
 	$(schema_in_files) $(pixmap_DATA)
 
+Gamesdir = $(datadir)/applications
 Games_in_files = gnomine.desktop.in.in
 Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
