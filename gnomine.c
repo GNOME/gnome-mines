@@ -97,10 +97,10 @@ GtkAction *resume_action;
 /*GstElement *sound_player;*/
 
 static const GamesScoresCategory scorecats[] = {
-{"Small", N_("Small")},
-{"Medium", N_("gnomine|Medium")},
-{"Large", N_("Large")},
-{"Custom", N_("Custom")}
+  {"Small",  NC_("board size", "Small")  },
+  {"Medium", NC_("board size", "Medium") },
+  {"Large",  NC_("board size", "Large")  },
+  {"Custom", NC_("board size", "Custom") }
 };
 
 GamesScores *highscores;
@@ -1017,7 +1017,7 @@ main (int argc, char *argv[])
 
   highscores = games_scores_new (APP_NAME,
                                  scorecats, G_N_ELEMENTS (scorecats),
-                                 NULL, NULL,
+                                 "board size", NULL,
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_TIME_ASCENDING);
 
