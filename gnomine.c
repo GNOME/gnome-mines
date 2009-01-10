@@ -649,6 +649,8 @@ create_preferences (void)
   GtkWidget *overmine_toggle;
   GtkWidget *xentry;
   GtkWidget *yentry;
+  GSList *group;
+  int i;
 
   table = gtk_table_new (3, 2, FALSE);
   gtk_container_set_border_width (GTK_CONTAINER (table), 5);
@@ -659,41 +661,20 @@ create_preferences (void)
 
   vbox = gtk_vbox_new (FALSE, 6);
 
-  button = gtk_radio_button_new_with_label (NULL, _("Small"));
-  if (fsize == 0)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-  g_signal_connect (GTK_OBJECT (button), "clicked",
-		    G_CALLBACK (size_radio_callback),
-		    GINT_TO_POINTER (0));
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+  group = NULL;
+  for (i = 0; i < G_N_ELEMENTS (scorecats); ++i) {
+    button = gtk_radio_button_new_with_label (group, g_dpgettext2 (NULL, "board size", scorecats[i].name));
+    if (fsize == i) {
+      gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
+    }
 
-  button = gtk_radio_button_new_with_label
-    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)),
-     Q_ ("gnomine|Medium"));
-  if (fsize == 1)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-  g_signal_connect (GTK_OBJECT (button), "clicked",
-		    G_CALLBACK (size_radio_callback),
-		    GINT_TO_POINTER (1));
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+    g_signal_connect (GTK_OBJECT (button), "clicked",
+                      G_CALLBACK (size_radio_callback),
+                      GINT_TO_POINTER (i));
+    gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
-  button = gtk_radio_button_new_with_label
-    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("Large"));
-  if (fsize == 2)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-  g_signal_connect (GTK_OBJECT (button), "clicked",
-		    G_CALLBACK (size_radio_callback),
-		    GINT_TO_POINTER (2));
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
-
-  button = gtk_radio_button_new_with_label
-    (gtk_radio_button_get_group (GTK_RADIO_BUTTON (button)), _("Custom"));
-  if (fsize == 3)
-    gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
-  g_signal_connect (GTK_OBJECT (button), "clicked",
-		    G_CALLBACK (size_radio_callback),
-		    GINT_TO_POINTER (3));
-  gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+    group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (button));
+  }
 
   gtk_container_add (GTK_CONTAINER (frame), vbox);
 
