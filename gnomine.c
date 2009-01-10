@@ -38,6 +38,7 @@
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.c>
 #include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-sound.h>
 #include <libgames-support/games-stock.h>
 
 #ifdef WITH_SMCLIENT
@@ -95,17 +96,11 @@ GtkAction *resume_action;
 
 /*GstElement *sound_player;*/
 
-static const GamesScoresCategory scorecats[] = { {"Small", N_("Small")},
+static const GamesScoresCategory scorecats[] = {
+{"Small", N_("Small")},
 {"Medium", N_("gnomine|Medium")},
 {"Large", N_("Large")},
-{"Custom", N_("Custom")},
-GAMES_SCORES_LAST_CATEGORY
-};
-
-static const GamesScoresDescription scoredesc = { scorecats,
-  "Small",
-  APP_NAME,
-  GAMES_SCORES_STYLE_TIME_ASCENDING
+{"Custom", N_("Custom")}
 };
 
 GamesScores *highscores;
@@ -1005,6 +1000,7 @@ main (int argc, char *argv[])
 #ifdef WITH_SMCLIENT
   g_option_context_add_group (context, egg_sm_client_get_option_group ());
 #endif /* WITH_SMCLIENT */
+  games_sound_add_option_group (context);
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
@@ -1019,9 +1015,11 @@ main (int argc, char *argv[])
     
   games_conf_initialise (APP_NAME);
 
-  highscores = games_scores_new (&scoredesc);
-
-  /* sound_init (&argc, &argv); */
+  highscores = games_scores_new (APP_NAME,
+                                 scorecats, G_N_ELEMENTS (scorecats),
+                                 NULL, NULL,
+                                 0 /* default category */,
+                                 GAMES_SCORES_STYLE_TIME_ASCENDING);
 
   g_signal_connect (games_conf_get_default (), "value-changed",
                     G_CALLBACK (conf_value_changed_cb), NULL);
