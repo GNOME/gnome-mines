@@ -5,7 +5,7 @@
 #include <gdk/gdk.h>
 #include <gtk/gtk.h>
 #include <glib.h>
-#include <games-preimage.h>
+#include <libgames-support/games-preimage.h>
 
 #ifdef __cplusplus
 extern "C" {
