@@ -12,13 +12,27 @@ gnomine_CPPFLAGS = \
 	$(AM_CPPFLAGS)
 
 gnomine_CFLAGS = \
-	$(WARN_CFLAGS) \
-	$(GNOME_GAMES_CFLAGS) \
+	$(GTK_CFLAGS) \
 	$(AM_CFLAGS)
 
 gnomine_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
-	$(GNOME_GAMES_LIBS)
+	$(GTK_LIBS)
+
+if HAVE_GNOME
+gnomine_CFLAGS += $(GNOME_CFLAGS)
+gnomine_LDADD += $(GNOME_LIBS)
+endif
+
+if HAVE_RSVG
+gnomine_CFLAGS += $(RSVG_CFLAGS)
+gnomine_LDADD += $(RSVG_LIBS)
+endif
+
+if WITH_GTHREAD
+gnomine_CFLAGS += $(GHTREAD_CFLAGS)
+gnomine_LDADD += $(GTHREAD_LIBS)
+endif
 
 schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gnomine.schemas.in
