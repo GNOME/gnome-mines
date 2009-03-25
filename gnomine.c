@@ -30,6 +30,7 @@
 
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
+#include <gdk/gdkkeysyms.h>
 
 #include <libgames-support/games-clock.h>
 #include <libgames-support/games-conf.h>
@@ -87,6 +88,7 @@ gint fsize = -1;
 gboolean use_question_marks = TRUE;
 gboolean use_overmine_warning = TRUE;
 gboolean use_autoflag = FALSE;
+gboolean game_paused = FALSE;
 
 GtkAction *hint_action;
 GtkAction *fullscreen_action;
@@ -348,6 +350,7 @@ pause_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
 
     gtk_action_set_visible (pause_action, FALSE);
     gtk_action_set_visible (resume_action, TRUE);
+    game_paused = TRUE;
   }
 }
 
@@ -361,6 +364,7 @@ resume_game_cb (GtkButton * widget, gpointer data)
 
   gtk_action_set_visible (pause_action, TRUE);
   gtk_action_set_visible (resume_action, FALSE);
+  game_paused = FALSE;
 }
 
 static void
@@ -636,6 +640,23 @@ window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
   return FALSE;
 }
 
+
+static void
+pause_key_callback(GtkWidget *widget, GdkEventKey *event,
+gpointer data )
+{
+
+  if(event->keyval == GDK_Pause)
+  {
+    if(game_paused)
+      resume_game_cb(NULL, NULL); // Resume the game
+    else
+      pause_callback(NULL, NULL, NULL); // Pause the game
+  }
+			
+}
+
+
 static void
 create_preferences (void)
 {
@@ -772,6 +793,7 @@ create_preferences (void)
   /* show all child widgets, but do not display the dialog (yet) */
   gtk_widget_show_all (GTK_WIDGET (table));
 }
+
 
 static void
 preferences_callback (void)
@@ -1053,6 +1075,10 @@ main (int argc, char *argv[])
 		    G_CALLBACK (pause_callback), NULL);
   g_signal_connect (G_OBJECT (window), "window_state_event",
 		    G_CALLBACK (window_state_callback), NULL);
+
+  // For pause/resume with the keyboard pause key
+  g_signal_connect (G_OBJECT (window), "key_press_event", 
+                    G_CALLBACK (pause_key_callback), NULL); 
 
   all_boxes = gtk_vbox_new (FALSE, 0);
 
