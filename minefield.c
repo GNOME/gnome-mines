@@ -148,7 +148,7 @@ cell_idx_no_checks (GtkMineField * mfield, guint x, guint y)
 static gint
 cell_idx (GtkMineField * mfield, guint x, guint y)
 {
-  if (x >= 0 && x < mfield->xsize && y >= 0 && y < mfield->ysize)
+  if (x < mfield->xsize && y < mfield->ysize)
     return cell_idx_no_checks (mfield, x, y);
 
   return -1;
@@ -946,7 +946,7 @@ gtk_minefield_multi_release (GtkMineField * mfield, guint x, guint y, guint c,
   gint nx, ny, i, c2;
   guint lose = 0;
 
-  if (c < 0)			/* The release was outside the main area. */
+  if (c >= mfield->xsize * mfield->ysize) /* The release was outside the main area. */
     return;
 
   mfield->multi_mode = 0;
