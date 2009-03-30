@@ -750,6 +750,8 @@ create_preferences (void)
   gtk_table_attach (GTK_TABLE (table), cframe, 1, 2, 0, 1, GTK_FILL, GTK_FILL,
 		    0, 0);
 
+  frame = games_frame_new(_("Flags"));
+
   question_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"I'm not sure\" flags"));
   g_signal_connect (GTK_OBJECT (question_toggle), "toggled",
@@ -758,8 +760,11 @@ create_preferences (void)
 				use_question_marks);
   gtk_widget_show (question_toggle);
 
-  gtk_table_attach_defaults (GTK_TABLE (table), question_toggle, 0, 2, 1, 2);
+  gtk_container_add (GTK_CONTAINER (frame), question_toggle);
 
+  gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 2, 1, 2);
+
+  frame = games_frame_new(_("Warnings"));
 
   overmine_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"Too many flags\" warning"));
@@ -769,8 +774,9 @@ create_preferences (void)
 				use_overmine_warning);
   gtk_widget_show (overmine_toggle);
 
-  gtk_table_attach_defaults (GTK_TABLE (table), overmine_toggle, 0, 2, 2, 3);
+  gtk_container_add (GTK_CONTAINER (frame), overmine_toggle);
 
+  gtk_table_attach_defaults (GTK_TABLE (table), frame, 0, 2, 2, 3);
 
   pref_dialog = gtk_dialog_new_with_buttons (_("Mines Preferences"),
 					     GTK_WINDOW (window),
