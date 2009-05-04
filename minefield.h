@@ -63,10 +63,10 @@ extern "C" {
     mine *mines;
     guint flag_count;
     guint shown;
-    gint cdown;
-    guint cdownx;
-    guint cdowny;
-    gint bdown[3];
+    gint celldown;
+    guint celldownx;
+    guint celldowny;
+    gint buttondown[3];
     gint lose;
     gint win;
     gint multi_mode;
@@ -85,7 +85,7 @@ extern "C" {
       PangoLayout *layout;
       gint dx, dy;
     } numstr[9];
-    guint minesize;
+    guint minesizepixels;
     gint in_play;
 
     gboolean use_question_marks;

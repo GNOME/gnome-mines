@@ -269,7 +269,7 @@ new_game (void)
 
   /* get window size and mine square size (gtk_minefield_restart() may change it) */
   gtk_window_get_size (GTK_WINDOW (window), &width, &height);
-  size = mf->minesize;
+  size = mf->minesizepixels;
   w_diff = width - mfield->allocation.width;
   h_diff = height - mfield->allocation.height;
 
