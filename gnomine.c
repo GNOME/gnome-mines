@@ -348,7 +348,11 @@ pause_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
     games_clock_stop (GAMES_CLOCK (clk));
 
     gtk_action_set_visible (pause_action, FALSE);
+    gtk_action_set_sensitive (pause_action, FALSE);
+
     gtk_action_set_visible (resume_action, TRUE);
+    gtk_action_set_sensitive (resume_action, TRUE);
+
     game_paused = TRUE;
   }
 }
@@ -362,7 +366,10 @@ resume_game_cb (GtkButton * widget, gpointer data)
   games_clock_start (GAMES_CLOCK (clk));
 
   gtk_action_set_visible (pause_action, TRUE);
+  gtk_action_set_sensitive(pause_action, TRUE);
   gtk_action_set_visible (resume_action, FALSE);
+  gtk_action_set_sensitive(resume_action, FALSE);
+
   game_paused = FALSE;
 }
 
