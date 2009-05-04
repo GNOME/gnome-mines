@@ -39,7 +39,6 @@
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.c>
 #include <libgames-support/games-scores-dialog.h>
-#include <libgames-support/games-sound.h>
 #include <libgames-support/games-stock.h>
 
 #ifdef WITH_SMCLIENT
@@ -1009,7 +1008,6 @@ main (int argc, char *argv[])
 #ifdef WITH_SMCLIENT
   g_option_context_add_group (context, egg_sm_client_get_option_group ());
 #endif /* WITH_SMCLIENT */
-  games_sound_add_option_group (context);
   g_option_context_add_main_entries (context, options, GETTEXT_PACKAGE);
 
   retval = g_option_context_parse (context, &argc, &argv, &error);
