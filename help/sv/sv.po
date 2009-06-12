@@ -453,8 +453,8 @@ msgid "Authors"
 msgstr "Upphovsmän"
 
 #: C/gnomine.xml:588(para)
-msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "<application>GNOME Minor</application> skrevs av Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs av Callum McKenzie (<email>callum@spooky-possum.org</email>) med hjälp från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle (<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:gnome-feedback\" type=\"help\">dokumentet</ulink>."
+msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "<application>GNOME Minor</application> skrevs av Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs av Callum McKenzie (<email>callum@spooky-possum.org</email>) med hjälp från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle (<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentet</ulink>."
 
 #: C/gnomine.xml:604(title)
 msgid "License"

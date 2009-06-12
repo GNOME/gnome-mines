@@ -171,7 +171,7 @@ msgstr "Commenti"
 
 #: C/gnomine.xml:102(para)
 msgid "To report a bug or make a suggestion regarding the <application>Mines</application> application or this manual, follow the directions in the <ulink url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
-msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Mine</application> o su questo manuale, seguire le istruzioni presenti nella pagina del <ulink url=\"ghelp:gnome-feedback\" type=\"help\">database dei bug di GNOME</ulink>."
+msgstr "Per segnalare un problema o inviare suggerimenti sull'applicazione <application>Mine</application> o su questo manuale, seguire le istruzioni presenti nella pagina del <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">database dei bug di GNOME</ulink>."
 
 #: C/gnomine.xml:111(primary)
 msgid "GNOME Mines"
@@ -454,8 +454,8 @@ msgid "Authors"
 msgstr "Autori"
 
 #: C/gnomine.xml:588(para)
-msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
-msgstr "<application>GNOME Mine</application> è stato scritto da Pista (<email>szekers@cyberspace.mht.bme.hu</email>). Questo manuale è stato scritto da Callum McKenzie (<email>callum@spooky-possum.org</email>) con l'aiuto di Vincent Povirk e sulla base del precedente manuale di Tim Riehle (<email>tkriehle@citilink.com</email>). Per segnalare bug o inviare commenti o suggerimenti su questa applicazione o su questo manuale consultare questo <ulink url=\"ghelp:gnome-feedback\" type=\"help\">documento</ulink>."
+msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
+msgstr "<application>GNOME Mine</application> è stato scritto da Pista (<email>szekers@cyberspace.mht.bme.hu</email>). Questo manuale è stato scritto da Callum McKenzie (<email>callum@spooky-possum.org</email>) con l'aiuto di Vincent Povirk e sulla base del precedente manuale di Tim Riehle (<email>tkriehle@citilink.com</email>). Per segnalare bug o inviare commenti o suggerimenti su questa applicazione o su questo manuale consultare questo <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">documento</ulink>."
 
 #: C/gnomine.xml:604(title)
 msgid "License"
