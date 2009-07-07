@@ -1,4 +1,8 @@
-SUBDIRS = help
+SUBDIRS =
+
+if BUILD_HELP
+SUBDIRS += help
+endif
 
 bin_PROGRAMS = gnomine
 
