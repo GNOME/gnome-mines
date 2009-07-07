@@ -5,9 +5,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games gnome-2-26\n"
-"POT-Creation-Date: 2009-06-21 22:31+0000\n"
-"PO-Revision-Date: 2009-06-24 20:02+0100\n"
+"Project-Id-Version: gnome-games gnome-2-28\n"
+"POT-Creation-Date: 2009-07-01 18:48+0000\n"
+"PO-Revision-Date: 2009-07-03 18:19+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:145(None)
+#: C/gnomine.xml:148(None)
 msgid ""
 "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
 msgstr ""
@@ -28,19 +28,19 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:163(None)
+#: C/gnomine.xml:166(None)
 msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
 msgstr "@@image: 'figures/statusbar.png'; md5=0c26fd945d3b8ec15489738301bdf203"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:184(None)
+#: C/gnomine.xml:187(None)
 msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:276(None)
+#: C/gnomine.xml:279(None)
 msgid ""
 "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
 msgstr ""
@@ -48,7 +48,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:298(None)
+#: C/gnomine.xml:301(None)
 msgid ""
 "@@image: 'figures/imnotsureflagscheckbox.png'; "
 "md5=58be021ed1cf90add08931282ec19bad"
@@ -58,20 +58,20 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:319(None)
+#: C/gnomine.xml:322(None)
 msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:370(None)
+#: C/gnomine.xml:373(None)
 msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
 msgstr ""
 "@@image: 'figures/highscores.png'; md5=a6700f22bdfab7a3f30b28e11902076e"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:431(None)
+#: C/gnomine.xml:434(None)
 msgid ""
 "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgstr ""
@@ -79,7 +79,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:445(None)
+#: C/gnomine.xml:448(None)
 msgid ""
 "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
 msgstr ""
@@ -87,7 +87,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:458(None)
+#: C/gnomine.xml:461(None)
 msgid ""
 "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
 msgstr ""
@@ -95,7 +95,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:497(None)
+#: C/gnomine.xml:500(None)
 msgid ""
 "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
 msgstr ""
@@ -103,7 +103,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:510(None)
+#: C/gnomine.xml:513(None)
 msgid ""
 "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
 msgstr ""
@@ -111,7 +111,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:541(None)
+#: C/gnomine.xml:544(None)
 msgid ""
 "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
 msgstr ""
@@ -137,7 +137,7 @@ msgstr "2006"
 msgid "Callum McKenzie"
 msgstr "Callum McKenzie"
 
-#: C/gnomine.xml:52(publishername) C/gnomine.xml:89(para)
+#: C/gnomine.xml:52(publishername) C/gnomine.xml:92(para)
 msgid "GNOME Documentation Project"
 msgstr "Dokumentační projekt GNOME"
 
@@ -266,27 +266,27 @@ msgstr "McKenzie"
 msgid "callum@spooky-possum.org"
 msgstr "callum@spooky-possum.org"
 
-#: C/gnomine.xml:83(revnumber)
+#: C/gnomine.xml:86(revnumber)
 msgid "Mines Manual V2.9"
 msgstr "Příručka V2.9 ke hře Miny"
 
-#: C/gnomine.xml:84(date)
+#: C/gnomine.xml:87(date)
 msgid "January 2006"
 msgstr "Leden 206"
 
-#: C/gnomine.xml:86(para)
+#: C/gnomine.xml:89(para)
 msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
 msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
 
-#: C/gnomine.xml:94(releaseinfo)
+#: C/gnomine.xml:97(releaseinfo)
 msgid "This manual describes version 2.14 of Mines."
 msgstr "Tato příručka popisuje Miny verze 2.14"
 
-#: C/gnomine.xml:101(title)
+#: C/gnomine.xml:104(title)
 msgid "Feedback"
 msgstr "Ohlasy"
 
-#: C/gnomine.xml:102(para)
+#: C/gnomine.xml:105(para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Mines</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -297,15 +297,15 @@ msgstr ""
 "na stránce <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Stránka s "
 "ohlasy na GNOME</ulink>."
 
-#: C/gnomine.xml:111(primary)
+#: C/gnomine.xml:114(primary)
 msgid "GNOME Mines"
 msgstr "Miny"
 
-#: C/gnomine.xml:118(title)
+#: C/gnomine.xml:121(title)
 msgid "Introduction"
 msgstr "Úvod"
 
-#: C/gnomine.xml:120(para)
+#: C/gnomine.xml:123(para)
 msgid ""
 "<application><application>Mines</application></application> is a puzzle game "
 "where you locate mines floating in an ocean using only your brain and a "
@@ -315,7 +315,7 @@ msgstr ""
 "hlavolam, ve kterém se snažíte při plavbě oceánem najít miny jen s pomocí "
 "mozku a trochy štěstí."
 
-#: C/gnomine.xml:126(para)
+#: C/gnomine.xml:129(para)
 msgid ""
 "You start the game with a grid of covered squares and no idea what is in "
 "them. Clicking on a square reveals what is in it: either empty ocean or a "
@@ -339,11 +339,11 @@ msgstr ""
 "Vyhráváte ve chvíli, kdy odkryjete všechna nezaminovaná políčka a označíte "
 "všechna zaminovaná."
 
-#: C/gnomine.xml:141(title)
+#: C/gnomine.xml:144(title)
 msgid "The stages of the game: the start, playing, losing, and winning."
 msgstr "Stavy hry: začátek, průběh, prohra, výhra."
 
-#: C/gnomine.xml:149(para)
+#: C/gnomine.xml:152(para)
 msgid ""
 "To mark a square as having a mine you right-click on it and a flag is placed "
 "there. If you click on a square with a number and you have placed precisely "
@@ -359,11 +359,11 @@ msgstr ""
 "končí. Políčka, která nesousedí s minami (t.j. prázdná políčka) automaticky "
 "odkryjí jejich sousední políčka."
 
-#: C/gnomine.xml:160(title)
+#: C/gnomine.xml:163(title)
 msgid "Important information."
 msgstr "Důležité informace"
 
-#: C/gnomine.xml:167(para)
+#: C/gnomine.xml:170(para)
 msgid ""
 "You are being timed. To be good at this game you have to work both quickly "
 "and correctly. Once you have found all the mines and revealed all the un-"
@@ -375,7 +375,7 @@ msgstr ""
 "nezaminovaná políčka, čas se zastaví. Vaším skóre je čas, kterého jste "
 "dosáhli. Čím kratší, tím lepší."
 
-#: C/gnomine.xml:174(para)
+#: C/gnomine.xml:177(para)
 msgid ""
 "The time you have taken is displayed on the bottom right of the window. "
 "Beside it, on the left, is a count of the number of mines you have cleared "
@@ -384,15 +384,15 @@ msgstr ""
 "Čas, kterého jste dosáhli, se zobrazuje v pravé dolní části okna. Naproti v "
 "levé části je počet min, které jste našli a celkový počet min na herní desce."
 
-#: C/gnomine.xml:181(title)
+#: C/gnomine.xml:184(title)
 msgid "The yellow face shows you how well you are going."
 msgstr "Žluté ksichtíky vám naznačují, jak si vedete"
 
-#: C/gnomine.xml:194(title)
+#: C/gnomine.xml:197(title)
 msgid "The Details"
 msgstr "Podrobnosti"
 
-#: C/gnomine.xml:196(para)
+#: C/gnomine.xml:199(para)
 msgid ""
 "This section provides information on the controls and the important menu "
 "items. If you need help figuring where the mines are, see the <link linkend="
@@ -402,11 +402,11 @@ msgstr ""
 "Pokud potřebujete nápovědu objasňující, kde jsou miny, přeskočte na <link "
 "linkend=\"strategy\">kapitolu o strategii</link>."
 
-#: C/gnomine.xml:203(title)
+#: C/gnomine.xml:206(title)
 msgid "The Goal"
 msgstr "Cíl"
 
-#: C/gnomine.xml:205(para)
+#: C/gnomine.xml:208(para)
 msgid ""
 "Starting from an ocean of squares with unknown contents you must mark all "
 "the squares with mines and reveal all the clear squares. You don't actually "
@@ -419,7 +419,7 @@ msgstr ""
 "označovat, ale je pro vás snadnější, když to budete dělat. Pokud odkryjete "
 "všechna nezaminovaná políčka, zbývající zaminovaná políčka se vám označí."
 
-#: C/gnomine.xml:214(para)
+#: C/gnomine.xml:217(para)
 msgid ""
 "If you left click on a mine, or auto-clear a square with a mine in it you "
 "lose. To help prevent accidents, you aren't allowed to auto-clear around a "
@@ -431,31 +431,31 @@ msgstr ""
 "okolní políčka v případě, že počet polí označených jako zaminovaná "
 "neodpovídá počtu vypsanému v políčku."
 
-#: C/gnomine.xml:224(title)
+#: C/gnomine.xml:227(title)
 msgid "Using the Mouse"
 msgstr "Používání myši"
 
-#: C/gnomine.xml:231(entry)
+#: C/gnomine.xml:234(entry)
 msgid "Action"
 msgstr "Úkon"
 
-#: C/gnomine.xml:231(entry)
+#: C/gnomine.xml:234(entry)
 msgid "Result"
 msgstr "Výsledek"
 
-#: C/gnomine.xml:236(entry)
+#: C/gnomine.xml:239(entry)
 msgid "Left click on an un-revealed square."
 msgstr "Kliknutí levým tlačítkem na neodkrytém políčku."
 
-#: C/gnomine.xml:237(entry)
+#: C/gnomine.xml:240(entry)
 msgid "Reveals the contents of that square. For better or for worse."
 msgstr "Odkryje obsah tohoto políčka. Buď si polepšíte nebo dopadnete špatně."
 
-#: C/gnomine.xml:241(entry)
+#: C/gnomine.xml:244(entry)
 msgid "Left click in a revealed square."
 msgstr "Kliknutí levým tlačítkem na odkrytém políčku."
 
-#: C/gnomine.xml:242(entry)
+#: C/gnomine.xml:245(entry)
 msgid ""
 "Auto-clear. Reveals the unmarked squares around the clicked square, but only "
 "if enough squares have been marked to match the number in the square."
@@ -464,11 +464,11 @@ msgstr ""
 "jste klikli, ale pouze v případě, že počet označených políček odpovídá číslu "
 "uvedenému v políčku."
 
-#: C/gnomine.xml:248(entry)
+#: C/gnomine.xml:251(entry)
 msgid "Right click on an un-revealed square."
 msgstr "Kliknutí pravým tlačítkem na neodkrytém políčku."
 
-#: C/gnomine.xml:249(entry)
+#: C/gnomine.xml:252(entry)
 msgid ""
 "Marks the square as a mine. If it is already marked, the mark will be "
 "removed."
@@ -476,17 +476,17 @@ msgstr ""
 "Označí políčko jako zaminované. Pokud je již označené, tak se značka "
 "odstraní."
 
-#: C/gnomine.xml:256(para)
+#: C/gnomine.xml:259(para)
 msgid ""
 "If you are used to the more traditional mouse controls, don't worry, they "
 "still work."
 msgstr "I když používáte starobylé myši, nemusíte se bát, stále fungují."
 
-#: C/gnomine.xml:261(title)
+#: C/gnomine.xml:264(title)
 msgid "Game Size and Difficulty"
 msgstr "Velikost hry a obtížnost"
 
-#: C/gnomine.xml:263(para)
+#: C/gnomine.xml:266(para)
 msgid ""
 "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
 "guimenuitem></menuchoice> from the menu you can change the size of the "
@@ -499,11 +499,11 @@ msgstr ""
 "trvá déle a vyžaduje více koncentrace. Menší hra bývá zběsilejší. K "
 "dispozici máte malou, střední, velkou a vlastní velikost."
 
-#: C/gnomine.xml:273(title)
+#: C/gnomine.xml:276(title)
 msgid "The preferences dialog."
 msgstr "Dialog voleb."
 
-#: C/gnomine.xml:280(para)
+#: C/gnomine.xml:283(para)
 msgid ""
 "On the right hand side of the dialog there are three parameters for "
 "controlling the custom size. Horizontal and Vertical are the width and "
@@ -518,11 +518,11 @@ msgstr ""
 "příliš velké nebo příliš malé, stává se hra velmi snadnou. Počet min je "
 "omezen na hodnotu mírně nižší, než je počet polí."
 
-#: C/gnomine.xml:293(title)
+#: C/gnomine.xml:296(title)
 msgid "\"I'm not sure\" Flags"
 msgstr "Vlaječka „Nejsem si jist“"
 
-#: C/gnomine.xml:302(para)
+#: C/gnomine.xml:305(para)
 msgid ""
 "There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
 "flags. If you enable this then, when right-clicking on a square, it cycles "
@@ -542,15 +542,15 @@ msgstr ""
 "průběh hry. Stále musíte nastavit správný počet červených vlaječek, aby se "
 "mohla vyčistit políčka okolo."
 
-#: C/gnomine.xml:316(title)
+#: C/gnomine.xml:319(title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 msgstr "Sekvence vlaječek v případě povolené vlaječky „Nejsem si jist“."
 
-#: C/gnomine.xml:326(title)
+#: C/gnomine.xml:329(title)
 msgid "Use \"Too many flags\" warning"
 msgstr "Použít varování „Příliš mnoho vlaječek“"
 
-#: C/gnomine.xml:328(para)
+#: C/gnomine.xml:331(para)
 msgid ""
 "The other check-box in the properties dialog is entitled Use \"Too many flags"
 "\" warning. This feature will show you a warning when you have placed too "
@@ -562,11 +562,11 @@ msgstr ""
 "mnoho vlaječek. Standardně je vypnutá, protože poskytuje radu, která by "
 "mohla být považovaná za „podvádění“."
 
-#: C/gnomine.xml:339(title)
+#: C/gnomine.xml:342(title)
 msgid "Hints"
 msgstr "Rady"
 
-#: C/gnomine.xml:341(para)
+#: C/gnomine.xml:344(para)
 msgid ""
 "If you get stuck - it is reasonably common to end up with two options that "
 "you can't logically resolve - then you can either guess, or ask for a hint. "
@@ -582,11 +582,11 @@ msgstr ""
 "je prázdné). Políčko je zvolené náhodně, ale i tak vám to může pomoci. Za "
 "poskytnutí rady jste však penalizování 10 trestnými vteřinami."
 
-#: C/gnomine.xml:355(title)
+#: C/gnomine.xml:358(title)
 msgid "High Scores"
 msgstr "Nejvyšší skóre"
 
-#: C/gnomine.xml:357(para)
+#: C/gnomine.xml:360(para)
 msgid ""
 "If your score is in the top ten you will be shown the list of top scores and "
 "have an opportunity to change the name recorded in the high score table. You "
@@ -600,11 +600,11 @@ msgstr ""
 "nabídky <guimenu>Hra</guimenu>. Pomocí vyskakovacího seznamu v horní části "
 "dialogu si můžete prohlédnout skóre i pro ostatní velikosti hry."
 
-#: C/gnomine.xml:367(title)
+#: C/gnomine.xml:370(title)
 msgid "The high scores dialog."
 msgstr "Dialog s nejvyšším skóre."
 
-#: C/gnomine.xml:375(para)
+#: C/gnomine.xml:378(para)
 msgid ""
 "The high score for the custom size is usually meaningless. Any other player "
 "can make the game size smaller and get a better time. If you only ever play "
@@ -617,11 +617,11 @@ msgstr ""
 "jste doopravdy byli dobří. To je jediný důvod, proč se i přesto tyto údaje "
 "zaznamenávají."
 
-#: C/gnomine.xml:383(title)
+#: C/gnomine.xml:386(title)
 msgid "Window Size"
 msgstr "Velikost okna"
 
-#: C/gnomine.xml:385(para)
+#: C/gnomine.xml:388(para)
 msgid ""
 "Resizing the window makes the squares bigger or smaller to suit. If you want "
 "to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
@@ -633,11 +633,11 @@ msgstr ""
 "pod nabídkou <guimenu>Nastavení</guimenu>. K přepínání celoobrazovkového "
 "režimu můžete také použít <keycap>F11</keycap>."
 
-#: C/gnomine.xml:394(title)
+#: C/gnomine.xml:397(title)
 msgid "Pausing the Game"
 msgstr "Pozastavení hry"
 
-#: C/gnomine.xml:396(para)
+#: C/gnomine.xml:399(para)
 msgid ""
 "The game can be paused automatically when you start using another window, or "
 "paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
@@ -651,11 +651,11 @@ msgstr ""
 "promýšlet tahy dopředu, když jsou zastavené hodiny. Pokračování hry spustíte "
 "tlačítkem „Pokračujte stisknutím“."
 
-#: C/gnomine.xml:410(title)
+#: C/gnomine.xml:413(title)
 msgid "Strategy"
 msgstr "Strategie"
 
-#: C/gnomine.xml:412(para)
+#: C/gnomine.xml:415(para)
 msgid ""
 "The first half of this section explains the very basics of deducing where "
 "mines are. If you are familiar with how to play the game skip down to the "
@@ -665,11 +665,11 @@ msgstr ""
 "nachází. Pokud jste s hraním hry důvěrně seznámení, můžete přeskočit dolů na "
 "podkapitolu <link linkend=\"advanced\">Pokročilé situace</link>."
 
-#: C/gnomine.xml:419(title)
+#: C/gnomine.xml:422(title)
 msgid "The Basics"
 msgstr "Základy"
 
-#: C/gnomine.xml:420(para)
+#: C/gnomine.xml:423(para)
 msgid ""
 "These are a few basic situations which should be incredibly obvious, but if "
 "you're struggling with how to play the game, they should be useful. The "
@@ -681,11 +681,11 @@ msgstr ""
 "máte izolované zakryté políčko a většina políček okolo je označená 1. "
 "Zakryté políčko je zaminované."
 
-#: C/gnomine.xml:429(title)
+#: C/gnomine.xml:432(title)
 msgid "The simplest case."
 msgstr "Nejjednodušší situace."
 
-#: C/gnomine.xml:435(para)
+#: C/gnomine.xml:438(para)
 msgid ""
 "The next simplest case is where you have two covered squares adjacent to "
 "each other and both squares on one side are marked with a 2. If they have no "
@@ -696,11 +696,11 @@ msgstr ""
 "Pokud v jejich sousedství nejsou žádná další nevyčištěná políčka, pak obě "
 "políčka jsou zaminovaná."
 
-#: C/gnomine.xml:443(title)
+#: C/gnomine.xml:446(title)
 msgid "The two mine case."
 msgstr "Situace se dvěma minami."
 
-#: C/gnomine.xml:449(para)
+#: C/gnomine.xml:452(para)
 msgid ""
 "Finally, when there are three uncovered squares in a row and the clear "
 "square beside the middle one is a 3 (once again this square should have no "
@@ -710,11 +710,11 @@ msgstr ""
 "straně jsou s číslem 3 (a opět by tato políčka neměla mít žádné neodkryté "
 "sousedy), kdy ona tři políčka jsou zaminovaná."
 
-#: C/gnomine.xml:456(title)
+#: C/gnomine.xml:459(title)
 msgid "The three mine case."
 msgstr "Situace se třemi minami"
 
-#: C/gnomine.xml:462(para)
+#: C/gnomine.xml:465(para)
 msgid ""
 "These are the simplest cases. Other permutations on these simple situations "
 "are possible, for example the three squares in the previous example could be "
@@ -724,7 +724,7 @@ msgstr ""
 "jednoduchých situací, např. tři políčka z předchozího příkladu mohou být "
 "umístěná do L."
 
-#: C/gnomine.xml:467(para)
+#: C/gnomine.xml:470(para)
 msgid ""
 "Simple analysis will solve most of the puzzle, but not all. Before going on "
 "to the next sections, where we give you more advanced hints, you should play "
@@ -734,11 +734,11 @@ msgstr ""
 "na další kapitolu, kde dostanete pokročilejší rady, měli byste si trochu "
 "zahrát, abyste viděli, co dokážete sami."
 
-#: C/gnomine.xml:476(title)
+#: C/gnomine.xml:479(title)
 msgid "Advanced Situations"
 msgstr "Pokročilé situace"
 
-#: C/gnomine.xml:478(para)
+#: C/gnomine.xml:481(para)
 msgid ""
 "These are some more complicated situations. They are a bit of a step up from "
 "the last section, so we hope you took our advice and played for a bit first."
@@ -747,7 +747,7 @@ msgstr ""
 "vyšší úrovni, takže doufáme, že jste si vzali k srdci naši radu a nejdříve "
 "si trochu pohráli."
 
-#: C/gnomine.xml:484(para)
+#: C/gnomine.xml:487(para)
 msgid ""
 "In the example below the mines are to the left of the ones. We figure this "
 "out by a process of elimination. If the square to the left of the 2 was a "
@@ -763,11 +763,11 @@ msgstr ""
 "políčko, zůstali nám dvě políčka, která potřebujeme pro políčko s 2, a tudíž "
 "jsou obě zaminovaná."
 
-#: C/gnomine.xml:495(title)
+#: C/gnomine.xml:498(title)
 msgid "A not-so-obvious pattern."
 msgstr "Nepříliš jasná sestava."
 
-#: C/gnomine.xml:501(para)
+#: C/gnomine.xml:504(para)
 msgid ""
 "This situation can be disguised, for example consider the figure below. It "
 "is the same situation, but the extra mined square on the right has increased "
@@ -777,11 +777,11 @@ msgstr ""
 "stejná situace, akorát s ještě další minou napravo, která zvyšuje všechna "
 "čísla o 1."
 
-#: C/gnomine.xml:508(title)
+#: C/gnomine.xml:511(title)
 msgid "The extra mine disguises a copy of the previous example."
 msgstr "Ještě jedna mina mění předlohu z předchozího příkladu."
 
-#: C/gnomine.xml:514(para)
+#: C/gnomine.xml:517(para)
 msgid ""
 "Now we're going to try a complicated example. It illustrates two points. The "
 "first is that even if you aren't sure which squares are mined, restricting "
@@ -793,7 +793,7 @@ msgstr ""
 "A zadruhé, že znalost, která políčka nejsou zaminovaná je stejně užitečná, "
 "jako která jsou."
 
-#: C/gnomine.xml:522(para)
+#: C/gnomine.xml:525(para)
 msgid ""
 "Assume that, in the figure below, we start off knowing that the top left "
 "square is mined and so the two squares marked 2 on the left only require one "
@@ -820,11 +820,11 @@ msgstr ""
 "musí být zaminovaní. To nám nakonec řeklo, nejen která čtyři políčka okolo 4 "
 "jsou zaminovaná, ale i které políčka pod 2 je zaminované."
 
-#: C/gnomine.xml:539(title)
+#: C/gnomine.xml:542(title)
 msgid "As tricky as it gets."
 msgstr "Tak záludné jak to vypadá."
 
-#: C/gnomine.xml:546(para)
+#: C/gnomine.xml:549(para)
 msgid ""
 "This sort of situation is tricky. In all the other examples you can learn to "
 "look for patterns and avoid thinking hard. Situations like the one in the "
@@ -838,11 +838,11 @@ msgstr ""
 "ignorovat, pokračovat v hraní v jiném místě a doufat, že se postupně vyčistí "
 "další políčko okolo."
 
-#: C/gnomine.xml:558(title)
+#: C/gnomine.xml:561(title)
 msgid "Tips"
 msgstr "Typy"
 
-#: C/gnomine.xml:560(para)
+#: C/gnomine.xml:563(para)
 msgid ""
 "Remember, the edge of the board is just the same as a large cleared area "
 "(but without the numbers). Often working at the edge of the board is the "
@@ -852,7 +852,7 @@ msgstr ""
 "plocha (ale bez čísel). Hraní u kraje desky je často nejjednodušší cestou, "
 "jak se pohnout vpřed."
 
-#: C/gnomine.xml:566(para)
+#: C/gnomine.xml:569(para)
 msgid ""
 "Sometimes you end up in a situation where there is no way to deduce what the "
 "configuration is. In these cases you either have to guess or use the hint "
@@ -866,7 +866,7 @@ msgstr ""
 "menuchoice>). Někdy to není jen sázka 50/50 a když nevyužijete radu, tak "
 "jdete do hazardu, který obvykle skončí prohrou."
 
-#: C/gnomine.xml:575(para)
+#: C/gnomine.xml:578(para)
 msgid ""
 "One final hint: remember the counter on the bottom left of the window that "
 "tells you how many mines you have left? Often, near the end of the game, "
@@ -878,11 +878,11 @@ msgstr ""
 "pomoci odhalit, na kterých místech mohou miny být. Jak to udělat už si ale "
 "musíte vyřešit sami."
 
-#: C/gnomine.xml:587(title)
+#: C/gnomine.xml:590(title)
 msgid "Authors"
 msgstr "Autoři"
 
-#: C/gnomine.xml:588(para)
+#: C/gnomine.xml:591(para)
 msgid ""
 "<application>GNOME Mines</application> was written by Pista "
 "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
@@ -890,19 +890,22 @@ msgid ""
 "Vincent Povirk and based on an earlier manual by Tim Riehle "
 "(<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion "
 "regarding this application or this manual, follow the directions in this "
-"<ulink url=\"ghelp:gnome-feedback\" type=\"help\">document</ulink>."
+"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
 msgstr ""
-"<application>Miny</application> napsal Pista (<email>szekeres@cyberspace.mht."
-"bme.hu</email>). Tuto příručku napsal Callum McKenzie (<email>callum@spooky-"
-"possum.org</email>). Pokud chcete nahlásit chybu nebo podat návrh týkající "
-"se této aplikace nebo tohoto návodu, tak se řiďte instrukcemi v tomto <ulink "
-"url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentu</ulink>."
+"<application>GNOME Miny</application> napsal Pista "
+"(<email>szekeres@cyberspace.mht.bme.hu</email>). Tuto příručku napsal Callum "
+"McKenzie (<email>callum@spooky-possum.org</email>) za pomoci Vincenta "
+"Povirka na základě starší příručky, kterou napsal Tim Riehle "
+"(<email>tkriehle@citilink.com</email>). Pokud chcete nahlásit chybu nebo "
+"podat návrh týkající se této aplikace nebo tohoto návodu, tak se řiďte "
+"instrukcemi v tomto <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
+"\">dokumentu</ulink>."
 
-#: C/gnomine.xml:604(title)
+#: C/gnomine.xml:607(title)
 msgid "License"
 msgstr "Licence"
 
-#: C/gnomine.xml:605(para)
+#: C/gnomine.xml:608(para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl"
@@ -915,7 +918,7 @@ msgstr ""
 "\"><citetitle>GNU General Public License</citetitle></ulink>, tak jak ji "
 "vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) novější."
 
-#: C/gnomine.xml:613(para)
+#: C/gnomine.xml:616(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -928,7 +931,7 @@ msgstr ""
 "VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
 "Public License</citetitle>."
 
-#: C/gnomine.xml:619(para)
+#: C/gnomine.xml:622(para)
 msgid ""
 "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
 "General Public License</ulink></citetitle> is included as an appendix to the "
