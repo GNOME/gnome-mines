@@ -38,9 +38,12 @@ gnomine_CFLAGS += $(GHTREAD_CFLAGS)
 gnomine_LDADD += $(GTHREAD_LIBS)
 endif
 
-schemadir   = @GCONF_SCHEMA_FILE_DIR@
 schema_in_files = gnomine.schemas.in
+if HAVE_GNOME
+schemadir = $(GCONF_SCHEMA_FILE_DIR)
 schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+endif
+
 @INTLTOOL_SCHEMAS_RULE@
 
 pixmapdir   = $(datadir)/gnome-games/gnomine/pixmaps
