@@ -264,7 +264,7 @@ new_game (void)
   GtkMineField *mf = GTK_MINEFIELD (mfield);
 
   games_clock_stop (GAMES_CLOCK (clk));
-  games_clock_set_seconds (GAMES_CLOCK (clk), 0);
+  games_clock_reset (GAMES_CLOCK (clk));
   show_face (pm_smile);
 
   /* get window size and mine square size (gtk_minefield_restart() may change it) */
@@ -338,7 +338,7 @@ hint_callback (void)
 static void
 pause_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
 {
-  if ((GAMES_CLOCK (clk)->timer_id != 0)
+  if (games_clock_is_started (GAMES_CLOCK (clk))
       && (!disable_hiding)) {
     gtk_widget_hide (mfield_container);
     gtk_widget_show (resume_container);
@@ -396,6 +396,7 @@ win_game (GtkWidget * widget, gpointer data)
 {
   GamesScoreValue score;
   int pos;
+  time_t seconds;
 
   games_clock_stop (GAMES_CLOCK (clk));
 
@@ -403,8 +404,8 @@ win_game (GtkWidget * widget, gpointer data)
 
   show_face (pm_win);
 
-  score.time_double = (gfloat) (GAMES_CLOCK (clk)->stopped / 60) +
-    (gfloat) (GAMES_CLOCK (clk)->stopped % 60) / 100;
+  seconds = games_clock_get_seconds (GAMES_CLOCK (clk));
+  score.time_double = (gfloat) (seconds / 60) + (gfloat) (seconds % 60) / 100;
 
   pos = games_scores_add_score (highscores, score);
 
