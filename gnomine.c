@@ -321,12 +321,11 @@ hint_callback (void)
   else
     message = _("Maybe they're all mines ...");
 
-  dialog = gtk_message_dialog_new (GTK_WINDOW (window), GTK_DIALOG_MODAL,
-				   GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
-				   message, NULL);
+  dialog = gtk_message_dialog_new_with_markup (GTK_WINDOW (window),
+                                               GTK_DIALOG_MODAL,
+                                               GTK_MESSAGE_INFO, GTK_BUTTONS_OK,
+                                               message, NULL);
   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
-  gtk_label_set_use_markup (GTK_LABEL (GTK_MESSAGE_DIALOG (dialog)->label),
-			    TRUE);
 
   disable_hiding = TRUE;
   gtk_dialog_run (GTK_DIALOG (dialog));
@@ -793,10 +792,10 @@ create_preferences (void)
 
   gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
   gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), 2);
+  gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (pref_dialog)->vbox), table, FALSE,
-		      FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))),
+                      table, FALSE, FALSE, 0);
 
   g_signal_connect (G_OBJECT (pref_dialog), "destroy",
 		    G_CALLBACK (gtk_widget_destroyed), &pref_dialog);
@@ -907,7 +906,7 @@ save_state_cb (EggSMClient *client,
   int argc = 0, j;
   gint xpos, ypos;
 
-  gdk_window_get_origin (window->window, &xpos, &ypos);
+  gdk_window_get_origin (gtk_widget_get_window (window), &xpos, &ypos);
 
   argv[argc++] = g_get_prgname ();
   argv[argc++] = "-x";
@@ -1194,7 +1193,7 @@ main (int argc, char *argv[])
 
   /* Must be after the window has been created. */
   if (xpos >= 0 && ypos >= 0)
-    gdk_window_move (GTK_WIDGET (window)->window, xpos, ypos);
+    gdk_window_move (gtk_widget_get_window (GTK_WIDGET (window)), xpos, ypos);
 
   /* All this hiding is a bit ugly, but it's better than a
    * ton of gtk_widget_show calls. */
