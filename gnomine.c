@@ -865,7 +865,10 @@ const char ui_description[] =
   "    </menu>"
   "    <menu action='HelpMenu'>"
   "      <menuitem action='Contents'/>"
-  "      <menuitem action='About'/>" "    </menu>" "  </menubar>" "</ui>";
+  "      <menuitem action='About'/>"
+  "    </menu>"
+  "  </menubar>"
+  "</ui>";
 
 static GtkUIManager *
 create_ui_manager (const gchar * group)
