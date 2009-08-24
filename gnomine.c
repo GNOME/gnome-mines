@@ -1067,12 +1067,6 @@ main (int argc, char *argv[])
 
   verify_ranges ();
 
-  /* This is evil, but the normal button focus indicator 
-   * interferes with the face (but we still want the button
-   * to be the default). */
-  gtk_rc_parse_string
-    ("style \"gnomine\" { GtkButton::interior-focus = 0 } class \"GtkButton\" style \"gnomine\"");
-
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(APP_NAME_LONG));
     
