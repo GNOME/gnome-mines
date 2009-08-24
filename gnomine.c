@@ -647,7 +647,7 @@ window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
 }
 
 
-static void
+static gboolean
 pause_key_callback(GtkWidget *widget, GdkEventKey *event,
 gpointer data )
 {
@@ -658,8 +658,11 @@ gpointer data )
       resume_game_cb(NULL, NULL); // Resume the game
     else
       pause_callback(NULL, NULL, NULL); // Pause the game
+
+    return TRUE;
   }
-			
+
+  return FALSE;
 }
 
 
