@@ -1088,6 +1088,7 @@ main (int argc, char *argv[])
                     G_CALLBACK (pause_key_callback), NULL); 
 
   all_boxes = gtk_vbox_new (FALSE, 0);
+  gtk_widget_show (all_boxes);
 
   gtk_container_add (GTK_CONTAINER (window), all_boxes);
 
@@ -1095,6 +1096,7 @@ main (int argc, char *argv[])
   accel_group = gtk_ui_manager_get_accel_group (ui_manager);
   gtk_window_add_accel_group (GTK_WINDOW (window), accel_group);
   box = gtk_ui_manager_get_widget (ui_manager, "/MainMenu");
+  gtk_widget_show (box);
   gtk_box_pack_start (GTK_BOX (all_boxes), box, FALSE, FALSE, 0);
 
   button_table = gtk_table_new (1, 3, FALSE);
@@ -1183,7 +1185,8 @@ main (int argc, char *argv[])
 
   new_game ();
 
-  gtk_widget_show_all (window);
+  gtk_widget_show_all (button_table);
+  gtk_widget_show (window);
 
   /* Must be after the window has been created. */
   if (xpos >= 0 && ypos >= 0)
