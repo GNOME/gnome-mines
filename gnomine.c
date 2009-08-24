@@ -290,7 +290,9 @@ new_game (void)
   set_flabel (GTK_MINEFIELD (mfield));
 
   gtk_action_set_visible (pause_action, TRUE);
+  gtk_action_set_sensitive (pause_action, TRUE);
   gtk_action_set_visible (resume_action, FALSE);
+  gtk_action_set_sensitive (resume_action, FALSE);
   gtk_widget_hide (resume_container);
   gtk_widget_show (mfield_container);
 }
