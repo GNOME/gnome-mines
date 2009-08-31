@@ -31,6 +31,7 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
+#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-preimage.h>
 
@@ -330,6 +331,7 @@ gtk_minefield_realize (GtkWidget * widget)
   GtkMineField *mfield;
   GdkWindowAttr attributes;
   gint attributes_mask;
+  GtkAllocation allocation;
 
   g_return_if_fail (widget != NULL);
   g_return_if_fail (GTK_IS_MINEFIELD (widget));
@@ -337,11 +339,13 @@ gtk_minefield_realize (GtkWidget * widget)
   mfield = GTK_MINEFIELD (widget);
   GTK_WIDGET_SET_FLAGS (widget, GTK_REALIZED);
 
+  gtk_widget_get_allocation (widget, &allocation);
+
   attributes.window_type = GDK_WINDOW_CHILD;
-  attributes.x = widget->allocation.x;
-  attributes.y = widget->allocation.y;
-  attributes.width = widget->allocation.width;
-  attributes.height = widget->allocation.height;
+  attributes.x = allocation.x;
+  attributes.y = allocation.y;
+  attributes.width = allocation.width;
+  attributes.height = allocation.height;
   attributes.wclass = GDK_INPUT_OUTPUT;
   attributes.visual = gtk_widget_get_visual (widget);
   attributes.colormap = gtk_widget_get_colormap (widget);
@@ -378,7 +382,7 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
   guint xofs, yofs;
   GtkMineField *mfield;
 
-  widget->allocation = *allocation;
+  gtk_widget_set_allocation (widget, allocation);
 
   mfield = GTK_MINEFIELD (widget);
 

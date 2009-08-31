@@ -35,6 +35,7 @@
 #include <libgames-support/games-clock.h>
 #include <libgames-support/games-conf.h>
 #include <libgames-support/games-frame.h>
+#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.c>
@@ -262,16 +263,19 @@ new_game (void)
   gint x, y;
   static gint size_table[3][3] = { {8, 8, 10}, {16, 16, 40}, {30, 16, 99} };
   GtkMineField *mf = GTK_MINEFIELD (mfield);
+  GtkAllocation allocation;
 
   games_clock_stop (GAMES_CLOCK (clk));
   games_clock_reset (GAMES_CLOCK (clk));
   show_face (pm_smile);
 
+
   /* get window size and mine square size (gtk_minefield_restart() may change it) */
   gtk_window_get_size (GTK_WINDOW (window), &width, &height);
   size = mf->minesizepixels;
-  w_diff = width - mfield->allocation.width;
-  h_diff = height - mfield->allocation.height;
+  gtk_widget_get_allocation (mfield, &allocation);
+  w_diff = width - allocation.width;
+  h_diff = height - allocation.height;
 
   if (fsize == 3) {
     x = xsize;
