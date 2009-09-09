@@ -46,13 +46,17 @@ endif
 
 @INTLTOOL_SCHEMAS_RULE@
 
+man_MANS = gnomine.6
+
 pixmapdir   = $(datadir)/gnome-games/gnomine/pixmaps
 pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg 	\
 	face-worried.svg \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 EXTRA_DIST = README AUTHORS \
-	$(schema_in_files) $(pixmap_DATA)
+             $(schema_in_files) \
+             $(man_MANS) \
+             $(pixmap_DATA)
 
 Gamesdir = $(datadir)/applications
 Games_in_files = gnomine.desktop.in.in
