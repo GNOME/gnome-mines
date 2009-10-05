@@ -1272,7 +1272,7 @@ gtk_minefield_set_size (GtkMineField * mfield, guint xsize, guint ysize)
   mfield->xsize = xsize;
   mfield->ysize = ysize;
 
-  if (GTK_WIDGET_VISIBLE (mfield)) {
+  if (gtk_widget_get_visible (mfield)) {
     gtk_widget_queue_resize (GTK_WIDGET (mfield));
   }
 }
