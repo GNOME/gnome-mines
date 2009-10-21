@@ -23,3 +23,5 @@ DOC_FIGURES = \
 	figures/statusbar.png
 
 dist-hook: doc-dist-hook
+
+-include $(top_srcdir)/git.mk
