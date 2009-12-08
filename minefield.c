@@ -329,9 +329,11 @@ static void
 gtk_minefield_realize (GtkWidget * widget)
 {
   GtkMineField *mfield;
+  GtkAllocation allocation;
+  GtkStyle *style;
+  GdkWindow *window;
   GdkWindowAttr attributes;
   gint attributes_mask;
-  GtkAllocation allocation;
 
   g_return_if_fail (widget != NULL);
   g_return_if_fail (GTK_IS_MINEFIELD (widget));
@@ -355,12 +357,14 @@ gtk_minefield_realize (GtkWidget * widget)
 
   attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
 
-  widget->window = gdk_window_new (widget->parent->window,
-				   &attributes, attributes_mask);
-  gdk_window_set_user_data (widget->window, mfield);
+  window = gdk_window_new (gtk_widget_get_parent_window (widget),
+                           &attributes, attributes_mask);
+  gtk_widget_set_window (widget, window);
+  gdk_window_set_user_data (window, mfield);
 
-  widget->style = gtk_style_attach (widget->style, widget->window);
-  gtk_style_set_background (widget->style, widget->window, GTK_STATE_ACTIVE);
+  style = gtk_style_attach (gtk_widget_get_style (widget), window);
+  gtk_widget_set_style (widget, style);
+  gtk_style_set_background (style, window, GTK_STATE_ACTIVE);
 }
 
 static void
@@ -381,8 +385,10 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
   guint minesizepixels, width, height;
   guint xofs, yofs;
   GtkMineField *mfield;
+  GdkWindow *window;
 
   gtk_widget_set_allocation (widget, allocation);
+  window = gtk_widget_get_window (widget);
 
   mfield = GTK_MINEFIELD (widget);
 
@@ -395,15 +401,16 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
     xofs = allocation->x + (allocation->width - width) / 2;
     yofs = allocation->y + (allocation->height - height) / 2;
 
+
     if (!mfield->thick_line)
-      mfield->thick_line = gdk_gc_new (widget->window);
-    gdk_gc_copy (mfield->thick_line, widget->style->black_gc);
+      mfield->thick_line = gdk_gc_new (window);
+    gdk_gc_copy (mfield->thick_line, gtk_widget_get_style (widget)->black_gc);
     gdk_gc_set_line_attributes (mfield->thick_line,
 				MAX (1, 0.1 * minesizepixels),
 				GDK_LINE_SOLID,
 				GDK_CAP_ROUND, GDK_JOIN_ROUND);
 
-    gdk_window_move_resize (widget->window, xofs, yofs, width, height);
+    gdk_window_move_resize (window, xofs, yofs, width, height);
   }
 }
 
@@ -427,17 +434,22 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
   static GdkGC *dots;
   static const char stipple_data[] = { 0x03, 0x03, 0x0c, 0x0c };
   static GdkPixmap *stipple = NULL;
+  GtkStyle *style;
   GtkWidget *widget = GTK_WIDGET (mfield);
   GdkRectangle rect;
+  GdkWindow *window;
 
   g_return_if_fail (c != -1);
+
+  window = gtk_widget_get_window (widget);
+  style = gtk_widget_get_style (widget);
 
   /* This gives us a dotted line to increase the contrast between
    * buttons and the "sea". */
   if (stipple == NULL) {
     stipple = gdk_bitmap_create_from_data (NULL, stipple_data, 4, 4);
-    dots = gdk_gc_new (widget->window);
-    gdk_gc_copy (dots, widget->style->dark_gc[2]);
+    dots = gdk_gc_new (window);
+    gdk_gc_copy (dots, style->dark_gc[2]);
     gdk_gc_set_stipple (dots, stipple);
     g_object_unref (stipple);
     gdk_gc_set_fill (dots, GDK_STIPPLED);
@@ -456,35 +468,35 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
   rect.height = minesizepixels;
 
   if (noshadow) {		/* draw grid on ocean floor */
-    gtk_paint_box (widget->style,
-		   widget->window,
+    gtk_paint_box (style,
+		   window,
 		   clicked ? GTK_STATE_ACTIVE : GTK_STATE_NORMAL,
 		   GTK_SHADOW_IN,
 		   &rect,
 		   widget,
 		   "button", x * minesizepixels, y * minesizepixels, minesizepixels, minesizepixels);
     if (y == 0) {		/* top row only */
-      gdk_draw_line (widget->window,	/* top */
+      gdk_draw_line (window,	/* top */
 		     dots, x * minesizepixels, 0, x * minesizepixels + minesizepixels - 1, 0);
     }
     if (x == 0) {		/* left column only */
-      gdk_draw_line (widget->window,	/* left */
+      gdk_draw_line (window,	/* left */
 		     dots, 0, y * minesizepixels, 0, y * minesizepixels + minesizepixels - 1);
     }
-    gdk_draw_line (widget->window,	/* right */
+    gdk_draw_line (window,	/* right */
 		   dots,
 		   x * minesizepixels + minesizepixels - 1,
 		   y * minesizepixels,
 		   x * minesizepixels + minesizepixels - 1, y * minesizepixels + minesizepixels - 1);
-    gdk_draw_line (widget->window,	/* bottom */
+    gdk_draw_line (window,	/* bottom */
 		   dots,
 		   x * minesizepixels,
 		   y * minesizepixels + minesizepixels - 1,
 		   x * minesizepixels + minesizepixels - 1, y * minesizepixels + minesizepixels - 1);
 
   } else {			/* draw shadow around possible mine location */
-    gtk_paint_box (widget->style,
-		   widget->window,
+    gtk_paint_box (style,
+		   window,
 		   clicked ? GTK_STATE_ACTIVE : GTK_STATE_SELECTED,
 		   clicked ? GTK_SHADOW_IN : GTK_SHADOW_OUT,
 		   &rect,
@@ -500,7 +512,7 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
     g_assert (nm >= 0 && nm <= 9);
 
     if (mfield->use_overmine_warning && n < nm) {
-      gdk_draw_pixbuf (widget->window, NULL,
+      gdk_draw_pixbuf (window, NULL,
 		       mfield->warning.scaledpixbuf, 0, 0,
 		       x * minesizepixels + (minesizepixels - mfield->warning.width) / 2,
 		       y * minesizepixels + (minesizepixels - mfield->warning.height) / 2,
@@ -509,22 +521,22 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
     }
 
     if (n != 0) {
-      gdk_draw_layout (widget->window,
-		       widget->style->black_gc,
+      gdk_draw_layout (window,
+		       style->black_gc,
 		       x * minesizepixels + mfield->numstr[n].dx,
 		       y * minesizepixels + mfield->numstr[n].dy,
 		       PANGO_LAYOUT (mfield->numstr[n].layout));
     }
 
   } else if (mfield->mines[c].marked == MINE_QUESTION) {
-    gdk_draw_pixbuf (widget->window, NULL,
+    gdk_draw_pixbuf (window, NULL,
 		     mfield->question.scaledpixbuf, 0, 0,
 		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
 		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
 		     mfield->flag.width, mfield->flag.height,
 		     GDK_RGB_DITHER_NORMAL, 0, 0);
   } else if (mfield->mines[c].marked == MINE_MARKED) {
-    gdk_draw_pixbuf (widget->window, NULL,
+    gdk_draw_pixbuf (window, NULL,
 		     mfield->flag.scaledpixbuf, 0, 0,
 		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
 		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
@@ -537,11 +549,11 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
       int x2 = x * minesizepixels + 0.9 * minesizepixels;
       int y2 = y * minesizepixels + 0.9 * minesizepixels;
 
-      gdk_draw_line (widget->window, mfield->thick_line, x1, y1, x2, y2);
-      gdk_draw_line (widget->window, mfield->thick_line, x1, y2, x2, y1);
+      gdk_draw_line (window, mfield->thick_line, x1, y1, x2, y2);
+      gdk_draw_line (window, mfield->thick_line, x1, y2, x2, y1);
     }
   } else if (mfield->lose && mfield->mines[c].mined) {
-    gdk_draw_pixbuf (widget->window, NULL,
+    gdk_draw_pixbuf (window, NULL,
 		     mfield->mine.scaledpixbuf, 0, 0,
 		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
 		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
@@ -549,7 +561,7 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
 		     GDK_RGB_DITHER_NORMAL, 0, 0);
   }
   if (mfield->lose && mfield->mines[c].mined && mfield->mines[c].shown) {
-    gdk_draw_pixbuf (widget->window, NULL,
+    gdk_draw_pixbuf (window, NULL,
 		     mfield->bang.scaledpixbuf, 0, 0,
 		     x * minesizepixels + (minesizepixels - mfield->bang.width) / 2,
 		     y * minesizepixels + (minesizepixels - mfield->bang.height) / 2,
