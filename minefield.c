@@ -578,7 +578,7 @@ gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event)
   g_return_val_if_fail (GTK_IS_MINEFIELD (widget), FALSE);
   g_return_val_if_fail (event != NULL, FALSE);
 
-  if (GTK_WIDGET_DRAWABLE (widget)) {
+  if (gtk_widget_is_drawable (widget)) {
     guint x1, y1, x2, y2, x, y;
     GtkMineField *mfield = GTK_MINEFIELD (widget);
     GdkRectangle *area = &event->area;
