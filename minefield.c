@@ -104,7 +104,7 @@ static gint gtk_minefield_button_release (GtkWidget * widget,
 					  GdkEventButton * event);
 static void gtk_minefield_check_field (GtkMineField * mfield, gint x, gint y);
 static void gtk_minefield_class_init (GtkMineFieldClass * class);
-static gint gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event);
+static gboolean gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event);
 static void gtk_minefield_init (GtkMineField * mfield);
 static void gtk_minefield_lose (GtkMineField * mfield);
 static gint gtk_minefield_motion_notify (GtkWidget * widget,
@@ -559,7 +559,7 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
   }
 }
 
-static gint
+static gboolean
 gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event)
 {
   g_return_val_if_fail (widget != NULL, FALSE);
