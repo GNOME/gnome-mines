@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"POT-Creation-Date: 2010-03-28 20:20+0200\n"
+"POT-Creation-Date: 2010-03-30 00:27+0200\n"
 "PO-Revision-Date: 2010-03-16 18:29+0200\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../C/legal.xml:2(para)
+#: ../C/legal.xml:2(para) ../C/gnomine.xml:2(para)
 msgid ""
 "This document is dual-licensed. You may either distribute and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
@@ -30,7 +30,7 @@ msgstr ""
 "dokumentet under betingelserne i GNU Free Documentation License. En kopi af "
 "denne følger."
 
-#: ../C/legal.xml:11(para)
+#: ../C/legal.xml:11(para) ../C/gnomine.xml:11(para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -46,7 +46,7 @@ msgstr ""
 "kopi af GFDL her <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> eller i "
 "filen COPYING-DOCS som distribueres sammen med denne manual."
 
-#: ../C/legal.xml:21(para)
+#: ../C/legal.xml:21(para) ../C/gnomine.xml:21(para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -58,7 +58,7 @@ msgstr ""
 "du gøre dette ved at tilføje en kopi af licensen til manualen, som beskrevet "
 "i afsnit 6 af licensen."
 
-#: ../C/legal.xml:28(para)
+#: ../C/legal.xml:28(para) ../C/gnomine.xml:28(para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -72,7 +72,7 @@ msgstr ""
 "gjort opmærksomme på disse varemærker, er navnene skrevet med store "
 "bogstaver eller store forbogstaver."
 
-#: ../C/legal.xml:44(para)
+#: ../C/legal.xml:44(para) ../C/gnomine.xml:44(para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -100,7 +100,7 @@ msgstr ""
 "ÆNDRET VERSION AF DOKUMENTET ER AUTORISERET HERUNDER BORTSET FRA DENNE "
 "ANSVARSFRASKRIVELSE OG"
 
-#: ../C/legal.xml:64(para)
+#: ../C/legal.xml:64(para) ../C/gnomine.xml:64(para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -124,7 +124,7 @@ msgstr ""
 "BRUG AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER HERAF, SELV HVIS EN "
 "SÅDAN PART HAR VÆRET INFORMERET OM MULIGHEDEN FOR SÅDANNE SKADER."
 
-#: ../C/legal.xml:37(para)
+#: ../C/legal.xml:37(para) ../C/gnomine.xml:37(para)
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -271,6 +271,10 @@ msgstr "callum@spooky-possum.org"
 #: ../C/gnomine.xml:86(revnumber)
 msgid "Mines Manual V2.9"
 msgstr "Manual til Minestryger version 2.9"
+
+#: ../C/gnomine.xml:87(date)
+msgid "January 2006"
+msgstr "Januar 2006"
 
 #: ../C/gnomine.xml:89(para)
 msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
@@ -652,9 +656,9 @@ msgid ""
 msgstr ""
 "Spillet kan automatisk sættes på pause når du begynder at bruge et andet "
 "vindue, eller ved at vælge <guimenuitem>Pause</guimenuitem> fra menuen "
-"<guimenu>Spil</guimenu>. Spilområdet er blankt så du kan ikke bruge det "
-"stoppede ur til at tænke fremad. For igen at starte spillet trykkes på "
-"knappen \"Tryk for at genoptage\"."
+"<guimenu>Spil</guimenu>. Spilområdet er blankt, så du kan ikke tænke fremad "
+"mens uret er stoppet. For igen at starte spillet trykkes på knappen \"Tryk "
+"for at genoptage\"."
 
 #: ../C/gnomine.xml:413(title)
 msgid "Strategy"
@@ -967,6 +971,3 @@ msgstr ""
 "\n"
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
-
-#~ msgid "January 2006"
-#~ msgstr "Januar 2006"
