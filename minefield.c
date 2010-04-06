@@ -339,7 +339,7 @@ gtk_minefield_realize (GtkWidget * widget)
   g_return_if_fail (GTK_IS_MINEFIELD (widget));
 
   mfield = GTK_MINEFIELD (widget);
-  GTK_WIDGET_SET_FLAGS (widget, GTK_REALIZED);
+  gtk_widget_set_realized (widget, TRUE);
 
   gtk_widget_get_allocation (widget, &allocation);
 
@@ -392,7 +392,7 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
 
   mfield = GTK_MINEFIELD (widget);
 
-  if (GTK_WIDGET_REALIZED (widget)) {
+  if (gtk_widget_get_realized (widget)) {
     minesizepixels = MIN (allocation->width / mfield->xsize,
 		    allocation->height / mfield->ysize);
     mfield->minesizepixels = minesizepixels;
