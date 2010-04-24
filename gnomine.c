@@ -41,6 +41,8 @@
 #include <libgames-support/games-scores.c>
 #include <libgames-support/games-scores-dialog.h>
 #include <libgames-support/games-stock.h>
+#include <libgames-support/games-pause-action.h>
+#include <libgames-support/games-fullscreen-action.h>
 
 #ifdef WITH_SMCLIENT
 #include <libgames-support/eggsmclient.h>
@@ -88,13 +90,10 @@ gint fsize = -1;
 gboolean use_question_marks = TRUE;
 gboolean use_overmine_warning = TRUE;
 gboolean use_autoflag = FALSE;
-gboolean game_paused = FALSE;
 
 GtkAction *hint_action;
 GtkAction *fullscreen_action;
-GtkAction *leavefullscreen_action;
 GtkAction *pause_action;
-GtkAction *resume_action;
 
 /*GstElement *sound_player;*/
 
@@ -293,10 +292,7 @@ new_game (void)
 
   set_flabel (GTK_MINEFIELD (mfield));
 
-  gtk_action_set_visible (pause_action, TRUE);
   gtk_action_set_sensitive (pause_action, TRUE);
-  gtk_action_set_visible (resume_action, FALSE);
-  gtk_action_set_sensitive (resume_action, FALSE);
   gtk_widget_hide (resume_container);
   gtk_widget_show (mfield_container);
 }
@@ -341,41 +337,35 @@ hint_callback (void)
 }
 
 static void
-pause_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
+pause_callback (GtkAction * action, gpointer data)
 {
-  if (games_clock_is_started (GAMES_CLOCK (clk))
-      && (!disable_hiding)) {
+  if (games_pause_action_get_is_paused (GAMES_PAUSE_ACTION (pause_action))) {
     gtk_widget_hide (mfield_container);
     gtk_widget_show (resume_container);
     gtk_widget_grab_focus (resume_button);
-
+  
     gtk_action_set_sensitive (hint_action, FALSE);
     games_clock_stop (GAMES_CLOCK (clk));
-
-    gtk_action_set_visible (pause_action, FALSE);
-    gtk_action_set_sensitive (pause_action, FALSE);
-
-    gtk_action_set_visible (resume_action, TRUE);
-    gtk_action_set_sensitive (resume_action, TRUE);
-
-    game_paused = TRUE;
+  }
+  else {
+    gtk_widget_hide (resume_container);
+    gtk_widget_show (mfield_container);
+    gtk_action_set_sensitive (hint_action, TRUE);
+    games_clock_start (GAMES_CLOCK (clk));
   }
 }
 
 static void
-resume_game_cb (GtkButton * widget, gpointer data)
+focus_out_callback (GtkWidget * widget, GdkEventFocus * event, gpointer data)
 {
-  gtk_widget_hide (resume_container);
-  gtk_widget_show (mfield_container);
-  gtk_action_set_sensitive (hint_action, TRUE);
-  games_clock_start (GAMES_CLOCK (clk));
+  if (games_clock_is_started (GAMES_CLOCK (clk)) && (!disable_hiding))
+    games_pause_action_set_is_paused (GAMES_PAUSE_ACTION (pause_action), TRUE);
+}
 
-  gtk_action_set_visible (pause_action, TRUE);
-  gtk_action_set_sensitive(pause_action, TRUE);
-  gtk_action_set_visible (resume_action, FALSE);
-  gtk_action_set_sensitive(resume_action, FALSE);
-
-  game_paused = FALSE;
+static void
+resume_game_cb (GtkWidget * widget, GdkEventFocus * event, gpointer data)
+{
+  games_pause_action_set_is_paused (GAMES_PAUSE_ACTION (pause_action), FALSE);
 }
 
 static void
@@ -622,57 +612,6 @@ use_overmine_toggle_cb (GtkCheckButton * check, gpointer data)
 }
 
 static void
-set_fullscreen_actions (gboolean is_fullscreen)
-{
-  gtk_action_set_sensitive (leavefullscreen_action, is_fullscreen);
-  gtk_action_set_visible (leavefullscreen_action, is_fullscreen);
-
-  gtk_action_set_sensitive (fullscreen_action, !is_fullscreen);
-  gtk_action_set_visible (fullscreen_action, !is_fullscreen);
-}
-
-static void
-fullscreen_callback (GtkAction * action)
-{
-  if (action == fullscreen_action)
-    gtk_window_fullscreen (GTK_WINDOW (window));
-  else
-    gtk_window_unfullscreen (GTK_WINDOW (window));
-}
-
-static gboolean
-window_state_callback (GtkWidget * widget, GdkEventWindowState * event)
-{
-  if (!(event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN))
-    return FALSE;
-
-  set_fullscreen_actions (event->
-			  new_window_state & GDK_WINDOW_STATE_FULLSCREEN);
-    
-  return FALSE;
-}
-
-
-static gboolean
-pause_key_callback(GtkWidget *widget, GdkEventKey *event,
-gpointer data )
-{
-
-  if(event->keyval == GDK_Pause)
-  {
-    if(game_paused)
-      resume_game_cb(NULL, NULL); // Resume the game
-    else
-      pause_callback(NULL, NULL, NULL); // Pause the game
-
-    return TRUE;
-  }
-
-  return FALSE;
-}
-
-
-static void
 create_preferences (void)
 {
   GtkWidget *table;
@@ -835,10 +774,6 @@ const GtkActionEntry actions[] = {
   {"SettingsMenu", NULL, N_("_Settings")},
   {"HelpMenu", NULL, N_("_Help")},
   {"NewGame", GAMES_STOCK_NEW_GAME, NULL, NULL, NULL, G_CALLBACK (new_game)},
-  {"PauseGame", GAMES_STOCK_PAUSE_GAME, NULL, NULL, NULL,
-   G_CALLBACK (pause_callback)},
-  {"ResumeGame", GAMES_STOCK_RESUME_GAME, NULL, NULL, NULL,
-   G_CALLBACK (resume_game_cb)},
   {"Hint", GAMES_STOCK_HINT, NULL, NULL, NULL, G_CALLBACK (hint_callback)},
   {"Scores", GAMES_STOCK_SCORES, NULL, NULL, NULL,
    G_CALLBACK (scores_callback)},
@@ -847,11 +782,7 @@ const GtkActionEntry actions[] = {
    G_CALLBACK (preferences_callback)},
   {"Contents", GAMES_STOCK_CONTENTS, NULL, NULL, NULL,
    G_CALLBACK (help_callback)},
-  {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_callback)},
-  {"Fullscreen", GAMES_STOCK_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_callback)},
-  {"LeaveFullscreen", GAMES_STOCK_LEAVE_FULLSCREEN, NULL, NULL, NULL,
-   G_CALLBACK (fullscreen_callback)}
+  {"About", GTK_STOCK_ABOUT, NULL, NULL, NULL, G_CALLBACK (about_callback)}
 };
 
 const char ui_description[] =
@@ -861,7 +792,6 @@ const char ui_description[] =
   "      <menuitem action='NewGame'/>"
   "      <menuitem action='Hint'/>"
   "      <menuitem action='PauseGame'/>"
-  "      <menuitem action='ResumeGame'/>"
   "      <separator/>"
   "      <menuitem action='Scores'/>"
   "      <separator/>"
@@ -869,7 +799,6 @@ const char ui_description[] =
   "    </menu>"
   "    <menu action='SettingsMenu'>"
   "      <menuitem action='Fullscreen'/>"
-  "      <menuitem action='LeaveFullscreen'/>"
   "      <menuitem action='Preferences'/>"
   "    </menu>"
   "    <menu action='HelpMenu'>"
@@ -895,15 +824,12 @@ create_ui_manager (const gchar * group)
   gtk_ui_manager_add_ui_from_string (ui_manager, ui_description, -1, NULL);
   hint_action = gtk_action_group_get_action (action_group, "Hint");
 
-  fullscreen_action =
-    gtk_action_group_get_action (action_group, "Fullscreen");
-  leavefullscreen_action =
-    gtk_action_group_get_action (action_group, "LeaveFullscreen");
-  set_fullscreen_actions (FALSE);
+  fullscreen_action = GTK_ACTION (games_fullscreen_action_new ("Fullscreen", GTK_WINDOW (window)));
+  gtk_action_group_add_action_with_accel (action_group, fullscreen_action, NULL);
 
-  pause_action = gtk_action_group_get_action (action_group, "PauseGame");
-  resume_action = gtk_action_group_get_action (action_group, "ResumeGame");
-  gtk_action_set_visible (resume_action, FALSE);
+  pause_action = GTK_ACTION (games_pause_action_new ("PauseGame"));
+  g_signal_connect (G_OBJECT (pause_action), "state-changed", G_CALLBACK (pause_callback), NULL);
+  gtk_action_group_add_action_with_accel (action_group, pause_action, NULL);
 
   return ui_manager;
 }
@@ -1091,13 +1017,7 @@ main (int argc, char *argv[])
   g_signal_connect (G_OBJECT (window), "delete_event",
 		    G_CALLBACK (quit_game), NULL);
   g_signal_connect (G_OBJECT (window), "focus_out_event",
-		    G_CALLBACK (pause_callback), NULL);
-  g_signal_connect (G_OBJECT (window), "window_state_event",
-		    G_CALLBACK (window_state_callback), NULL);
-
-  // For pause/resume with the keyboard pause key
-  g_signal_connect (G_OBJECT (window), "key_press_event", 
-                    G_CALLBACK (pause_key_callback), NULL); 
+		    G_CALLBACK (focus_out_callback), NULL);
 
   all_boxes = gtk_vbox_new (FALSE, 0);
   gtk_widget_show (all_boxes);
