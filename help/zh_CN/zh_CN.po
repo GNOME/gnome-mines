@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME\n"
-"POT-Creation-Date: 2009-03-14 23:01+0000\n"
+"POT-Creation-Date: 2010-07-28 20:17+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: ZhangMiao <mymzhang@gmail.com>\n"
+"Last-Translator: lainme <lainme993@gmail.com>\n"
 "Language-Team: i18n-zh <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:145(None)
+#: C/gnomine.xml:148(None)
 msgid ""
 "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
 msgstr ""
@@ -21,19 +21,19 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:163(None)
+#: C/gnomine.xml:166(None)
 msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
 msgstr "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:184(None)
+#: C/gnomine.xml:187(None)
 msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:276(None)
+#: C/gnomine.xml:279(None)
 msgid ""
 "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
 msgstr ""
@@ -41,7 +41,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:298(None)
+#: C/gnomine.xml:301(None)
 msgid ""
 "@@image: 'figures/imnotsureflagscheckbox.png'; "
 "md5=58be021ed1cf90add08931282ec19bad"
@@ -51,20 +51,20 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:319(None)
+#: C/gnomine.xml:322(None)
 msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:370(None)
+#: C/gnomine.xml:373(None)
 msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
 msgstr ""
 "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:431(None)
+#: C/gnomine.xml:434(None)
 msgid ""
 "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgstr ""
@@ -72,7 +72,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:445(None)
+#: C/gnomine.xml:448(None)
 msgid ""
 "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
 msgstr ""
@@ -80,7 +80,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:458(None)
+#: C/gnomine.xml:461(None)
 msgid ""
 "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
 msgstr ""
@@ -88,7 +88,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:497(None)
+#: C/gnomine.xml:500(None)
 msgid ""
 "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
 msgstr ""
@@ -96,7 +96,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:510(None)
+#: C/gnomine.xml:513(None)
 msgid ""
 "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
 msgstr ""
@@ -104,7 +104,7 @@ msgstr ""
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:541(None)
+#: C/gnomine.xml:544(None)
 msgid ""
 "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
 msgstr ""
@@ -115,10 +115,13 @@ msgid "<application>Mines</application> Manual"
 msgstr "<application>扫雷</application> 手册"
 
 #: C/gnomine.xml:29(para)
+#, fuzzy
 msgid ""
 "Mines is GNOME's take on the popular logic puzzle minesweeper, which "
 "includes avoiding mines while receiving clues for the location of the mines."
 msgstr ""
+"扫雷是 GNOME 对流行的逻辑谜题扫雷的呈现，其包含当收到关于雷的位置的提示时避开"
+"雷。"
 
 #: C/gnomine.xml:36(year)
 msgid "2006"
@@ -128,7 +131,7 @@ msgstr "2006"
 msgid "Callum McKenzie"
 msgstr "Callum McKenzie"
 
-#: C/gnomine.xml:52(publishername) C/gnomine.xml:89(para)
+#: C/gnomine.xml:52(publishername) C/gnomine.xml:92(para)
 msgid "GNOME Documentation Project"
 msgstr "GNOME 文档项目"
 
@@ -140,6 +143,10 @@ msgid ""
 "is licensed</link> under, or you can distribute it under the terms of the "
 "GNU Free Documentation License. A copy of this follows."
 msgstr ""
+"这份文档是双重授权的。您可以遵循<ulink type=\"help\" url=\"gnome-help:gpl"
+"\">GNU 通用公共许可证</ulink>来发布和/或修改它，这也是<link linkend=\"license"
+"\">此程序的遵循许可</link>，或者您可以在 GNU 自由文档许可证下分发它。要带有这"
+"段文字的副本。"
 
 #: C/gnomine.xml:11(para)
 msgid ""
@@ -150,6 +157,10 @@ msgid ""
 "of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl\">link</ulink> or "
 "in the file COPYING-DOCS distributed with this manual."
 msgstr ""
+"对于本文档的复制、分发和/或修改必须遵循自由软件基金会发布的 GNU 自由文档许可"
+"证 (GFDL)  1.1 版或更高版本， 该许可证没有固定的部分、没有封面和背页文本。您"
+"可以在此<ulink type=\"help\" url=\"ghelp:fdl\">链接</ulink>上或在随本手册一起"
+"分发的 COPYING-DOCS 文件中找到 GFDL 的副本。"
 
 #: C/gnomine.xml:21(para)
 msgid ""
@@ -169,6 +180,9 @@ msgid ""
 "aware of those trademarks, then the names are in capital letters or initial "
 "capital letters."
 msgstr ""
+"各个公司使用的许多用于区别它们产品和服务的名称都声明为商标。在所有的 GNOME 文"
+"档以及 GNOME 文档项目的成员中，这些名称都是以全大写字母或首字母大写显示，从而"
+"表明它们是商标。"
 
 #: C/gnomine.xml:44(para)
 msgid ""
@@ -184,6 +198,12 @@ msgid ""
 "ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
 "OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
 msgstr ""
+"文档按“原样”提供，不提供任何明示或暗示的保证，包括但不限于：文档或文档的修改"
+"版本没有适销性方面的缺陷、适合特定目的的适用性，以及没有侵权行为。您将自行承"
+"担本文档以及文档修改版本的质量、准确性以及性能方面的风险。如果任何文档或文档"
+"修改版本存在缺陷，您(而不是最初的编写者、作者或撰写人)将承担所有必需的服务、"
+"维修或更正的费用。此免责声明是本许可证的重要组成部分。如果不接受此免责声明，"
+"那么您就没有权利使用任何文档或文档的修改版本；并且"
 
 #: C/gnomine.xml:64(para)
 msgid ""
@@ -198,6 +218,12 @@ msgid ""
 "VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
 "POSSIBILITY OF SUCH DAMAGES."
 msgstr ""
+"无论在任何情况以及在任何法律理论下，本文档或文档修改版本的作者、最初的编写"
+"者、任何撰写人或任何分发者，或者任意这些方的任何提供者都不对任何人由于使用本"
+"文档或文档修改版本引起或带来的任何直接的、间接的、特殊的、偶然的或继发的损失"
+"承担任何民事(包括疏忽)、合同或其它方面的责任，这些损失包括但不限于信誉损失、"
+"工作停止、计算机失败或故障，或任何以及所有其它损失或由此引发的或与之相关的损"
+"失，即使这些方已被告知存在出现此类损失的可能性时也是如此。"
 
 #: C/gnomine.xml:37(para)
 msgid ""
@@ -205,6 +231,8 @@ msgid ""
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
 "<placeholder-1/>"
 msgstr ""
+"本文档以及文档的修改版本都是在遵循 GNU 自由文档许可证的条款下提供，这表示具有"
+"以下含义：<placeholder-1/>"
 
 #: C/gnomine.xml:62(firstname)
 msgid "Callum"
@@ -218,49 +246,56 @@ msgstr "McKenzie"
 msgid "callum@spooky-possum.org"
 msgstr "callum@spooky-possum.org"
 
-#: C/gnomine.xml:83(revnumber)
+#: C/gnomine.xml:86(revnumber)
 msgid "Mines Manual V2.9"
 msgstr "扫雷手册 版本2.9"
 
-#: C/gnomine.xml:84(date)
+#: C/gnomine.xml:87(date)
 msgid "January 2006"
 msgstr "2006年1月"
 
-#: C/gnomine.xml:86(para)
+#: C/gnomine.xml:89(para)
 msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
 msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
 
-#: C/gnomine.xml:94(releaseinfo)
+#: C/gnomine.xml:97(releaseinfo)
 msgid "This manual describes version 2.14 of Mines."
 msgstr "本手册描述的是扫雷的2.14版本。"
 
-#: C/gnomine.xml:101(title)
+#: C/gnomine.xml:104(title)
 msgid "Feedback"
 msgstr "反馈"
 
-#: C/gnomine.xml:102(para)
+#: C/gnomine.xml:105(para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Mines</"
 "application> application or this manual, follow the directions in the <ulink "
 "url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
 msgstr ""
+"要报告关于<application>扫雷</application>程序或其手册的错误或者提供建议，请参"
+"照 <ulink url=\"http://bugzilla.gnome.org\">GNOME 错误报告数据库</ulink>的说"
+"明。"
 
-#: C/gnomine.xml:111(primary)
+#: C/gnomine.xml:114(primary)
 msgid "GNOME Mines"
 msgstr "GNOME扫雷"
 
-#: C/gnomine.xml:118(title)
+#: C/gnomine.xml:121(title)
 msgid "Introduction"
 msgstr "简介"
 
-#: C/gnomine.xml:120(para)
+#: C/gnomine.xml:123(para)
+#, fuzzy
 msgid ""
 "<application><application>Mines</application></application> is a puzzle game "
 "where you locate mines floating in an ocean using only your brain and a "
 "little bit of luck."
 msgstr ""
+"<application><application>扫雷</application></application>是一个解密游戏，您"
+"仅凭自己的大脑和一小点运气来在海洋中定位雷的位置。"
 
-#: C/gnomine.xml:126(para)
+#: C/gnomine.xml:129(para)
+#, fuzzy
 msgid ""
 "You start the game with a grid of covered squares and no idea what is in "
 "them. Clicking on a square reveals what is in it: either empty ocean or a "
@@ -273,12 +308,19 @@ msgid ""
 "once you have revealed all the un-mined squares and marked all the mined "
 "squares."
 msgstr ""
+"您启动游戏会出现被遮蔽的方块组成的网格，而不知道它们里面是什么。点击一个方块"
+"会显示出它里面的东西；或是空的海洋或是雷。如果您找到一个雷，坏事就会发生，整"
+"个游戏结束了。如果您打开一个空的方块，您会幸存并着手另一次尝试。我们确实会给"
+"您一些帮助；假如您找到印有数字的空海洋的话，它告诉您在周围方块中有多少个雷"
+"（或没有数字，如果周围没有雷）。一旦您扫出一些方块便可以开始推断哪些方块有雷"
+"哪些没有。当您找到全部没有雷的方块并标记了全部有雷的方块，您就赢了游戏。"
 
-#: C/gnomine.xml:141(title)
+#: C/gnomine.xml:144(title)
 msgid "The stages of the game: the start, playing, losing, and winning."
 msgstr "游戏的过程：开始，进行游戏，失败，和胜利。"
 
-#: C/gnomine.xml:149(para)
+#: C/gnomine.xml:152(para)
+#, fuzzy
 msgid ""
 "To mark a square as having a mine you right-click on it and a flag is placed "
 "there. If you click on a square with a number and you have placed precisely "
@@ -287,12 +329,16 @@ msgid ""
 "occur and the game is over. Squares with no adjacent mines (i.e. blank "
 "squares) have their adjacent squares automatically cleared."
 msgstr ""
+"要将一个方块标记为有雷，您在它上面单击右键，然后那里会插上旗帜。如果您点击有"
+"数字的方块，并且在周围方块放置了正好这么多的旗帜，那么剩下的方块就会被揭开。"
+"如果您没有正确标记出雷，就会发生爆炸并且游戏结束。周围没有雷的方块（例如空白"
+"方块）会自动扫出周围方块。"
 
-#: C/gnomine.xml:160(title)
+#: C/gnomine.xml:163(title)
 msgid "Important information."
 msgstr "重要的信息。"
 
-#: C/gnomine.xml:167(para)
+#: C/gnomine.xml:170(para)
 msgid ""
 "You are being timed. To be good at this game you have to work both quickly "
 "and correctly. Once you have found all the mines and revealed all the un-"
@@ -302,33 +348,38 @@ msgstr ""
 "正在为您计时。为了取得好的成绩，你必须又快又准地进行游戏。一旦你发现了所有的"
 "地雷并揭开所有无地雷的方块，停止计时。您的分数就是所用的时间；越短越好。"
 
-#: C/gnomine.xml:174(para)
+#: C/gnomine.xml:177(para)
 msgid ""
 "The time you have taken is displayed on the bottom right of the window. "
 "Beside it, on the left, is a count of the number of mines you have cleared "
 "and the total number hidden on the board."
 msgstr ""
+"您已用的时间在窗口的右下角显示。在它旁边，左侧，是对您已扫出的雷的数目的统计"
+"以及隐藏在盘面上的总数。"
 
-#: C/gnomine.xml:181(title)
+#: C/gnomine.xml:184(title)
 msgid "The yellow face shows you how well you are going."
 msgstr "黄脸表示您进行游戏时的状况。"
 
-#: C/gnomine.xml:194(title)
+#: C/gnomine.xml:197(title)
 msgid "The Details"
 msgstr "细节"
 
-#: C/gnomine.xml:196(para)
+#: C/gnomine.xml:199(para)
+#, fuzzy
 msgid ""
 "This section provides information on the controls and the important menu "
 "items. If you need help figuring where the mines are, see the <link linkend="
 "\"strategy\">strategy section</link>."
 msgstr ""
+"本节提供关于控制和重要的菜单项的信息。如果您需要弄明白雷在哪里，参见<link "
+"linkend=\"strategy\">策略一节</link>。"
 
-#: C/gnomine.xml:203(title)
+#: C/gnomine.xml:206(title)
 msgid "The Goal"
 msgstr "目标"
 
-#: C/gnomine.xml:205(para)
+#: C/gnomine.xml:208(para)
 msgid ""
 "Starting from an ocean of squares with unknown contents you must mark all "
 "the squares with mines and reveal all the clear squares. You don't actually "
@@ -337,7 +388,7 @@ msgid ""
 "be marked for you."
 msgstr ""
 
-#: C/gnomine.xml:214(para)
+#: C/gnomine.xml:217(para)
 msgid ""
 "If you left click on a mine, or auto-clear a square with a mine in it you "
 "lose. To help prevent accidents, you aren't allowed to auto-clear around a "
@@ -345,57 +396,57 @@ msgid ""
 "square."
 msgstr ""
 
-#: C/gnomine.xml:224(title)
+#: C/gnomine.xml:227(title)
 msgid "Using the Mouse"
 msgstr "使用鼠标"
 
-#: C/gnomine.xml:231(entry)
+#: C/gnomine.xml:234(entry)
 msgid "Action"
 msgstr "动作"
 
-#: C/gnomine.xml:231(entry)
+#: C/gnomine.xml:234(entry)
 msgid "Result"
 msgstr "结果"
 
-#: C/gnomine.xml:236(entry)
+#: C/gnomine.xml:239(entry)
 msgid "Left click on an un-revealed square."
 msgstr "左单击未揭开的方块。"
 
-#: C/gnomine.xml:237(entry)
+#: C/gnomine.xml:240(entry)
 msgid "Reveals the contents of that square. For better or for worse."
 msgstr "揭开方块的内容。情况变好或者变坏。"
 
-#: C/gnomine.xml:241(entry)
+#: C/gnomine.xml:244(entry)
 msgid "Left click in a revealed square."
 msgstr "左单击已揭开的方块。"
 
-#: C/gnomine.xml:242(entry)
+#: C/gnomine.xml:245(entry)
 msgid ""
 "Auto-clear. Reveals the unmarked squares around the clicked square, but only "
 "if enough squares have been marked to match the number in the square."
 msgstr ""
 
-#: C/gnomine.xml:248(entry)
+#: C/gnomine.xml:251(entry)
 msgid "Right click on an un-revealed square."
 msgstr "右单击未揭开的方块。"
 
-#: C/gnomine.xml:249(entry)
+#: C/gnomine.xml:252(entry)
 msgid ""
 "Marks the square as a mine. If it is already marked, the mark will be "
 "removed."
-msgstr ""
+msgstr "标记方块为雷。如果它已经被标记，则标记会被删除。"
 
-#: C/gnomine.xml:256(para)
+#: C/gnomine.xml:259(para)
 msgid ""
 "If you are used to the more traditional mouse controls, don't worry, they "
 "still work."
-msgstr ""
+msgstr "如果您习惯更传统的鼠标控制，别担心，它们依然有用。"
 
-#: C/gnomine.xml:261(title)
+#: C/gnomine.xml:264(title)
 msgid "Game Size and Difficulty"
 msgstr "游戏面板大小和难度"
 
-#: C/gnomine.xml:263(para)
+#: C/gnomine.xml:266(para)
 msgid ""
 "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
 "guimenuitem></menuchoice> from the menu you can change the size of the "
@@ -404,11 +455,11 @@ msgid ""
 "sizes."
 msgstr ""
 
-#: C/gnomine.xml:273(title)
+#: C/gnomine.xml:276(title)
 msgid "The preferences dialog."
 msgstr "首选项对话框。"
 
-#: C/gnomine.xml:280(para)
+#: C/gnomine.xml:283(para)
 msgid ""
 "On the right hand side of the dialog there are three parameters for "
 "controlling the custom size. Horizontal and Vertical are the width and "
@@ -418,11 +469,11 @@ msgid ""
 "slightly less than the total number of squares."
 msgstr ""
 
-#: C/gnomine.xml:293(title)
+#: C/gnomine.xml:296(title)
 msgid "\"I'm not sure\" Flags"
-msgstr "“我不能确定”标志"
+msgstr "“不确定”旗标"
 
-#: C/gnomine.xml:302(para)
+#: C/gnomine.xml:305(para)
 msgid ""
 "There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
 "flags. If you enable this then, when right-clicking on a square, it cycles "
@@ -434,15 +485,15 @@ msgid ""
 "square."
 msgstr ""
 
-#: C/gnomine.xml:316(title)
+#: C/gnomine.xml:319(title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
-msgstr ""
+msgstr "当“不确定”旗标激活时的旗标序列。"
 
-#: C/gnomine.xml:326(title)
+#: C/gnomine.xml:329(title)
 msgid "Use \"Too many flags\" warning"
-msgstr "使用“太多标记”警告"
+msgstr "使用“太多旗标”警告"
 
-#: C/gnomine.xml:328(para)
+#: C/gnomine.xml:331(para)
 msgid ""
 "The other check-box in the properties dialog is entitled Use \"Too many flags"
 "\" warning. This feature will show you a warning when you have placed too "
@@ -450,11 +501,11 @@ msgid ""
 "could be considered \"cheating\"."
 msgstr ""
 
-#: C/gnomine.xml:339(title)
+#: C/gnomine.xml:342(title)
 msgid "Hints"
 msgstr "提示"
 
-#: C/gnomine.xml:341(para)
+#: C/gnomine.xml:344(para)
 msgid ""
 "If you get stuck - it is reasonably common to end up with two options that "
 "you can't logically resolve - then you can either guess, or ask for a hint. "
@@ -464,11 +515,11 @@ msgid ""
 "second penalty added to your time whenever you use a hint."
 msgstr ""
 
-#: C/gnomine.xml:355(title)
+#: C/gnomine.xml:358(title)
 msgid "High Scores"
 msgstr "高分"
 
-#: C/gnomine.xml:357(para)
+#: C/gnomine.xml:360(para)
 msgid ""
 "If your score is in the top ten you will be shown the list of top scores and "
 "have an opportunity to change the name recorded in the high score table. You "
@@ -477,11 +528,11 @@ msgid ""
 "the top of the dialog lets you look at the scores for other board sizes."
 msgstr ""
 
-#: C/gnomine.xml:367(title)
+#: C/gnomine.xml:370(title)
 msgid "The high scores dialog."
 msgstr "高分对话框。"
 
-#: C/gnomine.xml:375(para)
+#: C/gnomine.xml:378(para)
 msgid ""
 "The high score for the custom size is usually meaningless. Any other player "
 "can make the game size smaller and get a better time. If you only ever play "
@@ -489,11 +540,11 @@ msgid ""
 "only reason it is still recorded."
 msgstr ""
 
-#: C/gnomine.xml:383(title)
+#: C/gnomine.xml:386(title)
 msgid "Window Size"
 msgstr "窗口大小"
 
-#: C/gnomine.xml:385(para)
+#: C/gnomine.xml:388(para)
 msgid ""
 "Resizing the window makes the squares bigger or smaller to suit. If you want "
 "to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
@@ -504,11 +555,11 @@ msgstr ""
 "菜单下有<guimenuitem>全屏</guimenuitem>选项。您也可以使用<keycap>F11</keycap>"
 "切换岛全屏模式。"
 
-#: C/gnomine.xml:394(title)
+#: C/gnomine.xml:397(title)
 msgid "Pausing the Game"
 msgstr "暂停游戏"
 
-#: C/gnomine.xml:396(para)
+#: C/gnomine.xml:399(para)
 msgid ""
 "The game can be paused automatically when you start using another window, or "
 "paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
@@ -517,22 +568,22 @@ msgid ""
 "\"Press to Resume\"."
 msgstr ""
 
-#: C/gnomine.xml:410(title)
+#: C/gnomine.xml:413(title)
 msgid "Strategy"
 msgstr "策略"
 
-#: C/gnomine.xml:412(para)
+#: C/gnomine.xml:415(para)
 msgid ""
 "The first half of this section explains the very basics of deducing where "
 "mines are. If you are familiar with how to play the game skip down to the "
 "<link linkend=\"advanced\">Advanced Situations</link> subsection."
 msgstr ""
 
-#: C/gnomine.xml:419(title)
+#: C/gnomine.xml:422(title)
 msgid "The Basics"
 msgstr "基本"
 
-#: C/gnomine.xml:420(para)
+#: C/gnomine.xml:423(para)
 msgid ""
 "These are a few basic situations which should be incredibly obvious, but if "
 "you're struggling with how to play the game, they should be useful. The "
@@ -540,57 +591,57 @@ msgid ""
 "squares around it read 1. That covered square is a mine."
 msgstr ""
 
-#: C/gnomine.xml:429(title)
+#: C/gnomine.xml:432(title)
 msgid "The simplest case."
 msgstr "最简单的情况。"
 
-#: C/gnomine.xml:435(para)
+#: C/gnomine.xml:438(para)
 msgid ""
 "The next simplest case is where you have two covered squares adjacent to "
 "each other and both squares on one side are marked with a 2. If they have no "
 "other uncleared neighbors, then both squares are mines."
 msgstr ""
 
-#: C/gnomine.xml:443(title)
+#: C/gnomine.xml:446(title)
 msgid "The two mine case."
 msgstr "2个地雷的情况。"
 
-#: C/gnomine.xml:449(para)
+#: C/gnomine.xml:452(para)
 msgid ""
 "Finally, when there are three uncovered squares in a row and the clear "
 "square beside the middle one is a 3 (once again this square should have no "
 "other neighbors) then all three are mines."
 msgstr ""
 
-#: C/gnomine.xml:456(title)
+#: C/gnomine.xml:459(title)
 msgid "The three mine case."
 msgstr "3个地雷的情况。"
 
-#: C/gnomine.xml:462(para)
+#: C/gnomine.xml:465(para)
 msgid ""
 "These are the simplest cases. Other permutations on these simple situations "
 "are possible, for example the three squares in the previous example could be "
 "in an L shape."
 msgstr ""
 
-#: C/gnomine.xml:467(para)
+#: C/gnomine.xml:470(para)
 msgid ""
 "Simple analysis will solve most of the puzzle, but not all. Before going on "
 "to the next sections, where we give you more advanced hints, you should play "
 "for a bit and see what you can work out for yourself."
 msgstr ""
 
-#: C/gnomine.xml:476(title)
+#: C/gnomine.xml:479(title)
 msgid "Advanced Situations"
 msgstr "高级的情况"
 
-#: C/gnomine.xml:478(para)
+#: C/gnomine.xml:481(para)
 msgid ""
 "These are some more complicated situations. They are a bit of a step up from "
 "the last section, so we hope you took our advice and played for a bit first."
 msgstr ""
 
-#: C/gnomine.xml:484(para)
+#: C/gnomine.xml:487(para)
 msgid ""
 "In the example below the mines are to the left of the ones. We figure this "
 "out by a process of elimination. If the square to the left of the 2 was a "
@@ -600,22 +651,22 @@ msgid ""
 "two squares we require for the 2 so they are both mined."
 msgstr ""
 
-#: C/gnomine.xml:495(title)
+#: C/gnomine.xml:498(title)
 msgid "A not-so-obvious pattern."
 msgstr "一种不是很明显的样式。"
 
-#: C/gnomine.xml:501(para)
+#: C/gnomine.xml:504(para)
 msgid ""
 "This situation can be disguised, for example consider the figure below. It "
 "is the same situation, but the extra mined square on the right has increased "
 "all the numbers by 1."
 msgstr ""
 
-#: C/gnomine.xml:508(title)
+#: C/gnomine.xml:511(title)
 msgid "The extra mine disguises a copy of the previous example."
 msgstr ""
 
-#: C/gnomine.xml:514(para)
+#: C/gnomine.xml:517(para)
 msgid ""
 "Now we're going to try a complicated example. It illustrates two points. The "
 "first is that even if you aren't sure which squares are mined, restricting "
@@ -623,7 +674,7 @@ msgid ""
 "aren't mined is nearly as good as knowing which are mined."
 msgstr ""
 
-#: C/gnomine.xml:522(para)
+#: C/gnomine.xml:525(para)
 msgid ""
 "Assume that, in the figure below, we start off knowing that the top left "
 "square is mined and so the two squares marked 2 on the left only require one "
@@ -639,11 +690,11 @@ msgid ""
 "the 2 is mined!"
 msgstr ""
 
-#: C/gnomine.xml:539(title)
+#: C/gnomine.xml:542(title)
 msgid "As tricky as it gets."
 msgstr ""
 
-#: C/gnomine.xml:546(para)
+#: C/gnomine.xml:549(para)
 msgid ""
 "This sort of situation is tricky. In all the other examples you can learn to "
 "look for patterns and avoid thinking hard. Situations like the one in the "
@@ -652,18 +703,18 @@ msgid ""
 "can start clearing the squares from the other side."
 msgstr ""
 
-#: C/gnomine.xml:558(title)
+#: C/gnomine.xml:561(title)
 msgid "Tips"
 msgstr "提示"
 
-#: C/gnomine.xml:560(para)
+#: C/gnomine.xml:563(para)
 msgid ""
 "Remember, the edge of the board is just the same as a large cleared area "
 "(but without the numbers). Often working at the edge of the board is the "
 "easiest way forward."
 msgstr ""
 
-#: C/gnomine.xml:566(para)
+#: C/gnomine.xml:569(para)
 msgid ""
 "Sometimes you end up in a situation where there is no way to deduce what the "
 "configuration is. In these cases you either have to guess or use the hint "
@@ -672,7 +723,7 @@ msgid ""
 "of taking a hint you might like to gamble on the most likely outcome."
 msgstr ""
 
-#: C/gnomine.xml:575(para)
+#: C/gnomine.xml:578(para)
 msgid ""
 "One final hint: remember the counter on the bottom left of the window that "
 "tells you how many mines you have left? Often, near the end of the game, "
@@ -680,11 +731,11 @@ msgid ""
 "to do this is up to you to figure out."
 msgstr ""
 
-#: C/gnomine.xml:587(title)
+#: C/gnomine.xml:590(title)
 msgid "Authors"
 msgstr "作者"
 
-#: C/gnomine.xml:588(para)
+#: C/gnomine.xml:591(para)
 msgid ""
 "<application>GNOME Mines</application> was written by Pista "
 "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
@@ -698,13 +749,14 @@ msgstr ""
 "mht.bme.hu</email>)开发。本手册由 Callum McKenzie (<email>callum@spooky-"
 "possum.org</email>)在 Vincent Povirk 的帮助下写成，并基于早先 Tim Riehle "
 "(<email>tkriehle@citilink.com</email>)所作的手册。 对本程序报告错误或提供建"
-"议，请参考<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">此文档</ulink>。"
+"议，请参考<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">此文档"
+"</ulink>。"
 
-#: C/gnomine.xml:604(title)
+#: C/gnomine.xml:607(title)
 msgid "License"
 msgstr "许可"
 
-#: C/gnomine.xml:605(para)
+#: C/gnomine.xml:608(para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl"
@@ -712,8 +764,12 @@ msgid ""
 "type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; "
 "either version 2 of the License, or (at your option) any later version."
 msgstr ""
+"这个程序是自由软件；您可以在遵循由<ulink type=\"http\" url=\"http://www.fsf."
+"org\">自由软件基金会</ulink>发布的 <citetitle><ulink type=\"help\" url="
+"\"gnome-help:gpl\">GNU 通用公共许可证</ulink></citetitle>的条款下重新分发它"
+"和/或修改它；可以是许可证第二版，或（由您选择）任何更新版本。"
 
-#: C/gnomine.xml:613(para)
+#: C/gnomine.xml:616(para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -721,8 +777,11 @@ msgid ""
 "url=\"gnome-help:gpl\">GNU General Public License</ulink></citetitle> for "
 "more details."
 msgstr ""
+"本程序的分发是希望它会有用，但没有任何保证；甚至没有商业性的或对特定目的适用"
+"性的暗指。更多细节请参看 <citetitle><ulink type=\"help\" url=\"gnome-help:gpl"
+"\">GNU 通用公共许可证</ulink></citetitle>。"
 
-#: C/gnomine.xml:619(para)
+#: C/gnomine.xml:622(para)
 msgid ""
 "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
 "General Public License</ulink></citetitle> is included as an appendix to the "
@@ -735,7 +794,7 @@ msgid ""
 "1307</postcode><country>USA</country></address>"
 msgstr ""
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/gnomine.xml:0(None)
 msgid "translator-credits"
 msgstr "翻译者名单"
