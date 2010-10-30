@@ -415,12 +415,21 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
 }
 
 static void
-gtk_minefield_size_request (GtkWidget * widget, GtkRequisition * requisition)
+gtk_minefield_get_preferred_width (GtkWidget *widget, gint *minimum, gint *natural)
 {
   GtkMineField *mf = GTK_MINEFIELD (widget);
+
   /* request the minimum size - to allow the widget window to be resized */
-  requisition->width = mf->xsize * MINESIZE_MIN;
-  requisition->height = mf->ysize * MINESIZE_MIN;
+  *minimum = *natural = mf->xsize * MINESIZE_MIN;
+}
+
+static void
+gtk_minefield_get_preferred_height (GtkWidget *widget, gint *minimum, gint *natural)
+{
+  GtkMineField *mf = GTK_MINEFIELD (widget);
+
+  /* request the minimum size - to allow the widget window to be resized */
+  *minimum = *natural = mf->ysize * MINESIZE_MIN;
 }
 
 static void
@@ -1199,7 +1208,8 @@ gtk_minefield_class_init (GtkMineFieldClass * class)
   widget_class->realize = gtk_minefield_realize;
   widget_class->unrealize = gtk_minefield_unrealize;
   widget_class->size_allocate = gtk_minefield_size_allocate;
-  widget_class->size_request = gtk_minefield_size_request;
+  widget_class->get_preferred_width = gtk_minefield_get_preferred_width;
+  widget_class->get_preferred_height = gtk_minefield_get_preferred_height;
   widget_class->expose_event = gtk_minefield_expose;
   widget_class->button_press_event = gtk_minefield_button_press;
   widget_class->button_release_event = gtk_minefield_button_release;
