@@ -738,7 +738,6 @@ create_preferences (void)
 					     GTK_STOCK_CLOSE,
 					     GTK_RESPONSE_CLOSE, NULL);
 
-  gtk_dialog_set_has_separator (GTK_DIALOG (pref_dialog), FALSE);
   gtk_container_set_border_width (GTK_CONTAINER (pref_dialog), 5);
   gtk_box_set_spacing (GTK_BOX (gtk_dialog_get_content_area (GTK_DIALOG (pref_dialog))), 2);
   gtk_window_set_resizable (GTK_WINDOW (pref_dialog), FALSE);
