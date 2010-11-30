@@ -104,7 +104,7 @@ static gint gtk_minefield_button_release (GtkWidget * widget,
 					  GdkEventButton * event);
 static void gtk_minefield_check_field (GtkMineField * mfield, gint x, gint y);
 static void gtk_minefield_class_init (GtkMineFieldClass * class);
-static gboolean gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event);
+static gboolean gtk_minefield_draw (GtkWidget * widget, cairo_t * cr);
 static void gtk_minefield_init (GtkMineField * mfield);
 static void gtk_minefield_lose (GtkMineField * mfield);
 static gint gtk_minefield_motion_notify (GtkWidget * widget,
@@ -117,8 +117,6 @@ static void gtk_minefield_setup_signs (GtkMineField * mfield);
 static void gtk_minefield_show (GtkMineField * mfield, guint x, guint y);
 static void gtk_minefield_size_allocate (GtkWidget * widget,
 					 GtkAllocation * allocation);
-static void gtk_minefield_size_request (GtkWidget * widget,
-					GtkRequisition * requisition);
 static void gtk_minefield_set_mark (GtkMineField * mfield, guint x,
 				    guint y, int mark);
 static void gtk_minefield_toggle_mark (GtkMineField * mfield, guint x,
@@ -350,12 +348,11 @@ gtk_minefield_realize (GtkWidget * widget)
   attributes.height = allocation.height;
   attributes.wclass = GDK_INPUT_OUTPUT;
   attributes.visual = gtk_widget_get_visual (widget);
-  attributes.colormap = gtk_widget_get_colormap (widget);
   attributes.event_mask = gtk_widget_get_events (widget);
   attributes.event_mask |= GDK_EXPOSURE_MASK |
     GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK | GDK_POINTER_MOTION_MASK;
 
-  attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL | GDK_WA_COLORMAP;
+  attributes_mask = GDK_WA_X | GDK_WA_Y | GDK_WA_VISUAL;
 
   window = gdk_window_new (gtk_widget_get_parent_window (widget),
                            &attributes, attributes_mask);
@@ -401,15 +398,6 @@ gtk_minefield_size_allocate (GtkWidget * widget, GtkAllocation * allocation)
     xofs = allocation->x + (allocation->width - width) / 2;
     yofs = allocation->y + (allocation->height - height) / 2;
 
-
-    if (!mfield->thick_line)
-      mfield->thick_line = gdk_gc_new (window);
-    gdk_gc_copy (mfield->thick_line, gtk_widget_get_style (widget)->black_gc);
-    gdk_gc_set_line_attributes (mfield->thick_line,
-				MAX (1, 0.1 * minesizepixels),
-				GDK_LINE_SOLID,
-				GDK_CAP_ROUND, GDK_JOIN_ROUND);
-
     gdk_window_move_resize (window, xofs, yofs, width, height);
   }
 }
@@ -440,29 +428,14 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
   gboolean clicked;
   int n, nm;
   guint minesizepixels;
-  static GdkGC *dots;
-  static const char stipple_data[] = { 0x03, 0x03, 0x0c, 0x0c };
-  static GdkPixmap *stipple = NULL;
   GtkStyle *style;
   GtkWidget *widget = GTK_WIDGET (mfield);
-  GdkRectangle rect;
-  GdkWindow *window;
+  cairo_t *cr;
 
   g_return_if_fail (c != -1);
 
-  window = gtk_widget_get_window (widget);
+  cr = gdk_cairo_create (gtk_widget_get_window (widget));
   style = gtk_widget_get_style (widget);
-
-  /* This gives us a dotted line to increase the contrast between
-   * buttons and the "sea". */
-  if (stipple == NULL) {
-    stipple = gdk_bitmap_create_from_data (NULL, stipple_data, 4, 4);
-    dots = gdk_gc_new (window);
-    gdk_gc_copy (dots, style->dark_gc[2]);
-    gdk_gc_set_stipple (dots, stipple);
-    g_object_unref (stipple);
-    gdk_gc_set_fill (dots, GDK_STIPPLED);
-  }
 
   minesizepixels = mfield->minesizepixels;
 
@@ -470,45 +443,39 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
 
   clicked = mfield->mines[c].down;
 
-  /* gtk_paint_box needs a clipping rectangle. */
-  rect.x = x * minesizepixels;
-  rect.y = y * minesizepixels;
-  rect.width = minesizepixels;
-  rect.height = minesizepixels;
-
   if (noshadow) {		/* draw grid on ocean floor */
+    double dots[] = {2, 2};
+
     gtk_paint_box (style,
-		   window,
+		   cr,
 		   clicked ? GTK_STATE_ACTIVE : GTK_STATE_NORMAL,
 		   GTK_SHADOW_IN,
-		   &rect,
 		   widget,
 		   "button", x * minesizepixels, y * minesizepixels, minesizepixels, minesizepixels);
     if (y == 0) {		/* top row only */
-      gdk_draw_line (window,	/* top */
-		     dots, x * minesizepixels, 0, x * minesizepixels + minesizepixels - 1, 0);
+      cairo_move_to (cr, x * minesizepixels, 0);
+      cairo_line_to (cr, x * minesizepixels + minesizepixels - 1, 0);
     }
     if (x == 0) {		/* left column only */
-      gdk_draw_line (window,	/* left */
-		     dots, 0, y * minesizepixels, 0, y * minesizepixels + minesizepixels - 1);
+      cairo_move_to (cr, 0, y * minesizepixels);
+      cairo_line_to (cr, 0, y * minesizepixels + minesizepixels - 1);
     }
-    gdk_draw_line (window,	/* right */
-		   dots,
-		   x * minesizepixels + minesizepixels - 1,
-		   y * minesizepixels,
-		   x * minesizepixels + minesizepixels - 1, y * minesizepixels + minesizepixels - 1);
-    gdk_draw_line (window,	/* bottom */
-		   dots,
-		   x * minesizepixels,
-		   y * minesizepixels + minesizepixels - 1,
-		   x * minesizepixels + minesizepixels - 1, y * minesizepixels + minesizepixels - 1);
+    cairo_move_to (cr, x * minesizepixels + minesizepixels - 1 + 0.5, y * minesizepixels + 0.5);
+    cairo_line_to (cr, x * minesizepixels + minesizepixels - 1 + 0.5, y * minesizepixels + minesizepixels - 1 + 0.5);
+    cairo_move_to (cr, x * minesizepixels + 0.5, y * minesizepixels + minesizepixels - 1 + 0.5);
+    cairo_line_to (cr, x * minesizepixels + minesizepixels - 1 + 0.5, y * minesizepixels + minesizepixels - 1 + 0.5);
 
+    cairo_save (cr);
+    gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->dark[gtk_widget_get_state (widget)]);
+    cairo_set_line_width (cr, 1);
+    cairo_set_dash (cr, dots, 2, 0);
+    cairo_stroke (cr);
+    cairo_restore (cr);
   } else {			/* draw shadow around possible mine location */
     gtk_paint_box (style,
-		   window,
+		   cr,
 		   clicked ? GTK_STATE_ACTIVE : GTK_STATE_SELECTED,
 		   clicked ? GTK_SHADOW_IN : GTK_SHADOW_OUT,
-		   &rect,
 		   widget,
 		   "button", x * minesizepixels, y * minesizepixels, minesizepixels, minesizepixels);
   }
@@ -521,36 +488,41 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
     g_assert (nm >= 0 && nm <= 9);
 
     if (mfield->use_overmine_warning && n < nm) {
-      gdk_draw_pixbuf (window, NULL,
-		       mfield->warning.scaledpixbuf, 0, 0,
-		       x * minesizepixels + (minesizepixels - mfield->warning.width) / 2,
-		       y * minesizepixels + (minesizepixels - mfield->warning.height) / 2,
-		       mfield->warning.width, mfield->warning.height,
-		       GDK_RGB_DITHER_NORMAL, 0, 0);
+      gdk_cairo_set_source_pixbuf (cr, mfield->warning.scaledpixbuf,
+                                   x * minesizepixels + (minesizepixels - mfield->warning.width) / 2,
+                                   y * minesizepixels + (minesizepixels - mfield->warning.height) / 2);
+      cairo_rectangle (cr,
+                       x * minesizepixels + (minesizepixels - mfield->warning.width) / 2,
+                       y * minesizepixels + (minesizepixels - mfield->warning.height) / 2,
+                       mfield->warning.width, mfield->warning.height);
+      cairo_fill (cr);
     }
 
     if (n != 0) {
-      gdk_draw_layout (window,
-		       style->black_gc,
-		       x * minesizepixels + mfield->numstr[n].dx,
-		       y * minesizepixels + mfield->numstr[n].dy,
-		       PANGO_LAYOUT (mfield->numstr[n].layout));
+      cairo_move_to (cr,		     
+                     x * minesizepixels + mfield->numstr[n].dx,
+                     y * minesizepixels + mfield->numstr[n].dy);
+      pango_cairo_show_layout (cr, PANGO_LAYOUT (mfield->numstr[n].layout));
     }
 
   } else if (mfield->mines[c].marked == MINE_QUESTION) {
-    gdk_draw_pixbuf (window, NULL,
-		     mfield->question.scaledpixbuf, 0, 0,
-		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
-		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
-		     mfield->flag.width, mfield->flag.height,
-		     GDK_RGB_DITHER_NORMAL, 0, 0);
+    gdk_cairo_set_source_pixbuf (cr, mfield->question.scaledpixbuf,
+                                 x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                                 y * minesizepixels + (minesizepixels - mfield->flag.height) / 2);
+    cairo_rectangle (cr,
+                     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
+                     mfield->flag.width, mfield->flag.height);
+    cairo_fill (cr);
   } else if (mfield->mines[c].marked == MINE_MARKED) {
-    gdk_draw_pixbuf (window, NULL,
-		     mfield->flag.scaledpixbuf, 0, 0,
-		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
-		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
-		     mfield->flag.width, mfield->flag.height,
-		     GDK_RGB_DITHER_NORMAL, 0, 0);
+    gdk_cairo_set_source_pixbuf (cr, mfield->flag.scaledpixbuf,
+                                 x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                                 y * minesizepixels + (minesizepixels - mfield->flag.height) / 2);
+    cairo_rectangle (cr,
+                     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
+                     mfield->flag.width, mfield->flag.height);
+    cairo_fill (cr);
 
     if (mfield->lose && mfield->mines[c].mined != 1) {
       int x1 = x * minesizepixels + 0.1 * minesizepixels;
@@ -558,65 +530,59 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
       int x2 = x * minesizepixels + 0.9 * minesizepixels;
       int y2 = y * minesizepixels + 0.9 * minesizepixels;
 
-      gdk_draw_line (window, mfield->thick_line, x1, y1, x2, y2);
-      gdk_draw_line (window, mfield->thick_line, x1, y2, x2, y1);
+      cairo_move_to (cr, x1, y1);
+      cairo_line_to (cr, x2, y2);
+      cairo_move_to (cr, x1, y2);
+      cairo_line_to (cr, x2, y1);
+
+      cairo_save (cr);
+      gdk_cairo_set_source_color (cr, &gtk_widget_get_style (widget)->black);
+      cairo_set_line_width (cr, MAX (1, 0.1 * minesizepixels));
+      cairo_set_line_join (cr, CAIRO_LINE_JOIN_ROUND);
+      cairo_set_line_cap (cr, CAIRO_LINE_CAP_ROUND);
+      cairo_stroke (cr);
+      cairo_restore (cr);
     }
   } else if (mfield->lose && mfield->mines[c].mined) {
-    gdk_draw_pixbuf (window, NULL,
-		     mfield->mine.scaledpixbuf, 0, 0,
-		     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
-		     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
-		     mfield->flag.width, mfield->flag.height,
-		     GDK_RGB_DITHER_NORMAL, 0, 0);
+    gdk_cairo_set_source_pixbuf (cr, mfield->mine.scaledpixbuf,
+                                 x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                                 y * minesizepixels + (minesizepixels - mfield->flag.height) / 2);
+    cairo_rectangle (cr,
+                     x * minesizepixels + (minesizepixels - mfield->flag.width) / 2,
+                     y * minesizepixels + (minesizepixels - mfield->flag.height) / 2,
+                     mfield->flag.width, mfield->flag.height);
+    cairo_fill (cr);
   }
   if (mfield->lose && mfield->mines[c].mined && mfield->mines[c].shown) {
-    gdk_draw_pixbuf (window, NULL,
-		     mfield->bang.scaledpixbuf, 0, 0,
-		     x * minesizepixels + (minesizepixels - mfield->bang.width) / 2,
-		     y * minesizepixels + (minesizepixels - mfield->bang.height) / 2,
-		     mfield->bang.width, mfield->bang.height,
-		     GDK_RGB_DITHER_NORMAL, 0, 0);
-
+    gdk_cairo_set_source_pixbuf (cr, mfield->bang.scaledpixbuf,
+                                 x * minesizepixels + (minesizepixels - mfield->bang.width) / 2,
+                                 y * minesizepixels + (minesizepixels - mfield->bang.height) / 2);
+    cairo_rectangle (cr,
+                     x * minesizepixels + (minesizepixels - mfield->bang.width) / 2,
+                     y * minesizepixels + (minesizepixels - mfield->bang.height) / 2,
+                     mfield->bang.width, mfield->bang.height);
+    cairo_fill (cr);
   }
+
+  cairo_destroy (cr);
 }
 
 static gboolean
-gtk_minefield_expose (GtkWidget * widget, GdkEventExpose * event)
+gtk_minefield_draw (GtkWidget * widget, cairo_t * cr)
 {
   g_return_val_if_fail (widget != NULL, FALSE);
   g_return_val_if_fail (GTK_IS_MINEFIELD (widget), FALSE);
-  g_return_val_if_fail (event != NULL, FALSE);
 
   if (gtk_widget_is_drawable (widget)) {
-    guint x1, y1, x2, y2, x, y;
+    guint x, y;
     GtkMineField *mfield = GTK_MINEFIELD (widget);
-    GdkRectangle *area = &event->area;
 
     /* mine square numbers must be resized to fit the mine size */
     gtk_minefield_setup_signs (mfield);
     gtk_minefield_setup_numbers (mfield);
 
-    if (area) {
-      x1 = area->x / mfield->minesizepixels;
-      y1 = area->y / mfield->minesizepixels;
-      x2 = (area->x + area->width - 1) / mfield->minesizepixels;
-      y2 = (area->y + area->height - 1) / mfield->minesizepixels;
-    } else {
-      x1 = 0;
-      y1 = 0;
-      x2 = mfield->xsize - 1;
-      y2 = mfield->ysize - 1;
-    }
-
-    /* These are necessary because we get an expose call before a
-     * resize at the old size, but after we have changed our data. */
-    if (x2 >= mfield->xsize)
-      x2 = mfield->xsize - 1;
-    if (y2 >= mfield->ysize)
-      y2 = mfield->ysize - 1;
-
-    for (x = x1; x <= x2; x++)
-      for (y = y1; y <= y2; y++)
+    for (x = 0; x < mfield->xsize; x++)
+      for (y = 0; y < mfield->ysize; y++)
 	gtk_mine_draw (mfield, x, y);
   }
   return FALSE;
@@ -737,7 +703,7 @@ gtk_minefield_win (GtkMineField * mfield)
 	mfield->mines[c].marked = MINE_MARKED;	/* mark it */
 	gtk_mine_draw (mfield, x, y);	/* draw it */
 	mfield->flag_count++;	/* up the count */
-	g_signal_emit (GTK_OBJECT (mfield),	/* display the count */
+	g_signal_emit (G_OBJECT (mfield),	/* display the count */
 		       minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
       }
     }
@@ -749,7 +715,7 @@ gtk_minefield_win (GtkMineField * mfield)
   /* now stop the clock.  (MARKS_CHANGED_SIGNAL starts it) */
   /* Make sure this is the last thing called so it is safe to
    * start a new game in the win_signal handler. */
-  g_signal_emit (GTK_OBJECT (mfield), minefield_signals[WIN_SIGNAL], 0, NULL);
+  g_signal_emit (G_OBJECT (mfield), minefield_signals[WIN_SIGNAL], 0, NULL);
 }
 
 static void
@@ -885,7 +851,7 @@ gtk_minefield_set_mark (GtkMineField * mfield, guint x, guint y, int mark)
   /* Update marking */
   mfield->mines[c].marked = mark;
   gtk_mine_draw (mfield, x, y);
-  g_signal_emit (GTK_OBJECT (mfield),
+  g_signal_emit (G_OBJECT (mfield),
 		 minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
 }
     
@@ -1146,7 +1112,7 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
       }
     }
     if (mfield->action != FLAG_ACTION) {
-      g_signal_emit (GTK_OBJECT (mfield),
+      g_signal_emit (G_OBJECT (mfield),
 		     minefield_signals[LOOK_SIGNAL], 0, NULL);
     }
   }
@@ -1185,7 +1151,7 @@ gtk_minefield_button_release (GtkWidget * widget, GdkEventButton * event)
        break;
     }
     if (!mfield->lose && !mfield->win) {
-      g_signal_emit (GTK_OBJECT (mfield),
+      g_signal_emit (G_OBJECT (mfield),
 		     minefield_signals[UNLOOK_SIGNAL], 0, NULL);
     }
     mfield->mines[mfield->celldown].down = 0;
@@ -1201,7 +1167,7 @@ static void
 gtk_minefield_class_init (GtkMineFieldClass * class)
 {
   GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (class);
-  GtkObjectClass *object_class = GTK_OBJECT_CLASS (class);
+  GObjectClass *object_class = G_OBJECT_CLASS (class);
 
   parent_class = g_type_class_peek_parent (class);
 
@@ -1210,7 +1176,7 @@ gtk_minefield_class_init (GtkMineFieldClass * class)
   widget_class->size_allocate = gtk_minefield_size_allocate;
   widget_class->get_preferred_width = gtk_minefield_get_preferred_width;
   widget_class->get_preferred_height = gtk_minefield_get_preferred_height;
-  widget_class->expose_event = gtk_minefield_expose;
+  widget_class->draw = gtk_minefield_draw;
   widget_class->button_press_event = gtk_minefield_button_press;
   widget_class->button_release_event = gtk_minefield_button_release;
   widget_class->motion_notify_event = gtk_minefield_motion_notify;
@@ -1277,7 +1243,6 @@ gtk_minefield_init (GtkMineField * mfield)
   mfield->bang.preimage = NULL;
   mfield->warning.preimage = NULL;
   mfield->grand = g_rand_new ();
-  mfield->thick_line = NULL;
 }
 
 void
@@ -1489,7 +1454,7 @@ gtk_minefield_hint (GtkMineField * mfield)
 
   /* Makes sure that the program knows about the successful
    * hint before a possible win. */
-  g_signal_emit (GTK_OBJECT (mfield),
+  g_signal_emit (G_OBJECT (mfield),
 		 minefield_signals[HINT_SIGNAL], 0, NULL);
   gtk_minefield_show (mfield, x, y);
   gtk_mine_draw (mfield, x, y);

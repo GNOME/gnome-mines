@@ -643,7 +643,7 @@ create_preferences (void)
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button), TRUE);
     }
 
-    g_signal_connect (GTK_OBJECT (button), "clicked",
+    g_signal_connect (G_OBJECT (button), "clicked",
                       G_CALLBACK (size_radio_callback),
                       GINT_TO_POINTER (i));
     gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
@@ -668,7 +668,7 @@ create_preferences (void)
 		    GTK_EXPAND | GTK_FILL, 0, 0, 0);
 
   mentry = gtk_spin_button_new_with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
-  g_signal_connect (GTK_OBJECT (mentry), "value-changed",
+  g_signal_connect (G_OBJECT (mentry), "value-changed",
 		    G_CALLBACK (nmines_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), nmines);
   gtk_table_attach (GTK_TABLE (table2), mentry, 1, 2, 2, 3, 0, 0, 0, 0);
@@ -681,7 +681,7 @@ create_preferences (void)
 		    GTK_EXPAND | GTK_FILL, 0, 0, 0);
 
   xentry = gtk_spin_button_new_with_range (XSIZE_MIN, XSIZE_MAX, 1);
-  g_signal_connect (GTK_OBJECT (xentry), "value-changed",
+  g_signal_connect (G_OBJECT (xentry), "value-changed",
 		    G_CALLBACK (xsize_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (xentry), xsize);
   gtk_table_attach (GTK_TABLE (table2), xentry, 1, 2, 0, 1, 0, 0, 0, 0);
@@ -693,7 +693,7 @@ create_preferences (void)
 		    GTK_EXPAND | GTK_FILL, 0, 0, 0);
 
   yentry = gtk_spin_button_new_with_range (YSIZE_MIN, YSIZE_MAX, 1);
-  g_signal_connect (GTK_OBJECT (yentry), "value-changed",
+  g_signal_connect (G_OBJECT (yentry), "value-changed",
 		    G_CALLBACK (ysize_spin_cb), NULL);
   gtk_spin_button_set_value (GTK_SPIN_BUTTON (yentry), ysize);
   gtk_table_attach (GTK_TABLE (table2), yentry, 1, 2, 1, 2, 0, 0, 0, 0);
@@ -708,7 +708,7 @@ create_preferences (void)
 
   question_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"I'm not sure\" flags"));
-  g_signal_connect (GTK_OBJECT (question_toggle), "toggled",
+  g_signal_connect (G_OBJECT (question_toggle), "toggled",
 		    G_CALLBACK (use_question_toggle_cb), NULL);
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (question_toggle),
 				use_question_marks);
@@ -722,7 +722,7 @@ create_preferences (void)
 
   overmine_toggle =
     gtk_check_button_new_with_mnemonic (_("_Use \"Too many flags\" warning"));
-  g_signal_connect (GTK_OBJECT (overmine_toggle), "toggled",
+  g_signal_connect (G_OBJECT (overmine_toggle), "toggled",
 		    G_CALLBACK (use_overmine_toggle_cb), NULL);
   gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (overmine_toggle),
 				use_overmine_warning);

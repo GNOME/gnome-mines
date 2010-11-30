@@ -77,7 +77,6 @@ extern "C" {
     sign bang;
     sign warning;
     GRand *grand;
-    GdkGC *thick_line;
 
     gboolean started;
 
