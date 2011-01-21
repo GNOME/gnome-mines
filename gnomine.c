@@ -389,7 +389,6 @@ lose_game (GtkWidget * widget, gpointer data)
 static void
 win_game (GtkWidget * widget, gpointer data)
 {
-  GamesScoreValue score;
   int pos;
   time_t seconds;
 
@@ -400,9 +399,7 @@ win_game (GtkWidget * widget, gpointer data)
   show_face (pm_win);
 
   seconds = games_clock_get_seconds (GAMES_CLOCK (clk));
-  score.time_double = (gfloat) (seconds / 60) + (gfloat) (seconds % 60) / 100;
-
-  pos = games_scores_add_score (highscores, score);
+  pos = games_scores_add_time_score (highscores, (gfloat) (seconds / 60) + (gfloat) (seconds % 60) / 100);
 
   if (show_scores (pos, TRUE) == GTK_RESPONSE_REJECT)
     quit_game ();
