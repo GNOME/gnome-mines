@@ -97,7 +97,7 @@ static inline gint get_cell_index_no_checks (GtkMineField * mfield, guint x,
 				       guint y);
 static gint get_cell_index (GtkMineField * mfield, guint x, guint y);
 static void setup_sign (sign * signp, const char *file, guint minesizepixels);
-static void gtk_mine_draw (GtkMineField * mfield, guint x, guint y);
+static void gtk_mine_queue_draw (GtkMineField * mfield, guint x, guint y);
 static gint gtk_minefield_button_press (GtkWidget * widget,
 					GdkEventButton * event);
 static gint gtk_minefield_button_release (GtkWidget * widget,
@@ -421,7 +421,17 @@ gtk_minefield_get_preferred_height (GtkWidget *widget, gint *minimum, gint *natu
 }
 
 static void
-gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
+gtk_mine_queue_draw (GtkMineField * mfield, guint x, guint y)
+{
+  guint minesizepixels = mfield->minesizepixels;
+
+  gtk_widget_queue_draw_area (GTK_WIDGET (mfield),
+                              x * minesizepixels, y * minesizepixels,
+                              minesizepixels, minesizepixels);
+}
+
+static void
+gtk_mine_draw (GtkMineField * mfield, cairo_t *cr, guint x, guint y)
 {
   int c = get_cell_index (mfield, x, y);
   int noshadow;
@@ -430,11 +440,9 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
   guint minesizepixels;
   GtkStyle *style;
   GtkWidget *widget = GTK_WIDGET (mfield);
-  cairo_t *cr;
 
   g_return_if_fail (c != -1);
 
-  cr = gdk_cairo_create (gtk_widget_get_window (widget));
   style = gtk_widget_get_style (widget);
 
   minesizepixels = mfield->minesizepixels;
@@ -563,8 +571,6 @@ gtk_mine_draw (GtkMineField * mfield, guint x, guint y)
                      mfield->bang.width, mfield->bang.height);
     cairo_fill (cr);
   }
-
-  cairo_destroy (cr);
 }
 
 static gboolean
@@ -583,7 +589,7 @@ gtk_minefield_draw (GtkWidget * widget, cairo_t * cr)
 
     for (x = 0; x < mfield->xsize; x++)
       for (y = 0; y < mfield->ysize; y++)
-	gtk_mine_draw (mfield, x, y);
+	gtk_mine_draw (mfield, cr, x, y);
   }
   return FALSE;
 }
@@ -606,7 +612,7 @@ gtk_minefield_check_cell (GtkMineField * mfield, guint x, guint y)
 	  mfield->mines[c].marked == MINE_NOMARK) {
 	mfield->mines[c].shown = 1;
 	mfield->shown++;
-	gtk_mine_draw (mfield, nx, ny);
+	gtk_mine_queue_draw (mfield, nx, ny);
 	changed = 1;
       }
     }
@@ -683,7 +689,7 @@ gtk_minefield_lose (GtkMineField * mfield)
     if (mfield->mines[i].mined || mfield->mines[i].marked) {
       y = i / mfield->xsize;
       x = i % mfield->xsize;
-      gtk_mine_draw (mfield, x, y);
+      gtk_mine_queue_draw (mfield, x, y);
     }
   }
 }
@@ -701,7 +707,7 @@ gtk_minefield_win (GtkMineField * mfield)
 	  mfield->mines[c].marked != MINE_MARKED) {
 
 	mfield->mines[c].marked = MINE_MARKED;	/* mark it */
-	gtk_mine_draw (mfield, x, y);	/* draw it */
+	gtk_mine_queue_draw (mfield, x, y);	/* draw it */
 	mfield->flag_count++;	/* up the count */
 	g_signal_emit (G_OBJECT (mfield),	/* display the count */
 		       minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
@@ -792,7 +798,7 @@ gtk_minefield_show (GtkMineField * mfield, guint x, guint y)
   if (mfield->mines[c].marked != MINE_MARKED && mfield->mines[c].shown != 1) {
     mfield->mines[c].shown = 1;
     mfield->shown++;
-    gtk_mine_draw (mfield, x, y);
+    gtk_mine_queue_draw (mfield, x, y);
     if (mfield->mines[c].mined == 1) {
       gtk_minefield_lose (mfield);
     } else {
@@ -844,13 +850,13 @@ gtk_minefield_set_mark (GtkMineField * mfield, guint x, guint y, int mark)
 
       /* Redraw if too many marks placed */
       if (is_valid != was_valid)
-	gtk_mine_draw (mfield, nx, ny);
+	gtk_mine_queue_draw (mfield, nx, ny);
     }
   }
 
   /* Update marking */
   mfield->mines[c].marked = mark;
-  gtk_mine_draw (mfield, x, y);
+  gtk_mine_queue_draw (mfield, x, y);
   g_signal_emit (G_OBJECT (mfield),
 		 minefield_signals[MARKS_CHANGED_SIGNAL], 0, NULL);
 }
@@ -893,7 +899,7 @@ gtk_minefield_multi_press (GtkMineField * mfield, guint x, guint y, gint c)
       continue;
     if (mfield->mines[c2].marked != MINE_MARKED && !mfield->mines[c2].shown) {
       mfield->mines[c2].down = 1;
-      gtk_mine_draw (mfield, nx, ny);
+      gtk_mine_queue_draw (mfield, nx, ny);
     }
   }
   mfield->multi_mode = 1;
@@ -960,7 +966,7 @@ gtk_minefield_multi_release (GtkMineField * mfield, guint x, guint y, guint c,
 	  lose = 1;
 	}
       }
-      gtk_mine_draw (mfield, nx, ny);
+      gtk_mine_queue_draw (mfield, nx, ny);
     }
   }
   if (lose) {
@@ -1001,7 +1007,7 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
     /* If left or middle mouse button down. */
     if (mfield->buttondown[0] || mfield->buttondown[1]) {
       mfield->mines[mfield->celldown].down = 0;
-      gtk_mine_draw (mfield, mfield->celldownx, mfield->celldowny);
+      gtk_mine_queue_draw (mfield, mfield->celldownx, mfield->celldowny);
 
       if (mfield->multi_mode)
 	gtk_minefield_multi_release (mfield, mfield->celldownx,
@@ -1010,7 +1016,7 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
       mfield->celldowny = y;
       mfield->celldown = c;
       mfield->mines[c].down = 1;
-      gtk_mine_draw (mfield, x, y);
+      gtk_mine_queue_draw (mfield, x, y);
 
       /* Clear action is active and the current cell is shown. */
       if (mfield->action == CLEAR_ACTION && mfield->mines[c].shown)
@@ -1019,7 +1025,7 @@ gtk_minefield_motion_notify (GtkWidget * widget, GdkEventMotion * event)
       /*  Update clicked field on right click drag.*/
       mfield->mines[mfield->celldown].down = 0;
       mfield->action = NO_ACTION;
-      gtk_mine_draw (mfield, mfield->celldownx, mfield->celldowny);
+      gtk_mine_queue_draw (mfield, mfield->celldownx, mfield->celldowny);
 
       mfield->celldownx = x;
       mfield->celldowny = y;
@@ -1070,7 +1076,7 @@ gtk_minefield_button_press (GtkWidget * widget, GdkEventButton * event)
     mfield->buttondown[event->button - 1]++;
 
     /* Redraw the cell, which is now being pressed. */
-    gtk_mine_draw (mfield, x, y);
+    gtk_mine_queue_draw (mfield, x, y);
 
     /* Determine what action to do. Normally this is
      * left button = show, middle = clear and right = flag.
@@ -1157,7 +1163,7 @@ gtk_minefield_button_release (GtkWidget * widget, GdkEventButton * event)
     mfield->mines[mfield->celldown].down = 0;
     mfield->action = NO_ACTION;
     mfield->buttondown[event->button - 1] = 0;
-    gtk_mine_draw (mfield, mfield->celldownx, mfield->celldowny);
+    gtk_mine_queue_draw (mfield, mfield->celldownx, mfield->celldowny);
   }
   return FALSE;
 }
@@ -1457,7 +1463,7 @@ gtk_minefield_hint (GtkMineField * mfield)
   g_signal_emit (G_OBJECT (mfield),
 		 minefield_signals[HINT_SIGNAL], 0, NULL);
   gtk_minefield_show (mfield, x, y);
-  gtk_mine_draw (mfield, x, y);
+  gtk_mine_queue_draw (mfield, x, y);
   retval = MINEFIELD_HINT_ACCEPTED;
 
 cleanup:
