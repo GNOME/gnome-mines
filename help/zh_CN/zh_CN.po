@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: GNOME\n"
-"POT-Creation-Date: 2010-07-28 20:17+0000\n"
+"POT-Creation-Date: 2011-01-25 19:42+0000\n"
 "PO-Revision-Date: \n"
-"Last-Translator: lainme <lainme993@gmail.com>\n"
+"Last-Translator: TeliuTe <teliute@163.com>\n"
 "Language-Team: i18n-zh <i18n-zh@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -115,7 +115,6 @@ msgid "<application>Mines</application> Manual"
 msgstr "<application>扫雷</application> 手册"
 
 #: C/gnomine.xml:29(para)
-#, fuzzy
 msgid ""
 "Mines is GNOME's take on the popular logic puzzle minesweeper, which "
 "includes avoiding mines while receiving clues for the location of the mines."
@@ -285,17 +284,15 @@ msgid "Introduction"
 msgstr "简介"
 
 #: C/gnomine.xml:123(para)
-#, fuzzy
 msgid ""
 "<application><application>Mines</application></application> is a puzzle game "
 "where you locate mines floating in an ocean using only your brain and a "
 "little bit of luck."
 msgstr ""
-"<application><application>扫雷</application></application>是一个解密游戏，您"
-"仅凭自己的大脑和一小点运气来在海洋中定位雷的位置。"
+"<application><application>扫雷</application></application>是一个智力游戏，您"
+"仅凭自己的大脑和一小点运气来在一片方块中定位雷的位置。"
 
 #: C/gnomine.xml:129(para)
-#, fuzzy
 msgid ""
 "You start the game with a grid of covered squares and no idea what is in "
 "them. Clicking on a square reveals what is in it: either empty ocean or a "
@@ -309,9 +306,9 @@ msgid ""
 "squares."
 msgstr ""
 "您启动游戏会出现被遮蔽的方块组成的网格，而不知道它们里面是什么。点击一个方块"
-"会显示出它里面的东西；或是空的海洋或是雷。如果您找到一个雷，坏事就会发生，整"
+"会显示出它里面的东西；或是空的地面或是雷。如果您点到一个雷，坏事就会发生，整"
 "个游戏结束了。如果您打开一个空的方块，您会幸存并着手另一次尝试。我们确实会给"
-"您一些帮助；假如您找到印有数字的空海洋的话，它告诉您在周围方块中有多少个雷"
+"您一些帮助；假如您找到印有数字的空阔地面的话，它告诉您在周围方块中有多少个雷"
 "（或没有数字，如果周围没有雷）。一旦您扫出一些方块便可以开始推断哪些方块有雷"
 "哪些没有。当您找到全部没有雷的方块并标记了全部有雷的方块，您就赢了游戏。"
 
@@ -320,7 +317,6 @@ msgid "The stages of the game: the start, playing, losing, and winning."
 msgstr "游戏的过程：开始，进行游戏，失败，和胜利。"
 
 #: C/gnomine.xml:152(para)
-#, fuzzy
 msgid ""
 "To mark a square as having a mine you right-click on it and a flag is placed "
 "there. If you click on a square with a number and you have placed precisely "
@@ -332,7 +328,7 @@ msgstr ""
 "要将一个方块标记为有雷，您在它上面单击右键，然后那里会插上旗帜。如果您点击有"
 "数字的方块，并且在周围方块放置了正好这么多的旗帜，那么剩下的方块就会被揭开。"
 "如果您没有正确标记出雷，就会发生爆炸并且游戏结束。周围没有雷的方块（例如空白"
-"方块）会自动扫出周围方块。"
+"方块）会自动清理出周围方块。"
 
 #: C/gnomine.xml:163(title)
 msgid "Important information."
@@ -366,13 +362,12 @@ msgid "The Details"
 msgstr "细节"
 
 #: C/gnomine.xml:199(para)
-#, fuzzy
 msgid ""
 "This section provides information on the controls and the important menu "
 "items. If you need help figuring where the mines are, see the <link linkend="
 "\"strategy\">strategy section</link>."
 msgstr ""
-"本节提供关于控制和重要的菜单项的信息。如果您需要弄明白雷在哪里，参见<link "
+"本节提供了关于控制和重要的菜单项的信息。如果您需要弄明白雷在哪里，参见<link "
 "linkend=\"strategy\">策略一节</link>。"
 
 #: C/gnomine.xml:206(title)
@@ -387,6 +382,9 @@ msgid ""
 "you have cleared all the un-mined squares, any remaining mined squares will "
 "be marked for you."
 msgstr ""
+"开始所有方块下面都是未知的，您必须找出所有的地雷，翻开空的方块。您不必给有雷"
+"的方块插上旗标，但是这样做会减少很多不必要的麻烦，一旦您翻开了所有不是雷的方"
+"块，剩余的方块会自动做上标记。"
 
 #: C/gnomine.xml:217(para)
 msgid ""
@@ -395,6 +393,8 @@ msgid ""
 "square unless the number of marked mines equals the number given in the "
 "square."
 msgstr ""
+"如果您点上了一个雷，或者自动时碰到一个雷，您就会输了。要避免这种情况的发生，"
+"您不应该允许自动清理，除非标记的雷跟给定的雷数目相同。"
 
 #: C/gnomine.xml:227(title)
 msgid "Using the Mouse"
@@ -425,6 +425,8 @@ msgid ""
 "Auto-clear. Reveals the unmarked squares around the clicked square, but only "
 "if enough squares have been marked to match the number in the square."
 msgstr ""
+"自动清理，翻开点击位置周围没有标记的方块，但是只有标记的地雷数目跟给定的数目"
+"相匹配时才可以。"
 
 #: C/gnomine.xml:251(entry)
 msgid "Right click on an un-revealed square."
@@ -454,6 +456,9 @@ msgid ""
 "Smaller games are more frantic. We provide Small, Medium, Large and Custom "
 "sizes."
 msgstr ""
+"点菜单 <menuchoice><guimenu>设置</guimenu><guimenuitem>首选项</guimenuitem></"
+"menuchoice>，您可以设置游戏面板大小，大的场地明显需要更多时间和精力，小的场地"
+"更容易抓狂。这儿提供了小、中、大和自定义大小。"
 
 #: C/gnomine.xml:276(title)
 msgid "The preferences dialog."
@@ -468,6 +473,9 @@ msgid ""
 "low then the game becomes very easy. The number of mines is limited to "
 "slightly less than the total number of squares."
 msgstr ""
+"在对话框的右边有三个控制大小的参数，水平和垂直是用于网格和方块的宽度和高度，"
+"地雷数量是——这个显而易见——是您想找出的地雷数量，如果设的太大或者太小都会使游"
+"戏变得简单，雷的数目不能超过方块的数量。"
 
 #: C/gnomine.xml:296(title)
 msgid "\"I'm not sure\" Flags"
@@ -484,6 +492,10 @@ msgid ""
 "appropriate number of red marker flags to be able to clear around a numbered "
 "square."
 msgstr ""
+"在属性对话框里还有一个“不确定”旗标，如果您选中此项，当用右键连续点击一个方块"
+"时，它会先显示普通旗标，也就是地雷的旗标，然后是一个问号不确定旗标，再就是无"
+"旗标。这个新的旗标可以帮您推理，标记一个不太确定是否是雷的方块。这些旗标不影"
+"响游戏，您仍然要使用红色的地雷标记，以便清理周围的方块。"
 
 #: C/gnomine.xml:319(title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
@@ -500,6 +512,8 @@ msgid ""
 "many flags. This is disabled by default, as it provides so much hint that it "
 "could be considered \"cheating\"."
 msgstr ""
+"另一个复选框是“太多旗标”警告，选中此项，当您放置太多旗标时，会显示一个警告信"
+"息。默认不选中此项，因为它给出了太多提示，可能会被认为是“作弊”。"
 
 #: C/gnomine.xml:342(title)
 msgid "Hints"
@@ -514,6 +528,10 @@ msgid ""
 "blank). The choice of square is random, but should be helpful. There is 10 "
 "second penalty added to your time whenever you use a hint."
 msgstr ""
+"如果您扫雷受阻－通常是在快结束时，两种可能都合理，您没法解决时－要么猜一下，"
+"要么看一下提示。当您点菜单 <guimenu>游戏</guimenu> 选择 <guimenuitem>提示</"
+"guimenuitem>，会翻开一个方块(如果它是空的，则是周围的方块)。这是随机选择的，"
+"但是也会有所帮助，无论您是否采纳，都会加上10秒的时间。"
 
 #: C/gnomine.xml:358(title)
 msgid "High Scores"
@@ -527,6 +545,10 @@ msgid ""
 "guimenuitem> from the <guimenu>Game</guimenu> menu. The drop-down menu at "
 "the top of the dialog lets you look at the scores for other board sizes."
 msgstr ""
+"如果您的积分在前10名，就会显示在得分榜上，还有一个机会更改得分榜上的记录名。"
+"您还可以稍后点<guimenu>游戏</guimenu>菜单，选择<guimenuitem>得分</"
+"guimenuitem>菜单项，来查看得分榜。点击上面的下拉列表可以查看其他大小面板的得"
+"分情况。"
 
 #: C/gnomine.xml:370(title)
 msgid "The high scores dialog."
@@ -539,6 +561,8 @@ msgid ""
 "one custom size then it will tell you how well you are doing. This is the "
 "only reason it is still recorded."
 msgstr ""
+"自定义大小的得分榜没什么意义，许多玩家可以让面板很小从而获得很好的成绩。如果"
+"您只玩自定义大小，它将告诉您玩的多么好，这是它记录的唯一原因。"
 
 #: C/gnomine.xml:386(title)
 msgid "Window Size"
@@ -567,6 +591,9 @@ msgid ""
 "the clock is stopped. To start playing again press the button labelled "
 "\"Press to Resume\"."
 msgstr ""
+"当您打开其他窗口时，游戏自动暂停，或者也可以点<guimenu>游戏</guimenu>菜单，选"
+"择<guimenuitem>暂停</guimenuitem>命令。面板会变成空白，这样您就不能在时钟停止"
+"时思考。要继续进行游戏，点击“按下可恢复”按钮。"
 
 #: C/gnomine.xml:413(title)
 msgid "Strategy"
@@ -578,6 +605,8 @@ msgid ""
 "mines are. If you are familiar with how to play the game skip down to the "
 "<link linkend=\"advanced\">Advanced Situations</link> subsection."
 msgstr ""
+"前半节讲述的是扫雷基本推理，如果您已经熟悉了如果玩，可以跳到 <link linkend="
+"\"advanced\">复杂情形</link> 一节。"
 
 #: C/gnomine.xml:422(title)
 msgid "The Basics"
@@ -590,6 +619,9 @@ msgid ""
 "first case is where you have an isolated covered square and most of the "
 "squares around it read 1. That covered square is a mine."
 msgstr ""
+"有些基本情形是显而易见的，只是对您全面了解游戏是有帮助的。第一种情形是有一个"
+"孤立的扣着的方块，它旁边绝大多数方块已经翻开，显示的是1，这个扣着的方块下面是"
+"一个雷。"
 
 #: C/gnomine.xml:432(title)
 msgid "The simplest case."
@@ -601,6 +633,8 @@ msgid ""
 "each other and both squares on one side are marked with a 2. If they have no "
 "other uncleared neighbors, then both squares are mines."
 msgstr ""
+"第二种简单的情形是，两个扣着的方块相互挨着的方块都是扣着的，它们的一边都显示"
+"的是数字2,如果旁边没有其他相邻的方块，这两个方块下面都有雷。"
 
 #: C/gnomine.xml:446(title)
 msgid "The two mine case."
@@ -612,6 +646,8 @@ msgid ""
 "square beside the middle one is a 3 (once again this square should have no "
 "other neighbors) then all three are mines."
 msgstr ""
+"最后，一条线上有三个没翻开的方块，中间的显示的是3(再说一下，方块没有别的没翻"
+"开的相邻方块)，那么这三个方块下面都是雷。"
 
 #: C/gnomine.xml:459(title)
 msgid "The three mine case."
@@ -623,6 +659,8 @@ msgid ""
 "are possible, for example the three squares in the previous example could be "
 "in an L shape."
 msgstr ""
+"这些都是简单的情形，也可能还有别的简单情况，比如上面讲到的三个方块，可以排列"
+"成 L 形。"
 
 #: C/gnomine.xml:470(para)
 msgid ""
@@ -630,6 +668,8 @@ msgid ""
 "to the next sections, where we give you more advanced hints, you should play "
 "for a bit and see what you can work out for yourself."
 msgstr ""
+"简单的推理可以解决大多数迷题，但不是全部。在进入下一节前，这儿我们给一些地更"
+"高级的提示，您应当更进一步，看看您自己是如何解决的。"
 
 #: C/gnomine.xml:479(title)
 msgid "Advanced Situations"
@@ -640,6 +680,8 @@ msgid ""
 "These are some more complicated situations. They are a bit of a step up from "
 "the last section, so we hope you took our advice and played for a bit first."
 msgstr ""
+"这儿是一些更为复杂的情形，它们比上一节要更深一些，因此，我们希望您能听取意见"
+"先玩得深入一些。"
 
 #: C/gnomine.xml:487(para)
 msgid ""
@@ -650,6 +692,9 @@ msgid ""
 "adjacent to the 1s). Having eliminated the middle square we are left with "
 "two squares we require for the 2 so they are both mined."
 msgstr ""
+"在这个例子中，地雷在1左边的方块下面，我们用排除法来解释。如果2左边的方块是"
+"雷，那么两个1都会满足雷的最大数，中间的方块不可能再放第二个雷了(因为它们都和1"
+"相连)，排除了中间这个不是雷，那么这儿有两个雷，所以上面两个都是雷了。"
 
 #: C/gnomine.xml:498(title)
 msgid "A not-so-obvious pattern."
@@ -661,10 +706,12 @@ msgid ""
 "is the same situation, but the extra mined square on the right has increased "
 "all the numbers by 1."
 msgstr ""
+"这种情形可能被忽视，如下图所示，也是这种情况，只是多的雷在右边方块，所有数字"
+"都加上了1。"
 
 #: C/gnomine.xml:511(title)
 msgid "The extra mine disguises a copy of the previous example."
-msgstr ""
+msgstr "多出地雷的图示，跟上一例相同。"
 
 #: C/gnomine.xml:517(para)
 msgid ""
@@ -673,6 +720,9 @@ msgid ""
 "the possibilities is helpful. The second is that knowing which squares "
 "aren't mined is nearly as good as knowing which are mined."
 msgstr ""
+"现在我们来试一个复杂的例子，这个图有两个要点，第一点您甚至不能确定哪个方块有"
+"雷，缩小可能性是有用的。第二点是弄清哪个方块没有雷，可以更好地确定有雷的方"
+"块。"
 
 #: C/gnomine.xml:525(para)
 msgid ""
@@ -689,10 +739,17 @@ msgid ""
 "us which mines surround the 4, it now tells us which of the squares beside "
 "the 2 is mined!"
 msgstr ""
+"确定了这两点，在下图中，我们首先确定左上角的方块有雷，由于左边标着的2，只需再"
+"找到一个雷。再继续找，最左边的两个方块下面有一个雷，但我们仍然不知道是哪一"
+"个。因为它们两个里面至少有一个雷，但都和2相邻，我们知道任何一个方块都满足2的"
+"条件(我们还是不知道是哪一个)。这就意味着4的下面比较清楚，因为它也是与两个2相"
+"邻，但跟我们前面讲的最左边的方块不相邻。这个空方块要挨着四个相邻方块－每个下"
+"面都应该有雷。这不仅告诉我们4周围哪一个是雷，现在也告诉我们哪一个挨着2的方块"
+"有雷。"
 
 #: C/gnomine.xml:542(title)
 msgid "As tricky as it gets."
-msgstr ""
+msgstr "得到的结果"
 
 #: C/gnomine.xml:549(para)
 msgid ""
@@ -702,6 +759,9 @@ msgid ""
 "easier to just ignore them and keep playing elsewhere in the hope that you "
 "can start clearing the squares from the other side."
 msgstr ""
+"这类情况需要一定的技巧，在其他的例子中，您可以学到通过对比图样来避免费脑筋，"
+"而此例中的情况不容易出现或者简单地识别。常常被忽略先翻开了别的地方，可以从另"
+"外一些方面来清除这些方块。"
 
 #: C/gnomine.xml:561(title)
 msgid "Tips"
@@ -713,6 +773,8 @@ msgid ""
 "(but without the numbers). Often working at the edge of the board is the "
 "easiest way forward."
 msgstr ""
+"记住，面板的四个边也是一个大的已清除区域(但是不会显示数字)。经常在边上找找是"
+"前进的最简单方法。"
 
 #: C/gnomine.xml:569(para)
 msgid ""
@@ -722,6 +784,10 @@ msgid ""
 "guimenuitem></menuchoice>). Sometimes it isn't a 50/50 situation and instead "
 "of taking a hint you might like to gamble on the most likely outcome."
 msgstr ""
+"有时您被一种无法解开的情形所困绕，无法解脱。这时候要么您试着猜一下，或者也可"
+"以使用提示功能(点菜单<menuchoice><guimenu>游戏</guimenu><guimenuitem>提示</"
+"guimenuitem></menuchoice>)。有时它并不是对半开的情况，相比获得一个提示，您可"
+"能更愿意用赌一把来解决问题。"
 
 #: C/gnomine.xml:578(para)
 msgid ""
@@ -730,6 +796,8 @@ msgid ""
 "this number can help you figure out what possible places mines can be. How "
 "to do this is up to you to figure out."
 msgstr ""
+"最后一个提示：注意窗口左下边的记数提示，您还剩多少雷？越接近结尾，这个数字越"
+"能帮助您找到雷可能的位置。让您明白该如何去做。"
 
 #: C/gnomine.xml:590(title)
 msgid "Authors"
@@ -793,8 +861,18 @@ msgid ""
 "street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
 "1307</postcode><country>USA</country></address>"
 msgstr ""
+"在<citetitle>GNOME 用户指南</citetitle> 的附录中包含了一份 <citetitle>GNU 通"
+"用许可证</citetitle>的副本，您也可以通过访问自由软件基金会的<ulink type="
+"\"http\" url=\"http://www.fsf.org\">网站</ulink>上获得 <citetitle>GNU 通用许"
+"可证</citetitle>的副本，或者写信给 <address> Free Software Foundation, Inc. "
+"<street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</"
+"state><postcode>02111-1307</postcode><country>USA</country></address> 来索"
+"取。"
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: C/gnomine.xml:0(None)
 msgid "translator-credits"
-msgstr "翻译者名单"
+msgstr ""
+"ZhangMiao <mymzhang@gmail.com>, 2009\n"
+"lainme <lainme993@gmail.com>, 2010\n"
+"TeliuTe <teliute@163.com>, 2011"
