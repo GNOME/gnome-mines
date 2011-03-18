@@ -1,4 +1,4 @@
-SUBDIRS =
+SUBDIRS = icons
 
 if BUILD_HELP
 SUBDIRS += help
