@@ -31,7 +31,6 @@
 #include <gtk/gtk.h>
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-preimage.h>
 

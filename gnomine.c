@@ -35,7 +35,6 @@
 #include <libgames-support/games-clock.h>
 #include <libgames-support/games-conf.h>
 #include <libgames-support/games-frame.h>
-#include <libgames-support/games-gtk-compat.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.c>
