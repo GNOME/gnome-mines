@@ -38,13 +38,10 @@ gnomine_CFLAGS += $(GHTREAD_CFLAGS)
 gnomine_LDADD += $(GTHREAD_LIBS)
 endif
 
-schema_in_files = gnomine.schemas.in
-if HAVE_GNOME
-schemadir = $(GCONF_SCHEMA_FILE_DIR)
-schema_DATA = $(schema_in_files:.schemas.in=.schemas)
-endif
-
-@INTLTOOL_SCHEMAS_RULE@
+gsettings_in_file = org.gnome.gnomine.gschema.xml.in
+gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
+@INTLTOOL_XML_NOMERGE_RULE@
+@GSETTINGS_RULES@
 
 man_MANS = gnomine.6
 
@@ -54,7 +51,7 @@ pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg 	\
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 EXTRA_DIST = README AUTHORS \
-             $(schema_in_files) \
+             $(gsettings_in_file) \
              $(man_MANS) \
              $(pixmap_DATA)
 
@@ -66,9 +63,6 @@ Games_DATA = $(Games_in_files:.desktop.in.in=.desktop)
 SCOREFILES = Small Medium Large Custom
 
 install-data-local:
-if GCONF_SCHEMAS_INSTALL
-	GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $(top_builddir)/gnomine/$(schema_DATA)
-endif
 	-$(mkinstalldirs) $(DESTDIR)$(scoredir)
 	## Change the names of the high score files, unless the local user has 
 	## beaten us to it.
@@ -85,6 +79,6 @@ install-exec-hook:
 	  chgrp $(scores_group) $(DESTDIR)$(bindir)/gnomine && chmod 2555 $(DESTDIR)$(bindir)/gnomine ;\
 	fi
 
-DISTCLEANFILES = $(Games_DATA) $(schema_DATA)
+DISTCLEANFILES = $(Games_DATA) $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

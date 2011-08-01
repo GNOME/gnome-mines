@@ -1,0 +1,39 @@
+<schemalist>
+  <schema id="org.gnome.gnomine" path="/apps/gnomine/" gettext-domain="gnome-games">
+    <key name="use-question-marks" type="b">
+      <default>false</default>
+      <_summary>Use the unknown flag</_summary>
+      <_description>Set to true to be able to mark squares as unknown.</_description>
+    </key>
+    <key name="use-overmine-warning" type="b">
+      <default>false</default>
+      <_summary>Warning about too many flags</_summary>
+      <_description>Set to true to enable warning icons when too many flags are placed.</_description>
+    </key>
+    <key name="use-autoflag" type="b">
+      <default>false</default>
+      <_summary>Enable automatic placing of flags</_summary>
+      <_description>Set to true to have gnomine automatically flag squares as mined when enough squares are revealed</_description>
+    </key>
+    <key name="xsize" type="i">
+      <default>16</default>
+      <range min="4" max="100" />
+      <_summary>Number of columns in a custom game</_summary>
+    </key>
+    <key name="ysize" type="i">
+      <default>16</default>
+      <range min="4" max="100" />
+      <_summary>Number of rows in a custom game</_summary>
+    </key>
+    <key name="nmines" type="i">
+      <default>40</default>
+      <_summary>The number of mines in a custom game</_summary>
+    </key>
+    <key name="mode" type="i">
+      <default>0</default>
+      <range min="0" max="3" />
+      <_summary>Board size</_summary>
+      <_description>Size of the board (0-2 = small-large, 3=custom)</_description>
+    </key>
+  </schema>
+</schemalist>

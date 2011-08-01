@@ -33,12 +33,12 @@
 #include <gdk/gdkkeysyms.h>
 
 #include <libgames-support/games-clock.h>
-#include <libgames-support/games-conf.h>
 #include <libgames-support/games-frame.h>
 #include <libgames-support/games-help.h>
 #include <libgames-support/games-runtime.h>
 #include <libgames-support/games-scores.c>
 #include <libgames-support/games-scores-dialog.h>
+#include <libgames-support/games-settings.h>
 #include <libgames-support/games-stock.h>
 #include <libgames-support/games-pause-action.h>
 #include <libgames-support/games-fullscreen-action.h>
@@ -67,15 +67,16 @@
 #define KEY_NMINES "nmines"
 #define KEY_MODE "mode"
 
-#define KEY_USE_QUESTION_MARKS "use_question_marks"
-#define KEY_USE_OVERMINE_WARNING "use_overmine_warning"
-#define KEY_USE_AUTOFLAG "use_autoflag"
+#define KEY_USE_QUESTION_MARKS "use-question-marks"
+#define KEY_USE_OVERMINE_WARNING "use-overmine-warning"
+#define KEY_USE_AUTOFLAG "use-autoflag"
 
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog = NULL;
 static GtkWidget *resume_button;
 static GtkWidget *resume_container;
 static GtkWidget *mfield_container;
+GSettings *settings;
 GtkWidget *window;
 GtkWidget *flabel;
 GtkWidget *mentry;
@@ -482,56 +483,53 @@ about_callback (void)
 }
 
 static void
-conf_value_changed_cb (GamesConf *conf, const char *group, const char *key)
+conf_value_changed_cb (GSettings *settings, gchar *key)
 {
-  if (group == NULL) {
-    if (strcmp (key, KEY_USE_QUESTION_MARKS) == 0) {
-      use_question_marks = games_conf_get_boolean_with_default (group, key, TRUE);
-      gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
-  					  use_question_marks);
+  if (strcmp (key, KEY_USE_QUESTION_MARKS) == 0) {
+    use_question_marks = g_settings_get_boolean (settings, key);
+    gtk_minefield_set_use_question_marks (GTK_MINEFIELD (mfield),
+					  use_question_marks);
+  }
+  if (strcmp (key, KEY_USE_OVERMINE_WARNING) == 0) {
+    use_overmine_warning = g_settings_get_boolean (settings, key);
+    gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
+					    use_overmine_warning);
+  }
+  if (strcmp (key, KEY_USE_AUTOFLAG) == 0) {
+    use_autoflag = g_settings_get_boolean (settings, key);
+    gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
+				    use_autoflag);
+  }
+  if (strcmp (key, KEY_XSIZE) == 0) {
+    int i;
+    i = g_settings_get_int (settings, key);
+    if (i != xsize) {
+      xsize = CLAMP (i, XSIZE_MIN, XSIZE_MAX);
+      new_game ();
     }
-    if (strcmp (key, KEY_USE_OVERMINE_WARNING) == 0) {
-      use_overmine_warning = games_conf_get_boolean_with_default (group, key, TRUE);
-      gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
-  					    use_overmine_warning);
+  }
+  if (strcmp (key, KEY_YSIZE) == 0) {
+    int i;
+    i = g_settings_get_int (settings, key);
+    if (i != ysize) {
+      ysize = CLAMP (i, YSIZE_MIN, YSIZE_MAX);
+      new_game ();
     }
-    if (strcmp (key, KEY_USE_AUTOFLAG) == 0) {
-      use_autoflag = games_conf_get_boolean_with_default (group, key, TRUE);
-      gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
-  				    use_autoflag);
+  }
+  if (strcmp (key, KEY_NMINES) == 0) {
+    int i;
+    i = g_settings_get_int (settings, key);
+    if (nmines != i) {
+      nmines = CLAMP (i, 1, xsize * ysize - 2);
+      new_game ();
     }
-  } else if (strcmp (group, KEY_GEOMETRY_GROUP) == 0) {
-    if (strcmp (key, KEY_XSIZE) == 0) {
-      int i;
-      i = games_conf_get_integer_with_default (group, key, 16);
-      if (i != xsize) {
-        xsize = CLAMP (i, XSIZE_MIN, XSIZE_MAX);
-        new_game ();
-      }
-    }
-    if (strcmp (key, KEY_YSIZE) == 0) {
-      int i;
-      i = games_conf_get_integer_with_default (group, key, 16);
-      if (i != ysize) {
-        ysize = CLAMP (i, YSIZE_MIN, YSIZE_MAX);
-        new_game ();
-      }
-    }
-    if (strcmp (key, KEY_NMINES) == 0) {
-      int i;
-      i = games_conf_get_integer_with_default (group, key, 40);
-      if (nmines != i) {
-        nmines = CLAMP (i, 1, xsize * ysize - 2);
-        new_game ();
-      }
-    }
-    if (strcmp (key, KEY_MODE) == 0) {
-      int i;
-      i = games_conf_get_integer_with_default (group, key, 0);
-      if (i != fsize) {
-        fsize = CLAMP (i, 0, 3);
-        new_game ();
-      }
+  }
+  if (strcmp (key, KEY_MODE) == 0) {
+    int i;
+    i = g_settings_get_int (settings, key);
+    if (i != fsize) {
+      fsize = CLAMP (i, 0, 3);
+      new_game ();
     }
   }
 }
@@ -545,7 +543,7 @@ size_radio_callback (GtkWidget * widget, gpointer data)
 
   fsc = GPOINTER_TO_INT (data);
 
-  games_conf_set_integer (KEY_GEOMETRY_GROUP, KEY_MODE, fsc);
+  g_settings_set_int (settings, KEY_MODE, fsc);
 
   gtk_widget_set_sensitive (cframe, fsc == 3);
 }
@@ -561,7 +559,7 @@ fix_nmines (int xsize, int ysize)
    * immediately. */
   maxmines = xsize * ysize - 10;
   if (nmines > maxmines) {
-    games_conf_set_integer (KEY_GEOMETRY_GROUP, KEY_NMINES, maxmines);
+    g_settings_set_int (settings, KEY_NMINES, maxmines);
     gtk_spin_button_set_value (GTK_SPIN_BUTTON (mentry), maxmines);
   }
   gtk_spin_button_set_range (GTK_SPIN_BUTTON (mentry), 1, maxmines);
@@ -571,7 +569,7 @@ static void
 xsize_spin_cb (GtkSpinButton * spin, gpointer data)
 {
   int size = gtk_spin_button_get_value_as_int (spin);
-  games_conf_set_integer (KEY_GEOMETRY_GROUP, KEY_XSIZE, size);
+  g_settings_set_int (settings, KEY_XSIZE, size);
   fix_nmines (size, ysize);
 }
 
@@ -579,7 +577,7 @@ static void
 ysize_spin_cb (GtkSpinButton * spin, gpointer data)
 {
   int size = gtk_spin_button_get_value_as_int (spin);
-  games_conf_set_integer (KEY_GEOMETRY_GROUP, KEY_YSIZE, size);
+  g_settings_set_int (settings, KEY_YSIZE, size);
   fix_nmines (xsize, size);
 }
 
@@ -587,8 +585,7 @@ static void
 nmines_spin_cb (GtkSpinButton * spin, gpointer data)
 {
   int size = gtk_spin_button_get_value_as_int (spin);
-  games_conf_set_integer (KEY_GEOMETRY_GROUP, KEY_NMINES, size);
-
+  g_settings_set_int (settings, KEY_NMINES, size);
 }
 
 static void
@@ -596,7 +593,7 @@ use_question_toggle_cb (GtkCheckButton * check, gpointer data)
 {
   gboolean use_marks =
     gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check));
-  games_conf_set_boolean (NULL, KEY_USE_QUESTION_MARKS, use_marks);
+  g_settings_set_boolean (settings, KEY_USE_QUESTION_MARKS, use_marks);
 }
 
 static void
@@ -604,7 +601,7 @@ use_overmine_toggle_cb (GtkCheckButton * check, gpointer data)
 {
   gboolean use_overmine =
     gtk_toggle_button_get_active (GTK_TOGGLE_BUTTON (check));
-  games_conf_set_boolean (NULL, KEY_USE_OVERMINE_WARNING, use_overmine);
+  g_settings_set_boolean (settings, KEY_USE_OVERMINE_WARNING, use_overmine);
 }
 
 static void
@@ -959,8 +956,8 @@ main (int argc, char *argv[])
   }
 
   g_set_application_name (_(APP_NAME_LONG));
-    
-  games_conf_initialise (APP_NAME);
+
+  settings = g_settings_new ("org.gnome.gnomine");
 
   highscores = games_scores_new (APP_NAME,
                                  scorecats, G_N_ELEMENTS (scorecats),
@@ -968,7 +965,7 @@ main (int argc, char *argv[])
                                  0 /* default category */,
                                  GAMES_SCORES_STYLE_TIME_ASCENDING);
 
-  g_signal_connect (games_conf_get_default (), "value-changed",
+  g_signal_connect (settings, "changed",
                     G_CALLBACK (conf_value_changed_cb), NULL);
 
   gtk_window_set_default_icon_name ("gnome-mines");
@@ -983,25 +980,26 @@ main (int argc, char *argv[])
 
 
   if (xsize == -1)
-    xsize = games_conf_get_integer (KEY_GEOMETRY_GROUP, KEY_XSIZE, NULL);
+    xsize = g_settings_get_int (settings, KEY_XSIZE);
   if (ysize == -1)
-    ysize = games_conf_get_integer (KEY_GEOMETRY_GROUP, KEY_YSIZE, NULL);
+    ysize = g_settings_get_int (settings, KEY_YSIZE);
   if (nmines == -1)
-    nmines = games_conf_get_integer (KEY_GEOMETRY_GROUP, KEY_NMINES, NULL);
+    nmines = g_settings_get_int (settings, KEY_NMINES);
   if (fsize == -1)
-    fsize = games_conf_get_integer (KEY_GEOMETRY_GROUP, KEY_MODE, NULL);
+    fsize = g_settings_get_int (settings, KEY_MODE);
   use_question_marks =
-        games_conf_get_boolean (NULL, KEY_USE_QUESTION_MARKS, NULL);
+        g_settings_get_boolean (settings, KEY_USE_QUESTION_MARKS);
   use_overmine_warning =
-        games_conf_get_boolean (NULL, KEY_USE_OVERMINE_WARNING, NULL);
-  use_autoflag = games_conf_get_boolean (NULL, KEY_USE_AUTOFLAG, NULL);
+        g_settings_get_boolean (settings, KEY_USE_OVERMINE_WARNING);
+  use_autoflag =
+        g_settings_get_boolean (settings, KEY_USE_AUTOFLAG);
 
   verify_ranges ();
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (window), _(APP_NAME_LONG));
-    
-  games_conf_add_window (GTK_WINDOW (window), NULL);
+
+  games_settings_bind_window_state ("/org/gnome/gnomine/", GTK_WINDOW (window));
 
   games_stock_init ();
 
@@ -1128,8 +1126,8 @@ main (int argc, char *argv[])
   show_face (pm_smile);
 
   gtk_main ();
-    
-  games_conf_shutdown ();
+
+  g_settings_sync ();
 
   games_runtime_shutdown ();
 
