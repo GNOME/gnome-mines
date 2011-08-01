@@ -257,24 +257,17 @@ scores_callback (void)
 static void
 new_game (void)
 {
-  gint width, height, w_diff, h_diff;
-  guint size;
+  gint width, height;
   gint x, y;
   static gint size_table[3][3] = { {8, 8, 10}, {16, 16, 40}, {30, 16, 99} };
   GtkMineField *mf = GTK_MINEFIELD (mfield);
-  GtkAllocation allocation;
 
   games_clock_stop (GAMES_CLOCK (clk));
   games_clock_reset (GAMES_CLOCK (clk));
   show_face (pm_smile);
 
-
   /* get window size and mine square size (gtk_minefield_restart() may change it) */
   gtk_window_get_size (GTK_WINDOW (window), &width, &height);
-  size = mf->minesizepixels;
-  gtk_widget_get_allocation (mfield, &allocation);
-  w_diff = width - allocation.width;
-  h_diff = height - allocation.height;
 
   if (fsize == 3) {
     x = xsize;
