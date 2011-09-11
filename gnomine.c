@@ -620,7 +620,7 @@ create_preferences (void)
 
   frame = games_frame_new (_("Field Size"));
 
-  vbox = gtk_vbox_new (FALSE, 6);
+  vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 6);
 
   group = NULL;
   for (i = 0; i < G_N_ELEMENTS (scorecats); ++i) {
@@ -1003,7 +1003,7 @@ main (int argc, char *argv[])
   g_signal_connect (G_OBJECT (window), "focus_out_event",
 		    G_CALLBACK (focus_out_callback), NULL);
 
-  all_boxes = gtk_vbox_new (FALSE, 0);
+  all_boxes = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_widget_show (all_boxes);
 
   gtk_container_add (GTK_CONTAINER (window), all_boxes);
@@ -1026,7 +1026,7 @@ main (int argc, char *argv[])
   gtk_table_attach (GTK_TABLE (button_table), mbutton, 1, 2, 0, 1,
 		    0, 0, 5, 5);
 
-  face_box = gtk_vbox_new (FALSE, 5);
+  face_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 5);
   gtk_container_add (GTK_CONTAINER (mbutton), face_box);
 
   pm_win = image_widget_setup ("face-win.svg");
@@ -1041,7 +1041,7 @@ main (int argc, char *argv[])
   gtk_box_pack_start (GTK_BOX (face_box), pm_cool, FALSE, FALSE, 0);
   gtk_box_pack_start (GTK_BOX (face_box), pm_worried, FALSE, FALSE, 0);
 
-  box = gtk_vbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   gtk_table_attach_defaults (GTK_TABLE (button_table), box, 1, 2, 1, 2);
 
   gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE, 0);
@@ -1084,13 +1084,14 @@ main (int argc, char *argv[])
 
   gtk_box_pack_start (GTK_BOX (box), gtk_hseparator_new (), FALSE, FALSE, 0);
 
-  status_box = gtk_hbox_new (TRUE, 0);
+  status_box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
+  gtk_box_set_homogeneous (GTK_BOX (status_box), TRUE);
   gtk_box_pack_start (GTK_BOX (box), status_box, FALSE, FALSE, 8);
 
   flabel = gtk_label_new ("");
   gtk_box_pack_start (GTK_BOX (status_box), flabel, FALSE, FALSE, 0);
 
-  box = gtk_hbox_new (FALSE, 0);
+  box = gtk_box_new (GTK_ORIENTATION_HORIZONTAL, 0);
   label = gtk_label_new (_("Time: "));
   gtk_box_pack_start (GTK_BOX (box), label, FALSE, FALSE, 0);
 
