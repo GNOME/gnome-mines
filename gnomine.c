@@ -70,6 +70,7 @@
 #define KEY_USE_QUESTION_MARKS "use-question-marks"
 #define KEY_USE_OVERMINE_WARNING "use-overmine-warning"
 #define KEY_USE_AUTOFLAG "use-autoflag"
+#define KEY_USE_NEWGAME_CONFIRM "use-newgame-confirm"
 
 static GtkWidget *mfield;
 static GtkWidget *pref_dialog = NULL;
@@ -89,6 +90,7 @@ gint nmines = -1;
 gint fsize = -1;
 gboolean use_question_marks = TRUE;
 gboolean use_overmine_warning = TRUE;
+gboolean use_newgame_confirm = TRUE;
 gboolean use_autoflag = FALSE;
 
 GtkAction *hint_action;
@@ -109,6 +111,7 @@ GamesScores *highscores;
 /* It's a little ugly, but it stops the hint dialogs triggering the
  * hide-the-window-to-stop cheating thing. */
 gboolean disable_hiding = FALSE;
+
 
 #if 0
 static void
@@ -261,8 +264,31 @@ new_game (void)
   gint x, y;
   static gint size_table[3][3] = { {8, 8, 10}, {16, 16, 40}, {30, 16, 99} };
   GtkMineField *mf = GTK_MINEFIELD (mfield);
+  GtkWidget *dialog;
 
   games_clock_stop (GAMES_CLOCK (clk));
+
+  /* We only need to confirm a new start in a running game session. */
+  if (use_newgame_confirm &&
+      (gtk_widget_get_visible (pm_cool) || gtk_widget_get_visible (pm_worried))) {
+    dialog = gtk_dialog_new_with_buttons (_("Confirmation"),
+                                          GTK_WINDOW (window),
+                                          GTK_DIALOG_MODAL,
+                                          _("Start New Game"),
+                                          GTK_RESPONSE_ACCEPT,
+                                          _("Keep Current Game"),
+                                          GTK_RESPONSE_REJECT,
+                                          NULL);
+
+    gint result = gtk_dialog_run (GTK_DIALOG (dialog));
+    gtk_widget_destroy (dialog);
+
+    if (result == GTK_RESPONSE_REJECT) {
+      games_clock_start (GAMES_CLOCK (clk)); /* resume clock */
+      return;
+    }
+  }
+
   games_clock_reset (GAMES_CLOCK (clk));
   show_face (pm_smile);
 
@@ -492,6 +518,9 @@ conf_value_changed_cb (GSettings *settings, gchar *key)
     use_autoflag = g_settings_get_boolean (settings, key);
     gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
 				    use_autoflag);
+  }
+  if (strcmp (key, KEY_USE_NEWGAME_CONFIRM) == 0) {
+    use_newgame_confirm = g_settings_get_boolean (settings, key);
   }
   if (strcmp (key, KEY_XSIZE) == 0) {
     int i;
@@ -984,6 +1013,8 @@ main (int argc, char *argv[])
         g_settings_get_boolean (settings, KEY_USE_QUESTION_MARKS);
   use_overmine_warning =
         g_settings_get_boolean (settings, KEY_USE_OVERMINE_WARNING);
+  use_newgame_confirm =
+        g_settings_get_boolean (settings, KEY_USE_NEWGAME_CONFIRM);
   use_autoflag =
         g_settings_get_boolean (settings, KEY_USE_AUTOFLAG);
 
