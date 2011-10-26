@@ -175,9 +175,9 @@ set_flabel (GtkMineField * mfield)
   g_free (val);
 }
 
-/* Show the high scores dialog - creating it if necessary. If pos is 
+/* Show the high scores dialog - creating it if necessary. If pos is
  * greater than 0 the appropriate score is highlighted. If the score isn't
- * a high score and this isn't a direct request to see the scores, we 
+ * a high score and this isn't a direct request to see the scores, we
  * only show a simple dialog. */
 static gint
 show_scores (gint pos, gboolean endofgame)
@@ -362,7 +362,7 @@ pause_callback (GtkAction * action, gpointer data)
     gtk_widget_hide (mfield_container);
     gtk_widget_show (resume_container);
     gtk_widget_grab_focus (resume_button);
-  
+
     gtk_action_set_sensitive (hint_action, FALSE);
     games_clock_stop (GAMES_CLOCK (clk));
   }
@@ -577,7 +577,7 @@ fix_nmines (int xsize, int ysize)
 
   /* Fix up the maximum number of mines so that there is always at least
    * ten free spaces. Nine are so we can clear at least the immediate
-   * eight neighbours at the start and one more so the game isn't over 
+   * eight neighbours at the start and one more so the game isn't over
    * immediately. */
   maxmines = xsize * ysize - 10;
   if (nmines > maxmines) {
@@ -1098,7 +1098,7 @@ main (int argc, char *argv[])
 
   gtk_minefield_set_use_overmine_warning (GTK_MINEFIELD (mfield),
 					  use_overmine_warning);
-   
+
   gtk_minefield_set_use_autoflag (GTK_MINEFIELD (mfield),
 				  use_autoflag);
 
