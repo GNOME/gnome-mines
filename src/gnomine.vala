@@ -412,6 +412,7 @@ public class GnoMine
         string[] authors =
         {
             _("Main game:"),
+            "Pista",
             "Szekeres Istvan",
             "Robert Ancell",
             "",
@@ -427,6 +428,7 @@ public class GnoMine
         string[] artists =
         {
             _("Faces:"),
+            "tigert",
             "Lapo Calamandrei and Ulisse Perusin",
             "",
             _("Graphics:"),

@@ -4,8 +4,6 @@ if BUILD_HELP
 SUBDIRS += help
 endif
 
-EXTRA_DIST = README AUTHORS
-
 SCOREFILES = Small Medium Large Custom
 
 install-data-local:
