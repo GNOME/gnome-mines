@@ -30,8 +30,6 @@ public class GnoMine
     private MinefieldView minefield_view;
 
     private Gtk.Dialog? pref_dialog = null;
-    private Gtk.Button resume_button;
-    private Gtk.Alignment resume_container;
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
     private Gtk.Button new_game_button;
@@ -112,18 +110,11 @@ public class GnoMine
         minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
         minefield_view.set_use_overmine_warning (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
         minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
+        minefield_view.button_press_event.connect (view_button_press_event);
         minefield_view.look.connect (look_cb);
         minefield_view.unlook.connect (unlook_cb);
         main_vbox.pack_start (minefield_view, true, true, 0);
         minefield_view.show ();
-
-        resume_container = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
-        main_vbox.pack_start (resume_container, true, true, 0);
-
-        resume_button = new Gtk.Button.with_label (_("Press to Resume"));
-        resume_button.clicked.connect (resume_game_cb);
-        resume_container.add (resume_button);
-        resume_button.show ();
 
         separator = new Gtk.HSeparator ();
         main_vbox.pack_start (separator, false, false, 0);
@@ -157,7 +148,6 @@ public class GnoMine
         window.show ();
 
         /* All this hiding is a bit ugly, but it's better than a ton of show calls. */
-        resume_container.hide ();
         win_face_image.hide ();
         sad_face_image.hide ();
         cool_face_image.hide ();
@@ -195,6 +185,18 @@ public class GnoMine
     {
         Gtk.main_quit ();
         return false;    
+    }
+
+    private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
+    {
+        /* Cancel pause on click */
+        if (pause_action.get_is_paused ())
+        {
+            pause_action.set_is_paused (false);
+            return true;
+        }
+
+        return false;
     }
 
     private void quit_game_cb ()
@@ -320,8 +322,7 @@ public class GnoMine
         update_flag_label ();
 
         pause_action.set_sensitive (true);
-        resume_container.hide ();
-        minefield_view.show ();
+        minefield_view.paused = false;
     }
 
     private void hint_cb ()
@@ -343,25 +344,16 @@ public class GnoMine
     {
         if (pause_action.get_is_paused ())
         {
-            minefield_view.hide ();
-            resume_container.show ();
-            resume_button.grab_focus ();
-
+            minefield_view.paused = true;
             hint_action.set_sensitive (false);
             clock.stop ();
         }
         else
         {
-            resume_container.hide ();
-            minefield_view.show ();
+            minefield_view.paused = false;
             hint_action.set_sensitive (true);
             clock.start ();
         }
-    }
-
-    private void resume_game_cb (Gtk.Widget widget)
-    {
-        pause_action.set_is_paused (false);
     }
 
     private void marks_changed_cb (Minefield minefield)

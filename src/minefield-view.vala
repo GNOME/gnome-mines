@@ -1,4 +1,4 @@
-public class MinefieldView : Gtk.Widget
+public class MinefieldView : Gtk.DrawingArea
 {
     /* true if allowed to mark locations with question marks */
     private bool use_question_marks;
@@ -36,6 +36,22 @@ public class MinefieldView : Gtk.Widget
             return int.min (get_allocated_width () / (int) minefield.width, get_allocated_height () / (int) minefield.height);
         }
     }
+    
+    private uint x_offset
+    {
+        get
+        {
+            return (get_allocated_width () - minefield.width * mine_size) / 2;
+        }
+    }
+
+    private uint y_offset
+    {
+        get
+        {
+            return (get_allocated_height () - minefield.height * mine_size) / 2;
+        }
+    }
 
     private uint minimum_size
     {
@@ -50,11 +66,20 @@ public class MinefieldView : Gtk.Widget
         }
     }
 
+    private bool _paused = false;
+    public bool paused
+    {
+        get { return _paused; }
+        set { _paused = value; queue_draw (); }
+    }
+
     public signal void look ();
     public signal void unlook ();
 
     public MinefieldView ()
     {
+        set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+
         var pixmap_dir = GnomeGamesSupport.runtime_get_directory (GnomeGamesSupport.RuntimeDirectory.GAME_PIXMAP_DIRECTORY);
         flag_preimage = load_preimage (Path.build_filename (pixmap_dir, "flag.svg"));
         mine_preimage = load_preimage (Path.build_filename (pixmap_dir, "mine.svg"));
@@ -199,49 +224,6 @@ public class MinefieldView : Gtk.Widget
         return pattern;
     }
 
-    public override void realize ()
-    {
-        set_realized (true);
-
-        Gtk.Allocation allocation;
-        get_allocation (out allocation);
-
-        var attributes = Gdk.WindowAttr ();
-        attributes.window_type = Gdk.WindowType.CHILD;
-        attributes.x = allocation.x;
-        attributes.y = allocation.y;
-        attributes.width = allocation.width;
-        attributes.height = allocation.height;
-        attributes.wclass = Gdk.WindowWindowClass.OUTPUT;
-        attributes.visual = get_visual ();
-        attributes.event_mask = get_events ();
-        attributes.event_mask |= Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK | Gdk.EventMask.POINTER_MOTION_MASK;
-
-        var window = new Gdk.Window (get_parent_window (), attributes, Gdk.WindowAttributesType.X | Gdk.WindowAttributesType.Y | Gdk.WindowAttributesType.VISUAL);
-        set_window (window);
-        window.set_user_data (this);
-
-        var style = get_style ().attach (window);
-        set_style (style);
-        style.set_background (window, Gtk.StateType.ACTIVE);
-    }
-
-    /* The frame makes sure that the minefield is allocated the correct size */
-    /* This is the standard allocate routine - it could be removed and the parents routine inherited */
-    public override void size_allocate (Gtk.Allocation allocation)
-    {
-        set_allocation (allocation);
-        if (get_realized ())
-        {
-            var width = minefield.width * mine_size;
-            var height = minefield.height * mine_size;
-            var x = allocation.x + (allocation.width - width) / 2;
-            var y = allocation.y + (allocation.height - height) / 2;
-
-            get_window ().move_resize ((int) x, (int) y, (int) width, (int) height);
-        }
-    }
-    
     public override void get_preferred_width (out int minimum, out int natural)
     {
         minimum = natural = (int) (minefield.width * minimum_size);
@@ -254,7 +236,7 @@ public class MinefieldView : Gtk.Widget
 
     private void redraw_sector_cb (uint x, uint y)
     {
-        queue_draw_area ((int) (x * mine_size), (int) (y * mine_size), (int) mine_size, (int) mine_size);
+        queue_draw_area ((int) (x_offset + x * mine_size), (int) (y_offset + y * mine_size), (int) mine_size, (int) mine_size);
     }
     
     private void draw_square (Cairo.Context cr, uint x, uint y)
@@ -278,23 +260,23 @@ public class MinefieldView : Gtk.Widget
         if (minefield.is_cleared (x, y))
         {
             Gtk.paint_box (get_style (), cr, is_down ? Gtk.StateType.ACTIVE : Gtk.StateType.NORMAL, Gtk.ShadowType.IN, this,
-                           "button", (int) (x * mine_size), (int) (y * mine_size), (int) mine_size, (int) mine_size);
+                           "button", 0, 0, (int) mine_size, (int) mine_size);
 
             /* Draw dotted border */
             if (y == 0)
             {
-                cr.move_to (x * mine_size, 0);
-                cr.line_to (x * mine_size + mine_size - 1, 0);
+                cr.move_to (0, 0);
+                cr.line_to (mine_size - 1, 0);
             }
             if (x == 0)
             {
-                cr.move_to (0, y * mine_size);
-                cr.line_to (0, y * mine_size + mine_size - 1);
+                cr.move_to (0, 0);
+                cr.line_to (0, mine_size - 1);
             }
-            cr.move_to (x * mine_size + mine_size - 1 + 0.5, y * mine_size + 0.5);
-            cr.line_to (x * mine_size + mine_size - 1 + 0.5, y * mine_size + mine_size - 1 + 0.5);
-            cr.move_to (x * mine_size + 0.5, y * mine_size + mine_size - 1 + 0.5);
-            cr.line_to (x * mine_size + mine_size - 1 + 0.5, y * mine_size + mine_size - 1 + 0.5);
+            cr.move_to (mine_size - 1 + 0.5, 0.5);
+            cr.line_to (mine_size - 1 + 0.5, mine_size - 1 + 0.5);
+            cr.move_to (0.5, mine_size - 1 + 0.5);
+            cr.line_to (mine_size - 1 + 0.5, mine_size - 1 + 0.5);
             cr.save ();
             Gdk.cairo_set_source_color (cr, get_style ().dark[get_state ()]);
             cr.set_line_width (1);
@@ -303,13 +285,16 @@ public class MinefieldView : Gtk.Widget
             cr.stroke ();
             cr.restore ();
 
+            if (paused)
+                return;
+
             /* Draw explosion if have uncovered a mine */
             if (minefield.has_mine (x, y))
             {
                 if (bang_pattern == null)
                     bang_pattern = render_preimage_pattern (bang_preimage);
                 cr.set_source (bang_pattern);
-                cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
             }
             /* Indicate the number of mines around this location */
@@ -321,7 +306,7 @@ public class MinefieldView : Gtk.Widget
                     if (warning_pattern == null)
                         warning_pattern = render_preimage_pattern (warning_preimage);
                     cr.set_source (warning_pattern);
-                    cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                    cr.rectangle (0, 0, mine_size, mine_size);
                     cr.fill ();
                 }
 
@@ -331,7 +316,7 @@ public class MinefieldView : Gtk.Widget
                     if (number_patterns[n-1] == null)
                         number_patterns[n-1] = render_number_pattern (n);
                     cr.set_source (number_patterns[n-1]);
-                    cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                    cr.rectangle (0, 0, mine_size, mine_size);
                     cr.fill ();
                 }
             }
@@ -343,7 +328,10 @@ public class MinefieldView : Gtk.Widget
                            is_down ? Gtk.StateType.ACTIVE : Gtk.StateType.SELECTED,
                            is_down ? Gtk.ShadowType.IN : Gtk.ShadowType.OUT,
                            this,
-                           "button", (int) (x * mine_size), (int) (y * mine_size), (int) mine_size, (int) mine_size);
+                           "button", 0, 0, (int) mine_size, (int) mine_size);
+                           
+            if (paused)
+                return;
 
             /* Draw flags on uncleared locations */
             if (minefield.get_flag (x, y) == FlagType.FLAG)
@@ -351,16 +339,16 @@ public class MinefieldView : Gtk.Widget
                 if (flag_pattern == null)
                     flag_pattern = render_preimage_pattern (flag_preimage);                    
                 cr.set_source (flag_pattern);
-                cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
 
                 /* Cross out incorrect flags */
                 if (minefield.exploded && !minefield.has_mine (x, y))
                 {
-                    var x1 = x * mine_size + 0.1 * mine_size;
-                    var y1 = y * mine_size + 0.1 * mine_size;
-                    var x2 = x * mine_size + 0.9 * mine_size;
-                    var y2 = y * mine_size + 0.9 * mine_size;
+                    var x1 = 0.1 * mine_size;
+                    var y1 = 0.1 * mine_size;
+                    var x2 = 0.9 * mine_size;
+                    var y2 = 0.9 * mine_size;
 
                     cr.move_to (x1, y1);
                     cr.line_to (x2, y2);
@@ -381,7 +369,7 @@ public class MinefieldView : Gtk.Widget
                 if (mine_pattern == null)
                     mine_pattern = render_preimage_pattern (mine_preimage);
                 cr.set_source (mine_pattern);
-                cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
             }
             else if (minefield.get_flag (x, y) == FlagType.MAYBE)
@@ -389,7 +377,7 @@ public class MinefieldView : Gtk.Widget
                 if (question_pattern == null)
                     question_pattern = render_preimage_pattern (question_preimage);
                 cr.set_source (question_pattern);
-                cr.rectangle (x * mine_size, y * mine_size, mine_size, mine_size);
+                cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
             }
         }
@@ -411,8 +399,32 @@ public class MinefieldView : Gtk.Widget
         }
 
         for (var x = 0; x < minefield.width; x++)
+        {
             for (var y = 0; y < minefield.height; y++)
+            {
+                cr.save ();
+                cr.translate (x_offset + x * mine_size, y_offset + y * mine_size);
                 draw_square (cr, x, y);
+                cr.restore ();
+            }
+        }
+
+        /* Draw pause overlay */
+        if (paused)
+        {
+            cr.set_source_rgba (0, 0, 0, 0.75);
+            cr.paint ();
+
+            cr.select_font_face ("Sans", Cairo.FontSlant.NORMAL, Cairo.FontWeight.BOLD);
+            cr.set_font_size (get_allocated_width () * 0.125);
+
+            var text = _("Paused");
+            Cairo.TextExtents extents;
+            cr.text_extents (text, out extents);
+            cr.move_to ((get_allocated_width () - extents.width) / 2.0, (get_allocated_height () + extents.height) / 2.0);
+            cr.set_source_rgb (1, 1, 1);
+            cr.show_text (text);
+        }
 
         return false;
     }
@@ -509,12 +521,12 @@ public class MinefieldView : Gtk.Widget
         /* Ignore double click events */
         if (event.type != Gdk.EventType.BUTTON_PRESS)
             return false;
-            
-        if (minefield.exploded || minefield.is_complete)
+
+        if (minefield.exploded || minefield.is_complete || paused)
             return false;
 
-        var x = (int) (event.x / mine_size);
-        var y = (int) (event.y / mine_size);
+        var x = (int) Math.floor ((event.x - x_offset) / mine_size);
+        var y = (int) Math.floor ((event.y - y_offset) / mine_size);
         if (!minefield.is_location (x, y))
             return false;
 
@@ -549,8 +561,8 @@ public class MinefieldView : Gtk.Widget
         if (selected_x < 0)
             return false;
 
-        var x = (int) (event.x / mine_size);
-        var y = (int) (event.y / mine_size);
+        var x = (int) Math.floor ((event.x - x_offset) / mine_size);
+        var y = (int) Math.floor ((event.y - y_offset) / mine_size);
         if (!minefield.is_location (x, y))
             return false;
 
