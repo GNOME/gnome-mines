@@ -10,8 +10,7 @@ gnomine_CFLAGS = \
 	-I$(top_srcdir)/libgames-support \
 	-DVERSION=\"$(VERSION)\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
-	$(GTK_CFLAGS) \
-	$(AM_CFLAGS)
+	$(GTK_CFLAGS)
 
 gnomine_VALAFLAGS = \
 	--pkg posix \
