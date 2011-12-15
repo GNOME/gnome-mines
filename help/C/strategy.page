@@ -1,0 +1,147 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic" style="task"
+  id="strategy">
+  <info>
+    <link type="guide" xref="index#play" />
+    <revision version="0.1" date="2011-12-10" status="stub"/>
+
+    <credit type="author copyright">
+      <name></name>
+      <email></email>
+      <years>2011</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Strategy</title>
+
+  <p>
+    The first half of this section explains the very basics of deducing where
+    mines are. If you are familiar with how to play the game skip down to the
+    <link xref="#advanced"/> subsection.
+  </p>
+
+  <section id="basics">
+    <title>The Basics</title>
+    <p>
+      These are a few basic situations which should be incredibly obvious, but
+      if you're struggling with how to play the game, they should be useful. The
+      first case is where you have an isolated covered square and most of the
+      squares around it read 1. That covered square is a mine. 
+    </p>
+
+    <figure>
+      <title>The simplest case.</title>
+      <media type="image" src="figures/easy-hints-1.png">Easy hint 1</media>
+    </figure>
+
+    <p>
+      The next simplest case is where you have two covered squares adjacent to
+      each other and both squares on one side are marked with a 2. If they have
+      no other uncleared neighbors, then both squares are mines.
+    </p>
+
+    <figure>
+      <title>The two mine case.</title>
+      <media type="image" src="figures/easy-hints-2.png">Easy hint 2</media>
+    </figure>
+
+    <p>
+      Finally, when there are three uncovered squares in a row and the clear
+      square beside the middle one is a 3 (once again this square should have no
+      other neighbors) then all three are mines.
+    </p>
+
+    <figure>
+      <title>The three mine case.</title>
+      <media type="image" src="figures/easy-hints-3.png">Easy hint 3</media>
+    </figure>
+
+    <p>
+      These are the simplest cases. Other permutations on these simple
+      situations are possible, for example the three squares in the previous
+      example could be in an L shape. 
+    </p>
+    <p>
+      Simple analysis will solve most of the puzzle, but not all. Before going
+      on to the next sections, where we give you more advanced hints, you should
+      play for a bit and see what you can work out for yourself.
+    </p>
+  </section>
+
+  <section id="advanced">
+    <title>Advanced Situations</title>
+
+    <p>
+      These are some more complicated situations. They are a bit of a step up
+      from the last section, so we hope you took our advice and played for a bit
+      first.
+    </p>
+
+    <p>
+      In the example below the mines are to the left of the ones. We figure this
+      out by a process of elimination. If the square to the left of the 2 was a
+      mine then the 1s would both have their maximum number of mines leaving no
+      free square for the second mine adjacent to the 2 (since they would also be
+      adjacent to the 1s). Having eliminated the middle square we are left with
+      two squares we require for the 2 so they are both mined.
+    </p>
+
+    <figure>
+      <title>A not-so-obvious pattern.</title>
+      <media type="image" src="figures/hard-hints-1.png">Hard hint 1</media>
+    </figure>
+
+    <p>
+      This situation can be disguised, for example consider the figure
+      below. It is the same situation, but the extra mined square on
+      the right has increased all the numbers by 1.
+    </p>
+
+    <figure>
+      <title>The extra mine disguises a copy of the previous example.</title>
+      <media type="image" src="figures/hard-hints-2.png">Hard hint 2</media>
+    </figure>
+
+    <p>
+      Now we're going to try a complicated example. It illustrates two
+      points. The first is that even if you aren't sure which squares are
+      mined, restricting the possibilities is helpful. The second is that
+      knowing which squares aren't mined is nearly as good as knowing which
+      are mined.
+    </p>
+
+    <p>
+      Assume that, in the figure below, we start off knowing that the top
+      left square is mined and so the two squares marked 2 on the left only
+      require one more mine. Next observe that the left-most 2 implies that
+      one of the covered squares beneath it is mined, but we don't yet know
+      which one. Since at least one of these squares is mined and they are
+      both neighbors of the second 2 then we know that that 2 is also
+      satisfied by one of these two squares (we still don't know which
+      one). This means that the square beneath the 4 is clear because it is
+      also a neighbor of the second 2 and not one of the two squares we
+      identified previously. 
+      This one blank square now leaves the 4 with only four neighbors - all
+      of which must be mines. Not only does it tell us which mines surround
+      the 4, it now tells us which of the squares beside the 2 is mined!
+    </p>
+
+    <figure>
+      <title>As tricky as it gets.</title>
+      <media type="image" src="figures/hard-hints-3.png">Hard hint 3</media>
+    </figure>
+
+    <p>
+      This sort of situation is tricky. In all the other examples you can
+      learn to look for patterns and avoid thinking hard. Situations like
+      the one in the figure don't crop up easily or in easily recognisable
+      places. Often it is easier to just ignore them and keep playing
+      elsewhere in the hope that you can start clearing the squares from the
+      other side.
+    </p>
+  </section>
+
+</page>
+<!-- vim: set ts=2 sw=2 tw=100 fdm=marker:-->

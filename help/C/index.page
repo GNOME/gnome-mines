@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="index">
+  <info>
+    <title type="link" role="trail">
+      <media type="image" src="figures/logo.png"/>
+    </title>
+    <title type="link">GNOME Mines</title>
+    <title type="text">GNOME Mines</title>
+    <revision pkgversion="3.4" version="0.1" date="2011-12-10" status="draft"/>
+    <credit type="author">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+    </credit>
+    <license>
+      <p>Creative Commons Share Alike 3.0</p>
+    </license>
+    <include xmlns="http://www.w3.org/2001/XInclude" href="legal.xml"/>
+  </info>
+  
+  <title><media type="image" src="figures/logo32.png">GNOME Mines logo</media>GNOME Mines</title>
+
+  <section id="play" style="2column">
+    <title>Game Play</title>
+  </section>
+  <section id="tips" style="2column">
+    <title>Useful tips</title>
+  </section>
+  <section id="advanced" style="2column">
+    <title>Advanced</title>
+  </section>
+  <section id="get-involved" style="2column">
+    <title>Get Involved</title>
+  </section>
+
+</page>
+<!-- vim: set ts=2 sw=2 tw=80 fdm=marker:-->

@@ -1,0 +1,78 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="intro">
+  <info>
+   <link type="guide" xref="index" /> 
+   <revision version="0.1" date="2011-12-10" status="stub"/>
+
+    <credit type="author copyright">
+      <name></name>
+      <email></email>
+      <years>2011</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Introduction</title>
+
+  <p> 
+    GNOME mines is a puzzle game where you
+    locate mines floating in an ocean using only your brain and a
+    little bit of luck. 
+  </p>
+
+  <p>
+    You start the game with a grid of covered squares and no idea what is in them. Clicking on a square reveals
+    what is in it: either empty ocean or a mine. If you
+    find a mine bad things happen and the game is over. If you
+    uncover an empty square, you survive and get to try again. We do
+    give you a bit of help; if you find an empty piece of ocean
+    a number is printed there telling you how many mines are in the 
+    adjacent squares (or no number if there are no nearby
+    mines). Once you find a few clear squares you can start to
+    deduce which squares have mines in them and which don't. You win
+    the game once you have revealed all the un-mined squares and
+    marked all the mined squares.
+  </p>
+
+  <figure>
+    <title>The stages of the game: the start, playing, losing,
+        and winning.  </title>
+    <media type="image" src="figures/main-window.png">Main window</media>
+  </figure>
+
+  <p>
+    To mark a square as having a mine you right-click on it and a
+    flag is placed there. If you click on a square with a number and
+    you have placed precisely that number of flags on adjacent
+    squares then the remaining squares are revealed. If you didn't
+    mark the mines correctly then an explosion will occur and the game
+    is over. Squares with no adjacent mines (i.e. blank squares)
+    have their adjacent squares automatically cleared.  
+  </p>
+
+  <figure>
+    <title>Important information.</title>
+    <media type="image" src="figures/statusbar.png">Status bar</media>
+  </figure>
+
+  <p>
+    You are being timed. To be good at this game you have to work
+    both quickly and correctly. Once you have found all the mines
+    and revealed all the un-mined squares the clock is stopped. Your
+    score is the time you took; the shorter the better.
+  </p>
+
+  <p>
+    The time you have taken is displayed on the bottom right of the
+    window. Beside it, on the left, is a count of the number of mines 
+    you have cleared and the total number hidden on the board.
+  </p>
+
+  <figure id="faces">
+    <title>The yellow face shows you how well you are going.</title>
+    <media type="image" src="figures/faces.png">Status bar</media>
+  </figure>
+
+</page>

@@ -1,0 +1,216 @@
+<page xmlns="http://projectmallard.org/1.0/"
+  type="topic" style="task"
+  id="rules">
+  <info>
+    <link type="guide" xref="index#play" />
+    <revision version="0.1" date="2011-12-10" status="stub"/>
+
+    <credit type="author copyright">
+      <name></name>
+      <email></email>
+      <years>2011</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Rules</title>
+
+  <p>
+    This section provides information on the controls and the
+    important menu items. If you need help figuring where the
+    mines are, see the <link xref="strategy">strategy section</link>.
+  </p>
+
+  <section>
+    <title>The Goal</title>
+
+    <p>
+      Starting from an ocean of squares with unknown contents
+      you must mark all the squares with mines and reveal all the
+      clear squares. You don't actually have to mark the squares with mines,
+      but it is a lot easier if you do. Once you have cleared all
+      the un-mined squares, any remaining mined squares will be
+      marked for you.
+    </p>
+
+    <p>
+      If you left click on a mine, or auto-clear a square with a mine
+      in it you lose. To help prevent accidents, you aren't allowed
+      to auto-clear around a square unless the number of marked
+      mines equals the number given in the square.
+    </p>
+
+  </section>
+
+  <section>
+    <title>Using the Mouse</title>
+
+    <table frame="all" rules="all" shade="rows">
+      <!-- <tgroup cols="2"> -->
+        <thead>
+          <tr>
+          <td><p>Action</p></td> <td><p>Result</p></td>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><p>Left click on an un-revealed square.</p></td>
+            <td><p>Reveals the contents of that square. For better or for worse.</p></td>
+          </tr>
+
+          <tr>
+            <td><p>Left click in a revealed square.</p></td>
+            <td><p>Auto-clear. Reveals the unmarked squares around
+                the clicked square,
+                but only if enough squares have been marked to match the
+                number in the square.</p></td>
+          </tr>
+          <tr>
+            <td><p>Right click on an un-revealed square.</p></td>
+            <td><p>Marks the square as a mine. If it is already
+                marked, the mark will be removed.</p></td>
+          </tr>
+        </tbody>
+        <!-- </tgroup> -->
+    </table>
+
+    <tip><p>If you are used to the more traditional mouse controls,
+        don't worry, they still work.</p></tip>
+  </section>
+
+  <section>
+    <title>Game Size and Difficulty</title>
+
+    <p>
+      By choosing <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq> from the 
+      menu you can
+      change the size of the games. Larger sizes obviously take longer
+      and require more concentration. Smaller games are more
+      frantic. We provide Small, Medium, Large and Custom
+      sizes.
+    </p> 
+
+    <figure id="preferences-img">
+      <title>The preferences dialog.</title>
+      <media type="image" src="figures/preferences.png">Preferences dialog</media>
+    </figure>
+
+    <p>
+      On the right hand side of the dialog there are three
+      parameters for controlling the custom size. Horizontal and
+      Vertical are the width and height of the desired grid in
+      squares. The number of mines is - obviously - the number of
+      mines you need to find. If this number is set too high or too
+      low then the game becomes very easy. The number of mines is
+      limited to slightly less than the total number of squares.
+    </p>
+
+  </section>
+
+  <section>
+    <title>"I'm not sure" Flags</title>
+
+    <figure id="imnotsureflagsimg">
+      <media type="image" src="figures/imnotsureflagscheckbox.png">I'm not sure flag</media>
+    </figure>
+
+    <p>
+      There is a check-box in the properties dialog entitled
+      Use "I'm not sure" flags. If you enable this then, when
+      right-clicking on a square, it cycles between the normal flags
+      used to mark the square as mined, a flag with a question mark
+      on it and no flag. This new flag is to help you with your
+      reasoning, to mark mines you think might be a mine but aren't
+      sure about. These
+      flags have no effect on the game; you still have to use the 
+      appropriate  number of red marker flags to be able to clear
+      around a numbered square.
+    </p>
+
+    <figure id="flags-img">
+      <title>The sequence of flags when "I'm not sure" flags are enabled.</title>
+      <media type="image" src="figures/flags.png">I'm not sure flag</media>
+    </figure>
+
+  </section>
+
+  <section>
+    <title>Use "Too many flags" warning</title>
+
+    <p>
+      The other check-box in the properties dialog is entitled
+      Use "Too many flags" warning. This feature will show you a
+      warning when you have placed too many flags. This is disabled
+      by default, as it provides so much hint that it could be
+      considered "cheating".
+    </p>
+
+  </section>
+
+  <section>
+    <title>Hints</title>
+
+    <p>
+      If you get stuck - it is reasonably common to end up with two
+      options that you can't logically resolve - then you can either
+      guess, or ask for a hint. When you choose 
+      <gui style="menuitem">Hint</gui> from the <gui style="menu">Game</gui>
+      menu a single square is revealed (plus surrounding
+      squares if it is blank). The choice of square is random, but
+      should be helpful. There is 10 second penalty added to your
+      time whenever you use a hint.
+    </p>
+
+  </section>
+
+  <section>
+    <title>High Scores</title>
+
+    <p>
+      If your score is in the top ten you will be shown the list of top scores and have an
+      opportunity to change the name recorded in the high score table. You can
+      also review the scores later by choosing 
+      <gui style="menuitem">Scores</gui> from the <gui style="menu">Game</gui>
+      menu. The drop-down menu at the top of the dialog lets you
+      look at the scores for other board sizes.
+    </p>
+
+    <figure id="high-score-img">
+      <title>The high scores dialog.</title>
+      <media type="image" src="figures/highscores.png">High scores dialog</media>
+    </figure>
+
+    <tip>
+      <p>The high score for the custom size is usually meaningless. Any
+        other player can make the game size smaller and get a better time. If
+        you only ever play one custom size then it will tell you how
+        well you are doing. This is the only reason it is still recorded.</p>
+    </tip>
+  </section>
+
+  <section>
+    <title>Window Size</title>
+
+    <p>Resizing the window makes the squares bigger or smaller to
+      suit. If you want to make maximum use of the screen then there is a
+      <gui style="menuitem">Fullscreen</gui> option under the
+      <gui style="menu">Settings</gui> menu. You can
+      also use the <key>F11</key> key to toggle full-screen mode.
+    </p>
+  </section>
+
+  <section>
+    <title>Pausing the Game</title>
+
+    <p>
+      The game can be paused automatically when you start using another
+      window, or paused by choosing <gui style="menuitem">Pause</gui> 
+      from the <gui style="menu">Game</gui> menu. The playing area is 
+      blanked so you can't think ahead while the clock is stopped. To
+      start playing again press the button labelled "Press to Resume".
+    </p>
+  </section>
+</page>
+
+<!-- vim: set ts=2 sw=2 tw=100 fdm=marker:-->
