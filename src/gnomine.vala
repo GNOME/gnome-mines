@@ -77,8 +77,20 @@ public class GnoMine
         menubar.show ();
         main_vbox.pack_start (menubar, false, false, 0);
 
+        /* status_box holds mine flag, game button and clock. This replaces the need of a status bar. */
+        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        status_box.homogeneous = true;
+        main_vbox.pack_start (status_box, false, false, 0);
+        status_box.show ();
+
+        /* show the numbers of total and remaining mines */
+        flag_label = new Gtk.Label ("");
+        status_box.pack_start (flag_label, false, false, 0);
+        flag_label.show ();
+
+        /* the new game button is always center-aligned */
         var new_game_button_alignment = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
-        main_vbox.pack_start (new_game_button_alignment, false, false, 0);
+        status_box.pack_start (new_game_button_alignment, false, false, 0);
         new_game_button_alignment.show ();
 
         new_game_button = new Gtk.Button ();
@@ -102,33 +114,7 @@ public class GnoMine
         face_box.pack_start (cool_face_image, false, false, 0);
         face_box.pack_start (worried_face_image, false, false, 0);
 
-        var separator = new Gtk.HSeparator ();
-        main_vbox.pack_start (separator, false, false, 0);
-        separator.show ();
-
-        minefield_view = new MinefieldView ();
-        minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
-        minefield_view.set_use_overmine_warning (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
-        minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
-        minefield_view.button_press_event.connect (view_button_press_event);
-        minefield_view.look.connect (look_cb);
-        minefield_view.unlook.connect (unlook_cb);
-        main_vbox.pack_start (minefield_view, true, true, 0);
-        minefield_view.show ();
-
-        separator = new Gtk.HSeparator ();
-        main_vbox.pack_start (separator, false, false, 0);
-        separator.show ();
-
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        status_box.homogeneous = true;
-        main_vbox.pack_start (status_box, false, false, 0);
-        status_box.show ();
-
-        flag_label = new Gtk.Label ("");
-        status_box.pack_start (flag_label, false, false, 0);
-        flag_label.show ();
-
+        /* game clock */
         var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         status_box.pack_start (box, false, false, 0);
         box.show ();
@@ -139,6 +125,16 @@ public class GnoMine
         clock = new GnomeGamesSupport.Clock ();
         box.pack_start (clock, false, false, 0);
         clock.show ();
+
+        minefield_view = new MinefieldView ();
+        minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
+        minefield_view.set_use_overmine_warning (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
+        minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
+        minefield_view.button_press_event.connect (view_button_press_event);
+        minefield_view.look.connect (look_cb);
+        minefield_view.unlook.connect (unlook_cb);
+        main_vbox.pack_start (minefield_view, true, true, 0);
+        minefield_view.show ();
 
         new_game ();
     }
