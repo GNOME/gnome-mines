@@ -1,4 +1,4 @@
-public class GnoMine
+public class GnoMine : Gtk.Application
 {
     /* Settings keys */
     private Settings settings;
@@ -51,6 +51,8 @@ public class GnoMine
 
     public GnoMine ()
     {
+        Object (application_id: "org.gnome.gnomine", flags: ApplicationFlags.FLAGS_NONE);
+
         settings = new Settings ("org.gnome.gnomine");
 
         highscores = new GnomeGamesSupport.Scores ("gnomine", scorecats, "board size", null, 0 /* default category */, GnomeGamesSupport.ScoreStyle.TIME_ASCENDING);
@@ -62,10 +64,9 @@ public class GnoMine
         window.title = _("Mines");
 
         GnomeGamesSupport.settings_bind_window_state ("/org/gnome/gnomine/", window);
+        add_window (window);
 
         GnomeGamesSupport.stock_init ();
-
-        window.delete_event.connect (delete_event_cb);
 
         var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         window.add (main_vbox);
@@ -152,6 +153,11 @@ public class GnoMine
         set_face_image (smile_face_image);
     }
 
+    public override void activate ()
+    {
+        window.show ();
+    }
+
     private Gtk.Image load_face_image (string name)
     {
         var image = new Gtk.Image ();
@@ -177,12 +183,6 @@ public class GnoMine
         current_face_image = face_image;
     }
 
-    private bool delete_event_cb (Gdk.EventAny event)
-    {
-        Gtk.main_quit ();
-        return false;    
-    }
-
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
@@ -197,7 +197,7 @@ public class GnoMine
 
     private void quit_game_cb ()
     {
-        Gtk.main_quit ();
+        window.destroy ();
     }
 
     private void update_flag_label ()
@@ -379,7 +379,7 @@ public class GnoMine
         var pos = highscores.add_time_score ((float) (seconds / 60) + (float) (seconds % 60) / 100);
 
         if (show_scores (pos, true) == Gtk.ResponseType.REJECT)
-            Gtk.main_quit ();
+            window.destroy ();
         else
             new_game ();
     }
@@ -783,12 +783,12 @@ public class GnoMine
         var app = new GnoMine ();
         app.start ();
 
-        Gtk.main ();
+        var result = app.run ();
 
         Settings.sync ();
 
         GnomeGamesSupport.runtime_shutdown ();
 
-        return Posix.EXIT_SUCCESS;
+        return result;
     }
 }
