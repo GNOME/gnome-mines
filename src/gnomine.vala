@@ -511,10 +511,10 @@ public class GnoMine : Gtk.Application
 
     private Gtk.Dialog create_preferences ()
     {
-        var table = new Gtk.Table (3, 2, false);
-        table.border_width = 5;
-        table.set_row_spacings (18);
-        table.set_col_spacings (18);
+        var grid = new Gtk.Grid ();
+        grid.border_width = 5;
+        grid.set_row_spacing (18);
+        grid.set_column_spacing (18);
 
         var frame = new GnomeGamesSupport.Frame (_("Field Size"));
 
@@ -555,51 +555,53 @@ public class GnoMine : Gtk.Application
 
         frame.add (vbox);
 
-        table.attach_defaults (frame, 0, 1, 0, 1);
+        grid.attach (frame, 0, 0, 1, 1);
 
         custom_size_frame = new GnomeGamesSupport.Frame (_("Custom Size"));
         custom_size_frame.sensitive = settings.get_int (KEY_MODE) == 3;
 
-        var custom_field_table = new Gtk.Table (2, 2, false);
-        custom_field_table.set_row_spacings (6);
-        custom_field_table.set_col_spacings (12);
-        custom_size_frame.add (custom_field_table);
+        var custom_field_grid = new Gtk.Grid ();
+        custom_field_grid.set_row_spacing (6);
+        custom_field_grid.set_column_spacing (12);
+        custom_size_frame.add (custom_field_grid);
 
-        var label = new Gtk.Label.with_mnemonic (_("_Number of mines:"));
+        var label = new Gtk.Label.with_mnemonic (_("_Horizontal:"));
         label.set_alignment (0, 0.5f);
-        custom_field_table.attach (label, 0, 1, 2, 3, Gtk.AttachOptions.EXPAND | Gtk.AttachOptions.FILL, 0, 0, 0);
-
-        n_mines_spin = new Gtk.SpinButton.with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
-        n_mines_spin.value_changed.connect (n_mines_spin_cb);
-        n_mines_spin.set_value (settings.get_int (KEY_NMINES));
-        custom_field_table.attach (n_mines_spin, 1, 2, 2, 3, 0, 0, 0, 0);
-        set_n_mines_limit ();
-        label.set_mnemonic_widget (n_mines_spin);
-
-        label = new Gtk.Label.with_mnemonic (_("_Horizontal:"));
-        label.set_alignment (0, 0.5f);
-        custom_field_table.attach (label, 0, 1, 0, 1, Gtk.AttachOptions.EXPAND | Gtk.AttachOptions.FILL, 0, 0, 0);
+        custom_field_grid.attach (label, 0, 0, 1, 1);
 
         var field_width_entry = new Gtk.SpinButton.with_range (XSIZE_MIN, XSIZE_MAX, 1);
         field_width_entry.value_changed.connect (xsize_spin_cb);
         field_width_entry.set_value (settings.get_int (KEY_XSIZE));
-        custom_field_table.attach (field_width_entry, 1, 2, 0, 1, 0, 0, 0, 0);
+        custom_field_grid.attach (field_width_entry, 1, 0, 1, 1);
         label.set_mnemonic_widget (field_width_entry);
 
         label = new Gtk.Label.with_mnemonic (_("_Vertical:"));
         label.set_alignment (0, 0.5f);
-        custom_field_table.attach (label, 0, 1, 1, 2, Gtk.AttachOptions.EXPAND | Gtk.AttachOptions.FILL, 0, 0, 0);
+        custom_field_grid.attach (label, 0, 1, 1, 1);
 
         var field_height_entry = new Gtk.SpinButton.with_range (YSIZE_MIN, YSIZE_MAX, 1);
         field_height_entry.value_changed.connect (ysize_spin_cb);
         field_height_entry.set_value (settings.get_int (KEY_YSIZE));
-        custom_field_table.attach (field_height_entry, 1, 2, 1, 2, 0, 0, 0, 0);
+        custom_field_grid.attach (field_height_entry, 1, 1, 1, 1);
         label.set_mnemonic_widget (field_height_entry);
 
-        table.attach (custom_size_frame, 1, 2, 0, 1, Gtk.AttachOptions.FILL, Gtk.AttachOptions.FILL, 0, 0);
+        label = new Gtk.Label.with_mnemonic (_("_Number of mines:"));
+        label.set_alignment (0, 0.5f);
+        custom_field_grid.attach (label, 0, 2, 1, 1);
+
+        n_mines_spin = new Gtk.SpinButton.with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
+        n_mines_spin.value_changed.connect (n_mines_spin_cb);
+        n_mines_spin.set_value (settings.get_int (KEY_NMINES));
+        custom_field_grid.attach (n_mines_spin, 1, 2, 1, 1);
+
+        set_n_mines_limit ();
+        label.set_mnemonic_widget (n_mines_spin);
+
+
+        grid.attach (custom_size_frame, 1, 0, 1, 1);
 
         frame = new GnomeGamesSupport.Frame (_("Flags"));
-        table.attach_defaults (frame, 0, 2, 1, 2);
+        grid.attach (frame, 0, 1, 2, 1);
         
         var flag_options_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         flag_options_vbox.show ();
@@ -624,12 +626,12 @@ public class GnoMine : Gtk.Application
         dialog.set_resizable (false);
         var box = (Gtk.Box) dialog.get_content_area ();
         box.set_spacing (2);
-        box.pack_start (table, false, false, 0);
+        box.pack_start (grid, false, false, 0);
 
         dialog.response.connect (pref_response_cb);
         dialog.delete_event.connect (pref_delete_event_cb);
 
-        table.show_all ();
+        grid.show_all ();
 
         return dialog;
     }
