@@ -1,3 +1,5 @@
+SUBDIRS = icons
+
 gsettings_in_file = org.gnome.gnomine.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@

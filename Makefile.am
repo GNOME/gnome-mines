@@ -1,4 +1,4 @@
-SUBDIRS = data icons src
+SUBDIRS = data src
 
 if BUILD_HELP
 SUBDIRS += help
