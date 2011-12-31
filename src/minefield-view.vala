@@ -80,12 +80,11 @@ public class MinefieldView : Gtk.DrawingArea
     {
         set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
 
-        var pixmap_dir = GnomeGamesSupport.runtime_get_directory (GnomeGamesSupport.RuntimeDirectory.GAME_PIXMAP_DIRECTORY);
-        flag_preimage = load_preimage (Path.build_filename (pixmap_dir, "flag.svg"));
-        mine_preimage = load_preimage (Path.build_filename (pixmap_dir, "mine.svg"));
-        question_preimage = load_preimage (Path.build_filename (pixmap_dir, "flag-question.svg"));
-        bang_preimage = load_preimage (Path.build_filename (pixmap_dir, "bang.svg"));
-        warning_preimage = load_preimage (Path.build_filename (pixmap_dir, "warning.svg"));
+        flag_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "flag.svg"));
+        mine_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "mine.svg"));
+        question_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "flag-question.svg"));
+        bang_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "bang.svg"));
+        warning_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "warning.svg"));
         number_patterns = new Cairo.Pattern[8];
     }
     

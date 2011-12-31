@@ -161,8 +161,7 @@ public class GnoMine : Gtk.Application
     private Gtk.Image load_face_image (string name)
     {
         var image = new Gtk.Image ();
-        var dname = GnomeGamesSupport.runtime_get_directory (GnomeGamesSupport.RuntimeDirectory.GAME_PIXMAP_DIRECTORY);
-        var filename = Path.build_filename (dname, name);
+        var filename = Path.build_filename (DATA_DIRECTORY, name);
 
         if (filename != null)
             image.set_from_file (filename);
@@ -760,7 +759,7 @@ public class GnoMine : Gtk.Application
     public static int main (string[] args)
     {
         if (!GnomeGamesSupport.runtime_init ("gnomine"))
-            return 1;
+            return Posix.EXIT_FAILURE;
 
 #if ENABLE_SETGID
         GnomeGamesSupport.setgid_io_init ();

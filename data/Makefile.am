@@ -7,7 +7,7 @@ gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 
 man_MANS = gnomine.6
 
-pixmapdir   = $(datadir)/gnome-games/gnomine/pixmaps
+pixmapdir   = $(datadir)/gnomine
 pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg \
 	face-worried.svg \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg

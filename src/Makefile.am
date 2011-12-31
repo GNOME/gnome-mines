@@ -10,6 +10,7 @@ gnomine_CFLAGS = \
 	-I$(top_srcdir)/libgames-support \
 	-DVERSION=\"$(VERSION)\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
+	-DDATA_DIRECTORY=\"$(datadir)/gnomine\" \
 	$(GTK_CFLAGS)
 
 gnomine_VALAFLAGS = \
