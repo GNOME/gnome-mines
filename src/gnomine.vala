@@ -689,7 +689,14 @@ public class GnoMine : Gtk.Application
 
     private void help_cb ()
     {
-        GnomeGamesSupport.help_display (window, "gnomine", null);
+        try
+        {
+            Gtk.show_uri (window.get_screen (), "ghelp:gnomine", Gtk.get_current_event_time ());
+        }
+        catch (Error e)
+        {
+            warning ("Failed to show help: %s", e.message);
+        }
     }
 
     private const Gtk.ActionEntry actions[] =
