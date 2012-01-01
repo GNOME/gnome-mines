@@ -765,10 +765,6 @@ public class GnoMine : Gtk.Application
 
     public static int main (string[] args)
     {
-#if ENABLE_SETGID
-        GnomeGamesSupport.setgid_io_init ();
-#endif
-
         var context = new OptionContext ("");
         context.set_translation_domain (GETTEXT_PACKAGE);
         context.add_group (Gtk.get_option_group (true));

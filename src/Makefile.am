@@ -21,10 +21,6 @@ gnomine_VALAFLAGS = \
 	--vapidir $(top_srcdir)/libgames-support \
 	--pkg GnomeGamesSupport-1.0
 
-if ENABLE_SETGID
-gnomine_VALAFLAGS += -D ENABLE_SETGID
-endif
-
 gnomine_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)
