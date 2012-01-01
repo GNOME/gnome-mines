@@ -765,9 +765,6 @@ public class GnoMine : Gtk.Application
 
     public static int main (string[] args)
     {
-        if (!GnomeGamesSupport.runtime_init ("gnomine"))
-            return Posix.EXIT_FAILURE;
-
 #if ENABLE_SETGID
         GnomeGamesSupport.setgid_io_init ();
 #endif
@@ -794,8 +791,6 @@ public class GnoMine : Gtk.Application
         var result = app.run ();
 
         Settings.sync ();
-
-        GnomeGamesSupport.runtime_shutdown ();
 
         return result;
     }
