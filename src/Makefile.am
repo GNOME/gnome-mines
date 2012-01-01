@@ -25,11 +25,6 @@ gnomine_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
 	$(GTK_LIBS)
 
-if HAVE_GNOME
-gnomine_CFLAGS += $(GNOME_CFLAGS)
-gnomine_LDADD += $(GNOME_LIBS)
-endif
-
 if HAVE_RSVG
 gnomine_CFLAGS += $(RSVG_CFLAGS)
 gnomine_LDADD += $(RSVG_LIBS)
