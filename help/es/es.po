@@ -1,58 +1,67 @@
 # translation of gnomine.HEAD.po to Español
 # translation of gnomine manual to Spanish
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2011.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2011-10-29 22:23+0000\n"
-"PO-Revision-Date: 2011-10-30 23:12+0100\n"
-"Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
+"POT-Creation-Date: 2012-01-01 11:18+0000\n"
+"PO-Revision-Date: 2012-01-03 20:18+0100\n"
+"Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:148(None)
+#| msgid ""
+#| "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
 msgid ""
-"@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+"@@image: 'figures/main-window.png'; md5=5dfbe2739a705720dfa65c57f8733c73"
 msgstr ""
-"@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+"@@image: 'figures/main-window.png'; md5=5dfbe2739a705720dfa65c57f8733c73"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:166(None)
-msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-msgstr "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+#| msgid ""
+#| "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+msgid "@@image: 'figures/statusbar.png'; md5=56058dd84675ab2929aeaf7120c17769"
+msgstr "@@image: 'figures/statusbar.png'; md5=56058dd84675ab2929aeaf7120c17769"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:187(None)
-#| msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
 msgid "@@image: 'figures/faces.png'; md5=c6e6788830c32260e635ecfdd058589b"
 msgstr "@@image: 'figures/faces.png'; md5=c6e6788830c32260e635ecfdd058589b"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:279(None)
+#| msgid ""
+#| "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
 msgid ""
-"@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+"@@image: 'figures/preferences.png'; md5=5ade6be994bf6c770d1ccf8b7174fb12"
 msgstr ""
-"@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+"@@image: 'figures/preferences.png'; md5=5ade6be994bf6c770d1ccf8b7174fb12"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:301(None)
+#| msgid ""
+#| "@@image: 'figures/imnotsureflagscheckbox.png'; "
+#| "md5=58be021ed1cf90add08931282ec19bad"
 msgid ""
 "@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=58be021ed1cf90add08931282ec19bad"
+"md5=db506a024f14ef930ca39e3396654ebb"
 msgstr ""
 "@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=58be021ed1cf90add08931282ec19bad"
+"md5=db506a024f14ef930ca39e3396654ebb"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
@@ -63,57 +72,71 @@ msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:373(None)
-msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+#| msgid ""
+#| "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+msgid "@@image: 'figures/highscores.png'; md5=aebe3a869b53c4064d85028cf575196a"
 msgstr ""
-"@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+"@@image: 'figures/highscores.png'; md5=aebe3a869b53c4064d85028cf575196a"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:434(None)
+#| msgid ""
+#| "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgid ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+"@@image: 'figures/easy-hints-1.png'; md5=7a143c1e5b747aa7f767bbca7d27641d"
 msgstr ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+"@@image: 'figures/easy-hints-1.png'; md5=7a143c1e5b747aa7f767bbca7d27641d"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:448(None)
+#| msgid ""
+#| "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgid ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+"@@image: 'figures/easy-hints-2.png'; md5=cb8a832723a98e136ec1a9d75279dec6"
 msgstr ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+"@@image: 'figures/easy-hints-2.png'; md5=cb8a832723a98e136ec1a9d75279dec6"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:461(None)
+#| msgid ""
+#| "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
 msgid ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+"@@image: 'figures/easy-hints-3.png'; md5=7320c5e278121ccc3d0e3fb4cf612719"
 msgstr ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+"@@image: 'figures/easy-hints-3.png'; md5=7320c5e278121ccc3d0e3fb4cf612719"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:500(None)
+#| msgid ""
+#| "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
 msgid ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+"@@image: 'figures/hard-hints-1.png'; md5=dca8a8e9ff99fedcb66f5b37f0206ad6"
 msgstr ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+"@@image: 'figures/hard-hints-1.png'; md5=dca8a8e9ff99fedcb66f5b37f0206ad6"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:513(None)
+#| msgid ""
+#| "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
 msgid ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+"@@image: 'figures/hard-hints-2.png'; md5=30c8a1dc6c9b07de9e9b1309340f436f"
 msgstr ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+"@@image: 'figures/hard-hints-2.png'; md5=30c8a1dc6c9b07de9e9b1309340f436f"
 
 #. When image changes, this message will be marked fuzzy or untranslated for you.
 #. It doesn't matter what you translate it to: it's not used at all.
 #: C/gnomine.xml:544(None)
+#| msgid ""
+#| "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
 msgid ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+"@@image: 'figures/hard-hints-3.png'; md5=9565ae7c8e01868ecaddb1e75b223f2f"
 msgstr ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+"@@image: 'figures/hard-hints-3.png'; md5=9565ae7c8e01868ecaddb1e75b223f2f"
 
 #: C/gnomine.xml:27(title)
 msgid "<application>Mines</application> Manual"
@@ -982,3 +1005,18 @@ msgstr ""
 #: C/gnomine.xml:0(None)
 msgid "translator-credits"
 msgstr "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008."
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
