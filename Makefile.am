@@ -1,8 +1,4 @@
-SUBDIRS = data src
-
-if BUILD_HELP
-SUBDIRS += help
-endif
+SUBDIRS = data src help
 
 SCOREFILES = Small Medium Large Custom
 
