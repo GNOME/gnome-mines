@@ -1,0 +1,48 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="face">
+  <info>
+    <link type="guide" xref="index"/>
+    <revision version="0.1" date="2011-12-11" status="stub"/>
+
+    <credit type="author copyright">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2011</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>The meaning of the faces</title>
+
+  <comment>
+    <cite date="2011-12-11" href="mailto:baptistem@gnome.org">Baptiste Mille-Mathias</cite>
+    <p>This assumes the reader knows how to.... By the end of this page,
+    the reader will be able to....</p>
+  </comment>
+
+  <table shade="rows">
+    <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-smile.svg"/></td>
+      <td><p>This is a new game and you didn't clicked on any tile for the moment.</p></td>
+    </tr>
+    <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-sad.svg"/></td>
+      <td><p>You clicked on a mine, you loose.</p></td>
+    </tr>
+    <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-cool.svg"/></td>
+      <td><p>The tile you clicked on is safe. You can continue.</p></td>
+    </tr>
+    <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-worried.svg"/></td>
+      <td><p>This face appears when you're clicking a on tile.</p></td>
+    </tr>
+    <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-win.svg"/></td>
+      <td><p>You found all the mines, you win.</p></td>
+    </tr>
+  </table>
+
+</page>

@@ -1,0 +1,35 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="rule">
+
+  <info>
+    <link type="guide" xref="index"/>
+    <revision version="0.1" date="2011-12-08" status="stub"/>
+
+    <credit type="author copyright">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2011</years>
+    </credit>
+
+    <desc>How to play to <app>gnomine</app></desc>
+  </info>
+
+  <title><app>gnomine</app> game rules</title>
+
+  <comment>
+    <cite date="2011-12-08" href="mailto:baptistem@gnome.org">Baptiste Mille-Mathias</cite>
+    <p>This assumes the reader knows how to.... By the end of this page,
+    the reader will be able to....</p>
+  </comment>
+
+  <p>For the fist step, click on any tile on the game board to uncover it, it will displayed the following:</p>
+    <list>
+      <item><p>A number, which represent the number of mine surrounding the tile</p></item>
+      <item><p>A blank title</p></item>
+      <item><p>A mine, in which case you lose.</p></item>
+    </list>
+
+  <p>When you think there is a mine under a tile, you can right click on the tile to put a red flag on it, that will indicate there is potentialy a mine, and will prevent the tile from being inadvertaly clicked and the mine to explode.</p>
+
+</page>

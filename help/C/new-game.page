@@ -1,0 +1,29 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="new-game">
+
+  <info>
+    <revision version="0.1" date="2011-12-07" status="stub"/>
+
+    <credit type="author copyright">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2011</years>
+    </credit>
+
+    <desc>Start a new game</desc>
+  </info>
+
+  <title>Start a new game</title>
+
+  <comment>
+    <cite date="2011-12-07" href="mailto:baptistem@gnome.org">Baptiste Mille-Mathias</cite>
+    <p>This assumes the reader knows how to.... By the end of this page,
+    the reader will be able to....</p>
+  </comment>
+
+  <p>To start a new game choose menu <guiseq><gui>Game</gui><gui>New</gui>
+    </guiseq>. If you have a game on-going, it will be lost.</p>
+  <p>If you want to set the difficulty before starting, look at the page <link xref="difficulty"/>.</p>
+
+</page>
