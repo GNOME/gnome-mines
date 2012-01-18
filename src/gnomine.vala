@@ -60,7 +60,6 @@ public class GnoMine : Gtk.Application
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
         window = new Gtk.Window (Gtk.WindowType.TOPLEVEL);
-        window.border_width = 6;
         window.title = _("Mines");
 
         GnomeGamesSupport.settings_bind_window_state ("/org/gnome/gnomine/", window);
@@ -78,10 +77,14 @@ public class GnoMine : Gtk.Application
         menubar.show ();
         main_vbox.pack_start (menubar, false, false, 0);
 
-        /* status_box holds mine flag, game button and clock. This replaces the need of a status bar. */
+        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+        vbox.border_width = 6;
+        vbox.show ();
+        main_vbox.pack_start (vbox, true, true, 0);
+
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         status_box.homogeneous = true;
-        main_vbox.pack_start (status_box, false, false, 0);
+        vbox.pack_start (status_box, false, false, 0);
         status_box.show ();
 
         /* show the numbers of total and remaining mines */
@@ -117,15 +120,15 @@ public class GnoMine : Gtk.Application
 
         /* game clock */
         var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        status_box.pack_start (box, false, false, 0);
         box.show ();
+        status_box.pack_start (box, false, false, 0);
 
         var label = new Gtk.Label (_("Time: "));
         box.pack_start (label, false, false, 0);
 
         clock = new GnomeGamesSupport.Clock ();
-        box.pack_start (clock, false, false, 0);
         clock.show ();
+        box.pack_start (clock, false, false, 0);
 
         minefield_view = new MinefieldView ();
         minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
@@ -134,8 +137,8 @@ public class GnoMine : Gtk.Application
         minefield_view.button_press_event.connect (view_button_press_event);
         minefield_view.look.connect (look_cb);
         minefield_view.unlook.connect (unlook_cb);
-        main_vbox.pack_start (minefield_view, true, true, 0);
         minefield_view.show ();
+        vbox.pack_start (minefield_view, true, true, 0);
 
         new_game ();
     }
