@@ -1,13 +1,7 @@
-include $(top_srcdir)/gnome-doc-utils.make
+@YELP_HELP_RULES@
+HELP_ID = gnomine
 
-DOC_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
-
-DOC_MODULE = gnomine
-
-DOC_ENTITIES = \
-	legal.xml
-
-DOC_FIGURES = \
+HELP_MEDIA = \
 	figures/easy-hints-1.png \
 	figures/easy-hints-2.png \
 	figures/easy-hints-3.png \
@@ -22,6 +16,10 @@ DOC_FIGURES = \
 	figures/preferences.png \
 	figures/statusbar.png
 
-dist-hook: doc-dist-hook
+HELP_FILES = \
+	gnomine.xml \
+	legal.xml
+
+HELP_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk
