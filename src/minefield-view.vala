@@ -60,8 +60,8 @@ public class MinefieldView : Gtk.DrawingArea
             var w = 320 / minefield.width;
             var h = 200 / minefield.height;
             var s = uint.min (w, h);
-            if (s < 20)
-                s = 20;
+            if (s < 30)
+                s = 30;
             return s;
         }
     }
