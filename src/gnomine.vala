@@ -219,13 +219,6 @@ public class GnoMine : Gtk.Application
     public void start ()
     {
         window.show ();
-
-        /* All this hiding is a bit ugly, but it's better than a ton of show calls. */
-        win_face_image.hide ();
-        sad_face_image.hide ();
-        cool_face_image.hide ();
-        worried_face_image.hide ();
-
         set_face_image (smile_face_image);
     }
 
