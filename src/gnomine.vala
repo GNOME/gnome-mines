@@ -15,12 +15,12 @@ public class GnoMine : Gtk.Application
     private const string KEY_USE_AUTOFLAG = "use-autoflag";
 
     /* Faces for new game button */
+    private Gtk.ToolButton face_button;
     private Gtk.Image win_face_image;
     private Gtk.Image sad_face_image;
     private Gtk.Image smile_face_image;
     private Gtk.Image cool_face_image;
     private Gtk.Image worried_face_image;
-    private Gtk.Image? current_face_image = null;
 
     /* Main window */
     private Gtk.Window window;
@@ -67,7 +67,7 @@ public class GnoMine : Gtk.Application
 
         GnomeGamesSupport.stock_init ();
 
-        var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+        var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         window.add (main_vbox);
         main_vbox.show ();
 
@@ -75,48 +75,16 @@ public class GnoMine : Gtk.Application
         window.add_accel_group (ui_manager.get_accel_group ());
         var menubar = (Gtk.MenuBar) ui_manager.get_widget ("/MainMenu");
         menubar.show ();
-        main_vbox.pack_start (menubar, false, false, 0);
+        main_vbox.pack_start (menubar, false, true, 0);
 
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-        vbox.border_width = 6;
-        vbox.show ();
-        main_vbox.pack_start (vbox, true, true, 0);
-
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        status_box.homogeneous = true;
-        vbox.pack_start (status_box, false, false, 0);
+        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         status_box.show ();
 
         /* show the numbers of total and remaining mines */
         flag_label = new Gtk.Label ("");
-        status_box.pack_start (flag_label, false, false, 0);
         flag_label.show ();
 
-        /* the new game button is always center-aligned */
-        var new_game_button_alignment = new Gtk.Alignment (0.5f, 0.5f, 0.0f, 0.0f);
-        status_box.pack_start (new_game_button_alignment, false, false, 0);
-        new_game_button_alignment.show ();
-
-        new_game_button = new Gtk.Button ();
-        new_game_button.clicked.connect (new_game);
-        new_game_button_alignment.add (new_game_button);
-        new_game_button.show ();
-
-        var face_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
-        new_game_button.add (face_box);
-        face_box.show ();
-
-        win_face_image = load_face_image ("face-win.svg");
-        sad_face_image = load_face_image ("face-sad.svg");
-        smile_face_image = load_face_image ("face-smile.svg");
-        cool_face_image = load_face_image ("face-cool.svg");
-        worried_face_image = load_face_image ("face-worried.svg");
-
-        face_box.pack_start (win_face_image, false, false, 0);
-        face_box.pack_start (sad_face_image, false, false, 0);
-        face_box.pack_start (smile_face_image, false, false, 0);
-        face_box.pack_start (cool_face_image, false, false, 0);
-        face_box.pack_start (worried_face_image, false, false, 0);
+        status_box.pack_start (flag_label, false, false, 0);
 
         /* game clock */
         var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -125,10 +93,42 @@ public class GnoMine : Gtk.Application
 
         var label = new Gtk.Label (_("Time: "));
         box.pack_start (label, false, false, 0);
+        label.show ();
 
         clock = new GnomeGamesSupport.Clock ();
         clock.show ();
         box.pack_start (clock, false, false, 0);
+
+        var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
+        status_alignment.add (status_box);
+        status_alignment.show();
+
+        var status_item = new Gtk.ToolItem ();
+        status_item.set_expand (true);
+        status_item.add (status_alignment);
+        status_item.show();
+
+        /* create fancy faces */
+        win_face_image = load_face_image ("face-win.svg");
+        sad_face_image = load_face_image ("face-sad.svg");
+        smile_face_image = load_face_image ("face-smile.svg");
+        cool_face_image = load_face_image ("face-cool.svg");
+        worried_face_image = load_face_image ("face-worried.svg");
+
+        /* initialize toolbar */
+        var toolbar = (Gtk.Toolbar) ui_manager.get_widget ("/Toolbar");
+        face_button = (Gtk.ToolButton) ui_manager.get_widget ("/Toolbar/NewGame");
+        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
+        /* replace the dull new-game icon with fancy faces */
+        set_face_image (smile_face_image);
+
+        toolbar.insert (status_item, -1);
+        main_vbox.pack_start (toolbar, false, false, 0);
+
+        var view_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        view_box.border_width = 3;
+        view_box.show ();
+        main_vbox.pack_start (view_box, true, true, 0);
 
         minefield_view = new MinefieldView ();
         minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
@@ -138,9 +138,82 @@ public class GnoMine : Gtk.Application
         minefield_view.look.connect (look_cb);
         minefield_view.unlook.connect (unlook_cb);
         minefield_view.show ();
-        vbox.pack_start (minefield_view, true, true, 0);
+        view_box.pack_start (minefield_view, true, true, 0);
 
         new_game ();
+    }
+
+    private const Gtk.ActionEntry actions[] =
+    {
+        {"GameMenu", null, N_("_Game")},
+        {"SettingsMenu", null, N_("_Settings")},
+        {"HelpMenu", null, N_("_Help")},
+        {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, N_("Start a new game"), new_game_cb},
+        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb},
+        {"Scores", GnomeGamesSupport.STOCK_SCORES, null, null, null, scores_cb},
+        {"Quit", Gtk.Stock.QUIT, null, null, null, quit_game_cb},
+        {"Preferences", Gtk.Stock.PREFERENCES, null, null, null, preferences_cb},
+        {"Contents", GnomeGamesSupport.STOCK_CONTENTS, null, null, null, help_cb},
+        {"About", Gtk.Stock.ABOUT, null, null, null, about_cb}
+    };
+
+    private const string ui_description =
+        "<ui>" +
+        "    <menubar name='MainMenu'>" +
+        "        <menu action='GameMenu'>" +
+        "            <menuitem action='NewGame'/>" +
+        "            <menuitem action='Hint'/>" +
+        "            <menuitem action='PauseGame'/>" +
+        "            <separator/>" +
+        "            <menuitem action='Scores'/>" +
+        "            <separator/>" +
+        "            <menuitem action='Quit'/>" +
+        "        </menu>" +
+        "        <menu action='SettingsMenu'>" +
+        "            <menuitem action='Fullscreen'/>" +
+        "            <menuitem action='Preferences'/>" +
+        "        </menu>" +
+        "        <menu action='HelpMenu'>" +
+        "            <menuitem action='Contents'/>" +
+        "            <menuitem action='About'/>" +
+        "        </menu>" +
+        "    </menubar>" +
+        "    <toolbar name='Toolbar'>" +
+        "        <toolitem action='NewGame'/>" +
+        "        <toolitem action='Hint'/>" +
+        "        <toolitem action='PauseGame'/>" +
+        "        <toolitem action='Fullscreen'/>" +
+        "    </toolbar>" +
+        "</ui>";
+
+    private Gtk.UIManager create_ui_manager (string group)
+    {
+        var action_group = new Gtk.ActionGroup ("group");
+        action_group.set_translation_domain (GETTEXT_PACKAGE);
+        action_group.add_actions (actions, this);
+
+        var ui_manager = new Gtk.UIManager ();
+        ui_manager.insert_action_group (action_group, 0);
+        try
+        {
+            ui_manager.add_ui_from_string (ui_description, -1);
+        }
+        catch (Error e)
+        {
+        }
+        hint_action = action_group.get_action ("Hint");
+        hint_action.is_important = true;
+
+        action_group.get_action ("NewGame").is_important = true;
+
+        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
+        action_group.add_action_with_accel (fullscreen_action, null);
+
+        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
+        pause_action.state_changed.connect (pause_cb);
+        action_group.add_action_with_accel (pause_action, null);
+
+        return ui_manager;
     }
 
     public void start ()
@@ -169,20 +242,15 @@ public class GnoMine : Gtk.Application
         if (filename != null)
             image.set_from_file (filename);
 
+        image.show ();
+
         return image;
     }
 
     private void set_face_image (Gtk.Image face_image)
     {
-        if (current_face_image == face_image)
-            return;
-
-        if (current_face_image != null)
-            current_face_image.hide ();
-        hint_action.set_sensitive ((face_image == cool_face_image) || (face_image == smile_face_image));
-        face_image.show ();
-
-        current_face_image = face_image;
+        hint_action.set_sensitive (face_image == cool_face_image || face_image == smile_face_image);
+        face_button.set_icon_widget (face_image);
     }
 
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
@@ -702,69 +770,6 @@ public class GnoMine : Gtk.Application
         }
     }
 
-    private const Gtk.ActionEntry actions[] =
-    {
-        {"GameMenu", null, N_("_Game")},
-        {"SettingsMenu", null, N_("_Settings")},
-        {"HelpMenu", null, N_("_Help")},
-        {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, null, new_game_cb},
-        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, null, hint_cb},
-        {"Scores", GnomeGamesSupport.STOCK_SCORES, null, null, null, scores_cb},
-        {"Quit", Gtk.Stock.QUIT, null, null, null, quit_game_cb},
-        {"Preferences", Gtk.Stock.PREFERENCES, null, null, null, preferences_cb},
-        {"Contents", GnomeGamesSupport.STOCK_CONTENTS, null, null, null, help_cb},
-        {"About", Gtk.Stock.ABOUT, null, null, null, about_cb}
-    };
-
-    private const string ui_description =
-        "<ui>" +
-        "    <menubar name='MainMenu'>" +
-        "        <menu action='GameMenu'>" +
-        "            <menuitem action='NewGame'/>" +
-        "            <menuitem action='Hint'/>" +
-        "            <menuitem action='PauseGame'/>" +
-        "            <separator/>" +
-        "            <menuitem action='Scores'/>" +
-        "            <separator/>" +
-        "            <menuitem action='Quit'/>" +
-        "        </menu>" +
-        "        <menu action='SettingsMenu'>" +
-        "            <menuitem action='Fullscreen'/>" +
-        "            <menuitem action='Preferences'/>" +
-        "        </menu>" +
-        "        <menu action='HelpMenu'>" +
-        "            <menuitem action='Contents'/>" +
-        "            <menuitem action='About'/>" +
-        "        </menu>" +
-        "    </menubar>" +
-        "</ui>";
-
-    private Gtk.UIManager create_ui_manager (string group)
-    {
-        var action_group = new Gtk.ActionGroup ("group");
-        action_group.set_translation_domain (GETTEXT_PACKAGE);
-        action_group.add_actions (actions, this);
-
-        var ui_manager = new Gtk.UIManager ();
-        ui_manager.insert_action_group (action_group, 0);
-        try
-        {
-            ui_manager.add_ui_from_string (ui_description, -1);
-        }
-        catch (Error e)
-        {
-        }
-        hint_action = action_group.get_action ("Hint");
-
-        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
-        action_group.add_action_with_accel (fullscreen_action, null);
-
-        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
-        pause_action.state_changed.connect (pause_cb);
-        action_group.add_action_with_accel (pause_action, null);
-
-        return ui_manager;
-    }
 
     public static int main (string[] args)
     {
