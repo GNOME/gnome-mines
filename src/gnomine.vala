@@ -32,7 +32,6 @@ public class GnoMine : Gtk.Application
     private Gtk.Dialog? pref_dialog = null;
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
-    private Gtk.Button new_game_button;
     private GnomeGamesSupport.Frame custom_size_frame;
     private GnomeGamesSupport.Clock clock;
     private Gtk.Action hint_action;
@@ -424,17 +423,12 @@ public class GnoMine : Gtk.Application
     private void explode_cb (Minefield minefield)
     {
         set_face_image (sad_face_image);
-
-        new_game_button.grab_focus ();
-
         clock.stop ();
     }
 
     private void cleared_cb (Minefield minefield)
     {
         clock.stop ();
-
-        new_game_button.grab_focus ();
 
         set_face_image (win_face_image);
 
