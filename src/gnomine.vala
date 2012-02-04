@@ -25,18 +25,22 @@ public class GnoMine : Gtk.Application
     /* Main window */
     private Gtk.Window window;
 
-    /* Minefield widget */
+    /* Minefield being played */
     private Minefield minefield;
+
+    /* Minefield widget */
     private MinefieldView minefield_view;
 
     private Gtk.Dialog? pref_dialog = null;
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
-    private GnomeGamesSupport.Frame custom_size_frame;
     private GnomeGamesSupport.Clock clock;
     private Gtk.Action hint_action;
     private GnomeGamesSupport.FullscreenAction fullscreen_action;
     private GnomeGamesSupport.PauseAction pause_action;
+    private Gtk.AspectFrame new_game_screen;
+    private Gtk.AspectFrame custom_game_screen;
+    private bool is_new_game_screen;
 
     private const GnomeGamesSupport.ScoresCategory scorecats[] =
     {
@@ -136,10 +140,114 @@ public class GnoMine : Gtk.Application
         minefield_view.button_press_event.connect (view_button_press_event);
         minefield_view.look.connect (look_cb);
         minefield_view.unlook.connect (unlook_cb);
-        minefield_view.show ();
         view_box.pack_start (minefield_view, true, true, 0);
 
-        new_game ();
+        /* New game screen */
+        new_game_screen = new Gtk.AspectFrame (_("Field Size"), 0.5f, 0.5f, 1.0f, false);
+        new_game_screen.set_shadow_type (Gtk.ShadowType.NONE);
+        new_game_screen.set_size_request(200, 200);
+
+        var new_game_table = new Gtk.Table (2, 2, true);
+        new_game_screen.add (new_game_table);
+
+        var button_small = new Gtk.Button ();
+        new_game_table.attach_defaults (button_small, 0, 1, 0, 1);
+        button_small.clicked.connect (small_size_clicked_cb);
+
+        label = new Gtk.Label (null);
+        label.set_markup ("<span fgcolor='#0000ff'><span size='x-large' weight='ultrabold'>8 x 8</span>\n" + _("Mines") + ": <b>10</b></span>");
+        label.set_justify (Gtk.Justification.CENTER);
+        button_small.add (label);
+
+        var button_medium = new Gtk.Button ();
+        new_game_table.attach_defaults (button_medium, 1, 2, 0, 1);
+        button_medium.clicked.connect (medium_size_clicked_cb);
+
+        label = new Gtk.Label (null);
+        label.set_markup ("<span fgcolor='#00a000'><span size='x-large' weight='ultrabold'>16 x 16</span>\n" + _("Mines") + ": <b>40</b></span>");
+        label.set_justify (Gtk.Justification.CENTER);
+        button_medium.add (label);
+
+        var button_large = new Gtk.Button ();
+        new_game_table.attach_defaults (button_large, 0, 1, 1, 2);
+        button_large.clicked.connect (large_size_clicked_cb);
+
+        label = new Gtk.Label (null);
+        label.set_markup ("<span fgcolor='#ff0000'><span size='x-large' weight='ultrabold'>30 x 16</span>\n" + _("Mines") + ": <b>99</b></span>");
+        label.set_justify (Gtk.Justification.CENTER);
+        button_large.add (label);
+
+        var button_custom = new Gtk.Button ();
+        new_game_table.attach_defaults (button_custom, 1, 2, 1, 2);
+        button_custom.clicked.connect (show_custom_game_screen);
+
+        label = new Gtk.Label (null);
+        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", "_Custom") + "</span>");
+        label.set_justify (Gtk.Justification.CENTER);
+        button_custom.add (label);
+
+        new_game_screen.show_all ();
+        view_box.pack_start (new_game_screen, true, true, 0);
+
+        /* Custom game screen */
+        custom_game_screen = new Gtk.AspectFrame ("", 0.5f, 0.5f, 0.0f, true);
+        custom_game_screen.set_shadow_type (Gtk.ShadowType.NONE);
+
+        var custom_game_frame = new GnomeGamesSupport.Frame (_("Custom Size"));
+        custom_game_screen.add (custom_game_frame);
+
+        var custom_field_grid = new Gtk.Grid ();
+        custom_field_grid.set_row_spacing (6);
+        custom_field_grid.set_column_spacing (12);
+        custom_game_frame.add (custom_field_grid);
+
+        label = new Gtk.Label.with_mnemonic (_("H_orizontal:"));
+        label.set_alignment (0, 0.5f);
+        custom_field_grid.attach (label, 0, 0, 1, 1);
+
+        var field_width_entry = new Gtk.SpinButton.with_range (XSIZE_MIN, XSIZE_MAX, 1);
+        field_width_entry.value_changed.connect (xsize_spin_cb);
+        field_width_entry.set_value (settings.get_int (KEY_XSIZE));
+        custom_field_grid.attach (field_width_entry, 1, 0, 1, 1);
+        label.set_mnemonic_widget (field_width_entry);
+
+        label = new Gtk.Label.with_mnemonic (_("_Vertical:"));
+        label.set_alignment (0, 0.5f);
+        custom_field_grid.attach (label, 0, 1, 1, 1);
+
+        var field_height_entry = new Gtk.SpinButton.with_range (YSIZE_MIN, YSIZE_MAX, 1);
+        field_height_entry.value_changed.connect (ysize_spin_cb);
+        field_height_entry.set_value (settings.get_int (KEY_YSIZE));
+        custom_field_grid.attach (field_height_entry, 1, 1, 1, 1);
+        label.set_mnemonic_widget (field_height_entry);
+
+        label = new Gtk.Label.with_mnemonic (_("_Number of mines:"));
+        label.set_alignment (0, 0.5f);
+        custom_field_grid.attach (label, 0, 2, 1, 1);
+
+        n_mines_spin = new Gtk.SpinButton.with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
+        n_mines_spin.value_changed.connect (n_mines_spin_cb);
+        n_mines_spin.set_value (settings.get_int (KEY_NMINES));
+        custom_field_grid.attach (n_mines_spin, 1, 2, 1, 1);
+
+        set_n_mines_limit ();
+        label.set_mnemonic_widget (n_mines_spin);
+
+        var hbox = new Gtk.HBox (false, 5);
+        custom_field_grid.attach (hbox, 0, 3, 2, 1);
+
+        var button_back = new Gtk.Button.from_stock (Gtk.Stock.CANCEL);
+        button_back.clicked.connect (show_new_game_screen);
+        hbox.pack_start (button_back, true, true);
+
+        button_custom = new Gtk.Button.with_mnemonic ("_Play Game");
+        button_custom.set_image (new Gtk.Image.from_stock (Gtk.Stock.GO_FORWARD, Gtk.IconSize.BUTTON));
+        button_custom.clicked.connect (custom_size_clicked_cb);
+        hbox.pack_start (button_custom, true, true);
+
+        custom_game_screen.show_all ();
+        custom_game_screen.hide ();
+        view_box.pack_start (custom_game_screen, true, false);
     }
 
     private const Gtk.ActionEntry actions[] =
@@ -218,6 +326,7 @@ public class GnoMine : Gtk.Application
     public void start ()
     {
         window.show ();
+        show_new_game_screen ();
         set_face_image (smile_face_image);
     }
 
@@ -319,8 +428,19 @@ public class GnoMine : Gtk.Application
         show_scores (0, false);
     }
 
-    private void new_game ()
+    private void show_custom_game_screen ()
     {
+        is_new_game_screen = false;
+        custom_game_screen.show ();
+        minefield_view.hide ();
+        new_game_screen.hide ();
+    }
+
+    private void show_new_game_screen ()
+    {
+        if (is_new_game_screen)
+            return;
+
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Cancel current game?"));
@@ -332,6 +452,31 @@ public class GnoMine : Gtk.Application
             if (result == Gtk.ResponseType.REJECT)
                 return;
         }
+
+        minefield = null;
+
+        is_new_game_screen = true;
+        custom_game_screen.hide ();
+        minefield_view.hide ();
+        new_game_screen.show ();
+        flag_label.set_text("");
+        clock.stop ();
+        clock.reset ();
+        set_face_image (smile_face_image);
+
+        hint_action.set_sensitive (false);
+        pause_action.set_sensitive (false);
+
+        minefield_view.paused = false;
+        pause_action.set_is_paused (false);
+    }
+
+    private void new_game ()
+    {
+        is_new_game_screen = false;
+        custom_game_screen.hide ();
+        minefield_view.show ();
+        new_game_screen.hide ();
 
         clock.reset ();
         set_face_image (smile_face_image);
@@ -379,8 +524,11 @@ public class GnoMine : Gtk.Application
 
         update_flag_label ();
 
+        hint_action.set_sensitive (true);
         pause_action.set_sensitive (true);
+
         minefield_view.paused = false;
+        pause_action.set_is_paused (false);
     }
 
     private void hint_cb ()
@@ -395,7 +543,10 @@ public class GnoMine : Gtk.Application
 
     private void new_game_cb ()
     {
-        new_game ();
+        if (is_new_game_screen)
+            new_game ();
+        else
+            show_new_game_screen ();
     }
 
     private void pause_cb (Gtk.Action action)
@@ -438,7 +589,7 @@ public class GnoMine : Gtk.Application
         if (show_scores (pos, true) == Gtk.ResponseType.REJECT)
             window.destroy ();
         else
-            new_game ();
+            show_new_game_screen ();
     }
 
     private void look_cb (MinefieldView minefield_view)
@@ -528,7 +679,6 @@ public class GnoMine : Gtk.Application
 
         settings.set_int (KEY_XSIZE, xsize);
         set_n_mines_limit ();
-        new_game ();
     }
 
     private void ysize_spin_cb (Gtk.SpinButton spin)
@@ -539,7 +689,6 @@ public class GnoMine : Gtk.Application
 
         settings.set_int (KEY_YSIZE, ysize);
         set_n_mines_limit ();
-        new_game ();
     }
 
     private void n_mines_spin_cb (Gtk.SpinButton spin)
@@ -549,7 +698,6 @@ public class GnoMine : Gtk.Application
             return;
 
         settings.set_int (KEY_NMINES, n_mines);
-        new_game ();
     }
 
     private void use_question_toggle_cb (Gtk.ToggleButton button)
@@ -568,97 +716,10 @@ public class GnoMine : Gtk.Application
 
     private Gtk.Dialog create_preferences ()
     {
-        var grid = new Gtk.Grid ();
-        grid.border_width = 5;
-        grid.set_row_spacing (18);
-        grid.set_column_spacing (18);
+        var vbox = new Gtk.VBox (false, 5);
 
-        var frame = new GnomeGamesSupport.Frame (_("Field Size"));
-
-        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-
-        var small_button = new Gtk.RadioButton.with_mnemonic (null, dpgettext2 (null, "board size", "_Small"));
-        small_button.toggled.connect (small_size_toggled_cb);
-        vbox.pack_start (small_button, false, false, 0);
-
-        var medium_button = new Gtk.RadioButton.with_mnemonic (small_button.get_group (), dpgettext2 (null, "board size", "_Medium"));
-        medium_button.toggled.connect (medium_size_toggled_cb);
-        vbox.pack_start (medium_button, false, false, 0);
-
-        var large_button = new Gtk.RadioButton.with_mnemonic (medium_button.get_group (), dpgettext2 (null, "board size", "_Large"));
-        large_button.toggled.connect (large_size_toggled_cb);
-        vbox.pack_start (large_button, false, false, 0);
-
-        var custom_button = new Gtk.RadioButton.with_mnemonic (large_button.get_group (), dpgettext2 (null, "board size", "_Custom"));
-        custom_button.toggled.connect (custom_size_toggled_cb);
-        vbox.pack_start (custom_button, false, false, 0);
-
-        switch (settings.get_int (KEY_MODE))
-        {
-        case 0:
-            small_button.active = true;
-            break;
-        case 1:
-            medium_button.active = true;
-            break;
-        case 2:
-            large_button.active = true;
-            break;
-        default:
-        case 3:
-            custom_button.active = true;
-            break;
-        }
-
-        frame.add (vbox);
-
-        grid.attach (frame, 0, 0, 1, 1);
-
-        custom_size_frame = new GnomeGamesSupport.Frame (_("Custom Size"));
-        custom_size_frame.sensitive = settings.get_int (KEY_MODE) == 3;
-
-        var custom_field_grid = new Gtk.Grid ();
-        custom_field_grid.set_row_spacing (6);
-        custom_field_grid.set_column_spacing (12);
-        custom_size_frame.add (custom_field_grid);
-
-        var label = new Gtk.Label.with_mnemonic (_("_Horizontal:"));
-        label.set_alignment (0, 0.5f);
-        custom_field_grid.attach (label, 0, 0, 1, 1);
-
-        var field_width_entry = new Gtk.SpinButton.with_range (XSIZE_MIN, XSIZE_MAX, 1);
-        field_width_entry.value_changed.connect (xsize_spin_cb);
-        field_width_entry.set_value (settings.get_int (KEY_XSIZE));
-        custom_field_grid.attach (field_width_entry, 1, 0, 1, 1);
-        label.set_mnemonic_widget (field_width_entry);
-
-        label = new Gtk.Label.with_mnemonic (_("_Vertical:"));
-        label.set_alignment (0, 0.5f);
-        custom_field_grid.attach (label, 0, 1, 1, 1);
-
-        var field_height_entry = new Gtk.SpinButton.with_range (YSIZE_MIN, YSIZE_MAX, 1);
-        field_height_entry.value_changed.connect (ysize_spin_cb);
-        field_height_entry.set_value (settings.get_int (KEY_YSIZE));
-        custom_field_grid.attach (field_height_entry, 1, 1, 1, 1);
-        label.set_mnemonic_widget (field_height_entry);
-
-        label = new Gtk.Label.with_mnemonic (_("_Number of mines:"));
-        label.set_alignment (0, 0.5f);
-        custom_field_grid.attach (label, 0, 2, 1, 1);
-
-        n_mines_spin = new Gtk.SpinButton.with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
-        n_mines_spin.value_changed.connect (n_mines_spin_cb);
-        n_mines_spin.set_value (settings.get_int (KEY_NMINES));
-        custom_field_grid.attach (n_mines_spin, 1, 2, 1, 1);
-
-        set_n_mines_limit ();
-        label.set_mnemonic_widget (n_mines_spin);
-
-
-        grid.attach (custom_size_frame, 1, 0, 1, 1);
-
-        frame = new GnomeGamesSupport.Frame (_("Flags"));
-        grid.attach (frame, 0, 1, 2, 1);
+        var frame = new GnomeGamesSupport.Frame (_("Flags"));
+        vbox.pack_start (frame, false, false);
         
         var flag_options_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
         flag_options_vbox.show ();
@@ -683,48 +744,42 @@ public class GnoMine : Gtk.Application
         dialog.set_resizable (false);
         var box = (Gtk.Box) dialog.get_content_area ();
         box.set_spacing (2);
-        box.pack_start (grid, false, false, 0);
+        box.pack_start (vbox, false, false, 0);
 
         dialog.response.connect (pref_response_cb);
         dialog.delete_event.connect (pref_delete_event_cb);
 
-        grid.show_all ();
+        vbox.show_all ();
 
         return dialog;
     }
     
     private void set_mode (int mode)
     {
-        if (mode == settings.get_int (KEY_MODE))
-            return;
+        if (mode != settings.get_int (KEY_MODE))
+            settings.set_int (KEY_MODE, mode);
 
-        settings.set_int (KEY_MODE, mode);
-        custom_size_frame.sensitive = mode == 3;
         new_game ();
     }
 
-    private void small_size_toggled_cb (Gtk.ToggleButton button)
+    private void small_size_clicked_cb ()
     {
-        if (button.active)
-            set_mode (0);
+        set_mode (0);
     }
 
-    private void medium_size_toggled_cb (Gtk.ToggleButton button)
+    private void medium_size_clicked_cb ()
     {
-        if (button.active)
-            set_mode (1);
+        set_mode (1);
     }
 
-    private void large_size_toggled_cb (Gtk.ToggleButton button)
+    private void large_size_clicked_cb ()
     {
-        if (button.active)
-            set_mode (2);
+        set_mode (2);
     }
 
-    private void custom_size_toggled_cb (Gtk.ToggleButton button)
+    private void custom_size_clicked_cb ()
     {
-        if (button.active)
-            set_mode (3);
+        set_mode (3);
     }
     
     private void pref_response_cb (Gtk.Dialog dialog, int response_id)
