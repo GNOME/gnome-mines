@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: Mines Manual 2.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-02-05 19:31+0100\n"
+"PO-Revision-Date: 2012-02-05 20:41+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -84,7 +84,7 @@ msgstr "Mithelfen"
 msgctxt "_"
 msgid ""
 "external ref='figures/main-window.png' md5='5dfbe2739a705720dfa65c57f8733c73'"
-msgstr ""
+msgstr "translated"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -94,7 +94,7 @@ msgstr ""
 msgctxt "_"
 msgid ""
 "external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
-msgstr ""
+msgstr "translated"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -113,7 +113,7 @@ msgstr "original"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='5ade6be994bf6c770d1ccf8b7174fb12'"
-msgstr ""
+msgstr "translated"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -143,7 +143,7 @@ msgstr "translated"
 msgctxt "_"
 msgid ""
 "external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
-msgstr ""
+msgstr "translated"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
