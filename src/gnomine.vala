@@ -351,7 +351,6 @@ public class GnoMine : Gtk.Application
 
     private void set_face_image (Gtk.Image face_image)
     {
-        hint_action.set_sensitive (face_image == cool_face_image || face_image == smile_face_image);
         face_button.set_icon_widget (face_image);
     }
 
@@ -575,6 +574,8 @@ public class GnoMine : Gtk.Application
     private void explode_cb (Minefield minefield)
     {
         set_face_image (sad_face_image);
+        hint_action.set_sensitive (false);
+        pause_action.set_sensitive (false);
         clock.stop ();
     }
 
