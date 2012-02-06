@@ -74,7 +74,31 @@ public class GnoMine : Gtk.Application
         window.add (main_vbox);
         main_vbox.show ();
 
-        var ui_manager = create_ui_manager ("GnomineActions");
+        var action_group = new Gtk.ActionGroup ("group");
+        action_group.set_translation_domain (GETTEXT_PACKAGE);
+        action_group.add_actions (actions, this);
+
+        var ui_manager = new Gtk.UIManager ();
+        ui_manager.insert_action_group (action_group, 0);
+        try
+        {
+            ui_manager.add_ui_from_string (ui_description, -1);
+        }
+        catch (Error e)
+        {
+        }
+        hint_action = action_group.get_action ("Hint");
+        hint_action.is_important = true;
+
+        action_group.get_action ("NewGame").is_important = true;
+
+        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
+        action_group.add_action_with_accel (fullscreen_action, null);
+
+        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
+        pause_action.state_changed.connect (pause_cb);
+        action_group.add_action_with_accel (pause_action, null);
+
         window.add_accel_group (ui_manager.get_accel_group ());
         var menubar = (Gtk.MenuBar) ui_manager.get_widget ("/MainMenu");
         menubar.show ();
@@ -293,36 +317,6 @@ public class GnoMine : Gtk.Application
         "        <toolitem action='Fullscreen'/>" +
         "    </toolbar>" +
         "</ui>";
-
-    private Gtk.UIManager create_ui_manager (string group)
-    {
-        var action_group = new Gtk.ActionGroup ("group");
-        action_group.set_translation_domain (GETTEXT_PACKAGE);
-        action_group.add_actions (actions, this);
-
-        var ui_manager = new Gtk.UIManager ();
-        ui_manager.insert_action_group (action_group, 0);
-        try
-        {
-            ui_manager.add_ui_from_string (ui_description, -1);
-        }
-        catch (Error e)
-        {
-        }
-        hint_action = action_group.get_action ("Hint");
-        hint_action.is_important = true;
-
-        action_group.get_action ("NewGame").is_important = true;
-
-        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
-        action_group.add_action_with_accel (fullscreen_action, null);
-
-        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
-        pause_action.state_changed.connect (pause_cb);
-        action_group.add_action_with_accel (pause_action, null);
-
-        return ui_manager;
-    }
 
     public void start ()
     {
