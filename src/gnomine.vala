@@ -120,6 +120,7 @@ public class GnoMine : Gtk.Application
 
         /* initialize toolbar */
         var toolbar = (Gtk.Toolbar) ui_manager.get_widget ("/Toolbar");
+        toolbar.show_arrow = false;
         face_button = (Gtk.ToolButton) ui_manager.get_widget ("/Toolbar/NewGame");
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
         /* replace the dull new-game icon with fancy faces */
