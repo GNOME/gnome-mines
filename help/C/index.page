@@ -13,9 +13,13 @@
       <p>Creative Commons Share Alike 3.0</p>
     </license>
   </info>
-  
-  <title><media type="image" src="figures/logo32.png">GNOME Mines logo</media>GNOME Mines</title>
 
+  <title><media type="image" src="figures/logo32.png">GNOME Mines logo</media>GNOME Mines</title>
+  <p>
+    <app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to
+    locate all the mines hidden under tiles on a square board. You'll need some
+    reflection and some luck to find all of them without causing an explosion.
+  </p>
   <section id="play" style="2column">
     <title>Game Play</title>
   </section>

@@ -1,0 +1,19 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="hint">
+  <info>
+    <revision version="0.1" date="2012-02-06" status="stub"/>
+
+    <credit type="author copyright">
+      <name>Tiffany Antopolski</name>
+      <email>tiffany.antopolski@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Hints</title>
+
+
+</page>

@@ -1,0 +1,45 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="shortcuts">
+  <info>
+    <link type="guide" xref="index#advanced" />
+    <revision version="0.1" date="2012-02-06" status="review"/>
+
+    <credit type="author copyright">
+      <name>Brian Grohe</name>
+      <email>grohe43@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <desc></desc>
+  </info>
+
+  <title>Keyboard shortcuts</title>
+  <table frame="all" rules="cols" shade="rows">
+       <tr>
+         <td><p>New game</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
+       </tr>
+       <tr>
+         <td><p>Fullscreen</p></td>
+         <td><p><key>F11</key></p></td>
+       </tr>
+       <tr>
+         <td><p>Hint</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
+       </tr>
+       <tr>
+          <td><p>Pause</p></td>
+          <td><p><key>Pause</key></p>
+              <note><p>Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> key.</p></note></td>
+       </tr>
+       <tr>
+          <td><p>Help</p></td>
+          <td><p><key>F1</key></p></td>
+        </tr>
+        <tr>
+          <td><p>Quit</p></td>
+          <td><p><keyseq><key>Ctrl</key><key>Q</key></keyseq></p></td>
+        </tr>
+      </table>
+</page>

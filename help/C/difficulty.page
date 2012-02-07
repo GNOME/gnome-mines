@@ -12,32 +12,29 @@
       <years>2011</years>
     </credit>
 
-    <desc>How to set game difficulty level</desc>
   </info>
 
-  <title>Define the game difficulty</title>
+  <title>Change the game difficulty</title>
 
-  <comment>
-    <cite date="2011-12-05" href="mailto:baptistem@gnome.org">Baptiste Mille-Mathias</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
-
-  <p>You can tune the difficulty by choosing the groid size used to play <app>gnomine</app>.</p>
+  <p>You can set the difficulty by choosing the grid size used to play <app>gnomine</app>.</p>
 
   <steps>
-    <item><p>Click <guiseq><gui>Settings</gui><gui>Preferences</gui></guiseq>.</p></item>
-    <item><p>Select among the proposed grid sizes: </p>
+    <item><p>Click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p></item>
+    <item><p>Select from the proposed grid sizes:</p>
       <list>
-        <item><p><gui>Small</gui> (8 x 8 board tiles and 10 mines to find)</p></item>
-        <item><p><gui>Medium</gui> (16 x 16 board tiles and 40 mines to find)</p></item>
-        <item><p><gui>Big</gui> (30 x 16 board tiles and 99 mines to find)</p></item>
-        <item><p><gui>Custom</gui> (custom number of tiles and mines)</p></item>
+        <item><p>8 x 8 board  with 10 mines</p></item>
+        <item><p>16 x 16 board with 40 mines to find</p></item>
+        <item><p>30 x 16 board with 99 mines</p></item>
+        <item><p>Custom board</p>
+
+
+   <note><p>For the <gui>Custom</gui> size, you have to define the <gui>Horizontal</gui>
+  and the <gui>Vertical</gui> numbers of tiles, and the number of mines</p></note>
+
+
+       </item>
       </list>
     </item>
   </steps>
-
-  <p>For the <gui>Custom</gui> size, you have to define the <gui>Horizontal</gui> 
-  and the <gui>Vertical</gui> numbers of tiles, and the number of mines</p>
 
 </page>
