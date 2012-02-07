@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-01-23 14:28+0100\n"
+"POT-Creation-Date: 2012-02-07 03:22+0000\n"
+"PO-Revision-Date: 2012-02-07 12:06+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
-#| msgid "translator-credits"
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
@@ -29,7 +28,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:4(media)
-#| msgid "@@image: 'figures/logo.png'; md5=5a979e829d14ad935a9f3e81318a5a36"
 msgctxt "_"
 msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
 msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
@@ -39,7 +37,6 @@ msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:17(media)
-#| msgid "@@image: 'figures/logo32.png'; md5=aef7085887ecce229ad39e3f43268a8b"
 msgctxt "_"
 msgid ""
 "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
@@ -47,13 +44,11 @@ msgstr ""
 "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 
 #: C/index.page:6(info/title)
-#| msgid "GNOME Mines"
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Minas"
 
 #: C/index.page:7(info/title)
-#| msgid "GNOME Mines"
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Minas"
@@ -69,19 +64,29 @@ msgid ""
 msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media>Minas"
 
-#: C/index.page:20(section/title)
+#: C/index.page:18(page/p)
+msgid ""
+"<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to "
+"locate all the mines hidden under tiles on a square board. You'll need some "
+"reflection and some luck to find all of them without causing an explosion."
+msgstr ""
+"<app>Gnomine</app> es un clon del Buscaminas. El objetivo del juego es "
+"encontrar todas las minas ocultas en el tablero. Necesitará pensar y un poco "
+"de suerte para encontrarlas todas sin provocar una explosión."
+
+#: C/index.page:24(section/title)
 msgid "Game Play"
 msgstr "Juego"
 
-#: C/index.page:23(section/title)
+#: C/index.page:27(section/title)
 msgid "Useful tips"
 msgstr "Consejos útiles"
 
-#: C/index.page:26(section/title)
+#: C/index.page:30(section/title)
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: C/index.page:29(section/title)
+#: C/index.page:33(section/title)
 msgid "Get Involved"
 msgstr "Involucrarse"
 
@@ -90,8 +95,6 @@ msgstr "Involucrarse"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:148(imagedata)
-#| msgid ""
-#| "@@image: 'figures/main-window.png'; md5=5dfbe2739a705720dfa65c57f8733c73"
 msgctxt "_"
 msgid ""
 "external ref='figures/main-window.png' md5='5dfbe2739a705720dfa65c57f8733c73'"
@@ -103,8 +106,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:166(imagedata)
-#| msgid ""
-#| "@@image: 'figures/statusbar.png'; md5=56058dd84675ab2929aeaf7120c17769"
 msgctxt "_"
 msgid ""
 "external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
@@ -126,8 +127,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:279(imagedata)
-#| msgid ""
-#| "@@image: 'figures/preferences.png'; md5=5ade6be994bf6c770d1ccf8b7174fb12"
 msgctxt "_"
 msgid ""
 "external ref='figures/preferences.png' md5='5ade6be994bf6c770d1ccf8b7174fb12'"
@@ -139,9 +138,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:301(imagedata)
-#| msgid ""
-#| "@@image: 'figures/imnotsureflagscheckbox.png'; "
-#| "md5=db506a024f14ef930ca39e3396654ebb"
 msgctxt "_"
 msgid ""
 "external ref='figures/imnotsureflagscheckbox.png' "
@@ -165,8 +161,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:373(imagedata)
-#| msgid ""
-#| "@@image: 'figures/highscores.png'; md5=aebe3a869b53c4064d85028cf575196a"
 msgctxt "_"
 msgid ""
 "external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
@@ -178,8 +172,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:434(imagedata)
-#| msgid ""
-#| "@@image: 'figures/easy-hints-1.png'; md5=7a143c1e5b747aa7f767bbca7d27641d"
 msgctxt "_"
 msgid ""
 "external ref='figures/easy-hints-1.png' "
@@ -193,8 +185,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:448(imagedata)
-#| msgid ""
-#| "@@image: 'figures/easy-hints-2.png'; md5=cb8a832723a98e136ec1a9d75279dec6"
 msgctxt "_"
 msgid ""
 "external ref='figures/easy-hints-2.png' "
@@ -208,8 +198,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:461(imagedata)
-#| msgid ""
-#| "@@image: 'figures/easy-hints-3.png'; md5=7320c5e278121ccc3d0e3fb4cf612719"
 msgctxt "_"
 msgid ""
 "external ref='figures/easy-hints-3.png' "
@@ -223,8 +211,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:500(imagedata)
-#| msgid ""
-#| "@@image: 'figures/hard-hints-1.png'; md5=dca8a8e9ff99fedcb66f5b37f0206ad6"
 msgctxt "_"
 msgid ""
 "external ref='figures/hard-hints-1.png' "
@@ -238,8 +224,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:513(imagedata)
-#| msgid ""
-#| "@@image: 'figures/hard-hints-2.png'; md5=30c8a1dc6c9b07de9e9b1309340f436f"
 msgctxt "_"
 msgid ""
 "external ref='figures/hard-hints-2.png' "
@@ -253,8 +237,6 @@ msgstr ""
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/gnomine.xml:544(imagedata)
-#| msgid ""
-#| "@@image: 'figures/hard-hints-3.png'; md5=9565ae7c8e01868ecaddb1e75b223f2f"
 msgctxt "_"
 msgid ""
 "external ref='figures/hard-hints-3.png' "
@@ -398,10 +380,6 @@ msgstr ""
 "DAÑOS."
 
 #: C/gnomine.xml:37(legalnotice/para) C/legal.xml:37(legalnotice/para)
-#| msgid ""
-#| "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
-#| "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
-#| "UNDERSTANDING THAT: <placeholder-1/>"
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
@@ -1118,17 +1096,6 @@ msgstr ""
 "   "
 
 #: C/gnomine.xml:622(sect1/para)
-#| msgid ""
-#| "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
-#| "General Public License</ulink></citetitle> is included as an appendix to "
-#| "the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy "
-#| "of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General "
-#| "Public License</ulink></citetitle> from the Free Software Foundation by "
-#| "visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</"
-#| "ulink> or by writing to <address> Free Software Foundation, Inc. "
-#| "<street>59 Temple Place</street> - Suite 330 <city>Boston</city>, "
-#| "<state>MA</state><postcode>02111-1307</postcode><country>USA</country></"
-#| "address>"
 msgid ""
 "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
 "General Public License</ulink></citetitle> is included as an appendix to the "
@@ -1155,12 +1122,6 @@ msgid "program is licensed"
 msgstr "programa está licenciado"
 
 #: C/legal.xml:2(legalnotice/para)
-#| msgid ""
-#| "This document is dual-licensed. You may either distribute and/or modify "
-#| "it under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
-#| "General Public License</ulink>, which the <link linkend=\"license"
-#| "\">program is licensed</link> under, or you can distribute it under the "
-#| "terms of the GNU Free Documentation License. A copy of this follows."
 msgid ""
 "This document is dual-licensed. You may either distribute and/or modify it "
 "under the terms of the <_:ulink-1/>, which the <_:link-2/> under, or you can "
@@ -1177,13 +1138,6 @@ msgid "link"
 msgstr "enlace"
 
 #: C/legal.xml:11(legalnotice/para)
-#| msgid ""
-#| "Permission is granted to copy, distribute and/or modify this document "
-#| "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
-#| "or any later version published by the Free Software Foundation with no "
-#| "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#| "can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl"
-#| "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
