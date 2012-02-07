@@ -180,7 +180,7 @@ public class GnoMine : Gtk.Application
         button_small.clicked.connect (small_size_clicked_cb);
 
         label = new Gtk.Label (null);
-        label.set_markup ("<span fgcolor='#0000ff'><span size='x-large' weight='ultrabold'>8 x 8</span>\n" + _("Mines") + ": <b>10</b></span>");
+        label.set_markup (make_minefield_description ("#0000ff", 8, 8, 10));
         label.set_justify (Gtk.Justification.CENTER);
         button_small.add (label);
 
@@ -189,7 +189,7 @@ public class GnoMine : Gtk.Application
         button_medium.clicked.connect (medium_size_clicked_cb);
 
         label = new Gtk.Label (null);
-        label.set_markup ("<span fgcolor='#00a000'><span size='x-large' weight='ultrabold'>16 x 16</span>\n" + _("Mines") + ": <b>40</b></span>");
+        label.set_markup (make_minefield_description ("#00a000", 16, 16, 40));
         label.set_justify (Gtk.Justification.CENTER);
         button_medium.add (label);
 
@@ -198,7 +198,7 @@ public class GnoMine : Gtk.Application
         button_large.clicked.connect (large_size_clicked_cb);
 
         label = new Gtk.Label (null);
-        label.set_markup ("<span fgcolor='#ff0000'><span size='x-large' weight='ultrabold'>30 x 16</span>\n" + _("Mines") + ": <b>99</b></span>");
+        label.set_markup (make_minefield_description ("#ff0000", 30, 16, 99));
         label.set_justify (Gtk.Justification.CENTER);
         button_large.add (label);
 
@@ -273,6 +273,13 @@ public class GnoMine : Gtk.Application
         custom_game_screen.show_all ();
         custom_game_screen.hide ();
         view_box.pack_start (custom_game_screen, true, false);
+    }
+    
+    private string make_minefield_description (string color, int width, int height, int n_mines)
+    {
+        var size_label = "%d × %d".printf (width, height);
+        var mines_label = ngettext ("<b>%d</d> mine", "<b>%d</b> mines", n_mines).printf (n_mines);
+        return "<span fgcolor='%s'><span size='x-large' weight='ultrabold'>%s</span>\n%s</span>".printf (color, size_label, mines_label);
     }
 
     private const Gtk.ActionEntry actions[] =
