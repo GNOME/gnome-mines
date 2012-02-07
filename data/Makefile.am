@@ -1,5 +1,8 @@
 SUBDIRS = icons
 
+uidir = $(datadir)/gnomine
+ui_DATA = gnomine.ui
+
 gsettings_in_file = org.gnome.gnomine.gschema.xml.in
 gsettings_SCHEMAS = $(gsettings_in_file:.xml.in=.xml)
 @INTLTOOL_XML_NOMERGE_RULE@
@@ -17,7 +20,9 @@ desktop_in_files = gnomine.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
-EXTRA_DIST = $(gsettings_in_file) \
+EXTRA_DIST = \
+             $(ui_DATA) \
+             $(gsettings_in_file) \
              $(desktop_in_files) \
              $(man_MANS) \
              $(pixmap_DATA)

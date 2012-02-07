@@ -35,12 +35,27 @@ public class GnoMine : Gtk.Application
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
     private GnomeGamesSupport.Clock clock;
+    private SimpleAction pause;
+    private SimpleAction hint;
     private Gtk.Action hint_action;
     private GnomeGamesSupport.FullscreenAction fullscreen_action;
     private GnomeGamesSupport.PauseAction pause_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
     private bool is_new_game_screen;
+
+    private const GLib.ActionEntry[] action_entries =
+    {
+        { "new-game",      new_game_cb                                            },
+        { "hint",          hint_cb                                                },
+        { "pause",         toggle_pause_cb                                        },
+        { "fullscreen",    fullscreen_cb                                          },
+        { "scores",        scores_cb                                              },
+        { "preferences",   preferences_cb                                         },
+        { "quit",          quit_cb                                                },
+        { "help",          help_cb                                                },
+        { "about",         about_cb                                               }
+    };
 
     private const GnomeGamesSupport.ScoresCategory scorecats[] =
     {
@@ -55,6 +70,13 @@ public class GnoMine : Gtk.Application
     public GnoMine ()
     {
         Object (application_id: "org.gnome.gnomine", flags: ApplicationFlags.FLAGS_NONE);
+    }
+
+    protected override void startup ()
+    {
+        base.startup ();
+
+        Environment.set_application_name (_("Mines"));
 
         settings = new Settings ("org.gnome.gnomine");
 
@@ -62,7 +84,24 @@ public class GnoMine : Gtk.Application
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
-        window = new Gtk.Window (Gtk.WindowType.TOPLEVEL);
+        add_action_entries (action_entries, this);
+        hint = lookup_action ("hint") as SimpleAction;
+        hint.set_enabled (false);
+        pause = lookup_action ("pause") as SimpleAction;
+        pause.set_enabled (false);
+
+        var builder = new Gtk.Builder ();
+        try
+        {
+            builder.add_from_file (Path.build_filename (DATA_DIRECTORY, "gnomine.ui"));
+        }
+        catch (Error e)
+        {
+            error ("Unable to build menus: %s", e.message);
+        }
+        set_app_menu (builder.get_object ("gnomine-menu") as MenuModel);
+
+        window = new Gtk.ApplicationWindow (this);
         window.title = _("Mines");
 
         GnomeGamesSupport.settings_bind_window_state ("/org/gnome/gnomine/", window);
@@ -89,6 +128,7 @@ public class GnoMine : Gtk.Application
         }
         hint_action = action_group.get_action ("Hint");
         hint_action.is_important = true;
+        hint_action.set_sensitive (false);
 
         action_group.get_action ("NewGame").is_important = true;
 
@@ -96,13 +136,11 @@ public class GnoMine : Gtk.Application
         action_group.add_action_with_accel (fullscreen_action, null);
 
         pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
+        pause_action.set_sensitive (false);
         pause_action.state_changed.connect (pause_cb);
         action_group.add_action_with_accel (pause_action, null);
 
         window.add_accel_group (ui_manager.get_accel_group ());
-        var menubar = (Gtk.MenuBar) ui_manager.get_widget ("/MainMenu");
-        menubar.show ();
-        main_vbox.pack_start (menubar, false, true, 0);
 
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         status_box.show ();
@@ -284,39 +322,12 @@ public class GnoMine : Gtk.Application
 
     private const Gtk.ActionEntry actions[] =
     {
-        {"GameMenu", null, N_("_Game")},
-        {"SettingsMenu", null, N_("_Settings")},
-        {"HelpMenu", null, N_("_Help")},
         {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, N_("Start a new game"), new_game_cb},
-        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb},
-        {"Scores", GnomeGamesSupport.STOCK_SCORES, null, null, null, scores_cb},
-        {"Quit", Gtk.Stock.QUIT, null, null, null, quit_game_cb},
-        {"Preferences", Gtk.Stock.PREFERENCES, null, null, null, preferences_cb},
-        {"Contents", GnomeGamesSupport.STOCK_CONTENTS, null, null, null, help_cb},
-        {"About", Gtk.Stock.ABOUT, null, null, null, about_cb}
+        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb}
     };
 
     private const string ui_description =
         "<ui>" +
-        "    <menubar name='MainMenu'>" +
-        "        <menu action='GameMenu'>" +
-        "            <menuitem action='NewGame'/>" +
-        "            <menuitem action='Hint'/>" +
-        "            <menuitem action='PauseGame'/>" +
-        "            <separator/>" +
-        "            <menuitem action='Scores'/>" +
-        "            <separator/>" +
-        "            <menuitem action='Quit'/>" +
-        "        </menu>" +
-        "        <menu action='SettingsMenu'>" +
-        "            <menuitem action='Fullscreen'/>" +
-        "            <menuitem action='Preferences'/>" +
-        "        </menu>" +
-        "        <menu action='HelpMenu'>" +
-        "            <menuitem action='Contents'/>" +
-        "            <menuitem action='About'/>" +
-        "        </menu>" +
-        "    </menubar>" +
         "    <toolbar name='Toolbar'>" +
         "        <toolitem action='NewGame'/>" +
         "        <toolitem action='Hint'/>" +
@@ -367,7 +378,7 @@ public class GnoMine : Gtk.Application
         return false;
     }
 
-    private void quit_game_cb ()
+    private void quit_cb ()
     {
         window.destroy ();
     }
@@ -424,6 +435,11 @@ public class GnoMine : Gtk.Application
         }
     }
 
+    private void fullscreen_cb ()
+    {
+        fullscreen_action.set_is_fullscreen (!fullscreen_action.get_is_fullscreen ());
+    }
+
     private void scores_cb ()
     {
         show_scores (0, false);
@@ -465,7 +481,9 @@ public class GnoMine : Gtk.Application
         clock.reset ();
         set_face_image (smile_face_image);
 
+        hint.set_enabled (false);
         hint_action.set_sensitive (false);
+        pause.set_enabled (false);
         pause_action.set_sensitive (false);
 
         minefield_view.paused = false;
@@ -525,7 +543,9 @@ public class GnoMine : Gtk.Application
 
         update_flag_label ();
 
+        hint.set_enabled (true);
         hint_action.set_sensitive (true);
+        pause.set_enabled (true);
         pause_action.set_sensitive (true);
 
         minefield_view.paused = false;
@@ -550,17 +570,24 @@ public class GnoMine : Gtk.Application
             show_new_game_screen ();
     }
 
-    private void pause_cb (Gtk.Action action)
+    private void toggle_pause_cb ()
+    {
+        pause_action.set_is_paused (!pause_action.get_is_paused ());
+    }
+
+    private void pause_cb ()
     {
         if (pause_action.get_is_paused ())
         {
             minefield_view.paused = true;
+            hint.set_enabled (false);
             hint_action.set_sensitive (false);
             clock.stop ();
         }
         else
         {
             minefield_view.paused = false;
+            hint.set_enabled (true);
             hint_action.set_sensitive (true);
             clock.start ();
         }
@@ -575,7 +602,9 @@ public class GnoMine : Gtk.Application
     private void explode_cb (Minefield minefield)
     {
         set_face_image (sad_face_image);
+        hint.set_enabled (false);
         hint_action.set_sensitive (false);
+        pause.set_enabled (false);
         pause_action.set_sensitive (false);
         clock.stop ();
     }
@@ -839,15 +868,7 @@ public class GnoMine : Gtk.Application
             return Posix.EXIT_FAILURE;
         }
 
-        Environment.set_application_name (_("Mines"));
-
         var app = new GnoMine ();
-        app.start ();
-
-        var result = app.run ();
-
-        Settings.sync ();
-
-        return result;
+        return app.run ();
     }
 }
