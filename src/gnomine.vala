@@ -316,7 +316,7 @@ public class GnoMine : Gtk.Application
     private string make_minefield_description (string color, int width, int height, int n_mines)
     {
         var size_label = "%d × %d".printf (width, height);
-        var mines_label = ngettext ("<b>%d</d> mine", "<b>%d</b> mines", n_mines).printf (n_mines);
+        var mines_label = ngettext ("<b>%d</b> mine", "<b>%d</b> mines", n_mines).printf (n_mines);
         return "<span fgcolor='%s'><span size='x-large' weight='ultrabold'>%s</span>\n%s</span>".printf (color, size_label, mines_label);
     }
 
