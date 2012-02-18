@@ -1,12 +1,12 @@
 # Florian Purucker <florian@purucker.net>, 2007.
-# Mario Blättermann <mario.blaettermann@t-online.de>, 2008.
+# Mario Blättermann <mario.blaettermann@t-online.de>, 2008, 2012.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Mines Manual 2.9\n"
+"Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-22 20:08+0000\n"
-"PO-Revision-Date: 2012-02-05 20:41+0100\n"
+"POT-Creation-Date: 2012-02-07 03:22+0000\n"
+"PO-Revision-Date: 2012-02-18 21:42+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -60,19 +60,30 @@ msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">GNOME Minen-Logo</"
 "media>GNOME Minen"
 
-#: C/index.page:20(section/title)
+#: C/index.page:18(page/p)
+msgid ""
+"<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to "
+"locate all the mines hidden under tiles on a square board. You'll need some "
+"reflection and some luck to find all of them without causing an explosion."
+msgstr ""
+"<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist es, "
+"die unter den Feldern eines quadratischen Spielfelds verborgenen Minen "
+"aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen zu "
+"finden, ohne eine Explosion zu verursachen."
+
+#: C/index.page:24(section/title)
 msgid "Game Play"
 msgstr "Spielverlauf"
 
-#: C/index.page:23(section/title)
+#: C/index.page:27(section/title)
 msgid "Useful tips"
 msgstr "Nützliche Tipps"
 
-#: C/index.page:26(section/title)
+#: C/index.page:30(section/title)
 msgid "Advanced"
 msgstr "Fortgeschritten"
 
-#: C/index.page:29(section/title)
+#: C/index.page:33(section/title)
 msgid "Get Involved"
 msgstr "Mithelfen"
 
@@ -1122,74 +1133,3 @@ msgstr ""
 "und/oder modifiziert werden. Eine Kopie der GFDL finden Sie unter diesem <_:"
 "ulink-1/> oder in der mit diesem Handbuch gelieferten Datei COPYING-DOCS."
 
-#~ msgid ""
-#~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
-#~ msgstr ""
-#~ "@@image: 'figures/main-window.png'; md5=1fd69244e4ab3103a9116874e724451c"
-
-#~ msgid ""
-#~ "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-#~ msgstr ""
-#~ "@@image: 'figures/statusbar.png'; md5=7a9c9ac54b504415c8db14902c02265a"
-
-#~ msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-#~ msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-
-#~ msgid ""
-#~ "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
-#~ msgstr ""
-#~ "@@image: 'figures/preferences.png'; md5=72fe9c519b2823399311bc9f03a4942a"
-
-#~ msgid ""
-#~ "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
-#~ msgstr ""
-#~ "@@image: 'figures/highscores.png'; md5=a2f20f1928471adce71746fa1e9f521a"
-
-#~ msgid ""
-#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-#~ msgstr ""
-#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-
-#~ msgid ""
-#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-#~ msgstr ""
-#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-
-#~ msgid ""
-#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-#~ msgstr ""
-#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-
-#~ msgid ""
-#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-#~ msgstr ""
-#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-
-#~ msgid ""
-#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-#~ msgstr ""
-#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-
-#~ msgid "2006"
-#~ msgstr "2006"
-
-#~ msgid "Callum McKenzie"
-#~ msgstr "Callum McKenzie"
-
-#~ msgid "Callum"
-#~ msgstr "Callum"
-
-#~ msgid "McKenzie"
-#~ msgstr "McKenzie"
-
-#~ msgid "callum@spooky-possum.org"
-#~ msgstr "callum@spooky-possum.org"
-
-#~ msgid "Mines Manual V2.9"
-#~ msgstr "Minen-Handbuch V2.9"
-
-#~ msgid "January 2006"
-#~ msgstr "Januar 2006"
-
-#~ msgid "GNOME Mines is a variation of the popular logic puzzle minesweeper."
-#~ msgstr "Minen ist eine Ausgabe des beliebten Logikpuzzles Minesweeper."
