@@ -10,24 +10,31 @@
       <email>tiffany.antopolski@gmail.com</email>
       <years>2012</years>
     </credit>
+    
+    <credit type="author">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2012</years>
+    </credit>
 
-    <desc></desc>
+    <desc>What are flags and how to use them</desc>
   </info>
 
   <title>Flags</title>
 
-  <comment>
-    <cite date="2012-02-06" href="mailto:tiffany.antopolski@gmail.com">Tiffany Antopolski</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
-
-  <p>Short introductory text...</p>
-
-  <steps>
-    <item><p>First step...</p></item>
-    <item><p>Second step...</p></item>
-    <item><p>Third step...</p></item>
-  </steps>
-
+  <p>Flags are used to mark tiles you suspect to hide a mine. Putting a flag 
+  on a tile also prevents you of clicking on it and it explods.</p>
+  <p>To put a flag on a tile, right-click on this tile, and a red flag will 
+  appear.</p> 
+  <p>The number of flags available is equal to the number of mines you have find
+  .</p>
+  
+  <p>If you're unsure if a tile hides a mine or not you can use the type of 
+  flags "I'm not sure", these flags are blue. These flags are not enabled by 
+  default. To enable it, choose <guiseq><gui>Settings</gui><gui>Preferences</gui>
+  </guiseq>, and tick <gui>Use "I'm not sure" flags</gui>.
+  </p>
+  <p>To put a "I'm not sure" flag on a tile, right-click twice on this tile, and
+   a red flag will appear.</p>
+  
 </page>
