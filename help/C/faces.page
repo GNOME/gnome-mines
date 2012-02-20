@@ -1,8 +1,8 @@
 <page xmlns="http://projectmallard.org/1.0/"
       type="topic"
-      id="face">
+      id="faces">
   <info>
-    <link type="guide" xref="index#play"/>
+    <link type="guide" xref="index#tips"/>
     <revision version="0.1" date="2011-12-11" status="stub"/>
 
     <credit type="author copyright">
@@ -14,12 +14,6 @@
   </info>
 
   <title>The meaning of the faces</title>
-
-  <comment>
-    <cite date="2011-12-11" href="mailto:baptistem@gnome.org">Baptiste Mille-Mathias</cite>
-    <p>This assumes the reader knows how to.... By the end of this page,
-    the reader will be able to....</p>
-  </comment>
 
   <table shade="rows">
     <tr>

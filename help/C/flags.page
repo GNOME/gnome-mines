@@ -1,8 +1,8 @@
 <page xmlns="http://projectmallard.org/1.0/"
-      type="topic" style="task"
+      type="topic" style="question"
       id="flags">
   <info>
-    <link type="guide" xref="index#tips"/>
+    <link type="guide" xref="index#play"/>
     <revision version="0.1" date="2012-02-06" status="stub"/>
 
     <credit type="author copyright">
@@ -10,7 +10,7 @@
       <email>tiffany.antopolski@gmail.com</email>
       <years>2012</years>
     </credit>
-    
+
     <credit type="author">
       <name>Baptiste Mille-Mathias</name>
       <email>baptistem@gnome.org</email>
@@ -22,19 +22,31 @@
 
   <title>Flags</title>
 
-  <p>Flags are used to mark tiles you suspect to hide a mine. Putting a flag 
-  on a tile also prevents you of clicking on it and it explods.</p>
-  <p>To put a flag on a tile, right-click on this tile, and a red flag will 
-  appear.</p> 
-  <p>The number of flags available is equal to the number of mines you have find
-  .</p>
-  
-  <p>If you're unsure if a tile hides a mine or not you can use the type of 
-  flags "I'm not sure", these flags are blue. These flags are not enabled by 
-  default. To enable it, choose <guiseq><gui>Settings</gui><gui>Preferences</gui>
-  </guiseq>, and tick <gui>Use "I'm not sure" flags</gui>.
-  </p>
-  <p>To put a "I'm not sure" flag on a tile, right-click twice on this tile, and
+  <section id="flags-usage">
+   <title>What are flags?</title>
+
+   <p>Flags are used to mark tiles you suspect to hide a mine. Putting a flag 
+   on a tile also prevents you of clicking on it and it explods.</p>
+  </section>
+
+  <section id="flags-put">
+   <title>Put a flag on a tile.</title>
+   <p>To put a flag on a tile, right-click on this tile, and a red flag will 
+   appear.</p> 
+   <p>The number of flags available is equal to the number of remaining mines 
+   you have find.</p>
+  </section>
+
+  <section id="flags-blue">
+   <title>Use of "I'm not sure" flag.</title>
+
+   <p>If you're unsure if a tile hides a mine or not, you can use the type of 
+   flags "I'm not sure", these flags are blue. These flags are not enabled by 
+   default. To enable it, choose <guiseq><gui>Settings</gui><gui>Preferences</gui>
+   </guiseq>, and tick <gui>Use "I'm not sure" flags</gui>.
+   </p>
+   <p>To put a "I'm not sure" flag on a tile, right-click twice on this tile, and
    a red flag will appear.</p>
+  </section>
   
 </page>
