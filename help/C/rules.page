@@ -34,8 +34,10 @@
     </list>
    </item>
    <item>
-    <p>Do again the previous step until you find all the mines remaining on the board.</p>
+    <p>Do again the previous step until you find all the mines remaining on the board.</p> 
    </item>
   </steps>
+
+  <p>If you were fast enough to complete the game, you'll be invited to add your name in the <link xref="high-scores">high scores</link> list.</p>
 
 </page>

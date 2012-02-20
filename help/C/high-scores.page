@@ -1,0 +1,26 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic" style="task"
+      id="high-scores">
+  <info>
+    <revision version="0.1" date="2012-02-20" status="stub"/>
+    <link type="guide" xref="index#tips"/>
+
+    <credit type="author copyright">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2012</years>
+    </credit>
+
+    <desc>The list of best performers.</desc>
+  </info>
+
+  <title>High Score</title>
+
+  <p>The high scores lists the ten best <app>gnomine</app> players, and how 
+  long it took them to find all the mines.</p>
+
+  <p>To see the name of the people who perform the best scores, choose <guiseq>
+  <gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the <gui>Easy</gui> 
+  size by default.</p>
+
+</page>
