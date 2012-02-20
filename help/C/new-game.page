@@ -9,7 +9,7 @@
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
       <email>baptistem@gnome.org</email>
-      <years>2011</years>
+      <years>2012</years>
     </credit>
 
   </info>
@@ -17,7 +17,12 @@
   <title>Start a new game</title>
 
   <p>To start a new game, click <guiseq><gui>Game</gui><gui>New</gui>
-    </guiseq>. If you have a game on-going, it will be lost.</p>
-  <p>Each time you start a new game, you will be asked to <link xref="difficulty">select your preferred difficulty level</link>.</p>
+    </guiseq>, then <link xref="difficulty">select your preferred difficulty 
+    level</link>.
+  </p>
+  <p>If you were playing already a game, a popup message will ask if you want
+  to <gui>Start new game</gui> or <gui>Keep current Game</gui>, if you choose 
+  the former, your current game will be lost.
+  </p>
 
 </page>
