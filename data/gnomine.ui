@@ -23,6 +23,10 @@
         <attribute name="label" translatable="yes">_Scores</attribute>
         <attribute name="action">app.scores</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">_Preferences</attribute>
+        <attribute name="action">app.preferences</attribute>
+      </item>
     </section>
     <section>
       <item>
