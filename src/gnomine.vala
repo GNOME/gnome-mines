@@ -462,11 +462,11 @@ public class GnoMine : Gtk.Application
         {
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Cancel current game?"));
             dialog.add_buttons (_("Start New Game"), Gtk.ResponseType.ACCEPT,
-                                _("Keep Current Game"), Gtk.ResponseType.REJECT,
+                                _("Keep Current Game"), Gtk.ResponseType.DELETE_EVENT,
                                 null);
             var result = dialog.run ();
             dialog.destroy ();
-            if (result == Gtk.ResponseType.REJECT)
+            if (result == Gtk.ResponseType.DELETE_EVENT)
                 return;
         }
 
