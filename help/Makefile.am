@@ -20,6 +20,6 @@ HELP_FILES = \
 	gnomine.xml \
 	legal.xml
 
-HELP_LINGUAS = ca cs da de el en_GB es eu fr it oc sl sr sr@latin sv zh_CN
+HELP_LINGUAS = ca cs da de el en_GB es eu fr gl it oc sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk
