@@ -6,6 +6,7 @@ Icon=gnomine
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Game;LogicGame;
+_Keywords=minesweeper;
 X-GNOME-Bugzilla-Bugzilla=GNOME
 X-GNOME-Bugzilla-Product=gnome-games
 X-GNOME-Bugzilla-Component=BugBuddyBugs
