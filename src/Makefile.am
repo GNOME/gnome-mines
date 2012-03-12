@@ -12,7 +12,8 @@ gnomine_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/gnomine\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GTK_CFLAGS)
+	$(GTK_CFLAGS) \
+	$(RSVG_CFLAGS)
 
 gnomine_VALAFLAGS = \
 	--pkg posix \
@@ -24,12 +25,8 @@ gnomine_VALAFLAGS = \
 
 gnomine_LDADD = \
 	$(top_builddir)/libgames-support/libgames-support.la \
-	$(GTK_LIBS)
-
-if HAVE_RSVG
-gnomine_CFLAGS += $(RSVG_CFLAGS)
-gnomine_LDADD += $(RSVG_LIBS)
-endif
+	$(GTK_LIBS) \
+	$(RSVG_LIBS)
 
 install-exec-hook:
 	-if test "$(setgid)" = "true"; then \
