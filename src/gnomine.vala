@@ -245,7 +245,7 @@ public class GnoMine : Gtk.Application
         button_custom.clicked.connect (show_custom_game_screen);
 
         label = new Gtk.Label (null);
-        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", "_Custom") + "</span>");
+        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", "Custom") + "</span>");
         label.set_justify (Gtk.Justification.CENTER);
         button_custom.add (label);
 
@@ -303,7 +303,7 @@ public class GnoMine : Gtk.Application
         button_back.clicked.connect (show_new_game_screen);
         hbox.pack_start (button_back, true, true);
 
-        button_custom = new Gtk.Button.with_mnemonic ("_Play Game");
+        button_custom = new Gtk.Button.with_mnemonic (_("_Play Game"));
         button_custom.set_image (new Gtk.Image.from_stock (Gtk.Stock.GO_FORWARD, Gtk.IconSize.BUTTON));
         button_custom.clicked.connect (custom_size_clicked_cb);
         hbox.pack_start (button_custom, true, true);
@@ -385,7 +385,7 @@ public class GnoMine : Gtk.Application
 
     private void update_flag_label ()
     {
-        flag_label.set_text ("Flags: %u/%u".printf (minefield.n_flags, minefield.n_mines));
+        flag_label.set_text (_("Flags: %u/%u").printf (minefield.n_flags, minefield.n_mines));
     }
 
     /* Show the high scores dialog - creating it if necessary. If pos is
