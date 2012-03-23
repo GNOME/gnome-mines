@@ -1,127 +1,268 @@
 # Serbian translation of gnome-games
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2009.
-#
 # This file is distributed under the same license as the gnome-games package.
-#
 # Translated on 2009-11-07 by Branko Kokanović <branko.kokanovic@gmail.com>
-#
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"POT-Creation-Date: 2009-11-07 13:35+0000\n"
-"PO-Revision-Date: 2009-11-07 14:41+0100\n"
-"Last-Translator: Branko Kokanović <branko.kokanovic@gmail.com>\n"
+"POT-Creation-Date: 2012-02-07 03:22+0000\n"
+"PO-Revision-Date: 2012-03-23 12:03+0200\n"
+"Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n%"
-"10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Project-Style: gnome\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:148(None)
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+#| msgid "translator-credits"
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Branko Kokanović <branko.kokanovic@gmail.com>\n"
+"\n"
+"Prevod.org — prevod na srpski jezik"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4(media)
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:17(media)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 msgstr ""
-"@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:166(None)
-msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-msgstr "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+#: C/index.page:6(info/title)
+#| msgid "GNOME Mines"
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "Mine"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:187(None)
-msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
+#: C/index.page:7(info/title)
+#| msgid "GNOME Mines"
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "Mine"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:279(None)
+#: C/index.page:13(license/p)
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Istovetno deljenje zajedničkog stvaralaštva 3.0"
+
+#: C/index.page:17(page/title)
 msgid ""
-"@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
+"media>GNOME Mines"
 msgstr ""
-"@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+"<media type=\"image\" src=\"figures/logo32.png\">Znak Gnomovih "
+"Mina</media>Gnomove Mine"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:301(None)
+#: C/index.page:18(page/p)
 msgid ""
-"@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=58be021ed1cf90add08931282ec19bad"
+"<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to "
+"locate all the mines hidden under tiles on a square board. You'll need some "
+"reflection and some luck to find all of them without causing an explosion."
 msgstr ""
-"@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=58be021ed1cf90add08931282ec19bad"
+"<app>Gnomine</app> je klon igre Čistač Mina. Cilj igre je da pronađete sve "
+"mine skrivene ispod pločica na kvadratnoj tabli. Potrebno je malo razmišljanja "
+"i sreće za njihovo pronalaženje bez izazivanja eksplozije."
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:322(None)
-msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
-msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
+#: C/index.page:24(section/title)
+msgid "Game Play"
+msgstr "Partija"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:373(None)
-msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
-msgstr ""
-"@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+#: C/index.page:27(section/title)
+msgid "Useful tips"
+msgstr "Korisni saveti"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:434(None)
+#: C/index.page:30(section/title)
+msgid "Advanced"
+msgstr "Napredno"
+
+#: C/index.page:33(section/title)
+msgid "Get Involved"
+msgstr "Priključite se"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:148(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+"external ref='figures/main-window.png' md5='5dfbe2739a705720dfa65c57f8733c73'"
 msgstr ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+"external ref='figures/main-window.png' "
+"md5='5dfbe2739a705720dfa65c57f8733c73'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:448(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:166(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+"external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
 msgstr ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+"external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:461(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:187(imagedata)
+msgctxt "_"
+msgid "external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
+msgstr "external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:279(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+"external ref='figures/preferences.png' md5='5ade6be994bf6c770d1ccf8b7174fb12'"
 msgstr ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+"external ref='figures/preferences.png' "
+"md5='5ade6be994bf6c770d1ccf8b7174fb12'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:500(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:301(imagedata)
+#| msgid ""
+#| "@@image: 'figures/imnotsureflagscheckbox.png'; "
+#| "md5=58be021ed1cf90add08931282ec19bad"
+msgctxt "_"
 msgid ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+"external ref='figures/imnotsureflagscheckbox.png' "
+"md5='db506a024f14ef930ca39e3396654ebb'"
 msgstr ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+"external ref='figures/imnotsureflagscheckbox.png' "
+"md5='db506a024f14ef930ca39e3396654ebb'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:513(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:322(imagedata)
+#| msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
+msgctxt "_"
+msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+msgstr "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:373(imagedata)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+"external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
 msgstr ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+"external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:544(None)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:434(imagedata)
+#| msgid ""
+#| "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+msgctxt "_"
 msgid ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+"external ref='figures/easy-hints-1.png' "
+"md5='7a143c1e5b747aa7f767bbca7d27641d'"
 msgstr ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+"external ref='figures/easy-hints-1.png' "
+"md5='7a143c1e5b747aa7f767bbca7d27641d'"
 
-#: C/gnomine.xml:27(title)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:448(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/easy-hints-2.png' "
+"md5='cb8a832723a98e136ec1a9d75279dec6'"
+msgstr ""
+"external ref='figures/easy-hints-2.png' "
+"md5='cb8a832723a98e136ec1a9d75279dec6'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:461(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/easy-hints-3.png' "
+"md5='7320c5e278121ccc3d0e3fb4cf612719'"
+msgstr ""
+"external ref='figures/easy-hints-3.png' "
+"md5='7320c5e278121ccc3d0e3fb4cf612719'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:500(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/hard-hints-1.png' "
+"md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
+msgstr ""
+"external ref='figures/hard-hints-1.png' "
+"md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:513(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/hard-hints-2.png' "
+"md5='30c8a1dc6c9b07de9e9b1309340f436f'"
+msgstr ""
+"external ref='figures/hard-hints-2.png' "
+"md5='30c8a1dc6c9b07de9e9b1309340f436f'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/gnomine.xml:544(imagedata)
+msgctxt "_"
+msgid ""
+"external ref='figures/hard-hints-3.png' "
+"md5='9565ae7c8e01868ecaddb1e75b223f2f'"
+msgstr ""
+"external ref='figures/hard-hints-3.png' "
+"md5='9565ae7c8e01868ecaddb1e75b223f2f'"
+
+#: C/gnomine.xml:27(articleinfo/title)
 msgid "<application>Mines</application> Manual"
 msgstr "Uputstvo za <application>Mine</application>"
 
-#: C/gnomine.xml:29(para)
+#: C/gnomine.xml:29(abstract/para)
 msgid ""
 "Mines is GNOME's take on the popular logic puzzle minesweeper, which "
 "includes avoiding mines while receiving clues for the location of the mines."
@@ -129,19 +270,16 @@ msgstr ""
 "Mine su Gnomov pokušaj pravljenja popularne logičke slagalice koja se sastoji "
 "od izbegavanja mina i dobijanja putokaza za položaje mina."
 
-#: C/gnomine.xml:36(year)
-msgid "2006"
-msgstr "2006"
+#: C/gnomine.xml:35(articleinfo/copyright)
+msgid "<year>2006</year> <holder>Callum McKenzie</holder>"
+msgstr "<year>2006</year> <holder>Kalam Mek Kenzi</holder>"
 
-#: C/gnomine.xml:37(holder)
-msgid "Callum McKenzie"
-msgstr "Callum McKenzie"
-
-#: C/gnomine.xml:52(publishername) C/gnomine.xml:92(para)
+#: C/gnomine.xml:52(publisher/publishername)
+#: C/gnomine.xml:92(revdescription/para)
 msgid "GNOME Documentation Project"
 msgstr "Projekat Gnomove dokumentacije"
 
-#: C/gnomine.xml:2(para)
+#: C/gnomine.xml:2(legalnotice/para)
 msgid ""
 "This document is dual-licensed. You may either distribute and/or modify it "
 "under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
@@ -155,7 +293,7 @@ msgstr ""
 "licenciran</link>, ili ga možete širiti pod uslovima Gnu-ove Slobodne "
 "Dokumentacione Dozvole (GSDD). Umnožak sledi ispod."
 
-#: C/gnomine.xml:11(para)
+#: C/gnomine.xml:11(legalnotice/para)
 msgid ""
 "Permission is granted to copy, distribute and/or modify this document under "
 "the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
@@ -171,7 +309,7 @@ msgstr ""
 "možete pronaći na ovoj <ulink type=\"help\" url=\"ghelp:fdl\">adresi</ulink> "
 "ili u datoteci COPYING-DOCS koja je priložena uz ovo uputstvo."
 
-#: C/gnomine.xml:21(para)
+#: C/gnomine.xml:21(legalnotice/para) C/legal.xml:21(legalnotice/para)
 msgid ""
 "This manual is part of a collection of GNOME manuals distributed under the "
 "GFDL. If you want to distribute this manual separately from the collection, "
@@ -183,7 +321,7 @@ msgstr ""
 "dodavanjem primerka licence dokumentu, kako je opisano u odeljku 6 same "
 "licence."
 
-#: C/gnomine.xml:28(para)
+#: C/gnomine.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
 msgid ""
 "Many of the names used by companies to distinguish their products and "
 "services are claimed as trademarks. Where those names appear in any GNOME "
@@ -197,7 +335,7 @@ msgstr ""
 "dokumentacionog projekta imaju saznanja o tome, tada su nazivi ispisani "
 "velikim slovima ili sa velikim početnim slovima."
 
-#: C/gnomine.xml:44(para)
+#: C/gnomine.xml:44(listitem/para) C/legal.xml:44(listitem/para)
 msgid ""
 "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
 "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
@@ -224,7 +362,7 @@ msgstr ""
 "ILI NJEGOVE IZMENJENE VERZIJE NIJE DOZVOLJENA OSIM POD USLOVIMA OVOG OGRANIČENJA "
 "JAMSTVA."
 
-#: C/gnomine.xml:64(para)
+#: C/gnomine.xml:64(listitem/para) C/legal.xml:64(listitem/para)
 msgid ""
 "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
 "NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
@@ -247,48 +385,48 @@ msgstr ""
 "GUBITKE NASTALE USLED KORIŠĆENJA DOKUMENTA I NJEGOVIH IZMENJENIH VERZIJA ČAK I "
 "AKO JE OŠTEĆENA STRANA BILA OBAVEŠTENA O MOGUĆNOSTI NASTANKA TE ŠTETE."
 
-#: C/gnomine.xml:37(para)
+#: C/gnomine.xml:37(legalnotice/para) C/legal.xml:37(legalnotice/para)
+#| msgid ""
+#| "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
+#| "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
+#| "UNDERSTANDING THAT: <placeholder-1/>"
 msgid ""
 "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
 "OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
+"<_:orderedlist-1/>"
 msgstr ""
 "OVAJ DOKUMENT I NJEGOVE IZMENJENE VERZIJE SU DOSTUPNE POD USLOVIMA GNU-OVE "
-"SLOBODNE DOKUMENTACIONE DOZVOLE UZ DODATNU SAGLASNOST DA: <placeholder-1/>"
+"SLOBODNE DOKUMENTACIONE DOZVOLE UZ DODATNU SAGLASNOST DA: <_:orderedlist-1/>"
 
-#: C/gnomine.xml:62(firstname)
-msgid "Callum"
-msgstr "Callum"
+#: C/gnomine.xml:61(authorgroup/author)
+msgid ""
+"<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
+"<address> <email>callum@spooky-possum.org</email> </address> </affiliation>"
+msgstr ""
+"<firstname>Kalum</firstname> <surname>Mek Kenzi</surname> <affiliation> "
+"<address> <email>callum@spooky-possum.org</email> </address> </affiliation>"
 
-#: C/gnomine.xml:63(surname)
-msgid "McKenzie"
-msgstr "McKenzie"
-
-#: C/gnomine.xml:65(email)
-msgid "callum@spooky-possum.org"
-msgstr "callum@spooky-possum.org"
-
-#: C/gnomine.xml:86(revnumber)
-msgid "Mines Manual V2.9"
-msgstr "Uputstvo za Mine v2.9"
-
-#: C/gnomine.xml:87(date)
-msgid "January 2006"
-msgstr "Januar 2006."
-
-#: C/gnomine.xml:89(para)
+#: C/gnomine.xml:89(revdescription/para)
 msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
 msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
 
-#: C/gnomine.xml:97(releaseinfo)
+#: C/gnomine.xml:85(revhistory/revision)
+msgid ""
+"<revnumber>Mines Manual V2.9</revnumber> <date>January 2006</date> <_:"
+"revdescription-1/>"
+msgstr ""
+"<revnumber>Uputstvo za Mine v2.9</revnumber> <date>Januar 2006</date> "
+"<_:revdescription-1/>"
+
+#: C/gnomine.xml:97(articleinfo/releaseinfo)
 msgid "This manual describes version 2.14 of Mines."
 msgstr "Ovo uputstvo je napisano za Mine 2.14."
 
-#: C/gnomine.xml:104(title)
+#: C/gnomine.xml:104(legalnotice/title)
 msgid "Feedback"
 msgstr "Primedbe"
 
-#: C/gnomine.xml:105(para)
+#: C/gnomine.xml:105(legalnotice/para)
 msgid ""
 "To report a bug or make a suggestion regarding the <application>Mines</"
 "application> application or this manual, follow the directions in the <ulink "
@@ -299,15 +437,15 @@ msgstr ""
 "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">Gnomovoj strani "
 "za primedbe</ulink>."
 
-#: C/gnomine.xml:114(primary)
-msgid "GNOME Mines"
-msgstr "Mine"
+#: C/gnomine.xml:113(article/indexterm)
+msgid "<primary>GNOME Mines</primary>"
+msgstr "<primary>Gnomove Mine</primary>"
 
-#: C/gnomine.xml:121(title)
+#: C/gnomine.xml:121(sect1/title)
 msgid "Introduction"
 msgstr "Uvod"
 
-#: C/gnomine.xml:123(para)
+#: C/gnomine.xml:123(sect1/para)
 msgid ""
 "<application><application>Mines</application></application> is a puzzle game "
 "where you locate mines floating in an ocean using only your brain and a "
@@ -317,7 +455,7 @@ msgstr ""
 "kojoj pronalazite mine koje plutaju po moru koristeći samo pamet i malo "
 "sreće."
 
-#: C/gnomine.xml:129(para)
+#: C/gnomine.xml:129(sect1/para)
 msgid ""
 "You start the game with a grid of covered squares and no idea what is in "
 "them. Clicking on a square reveals what is in it: either empty ocean or a "
@@ -340,11 +478,11 @@ msgstr ""
 "zaključujete koji kvadrati imaju mine, a koji ne. Pobedili ste onda kada "
 "otkrijete sve kvadrate bez mina i označite sve kvadrate sa minama."
 
-#: C/gnomine.xml:144(title)
+#: C/gnomine.xml:144(figure/title)
 msgid "The stages of the game: the start, playing, losing, and winning."
 msgstr "Delovi igre: početak, igra, gubitak i pobeda."
 
-#: C/gnomine.xml:152(para)
+#: C/gnomine.xml:152(sect1/para)
 msgid ""
 "To mark a square as having a mine you right-click on it and a flag is placed "
 "there. If you click on a square with a number and you have placed precisely "
@@ -360,11 +498,11 @@ msgstr ""
 "eksplodira i igra je gotova. Klik na kvadrate koji nemaju mine u blizini "
 "(tj. prazni kvadrati) će automatski otvarati ostale okolne kvadrate."
 
-#: C/gnomine.xml:163(title)
+#: C/gnomine.xml:163(figure/title)
 msgid "Important information."
 msgstr "Važan podatak."
 
-#: C/gnomine.xml:170(para)
+#: C/gnomine.xml:170(sect1/para)
 msgid ""
 "You are being timed. To be good at this game you have to work both quickly "
 "and correctly. Once you have found all the mines and revealed all the un-"
@@ -375,7 +513,7 @@ msgstr ""
 "precizni. Tek kada nađete sve mine i otkrijete sva polja bez mina, vreme "
 "staje. Vaš rezultat je vreme koje ste potrošili; što kraće, to bolje."
 
-#: C/gnomine.xml:177(para)
+#: C/gnomine.xml:177(sect1/para)
 msgid ""
 "The time you have taken is displayed on the bottom right of the window. "
 "Beside it, on the left, is a count of the number of mines you have cleared "
@@ -385,15 +523,15 @@ msgstr ""
 "njega, sa leve strane, je broj mina koje ste otkrili i ukupan broj mina "
 "sakrivenih na tabli."
 
-#: C/gnomine.xml:184(title)
+#: C/gnomine.xml:184(figure/title)
 msgid "The yellow face shows you how well you are going."
 msgstr "Žuto lice vam pokazuje kako vam ide."
 
-#: C/gnomine.xml:197(title)
+#: C/gnomine.xml:197(sect1/title)
 msgid "The Details"
 msgstr "Detalji"
 
-#: C/gnomine.xml:199(para)
+#: C/gnomine.xml:199(sect1/para)
 msgid ""
 "This section provides information on the controls and the important menu "
 "items. If you need help figuring where the mines are, see the <link linkend="
@@ -403,11 +541,11 @@ msgstr ""
 "treba pomoć o pronalaženju mina, pogledajte <link linkend=\"strategy\">odeljak "
 "za strategiju</link>."
 
-#: C/gnomine.xml:206(title)
+#: C/gnomine.xml:206(sect2/title)
 msgid "The Goal"
 msgstr "Cilj"
 
-#: C/gnomine.xml:208(para)
+#: C/gnomine.xml:208(sect2/para)
 msgid ""
 "Starting from an ocean of squares with unknown contents you must mark all "
 "the squares with mines and reveal all the clear squares. You don't actually "
@@ -421,7 +559,7 @@ msgstr ""
 "mnogo lakše. Kada otkrijete sve kvadrate koji nemaju mina, igra će sama "
 "označiti ostale minirane kvadrate."
 
-#: C/gnomine.xml:217(para)
+#: C/gnomine.xml:217(sect2/para)
 msgid ""
 "If you left click on a mine, or auto-clear a square with a mine in it you "
 "lose. To help prevent accidents, you aren't allowed to auto-clear around a "
@@ -433,31 +571,31 @@ msgstr ""
 "očistite kvadrat osim ako se broj okolnih označenih mina ne slaže sa brojem "
 "u kvadratu koji klikćete."
 
-#: C/gnomine.xml:227(title)
+#: C/gnomine.xml:227(sect2/title)
 msgid "Using the Mouse"
 msgstr "Korišćenje miša"
 
-#: C/gnomine.xml:234(entry)
+#: C/gnomine.xml:234(row/entry)
 msgid "Action"
 msgstr "Akcija"
 
-#: C/gnomine.xml:234(entry)
+#: C/gnomine.xml:234(row/entry)
 msgid "Result"
 msgstr "Rezultat"
 
-#: C/gnomine.xml:239(entry)
+#: C/gnomine.xml:239(row/entry)
 msgid "Left click on an un-revealed square."
 msgstr "Levi klik na neotkriveno polje."
 
-#: C/gnomine.xml:240(entry)
+#: C/gnomine.xml:240(row/entry)
 msgid "Reveals the contents of that square. For better or for worse."
 msgstr "Otkriva sadržaj polja. Pukovnik ili pokojnik."
 
-#: C/gnomine.xml:244(entry)
+#: C/gnomine.xml:244(row/entry)
 msgid "Left click in a revealed square."
 msgstr "Levi klik na otkriveno polje."
 
-#: C/gnomine.xml:245(entry)
+#: C/gnomine.xml:245(row/entry)
 msgid ""
 "Auto-clear. Reveals the unmarked squares around the clicked square, but only "
 "if enough squares have been marked to match the number in the square."
@@ -465,29 +603,29 @@ msgstr ""
 "Automatsko čišćenje. Otkriva neobeležena polja oko kliknutog polja, ali samo "
 "ako se broj obeleženih okolnih polja slaže sa brojem na kliknutom polju."
 
-#: C/gnomine.xml:251(entry)
+#: C/gnomine.xml:251(row/entry)
 msgid "Right click on an un-revealed square."
 msgstr "Desni klik na neotkriveno polje."
 
-#: C/gnomine.xml:252(entry)
+#: C/gnomine.xml:252(row/entry)
 msgid ""
 "Marks the square as a mine. If it is already marked, the mark will be "
 "removed."
 msgstr ""
 "Obeležava polje kao minu. Ako je polje već označeno, oznaka će biti uklonjena."
 
-#: C/gnomine.xml:259(para)
+#: C/gnomine.xml:259(tip/para)
 msgid ""
 "If you are used to the more traditional mouse controls, don't worry, they "
 "still work."
 msgstr ""
 "Ako ste navikli na tradicionalnije kontrole mišem, ne brinite, i one rade."
 
-#: C/gnomine.xml:264(title)
+#: C/gnomine.xml:264(sect2/title)
 msgid "Game Size and Difficulty"
 msgstr "Veličina table i težina"
 
-#: C/gnomine.xml:266(para)
+#: C/gnomine.xml:266(sect2/para)
 msgid ""
 "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
 "guimenuitem></menuchoice> from the menu you can change the size of the "
@@ -500,11 +638,11 @@ msgstr ""
 "igre očito traju duže i zahtevaju bolju koncentraciju. Manje igre su mnogo "
 "brže. U ponudi su mala, srednja, velika i proizvoljna veličina table."
 
-#: C/gnomine.xml:276(title)
+#: C/gnomine.xml:276(figure/title)
 msgid "The preferences dialog."
 msgstr "Dijalog postavki."
 
-#: C/gnomine.xml:283(para)
+#: C/gnomine.xml:283(sect2/para)
 msgid ""
 "On the right hand side of the dialog there are three parameters for "
 "controlling the custom size. Horizontal and Vertical are the width and "
@@ -519,11 +657,11 @@ msgstr ""
 "je ovaj broj prevelik ili premali, igra postaje veoma laka. Broj mina je "
 "ograničen na vrednost malo manju od ukupnog broja kvadrata."
 
-#: C/gnomine.xml:296(title)
+#: C/gnomine.xml:296(sect2/title)
 msgid "\"I'm not sure\" Flags"
 msgstr "„Nisam siguran“ oznake"
 
-#: C/gnomine.xml:305(para)
+#: C/gnomine.xml:305(sect2/para)
 msgid ""
 "There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
 "flags. If you enable this then, when right-clicking on a square, it cycles "
@@ -543,15 +681,15 @@ msgstr ""
 "morate da imate tačan broj crvenih zastavica da biste čistili polja oko "
 "kvadrata sa brojem."
 
-#: C/gnomine.xml:319(title)
+#: C/gnomine.xml:319(figure/title)
 msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 msgstr "Poredak zastavica kada su uključene „Nisam siguran“ zastavice."
 
-#: C/gnomine.xml:329(title)
+#: C/gnomine.xml:329(sect2/title)
 msgid "Use \"Too many flags\" warning"
 msgstr "Upozorenje za previše zastavica"
 
-#: C/gnomine.xml:331(para)
+#: C/gnomine.xml:331(sect2/para)
 msgid ""
 "The other check-box in the properties dialog is entitled Use \"Too many flags"
 "\" warning. This feature will show you a warning when you have placed too "
@@ -563,11 +701,11 @@ msgstr ""
 "Podrazumevano je isključeno, jer pruža previše pomoći da bi moglo da se "
 "okarakteriše kao „varanje“."
 
-#: C/gnomine.xml:342(title)
+#: C/gnomine.xml:342(sect2/title)
 msgid "Hints"
 msgstr "Saveti"
 
-#: C/gnomine.xml:344(para)
+#: C/gnomine.xml:344(sect2/para)
 msgid ""
 "If you get stuck - it is reasonably common to end up with two options that "
 "you can't logically resolve - then you can either guess, or ask for a hint. "
@@ -583,11 +721,11 @@ msgstr ""
 "Odabir polja za otkrivanje je slučajan, ali bi trebalo da bude od pomoći. "
 "Postoji i kazna od 10 dodatih sekundi svaki put kada iskoristite savet."
 
-#: C/gnomine.xml:358(title)
+#: C/gnomine.xml:358(sect2/title)
 msgid "High Scores"
 msgstr "Najbolji rezultati"
 
-#: C/gnomine.xml:360(para)
+#: C/gnomine.xml:360(sect2/para)
 msgid ""
 "If your score is in the top ten you will be shown the list of top scores and "
 "have an opportunity to change the name recorded in the high score table. You "
@@ -602,11 +740,11 @@ msgstr ""
 "Padajuća lista na vrhu dijaloga vam omogućava da pogledate rezultate i za "
 "ostale veličine table."
 
-#: C/gnomine.xml:370(title)
+#: C/gnomine.xml:370(figure/title)
 msgid "The high scores dialog."
 msgstr "Dijalog najboljih rezultata."
 
-#: C/gnomine.xml:378(para)
+#: C/gnomine.xml:378(tip/para)
 msgid ""
 "The high score for the custom size is usually meaningless. Any other player "
 "can make the game size smaller and get a better time. If you only ever play "
@@ -618,11 +756,11 @@ msgstr ""
 "proizvoljnu veličinu, onda će vam ovi rezultati reći kako napredujete. To je "
 "jedini razlog što se ona beleži."
 
-#: C/gnomine.xml:386(title)
+#: C/gnomine.xml:386(sect2/title)
 msgid "Window Size"
 msgstr "Veličina prozora"
 
-#: C/gnomine.xml:388(para)
+#: C/gnomine.xml:388(sect2/para)
 msgid ""
 "Resizing the window makes the squares bigger or smaller to suit. If you want "
 "to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
@@ -634,11 +772,11 @@ msgstr ""
 "guimenuitem> u meniju <guimenu>Podešavanja</guimenu>. Takođe možete koristiti "
 "i taster <keycap>F11</keycap> da uključite i isključite režim celog ekrana."
 
-#: C/gnomine.xml:397(title)
+#: C/gnomine.xml:397(sect2/title)
 msgid "Pausing the Game"
 msgstr "Pauziranje igre"
 
-#: C/gnomine.xml:399(para)
+#: C/gnomine.xml:399(sect2/para)
 msgid ""
 "The game can be paused automatically when you start using another window, or "
 "paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
@@ -652,11 +790,11 @@ msgstr ""
 "da razmišljate dok je vreme zaustavljeno. Da biste ponovo počeli da igrate, "
 "pritisnete dugme sa oznakom „Pritisnite za nastavak“."
 
-#: C/gnomine.xml:413(title)
+#: C/gnomine.xml:413(sect1/title)
 msgid "Strategy"
 msgstr "Strategija"
 
-#: C/gnomine.xml:415(para)
+#: C/gnomine.xml:415(sect1/para)
 msgid ""
 "The first half of this section explains the very basics of deducing where "
 "mines are. If you are familiar with how to play the game skip down to the "
@@ -666,11 +804,11 @@ msgstr ""
 "je poznato kako da igrate igru, preskočite do pododeljka <link linkend="
 "\"advanced\">Napredne pozicije</link>."
 
-#: C/gnomine.xml:422(title)
+#: C/gnomine.xml:422(sect2/title)
 msgid "The Basics"
 msgstr "Osnove"
 
-#: C/gnomine.xml:423(para)
+#: C/gnomine.xml:423(sect2/para)
 msgid ""
 "These are a few basic situations which should be incredibly obvious, but if "
 "you're struggling with how to play the game, they should be useful. The "
@@ -682,11 +820,11 @@ msgstr ""
 "kada imate pojedinačni neotkriveni kvadrat, a na okolnim kvadratima je 1. "
 "Taj neotkriveni kvadrat je mina."
 
-#: C/gnomine.xml:432(title)
+#: C/gnomine.xml:432(figure/title)
 msgid "The simplest case."
 msgstr "Najprostiji slučaj."
 
-#: C/gnomine.xml:438(para)
+#: C/gnomine.xml:438(sect2/para)
 msgid ""
 "The next simplest case is where you have two covered squares adjacent to "
 "each other and both squares on one side are marked with a 2. If they have no "
@@ -696,11 +834,11 @@ msgstr ""
 "drugog, a oba susedna kvadrata sa iste strane su označena sa 2. Ako nema "
 "drugih neotkrivenih susednih kvadrata, onda su oba ova kvadrata mine."
 
-#: C/gnomine.xml:446(title)
+#: C/gnomine.xml:446(figure/title)
 msgid "The two mine case."
 msgstr "Slučaj sa dve mine."
 
-#: C/gnomine.xml:452(para)
+#: C/gnomine.xml:452(sect2/para)
 msgid ""
 "Finally, when there are three uncovered squares in a row and the clear "
 "square beside the middle one is a 3 (once again this square should have no "
@@ -710,11 +848,11 @@ msgstr ""
 "sredini je označen sa 3 (i ovaj put, ovaj kvadrat ne treba da ima ostalih "
 "neotkrivenih suseda), onda su sva tri neotkrivena kvadrata mine."
 
-#: C/gnomine.xml:459(title)
+#: C/gnomine.xml:459(figure/title)
 msgid "The three mine case."
 msgstr "Slučaj sa tri mine."
 
-#: C/gnomine.xml:465(para)
+#: C/gnomine.xml:465(sect2/para)
 msgid ""
 "These are the simplest cases. Other permutations on these simple situations "
 "are possible, for example the three squares in the previous example could be "
@@ -724,7 +862,7 @@ msgstr ""
 "moguće, na primer, tri kvadrata u prethodnom primeru su mogla da budu u "
 "obliku latiničnog slova L."
 
-#: C/gnomine.xml:470(para)
+#: C/gnomine.xml:470(sect2/para)
 msgid ""
 "Simple analysis will solve most of the puzzle, but not all. Before going on "
 "to the next sections, where we give you more advanced hints, you should play "
@@ -734,11 +872,11 @@ msgstr ""
 "odete na sledeći odeljak, gde vam dajemo naprednije savete, trebalo bi da "
 "malo igrate i vidite da li možete sami da dođete do njih."
 
-#: C/gnomine.xml:479(title)
+#: C/gnomine.xml:479(sect2/title)
 msgid "Advanced Situations"
 msgstr "Napredne situacije"
 
-#: C/gnomine.xml:481(para)
+#: C/gnomine.xml:481(sect2/para)
 msgid ""
 "These are some more complicated situations. They are a bit of a step up from "
 "the last section, so we hope you took our advice and played for a bit first."
@@ -746,7 +884,7 @@ msgstr ""
 "Ovo su malo komplikovanije pozicije. Prilično su nego one u prethodnom "
 "odeljku, tako da se nadamo da ste nas poslušali i prvo malo igrali."
 
-#: C/gnomine.xml:487(para)
+#: C/gnomine.xml:487(sect2/para)
 msgid ""
 "In the example below the mines are to the left of the ones. We figure this "
 "out by a process of elimination. If the square to the left of the 2 was a "
@@ -762,11 +900,11 @@ msgstr ""
 "Ako eliminišemo kvadrat u sredini da može da bude mina, onda su jedine "
 "mogućnosti za minu preostala dva kvadrata."
 
-#: C/gnomine.xml:498(title)
+#: C/gnomine.xml:498(figure/title)
 msgid "A not-so-obvious pattern."
 msgstr "Ne baš očigledan obrazac"
 
-#: C/gnomine.xml:504(para)
+#: C/gnomine.xml:504(sect2/para)
 msgid ""
 "This situation can be disguised, for example consider the figure below. It "
 "is the same situation, but the extra mined square on the right has increased "
@@ -776,11 +914,11 @@ msgstr ""
 "ista ta pozicija, ali je dodatni kvadrat sa minom sa desne strane povećao "
 "sve brojeve za jedan."
 
-#: C/gnomine.xml:511(title)
+#: C/gnomine.xml:511(figure/title)
 msgid "The extra mine disguises a copy of the previous example."
 msgstr "Dodatna mina prikriva prethodni primer."
 
-#: C/gnomine.xml:517(para)
+#: C/gnomine.xml:517(sect2/para)
 msgid ""
 "Now we're going to try a complicated example. It illustrates two points. The "
 "first is that even if you aren't sure which squares are mined, restricting "
@@ -792,7 +930,7 @@ msgstr ""
 "izbor. Druga je da je poznavanje koji kvadrati nemaju mine jednako dobro kao "
 "poznavanje onih koji ih imaju."
 
-#: C/gnomine.xml:525(para)
+#: C/gnomine.xml:525(sect2/para)
 msgid ""
 "Assume that, in the figure below, we start off knowing that the top left "
 "square is mined and so the two squares marked 2 on the left only require one "
@@ -820,11 +958,11 @@ msgstr ""
 "moraju da imaju mine. Ne samo da nam to govori gde su mine oko kvadrata sa "
 "četvorkom, nego nam govori i koji kvadrat ispod kvadrata sa dvojkom ima minu!"
 
-#: C/gnomine.xml:542(title)
+#: C/gnomine.xml:542(figure/title)
 msgid "As tricky as it gets."
 msgstr "Ne može teže od ovog."
 
-#: C/gnomine.xml:549(para)
+#: C/gnomine.xml:549(sect2/para)
 msgid ""
 "This sort of situation is tricky. In all the other examples you can learn to "
 "look for patterns and avoid thinking hard. Situations like the one in the "
@@ -838,11 +976,11 @@ msgstr ""
 "igrati na drugim delovima table nadajući se da ćete očistiti te kvadrate sa "
 "druge strane."
 
-#: C/gnomine.xml:561(title)
+#: C/gnomine.xml:561(sect2/title)
 msgid "Tips"
 msgstr "Saveti"
 
-#: C/gnomine.xml:563(para)
+#: C/gnomine.xml:563(sect2/para)
 msgid ""
 "Remember, the edge of the board is just the same as a large cleared area "
 "(but without the numbers). Often working at the edge of the board is the "
@@ -851,7 +989,7 @@ msgstr ""
 "Zapamtite, ivica table je isto što i velika čista površina (ali bez "
 "brojeva). Često je kretanje sa kraja table najlakši put napred."
 
-#: C/gnomine.xml:569(para)
+#: C/gnomine.xml:569(sect2/para)
 msgid ""
 "Sometimes you end up in a situation where there is no way to deduce what the "
 "configuration is. In these cases you either have to guess or use the hint "
@@ -865,7 +1003,7 @@ msgstr ""
 "menuchoice>). Nekad pozicija nije 50%/50% i umesto da iskoristite savet, "
 "možete ići na sreću pogađajući povoljniji ishod."
 
-#: C/gnomine.xml:578(para)
+#: C/gnomine.xml:578(sect2/para)
 msgid ""
 "One final hint: remember the counter on the bottom left of the window that "
 "tells you how many mines you have left? Often, near the end of the game, "
@@ -877,11 +1015,11 @@ msgstr ""
 "može značiti da zaključite koja su moguća mesta gde mine mogu da budu. Kako "
 "vam tačno ovo može značiti se ostavlja vama da smislite."
 
-#: C/gnomine.xml:590(title)
+#: C/gnomine.xml:590(sect1/title)
 msgid "Authors"
 msgstr "Autori"
 
-#: C/gnomine.xml:591(para)
+#: C/gnomine.xml:591(sect1/para)
 msgid ""
 "<application>GNOME Mines</application> was written by Pista "
 "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
@@ -900,11 +1038,11 @@ msgstr ""
 "<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumenta</"
 "ulink>."
 
-#: C/gnomine.xml:607(title)
+#: C/gnomine.xml:607(sect1/title)
 msgid "License"
 msgstr "Licenca"
 
-#: C/gnomine.xml:608(para)
+#: C/gnomine.xml:608(sect1/para)
 msgid ""
 "This program is free software; you can redistribute it and/or modify it "
 "under the terms of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl"
@@ -918,7 +1056,7 @@ msgstr ""
 "Zadužbina za Slobodni Softver (FSF); bilo verzije 2 te Licence, bilo (po "
 "vašem nahođenju) bilo koje novije verzije."
 
-#: C/gnomine.xml:616(para)
+#: C/gnomine.xml:616(sect1/para)
 msgid ""
 "This program is distributed in the hope that it will be useful, but WITHOUT "
 "ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
@@ -931,7 +1069,35 @@ msgstr ""
 "ODREĐENOJ NAMENI.  Vidite <citetitle>GNU Opštu Javnu Licencu</citetitle> za "
 "više detalja."
 
-#: C/gnomine.xml:622(para)
+#: C/gnomine.xml:629(para/address)
+#, no-wrap
+msgid ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+msgstr ""
+"\n"
+"    Free Software Foundation, Inc.\n"
+"    <street>59 Temple Place</street> - Suite 330\n"
+"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
+"    <country>USA</country>\n"
+"   "
+
+#: C/gnomine.xml:622(sect1/para)
+#| msgid ""
+#| "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
+#| "General Public License</ulink></citetitle> is included as an appendix to "
+#| "the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy "
+#| "of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General "
+#| "Public License</ulink></citetitle> from the Free Software Foundation by "
+#| "visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</"
+#| "ulink> or by writing to <address> Free Software Foundation, Inc. "
+#| "<street>59 Temple Place</street> - Suite 330 <city>Boston</city>, "
+#| "<state>MA</state><postcode>02111-1307</postcode><country>USA</country></"
+#| "address>"
 msgid ""
 "A copy of the <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
 "General Public License</ulink></citetitle> is included as an appendix to the "
@@ -939,23 +1105,134 @@ msgid ""
 "<citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU General Public "
 "License</ulink></citetitle> from the Free Software Foundation by visiting "
 "<ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by "
-"writing to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-"street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-"1307</postcode><country>USA</country></address>"
+"writing to <_:address-1/>"
 msgstr ""
-"Primerak <citetitle>GNU Opšte Javne Licence</citetitle> je uključen u dodatku "
-"<citetitle>Gnomovog korisničkog vodiča</citetitle>. Takođe možete nabaviti "
-"primerak <citetitle>GNU Opšte Javne Licence</citetitle> od Zadužbine za "
-"Slobodni Softver odlazeći na <ulink url=\"http://www.fsf.org\" type=\"http"
-"\">njihovu veb adresu</ulink> ili pišući na <address> Free Software "
-"Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</"
-"city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</"
-"country></address>"
+"Primerak <citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU Opšte Javne "
+"Licence</ulink></citetitle> je uključen u dodatku <citetitle>Gnomovog "
+"korisničkog vodiča</citetitle>. Takođe možete nabaviti primerak "
+"<citetitle><ulink type=\"help\" url=\"gnome-help:gpl\">GNU Opšte Javne "
+"Licence</ulink></citetitle> od Zadužbine Slobodnog Softvera posetivši <ulink "
+"type=\"http\" url=\"http://www.fsf.org\">njihov veb sajt</ulink> ili pišući na "
+"<_:address-1/>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
-#: C/gnomine.xml:0(None)
-msgid "translator-credits"
+#: C/legal.xml:5(para/ulink)
+msgid "GNU General Public License"
+msgstr "Gnuova opšta javna licenca"
+
+#: C/legal.xml:6(para/link)
+msgid "program is licensed"
+msgstr "program je izdat"
+
+#: C/legal.xml:2(legalnotice/para)
+#| msgid ""
+#| "This document is dual-licensed. You may either distribute and/or modify "
+#| "it under the terms of the <ulink type=\"help\" url=\"gnome-help:gpl\">GNU "
+#| "General Public License</ulink>, which the <link linkend=\"license"
+#| "\">program is licensed</link> under, or you can distribute it under the "
+#| "terms of the GNU Free Documentation License. A copy of this follows."
+msgid ""
+"This document is dual-licensed. You may either distribute and/or modify it "
+"under the terms of the <_:ulink-1/>, which the <_:link-2/> under, or you can "
+"distribute it under the terms of the GNU Free Documentation License. A copy "
+"of this follows."
 msgstr ""
-"Branko Kokanović <branko.kokanovic@gmail.com>\n"
-"\n"
-"Prevod.org — prevod na srpski jezik"
+"Ovaj dokument ima dvojno licenciranje. Možete ga raspodeljivati i/ili menjati "
+"pod uslovima <_:ulink-1/>, koji je <_:link-2/> pod, ili ga možete "
+"raspodeljivati pod odredbama Gnuove licence slobodne dokumentacije. Njezin "
+"primerak se nalazi ispod."
+
+#: C/legal.xml:18(para/ulink)
+msgid "link"
+msgstr "veza"
+
+#: C/legal.xml:11(legalnotice/para)
+#| msgid ""
+#| "Permission is granted to copy, distribute and/or modify this document "
+#| "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
+#| "or any later version published by the Free Software Foundation with no "
+#| "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
+#| "can find a copy of the GFDL at this <ulink type=\"help\" url=\"ghelp:fdl"
+#| "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+msgid ""
+"Permission is granted to copy, distribute and/or modify this document under "
+"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
+"later version published by the Free Software Foundation with no Invariant "
+"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
+"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
+"with this manual."
+msgstr ""
+"Dozvoljeno je umnožavanje, raspodela, vršenje izmena ovog dokumenta pod "
+"uslovima Gnu-ove Licence Slobodne Dokumentacije (GLSD), verzije 1.1 ili bilo "
+"koje kasnije verzije bez nepromenjivih odeljaka, teksta na naslovnoj i "
+"poslednjoj strani, a koju je objavila Zadužbina Slobodnog Softvera. Primerak "
+"GLSD možete pronaći na ovoj <_:ulink-1/> ili u datoteci „COPYING-DOCS“ koja "
+"je priložena uz ovo uputstvo."
+
+#~ msgid ""
+#~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+#~ msgstr ""
+#~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+
+#~ msgid ""
+#~ "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+#~ msgstr ""
+#~ "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+
+#~ msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
+#~ msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
+
+#~ msgid ""
+#~ "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+#~ msgstr ""
+#~ "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+
+#~ msgid ""
+#~ "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+#~ msgstr ""
+#~ "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+
+#~ msgid "2006"
+#~ msgstr "2006"
+
+#~ msgid "Callum McKenzie"
+#~ msgstr "Callum McKenzie"
+
+#~ msgid "Callum"
+#~ msgstr "Callum"
+
+#~ msgid "McKenzie"
+#~ msgstr "McKenzie"
+
+#~ msgid "callum@spooky-possum.org"
+#~ msgstr "callum@spooky-possum.org"
+
+#~ msgid "Mines Manual V2.9"
+#~ msgstr "Uputstvo za Mine v2.9"
+
+#~ msgid "January 2006"
+#~ msgstr "Januar 2006."
