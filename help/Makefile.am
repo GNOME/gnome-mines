@@ -17,8 +17,21 @@ HELP_MEDIA = \
 	figures/statusbar.png
 
 HELP_FILES = \
-	gnomine.xml \
-	legal.xml
+	bug-filing.page \
+	develop.page \
+	difficulty.page \
+	documentation.page \
+	faces.page \
+	flags.page \
+	get-help.page \
+	high-scores.page \
+	index.page \
+	license.page \
+	new-game.page \
+	rules.page \
+	shortcuts.page \
+	toolbar.page \
+	translate.page
 
 HELP_LINGUAS = ca cs da de el en_GB es eu fr gl it oc pt_BR sl sr sr@latin sv zh_CN
 
