@@ -5,13 +5,23 @@ HELP_MEDIA = \
 	figures/easy-hints-1.png \
 	figures/easy-hints-2.png \
 	figures/easy-hints-3.png \
+	figures/face-cool.svg \
+	figures/face-sad.svg \
+	figures/face-smile.svg \
 	figures/faces.png \
+	figures/face-win.svg \
+	figures/face-worried.svg \
+	figures/flag-question.svg \
 	figures/flags.png \
+	figures/flag.svg \
+	figures/gnomine.png \
 	figures/hard-hints-1.png \
 	figures/hard-hints-2.png \
 	figures/hard-hints-3.png \
 	figures/highscores.png \
 	figures/imnotsureflagscheckbox.png \
+	figures/logo32.png \
+	figures/logo.png \
 	figures/main-window.png \
 	figures/preferences.png \
 	figures/statusbar.png
