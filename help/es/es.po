@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-04-12 12:08+0000\n"
-"PO-Revision-Date: 2012-04-12 17:07+0200\n"
+"POT-Creation-Date: 2012-04-20 12:34+0000\n"
+"PO-Revision-Date: 2012-04-20 17:18+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -234,7 +234,6 @@ msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #: C/difficulty.page:17(page/title)
-#| msgid "Game Size and Difficulty"
 msgid "Change the game difficulty"
 msgstr "Cambiar la dificultad del juego"
 
@@ -369,27 +368,27 @@ msgstr ""
 
 #: C/faces.page:16(page/title)
 msgid "The meaning of the faces"
-msgstr ""
+msgstr "El significado de los emoticonos"
 
 #: C/faces.page:21(td/p)
 msgid "This is a new game and you didn't clicked on any tile for the moment."
-msgstr ""
+msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
 
 #: C/faces.page:25(td/p)
 msgid "You clicked on a mine, you loose."
-msgstr ""
+msgstr "Ha pulsado sobre una mina, ha perdido."
 
 #: C/faces.page:29(td/p)
 msgid "The tile you clicked on is safe. You can continue."
-msgstr ""
+msgstr "La casilla que ha pulsado es segura. Puede continuar."
 
 #: C/faces.page:33(td/p)
 msgid "This face appears when you're clicking a on tile."
-msgstr ""
+msgstr "Este emoticono aparece cuando pulsa sobre una casilla."
 
 #: C/faces.page:37(td/p)
 msgid "You found all the mines, you win."
-msgstr ""
+msgstr "Ha encontrado todas las minas, ha ganado"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -443,6 +442,9 @@ msgid ""
 "flag on a tile prevents you from clicking on it and possibly causing an "
 "explosion, ending the game."
 msgstr ""
+"Las banderas se usan para marcar las casillas que sospecha que pueden "
+"contener una mina. Poner una bandera sobre una casilla evita que pulse en "
+"ella, causando una probable explosión que terminaría el juego."
 
 #: C/flags.page:38(section/title)
 msgid "How to place a flag on a tile"
@@ -453,7 +455,6 @@ msgid "To place a red flag on a tile:"
 msgstr "Para poner una bandera roja en una casilla:"
 
 #: C/flags.page:44(item/p)
-#| msgid "Right click on an un-revealed square."
 msgid "Right click on a blank tile."
 msgstr "Pulse con el botón derecho sobre una casilla no descubierta."
 
@@ -466,7 +467,6 @@ msgid "equal to the number of remaining mines."
 msgstr "igual al número de minas restantes."
 
 #: C/flags.page:57(section/title)
-#| msgid "\"I'm not sure\" Flags"
 msgid "Use of <em>I'm not sure</em> flag"
 msgstr "Uso de la bandera <em>No estoy seguro</em>"
 
@@ -475,28 +475,33 @@ msgid ""
 "If you're unsure if a tile hides a mine or not, you can use the blue <em>I'm "
 "not sure</em>."
 msgstr ""
+"Si no está seguro de si una casilla esconde o no una mina puede usar la "
+"bandera azul <em>no estoy seguro</em>."
 
 #: C/flags.page:65(td/p)
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
-msgstr ""
+msgstr "Para poner una bandera <em>No estoy seguro</em> en una casilla:"
 
 #: C/flags.page:67(item/p)
 msgid "Right-click twice on a blank tile."
-msgstr ""
+msgstr "Pulse dos veces con el botón derecho en una casilla vacía."
 
 #: C/flags.page:75(note/p)
 msgid ""
 "To enable these flags, click <guiseq><gui>Settings</gui><gui>Preferences</"
 "gui> </guiseq>, and tick <gui>Use <em>I'm not sure</em> flags</gui>."
 msgstr ""
+"Para activar estas banderas, pulse <guiseq><gui>Configuración</"
+"gui><gui>Preferencias</gui> </guiseq>, y marque <gui>Usar banderas <em>No "
+"estoy seguro</em></gui>."
 
 #: C/get-help.page:14(info/desc) C/get-help.page:17(page/title)
 msgid "Get help when blocked"
-msgstr ""
+msgstr "Obtener ayuda si está bloqueado"
 
 #: C/get-help.page:19(page/p)
 msgid "You can get help while playing:"
-msgstr ""
+msgstr "Puede obtener ayuda mientras juega:"
 
 #: C/get-help.page:22(item/p)
 msgid ""
@@ -505,19 +510,24 @@ msgid ""
 "seconds to the time of the game. To ask for choose <guiseq><gui> Game</"
 "gui><gui>Hint</gui></guiseq>."
 msgstr ""
+"Pistas. Si está en una situación en la que no sabe qué casillas descubrir, "
+"puede pedir una pista. Una pista descubrirá una casilla del tablero, pero "
+"añadirá 10 segundos al contador de tiempo. Para pedir una pista pulse "
+"<guiseq><gui>Juego</gui><gui>Pista</gui></guiseq>."
 
 #: C/get-help.page:28(item/p)
 msgid ""
 "\"Too many flags\" warning. When activated, this option will inform you when "
 "you set too much flag in the same area."
 msgstr ""
+"Advertencia de \"demasiadas banderas\". Cuando está activada, esta opción le "
+"avisará cuando ponga muchas banderas en la misma área."
 
 #: C/high-scores.page:14(info/desc)
 msgid "The list of best performers"
-msgstr ""
+msgstr "La lista de los mejores"
 
 #: C/high-scores.page:17(page/title)
-#| msgid "High Scores"
 msgid "High Score"
 msgstr "Puntuaciones más altas"
 
@@ -526,6 +536,8 @@ msgid ""
 "The high scores lists the ten best <app>gnomine</app> players, and how long "
 "it took them to find all the mines."
 msgstr ""
+"La lista de puntuaciones más altas muestra los 10 mejores jugadores de "
+"<app>gnomine</app>, y cuánto tiempo tardaron en encontrar todas las minas."
 
 #: C/high-scores.page:22(page/p)
 msgid ""
@@ -533,6 +545,9 @@ msgid ""
 "<gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the <gui>Easy</gui> "
 "size by default."
 msgstr ""
+"Para ver el nombre de la persona que hizo la puntuación más alta, elija "
+"<guiseq> <gui>Juego</gui><gui>Puntuación</gui></guiseq>. De manera "
+"predeterminada, mostrará el tamaño <gui>Fácil</gui>."
 
 #: C/license.page:8(info/desc)
 msgid "Legal information."
@@ -622,6 +637,9 @@ msgid ""
 "To start a new game, click <guiseq><gui>Game</gui><gui>New</gui> </guiseq>, "
 "then <link xref=\"difficulty\">select your preferred difficulty level</link>."
 msgstr ""
+"Para empezar una partida nueva, pulse <guiseq><gui>Juego</gui><gui>Nuevo</"
+"gui> </guiseq>, y <link xref=\"difficulty\">seleccione su nivel de "
+"dificultad preferido</link>."
 
 #: C/new-game.page:23(page/p)
 msgid ""
@@ -629,6 +647,9 @@ msgid ""
 "<gui>Start new game</gui> or <gui>Keep current Game</gui>, if you choose the "
 "former, your current game will be lost."
 msgstr ""
+"Si ya había iniciado una partida, aparecerá una ventana emergente "
+"preguntándole si quiere <gui>Iniciar un juego nuevo</gui> o <gui>Mantener el "
+"juego actual</gui>; si elige la primera opción, su partida actual terminará."
 
 #: C/rules.page:16(info/desc)
 msgid "The basics game's rules"
@@ -643,22 +664,28 @@ msgid ""
 "The aim of <app>gnomine</app> is to discover the mines hidden under tiles "
 "without make them explose."
 msgstr ""
+"El objetivo de <app>gnomine</app> es descubrir todas las minas ocultas bajo "
+"las casillas sin hacer que exploten."
 
 #: C/rules.page:23(page/p)
 msgid ""
 "At start, the <app>gnomine</app> board is full of tiles and you have to put "
 "flags on those you suspect to have mines."
 msgstr ""
+"Al empezar, el tablero de <app>gnomine</app> está lleno de casillas y tiene "
+"que poner banderas en las casillas en las que sospecha que hay minas."
 
 #: C/rules.page:27(item/p)
 msgid ""
 "The games begins with a game board full of tiles, the size of the board "
 "depends on the level of difficulty you choose."
 msgstr ""
+"La partida comienza con un tablero lleno de casillas; el tamaño del tablero "
+"depende del nivel de dificultad que elija."
 
 #: C/rules.page:30(item/p)
 msgid "Click on a first tile to uncover it and discover what's under:"
-msgstr ""
+msgstr "Pulse en la primera casilla para descubrirla y ver qué hay debajo:"
 
 #: C/rules.page:32(item/p)
 msgid ""
@@ -666,26 +693,34 @@ msgid ""
 "surrounding the current tile. That gives you an indication where mines are, "
 "and so where you have to put <link xref=\"flags\"/>."
 msgstr ""
+"Un número de color, que representa el número de minas en las casillas "
+"adyacentes alrededor de la casilla actual. Esto de la una pista de cuántas "
+"minas hay, y de dónde tiene que poner <link xref=\"flags\"/>."
 
 #: C/rules.page:34(item/p)
 msgid "A blank title which means there is no mine around."
-msgstr ""
+msgstr "Una casilla vacía, lo que significa que no hay minas alrededor."
 
 #: C/rules.page:35(item/p)
 msgid "A mine, in which case you lose."
-msgstr ""
+msgstr "Una mina, en cuyo caso pierde."
 
 #: C/rules.page:39(item/p)
 msgid ""
 "Do again the previous step until you find all the mines remaining on the "
 "board."
 msgstr ""
+"Repita los pasos anteriores hasta que encuentre todas las minas restantes "
+"del tablero."
 
 #: C/rules.page:43(page/p)
 msgid ""
 "If you were fast enough to complete the game, you'll be invited to add your "
 "name in the <link xref=\"high-scores\">high scores</link> list."
 msgstr ""
+"Si ha sido lo bastante rápido para completar el juego, se le invitará a "
+"añadir su nombre a la lista de <link xref=\"high-scores\">puntuaciones más "
+"altas</link>."
 
 #: C/shortcuts.page:9(credit/name)
 msgid "Brian Grohe"
@@ -763,6 +798,12 @@ msgid ""
 "xref=\"get-help\">Hint</link>, <gui><link xref=\"pause\">Pause</link></gui> "
 "and <gui> Fullscreen</gui>."
 msgstr ""
+"La barra de herramientas, situada bajo la barra de menú, le permite realizar "
+"acciones comunes con el ratón. Para usar un elemento de la barra de "
+"herramientas, simplemente púlselo. Los botones son, de izquierda a derecha "
+"<gui><link xref=\"new-game\">Juego nuevo</link></gui>, <link xref=\"get-help"
+"\">Pista</link>, <gui><link xref=\"pause\">Pausa</link></gui> y "
+"<gui>Pantalla completa</gui>."
 
 #: C/translate.page:15(credit/name)
 msgid "Michael Hill"
