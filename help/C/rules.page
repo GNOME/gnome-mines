@@ -19,12 +19,12 @@
 
   <title>Game rules</title>
 
-  <p>The aim of <app>gnomine</app> is to discover the mines hidden under tiles without make them explose.</p>
+  <p>The aim of <app>gnomine</app> is to discover the mines hidden under tiles without make them explode.</p>
   <p>At start, the <app>gnomine</app> board is full of tiles and you have to put flags on those you suspect to have mines.</p>
 
   <steps>
    <item>
-    <p>The games begins with a game board full of tiles, the size of the board depends on the level of difficulty you choose.</p>
+    <p>The game begins with a game board full of tiles, the size of the board depends on the level of difficulty you choose.</p>
    </item>
    <item>
     <p>Click on a first tile to uncover it and discover what's under:</p>
@@ -36,7 +36,7 @@
     </list>
    </item>
    <item>
-    <p>Do again the previous step until you find all the mines remaining on the board.</p> 
+    <p>Do again the previous steps until you find all the mines remaining on the board.</p> 
    </item>
   </steps>
 

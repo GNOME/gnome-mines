@@ -17,7 +17,7 @@
   <p>The toolbar, located under the menu bar, lets you perform common actions 
   with your mouse. To use a toolbar item, just click on it. The buttons, from 
   left to right, are <gui><link xref="new-game">New Game</link></gui>, <link 
-  xref="get-help">Hint</link>, <gui><link xref="pause">Pause</link></gui> and <gui>
-  Fullscreen</gui>.</p>
+  xref="get-help">Hint</link>, <gui><link xref="pause">Pause</link></gui> and
+  <gui>Fullscreen</gui>.</p>
 
 </page>
