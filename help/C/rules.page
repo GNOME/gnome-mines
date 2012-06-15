@@ -12,34 +12,53 @@
       <email>baptistem@gnome.org</email>
       <years>2011</years>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
-    <desc>The basics game's rules</desc>
+    <desc>The basics game rules</desc>
   </info>
 
 
   <title>Game rules</title>
 
-  <p>The aim of <app>gnomine</app> is to discover the mines hidden under tiles without make them explode.</p>
-  <p>At start, the <app>gnomine</app> board is full of tiles and you have to put flags on those you suspect to have mines.</p>
+  <p>The aim of <app>gnomine</app> is to clear the minefield without detonating
+  any of the mines.</p>
+
+  <p>To start off with, the board is covered in tiles; your aim is to uncover
+  all the tiles that do not have mines under them.</p>
 
   <steps>
    <item>
-    <p>The game begins with a game board full of tiles, the size of the board depends on the level of difficulty you choose.</p>
+    <p>The game begins with a game board full of tiles, the size of the board
+    depends on the level of difficulty you choose.</p>
    </item>
    <item>
-    <p>Click on a first tile to uncover it and discover what's under:</p>
+    <p>Click on any tile to uncover it and discover what is underneath:</p>
     <list>
-     <item><p>A colored number, which represent the number of mines in the adjacent tiles surrounding the current tile. 
-     That gives you an indication where mines are, and so where you have to put <link xref="flags"/>.</p></item>
-     <item><p>A blank title which means there is no mine around.</p></item>
+     <item><p>A colored number, which represent the number of mines in the
+     adjacent tiles. This gives you an indication of where mines are, and so
+     where you have to put <link xref="flags"/>.</p></item>
+     <item><p>A blank title which means there are no mines in any of the
+     adjacent tiles.</p></item>
      <item><p>A mine, in which case you lose.</p></item>
     </list>
    </item>
    <item>
-    <p>Do again the previous steps until you find all the mines remaining on the board.</p> 
+    <p>Repeat the previous steps until you have uncovered all the tiles which
+    do not have mines underneath them.</p> 
    </item>
   </steps>
 
-  <p>If you were fast enough to complete the game, you'll be invited to add your name in the <link xref="high-scores">high scores</link> list.</p>
+  <p>If you complete the game quickly enough, you will be invited to add
+  yourself to the <link xref="high-scores">high scores</link> list.</p>
+
+  <comment>
+    <cite date="2012-06-15" href="kittykat3756@gmail.com">Kat</cite>
+    <p>TODO: check that one does not keep being added to the high score list
+    every time.</p>
+  </comment>
 
 </page>
