@@ -11,12 +11,17 @@
       <email>baptistem@gnome.org</email>
       <years>2011</years>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
   </info>
 
   <title>Change the game difficulty</title>
 
-  <p>You can set the difficulty by choosing the grid size used to play <app>gnomine</app>.</p>
+  <p>You can set the difficulty by choosing the grid size used to play <app>Mines</app>.</p>
 
   <steps>
     <item><p>Click <guiseq><gui>Game</gui><gui>New</gui></guiseq>.</p></item>

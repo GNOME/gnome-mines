@@ -10,13 +10,18 @@
       <email>baptistem@gnome.org</email>
       <years>2012</years>
     </credit>
+    <credit type="editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
     <desc>The list of best performers</desc>
   </info>
 
   <title>High Score</title>
 
-  <p>The high scores lists the ten best <app>gnomine</app> players, and how 
+  <p>The high scores lists the ten best <app>Mines</app> players, and how
   long it took them to find all the mines.</p>
 
   <p>To see the name of the people who perform the best scores, choose <guiseq>
