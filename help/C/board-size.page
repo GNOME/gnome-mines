@@ -1,0 +1,43 @@
+<page xmlns="http://projectmallard.org/1.0/"
+      type="topic"
+      id="board-size">
+
+  <info>
+    <link type="guide" xref="index#tips"/>
+    <revision version="0.1" date="2011-12-05" status="stub"/>
+
+    <credit type="author copyright">
+      <name>Baptiste Mille-Mathias</name>
+      <email>baptistem@gnome.org</email>
+      <years>2011</years>
+    </credit>
+    <credit type="author copyright editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2012</years>
+    </credit>
+
+    <desc>Select an existing or custom field size</desc>
+  </info>
+
+  <title>Change the game board size</title>
+
+  <p>You can select a field size at the start of a new game.</p>
+
+  <steps>
+    <item>
+      <p>Click <gui style="button">New</gui> or <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New Game</gui></guiseq>.</p>
+    </item>
+    <item>
+      <p>Select one of the grid sizes:</p>
+      <list>
+        <item><p>a 8 × 8 board with 10 mines</p></item>
+        <item><p>a 16 × 16 board with 40 mines</p></item>
+        <item><p>a 30 × 16 board with 99 mines</p></item>
+	<item><p>a custom board, where you chose the size and the number of
+	mines</p></item>
+      </list>
+    </item>
+  </steps>
+
+</page>

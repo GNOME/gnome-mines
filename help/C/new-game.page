@@ -24,7 +24,7 @@
 
   <p>To start a new game, click the <gui style="button">New</gui> button or
   select <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New
-  Game</gui></guiseq> from the menu, then <link xref="difficulty">select your
+  Game</gui></guiseq> from the menu, then <link xref="board-size">select your
   preferred board size</link>.</p>
 
   <p>If you are already playing a game, <app>Mines</app> will ask if you want
