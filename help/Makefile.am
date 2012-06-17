@@ -27,9 +27,9 @@ HELP_MEDIA = \
 	figures/statusbar.png
 
 HELP_FILES = \
+	board-size.page \
 	bug-filing.page \
 	develop.page \
-	difficulty.page \
 	documentation.page \
 	faces.page \
 	flags.page \
