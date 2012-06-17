@@ -63,7 +63,7 @@
 	<p>To make the number of available flags equal to the number of
 	remaining mines, enable <gui style="checkbox">Warn if too many flags
 	placed</gui> and <gui style="checkbox">Use "I'm not sure" flags</gui>
-	preference options, then restart the application.<--! This is a bug!
+	preference options, then restart the application.<!-- This is a bug!
 	The warnings do not work properly at the moment.--></p>
      </note>
 
