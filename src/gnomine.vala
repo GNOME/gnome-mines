@@ -762,7 +762,7 @@ public class GnoMine : Gtk.Application
         question_toggle.set_active (settings.get_boolean (KEY_USE_QUESTION_MARKS));
         flag_options_vbox.pack_start (question_toggle, false, true, 0);
 
-        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags placed"));
+        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags have been placed"));
         overmine_toggle.toggled.connect (use_overmine_toggle_cb);
         overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
         flag_options_vbox.pack_start (overmine_toggle, false, true, 0);
