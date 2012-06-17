@@ -5,10 +5,16 @@
   <info>
     <link type="guide" xref="index#play"/>
     <revision version="0.1" date="2011-12-07" status="stub"/>
+    <revision pkgversion="3.4.2" date="2012-06-17" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
       <email>baptistem@gnome.org</email>
+      <years>2012</years>
+    </credit>
+    <credit type="author copyright">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
       <years>2012</years>
     </credit>
 
@@ -16,13 +22,13 @@
 
   <title>Start a new game</title>
 
-  <p>To start a new game, click <guiseq><gui>Game</gui><gui>New</gui>
-    </guiseq>, then <link xref="difficulty">select your preferred difficulty 
-    level</link>.
-  </p>
-  <p>If you were playing already a game, a popup message will ask if you want
-  to <gui>Start new game</gui> or <gui>Keep current Game</gui>, if you choose 
-  the former, your current game will be lost.
-  </p>
+  <p>To start a new game, click the <gui style="button">New</gui> button or
+  select <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New
+  Game</gui></guiseq> from the menu, then <link xref="difficulty">select your
+  preferred board size</link>.</p>
+
+  <p>If you are already playing a game, <app>Mines</app> will ask if you want
+  to <gui>Start New Game</gui> or <gui>Keep Current Game</gui>; if you choose
+  the former, your current game will be lost.</p>
 
 </page>
