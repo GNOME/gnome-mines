@@ -460,9 +460,10 @@ public class GnoMine : Gtk.Application
 
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
-            var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Cancel current game?"));
-            dialog.add_buttons (_("Start New Game"), Gtk.ResponseType.ACCEPT,
-                                _("Keep Current Game"), Gtk.ResponseType.DELETE_EVENT,
+            var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
+	    dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
+            dialog.add_buttons (Gtk.Stock.CANCEL, Gtk.ResponseType.DELETE_EVENT,
+                                _("Start New Game"), Gtk.ResponseType.ACCEPT,
                                 null);
             var result = dialog.run ();
             dialog.destroy ();
