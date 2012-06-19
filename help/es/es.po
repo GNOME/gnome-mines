@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-04-20 15:21+0000\n"
-"PO-Revision-Date: 2012-04-20 17:29+0200\n"
+"POT-Creation-Date: 2012-06-17 19:50+0000\n"
+"PO-Revision-Date: 2012-06-19 18:20+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -46,7 +46,7 @@ msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/index.page:17(media)
+#: C/index.page:22(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
@@ -63,57 +63,132 @@ msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Minas"
 
-#: C/index.page:13(license/p) C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:13(license/p)
+#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
+#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
+#: C/high-scores.page:14(credit/name) C/new-game.page:16(credit/name)
+#: C/rules.page:16(credit/name)
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:19(license/p)
 #: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
-#: C/index.page:17(page/title)
+#: C/index.page:22(page/title)
 msgid ""
 "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
 "media>GNOME Mines"
 msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media>Minas"
 
-#: C/index.page:18(page/p)
+#: C/index.page:24(page/p)
+#| msgid ""
+#| "<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is "
+#| "to locate all the mines hidden under tiles on a square board. You'll need "
+#| "some reflection and some luck to find all of them without causing an "
+#| "explosion."
 msgid ""
-"<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to "
-"locate all the mines hidden under tiles on a square board. You'll need some "
-"reflection and some luck to find all of them without causing an explosion."
+"<app>Gnomine</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
 msgstr ""
 "<app>Gnomine</app> es un clon del Buscaminas. El objetivo del juego es "
-"encontrar todas las minas ocultas en el tablero. Necesitará pensar y un poco "
-"de suerte para encontrarlas todas sin provocar una explosión."
+"encontrar todas las minas ocultas en el tablero. Necesitará usar una "
+"combinación de lógica y suerte para encontrarlas todas sin provocar una "
+"explosión."
 
-#: C/index.page:24(section/title)
+#: C/index.page:31(section/title)
 msgid "Game Play"
 msgstr "Juego"
 
-#: C/index.page:27(section/title)
+#: C/index.page:34(section/title)
 msgid "Useful tips"
 msgstr "Consejos útiles"
 
-#: C/index.page:30(section/title)
+#: C/index.page:37(section/title)
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: C/index.page:33(section/title)
+#: C/index.page:40(section/title)
 msgid "Get Involved"
 msgstr "Involucrarse"
 
-#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:8(credit/name) C/flags.page:10(credit/name)
-#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
-msgid "Tiffany Antopolski"
-msgstr "Tiffany Antopolski"
+#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
+#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
+#: C/high-scores.page:9(credit/name) C/new-game.page:11(credit/name)
+#: C/rules.page:11(credit/name)
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
 
-#: C/bug-filing.page:11(credit/years) C/develop.page:12(credit/years)
-#: C/difficulty.page:12(credit/years) C/documentation.page:10(credit/years)
+#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
+#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
 #: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
 #: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
 msgid "2011"
 msgstr "2011"
+
+#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
+#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
+#: C/flags.page:25(credit/years) C/high-scores.page:11(credit/years)
+#: C/high-scores.page:16(credit/years) C/new-game.page:13(credit/years)
+#: C/new-game.page:18(credit/years) C/rules.page:18(credit/years)
+#: C/shortcuts.page:11(credit/years) C/toolbar.page:10(credit/years)
+msgid "2012"
+msgstr "2012"
+
+#: C/board-size.page:20(info/desc)
+msgid "Select an existing or custom field size"
+msgstr "Seleccionar un tamaño de tablero existente o personalizado"
+
+#: C/board-size.page:23(page/title)
+#| msgid "Change the game difficulty"
+msgid "Change the game board size"
+msgstr "Cambiar la tamaño del tablero del juego"
+
+#: C/board-size.page:25(page/p)
+msgid "You can select a field size at the start of a new game."
+msgstr "Puede seleccionar un tamaño de tablero al inicio de cada partida."
+
+#: C/board-size.page:29(item/p)
+msgid ""
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui><gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"Pulse <gui style=\"button\">Nuevo</gui> o <guiseq><gui style=\"menu\">Minas</"
+"gui><gui style=\"menuitem\">Juego nuevo</gui></guiseq>."
+
+#: C/board-size.page:32(item/p)
+#| msgid "Select from the proposed grid sizes:"
+msgid "Select one of the grid sizes:"
+msgstr "Seleccione uno de los tamaños de tablero:"
+
+#: C/board-size.page:34(item/p)
+#| msgid "8 x 8 board with 10 mines"
+msgid "a 8 × 8 board with 10 mines"
+msgstr "un tablero de 8×8 con 10 minas"
+
+#: C/board-size.page:35(item/p)
+#| msgid "16 x 16 board with 40 mines to find"
+msgid "a 16 × 16 board with 40 mines"
+msgstr "un tablero de 16×16 con 10 minas"
+
+#: C/board-size.page:36(item/p)
+#| msgid "30 x 16 board with 99 mines"
+msgid "a 30 × 16 board with 99 mines"
+msgstr "un tablero de 30×16 con 10 minas"
+
+#: C/board-size.page:37(item/p)
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "un tablero personalizado, donde elije el tamaño y el número de minas"
+
+#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
+#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
 
 #: C/bug-filing.page:18(page/title)
 msgid "Help make <app>Gnomine</app> better"
@@ -226,82 +301,39 @@ msgstr ""
 "link>, o mediante la <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "games-list\">lista de correo</link>."
 
-#: C/difficulty.page:10(credit/name) C/faces.page:9(credit/name)
-#: C/flags.page:16(credit/name) C/get-help.page:9(credit/name)
-#: C/high-scores.page:9(credit/name) C/new-game.page:10(credit/name)
-#: C/rules.page:11(credit/name)
-msgid "Baptiste Mille-Mathias"
-msgstr "Baptiste Mille-Mathias"
-
-#: C/difficulty.page:17(page/title)
-msgid "Change the game difficulty"
-msgstr "Cambiar la dificultad del juego"
-
-#: C/difficulty.page:19(page/p)
-msgid ""
-"You can set the difficulty by choosing the grid size used to play "
-"<app>gnomine</app>."
-msgstr ""
-"Puede establecer la dificultad eligiendo el tamaño del tablero usado para "
-"jugar a <app>gnomine</app>."
-
-#: C/difficulty.page:22(item/p)
-msgid "Click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
-msgstr "Pulse <guiseq><gui>Juego</gui><gui>Nuevo</gui></guiseq>."
-
-#: C/difficulty.page:23(item/p)
-msgid "Select from the proposed grid sizes:"
-msgstr "Seleccione uno de los tamaños de tablero propuestos:"
-
-#: C/difficulty.page:25(item/p)
-msgid "8 x 8 board with 10 mines"
-msgstr "Tablero de 8x8 con 10 minas"
-
-#: C/difficulty.page:26(item/p)
-msgid "16 x 16 board with 40 mines to find"
-msgstr "Tablero de 16x16 con 40 minas que buscar"
-
-#: C/difficulty.page:27(item/p)
-msgid "30 x 16 board with 99 mines"
-msgstr "Tablero de 30x16 con 99 minas"
-
-#: C/difficulty.page:28(item/p)
-msgid "Custom board"
-msgstr "Tablero personalizado"
-
-#: C/difficulty.page:31(note/p)
-msgid ""
-"For the <gui>Custom</gui> size, you have to define the <gui>Horizontal</gui> "
-"and the <gui>Vertical</gui> numbers of tiles, and the number of mines"
-msgstr ""
-"Para el tamaño <gui>Personalizado</gui> debe definir el número de casillas "
-"<gui>Horizontales</gui> y <gui>Verticales</gui>, y el número de minas"
-
-#: C/documentation.page:17(page/title)
+#: C/documentation.page:23(page/title)
 msgid "Help write documentation"
 msgstr "Ayudar a escribir la documentación"
 
-#: C/documentation.page:19(page/p)
+#: C/documentation.page:25(page/p)
+#| msgid ""
+#| "The <app>GNOME Games</app> are developed and maintained by a volunteer "
+#| "community. You are welcome to participate."
 msgid ""
-"The <app>GNOME Games</app> documentation is maintained by a volunteer "
-"community. You are welcome to participate."
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
 msgstr ""
-"La documentación de los <app>juegos de GNOME</app> las mantiene una "
-"comunidad de voluntarios. Si quiere participar es bienvenido."
+"Los juegos de GNOME los desarrolla y los mantiene una comunidad de "
+"voluntarios. Si quiere participar es bienvenido."
 
-#: C/documentation.page:22(page/p)
+#: C/documentation.page:28(page/p)
+#| msgid ""
+#| "To contribute to the Documentation Project, feel free to get in touch "
+#| "with us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%"
+#| "2Firc.gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail."
+#| "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgid ""
-"To contribute to the Documentation Project, feel free to get in touch with "
-"us using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">irc</link>, or via our <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"To contribute to the Documentation Project, get in touch with us on the "
+"#docs channel on <link href=\"http://live.gnome.org/GnomeIrcChannels\">irc."
+"gnome.org</link> or via our <link href=\"http://mail.gnome.org/mailman/"
+"listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Para colaborar con el Proyecto de documentación, póngase en contacto usando "
-"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
-"2Fdocs\">irc</link>, o mediante la <link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">lista de correo</link>."
+"el canal #docs de <link href=\"http://live.gnome.org/GnomeIrcChannels\">irc."
+"gnome.org</link>, o mediante la <link href=\"http://mail.gnome.org/mailman/"
+"listinfo/gnome-doc-list\">lista de correo</link>."
 
-#: C/documentation.page:24(page/p)
+#: C/documentation.page:34(page/p)
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
@@ -394,7 +426,7 @@ msgstr "Ha encontrado todas las minas, ha ganado"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/flags.page:28(media)
+#: C/flags.page:35(media)
 msgctxt "_"
 msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
 msgstr ""
@@ -404,7 +436,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/flags.page:48(media)
+#: C/flags.page:57(media)
 msgctxt "_"
 msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
 msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
@@ -413,7 +445,7 @@ msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/flags.page:71(media)
+#: C/flags.page:86(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/flag-question.svg' "
@@ -422,74 +454,93 @@ msgstr ""
 "external ref='figures/flag-question.svg' "
 "md5='544c1aaa711ee86a03a817a1e3b57733'"
 
-#: C/flags.page:12(credit/years) C/flags.page:18(credit/years)
-#: C/high-scores.page:11(credit/years) C/new-game.page:12(credit/years)
-#: C/shortcuts.page:11(credit/years) C/toolbar.page:10(credit/years)
-msgid "2012"
-msgstr "2012"
-
-#: C/flags.page:21(info/desc)
-msgid "What are flags and how to use them"
+#: C/flags.page:28(info/desc)
+#| msgid "What are flags and how to use them"
+msgid "What flags are and how to use them"
 msgstr "Qué son las banderas y cómo se usan"
 
-#: C/flags.page:24(page/title)
+#: C/flags.page:31(page/title)
 msgid "Flags"
 msgstr "Banderas"
 
-#: C/flags.page:31(td/p)
+#: C/flags.page:38(td/p)
+#| msgid ""
+#| "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+#| "flag on a tile prevents you from clicking on it and possibly causing an "
+#| "explosion, ending the game."
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
-"explosion, ending the game."
+"explosion, which would end the game."
 msgstr ""
 "Las banderas se usan para marcar las casillas que sospecha que pueden "
 "contener una mina. Poner una bandera sobre una casilla evita que pulse en "
 "ella, causando una probable explosión que terminaría el juego."
 
-#: C/flags.page:38(section/title)
+#: C/flags.page:46(section/title)
 msgid "How to place a flag on a tile"
 msgstr "Cómo poner una bandera en una casilla"
 
-#: C/flags.page:42(td/p)
-msgid "To place a red flag on a tile:"
-msgstr "Para poner una bandera roja en una casilla:"
+#: C/flags.page:50(td/p)
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr ""
+"Las banderas rojas no se pueden pulsar. Para colocar una bandera roja en una "
+"casilla:"
 
-#: C/flags.page:44(item/p)
-msgid "Right click on a blank tile."
-msgstr "Pulse con el botón derecho sobre una casilla no descubierta."
+#: C/flags.page:53(item/p)
+#| msgid "Right click on a blank tile."
+msgid "right click on a blank tile."
+msgstr "pulse con el botón derecho sobre una casilla no descubierta."
 
-#: C/flags.page:52(note/p)
-msgid "The number of flags available is"
-msgstr "El número de banderas disponibles es"
+#: C/flags.page:63(note/p)
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"Para igualar el número de banderas disponibles al de casillas restantes, "
+"active las opciones <gui style=\"checkbox\">Advertir si se han colocado "
+"demasiadas banderas</gui> y <gui style=\"checkbox\">Usar banderas «No estoy "
+"seguro»</gui> y reinicie la aplicación."
 
-#: C/flags.page:53(note/p)
-msgid "equal to the number of remaining mines."
-msgstr "igual al número de minas restantes."
-
-#: C/flags.page:57(section/title)
-msgid "Use of <em>I'm not sure</em> flag"
+#: C/flags.page:73(section/title)
+#| msgid "Use of <em>I'm not sure</em> flag"
+msgid "Use of the <em>I'm not sure</em> flag"
 msgstr "Uso de la bandera <em>No estoy seguro</em>"
 
-#: C/flags.page:59(section/p)
+#: C/flags.page:74(section/p)
+#, fuzzy
+#| msgid ""
+#| "If you're unsure if a tile hides a mine or not, you can use the blue "
+#| "<em>I'm not sure</em>."
 msgid ""
-"If you're unsure if a tile hides a mine or not, you can use the blue <em>I'm "
-"not sure</em>."
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
 msgstr ""
 "Si no está seguro de si una casilla esconde o no una mina puede usar la "
 "bandera azul <em>no estoy seguro</em>."
 
-#: C/flags.page:65(td/p)
+#: C/flags.page:79(td/p)
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera <em>No estoy seguro</em> en una casilla:"
 
-#: C/flags.page:67(item/p)
-msgid "Right-click twice on a blank tile."
+#: C/flags.page:81(item/p)
+#, fuzzy
+#| msgid "Right-click twice on a blank tile."
+msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr "Pulse dos veces con el botón derecho en una casilla vacía."
 
-#: C/flags.page:75(note/p)
+#: C/flags.page:92(note/p)
+#, fuzzy
+#| msgid ""
+#| "To enable these flags, click <guiseq><gui>Settings</gui><gui>Preferences</"
+#| "gui> </guiseq>, and tick <gui>Use <em>I'm not sure</em> flags</gui>."
 msgid ""
-"To enable these flags, click <guiseq><gui>Settings</gui><gui>Preferences</"
-"gui> </guiseq>, and tick <gui>Use <em>I'm not sure</em> flags</gui>."
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
 msgstr ""
 "Para activar estas banderas, pulse <guiseq><gui>Configuración</"
 "gui><gui>Preferencias</gui> </guiseq>, y marque <gui>Usar banderas <em>No "
@@ -523,23 +574,27 @@ msgstr ""
 "Advertencia de \"demasiadas banderas\". Cuando está activada, esta opción le "
 "avisará cuando ponga muchas banderas en la misma área."
 
-#: C/high-scores.page:14(info/desc)
+#: C/high-scores.page:19(info/desc)
 msgid "The list of best performers"
 msgstr "La lista de los mejores"
 
-#: C/high-scores.page:17(page/title)
+#: C/high-scores.page:22(page/title)
 msgid "High Score"
 msgstr "Puntuaciones más altas"
 
-#: C/high-scores.page:19(page/p)
+#: C/high-scores.page:24(page/p)
+#, fuzzy
+#| msgid ""
+#| "The high scores lists the ten best <app>gnomine</app> players, and how "
+#| "long it took them to find all the mines."
 msgid ""
-"The high scores lists the ten best <app>gnomine</app> players, and how long "
-"it took them to find all the mines."
+"The high scores lists the ten best <app>Mines</app> players, and how long it "
+"took them to find all the mines."
 msgstr ""
 "La lista de puntuaciones más altas muestra los 10 mejores jugadores de "
 "<app>gnomine</app>, y cuánto tiempo tardaron en encontrar todas las minas."
 
-#: C/high-scores.page:22(page/p)
+#: C/high-scores.page:27(page/p)
 msgid ""
 "To see the name of the people who perform the best scores, choose <guiseq> "
 "<gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the <gui>Easy</gui> "
@@ -628,104 +683,120 @@ msgstr ""
 "Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Escrito de Commons</link>."
 
-#: C/new-game.page:17(page/title)
+#: C/new-game.page:23(page/title)
 msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
-#: C/new-game.page:19(page/p)
+#: C/new-game.page:25(page/p)
+#, fuzzy
+#| msgid ""
+#| "To start a new game, click <guiseq><gui>Game</gui><gui>New</gui> </"
+#| "guiseq>, then <link xref=\"difficulty\">select your preferred difficulty "
+#| "level</link>."
 msgid ""
-"To start a new game, click <guiseq><gui>Game</gui><gui>New</gui> </guiseq>, "
-"then <link xref=\"difficulty\">select your preferred difficulty level</link>."
+"To start a new game, click the <gui style=\"button\">New</gui> button or "
+"select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the menu, then <link xref=\"board-size\">select "
+"your preferred board size</link>."
 msgstr ""
 "Para empezar una partida nueva, pulse <guiseq><gui>Juego</gui><gui>Nuevo</"
 "gui> </guiseq>, y <link xref=\"difficulty\">seleccione su nivel de "
 "dificultad preferido</link>."
 
-#: C/new-game.page:23(page/p)
+#: C/new-game.page:30(page/p)
+#, fuzzy
+#| msgid ""
+#| "If you were playing already a game, a popup message will ask if you want "
+#| "to <gui>Start new game</gui> or <gui>Keep current Game</gui>, if you "
+#| "choose the former, your current game will be lost."
 msgid ""
-"If you were playing already a game, a popup message will ask if you want to "
-"<gui>Start new game</gui> or <gui>Keep current Game</gui>, if you choose the "
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>; if you choose the "
 "former, your current game will be lost."
 msgstr ""
 "Si ya había iniciado una partida, aparecerá una ventana emergente "
 "preguntándole si quiere <gui>Iniciar un juego nuevo</gui> o <gui>Mantener el "
 "juego actual</gui>; si elige la primera opción, su partida actual terminará."
 
-#: C/rules.page:16(info/desc)
-msgid "The basics game's rules"
+#: C/rules.page:21(info/desc)
+#| msgid "The basics game's rules"
+msgid "The basics game rules"
 msgstr "Las reglas básicas del juego"
 
-#: C/rules.page:20(page/title)
+#: C/rules.page:25(page/title)
 msgid "Game rules"
 msgstr "Reglas del juego"
 
-#: C/rules.page:22(page/p)
+#: C/rules.page:27(page/p)
+#, fuzzy
 #| msgid ""
 #| "The aim of <app>gnomine</app> is to discover the mines hidden under tiles "
-#| "without make them explose."
+#| "without make them explode."
 msgid ""
-"The aim of <app>gnomine</app> is to discover the mines hidden under tiles "
-"without make them explode."
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
 msgstr ""
 "El objetivo de <app>gnomine</app> es descubrir todas las minas ocultas bajo "
 "las casillas sin hacer que exploten."
 
-#: C/rules.page:23(page/p)
-msgid ""
-"At start, the <app>gnomine</app> board is full of tiles and you have to put "
-"flags on those you suspect to have mines."
-msgstr ""
-"Al empezar, el tablero de <app>gnomine</app> está lleno de casillas y tiene "
-"que poner banderas en las casillas en las que sospecha que hay minas."
-
-#: C/rules.page:27(item/p)
-#| msgid ""
-#| "The games begins with a game board full of tiles, the size of the board "
-#| "depends on the level of difficulty you choose."
-msgid ""
-"The game begins with a game board full of tiles, the size of the board "
-"depends on the level of difficulty you choose."
-msgstr ""
-"La partida comienza con un tablero lleno de casillas; el tamaño del tablero "
-"depende del nivel de dificultad que elija."
-
-#: C/rules.page:30(item/p)
-msgid "Click on a first tile to uncover it and discover what's under:"
-msgstr "Pulse en la primera casilla para descubrirla y ver qué hay debajo:"
-
 #: C/rules.page:32(item/p)
 msgid ""
-"A colored number, which represent the number of mines in the adjacent tiles "
-"surrounding the current tile. That gives you an indication where mines are, "
-"and so where you have to put <link xref=\"flags\"/>."
+"Start by chosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+
+#: C/rules.page:36(item/p)
+msgid ""
+"The game begins with the board covered in tiles, click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+
+#: C/rules.page:40(item/p)
+#| msgid ""
+#| "A colored number, which represent the number of mines in the adjacent "
+#| "tiles surrounding the current tile. That gives you an indication where "
+#| "mines are, and so where you have to put <link xref=\"flags\"/>."
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\"/>."
 msgstr ""
 "Un número de color, que representa el número de minas en las casillas "
-"adyacentes alrededor de la casilla actual. Esto de la una pista de cuántas "
-"minas hay, y de dónde tiene que poner <link xref=\"flags\"/>."
+"adyacentes. Esto de la una pista de cuántas minas hay, y de dónde tiene que "
+"poner <link xref=\"flags\"/>."
 
-#: C/rules.page:34(item/p)
-msgid "A blank title which means there is no mine around."
+#: C/rules.page:45(item/p)
+#, fuzzy
+#| msgid "A blank title which means there is no mine around."
+msgid ""
+"A blank title, which means there are no mines under any of the adjacent "
+"tiles."
 msgstr "Una casilla vacía, lo que significa que no hay minas alrededor."
 
-#: C/rules.page:35(item/p)
-msgid "A mine, in which case you lose."
-msgstr "Una mina, en cuyo caso pierde."
+#: C/rules.page:49(item/p)
+msgid "A mine, which will detonate and end the game."
+msgstr ""
 
-#: C/rules.page:39(item/p)
+#: C/rules.page:54(item/p)
+#, fuzzy
 #| msgid ""
-#| "Do again the previous step until you find all the mines remaining on the "
+#| "Do again the previous steps until you find all the mines remaining on the "
 #| "board."
 msgid ""
-"Do again the previous steps until you find all the mines remaining on the "
-"board."
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
 msgstr ""
 "Repita los pasos anteriores hasta que encuentre todas las minas restantes "
 "del tablero."
 
-#: C/rules.page:43(page/p)
+#: C/rules.page:59(page/p)
+#, fuzzy
+#| msgid ""
+#| "If you were fast enough to complete the game, you'll be invited to add "
+#| "your name in the <link xref=\"high-scores\">high scores</link> list."
 msgid ""
-"If you were fast enough to complete the game, you'll be invited to add your "
-"name in the <link xref=\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
 msgstr ""
 "Si ha sido lo bastante rápido para completar el juego, se le invitará a "
 "añadir su nombre a la lista de <link xref=\"high-scores\">puntuaciones más "
@@ -800,12 +871,6 @@ msgid "Toolbar"
 msgstr "Barra de herramientas"
 
 #: C/toolbar.page:17(page/p)
-#| msgid ""
-#| "The toolbar, located under the menu bar, lets you perform common actions "
-#| "with your mouse. To use a toolbar item, just click on it. The buttons, "
-#| "from left to right, are <gui><link xref=\"new-game\">New Game</link></"
-#| "gui>, <link xref=\"get-help\">Hint</link>, <gui><link xref=\"pause"
-#| "\">Pause</link></gui> and <gui> Fullscreen</gui>."
 msgid ""
 "The toolbar, located under the menu bar, lets you perform common actions "
 "with your mouse. To use a toolbar item, just click on it. The buttons, from "
@@ -880,6 +945,67 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid ""
+#~ "You can set the difficulty by choosing the grid size used to play "
+#~ "<app>gnomine</app>."
+#~ msgstr ""
+#~ "Puede establecer la dificultad eligiendo el tamaño del tablero usado para "
+#~ "jugar a <app>gnomine</app>."
+
+#~ msgid "Click <guiseq><gui>Game</gui><gui>New</gui></guiseq>."
+#~ msgstr "Pulse <guiseq><gui>Juego</gui><gui>Nuevo</gui></guiseq>."
+
+#~ msgid "Custom board"
+#~ msgstr "Tablero personalizado"
+
+#~ msgid ""
+#~ "For the <gui>Custom</gui> size, you have to define the <gui>Horizontal</"
+#~ "gui> and the <gui>Vertical</gui> numbers of tiles, and the number of mines"
+#~ msgstr ""
+#~ "Para el tamaño <gui>Personalizado</gui> debe definir el número de "
+#~ "casillas <gui>Horizontales</gui> y <gui>Verticales</gui>, y el número de "
+#~ "minas"
+
+#~ msgid ""
+#~ "The <app>GNOME Games</app> documentation is maintained by a volunteer "
+#~ "community. You are welcome to participate."
+#~ msgstr ""
+#~ "La documentación de los <app>juegos de GNOME</app> las mantiene una "
+#~ "comunidad de voluntarios. Si quiere participar es bienvenido."
+
+#~ msgid "To place a red flag on a tile:"
+#~ msgstr "Para poner una bandera roja en una casilla:"
+
+#~ msgid "The number of flags available is"
+#~ msgstr "El número de banderas disponibles es"
+
+#~ msgid "equal to the number of remaining mines."
+#~ msgstr "igual al número de minas restantes."
+
+#~ msgid ""
+#~ "At start, the <app>gnomine</app> board is full of tiles and you have to "
+#~ "put flags on those you suspect to have mines."
+#~ msgstr ""
+#~ "Al empezar, el tablero de <app>gnomine</app> está lleno de casillas y "
+#~ "tiene que poner banderas en las casillas en las que sospecha que hay "
+#~ "minas."
+
+#~| msgid ""
+#~| "The games begins with a game board full of tiles, the size of the board "
+#~| "depends on the level of difficulty you choose."
+#~ msgid ""
+#~ "The game begins with a game board full of tiles, the size of the board "
+#~ "depends on the level of difficulty you choose."
+#~ msgstr ""
+#~ "La partida comienza con un tablero lleno de casillas; el tamaño del "
+#~ "tablero depende del nivel de dificultad que elija."
+
+#~ msgid "Click on a first tile to uncover it and discover what's under:"
+#~ msgstr "Pulse en la primera casilla para descubrirla y ver qué hay debajo:"
+
+#~ msgid "A mine, in which case you lose."
+#~ msgstr "Una mina, en cuyo caso pierde."
 
 #~ msgctxt "_"
 #~ msgid ""
