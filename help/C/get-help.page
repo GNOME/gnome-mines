@@ -19,14 +19,14 @@
   <p>You can get help while playing: </p>
   <list>
     <item>
-      <p>Hints. If you're in a situation you don't know which tiles uncover you
+      <p>Hints. If you're in a situation when you don't know which tiles to uncover you
       can ask for a hint. A hint will uncover a tile from the board, but will 
-      add ten seconds to the time of the game. To ask for choose <guiseq><gui>
+      add ten seconds to the time of the game. To ask for a hint choose <guiseq><gui>
       Game</gui><gui>Hint</gui></guiseq>.</p>
     </item>
     <item>
       <p>"Too many flags" warning. When activated, this option will inform you
-         when you set too much flag in the same area.</p>
+         when you set too many flags in the same area.</p>
     </item>
   </list>
 
