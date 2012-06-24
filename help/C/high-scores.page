@@ -3,6 +3,7 @@
       id="high-scores">
   <info>
     <revision version="0.1" date="2012-02-20" status="stub"/>
+    <revision pkgversion="3.4.2" version="0.1" date="2012-06-24" status="review"/>
     <link type="guide" xref="index#tips"/>
 
     <credit type="author copyright">
@@ -10,7 +11,7 @@
       <email>baptistem@gnome.org</email>
       <years>2012</years>
     </credit>
-    <credit type="editor">
+    <credit type="author copyright editor">
       <name>Ekaterina Gerasimova</name>
       <email>kittykat3756@gmail.com</email>
       <years>2012</years>
@@ -19,13 +20,14 @@
     <desc>The list of best performers</desc>
   </info>
 
-  <title>High Score</title>
+  <title>Scores</title>
 
-  <p>The high scores lists the ten best <app>Mines</app> players, and how
-  long it took them to find all the mines.</p>
+  <p>The scores lists the ten fastest times in which each type of mine field
+  has been cleared.</p>
 
-  <p>To see the name of the people who perform the best scores, choose <guiseq>
-  <gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the <gui>Small</gui>
-  size by default.</p>
+  <p>To view the high scores, select <guiseq><gui style="menu">Mines</gui><gui
+  style="menuitem">Scores</gui></guiseq>. The dialog will display the
+  <gui>Small</gui> field size by default; to view other sizes, select them in
+  the drop down menu at the top of the dialog.</p>
 
 </page>
