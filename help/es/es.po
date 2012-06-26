@@ -6,14 +6,14 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-06-19 16:26+0000\n"
-"PO-Revision-Date: 2012-06-21 12:28+0200\n"
+"POT-Creation-Date: 2012-06-24 13:07+0000\n"
+"PO-Revision-Date: 2012-06-26 20:23+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Gtranslator 2.91.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -65,7 +65,7 @@ msgstr "Minas"
 
 #: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
 #: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
-#: C/high-scores.page:14(credit/name) C/new-game.page:16(credit/name)
+#: C/high-scores.page:15(credit/name) C/new-game.page:16(credit/name)
 #: C/rules.page:16(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
@@ -113,7 +113,7 @@ msgstr "Involucrarse"
 
 #: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
 #: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
-#: C/high-scores.page:9(credit/name) C/new-game.page:11(credit/name)
+#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
 #: C/rules.page:11(credit/name)
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
@@ -127,8 +127,8 @@ msgstr "2011"
 
 #: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
 #: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
-#: C/flags.page:25(credit/years) C/high-scores.page:11(credit/years)
-#: C/high-scores.page:16(credit/years) C/new-game.page:13(credit/years)
+#: C/flags.page:25(credit/years) C/high-scores.page:12(credit/years)
+#: C/high-scores.page:17(credit/years) C/new-game.page:13(credit/years)
 #: C/new-game.page:18(credit/years) C/rules.page:18(credit/years)
 #: C/shortcuts.page:11(credit/years) C/toolbar.page:10(credit/years)
 msgid "2012"
@@ -486,9 +486,6 @@ msgid "Use of the <em>I'm not sure</em> flag"
 msgstr "Uso de la bandera <em>No estoy seguro</em>"
 
 #: C/flags.page:74(section/p)
-#| msgid ""
-#| "If you're unsure if a tile hides a mine or not, you can use the blue "
-#| "<em>I'm not sure</em>."
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the blue "
 "<em>I'm not sure</em> flag."
@@ -501,14 +498,10 @@ msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera <em>No estoy seguro</em> en una casilla:"
 
 #: C/flags.page:81(item/p)
-#| msgid "Right-click twice on a blank tile."
 msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr "Pulse dos veces con el botón derecho en una bandera roja."
 
 #: C/flags.page:92(note/p)
-#| msgid ""
-#| "To enable these flags, click <guiseq><gui>Settings</gui><gui>Preferences</"
-#| "gui> </guiseq>, and tick <gui>Use <em>I'm not sure</em> flags</gui>."
 msgid ""
 "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
 "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
@@ -527,11 +520,16 @@ msgid "You can get help while playing:"
 msgstr "Puede obtener ayuda mientras juega:"
 
 #: C/get-help.page:22(item/p)
+#| msgid ""
+#| "Hints. If you're in a situation you don't know which tiles uncover you "
+#| "can ask for a hint. A hint will uncover a tile from the board, but will "
+#| "add ten seconds to the time of the game. To ask for choose <guiseq><gui> "
+#| "Game</gui><gui>Hint</gui></guiseq>."
 msgid ""
-"Hints. If you're in a situation you don't know which tiles uncover you can "
-"ask for a hint. A hint will uncover a tile from the board, but will add ten "
-"seconds to the time of the game. To ask for choose <guiseq><gui> Game</"
-"gui><gui>Hint</gui></guiseq>."
+"Hints. If you're in a situation when you don't know which tiles to uncover "
+"you can ask for a hint. A hint will uncover a tile from the board, but will "
+"add ten seconds to the time of the game. To ask for a hint choose "
+"<guiseq><gui> Game</gui><gui>Hint</gui></guiseq>."
 msgstr ""
 "Pistas. Si está en una situación en la que no sabe qué casillas descubrir, "
 "puede pedir una pista. Una pista descubrirá una casilla del tablero, pero "
@@ -539,41 +537,45 @@ msgstr ""
 "<guiseq><gui>Juego</gui><gui>Pista</gui></guiseq>."
 
 #: C/get-help.page:28(item/p)
+#| msgid ""
+#| "\"Too many flags\" warning. When activated, this option will inform you "
+#| "when you set too much flag in the same area."
 msgid ""
 "\"Too many flags\" warning. When activated, this option will inform you when "
-"you set too much flag in the same area."
+"you set too many flags in the same area."
 msgstr ""
 "Advertencia de \"demasiadas banderas\". Cuando está activada, esta opción le "
 "avisará cuando ponga muchas banderas en la misma área."
 
-#: C/high-scores.page:19(info/desc)
+#: C/high-scores.page:20(info/desc)
 msgid "The list of best performers"
 msgstr "La lista de los mejores"
 
-#: C/high-scores.page:22(page/title)
-msgid "High Score"
-msgstr "Puntuaciones más altas"
+#: C/high-scores.page:23(page/title)
+#| msgid "High Score"
+msgid "Scores"
+msgstr "Puntuación"
 
-#: C/high-scores.page:24(page/p)
-#| msgid ""
-#| "The high scores lists the ten best <app>gnomine</app> players, and how "
-#| "long it took them to find all the mines."
+#: C/high-scores.page:25(page/p)
 msgid ""
-"The high scores lists the ten best <app>Mines</app> players, and how long it "
-"took them to find all the mines."
+"The scores lists the ten fastest times in which each type of mine field has "
+"been cleared."
 msgstr ""
-"La lista de puntuaciones más altas muestra los 10 mejores jugadores de "
-"<app>Minas</app>, y cuánto tiempo tardaron en encontrar todas las minas."
+"La puntuación muestra los 10 mejores tiempos en los que se ha limpiado cada "
+"tipo de campo de minas."
 
-#: C/high-scores.page:27(page/p)
+#: C/high-scores.page:28(page/p)
 msgid ""
-"To see the name of the people who perform the best scores, choose <guiseq> "
-"<gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the <gui>Easy</gui> "
-"size by default."
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
 msgstr ""
-"Para ver el nombre de la persona que hizo la puntuación más alta, elija "
-"<guiseq> <gui>Juego</gui><gui>Puntuación</gui></guiseq>. De manera "
-"predeterminada, mostrará el tamaño <gui>Fácil</gui>."
+"Para ver las puntuaciones más altas, seleccione <guiseq><gui style=\"menu"
+"\">Minas</gui><gui style=\"menuitem\">Puntuación</gui></guiseq>. el diálogo "
+"mostrará el tamaño <gui>Pequeño</gui> de tablero de manera predeterminada; "
+"para ver otros tamaños, selecciónelos en el menú desplegable en la parte "
+"superior de diálogo."
 
 #: C/license.page:8(info/desc)
 msgid "Legal information."
@@ -659,10 +661,6 @@ msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
 #: C/new-game.page:25(page/p)
-#| msgid ""
-#| "To start a new game, click <guiseq><gui>Game</gui><gui>New</gui> </"
-#| "guiseq>, then <link xref=\"difficulty\">select your preferred difficulty "
-#| "level</link>."
 msgid ""
 "To start a new game, click the <gui style=\"button\">New</gui> button or "
 "select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
@@ -675,10 +673,6 @@ msgstr ""
 "\">elija su tamaño de tablero preferido</link>."
 
 #: C/new-game.page:30(page/p)
-#| msgid ""
-#| "If you were playing already a game, a popup message will ask if you want "
-#| "to <gui>Start new game</gui> or <gui>Keep current Game</gui>, if you "
-#| "choose the former, your current game will be lost."
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>; if you choose the "
@@ -697,9 +691,6 @@ msgid "Game rules"
 msgstr "Reglas del juego"
 
 #: C/rules.page:27(page/p)
-#| msgid ""
-#| "The aim of <app>gnomine</app> is to discover the mines hidden under tiles "
-#| "without make them explode."
 msgid ""
 "The aim of <app>Mines</app> is to clear the minefield without detonating any "
 "of the mines."
@@ -734,7 +725,6 @@ msgstr ""
 "poner <link xref=\"flags\"/>."
 
 #: C/rules.page:45(item/p)
-#| msgid "A blank title which means there is no mine around."
 msgid ""
 "A blank title, which means there are no mines under any of the adjacent "
 "tiles."
@@ -747,9 +737,6 @@ msgid "A mine, which will detonate and end the game."
 msgstr "Una mina, que explotará y hará que termine la partida."
 
 #: C/rules.page:54(item/p)
-#| msgid ""
-#| "Do again the previous steps until you find all the mines remaining on the "
-#| "board."
 msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
@@ -758,9 +745,6 @@ msgstr ""
 "contienen una mina."
 
 #: C/rules.page:59(page/p)
-#| msgid ""
-#| "If you were fast enough to complete the game, you'll be invited to add "
-#| "your name in the <link xref=\"high-scores\">high scores</link> list."
 msgid ""
 "If you complete the game quickly enough, you will be added to the <link xref="
 "\"high-scores\">high scores</link> list."
@@ -911,6 +895,25 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~| msgid ""
+#~| "The high scores lists the ten best <app>gnomine</app> players, and how "
+#~| "long it took them to find all the mines."
+#~ msgid ""
+#~ "The high scores lists the ten best <app>Mines</app> players, and how long "
+#~ "it took them to find all the mines."
+#~ msgstr ""
+#~ "La lista de puntuaciones más altas muestra los 10 mejores jugadores de "
+#~ "<app>Minas</app>, y cuánto tiempo tardaron en encontrar todas las minas."
+
+#~ msgid ""
+#~ "To see the name of the people who perform the best scores, choose "
+#~ "<guiseq> <gui>Game</gui><gui>Scores</gui></guiseq>. It'll display the "
+#~ "<gui>Easy</gui> size by default."
+#~ msgstr ""
+#~ "Para ver el nombre de la persona que hizo la puntuación más alta, elija "
+#~ "<guiseq> <gui>Juego</gui><gui>Puntuación</gui></guiseq>. De manera "
+#~ "predeterminada, mostrará el tamaño <gui>Fácil</gui>."
 
 #~ msgid ""
 #~ "You can set the difficulty by choosing the grid size used to play "
@@ -1419,14 +1422,14 @@ msgstr ""
 #~ "numbered square."
 #~ msgstr ""
 #~ "Hay una casilla de verificación en el diálogo de preferencias llamada "
-#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse con "
-#~ "el botón derecho sobre una casilla, rotará entre las banderas normales "
-#~ "usadas para marcar una casilla como minada, una bandera con n signo de "
-#~ "interrogación en ella y una ausencia de bandera. Esta nueva bandera es "
-#~ "para ayudarle con sus razonamientos, para marcar casillas que cree que "
-#~ "pueden ser minas pero no está seguro. Estas banderas no tienen efecto en "
-#~ "el juego; aún debe usar el número apropiado de marcadores rojos de "
-#~ "bandera para poder limpiar alrededor de la casilla numerada."
+#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse "
+#~ "con el botón derecho sobre una casilla, rotará entre las banderas "
+#~ "normales usadas para marcar una casilla como minada, una bandera con n "
+#~ "signo de interrogación en ella y una ausencia de bandera. Esta nueva "
+#~ "bandera es para ayudarle con sus razonamientos, para marcar casillas que "
+#~ "cree que pueden ser minas pero no está seguro. Estas banderas no tienen "
+#~ "efecto en el juego; aún debe usar el número apropiado de marcadores rojos "
+#~ "de bandera para poder limpiar alrededor de la casilla numerada."
 
 #~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 #~ msgstr ""
