@@ -35,9 +35,12 @@ public class GnoMine : Gtk.Application
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
     private GnomeGamesSupport.Clock clock;
+    private SimpleAction new_game;
+    private SimpleAction repeat_size;
     private SimpleAction pause;
     private SimpleAction hint;
     private Gtk.Action hint_action;
+    private Gtk.Action new_game_action;
     private GnomeGamesSupport.FullscreenAction fullscreen_action;
     private GnomeGamesSupport.PauseAction pause_action;
     private Gtk.AspectFrame new_game_screen;
@@ -47,6 +50,7 @@ public class GnoMine : Gtk.Application
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",      new_game_cb                                            },
+        { "repeat-size",   repeat_size_cb                                         },
         { "hint",          hint_cb                                                },
         { "pause",         toggle_pause_cb                                        },
         { "fullscreen",    fullscreen_cb                                          },
@@ -85,6 +89,10 @@ public class GnoMine : Gtk.Application
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
         add_action_entries (action_entries, this);
+        new_game = lookup_action ("new-game") as SimpleAction;
+        new_game.set_enabled (false);
+        repeat_size = lookup_action ("repeat-size") as SimpleAction;
+        repeat_size.set_enabled (false);
         hint = lookup_action ("hint") as SimpleAction;
         hint.set_enabled (false);
         pause = lookup_action ("pause") as SimpleAction;
@@ -130,7 +138,9 @@ public class GnoMine : Gtk.Application
         hint_action.is_important = true;
         hint_action.set_sensitive (false);
 
-        action_group.get_action ("NewGame").is_important = true;
+        new_game_action = action_group.get_action ("NewGame");
+        new_game_action.is_important = true;
+        new_game_action.set_sensitive (false);
 
         fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
         action_group.add_action_with_accel (fullscreen_action, null);
@@ -453,11 +463,8 @@ public class GnoMine : Gtk.Application
         new_game_screen.hide ();
     }
 
-    private void show_new_game_screen ()
+    private bool can_start_new_game ()
     {
-        if (is_new_game_screen)
-            return;
-
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
@@ -467,10 +474,19 @@ public class GnoMine : Gtk.Application
                                 null);
             var result = dialog.run ();
             dialog.destroy ();
-            if (result == Gtk.ResponseType.DELETE_EVENT)
-                return;
+            if (result != Gtk.ResponseType.ACCEPT)
+                return false;
         }
+        return true;
+    }
 
+    private void show_new_game_screen ()
+    {
+        if (is_new_game_screen)
+            return;
+
+        if (minefield != null)
+            SignalHandler.disconnect_by_func (minefield, null, this);
         minefield = null;
 
         is_new_game_screen = true;
@@ -482,6 +498,9 @@ public class GnoMine : Gtk.Application
         clock.reset ();
         set_face_image (smile_face_image);
 
+        new_game.set_enabled (false);
+        new_game_action.set_sensitive (false);
+        repeat_size.set_enabled (false);
         hint.set_enabled (false);
         hint_action.set_sensitive (false);
         pause.set_enabled (false);
@@ -491,7 +510,7 @@ public class GnoMine : Gtk.Application
         pause_action.set_is_paused (false);
     }
 
-    private void new_game ()
+    private void start_game ()
     {
         is_new_game_screen = false;
         custom_game_screen.hide ();
@@ -544,6 +563,9 @@ public class GnoMine : Gtk.Application
 
         update_flag_label ();
 
+        new_game.set_enabled (true);
+        new_game_action.set_sensitive (true);
+        repeat_size.set_enabled (true);
         hint.set_enabled (true);
         hint_action.set_sensitive (true);
         pause.set_enabled (true);
@@ -565,10 +587,14 @@ public class GnoMine : Gtk.Application
 
     private void new_game_cb ()
     {
-        if (is_new_game_screen)
-            new_game ();
-        else
+        if (can_start_new_game ())
             show_new_game_screen ();
+    }
+
+    private void repeat_size_cb ()
+    {
+        if (can_start_new_game ())
+            start_game ();
     }
 
     private void toggle_pause_cb ()
@@ -792,7 +818,7 @@ public class GnoMine : Gtk.Application
         if (mode != settings.get_int (KEY_MODE))
             settings.set_int (KEY_MODE, mode);
 
-        new_game ();
+        start_game ();
     }
 
     private void small_size_clicked_cb ()

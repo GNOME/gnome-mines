@@ -7,6 +7,11 @@
         <attribute name="accel">&lt;Primary&gt;n</attribute>
       </item>
       <item>
+        <attribute name="label" translatable="yes">_Replay Size</attribute>
+        <attribute name="action">app.repeat-size</attribute>
+        <attribute name="accel">&lt;Primary&gt;r</attribute>
+      </item>
+      <item>
         <attribute name="label" translatable="yes">_Hint</attribute>
         <attribute name="action">app.hint</attribute>
       </item>
