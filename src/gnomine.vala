@@ -98,16 +98,31 @@ public class GnoMine : Gtk.Application
         pause = lookup_action ("pause") as SimpleAction;
         pause.set_enabled (false);
 
-        var builder = new Gtk.Builder ();
-        try
-        {
-            builder.add_from_file (Path.build_filename (DATA_DIRECTORY, "gnomine.ui"));
-        }
-        catch (Error e)
-        {
-            error ("Unable to build menus: %s", e.message);
-        }
-        set_app_menu (builder.get_object ("gnomine-menu") as MenuModel);
+        var menu = new Menu ();
+        var section = new Menu ();
+        menu.append_section (null, section);
+        section.append (_("_New Game"), "app.new-game");
+        section.append (_("_Replay Size"), "app.repeat-size");
+        section.append (_("_Hint"), "app.hint");
+        section.append (_("_Pause"), "app.pause");
+        section.append (_("_Fullscreen"), "app.fullscreen");
+        section.append (_("_Scores"), "app.scores");
+        section.append (_("_Preferences"), "app.preferences");
+        section = new Menu ();
+        menu.append_section (null, section);
+        section.append (_("_Help"), "app.help");
+        section.append (_("_About"), "app.about");
+        section = new Menu ();
+        menu.append_section (null, section);
+        section.append (_("_Quit"), "app.quit");
+        set_app_menu (menu);
+
+        add_accelerator ("<Primary>n", "app.new-game", null);
+        add_accelerator ("<Primary>r", "app.repeat-size", null);
+        add_accelerator ("<Primary>p", "app.pause", null);
+        add_accelerator ("F1", "app.help", null);
+        add_accelerator ("<Primary>w", "app.quit", null);
+        add_accelerator ("<Primary>q", "app.quit", null);
 
         window = new Gtk.ApplicationWindow (this);
         window.title = _("Mines");
