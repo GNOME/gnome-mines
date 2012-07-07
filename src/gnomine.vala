@@ -136,37 +136,6 @@ public class GnoMine : Gtk.Application
         window.add (main_vbox);
         main_vbox.show ();
 
-        var action_group = new Gtk.ActionGroup ("group");
-        action_group.set_translation_domain (GETTEXT_PACKAGE);
-        action_group.add_actions (actions, this);
-
-        var ui_manager = new Gtk.UIManager ();
-        ui_manager.insert_action_group (action_group, 0);
-        try
-        {
-            ui_manager.add_ui_from_string (ui_description, -1);
-        }
-        catch (Error e)
-        {
-        }
-        hint_action = action_group.get_action ("Hint");
-        hint_action.is_important = true;
-        hint_action.set_sensitive (false);
-
-        new_game_action = action_group.get_action ("NewGame");
-        new_game_action.is_important = true;
-        new_game_action.set_sensitive (false);
-
-        fullscreen_action = new GnomeGamesSupport.FullscreenAction ("Fullscreen", window);
-        action_group.add_action_with_accel (fullscreen_action, null);
-
-        pause_action = new GnomeGamesSupport.PauseAction ("PauseGame");
-        pause_action.set_sensitive (false);
-        pause_action.state_changed.connect (pause_cb);
-        action_group.add_action_with_accel (pause_action, null);
-
-        window.add_accel_group (ui_manager.get_accel_group ());
-
         var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
         status_box.show ();
 
@@ -206,9 +175,8 @@ public class GnoMine : Gtk.Application
         worried_face_image = load_face_image ("face-worried.svg");
 
         /* initialize toolbar */
-        var toolbar = (Gtk.Toolbar) ui_manager.get_widget ("/Toolbar");
+        var toolbar = new Gtk.Toolbar ();
         toolbar.show_arrow = false;
-        face_button = (Gtk.ToolButton) ui_manager.get_widget ("/Toolbar/NewGame");
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
         /* replace the dull new-game icon with fancy faces */
         set_face_image (smile_face_image);
