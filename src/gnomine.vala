@@ -452,7 +452,7 @@ public class GnoMine : Gtk.Application
         {
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
             dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
-            dialog.add_buttons (Gtk.Stock.CANCEL, Gtk.ResponseType.DELETE_EVENT,
+            dialog.add_buttons (_("Keep Current Game"), Gtk.ResponseType.DELETE_EVENT,
                                 _("Start New Game"), Gtk.ResponseType.ACCEPT,
                                 null);
             var result = dialog.run ();
