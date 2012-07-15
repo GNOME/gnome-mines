@@ -24,6 +24,8 @@ public class GnoMine : Gtk.Application
 
     /* Main window */
     private Gtk.Window window;
+    private bool is_fullscreen;
+    private bool is_maximized;
 
     /* Minefield being played */
     private Minefield minefield;
@@ -35,14 +37,10 @@ public class GnoMine : Gtk.Application
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
     private GnomeGamesSupport.Clock clock;
-    private SimpleAction new_game;
-    private SimpleAction repeat_size;
-    private SimpleAction pause;
-    private SimpleAction hint;
-    private Gtk.Action hint_action;
-    private Gtk.Action new_game_action;
-    private GnomeGamesSupport.FullscreenAction fullscreen_action;
-    private GnomeGamesSupport.PauseAction pause_action;
+    private SimpleAction new_game_action;
+    private SimpleAction repeat_size_action;
+    private SimpleAction pause_action;
+    private SimpleAction hint_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
     private bool is_new_game_screen;
@@ -89,14 +87,14 @@ public class GnoMine : Gtk.Application
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
         add_action_entries (action_entries, this);
-        new_game = lookup_action ("new-game") as SimpleAction;
-        new_game.set_enabled (false);
-        repeat_size = lookup_action ("repeat-size") as SimpleAction;
-        repeat_size.set_enabled (false);
-        hint = lookup_action ("hint") as SimpleAction;
-        hint.set_enabled (false);
-        pause = lookup_action ("pause") as SimpleAction;
-        pause.set_enabled (false);
+        new_game_action = lookup_action ("new-game") as SimpleAction;
+        new_game_action.set_enabled (false);
+        repeat_size_action = lookup_action ("repeat-size") as SimpleAction;
+        repeat_size_action.set_enabled (false);
+        hint_action = lookup_action ("hint") as SimpleAction;
+        hint_action.set_enabled (false);
+        pause_action = lookup_action ("pause") as SimpleAction;
+        pause_action.set_enabled (false);
 
         var menu = new Menu ();
         var section = new Menu ();
@@ -125,6 +123,7 @@ public class GnoMine : Gtk.Application
         add_accelerator ("<Primary>q", "app.quit", null);
 
         window = new Gtk.ApplicationWindow (this);
+        window.window_state_event.connect (window_state_event_cb);
         window.title = _("Mines");
 
         GnomeGamesSupport.settings_bind_window_state ("/org/gnome/gnomine/", window);
@@ -158,6 +157,41 @@ public class GnoMine : Gtk.Application
         clock.show ();
         box.pack_start (clock, false, false, 0);
 
+        /* create fancy faces */
+        win_face_image = load_face_image ("face-win.svg");
+        sad_face_image = load_face_image ("face-sad.svg");
+        smile_face_image = load_face_image ("face-smile.svg");
+        cool_face_image = load_face_image ("face-cool.svg");
+        worried_face_image = load_face_image ("face-worried.svg");
+
+        var toolbar = new Gtk.Toolbar ();
+        toolbar.show ();
+        toolbar.show_arrow = false;
+        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
+
+        face_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        face_button.action_name = "app.new-game";
+        face_button.is_important = true;
+        set_face_image (smile_face_image);
+        face_button.show ();
+        toolbar.insert (face_button, -1);
+
+        var hint_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_HINT);
+        hint_button.action_name = "app.hint";
+        hint_button.is_important = true;
+        hint_button.show ();
+        toolbar.insert (hint_button, -1);
+
+        var pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
+        pause_button.action_name = "app.pause";
+        pause_button.show ();
+        toolbar.insert (pause_button, -1);
+
+        var fullscreen_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_FULLSCREEN);
+        fullscreen_button.action_name = "app.fullscreen";
+        fullscreen_button.show ();
+        toolbar.insert (fullscreen_button, -1);
+
         var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
         status_alignment.add (status_box);
         status_alignment.show();
@@ -166,20 +200,6 @@ public class GnoMine : Gtk.Application
         status_item.set_expand (true);
         status_item.add (status_alignment);
         status_item.show();
-
-        /* create fancy faces */
-        win_face_image = load_face_image ("face-win.svg");
-        sad_face_image = load_face_image ("face-sad.svg");
-        smile_face_image = load_face_image ("face-smile.svg");
-        cool_face_image = load_face_image ("face-cool.svg");
-        worried_face_image = load_face_image ("face-worried.svg");
-
-        /* initialize toolbar */
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.show_arrow = false;
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-        /* replace the dull new-game icon with fancy faces */
-        set_face_image (smile_face_image);
 
         toolbar.insert (status_item, -1);
         main_vbox.pack_start (toolbar, false, false, 0);
@@ -305,7 +325,16 @@ public class GnoMine : Gtk.Application
         custom_game_screen.hide ();
         view_box.pack_start (custom_game_screen, true, false);
     }
-    
+
+    private bool window_state_event_cb (Gdk.EventWindowState event)
+    {
+        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
+            is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
+            is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
+        return false;
+    }
+
     private string make_minefield_description (string color, int width, int height, int n_mines)
     {
         var size_label = "%d × %d".printf (width, height);
@@ -318,16 +347,6 @@ public class GnoMine : Gtk.Application
         {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, N_("Start a new game"), new_game_cb},
         {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb}
     };
-
-    private const string ui_description =
-        "<ui>" +
-        "    <toolbar name='Toolbar'>" +
-        "        <toolitem action='NewGame'/>" +
-        "        <toolitem action='Hint'/>" +
-        "        <toolitem action='PauseGame'/>" +
-        "        <toolitem action='Fullscreen'/>" +
-        "    </toolbar>" +
-        "</ui>";
 
     public void start ()
     {
@@ -362,9 +381,9 @@ public class GnoMine : Gtk.Application
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
-        if (pause_action.get_is_paused ())
+        if (minefield_view.paused)
         {
-            pause_action.set_is_paused (false);
+            minefield_view.paused = false;
             return true;
         }
 
@@ -430,7 +449,10 @@ public class GnoMine : Gtk.Application
 
     private void fullscreen_cb ()
     {
-        fullscreen_action.set_is_fullscreen (!fullscreen_action.get_is_fullscreen ());
+        if (is_fullscreen)
+            window.unfullscreen ();
+        else
+            window.fullscreen ();
     }
 
     private void scores_cb ()
@@ -481,16 +503,12 @@ public class GnoMine : Gtk.Application
         clock.reset ();
         set_face_image (smile_face_image);
 
-        new_game.set_enabled (false);
-        new_game_action.set_sensitive (false);
-        repeat_size.set_enabled (false);
-        hint.set_enabled (false);
-        hint_action.set_sensitive (false);
-        pause.set_enabled (false);
-        pause_action.set_sensitive (false);
+        new_game_action.set_enabled (false);
+        repeat_size_action.set_enabled (false);
+        hint_action.set_enabled (false);
+        pause_action.set_enabled (false);
 
         minefield_view.paused = false;
-        pause_action.set_is_paused (false);
     }
 
     private void start_game ()
@@ -546,16 +564,12 @@ public class GnoMine : Gtk.Application
 
         update_flag_label ();
 
-        new_game.set_enabled (true);
-        new_game_action.set_sensitive (true);
-        repeat_size.set_enabled (true);
-        hint.set_enabled (true);
-        hint_action.set_sensitive (true);
-        pause.set_enabled (true);
-        pause_action.set_sensitive (true);
+        new_game_action.set_enabled (true);
+        repeat_size_action.set_enabled (true);
+        hint_action.set_enabled (true);
+        pause_action.set_enabled (true);
 
         minefield_view.paused = false;
-        pause_action.set_is_paused (false);
     }
 
     private void hint_cb ()
@@ -563,7 +577,7 @@ public class GnoMine : Gtk.Application
         uint x, y;
         minefield.hint (out x, out y);
 
-        /* There is a ten second penalty for accepting a hint. */
+        /* There is a ten second penalty for accepting a hint_action. */
         minefield.clear_mine (x, y);
         clock.add_seconds (10);
     }
@@ -582,23 +596,16 @@ public class GnoMine : Gtk.Application
 
     private void toggle_pause_cb ()
     {
-        pause_action.set_is_paused (!pause_action.get_is_paused ());
-    }
-
-    private void pause_cb ()
-    {
-        if (pause_action.get_is_paused ())
+        if (!minefield_view.paused)
         {
             minefield_view.paused = true;
-            hint.set_enabled (false);
-            hint_action.set_sensitive (false);
+            hint_action.set_enabled (false);
             clock.stop ();
         }
         else
         {
             minefield_view.paused = false;
-            hint.set_enabled (true);
-            hint_action.set_sensitive (true);
+            hint_action.set_enabled (true);
             clock.start ();
         }
     }
@@ -612,10 +619,8 @@ public class GnoMine : Gtk.Application
     private void explode_cb (Minefield minefield)
     {
         set_face_image (sad_face_image);
-        hint.set_enabled (false);
-        hint_action.set_sensitive (false);
-        pause.set_enabled (false);
-        pause_action.set_sensitive (false);
+        hint_action.set_enabled (false);
+        pause_action.set_enabled (false);
         clock.stop ();
     }
 
