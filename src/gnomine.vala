@@ -194,12 +194,12 @@ public class GnoMine : Gtk.Application
 
         var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
         status_alignment.add (status_box);
-        status_alignment.show();
+        status_alignment.show ();
 
         var status_item = new Gtk.ToolItem ();
         status_item.set_expand (true);
         status_item.add (status_alignment);
-        status_item.show();
+        status_item.show ();
 
         toolbar.insert (status_item, -1);
         main_vbox.pack_start (toolbar, false, false, 0);
