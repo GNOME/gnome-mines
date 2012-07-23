@@ -269,13 +269,10 @@ public class GnoMine : Gtk.Application
         custom_game_screen = new Gtk.AspectFrame ("", 0.5f, 0.5f, 0.0f, true);
         custom_game_screen.set_shadow_type (Gtk.ShadowType.NONE);
 
-        var custom_game_frame = new GnomeGamesSupport.Frame (_("Custom Size"));
-        custom_game_screen.add (custom_game_frame);
-
         var custom_field_grid = new Gtk.Grid ();
         custom_field_grid.set_row_spacing (6);
         custom_field_grid.set_column_spacing (12);
-        custom_game_frame.add (custom_field_grid);
+        custom_game_screen.add (custom_field_grid);
 
         label = new Gtk.Label.with_mnemonic (_("H_orizontal:"));
         label.set_alignment (0, 0.5f);
@@ -763,40 +760,35 @@ public class GnoMine : Gtk.Application
 
     private Gtk.Dialog create_preferences ()
     {
-        var vbox = new Gtk.VBox (false, 5);
-
-        var frame = new GnomeGamesSupport.Frame (_("Flags"));
-        vbox.pack_start (frame, false, false);
-        
-        var flag_options_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-        flag_options_vbox.show ();
-        frame.add (flag_options_vbox);
-
-        var question_toggle = new Gtk.CheckButton.with_mnemonic (_("_Use \"I'm not sure\" flags"));
-        question_toggle.toggled.connect (use_question_toggle_cb);
-        question_toggle.set_active (settings.get_boolean (KEY_USE_QUESTION_MARKS));
-        flag_options_vbox.pack_start (question_toggle, false, true, 0);
-
-        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags have been placed"));
-        overmine_toggle.toggled.connect (use_overmine_toggle_cb);
-        overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
-        flag_options_vbox.pack_start (overmine_toggle, false, true, 0);
-
         var dialog = new Gtk.Dialog.with_buttons (_("Mines Preferences"),
                                                   window,
                                                   0,
                                                   Gtk.Stock.CLOSE,
                                                   Gtk.ResponseType.CLOSE, null);
+        dialog.response.connect (pref_response_cb);
+        dialog.delete_event.connect (pref_delete_event_cb);
         dialog.set_border_width (5);
         dialog.set_resizable (false);
         var box = (Gtk.Box) dialog.get_content_area ();
-        box.set_spacing (2);
-        box.pack_start (vbox, false, false, 0);
 
-        dialog.response.connect (pref_response_cb);
-        dialog.delete_event.connect (pref_delete_event_cb);
+        var grid = new Gtk.Grid ();
+        grid.show ();
+        grid.border_width = 6;
+        grid.set_row_spacing (6);
+        grid.set_column_spacing (18);
+        box.add (grid);
 
-        vbox.show_all ();
+        var question_toggle = new Gtk.CheckButton.with_mnemonic (_("_Use \"I'm not sure\" flags"));
+        question_toggle.show ();
+        question_toggle.toggled.connect (use_question_toggle_cb);
+        question_toggle.set_active (settings.get_boolean (KEY_USE_QUESTION_MARKS));
+        grid.attach (question_toggle, 0, 0, 1, 1);
+
+        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags have been placed"));
+        overmine_toggle.show ();
+        overmine_toggle.toggled.connect (use_overmine_toggle_cb);
+        overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
+        grid.attach (overmine_toggle, 0, 1, 1, 1);
 
         return dialog;
     }
