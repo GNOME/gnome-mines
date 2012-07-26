@@ -31,6 +31,6 @@
   <p>To enable warnings, edit the preferences by selecting
   <guiseq><gui>Mines</gui><gui>Preferences</gui></guiseq> and ticking the
   checkbox next to <gui>Warn if too many flags have been placed</gui>. This
-  will warn you when you try to place too many flags on the board.</p>
+  will warn you when you try to place too many flags next to an open tile.</p>
 
 </page>
