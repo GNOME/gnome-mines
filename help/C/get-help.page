@@ -10,24 +10,27 @@
       <email>baptistem@gnome.org</email>
       <years>2011</years>
     </credit>
+    <credit type="author copyright editor">
+      <name>Ekaterina Gerasimova</name>
+      <email>kittykat3756@gmail.com</email>
+      <years>2012</years>
+    </credit>
 
-    <desc>Get help when blocked</desc>
+    <desc>Using hints and warnings when stuck</desc>
   </info>
 
-  <title>Get help when blocked</title>
+  <title>Getting help when stuck</title>
 
-  <p>You can get help while playing: </p>
-  <list>
-    <item>
-      <p>Hints. If you're in a situation when you don't know which tiles to uncover you
-      can ask for a hint. A hint will uncover a tile from the board, but will 
-      add ten seconds to the time of the game. To ask for a hint choose <guiseq><gui>
-      Game</gui><gui>Hint</gui></guiseq>.</p>
-    </item>
-    <item>
-      <p>"Too many flags" warning. When activated, this option will inform you
-         when you set too many flags in the same area.</p>
-    </item>
-  </list>
+  <p>You can use hints to reveal safe tiles and flag warnings to help you keep
+  track of flags.</p>
+
+  <p>Click <gui style="button">Hint</gui> in the toolbar to reveal a hidden
+  tile that is safe. You will be penalised for using hints: ten seconds will be
+  added to your total time.</p>
+
+  <p>To enable warnings, edit the preferences by selecting
+  <guiseq><gui>Mines</gui><gui>Preferences</gui></guiseq> and ticking the
+  checkbox next to <gui>Warn if too many flags have been placed</gui>. This
+  will warn you when you try to place too many flags on the board.</p>
 
 </page>
