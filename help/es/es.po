@@ -6,15 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-06-24 13:07+0000\n"
-"PO-Revision-Date: 2012-06-26 20:23+0200\n"
+"POT-Creation-Date: 2012-07-26 14:54+0000\n"
+"PO-Revision-Date: 2012-07-27 13:07+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Gtranslator 2.91.4\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -65,8 +66,8 @@ msgstr "Minas"
 
 #: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
 #: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
-#: C/high-scores.page:15(credit/name) C/new-game.page:16(credit/name)
-#: C/rules.page:16(credit/name)
+#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
+#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -127,10 +128,11 @@ msgstr "2011"
 
 #: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
 #: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
-#: C/flags.page:25(credit/years) C/high-scores.page:12(credit/years)
-#: C/high-scores.page:17(credit/years) C/new-game.page:13(credit/years)
-#: C/new-game.page:18(credit/years) C/rules.page:18(credit/years)
-#: C/shortcuts.page:11(credit/years) C/toolbar.page:10(credit/years)
+#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
+#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
+#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
+#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
+#: C/toolbar.page:10(credit/years)
 msgid "2012"
 msgstr "2012"
 
@@ -511,48 +513,51 @@ msgstr ""
 "gui><gui style=\"menuitem\">Preferencias</gui></guiseq>, y elija <gui>Usar "
 "banderas «no estoy seguro»</gui>."
 
-#: C/get-help.page:14(info/desc) C/get-help.page:17(page/title)
-msgid "Get help when blocked"
+#: C/get-help.page:19(info/desc)
+msgid "Using hints and warnings when stuck"
+msgstr "Usar pistas y advertencias cuando está bloqueado"
+
+#: C/get-help.page:22(page/title)
+#| msgid "Get help when blocked"
+msgid "Getting help when stuck"
 msgstr "Obtener ayuda si está bloqueado"
 
-#: C/get-help.page:19(page/p)
-msgid "You can get help while playing:"
-msgstr "Puede obtener ayuda mientras juega:"
-
-#: C/get-help.page:22(item/p)
-#| msgid ""
-#| "Hints. If you're in a situation you don't know which tiles uncover you "
-#| "can ask for a hint. A hint will uncover a tile from the board, but will "
-#| "add ten seconds to the time of the game. To ask for choose <guiseq><gui> "
-#| "Game</gui><gui>Hint</gui></guiseq>."
+#: C/get-help.page:24(page/p)
 msgid ""
-"Hints. If you're in a situation when you don't know which tiles to uncover "
-"you can ask for a hint. A hint will uncover a tile from the board, but will "
-"add ten seconds to the time of the game. To ask for a hint choose "
-"<guiseq><gui> Game</gui><gui>Hint</gui></guiseq>."
+"You can use hints to reveal safe tiles and flag warnings to help you keep "
+"track of flags."
 msgstr ""
-"Pistas. Si está en una situación en la que no sabe qué casillas descubrir, "
-"puede pedir una pista. Una pista descubrirá una casilla del tablero, pero "
-"añadirá 10 segundos al contador de tiempo. Para pedir una pista pulse "
-"<guiseq><gui>Juego</gui><gui>Pista</gui></guiseq>."
+"Puede usar las pistas para revelar las casillas seguras y las banderas de "
+"advertencia para ayudarle a llevar un control de las banderas."
 
-#: C/get-help.page:28(item/p)
-#| msgid ""
-#| "\"Too many flags\" warning. When activated, this option will inform you "
-#| "when you set too much flag in the same area."
+#: C/get-help.page:27(page/p)
 msgid ""
-"\"Too many flags\" warning. When activated, this option will inform you when "
-"you set too many flags in the same area."
+"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+"tile that is safe. You will be penalised for using hints: ten seconds will "
+"be added to your total time."
 msgstr ""
-"Advertencia de \"demasiadas banderas\". Cuando está activada, esta opción le "
-"avisará cuando ponga muchas banderas en la misma área."
+"Pulse <gui style=\"button\">Pista</gui> en la barra de herramientas para "
+"revelar una casilla oculta que es segura. Tendrá una penalización por usar "
+"pistas: se añadirán 10 segundos a su tiempo total."
+
+#: C/get-help.page:31(page/p)
+msgid ""
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
+"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
+"you try to place too many flags next to an open tile."
+msgstr ""
+"Para activar las advertencias, edite las preferencias seleccionando "
+"<guiseq><gui>Minas</gui><gui>Preferencias</gui></guiseq> y marque la casilla "
+"junto a <gui>Advertir si se han colocado demasiadas banderas</gui>. Esto le "
+"advertirá cuando intente colocar demasiadas banderas junto a una casilla "
+"abierta."
 
 #: C/high-scores.page:20(info/desc)
 msgid "The list of best performers"
 msgstr "La lista de los mejores"
 
 #: C/high-scores.page:23(page/title)
-#| msgid "High Score"
 msgid "Scores"
 msgstr "Puntuación"
 
@@ -895,6 +900,35 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "You can get help while playing:"
+#~ msgstr "Puede obtener ayuda mientras juega:"
+
+#~| msgid ""
+#~| "Hints. If you're in a situation you don't know which tiles uncover you "
+#~| "can ask for a hint. A hint will uncover a tile from the board, but will "
+#~| "add ten seconds to the time of the game. To ask for choose <guiseq><gui> "
+#~| "Game</gui><gui>Hint</gui></guiseq>."
+#~ msgid ""
+#~ "Hints. If you're in a situation when you don't know which tiles to "
+#~ "uncover you can ask for a hint. A hint will uncover a tile from the "
+#~ "board, but will add ten seconds to the time of the game. To ask for a "
+#~ "hint choose <guiseq><gui> Game</gui><gui>Hint</gui></guiseq>."
+#~ msgstr ""
+#~ "Pistas. Si está en una situación en la que no sabe qué casillas "
+#~ "descubrir, puede pedir una pista. Una pista descubrirá una casilla del "
+#~ "tablero, pero añadirá 10 segundos al contador de tiempo. Para pedir una "
+#~ "pista pulse <guiseq><gui>Juego</gui><gui>Pista</gui></guiseq>."
+
+#~| msgid ""
+#~| "\"Too many flags\" warning. When activated, this option will inform you "
+#~| "when you set too much flag in the same area."
+#~ msgid ""
+#~ "\"Too many flags\" warning. When activated, this option will inform you "
+#~ "when you set too many flags in the same area."
+#~ msgstr ""
+#~ "Advertencia de \"demasiadas banderas\". Cuando está activada, esta opción "
+#~ "le avisará cuando ponga muchas banderas en la misma área."
 
 #~| msgid ""
 #~| "The high scores lists the ten best <app>gnomine</app> players, and how "
@@ -1422,14 +1456,14 @@ msgstr ""
 #~ "numbered square."
 #~ msgstr ""
 #~ "Hay una casilla de verificación en el diálogo de preferencias llamada "
-#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse "
-#~ "con el botón derecho sobre una casilla, rotará entre las banderas "
-#~ "normales usadas para marcar una casilla como minada, una bandera con n "
-#~ "signo de interrogación en ella y una ausencia de bandera. Esta nueva "
-#~ "bandera es para ayudarle con sus razonamientos, para marcar casillas que "
-#~ "cree que pueden ser minas pero no está seguro. Estas banderas no tienen "
-#~ "efecto en el juego; aún debe usar el número apropiado de marcadores rojos "
-#~ "de bandera para poder limpiar alrededor de la casilla numerada."
+#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse con "
+#~ "el botón derecho sobre una casilla, rotará entre las banderas normales "
+#~ "usadas para marcar una casilla como minada, una bandera con n signo de "
+#~ "interrogación en ella y una ausencia de bandera. Esta nueva bandera es "
+#~ "para ayudarle con sus razonamientos, para marcar casillas que cree que "
+#~ "pueden ser minas pero no está seguro. Estas banderas no tienen efecto en "
+#~ "el juego; aún debe usar el número apropiado de marcadores rojos de "
+#~ "bandera para poder limpiar alrededor de la casilla numerada."
 
 #~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 #~ msgstr ""
