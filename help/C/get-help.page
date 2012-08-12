@@ -3,7 +3,7 @@
       id="get-help">
   <info>
     <link type="guide" xref="index#tips"/>
-    <revision version="0.1" date="2011-12-07" status="stub"/>
+    <revision version="0.1" date="2012-08-12" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -16,10 +16,9 @@
       <years>2012</years>
     </credit>
 
-    <desc>Using hints and warnings when stuck</desc>
   </info>
 
-  <title>Getting help when stuck</title>
+  <title>Hints and warnings</title>
 
   <p>You can use hints to reveal safe tiles and flag warnings to help you keep
   track of flags.</p>

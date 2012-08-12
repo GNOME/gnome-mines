@@ -4,7 +4,7 @@
 
   <info>
     <link type="guide" xref="index#tips"/>
-    <revision version="0.1" date="2011-12-05" status="stub"/>
+    <revision version="0.1" date="2012-08-12" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -17,10 +17,9 @@
       <years>2012</years>
     </credit>
 
-    <desc>Select an existing or custom field size</desc>
   </info>
 
-  <title>Change the game board size</title>
+  <title>How to change the game board size</title>
 
   <p>You can select a field size at the start of a new game.</p>
 

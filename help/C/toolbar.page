@@ -3,7 +3,7 @@
       id="toolbar">
   <info>
     <link type="guide" xref="index#tips"/>
-    <revision version="0.1" date="2012-01-16" status="review"/>
+    <revision version="0.1" date="2012-08-12" status="review"/>
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
       <email>tiffany.antopolski@gmail.com</email>
@@ -17,7 +17,7 @@
   <p>The toolbar, located under the menu bar, lets you perform common actions 
   with your mouse. To use a toolbar item, just click on it. The buttons, from 
   left to right, are <gui><link xref="new-game">New Game</link></gui>, <link 
-  xref="get-help">Hint</link>, <gui><link xref="pause">Pause</link></gui> and
+  xref="get-help">Hint</link>, <gui>Pause</gui> and
   <gui>Fullscreen</gui>.</p>
 
 </page>

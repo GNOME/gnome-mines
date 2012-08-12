@@ -5,10 +5,10 @@
     </title>
     <title type="link">GNOME Mines</title>
     <title type="text">GNOME Mines</title>
-    <revision pkgversion="3.4" version="0.1" date="2011-12-10" status="draft"/>
+    <revision pkgversion="3.5.5" version="0.1" date="2012-08-12" status="review"/>
     <credit type="author">
-      <name></name>
-      <email></email>
+      <name>Brian Grohe</name>
+      <email>grohe43@gmail.com</email>
     </credit>
     <credit type="editor">
       <name>Ekaterina Gerasimova</name>
