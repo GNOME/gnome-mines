@@ -657,7 +657,7 @@ public class GnoMine : Gtk.Application
             "Robert Ancell",
             "",
             _("Score:"),
-            "Horacio J. Pe\xc3\xb1a",
+            "Horacio J. Peña",
             "",
             _("Resizing and SVG support:"),
             "Steve Chaplin",
