@@ -36,7 +36,7 @@ public class GnoMine : Gtk.Application
     private Gtk.Dialog? pref_dialog = null;
     private Gtk.Label flag_label;
     private Gtk.SpinButton n_mines_spin;
-    private GnomeGamesSupport.Clock clock;
+    private Gtk.Label clock_label;
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
@@ -145,17 +145,9 @@ public class GnoMine : Gtk.Application
         status_box.pack_start (flag_label, false, false, 0);
 
         /* game clock */
-        var box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-        box.show ();
-        status_box.pack_start (box, false, false, 0);
-
-        var label = new Gtk.Label (_("Time: "));
-        box.pack_start (label, false, false, 0);
-        label.show ();
-
-        clock = new GnomeGamesSupport.Clock ();
-        clock.show ();
-        box.pack_start (clock, false, false, 0);
+        clock_label = new Gtk.Label ("");
+        clock_label.show ();
+        status_box.pack_start (clock_label, false, false, 0);
 
         /* create fancy faces */
         win_face_image = load_face_image ("face-win.svg");
@@ -230,7 +222,7 @@ public class GnoMine : Gtk.Application
         new_game_table.attach_defaults (button_small, 0, 1, 0, 1);
         button_small.clicked.connect (small_size_clicked_cb);
 
-        label = new Gtk.Label (null);
+        var label = new Gtk.Label (null);
         label.set_markup (make_minefield_description ("#0000ff", 8, 8, 10));
         label.set_justify (Gtk.Justification.CENTER);
         button_small.add (label);
@@ -321,6 +313,8 @@ public class GnoMine : Gtk.Application
         custom_game_screen.show_all ();
         custom_game_screen.hide ();
         view_box.pack_start (custom_game_screen, true, false);
+
+        tick_cb ();
     }
 
     private bool window_state_event_cb (Gdk.EventWindowState event)
@@ -378,9 +372,9 @@ public class GnoMine : Gtk.Application
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
-        if (minefield_view.paused)
+        if (minefield_view.minefield.paused)
         {
-            minefield_view.paused = false;
+            minefield_view.minefield.paused = false;
             return true;
         }
 
@@ -496,8 +490,6 @@ public class GnoMine : Gtk.Application
         minefield_view.hide ();
         new_game_screen.show ();
         flag_label.set_text("");
-        clock.stop ();
-        clock.reset ();
         set_face_image (smile_face_image);
 
         new_game_action.set_enabled (false);
@@ -505,7 +497,7 @@ public class GnoMine : Gtk.Application
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
 
-        minefield_view.paused = false;
+        minefield_view.minefield.paused = false;
     }
 
     private void start_game ()
@@ -515,7 +507,6 @@ public class GnoMine : Gtk.Application
         minefield_view.show ();
         new_game_screen.hide ();
 
-        clock.reset ();
         set_face_image (smile_face_image);
 
         int x, y, n;
@@ -556,6 +547,7 @@ public class GnoMine : Gtk.Application
         minefield.marks_changed.connect (marks_changed_cb);
         minefield.explode.connect (explode_cb);
         minefield.cleared.connect (cleared_cb);
+        minefield.tick.connect (tick_cb);
 
         minefield_view.minefield = minefield;
 
@@ -566,17 +558,12 @@ public class GnoMine : Gtk.Application
         hint_action.set_enabled (true);
         pause_action.set_enabled (true);
 
-        minefield_view.paused = false;
+        minefield_view.minefield.paused = false;
     }
 
     private void hint_cb ()
     {
-        uint x, y;
-        minefield.hint (out x, out y);
-
-        /* There is a ten second penalty for accepting a hint_action. */
-        minefield.clear_mine (x, y);
-        clock.add_seconds (10);
+        minefield.hint ();
     }
 
     private void new_game_cb ()
@@ -593,24 +580,21 @@ public class GnoMine : Gtk.Application
 
     private void toggle_pause_cb ()
     {
-        if (!minefield_view.paused)
+        if (!minefield_view.minefield.paused)
         {
-            minefield_view.paused = true;
+            minefield_view.minefield.paused = true;
             hint_action.set_enabled (false);
-            clock.stop ();
         }
         else
         {
-            minefield_view.paused = false;
+            minefield_view.minefield.paused = false;
             hint_action.set_enabled (true);
-            clock.start ();
         }
     }
 
     private void marks_changed_cb (Minefield minefield)
     {
         update_flag_label ();
-        clock.start ();
     }
 
     private void explode_cb (Minefield minefield)
@@ -618,16 +602,13 @@ public class GnoMine : Gtk.Application
         set_face_image (sad_face_image);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
-        clock.stop ();
     }
 
     private void cleared_cb (Minefield minefield)
     {
-        clock.stop ();
-
         set_face_image (win_face_image);
 
-        var seconds = clock.get_seconds ();
+        var seconds = (int) (minefield.elapsed + 0.5);
         var pos = highscores.add_time_score ((float) (seconds / 60) + (float) (seconds % 60) / 100);
 
         if (show_scores (pos, true) == Gtk.ResponseType.REJECT)
@@ -636,10 +617,20 @@ public class GnoMine : Gtk.Application
             show_new_game_screen ();
     }
 
+    private void tick_cb ()
+    {
+        var elapsed = 0;
+        if (minefield != null)
+            elapsed = (int) (minefield.elapsed + 0.5);
+        var hours = elapsed / 3600;
+        var minutes = (elapsed - hours * 3600) / 60;
+        var seconds = elapsed - hours * 3600 - minutes * 60;
+        clock_label.set_text ("%s: %02d:%02d:%02d".printf (_("Time"), hours, minutes, seconds));
+    }
+
     private void look_cb (MinefieldView minefield_view)
     {
         set_face_image (worried_face_image);
-        clock.start ();
     }
 
     private void unlook_cb (MinefieldView minefield_view)

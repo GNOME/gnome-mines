@@ -66,13 +66,6 @@ public class MinefieldView : Gtk.DrawingArea
         }
     }
 
-    private bool _paused = false;
-    public bool paused
-    {
-        get { return _paused; }
-        set { _paused = value; queue_draw (); }
-    }
-
     public signal void look ();
     public signal void unlook ();
 
@@ -101,6 +94,7 @@ public class MinefieldView : Gtk.DrawingArea
             selected_y = -1;
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
+            _minefield.paused_changed.connect (() => { queue_draw (); });
             queue_resize ();
         }
     }
@@ -284,7 +278,7 @@ public class MinefieldView : Gtk.DrawingArea
             cr.stroke ();
             cr.restore ();
 
-            if (paused)
+            if (minefield.paused)
                 return;
 
             /* Draw explosion if have uncovered a mine */
@@ -329,7 +323,7 @@ public class MinefieldView : Gtk.DrawingArea
                            this,
                            "button", 0, 0, (int) mine_size, (int) mine_size);
                            
-            if (paused)
+            if (minefield.paused)
                 return;
 
             /* Draw flags on uncleared locations */
@@ -409,7 +403,7 @@ public class MinefieldView : Gtk.DrawingArea
         }
 
         /* Draw pause overlay */
-        if (paused)
+        if (minefield.paused)
         {
             cr.set_source_rgba (0, 0, 0, 0.75);
             cr.paint ();
@@ -521,7 +515,7 @@ public class MinefieldView : Gtk.DrawingArea
         if (event.type != Gdk.EventType.BUTTON_PRESS)
             return false;
 
-        if (minefield.exploded || minefield.is_complete || paused)
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
             return false;
 
         var x = (int) Math.floor ((event.x - x_offset) / mine_size);

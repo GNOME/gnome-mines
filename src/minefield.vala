@@ -84,6 +84,42 @@ public class Minefield
         }
     }
 
+    /* Game timer */
+    private double clock_elapsed;
+    private Timer? clock;
+    private uint clock_timeout;
+
+    public double elapsed
+    {
+        get
+        {
+            if (clock == null)
+                return 0.0;
+            return clock_elapsed + clock.elapsed ();
+        }
+    }
+
+    private bool _paused = false;
+    public bool paused
+    {
+        set
+        {
+            _paused = value;
+            if (clock != null)
+            {
+                if (value)
+                    stop_clock ();
+                else
+                    continue_clock ();
+            }
+            paused_changed ();
+        }
+        get { return _paused; }
+    }
+
+    public signal void paused_changed ();
+    public signal void tick ();
+
     public signal void redraw_sector (uint x, uint y);
 
     public signal void marks_changed ();
@@ -118,6 +154,8 @@ public class Minefield
 
     public void clear_mine (uint x, uint y)
     {
+        start_clock ();
+
         /* Place mines on first attempt to clear */
         if (!placed_mines)
         {
@@ -136,6 +174,7 @@ public class Minefield
             if (!exploded)
             {
                 exploded = true;
+                stop_clock ();
                 explode ();
             }
             return;
@@ -202,7 +241,7 @@ public class Minefield
         return locations[x, y].flag;
     }
 
-    public void hint (out uint x, out uint y)
+    public void hint ()
     {
         /* We search for three cases:
          *
@@ -260,8 +299,13 @@ public class Minefield
 
         /* Makes sure that the program knows about the successful
          * hint before a possible win. */
-        x = hint_location / width;
-        y = hint_location % width;
+        var x = hint_location / width;
+        var y = hint_location % width;
+
+        /* There is a ten second penalty for accepting a hint_action. */
+        clear_mine (x, y);
+        clock_elapsed += 10.0;
+        tick ();
     }
 
     public uint get_n_adjacent_mines (uint x, uint y)
@@ -329,5 +373,45 @@ public class Minefield
                 }
             }
         }
+    }
+
+    private void start_clock ()
+    {
+        if (clock == null)
+            clock = new Timer ();
+        timeout_cb ();
+    }
+
+    private void stop_clock ()
+    {
+        if (clock == null)
+            return;
+        if (clock_timeout != 0)
+            Source.remove (clock_timeout);
+        clock_timeout = 0;
+        clock.stop ();
+        tick ();
+    }
+
+    private void continue_clock ()
+    {
+        if (clock == null)
+            clock = new Timer ();
+        else
+            clock.continue ();
+        timeout_cb ();
+    }
+
+    private bool timeout_cb ()
+    {
+        /* Notify on the next tick */
+        var elapsed = clock.elapsed ();
+        var next = (int) (elapsed + 1.0);
+        var wait = next - elapsed;
+        clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
+
+        tick ();
+
+        return false;
     }
 }
