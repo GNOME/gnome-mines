@@ -18,6 +18,7 @@ gnomine_CFLAGS = \
 gnomine_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
+	--pkg librsvg-2.0 \
 	--pkg pango \
 	--pkg pangocairo \
 	--vapidir $(top_srcdir)/libgames-support \

@@ -13,13 +13,6 @@ public class MinefieldView : Gtk.DrawingArea
     private int selected_x = -1;
     private int selected_y = -1;
 
-    /* Images for flags and mines */
-    private GnomeGamesSupport.Preimage flag_preimage;
-    private GnomeGamesSupport.Preimage mine_preimage;
-    private GnomeGamesSupport.Preimage question_preimage;
-    private GnomeGamesSupport.Preimage bang_preimage;
-    private GnomeGamesSupport.Preimage warning_preimage;
-
     /* Pre-rendered images */
     private uint render_size = 0;
     private Cairo.Pattern? flag_pattern;
@@ -72,12 +65,6 @@ public class MinefieldView : Gtk.DrawingArea
     public MinefieldView ()
     {
         set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
-
-        flag_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "flag.svg"));
-        mine_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "mine.svg"));
-        question_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "flag-question.svg"));
-        bang_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "bang.svg"));
-        warning_preimage = load_preimage (Path.build_filename (DATA_DIRECTORY, "warning.svg"));
         number_patterns = new Cairo.Pattern[8];
     }
     
@@ -124,23 +111,20 @@ public class MinefieldView : Gtk.DrawingArea
                     redraw_sector_cb (x, y);
     }
 
-    private GnomeGamesSupport.Preimage? load_preimage (string filename)
-    {
-        try
-        {
-            return new GnomeGamesSupport.Preimage.from_file (filename);
-        }
-        catch (Error e)
-        {
-            return null;
-        }
-    }
-
-    private Cairo.Pattern render_preimage_pattern (Cairo.Context cr, GnomeGamesSupport.Preimage preimage)
+    private Cairo.Pattern render_svg_pattern (Cairo.Context cr, string filename)
     {
         var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, (int) mine_size, (int) mine_size); 
         var c = new Cairo.Context (surface);
-        var pixbuf = preimage.render ((int) mine_size - 2, (int) mine_size - 2);
+        Gdk.Pixbuf pixbuf;
+        var size = (int) mine_size - 2;
+        try
+        {
+            pixbuf = Rsvg.pixbuf_from_file_at_size (filename, size, size);
+        }
+        catch (Error e)
+        {
+            pixbuf = new Gdk.Pixbuf (Gdk.Colorspace.RGB, true, 8, size, size);
+        }
         Gdk.cairo_set_source_pixbuf (c, pixbuf, 1, 1);
         c.paint ();
 
@@ -285,7 +269,7 @@ public class MinefieldView : Gtk.DrawingArea
             if (minefield.has_mine (x, y))
             {
                 if (bang_pattern == null)
-                    bang_pattern = render_preimage_pattern (cr, bang_preimage);
+                    bang_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "bang.svg"));
                 cr.set_source (bang_pattern);
                 cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
@@ -297,7 +281,7 @@ public class MinefieldView : Gtk.DrawingArea
                 if (use_overmine_warning && minefield.has_flag_warning (x, y))
                 {
                     if (warning_pattern == null)
-                        warning_pattern = render_preimage_pattern (cr, warning_preimage);
+                        warning_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "warning.svg"));
                     cr.set_source (warning_pattern);
                     cr.rectangle (0, 0, mine_size, mine_size);
                     cr.fill ();
@@ -330,7 +314,7 @@ public class MinefieldView : Gtk.DrawingArea
             if (minefield.get_flag (x, y) == FlagType.FLAG)
             {
                 if (flag_pattern == null)
-                    flag_pattern = render_preimage_pattern (cr, flag_preimage);                    
+                    flag_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "flag.svg"));                    
                 cr.set_source (flag_pattern);
                 cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
@@ -360,7 +344,7 @@ public class MinefieldView : Gtk.DrawingArea
             else if (minefield.exploded && minefield.has_mine (x, y))
             {
                 if (mine_pattern == null)
-                    mine_pattern = render_preimage_pattern (cr, mine_preimage);
+                    mine_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "mine.svg"));
                 cr.set_source (mine_pattern);
                 cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
@@ -368,7 +352,7 @@ public class MinefieldView : Gtk.DrawingArea
             else if (minefield.get_flag (x, y) == FlagType.MAYBE)
             {
                 if (question_pattern == null)
-                    question_pattern = render_preimage_pattern (cr, question_preimage);
+                    question_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "flag-question.svg"));
                 cr.set_source (question_pattern);
                 cr.rectangle (0, 0, mine_size, mine_size);
                 cr.fill ();
