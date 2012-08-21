@@ -22,8 +22,12 @@ public class GnoMine : Gtk.Application
     private Gtk.Image cool_face_image;
     private Gtk.Image worried_face_image;
 
+    private Gtk.ToolButton fullscreen_button;
+
     /* Main window */
     private Gtk.Window window;
+    private int window_width;
+    private int window_height;
     private bool is_fullscreen;
     private bool is_maximized;
 
@@ -125,8 +129,14 @@ public class GnoMine : Gtk.Application
         window = new Gtk.ApplicationWindow (this);
         window.window_state_event.connect (window_state_event_cb);
         window.title = _("Mines");
+        window.configure_event.connect (window_configure_event_cb);
+        window.window_state_event.connect (window_state_event_cb);
+        window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
+        if (settings.get_boolean ("window-is-fullscreen"))
+            window.fullscreen ();
+        else if (settings.get_boolean ("window-is-maximized"))
+            window.maximize ();
 
-        GnomeGamesSupport.settings_bind_window_state ("/org/gnome/gnomine/", window);
         add_window (window);
 
         GnomeGamesSupport.stock_init ();
@@ -179,7 +189,7 @@ public class GnoMine : Gtk.Application
         pause_button.show ();
         toolbar.insert (pause_button, -1);
 
-        var fullscreen_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_FULLSCREEN);
+        fullscreen_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_FULLSCREEN);
         fullscreen_button.action_name = "app.fullscreen";
         fullscreen_button.show ();
         toolbar.insert (fullscreen_button, -1);
@@ -317,12 +327,29 @@ public class GnoMine : Gtk.Application
         tick_cb ();
     }
 
+    private bool window_configure_event_cb (Gdk.EventConfigure event)
+    {
+        if (!is_maximized && !is_fullscreen)
+        {
+            window_width = event.width;
+            window_height = event.height;
+        }
+
+        return false;
+    }
+
     private bool window_state_event_cb (Gdk.EventWindowState event)
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
         if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
+        {
             is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
+            if (is_fullscreen)
+                fullscreen_button.stock_id = GnomeGamesSupport.STOCK_LEAVE_FULLSCREEN;
+            else
+                fullscreen_button.stock_id = GnomeGamesSupport.STOCK_FULLSCREEN;
+        }
         return false;
     }
 
@@ -344,6 +371,17 @@ public class GnoMine : Gtk.Application
         window.show ();
         show_new_game_screen ();
         set_face_image (smile_face_image);
+    }
+
+    protected override void shutdown ()
+    {
+        base.shutdown ();
+
+        /* Save window state */
+        settings.set_int ("window-width", window_width);
+        settings.set_int ("window-height", window_height);
+        settings.set_boolean ("window-is-maximized", is_maximized);
+        settings.set_boolean ("window-is-fullscreen", is_fullscreen);
     }
 
     public override void activate ()
