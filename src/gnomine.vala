@@ -23,6 +23,7 @@ public class GnoMine : Gtk.Application
     private Gtk.Image worried_face_image;
 
     private Gtk.ToolButton fullscreen_button;
+    private Gtk.ToolButton pause_button;
 
     /* Main window */
     private Gtk.Window window;
@@ -184,7 +185,7 @@ public class GnoMine : Gtk.Application
         hint_button.show ();
         toolbar.insert (hint_button, -1);
 
-        var pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
+        pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
         pause_button.action_name = "app.pause";
         pause_button.show ();
         toolbar.insert (pause_button, -1);
@@ -622,11 +623,13 @@ public class GnoMine : Gtk.Application
         {
             minefield_view.minefield.paused = true;
             hint_action.set_enabled (false);
+            pause_button.stock_id = GnomeGamesSupport.STOCK_RESUME_GAME;
         }
         else
         {
             minefield_view.minefield.paused = false;
             hint_action.set_enabled (true);
+            pause_button.stock_id = GnomeGamesSupport.STOCK_PAUSE_GAME;
         }
     }
 
