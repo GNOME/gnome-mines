@@ -183,6 +183,7 @@ public class Minefield
         /* Mark unmarked mines when won */
         if (is_complete)
         {
+            stop_clock ();
             for (var tx = 0; tx < width; tx++)
                 for (var ty = 0; ty < height; ty++)
                     if (has_mine (tx, ty))
