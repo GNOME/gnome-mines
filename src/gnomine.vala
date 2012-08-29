@@ -726,6 +726,8 @@ public class GnoMine : Gtk.Application
             null
         };
 
+        var license = "Mines is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nMines is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Mines; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA";
+
         Gtk.show_about_dialog (window,
                                "name", _("Mines"),
                                "version", VERSION,
@@ -733,7 +735,7 @@ public class GnoMine : Gtk.Application
                                _("The popular logic puzzle minesweeper. Clear mines from a board using hints from squares you have already uncovered.\n\nMines is a part of GNOME Games."),
                                "copyright",
                                "Copyright \xc2\xa9 1997-2008 Free Software Foundation, Inc.",
-                               "license", GnomeGamesSupport.get_license (_("Mines")),
+                               "license", license,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
