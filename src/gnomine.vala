@@ -128,7 +128,6 @@ public class GnoMine : Gtk.Application
         add_accelerator ("<Primary>q", "app.quit", null);
 
         window = new Gtk.ApplicationWindow (this);
-        window.window_state_event.connect (window_state_event_cb);
         window.title = _("Mines");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
