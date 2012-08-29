@@ -122,7 +122,8 @@ public class GnoMine : Gtk.Application
 
         add_accelerator ("<Primary>n", "app.new-game", null);
         add_accelerator ("<Primary>r", "app.repeat-size", null);
-        add_accelerator ("<Primary>p", "app.pause", null);
+        add_accelerator ("Pause", "app.pause", null);
+        add_accelerator ("F11", "app.fullscreen", null);
         add_accelerator ("F1", "app.help", null);
         add_accelerator ("<Primary>w", "app.quit", null);
         add_accelerator ("<Primary>q", "app.quit", null);
@@ -138,8 +139,6 @@ public class GnoMine : Gtk.Application
             window.maximize ();
 
         add_window (window);
-
-        GnomeGamesSupport.stock_init ();
 
         var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         window.add (main_vbox);
@@ -171,25 +170,33 @@ public class GnoMine : Gtk.Application
         toolbar.show_arrow = false;
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
 
-        face_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_NEW_GAME);
+        face_button = new Gtk.ToolButton (null, _("_New"));
+        face_button.use_underline = true;
+        face_button.icon_name = "document-new";
         face_button.action_name = "app.new-game";
         face_button.is_important = true;
         set_face_image (smile_face_image);
         face_button.show ();
         toolbar.insert (face_button, -1);
 
-        var hint_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_HINT);
+        var hint_button = new Gtk.ToolButton (null, _("Hint"));
+        hint_button.use_underline = true;
+        hint_button.icon_name = "dialog-information";
         hint_button.action_name = "app.hint";
         hint_button.is_important = true;
         hint_button.show ();
         toolbar.insert (hint_button, -1);
 
-        pause_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_PAUSE_GAME);
+        pause_button = new Gtk.ToolButton (null, _("_Pause"));
+        pause_button.icon_name = "media-playback-pause";
+        pause_button.use_underline = true;
         pause_button.action_name = "app.pause";
         pause_button.show ();
         toolbar.insert (pause_button, -1);
 
-        fullscreen_button = new Gtk.ToolButton.from_stock (GnomeGamesSupport.STOCK_FULLSCREEN);
+        fullscreen_button = new Gtk.ToolButton (null, _("_Fullscreen"));
+        fullscreen_button.icon_name = "view-fullscreen";
+        fullscreen_button.use_underline = true;
         fullscreen_button.action_name = "app.fullscreen";
         fullscreen_button.show ();
         toolbar.insert (fullscreen_button, -1);
@@ -346,9 +353,15 @@ public class GnoMine : Gtk.Application
         {
             is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
             if (is_fullscreen)
-                fullscreen_button.stock_id = GnomeGamesSupport.STOCK_LEAVE_FULLSCREEN;
+            {
+                fullscreen_button.label = _("_Leave Fullscreen");
+                fullscreen_button.icon_name = "view-restore";
+            }
             else
-                fullscreen_button.stock_id = GnomeGamesSupport.STOCK_FULLSCREEN;
+            {
+                fullscreen_button.label = _("_Fullscreen");            
+                fullscreen_button.icon_name = "view-fullscreen";
+            }
         }
         return false;
     }
@@ -359,12 +372,6 @@ public class GnoMine : Gtk.Application
         var mines_label = ngettext ("<b>%d</b> mine", "<b>%d</b> mines", n_mines).printf (n_mines);
         return "<span fgcolor='%s'><span size='x-large' weight='ultrabold'>%s</span>\n%s</span>".printf (color, size_label, mines_label);
     }
-
-    private const Gtk.ActionEntry actions[] =
-    {
-        {"NewGame", GnomeGamesSupport.STOCK_NEW_GAME, null, null, N_("Start a new game"), new_game_cb},
-        {"Hint", GnomeGamesSupport.STOCK_HINT, null, null, N_("Show a hint"), hint_cb}
-    };
 
     public void start ()
     {
@@ -626,13 +633,15 @@ public class GnoMine : Gtk.Application
         {
             minefield_view.minefield.paused = true;
             hint_action.set_enabled (false);
-            pause_button.stock_id = GnomeGamesSupport.STOCK_RESUME_GAME;
+            pause_button.icon_name = "media-playback-start";
+            pause_button.label = _("Res_ume");
         }
         else
         {
             minefield_view.minefield.paused = false;
             hint_action.set_enabled (true);
-            pause_button.stock_id = GnomeGamesSupport.STOCK_PAUSE_GAME;
+            pause_button.icon_name = "media-playback-pause";
+            pause_button.label = _("_Pause");
         }
     }
 
