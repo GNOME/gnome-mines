@@ -31,6 +31,9 @@ public class GnoMine : Gtk.Application
     private int window_height;
     private bool is_fullscreen;
     private bool is_maximized;
+    
+    /* Game history */
+    private History history;
 
     /* Minefield being played */
     private Minefield minefield;
@@ -64,16 +67,6 @@ public class GnoMine : Gtk.Application
         { "about",         about_cb                                               }
     };
 
-    private const GnomeGamesSupport.ScoresCategory scorecats[] =
-    {
-        {"Small",  NC_("board size", "Small") },
-        {"Medium", NC_("board size", "Medium") },
-        {"Large",  NC_("board size", "Large") },
-        {"Custom", NC_("board size", "Custom") }
-    };
-
-    private GnomeGamesSupport.Scores highscores;
-
     public GnoMine ()
     {
         Object (application_id: "org.gnome.gnomine", flags: ApplicationFlags.FLAGS_NONE);
@@ -86,8 +79,6 @@ public class GnoMine : Gtk.Application
         Environment.set_application_name (_("Mines"));
 
         settings = new Settings ("org.gnome.gnomine");
-
-        highscores = new GnomeGamesSupport.Scores ("gnomine", scorecats, "board size", null, 0 /* default category */, GnomeGamesSupport.ScoreStyle.TIME_ASCENDING);
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
@@ -332,6 +323,9 @@ public class GnoMine : Gtk.Application
         view_box.pack_start (custom_game_screen, true, false);
 
         tick_cb ();
+
+        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnomine", "history"));
+        history.load ();
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
@@ -436,51 +430,16 @@ public class GnoMine : Gtk.Application
         flag_label.set_text (_("Flags: %u/%u").printf (minefield.n_flags, minefield.n_mines));
     }
 
-    /* Show the high scores dialog - creating it if necessary. If pos is
-     * greater than 0 the appropriate score is highlighted. If the score isn't
-     * a high score and this isn't a direct request to see the scores, we
-     * only show a simple dialog. */
-    private int show_scores (int pos, bool endofgame)
+    private int show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
     {
-        if (endofgame && (pos <= 0))
-        {
-            var dialog = new Gtk.MessageDialog.with_markup (window,
-                                                            Gtk.DialogFlags.DESTROY_WITH_PARENT,
-                                                            Gtk.MessageType.INFO,
-                                                            Gtk.ButtonsType.NONE,
-                                                            "<b>%s</b>\n%s",
-                                                            _("The Mines Have Been Cleared!"),
-                                                            _("Great work, but unfortunately your score did not make the top ten."));
-            dialog.add_buttons (Gtk.Stock.QUIT, Gtk.ResponseType.REJECT,
-                                _("_New Game"), Gtk.ResponseType.ACCEPT, null);
-            dialog.set_default_response (Gtk.ResponseType.ACCEPT);
-            dialog.set_title ("");
-            var result = dialog.run ();
-            dialog.destroy ();
-            return result;
-        }
-        else
-        {
-            var dialog = new GnomeGamesSupport.ScoresDialog (window, highscores, _("Mines Scores"));
-            dialog.set_category_description (_("Size:"));
+        var dialog = new ScoreDialog (history, selected_entry, show_quit);
+        dialog.modal = true;
+        dialog.transient_for = window;
 
-            if (pos > 0)
-            {
-                dialog.set_hilight (pos);
-                var message = "<b>%s</b>\n\n%s".printf (_("Congratulations!"), pos == 1 ? _("Your score is the best!") : _("Your score has made the top ten."));
-                dialog.set_message (message);
-            }
-            else
-                dialog.set_message (null);
+        var result = dialog.run ();
+        dialog.destroy ();
 
-            if (endofgame)
-                dialog.set_buttons (GnomeGamesSupport.ScoresButtons.QUIT_BUTTON | GnomeGamesSupport.ScoresButtons.NEW_GAME_BUTTON);
-            else
-                dialog.set_buttons (0);
-            var result = dialog.run ();
-            dialog.destroy ();
-            return result;
-        }
+        return result;
     }
 
     private void fullscreen_cb ()
@@ -493,7 +452,7 @@ public class GnoMine : Gtk.Application
 
     private void scores_cb ()
     {
-        show_scores (0, false);
+        show_scores ();
     }
 
     private void show_custom_game_screen ()
@@ -559,37 +518,31 @@ public class GnoMine : Gtk.Application
         set_face_image (smile_face_image);
 
         int x, y, n;
-        var score_key = "";
         switch (settings.get_int (KEY_MODE))
         {
         case 0:
             x = 8;
             y = 8;
             n = 10;
-            score_key = "Small";
             break;
         case 1:
             x = 16;
             y = 16;
             n = 40;
-            score_key = "Medium";
             break;
         case 2:
             x = 30;
             y = 16;
             n = 99;
-            score_key = "Large";
             break;
         default:
         case 3:
             x = settings.get_int (KEY_XSIZE).clamp (XSIZE_MIN, XSIZE_MAX);
             y = settings.get_int (KEY_YSIZE).clamp (YSIZE_MIN, YSIZE_MAX);
             n = settings.get_int (KEY_NMINES).clamp (1, x * y - 10);
-            score_key = "Custom";
             break;
         }
 
-        highscores.set_category (score_key);
         if (minefield != null)
             SignalHandler.disconnect_by_func (minefield, null, this);
         minefield = new Minefield (x, y, n);
@@ -661,10 +614,13 @@ public class GnoMine : Gtk.Application
     {
         set_face_image (win_face_image);
 
-        var seconds = (int) (minefield.elapsed + 0.5);
-        var pos = highscores.add_time_score ((float) (seconds / 60) + (float) (seconds % 60) / 100);
+        var date = new DateTime.now_local ();
+        var duration = (uint) (minefield.elapsed + 0.5);
+        var entry = new HistoryEntry (date, minefield.width, minefield.height, minefield.n_mines, duration);
+        history.add (entry);
+        history.save ();
 
-        if (show_scores (pos, true) == Gtk.ResponseType.REJECT)
+        if (show_scores (entry, true) == Gtk.ResponseType.CLOSE)
             window.destroy ();
         else
             show_new_game_screen ();
@@ -897,15 +853,12 @@ public class GnoMine : Gtk.Application
         }
     }
 
-
     public static int main (string[] args)
     {
         Intl.setlocale (LocaleCategory.ALL, "");
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
-
-        GnomeGamesSupport.scores_startup ();
 
         var context = new OptionContext ("");
         context.set_translation_domain (GETTEXT_PACKAGE);
@@ -923,5 +876,163 @@ public class GnoMine : Gtk.Application
 
         var app = new GnoMine ();
         return app.run ();
+    }
+}
+
+public class ScoreDialog : Gtk.Dialog
+{
+    private History history;
+    private HistoryEntry? selected_entry = null;
+    private Gtk.ListStore size_model;
+    private Gtk.ListStore score_model;
+    private Gtk.ComboBox size_combo;
+
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
+    {
+        this.history = history;
+        history.entry_added.connect (entry_added_cb);
+        this.selected_entry = selected_entry;
+
+        if (show_quit)
+        {
+            add_button (Gtk.Stock.QUIT, Gtk.ResponseType.CLOSE);
+            add_button (_("New Game"), Gtk.ResponseType.OK);
+        }
+        else
+            add_button (Gtk.Stock.OK, Gtk.ResponseType.DELETE_EVENT);
+        set_size_request (200, 300);
+
+        var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
+        vbox.border_width = 6;
+        vbox.show ();
+        get_content_area ().pack_start (vbox, true, true, 0);
+
+        var hbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+        hbox.show ();
+        vbox.pack_start (hbox, false, false, 0);
+
+        var label = new Gtk.Label (_("Size:"));
+        label.show ();
+        hbox.pack_start (label, false, false, 0);
+
+        size_model = new Gtk.ListStore (4, typeof (string), typeof (int), typeof (int), typeof (int));
+
+        size_combo = new Gtk.ComboBox ();
+        size_combo.changed.connect (size_changed_cb);
+        size_combo.model = size_model;
+        var renderer = new Gtk.CellRendererText ();
+        size_combo.pack_start (renderer, true);
+        size_combo.add_attribute (renderer, "text", 0);
+        size_combo.show ();
+        hbox.pack_start (size_combo, true, true, 0);
+
+        var scroll = new Gtk.ScrolledWindow (null, null);
+        scroll.shadow_type = Gtk.ShadowType.ETCHED_IN;
+        scroll.set_policy (Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC);
+        scroll.show ();
+        vbox.pack_start (scroll, true, true, 0);
+
+        score_model = new Gtk.ListStore (3, typeof (string), typeof (string), typeof (int));
+
+        var scores = new Gtk.TreeView ();
+        renderer = new Gtk.CellRendererText ();
+        scores.insert_column_with_attributes (-1, _("Date"), renderer, "text", 0, "weight", 2);
+        renderer = new Gtk.CellRendererText ();
+        renderer.xalign = 1.0f;
+        scores.insert_column_with_attributes (-1, _("Time"), renderer, "text", 1, "weight", 2);
+        scores.model = score_model;
+        scores.show ();
+        scroll.add (scores);
+
+        foreach (var entry in history.entries)
+            entry_added_cb (entry);
+    }
+
+    public void set_size (uint width, uint height, uint n_mines)
+    {
+        score_model.clear ();
+
+        var entries = history.entries.copy ();
+        entries.sort (compare_entries);
+
+        foreach (var entry in entries)
+        {
+            if (entry.width != width || entry.height != height || entry.n_mines != n_mines)
+                continue;
+
+            var date_label = entry.date.format ("%d/%m/%Y");
+
+            var time_label = "%us".printf (entry.duration);
+            if (entry.duration >= 60)
+                time_label = "%um %us".printf (entry.duration / 60, entry.duration % 60);
+
+            int weight = Pango.Weight.NORMAL;
+            if (entry == selected_entry)
+                weight = Pango.Weight.BOLD;
+
+            Gtk.TreeIter iter;
+            score_model.append (out iter);
+            score_model.set (iter, 0, date_label, 1, time_label, 2, weight);
+        }
+    }
+
+    private static int compare_entries (HistoryEntry a, HistoryEntry b)
+    {
+        if (a.width != b.width)
+            return (int) a.width - (int) b.width;
+        if (a.height != b.height)
+            return (int) a.height - (int) b.height;
+        if (a.n_mines != b.n_mines)
+            return (int) a.n_mines - (int) b.n_mines;
+        if (a.duration != b.duration)
+            return (int) a.duration - (int) b.duration;
+        return a.date.compare (b.date);
+    }
+
+    private void size_changed_cb (Gtk.ComboBox combo)
+    {
+        Gtk.TreeIter iter;
+        if (!combo.get_active_iter (out iter))
+            return;
+
+        int width, height, n_mines;
+        combo.model.get (iter, 1, out width, 2, out height, 3, out n_mines);
+        set_size ((uint) width, (uint) height, (uint) n_mines);
+    }
+
+    private void entry_added_cb (HistoryEntry entry)
+    {
+        /* Ignore if already have an entry for this */
+        Gtk.TreeIter iter;
+        var have_size_entry = false;
+        if (size_model.get_iter_first (out iter))
+        {
+            do
+            {
+                int width, height, n_mines;
+                size_model.get (iter, 1, out width, 2, out height, 3, out n_mines);
+                if (width == entry.width && height == entry.height && n_mines == entry.n_mines)
+                {
+                    have_size_entry = true;
+                    break;
+                }
+            } while (size_model.iter_next (ref iter));
+        }
+
+        if (!have_size_entry)
+        {
+            var label = "%u × %u, %u mines".printf (entry.width, entry.height, entry.n_mines);
+
+            size_model.append (out iter);
+            size_model.set (iter, 0, label, 1, entry.width, 2, entry.height, 3, entry.n_mines);
+    
+            /* Select this entry if don't have any */
+            if (size_combo.get_active () == -1)
+                size_combo.set_active_iter (iter);
+
+            /* Select this entry if the same category as the selected one */
+            if (selected_entry != null && entry.width == selected_entry.width && entry.height == selected_entry.height && entry.n_mines == selected_entry.n_mines)
+                size_combo.set_active_iter (iter);
+        }
     }
 }
