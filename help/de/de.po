@@ -507,7 +507,7 @@ msgid ""
 "sure\" flags</gui>."
 msgstr ""
 "Um diese Fahnen freizuschalten, klicken Sie auf <guiseq><gui style=\"manu"
-"\"><gui>Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und "
+"\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und "
 "wählen Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
 
 #: C/get-help.page:21(page/title)
@@ -829,7 +829,7 @@ msgstr ""
 "per Maus auszuführen. Dazu klicken Sie auf das entsprechende Objekt in der "
 "Werkzeugleiste. Die Knöpfe sind von links nach rechts <gui><link xref=\"new-"
 "game\">Neues Spiel</link></gui>, <link xref=\"get-help\">Tipp</link>, "
-"<gui>Pause</link></gui> und <gui>Vollbild</gui>."
+"<gui>Pause</gui> und <gui>Vollbild</gui>."
 
 #: C/translate.page:15(credit/name)
 msgid "Michael Hill"
