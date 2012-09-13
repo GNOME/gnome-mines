@@ -142,7 +142,7 @@ msgstr "V primeru da zahtevate novo zmožnost v meniju <gui>Severity</gui> izber
 
 #: C/bug-filing.page:42(section/p)
 msgid "Your report will be given an ID number, and its status will be updated as it is being dealt with. Thanks for helping make <app>Gnomine</app> better!"
-msgstr "Vaše poročilo bo dobilo številko ID in njegovo stanje bo posodobljeno, medtem ko se obdeluje. Hvala, ker pomagate izboljševati <!"
+msgstr "Vaše poročilo bo dobilo številko ID in njegovo stanje bo posodobljeno, medtem ko se obdeluje. Hvala, ker pomagate izboljševati <app>Gnomine</app>!"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
