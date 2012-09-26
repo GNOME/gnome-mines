@@ -60,11 +60,13 @@ public class History
 
         try
         {
+            DirUtils.create_with_parents (Path.get_dirname (filename), 0775);
             FileUtils.set_contents (filename, contents);
         }
         catch (FileError e)
         {
-        }    
+            warning ("Failed to save history: %s", e.message);
+        }
     }
 
     private DateTime? parse_date (string date)
