@@ -28,6 +28,9 @@ public class History
         }
         catch (FileError e)
         {
+            if (!(e is FileError.NOENT))
+                warning ("Failed to load history: %s", e.message);
+            return;
         }
 
         foreach (var line in contents.split ("\n"))
