@@ -1021,7 +1021,7 @@ public class ScoreDialog : Gtk.Dialog
 
         if (!have_size_entry)
         {
-            var label = "%u × %u, %u mines".printf (entry.width, entry.height, entry.n_mines);
+            var label = ngettext ("%u × %u, %u mine", "%u × %u, %u mines", entry.n_mines).printf (entry.width, entry.height, entry.n_mines);
 
             size_model.append (out iter);
             size_model.set (iter, 0, label, 1, entry.width, 2, entry.height, 3, entry.n_mines);
