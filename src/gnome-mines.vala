@@ -1,4 +1,4 @@
-public class GnoMine : Gtk.Application
+public class Mines : Gtk.Application
 {
     /* Settings keys */
     private Settings settings;
@@ -67,9 +67,9 @@ public class GnoMine : Gtk.Application
         { "about",         about_cb                                               }
     };
 
-    public GnoMine ()
+    public Mines ()
     {
-        Object (application_id: "org.gnome.gnomine", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.mines", flags: ApplicationFlags.FLAGS_NONE);
     }
 
     protected override void startup ()
@@ -78,7 +78,7 @@ public class GnoMine : Gtk.Application
 
         Environment.set_application_name (_("Mines"));
 
-        settings = new Settings ("org.gnome.gnomine");
+        settings = new Settings ("org.gnome.mines");
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
@@ -324,7 +324,7 @@ public class GnoMine : Gtk.Application
 
         tick_cb ();
 
-        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnomine", "history"));
+        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
         history.load ();
     }
 
@@ -696,7 +696,7 @@ public class GnoMine : Gtk.Application
                                "artists", artists,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "gnomine", "website",
+                               "logo-icon-name", "gnome-mines", "website",
                                "http://www.gnome.org/projects/gnome-games/",
                                "website-label", _("GNOME Games web site"),
                                "wrap-license", true, null);
@@ -845,7 +845,7 @@ public class GnoMine : Gtk.Application
     {
         try
         {
-            Gtk.show_uri (window.get_screen (), "help:gnomine", Gtk.get_current_event_time ());
+            Gtk.show_uri (window.get_screen (), "help:gnome-mines", Gtk.get_current_event_time ());
         }
         catch (Error e)
         {
@@ -874,7 +874,7 @@ public class GnoMine : Gtk.Application
             return Posix.EXIT_FAILURE;
         }
 
-        var app = new GnoMine ();
+        var app = new Mines ();
         return app.run ();
     }
 }

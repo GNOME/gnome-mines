@@ -1,5 +1,5 @@
 @YELP_HELP_RULES@
-HELP_ID = gnomine
+HELP_ID = gnome-mines
 
 HELP_MEDIA = \
 	figures/easy-hints-1.png \
@@ -14,7 +14,7 @@ HELP_MEDIA = \
 	figures/flag-question.svg \
 	figures/flags.png \
 	figures/flag.svg \
-	figures/gnomine.png \
+	figures/gnome-mines.png \
 	figures/hard-hints-1.png \
 	figures/hard-hints-2.png \
 	figures/hard-hints-3.png \

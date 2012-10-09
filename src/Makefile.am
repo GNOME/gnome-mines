@@ -1,30 +1,28 @@
-bin_PROGRAMS = gnomine
+bin_PROGRAMS = gnome-mines
 
-gnomine_SOURCES =	\
+gnome_mines_SOURCES =	\
 	config.vapi	\
-	gnomine.vala \
+	gnome-mines.vala \
 	history.vala \
 	minefield.vala \
 	minefield-view.vala
 
-gnomine_CFLAGS = \
+gnome_mines_CFLAGS = \
 	-DVERSION=\"$(VERSION)\" \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
-	-DDATA_DIRECTORY=\"$(datadir)/gnomine\" \
+	-DDATA_DIRECTORY=\"$(datadir)/gnome-mines\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
-	$(GTK_CFLAGS) \
-	$(RSVG_CFLAGS)
+	$(GNOME_MINES_CFLAGS)
 
-gnomine_VALAFLAGS = \
+gnome_mines_VALAFLAGS = \
 	--pkg posix \
 	--pkg gtk+-3.0 \
 	--pkg librsvg-2.0 \
 	--pkg pango \
 	--pkg pangocairo
 
-gnomine_LDADD = \
-	$(GTK_LIBS) \
-	$(RSVG_LIBS)
+gnome_mines_LDADD = \
+	$(GNOME_MINES_LIBS)
 
 CLEANFILES = \
 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \

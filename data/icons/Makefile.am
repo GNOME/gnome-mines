@@ -5,11 +5,11 @@ icon32dir=$(datadir)/icons/hicolor/32x32/apps
 icon48dir=$(datadir)/icons/hicolor/48x48/apps
 icon256dir=$(datadir)/icons/hicolor/256x256/apps
 
-icon16_DATA = 16x16/gnomine.png
-icon22_DATA = 22x22/gnomine.png
-icon24_DATA = 24x24/gnomine.png
-icon32_DATA = 32x32/gnomine.png
-icon48_DATA = 48x48/gnomine.png
-icon256_DATA = 256x256/gnomine.png
+icon16_DATA = 16x16/gnome-mines.png
+icon22_DATA = 22x22/gnome-mines.png
+icon24_DATA = 24x24/gnome-mines.png
+icon32_DATA = 32x32/gnome-mines.png
+icon48_DATA = 48x48/gnome-mines.png
+icon256_DATA = 256x256/gnome-mines.png
 
 EXTRA_DIST = $(icon16_DATA) $(icon22_DATA) $(icon24_DATA) $(icon32_DATA) $(icon48_DATA) $(icon256_DATA) $(iconscalable_DATA)

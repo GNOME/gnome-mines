@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.gnomine" path="/org/gnome/gnomine/" gettext-domain="gnome-games">
+  <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-games">
     <key name="use-question-marks" type="b">
       <default>false</default>
       <_summary>Use the unknown flag</_summary>
@@ -19,7 +19,7 @@
     <key name="use-autoflag" type="b">
       <default>false</default>
       <_summary>Enable automatic placing of flags</_summary>
-      <_description>Set to true to have gnomine automatically flag squares as mined when enough squares are revealed</_description>
+      <_description>Set to true to automatically flag squares as mined when enough squares are revealed</_description>
     </key>
     <key name="xsize" type="i">
       <default>16</default>
