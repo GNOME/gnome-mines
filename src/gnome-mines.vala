@@ -411,9 +411,9 @@ public class Mines : Gtk.Application
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
-        if (minefield_view.minefield.paused)
+        if (minefield.paused)
         {
-            minefield_view.minefield.paused = false;
+            minefield.paused = false;
             return true;
         }
 
@@ -467,7 +467,9 @@ public class Mines : Gtk.Application
     {
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
-            toggle_pause_cb ();
+            var was_paused = minefield.paused;
+            minefield.paused = true;
+
             var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
             dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
             dialog.add_buttons (_("Keep Current Game"), Gtk.ResponseType.DELETE_EVENT,
@@ -477,7 +479,7 @@ public class Mines : Gtk.Application
             dialog.destroy ();
             if (result != Gtk.ResponseType.ACCEPT)
             {
-                toggle_pause_cb ();
+                minefield.paused = was_paused;
                 return false;
             }
         }
@@ -505,7 +507,7 @@ public class Mines : Gtk.Application
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
 
-        minefield_view.minefield.paused = false;
+        minefield.paused = false;
     }
 
     private void start_game ()
@@ -550,6 +552,7 @@ public class Mines : Gtk.Application
         minefield.explode.connect (explode_cb);
         minefield.cleared.connect (cleared_cb);
         minefield.tick.connect (tick_cb);
+        minefield.paused_changed.connect (paused_changed_cb);
 
         minefield_view.minefield = minefield;
 
@@ -560,7 +563,7 @@ public class Mines : Gtk.Application
         hint_action.set_enabled (true);
         pause_action.set_enabled (true);
 
-        minefield_view.minefield.paused = false;
+        minefield.paused = false;
     }
 
     private void hint_cb ()
@@ -582,16 +585,19 @@ public class Mines : Gtk.Application
 
     private void toggle_pause_cb ()
     {
-        if (!minefield_view.minefield.paused)
+        minefield.paused = !minefield.paused;
+    }
+
+    private void paused_changed_cb ()
+    {
+        if (minefield.paused)
         {
-            minefield_view.minefield.paused = true;
             hint_action.set_enabled (false);
             pause_button.icon_name = "media-playback-start";
             pause_button.label = _("Res_ume");
         }
         else
         {
-            minefield_view.minefield.paused = false;
             hint_action.set_enabled (true);
             pause_button.icon_name = "media-playback-pause";
             pause_button.label = _("_Pause");
