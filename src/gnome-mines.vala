@@ -25,6 +25,8 @@ public class Mines : Gtk.Application
     private Gtk.ToolButton fullscreen_button;
     private Gtk.ToolButton pause_button;
 
+    private Menu app_main_menu;
+
     /* Main window */
     private Gtk.Window window;
     private int window_width;
@@ -93,16 +95,16 @@ public class Mines : Gtk.Application
         pause_action.set_enabled (false);
 
         var menu = new Menu ();
+        app_main_menu = new Menu ();
+        menu.append_section (null, app_main_menu);
+        app_main_menu.append (_("_New Game"), "app.new-game");
+        app_main_menu.append (_("_Replay Size"), "app.repeat-size");
+        app_main_menu.append (_("_Hint"), "app.hint");
+        app_main_menu.append (_("_Pause"), "app.pause");
+        app_main_menu.append (_("_Fullscreen"), "app.fullscreen");
+        app_main_menu.append (_("_Scores"), "app.scores");
+        app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_New Game"), "app.new-game");
-        section.append (_("_Replay Size"), "app.repeat-size");
-        section.append (_("_Hint"), "app.hint");
-        section.append (_("_Pause"), "app.pause");
-        section.append (_("_Fullscreen"), "app.fullscreen");
-        section.append (_("_Scores"), "app.scores");
-        section.append (_("_Preferences"), "app.preferences");
-        section = new Menu ();
         menu.append_section (null, section);
         section.append (_("_Help"), "app.help");
         section.append (_("_About"), "app.about");
@@ -590,17 +592,25 @@ public class Mines : Gtk.Application
 
     private void paused_changed_cb ()
     {
+        /* KLUDGE: This is a very expensive way to change a label,
+         *  but it doesn't seem we have much of an option, lets just
+         *  hope the C compiler can optimise this.
+         */
+        app_main_menu.remove (3);  // Remove pause/resume menuitem
+
         if (minefield.paused)
         {
             hint_action.set_enabled (false);
             pause_button.icon_name = "media-playback-start";
             pause_button.label = _("Res_ume");
+            app_main_menu.insert (3, _("Res_ume"), "app.pause");
         }
         else
         {
             hint_action.set_enabled (true);
             pause_button.icon_name = "media-playback-pause";
             pause_button.label = _("_Pause");
+            app_main_menu.insert (3, _("_Pause"), "app.pause");
         }
     }
 
