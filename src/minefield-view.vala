@@ -408,6 +408,9 @@ public class MinefieldView : Gtk.DrawingArea
 
     private void toggle_mark (uint x, uint y)
     {
+        if (minefield.is_cleared (x, y))
+            return;
+
         switch (minefield.get_flag (x, y))
         {
         case FlagType.NONE:
@@ -582,10 +585,10 @@ public class MinefieldView : Gtk.DrawingArea
             else if (minefield.get_flag (selected_x, selected_y) != FlagType.FLAG)
                 minefield.clear_mine (selected_x, selected_y);
             redraw_sector_cb (selected_x, selected_y);
-        }
 
-        selected_x = -1;
-        selected_y = -1;
+            selected_x = -1;
+            selected_y = -1;
+        }
 
         return false;
     }
