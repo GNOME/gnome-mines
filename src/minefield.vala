@@ -53,17 +53,14 @@ public class Minefield
     /* true if have placed the mines onto the map */
     private bool placed_mines = false;
 
+    /* keep track of flags and cleared squares */
+    private uint _n_cleared = 0;
+    private uint _n_flags = 0;
+
     public uint n_cleared
     {
-        get
-        {
-            var n = 0;
-            for (var x = 0; x < width; x++)
-                for (var y = 0; y < height; y++)
-                    if (locations[x, y].cleared)
-                        n++;
-            return n;
-        }
+        get { return _n_cleared; }
+        set { _n_cleared = value; }
     }
 
     public bool is_complete
@@ -73,15 +70,8 @@ public class Minefield
 
     public uint n_flags
     {
-        get
-        {
-            var n = 0;
-            for (var x = 0; x < width; x++)
-                for (var y = 0; y < height; y++)
-                    if (locations[x, y].flag == FlagType.FLAG)
-                        n++;
-            return n;
-        }
+        get { return _n_flags; }
+        set { _n_flags = value; }
     }
 
     /* Game timer */
@@ -199,6 +189,9 @@ public class Minefield
             return;
 
         locations[x, y].cleared = true;
+        n_cleared++;
+        if (locations[x, y].flag == FlagType.FLAG)
+            n_flags--;
         locations[x, y].flag = FlagType.NONE;
         redraw_sector (x, y);
         marks_changed ();
@@ -220,6 +213,11 @@ public class Minefield
     {
         if (locations[x, y].cleared || locations[x, y].flag == flag)
             return;
+
+        if (flag == FlagType.FLAG)
+            n_flags++;
+        else if (locations[x, y].flag == FlagType.FLAG)
+            n_flags--;
 
         locations[x, y].flag = flag;
         redraw_sector (x, y);
@@ -269,10 +267,10 @@ public class Minefield
             for (var my = 0; my < height; my++)
             {
                 var m = locations[mx, my];
-                if (!m.has_mine && !m.cleared && m.flag == FlagType.NONE)
+                if (!m.has_mine && !m.cleared)
                 {
                     case3list.append (mx * width + my);
-                    if (get_n_adjacent_mines (mx, my) > 0)
+                    if (m.flag != FlagType.FLAG && get_n_adjacent_mines (mx, my) > 0)
                     {
                         case2list.append (mx * width + my);
                         foreach (var neighbour in neighbour_map)
@@ -302,6 +300,9 @@ public class Minefield
          * hint before a possible win. */
         var x = hint_location / width;
         var y = hint_location % width;
+
+        if (locations[x, y].flag == FlagType.FLAG)
+            locations[x, y].flag = FlagType.NONE;
 
         /* There is a ten second penalty for accepting a hint_action. */
         clear_mine (x, y);

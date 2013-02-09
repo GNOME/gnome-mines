@@ -339,32 +339,6 @@ public class MinefieldView : Gtk.DrawingArea
         /* Draw grid on ocean floor */
         if (minefield.is_cleared (x, y))
         {
-            Gtk.paint_box (get_style (), cr, is_down ? Gtk.StateType.ACTIVE : Gtk.StateType.NORMAL, Gtk.ShadowType.IN, this,
-                           "button", 0, 0, (int) mine_size, (int) mine_size);
-
-            /* Draw dotted border */
-            if (y == 0)
-            {
-                cr.move_to (0, 0);
-                cr.line_to (mine_size - 1, 0);
-            }
-            if (x == 0)
-            {
-                cr.move_to (0, 0);
-                cr.line_to (0, mine_size - 1);
-            }
-            cr.move_to (mine_size - 1 + 0.5, 0.5);
-            cr.line_to (mine_size - 1 + 0.5, mine_size - 1 + 0.5);
-            cr.move_to (0.5, mine_size - 1 + 0.5);
-            cr.line_to (mine_size - 1 + 0.5, mine_size - 1 + 0.5);
-            cr.save ();
-            Gdk.cairo_set_source_color (cr, get_style ().dark[get_state ()]);
-            cr.set_line_width (1);
-            double[] dots = {2, 2};
-            cr.set_dash (dots, 0);
-            cr.stroke ();
-            cr.restore ();
-
             if (minefield.paused)
                 return;
 
@@ -403,13 +377,14 @@ public class MinefieldView : Gtk.DrawingArea
         }
         else
         {
-            /* Draw shadow around possible mine location */
-            Gtk.paint_box (get_style (), cr,
-                           is_down ? Gtk.StateType.ACTIVE : Gtk.StateType.SELECTED,
-                           is_down ? Gtk.ShadowType.IN : Gtk.ShadowType.OUT,
-                           this,
-                           "button", 0, 0, (int) mine_size, (int) mine_size);
-                           
+            var style_context = get_style_context ();
+            style_context.save ();
+            style_context.add_class (Gtk.STYLE_CLASS_BUTTON);
+            style_context.set_state (is_down ? Gtk.StateFlags.ACTIVE : Gtk.StateFlags.NORMAL);
+            style_context.render_frame (cr, 0, 0, (int) mine_size, (int) mine_size);
+            style_context.render_background (cr, 0, 0, (int) mine_size, (int) mine_size);
+            style_context.restore ();
+
             if (minefield.paused)
                 return;
 
@@ -436,7 +411,7 @@ public class MinefieldView : Gtk.DrawingArea
                     cr.line_to (x2, y1);
 
                     cr.save ();
-                    Gdk.cairo_set_source_color (cr, get_style ().black);
+                    cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
                     cr.set_line_width (double.max (1, 0.1 * mine_size));
                     cr.set_line_join (Cairo.LineJoin.ROUND);
                     cr.set_line_cap (Cairo.LineCap.ROUND);
@@ -478,6 +453,48 @@ public class MinefieldView : Gtk.DrawingArea
                 number_patterns[i] = null;
         }
 
+        double dimensions[2] = {minefield.width * mine_size, minefield.height * mine_size};
+        double centre[2] = { x_offset + 0.5 * dimensions[0], y_offset + 0.5 * dimensions[1] };
+        double radius = Math.fmax (dimensions[0], dimensions[1]);
+
+        /* Draw Background */
+        var pattern = new Cairo.Pattern.radial (centre[0], centre[1], 0.0, centre[0], centre[1], radius);
+        pattern.add_color_stop_rgba (0.0, 0.0, 0.0, 0.0, 0.1);
+        pattern.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.4);
+
+        cr.rectangle (x_offset - 0.5, y_offset - 0.5, dimensions[0] + 0.5, dimensions[1] + 0.5);
+        cr.save ();
+        cr.set_source (pattern);
+        cr.fill_preserve ();
+        cr.set_line_width (0.5);
+        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
+        cr.stroke ();
+        cr.restore ();
+
+        /* Draw Grid */
+        cr.save ();
+        cr.set_line_width (0.5);
+        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
+        double[] dots = {2, 2};
+        cr.set_dash (dots, 0);
+
+        for (var x = 1; x < minefield.width; x++)
+        {
+            cr.move_to (x_offset + x * mine_size, y_offset);
+            cr.line_to (x_offset + x * mine_size, y_offset + dimensions[1]);
+            cr.stroke ();
+        }
+
+        for (var y = 1; y < minefield.height; y++)
+        {
+            cr.move_to (x_offset, y_offset + y * mine_size);
+            cr.line_to (x_offset + dimensions[0], y_offset + y * mine_size);
+            cr.stroke ();
+        }
+
+        cr.restore ();
+
+        /* Draw Minefield */
         for (var x = 0; x < minefield.width; x++)
         {
             for (var y = 0; y < minefield.height; y++)
