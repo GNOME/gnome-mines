@@ -147,7 +147,7 @@ public class Minefield
         return locations[x, y].cleared;
     }
 
-    public bool is_location (uint x, uint y)
+    public bool is_location (int x, int y)
     {
         return x >= 0 && y >= 0 && x < width && y < height;
     }
@@ -208,8 +208,8 @@ public class Minefield
         {
             foreach (var neighbour in neighbour_map)
             {
-                var nx = x + neighbour.x;
-                var ny = y + neighbour.y;
+                var nx = (int) x + neighbour.x;
+                var ny = (int) y + neighbour.y;
                 if (is_location (nx, ny))
                     clear_mines_recursive (nx, ny);
             }
@@ -228,8 +228,8 @@ public class Minefield
         /* FIXME: Doesn't check if have changed, just if might have changed */
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (is_location (nx, ny) && is_cleared (nx, ny))
                 redraw_sector (nx, ny);
         }
@@ -314,8 +314,8 @@ public class Minefield
         uint n = 0;
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (is_location (nx, ny) && has_mine (nx, ny))
                 n++;
         }
@@ -330,8 +330,8 @@ public class Minefield
         uint n_mines = 0, n_flags = 0;
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (!is_location (nx, ny))
                 continue;
             if (has_mine (nx, ny))

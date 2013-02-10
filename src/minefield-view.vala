@@ -1,3 +1,85 @@
+private class Position : Object
+{
+    public signal void redraw (uint x, uint y);
+    public signal bool validate (int x, int y);
+    public signal int set_x (int x);
+    public signal int set_y (int y);
+
+    private bool _is_set = false;
+    public bool is_set
+    {
+        get { return _is_set; }
+        set
+        {
+            if (_is_set != value && is_valid)
+                redraw (x, y);
+
+            _is_set = value;
+        }
+    }
+
+    public bool is_valid
+    {
+        get { return validate (x, y); }
+    }
+
+    private int _x = 0;
+    public int x
+    {
+        get { return _x; }
+        set
+        {
+            if (_x == value)
+                return;
+
+            if (is_set && is_valid)
+                redraw (x, y);
+
+            _x = set_x (value);
+
+            if (is_set && is_valid)
+                redraw (x, y);
+        }
+    }
+
+    private int _y = 0;
+    public int y
+    {
+        get { return _y; }
+        set
+        {
+            if (_y == value)
+                return;
+
+            if (is_set && is_valid)
+                redraw (x, y);
+
+            _y = set_y (value);
+
+            if (is_set && is_valid)
+                redraw (x, y);
+        }
+    }
+
+    public int[] position
+    {
+        set
+        {
+            if (_x == value[0] && _y == value[1])
+                return;
+
+            if (is_set && is_valid)
+                redraw (x, y);
+
+            _x = set_x (value[0]);
+            _y = set_y (value[1]);
+
+            if (is_set && is_valid)
+                redraw (x, y);
+        }
+    }
+}
+
 public class MinefieldView : Gtk.DrawingArea
 {
     /* true if allowed to mark locations with question marks */
@@ -9,9 +91,9 @@ public class MinefieldView : Gtk.DrawingArea
     /* true if automatically set flags on middle click */
     private bool use_autoflag;
 
-    /* Location being clicked on */
-    private int selected_x = -1;
-    private int selected_y = -1;
+    /* Position of keyboard cursor and selected squares */
+    private Position keyboard_cursor;
+    private Position selected;
 
     /* Pre-rendered images */
     private uint render_size = 0;
@@ -64,7 +146,10 @@ public class MinefieldView : Gtk.DrawingArea
 
     public MinefieldView ()
     {
-        set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK);
+        set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
+        can_focus = true;
+        selected = new Position ();
+        keyboard_cursor = new Position ();
         number_patterns = new Cairo.Pattern[8];
     }
     
@@ -77,11 +162,25 @@ public class MinefieldView : Gtk.DrawingArea
             if (_minefield != null)
                 SignalHandler.disconnect_by_func (_minefield, null, this);
             _minefield = value;
-            selected_x = -1;
-            selected_y = -1;
+
+            selected.is_set = false;
+            selected.redraw.connect (redraw_sector_cb);
+            selected.redraw.connect ((x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
+            selected.set_x.connect ((x) => { return x; });
+            selected.set_y.connect ((y) => { return y; });
+            selected.validate.connect (_minefield.is_location);
+
+            keyboard_cursor.is_set = false;
+            keyboard_cursor.position = {0, 0};
+            keyboard_cursor.redraw.connect (redraw_sector_cb);
+            keyboard_cursor.set_x.connect ((x) => { return (int) (x % _minefield.width); });
+            keyboard_cursor.set_y.connect ((y) => { return (int) (y % _minefield.height); });
+            keyboard_cursor.validate.connect ((x, y) => { return true; });
+
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
             _minefield.paused_changed.connect (() => { queue_draw (); });
+
             queue_resize ();
         }
     }
@@ -218,18 +317,22 @@ public class MinefieldView : Gtk.DrawingArea
     
     private void draw_square (Cairo.Context cr, uint x, uint y)
     {
-        /* Work out if the cursor is being held down on this square */
-        var is_down = x == selected_x && y == selected_y && minefield.get_flag (x, y) != FlagType.FLAG;
-        if (selected_x >= 0 && minefield.is_cleared (selected_x, selected_y))
+        /* Work out if the cursor is being held down on this square or neighbouring cleared squares */
+        var is_down = false;
+        if (selected.is_valid && selected.is_set)
         {
-            foreach (var neighbour in neighbour_map)
+            is_down = x == selected.x && y == selected.y && minefield.get_flag (x, y) != FlagType.FLAG;
+            if (!is_down && minefield.is_cleared (selected.x, selected.y))
             {
-                var nx = selected_x + neighbour.x;
-                var ny = selected_y + neighbour.y;
-                if (!minefield.is_location (nx, ny))
-                    continue;
-                if (x == nx && y == ny && minefield.get_flag (nx, ny) != FlagType.FLAG)
-                    is_down = true;
+                foreach (var neighbour in neighbour_map)
+                {
+                    var nx = (int) selected.x + neighbour.x;
+                    var ny = (int) selected.y + neighbour.y;
+                    if (!minefield.is_location (nx, ny))
+                        continue;
+                    if (x == nx && y == ny && minefield.get_flag (nx, ny) != FlagType.FLAG)
+                        is_down = true;
+                }
             }
         }
 
@@ -386,6 +489,24 @@ public class MinefieldView : Gtk.DrawingArea
             }
         }
 
+        /* Draw keyboard cursor */
+        if (keyboard_cursor.is_set)
+        {
+            double key_centre[2] = { x_offset + (keyboard_cursor.x+0.5) * mine_size, y_offset + (keyboard_cursor.y+0.5) * mine_size };
+            var key_cursor = new Cairo.Pattern.radial (key_centre[0], key_centre[1], 0.0, key_centre[0], key_centre[1], 0.25 * mine_size);
+            key_cursor.add_color_stop_rgba (0.0, 1.0, 1.0, 1.0, 1.0);
+            key_cursor.add_color_stop_rgba (0.8, 1.0, 1.0, 1.0, 0.1);
+            key_cursor.add_color_stop_rgba (0.9, 0.0, 0.0, 0.0, 0.5);
+            key_cursor.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.2);
+            key_cursor.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.0);
+
+            cr.save ();
+            cr.rectangle (key_centre[0] - 0.45 * mine_size, key_centre[1] - 0.45 * mine_size, 0.9 * mine_size, 0.9 * mine_size);
+            cr.set_source (key_cursor);
+            cr.fill ();
+            cr.restore ();
+        }
+
         /* Draw pause overlay */
         if (minefield.paused)
         {
@@ -440,8 +561,8 @@ public class MinefieldView : Gtk.DrawingArea
     {
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (minefield.is_location (nx, ny))
                 redraw_sector_cb (nx, ny);
         }
@@ -458,8 +579,8 @@ public class MinefieldView : Gtk.DrawingArea
         uint n_unknown = 0;
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (!minefield.is_location (nx, ny))
                 continue;
             if (minefield.get_flag (nx, ny) == FlagType.FLAG)
@@ -484,8 +605,8 @@ public class MinefieldView : Gtk.DrawingArea
 
         foreach (var neighbour in neighbour_map)
         {
-            var nx = x + neighbour.x;
-            var ny = y + neighbour.y;
+            var nx = (int) x + neighbour.x;
+            var ny = (int) y + neighbour.y;
             if (!m.is_location (nx, ny))
                 continue;
             
@@ -502,93 +623,187 @@ public class MinefieldView : Gtk.DrawingArea
         if (event.type != Gdk.EventType.BUTTON_PRESS)
             return false;
 
+        /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
             return false;
 
-        var x = (int) Math.floor ((event.x - x_offset) / mine_size);
-        var y = (int) Math.floor ((event.y - y_offset) / mine_size);
-        if (!minefield.is_location (x, y))
+        /* Does the user have the space key down? */
+        if (selected.is_set && keyboard_cursor.is_set)
+            return false;
+
+        /* Hide any lingering previously selected and get new location */
+        selected.is_set = false;
+        selected.x = (int) Math.floor ((event.x - x_offset) / mine_size);
+        selected.y = (int) Math.floor ((event.y - y_offset) / mine_size);
+
+        /* Is the current position a minefield square? */
+        if (!selected.is_valid)
             return false;
 
         /* Right or Ctrl+Left button to toggle flags */
         if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
         {
-            toggle_mark (x, y);
-            return false;
+            toggle_mark (selected.x, selected.y);
+            unlook ();
         }
-
         /* Left button to clear */
-        if (event.button == 1)
+        else if (event.button == 1)
         {
-            selected_x = x;
-            selected_y = y;
-            redraw_sector_cb (x, y);
-
+            selected.is_set = true;
             look ();
-
-            if (minefield.is_cleared (x, y))
-                redraw_adjacent (x, y);
         }
+
+        keyboard_cursor.is_set = false;
+        keyboard_cursor.position = {selected.x, selected.y};
 
         return false;
     }
 
     public override bool motion_notify_event (Gdk.EventMotion event)
     {
-        if (minefield.exploded || minefield.is_complete)
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
             return false;
-            
-        if (selected_x < 0)
+
+        /* Check that the user isn't currently navigating with keyboard */
+        if (!selected.is_set || keyboard_cursor.is_set)
             return false;
 
         var x = (int) Math.floor ((event.x - x_offset) / mine_size);
         var y = (int) Math.floor ((event.y - y_offset) / mine_size);
-        if (!minefield.is_location (x, y))
-            return false;
-
-        if (x == selected_x && y == selected_y)
-            return false;
-
-        /* Redraw existing selected squares */
-        redraw_sector_cb (selected_x, selected_y);
-        if (minefield.is_cleared (selected_x, selected_y))
-            redraw_adjacent (selected_x, selected_y);
-
-        /* Draw new selected squares */
-        redraw_sector_cb (x, y);
-        if (minefield.is_cleared (x, y))
-            redraw_adjacent (x, y);
-
-        selected_x = x;
-        selected_y = y;
+        selected.position = {x, y};
 
         return false;
     }
 
     public override bool button_release_event (Gdk.EventButton event)
     {
-        if (minefield.exploded || minefield.is_complete)
+        if (event.button != 1)
             return false;
 
-        if (selected_x < 0)
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
             return false;
 
-        if (event.button == 1)
+        /* Check that the user isn't currently using the mouse */
+        if (!selected.is_set || keyboard_cursor.is_set)
+            return false;
+
+        unlook ();
+
+        if (minefield.is_cleared (selected.x, selected.y))
         {
-            unlook ();
-
-            if (minefield.is_cleared (selected_x, selected_y))
-            {
-                multi_release (selected_x, selected_y);
-                redraw_adjacent (selected_x, selected_y);
-            }
-            else if (minefield.get_flag (selected_x, selected_y) != FlagType.FLAG)
-                minefield.clear_mine (selected_x, selected_y);
-            redraw_sector_cb (selected_x, selected_y);
-
-            selected_x = -1;
-            selected_y = -1;
+            multi_release (selected.x, selected.y);
+            redraw_adjacent (selected.x, selected.y);
         }
+        else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
+            minefield.clear_mine (selected.x, selected.y);
+
+        keyboard_cursor.position = {selected.x, selected.y};
+        selected.is_set = false;
+
+        return false;
+    }
+
+    public override bool key_press_event (Gdk.EventKey event)
+    {
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return false;
+
+        /* Check that the user isn't currently using the mouse */
+        if (selected.is_set && !keyboard_cursor.is_set)
+            return false;
+
+        var x = keyboard_cursor.x;
+        var y = keyboard_cursor.y;
+
+        switch (event.keyval)
+        {
+        case Gdk.Key.Left:
+        case Gdk.Key.h:
+            x--;
+            break;
+
+        case Gdk.Key.Right:
+        case Gdk.Key.l:
+            x++;
+            break;
+
+        case Gdk.Key.Up:
+        case Gdk.Key.k:
+            y--;
+            break;
+
+        case Gdk.Key.Down:
+        case Gdk.Key.j:
+            y++;
+            break;
+
+        case Gdk.Key.space:
+        case Gdk.Key.Return:
+            if (keyboard_cursor.is_set)
+            {
+                selected.is_set = false;
+
+                if ((event.state & Gdk.ModifierType.CONTROL_MASK) != 0)
+                {
+                    toggle_mark (keyboard_cursor.x, keyboard_cursor.y);
+                }
+                else
+                {
+                    selected.position = {x, y};
+                    selected.is_set = true;
+                    look ();
+                }
+            }
+            break;
+
+        default:
+            return false;
+        }
+
+        if (x == keyboard_cursor.x && y == keyboard_cursor.y)
+            return true;
+
+        if (!keyboard_cursor.is_set)
+        {
+            keyboard_cursor.is_set = true;
+            return true;
+        }
+
+        keyboard_cursor.position = {x, y};
+
+        if (selected.is_set)
+            selected.position = {keyboard_cursor.x, keyboard_cursor.y};
+
+        return true;
+    }
+
+    public override bool key_release_event (Gdk.EventKey event)
+    {
+        if (event.keyval != Gdk.Key.space)
+            return false;
+
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return false;
+
+        /* Check that the user isn't currently using the mouse */
+        if (!selected.is_set || !keyboard_cursor.is_set)
+            return false;
+
+        unlook ();
+
+        if (minefield.is_cleared (selected.x, selected.y))
+        {
+            multi_release (selected.x, selected.y);
+            redraw_adjacent (selected.x, selected.y);
+        }
+        else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
+            minefield.clear_mine (selected.x, selected.y);
+
+        selected.is_set = false;
 
         return false;
     }

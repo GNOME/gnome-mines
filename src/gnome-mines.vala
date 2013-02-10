@@ -517,6 +517,7 @@ public class Mines : Gtk.Application
         is_new_game_screen = false;
         custom_game_screen.hide ();
         minefield_view.show ();
+        minefield_view.has_focus = true;
         new_game_screen.hide ();
 
         set_face_image (smile_face_image);
@@ -912,7 +913,9 @@ public class ScoreDialog : Gtk.Dialog
         if (show_quit)
         {
             add_button (Gtk.Stock.QUIT, Gtk.ResponseType.CLOSE);
-            add_button (_("New Game"), Gtk.ResponseType.OK);
+
+            var button = add_button (_("New Game"), Gtk.ResponseType.OK);
+            button.has_focus = true;
         }
         else
             add_button (Gtk.Stock.OK, Gtk.ResponseType.DELETE_EVENT);
