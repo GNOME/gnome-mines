@@ -44,6 +44,9 @@ public class Mines : Gtk.Application
     private int window_height;
     private bool is_fullscreen;
     private bool is_maximized;
+
+    /* true when the user has requested the game to pause. */
+    private bool pause_requested;
     
     /* Game history */
     private History history;
@@ -136,6 +139,8 @@ public class Mines : Gtk.Application
         window.title = _("Mines");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
+        window.focus_out_event.connect (window_focus_out_event_cb);
+        window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
         if (settings.get_boolean ("window-is-fullscreen"))
             window.fullscreen ();
@@ -392,6 +397,22 @@ public class Mines : Gtk.Application
         return false;
     }
 
+    private bool window_focus_out_event_cb (Gdk.EventFocus event)
+    {
+        if (minefield != null)
+            minefield.paused = true;
+
+        return false;
+    }
+
+    private bool window_focus_in_event_cb (Gdk.EventFocus event)
+    {
+        if (minefield != null && !pause_requested)
+            minefield.paused = false;
+
+        return false;
+    }
+
     private string make_minefield_description (string color, int width, int height, int n_mines)
     {
         var size_label = "%d × %d".printf (width, height);
@@ -446,6 +467,7 @@ public class Mines : Gtk.Application
         if (minefield.paused)
         {
             minefield.paused = false;
+            pause_requested = false;
             return true;
         }
 
@@ -524,7 +546,11 @@ public class Mines : Gtk.Application
             return;
 
         if (minefield != null)
+        {
+            minefield.paused = false;
+            pause_requested = false;
             SignalHandler.disconnect_by_func (minefield, null, this);
+        }
         minefield = null;
 
         is_new_game_screen = true;
@@ -538,8 +564,6 @@ public class Mines : Gtk.Application
         repeat_size_action.set_enabled (false);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
-
-        minefield.paused = false;
     }
 
     private void start_game ()
@@ -597,6 +621,7 @@ public class Mines : Gtk.Application
         pause_action.set_enabled (true);
 
         minefield.paused = false;
+        pause_requested = false;
     }
 
     private void hint_cb ()
@@ -618,7 +643,15 @@ public class Mines : Gtk.Application
 
     private void toggle_pause_cb ()
     {
-        minefield.paused = !minefield.paused;
+        if (minefield.paused && !pause_requested)
+        {
+            pause_requested = true;
+        }
+        else
+        {
+            minefield.paused = !minefield.paused;
+            pause_requested = minefield.paused;
+        }
     }
 
     private void paused_changed_cb ()
@@ -634,7 +667,10 @@ public class Mines : Gtk.Application
             hint_action.set_enabled (false);
             pause_button.icon_name = "media-playback-start";
             pause_button.label = _("Res_ume");
-            app_main_menu.insert (3, _("Res_ume"), "app.pause");
+            if (pause_requested)
+                app_main_menu.insert (3, _("Res_ume"), "app.pause");
+            else
+                app_main_menu.insert (3, _("_Pause"), "app.pause");
         }
         else
         {

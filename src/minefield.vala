@@ -104,14 +104,18 @@ public class Minefield
     {
         set
         {
-            _paused = value;
+            if (is_complete || exploded)
+                return;
+
             if (clock != null)
             {
-                if (value)
+                if (value && !_paused)
                     stop_clock ();
-                else
+                else if (!value && _paused)
                     continue_clock ();
             }
+
+            _paused = value;
             paused_changed ();
         }
         get { return _paused; }
