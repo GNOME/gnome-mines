@@ -280,7 +280,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 0, 1, 1, 1);
 
         label = new Gtk.Label (null);
-        label.set_markup (make_minefield_description ("#ff0000", 16, 16, 40));
+        label.set_markup (make_minefield_description ("#ff0000", 30, 16, 99));
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
