@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-12-02 21:56+0000\n"
-"PO-Revision-Date: 2013-01-19 10:38+0200\n"
+"POT-Creation-Date: 2013-02-15 08:01+0000\n"
+"PO-Revision-Date: 2013-02-15 22:16+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -24,8 +24,8 @@ msgstr ""
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:79
-#: ../src/gnome-mines.vala:123 ../src/gnome-mines.vala:688
+#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:92
+#: ../src/gnome-mines.vala:136 ../src/gnome-mines.vala:735
 msgid "Mines"
 msgstr "Mine"
 
@@ -56,13 +56,18 @@ msgstr ""
 "zastavica."
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:5
+msgid "Display border around numbers"
+msgstr "Prikazuje ivicu oko brojeva"
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:6
+msgid "Set to true to display a border around mine indication numbers."
+msgstr "Izaberite ovo da prikažete ivicu oko brojeva pokazatelja mina."
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Uključuje samostalno postavljanje zastavica"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:6
-#| msgid ""
-#| "Set to true to have gnomine automatically flag squares as mined when "
-#| "enough squares are revealed"
+#: ../data/org.gnome.mines.gschema.xml.in.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -70,118 +75,117 @@ msgstr ""
 "Izaberite za samostalno označavanje kvadrata miniranim kada je dovoljan broj "
 "kvadrata otkriven"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.in.h:9
 msgid "Number of columns in a custom game"
 msgstr "Broj kolona u proizvoljnoj igri"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:8
+#: ../data/org.gnome.mines.gschema.xml.in.h:10
 msgid "Number of rows in a custom game"
 msgstr "Broj redova u proizvoljnoj igri"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:9
+#: ../data/org.gnome.mines.gschema.xml.in.h:11
 msgid "The number of mines in a custom game"
 msgstr "Broj mina u proizvoljnoj igri"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:10
+#: ../data/org.gnome.mines.gschema.xml.in.h:12
 msgid "Board size"
 msgstr "Veličina table"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.in.h:13
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Veličina table (0-2=mala-velika, 3=proizvoljna)"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:12
+#: ../data/org.gnome.mines.gschema.xml.in.h:14
 msgid "Width of the window in pixels"
 msgstr "Širina prozora u tačkicama"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:13
+#: ../data/org.gnome.mines.gschema.xml.in.h:15
 msgid "Height of the window in pixels"
 msgstr "Visina prozora u tačkicama"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:14
+#: ../data/org.gnome.mines.gschema.xml.in.h:16
 msgid "true if the window is maximized"
 msgstr "izabrano ako je prozor uvećan"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:15
+#: ../data/org.gnome.mines.gschema.xml.in.h:17
 msgid "true if the window is fullscren"
 msgstr "izabrano ako je prozor preko celog ekrana"
 
-#: ../src/gnome-mines.vala:98
+#: ../src/gnome-mines.vala:111
 msgid "_New Game"
 msgstr "_Nova igra"
 
-#: ../src/gnome-mines.vala:99
+#: ../src/gnome-mines.vala:112
 msgid "_Replay Size"
 msgstr "Veličina _ponavljanja"
 
-#: ../src/gnome-mines.vala:100
+#: ../src/gnome-mines.vala:113
 msgid "_Hint"
 msgstr "_Savet"
 
-#: ../src/gnome-mines.vala:101 ../src/gnome-mines.vala:181
-#: ../src/gnome-mines.vala:597
+#: ../src/gnome-mines.vala:114 ../src/gnome-mines.vala:194
+#: ../src/gnome-mines.vala:643 ../src/gnome-mines.vala:644
 msgid "_Pause"
 msgstr "_Zastani"
 
-#: ../src/gnome-mines.vala:102 ../src/gnome-mines.vala:188
-#: ../src/gnome-mines.vala:356
+#: ../src/gnome-mines.vala:115 ../src/gnome-mines.vala:201
+#: ../src/gnome-mines.vala:388
 msgid "_Fullscreen"
 msgstr "_Ceo ekran"
 
-#: ../src/gnome-mines.vala:103
+#: ../src/gnome-mines.vala:116
 msgid "_Scores"
 msgstr "_Rezultati"
 
-#: ../src/gnome-mines.vala:104
+#: ../src/gnome-mines.vala:117
 msgid "_Preferences"
 msgstr "_Postavke"
 
-#: ../src/gnome-mines.vala:107
+#: ../src/gnome-mines.vala:120
 msgid "_Help"
 msgstr "Po_moć"
 
-#: ../src/gnome-mines.vala:108
+#: ../src/gnome-mines.vala:121
 msgid "_About"
 msgstr "_O programu"
 
-#: ../src/gnome-mines.vala:111
+#: ../src/gnome-mines.vala:124
 msgid "_Quit"
 msgstr "_Izađi"
 
-#: ../src/gnome-mines.vala:164
+#: ../src/gnome-mines.vala:177
 msgid "_New"
 msgstr "_Nova"
 
-#: ../src/gnome-mines.vala:173
+#: ../src/gnome-mines.vala:186
 msgid "Hint"
 msgstr "Savet"
 
-#. New game screen
-#: ../src/gnome-mines.vala:222
+#: ../src/gnome-mines.vala:251
 msgid "Field Size"
 msgstr "Veličina polja"
 
-#: ../src/gnome-mines.vala:277
+#: ../src/gnome-mines.vala:312
 msgid "H_orizontal:"
 msgstr "_Vodoravno:"
 
-#: ../src/gnome-mines.vala:287
+#: ../src/gnome-mines.vala:322
 msgid "_Vertical:"
 msgstr "_Uspravno:"
 
-#: ../src/gnome-mines.vala:297
+#: ../src/gnome-mines.vala:332
 msgid "_Number of mines:"
 msgstr "_Broj mina:"
 
-#: ../src/gnome-mines.vala:316
+#: ../src/gnome-mines.vala:353
 msgid "_Play Game"
 msgstr "_Igraj igru"
 
-#: ../src/gnome-mines.vala:351
+#: ../src/gnome-mines.vala:383
 msgid "_Leave Fullscreen"
 msgstr "_Napusti ceo ekran"
 
-#: ../src/gnome-mines.vala:366
+#: ../src/gnome-mines.vala:398
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -190,69 +194,69 @@ msgstr[1] "<b>%d</b> mine"
 msgstr[2] "<b>%d</b> mina"
 msgstr[3] "<b>Jedan</b> minut"
 
-#: ../src/gnome-mines.vala:430
+#: ../src/gnome-mines.vala:462
 #, c-format
 msgid "Flags: %u/%u"
 msgstr "Opcije: %u/%u"
 
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:505
 msgid "Do you want to start a new game?"
 msgstr "Da li želite da započnete novu igru?"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:506
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ako započnete novu igru, vaš trenutni napredak će biti izgubljen."
 
-#: ../src/gnome-mines.vala:473
+#: ../src/gnome-mines.vala:507
 msgid "Keep Current Game"
 msgstr "Zadrži trenutnu igru"
 
-#: ../src/gnome-mines.vala:474
+#: ../src/gnome-mines.vala:508
 msgid "Start New Game"
 msgstr "Započni novu igru"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:636 ../src/gnome-mines.vala:637
 msgid "Res_ume"
 msgstr "Na_stavi"
 
-#: ../src/gnome-mines.vala:637 ../src/gnome-mines.vala:942
+#: ../src/gnome-mines.vala:684 ../src/gnome-mines.vala:1004
 #, c-format
 msgid "Time"
 msgstr "Vreme"
 
-#: ../src/gnome-mines.vala:654
+#: ../src/gnome-mines.vala:701
 msgid "Main game:"
 msgstr "Glavna igra:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:706
 msgid "Score:"
 msgstr "Razultat:"
 
-#: ../src/gnome-mines.vala:662
+#: ../src/gnome-mines.vala:709
 msgid "Resizing and SVG support:"
 msgstr "Podrška za promenu veličine i SVG:"
 
-#: ../src/gnome-mines.vala:670
+#: ../src/gnome-mines.vala:717
 msgid "Faces:"
 msgstr "Lica:"
 
-#: ../src/gnome-mines.vala:674
+#: ../src/gnome-mines.vala:721
 msgid "Graphics:"
 msgstr "Grafike:"
 
-#: ../src/gnome-mines.vala:691
+#: ../src/gnome-mines.vala:738
 msgid ""
 "The popular logic puzzle minesweeper. Clear mines from a board using hints "
 "from squares you have already uncovered.\n"
 "\n"
 "Mines is a part of GNOME Games."
 msgstr ""
-"Popularna logička slagalica mine. Očistite mine sa table pomoću saveta iz "
-"polja koje ste već otkrili.\n"
+"Popularna logička slagalica minolovca. Očistite mine sa table pomoću saveta "
+"iz polja koje ste već otkrili.\n"
 "\n"
 "Mine su deo Gnomovih igara."
 
-#: ../src/gnome-mines.vala:698
+#: ../src/gnome-mines.vala:745
 msgid "translator-credits"
 msgstr ""
 "Dušan Marjanović <madafaka@root.co.yu>\n"
@@ -262,35 +266,39 @@ msgstr ""
 "\n"
 "http://prevod.org — prevod na srpski jezik"
 
-#: ../src/gnome-mines.vala:701
+#: ../src/gnome-mines.vala:748
 msgid "GNOME Games web site"
 msgstr "Veb sajt Gnomovih igara"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:819
 msgid "Mines Preferences"
 msgstr "Postavke mina"
 
-#: ../src/gnome-mines.vala:783
+#: ../src/gnome-mines.vala:837
 msgid "_Use \"I'm not sure\" flags"
 msgstr "_Koristi „Nisam siguran“ oznake"
 
-#: ../src/gnome-mines.vala:789
+#: ../src/gnome-mines.vala:843
 msgid "_Warn if too many flags have been placed"
 msgstr "_Upozori ako je postavljeno previše zastavica"
 
-#: ../src/gnome-mines.vala:899
+#: ../src/gnome-mines.vala:849
+msgid "_Display numbers with border"
+msgstr "_Prikaži brojeve sa ivicama"
+
+#: ../src/gnome-mines.vala:960
 msgid "New Game"
 msgstr "Nova igra"
 
-#: ../src/gnome-mines.vala:914
+#: ../src/gnome-mines.vala:976
 msgid "Size:"
 msgstr "Veličina:"
 
-#: ../src/gnome-mines.vala:939
+#: ../src/gnome-mines.vala:1001
 msgid "Date"
 msgstr "Datum"
 
-#: ../src/gnome-mines.vala:1024
+#: ../src/gnome-mines.vala:1086
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
@@ -299,6 +307,6 @@ msgstr[1] "%u × %u, %u mine"
 msgstr[2] "%u × %u, %u mina"
 msgstr[3] "%u × %u, jedna mina"
 
-#: ../src/minefield-view.vala:398
+#: ../src/minefield-view.vala:578
 msgid "Paused"
 msgstr "Pauzirano"
