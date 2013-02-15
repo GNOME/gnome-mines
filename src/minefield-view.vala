@@ -105,6 +105,9 @@ public class MinefieldView : Gtk.DrawingArea
     private Position keyboard_cursor;
     private Position selected;
 
+    /* true if numbers should be drawn with border */
+    private bool use_number_border;
+
     /* Pre-rendered images */
     private uint render_size = 0;
     private Cairo.Pattern? flag_pattern;
@@ -211,6 +214,14 @@ public class MinefieldView : Gtk.DrawingArea
         this.use_autoflag = use_autoflag;
     }
 
+    public void set_use_number_border (bool use_number_border)
+    {
+        if (this.use_number_border != use_number_border)
+            render_size = 0;
+
+        this.use_number_border = use_number_border;
+    }
+
     private void explode_cb (Minefield minefield)
     {
         /* Show the mines that we missed or the flags that were wrong */
@@ -252,32 +263,41 @@ public class MinefieldView : Gtk.DrawingArea
 
         /* Color */
         Pango.Attribute color_attribute;
+        double color_outline[3];
         switch (n)
         {
         case 1:
             color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0xffff); /* Blue */
+            color_outline = {0.0, 0.0, 0.5};
             break;
         case 2:
             color_attribute = Pango.attr_foreground_new (0x0000, 0xa0a0, 0x0000); /* Green */
+            color_outline = {0.0, 0.5*0.62745098039, 0.0};
             break;
         case 3:
             color_attribute = Pango.attr_foreground_new (0xffff, 0x0000, 0x0000); /* Red */
+            color_outline = {0.5, 0.0, 0.0};
             break;
         case 4:
             color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0x7fff); /* Dark Blue */
+            color_outline = {0.0, 0.0, 0.5*0.49999237048};
             break;
         case 5:
             color_attribute = Pango.attr_foreground_new (0xa0a0, 0x0000, 0x0000); /* Dark Red */
+            color_outline = {0.5*0.62745098039, 0.0, 0.0};
             break;
         case 6:
             color_attribute = Pango.attr_foreground_new (0x0000, 0xffff, 0xffff); /* Cyan */
+            color_outline = {0.0, 0.5, 0.5};
             break;
         case 7:
             color_attribute = Pango.attr_foreground_new (0xa0a0, 0x0000, 0xa0a0); /* Dark Violet */
+            color_outline = {0.5*0.62745098039, 0.0, 0.5*0.62745098039};
             break;
         default:
         case 8:
             color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0x0000); /* Black */
+            color_outline = {0.0, 0.0, 0.0};
             break;
         }
         color_attribute.start_index = 0;
@@ -304,6 +324,18 @@ public class MinefieldView : Gtk.DrawingArea
         var dy = ((int) mine_size - 2 - extent.height / Pango.SCALE) / 2 + 1;
         c.move_to (dx, dy);
         Pango.cairo_show_layout (c, layout);
+
+        if (use_number_border)
+        {
+            c.save ();
+            c.set_line_width(1.0);
+            c.set_source_rgb(color_outline[0],
+                             color_outline[1],
+                             color_outline[2]);
+            Pango.cairo_layout_path(c, layout);
+            c.stroke_preserve();
+            c.restore ();
+        }
 
         var pattern = new Cairo.Pattern.for_surface (surface);
         pattern.set_extend (Cairo.Extend.REPEAT);
