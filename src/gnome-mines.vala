@@ -47,6 +47,9 @@ public class Mines : Gtk.Application
 
     /* true when the user has requested the game to pause. */
     private bool pause_requested;
+
+    /* true when the next configure event should be ignored. */
+    private bool window_skip_configure;
     
     /* Game history */
     private History history;
@@ -367,11 +370,13 @@ public class Mines : Gtk.Application
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
     {
-        if (!is_maximized && !is_fullscreen)
+        if (!is_maximized && !is_fullscreen && !window_skip_configure)
         {
             window_width = event.width;
             window_height = event.height;
         }
+
+        window_skip_configure = false;
 
         return false;
     }
@@ -559,6 +564,7 @@ public class Mines : Gtk.Application
         new_game_screen.show ();
         flag_label.set_text("");
         set_face_image (smile_face_image);
+        window.resize (window_width, window_height);
 
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
@@ -570,6 +576,7 @@ public class Mines : Gtk.Application
     {
         is_new_game_screen = false;
         custom_game_screen.hide ();
+        window_skip_configure = true;
         minefield_view.show ();
         minefield_view.has_focus = true;
         new_game_screen.hide ();
