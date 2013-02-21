@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-20 14:02+0200\n"
-"PO-Revision-Date: 2012-12-20 14:02+0200\n"
+"POT-Creation-Date: 2013-02-21 19:36+0200\n"
+"PO-Revision-Date: 2013-02-21 19:37+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Gezer (Hebrew)\n"
 "Language: he\n"
@@ -22,9 +22,9 @@ msgstr ""
 "X-Poedit-Language: Hebrew\n"
 
 #: ../data/gnome-mines.desktop.in.in.h:1
-#: ../src/gnome-mines.vala:79
-#: ../src/gnome-mines.vala:123
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:95
+#: ../src/gnome-mines.vala:139
+#: ../src/gnome-mines.vala:771
 msgid "Mines"
 msgstr "מוקשים"
 
@@ -53,185 +53,195 @@ msgid "Set to true to enable warning icons when too many flags are placed."
 msgstr "Set to true to enable warning icons when too many flags are placed."
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:5
+msgid "Display border around numbers"
+msgstr "Display border around numbers"
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:6
+msgid "Set to true to display a border around mine indication numbers."
+msgstr "Set to true to display a border around mine indication numbers."
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Enable automatic placing of flags"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:6
+#: ../data/org.gnome.mines.gschema.xml.in.h:8
 msgid "Set to true to automatically flag squares as mined when enough squares are revealed"
 msgstr "Set to true to automatically flag squares as mined when enough squares are revealed"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.in.h:9
 msgid "Number of columns in a custom game"
 msgstr "Number of columns in a custom game"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:8
+#: ../data/org.gnome.mines.gschema.xml.in.h:10
 msgid "Number of rows in a custom game"
 msgstr "Number of rows in a custom game"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:9
+#: ../data/org.gnome.mines.gschema.xml.in.h:11
 msgid "The number of mines in a custom game"
 msgstr "The number of mines in a custom game"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:10
+#: ../data/org.gnome.mines.gschema.xml.in.h:12
 msgid "Board size"
 msgstr "Board size"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.in.h:13
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Size of the board (0-2 = small-large, 3=custom)"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:12
+#: ../data/org.gnome.mines.gschema.xml.in.h:14
 msgid "Width of the window in pixels"
 msgstr "Width of the window in pixels"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:13
+#: ../data/org.gnome.mines.gschema.xml.in.h:15
 msgid "Height of the window in pixels"
 msgstr "Height of the window in pixels"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:14
+#: ../data/org.gnome.mines.gschema.xml.in.h:16
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:15
+#: ../data/org.gnome.mines.gschema.xml.in.h:17
 msgid "true if the window is fullscren"
 msgstr "true if the window is fullscren"
 
-#: ../src/gnome-mines.vala:98
+#: ../src/gnome-mines.vala:114
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: ../src/gnome-mines.vala:99
+#: ../src/gnome-mines.vala:115
 msgid "_Replay Size"
 msgstr "גודל המשחק ה_חוזר"
 
-#: ../src/gnome-mines.vala:100
+#: ../src/gnome-mines.vala:116
 msgid "_Hint"
 msgstr "_רמז"
 
-#: ../src/gnome-mines.vala:101
-#: ../src/gnome-mines.vala:181
-#: ../src/gnome-mines.vala:597
+#: ../src/gnome-mines.vala:117
+#: ../src/gnome-mines.vala:199
+#: ../src/gnome-mines.vala:673
+#: ../src/gnome-mines.vala:679
+#: ../src/gnome-mines.vala:680
 msgid "_Pause"
 msgstr "ה_שהייה"
 
-#: ../src/gnome-mines.vala:102
-#: ../src/gnome-mines.vala:188
-#: ../src/gnome-mines.vala:356
+#: ../src/gnome-mines.vala:118
+#: ../src/gnome-mines.vala:206
+#: ../src/gnome-mines.vala:393
 msgid "_Fullscreen"
 msgstr "מסך מ_לא"
 
-#: ../src/gnome-mines.vala:103
+#: ../src/gnome-mines.vala:119
 msgid "_Scores"
 msgstr "_תוצאות"
 
-#: ../src/gnome-mines.vala:104
+#: ../src/gnome-mines.vala:120
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: ../src/gnome-mines.vala:107
+#: ../src/gnome-mines.vala:123
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/gnome-mines.vala:108
+#: ../src/gnome-mines.vala:124
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/gnome-mines.vala:111
+#: ../src/gnome-mines.vala:127
 msgid "_Quit"
 msgstr "י_ציאה"
 
-#: ../src/gnome-mines.vala:164
+#: ../src/gnome-mines.vala:182
 msgid "_New"
 msgstr "_חדש"
 
-#: ../src/gnome-mines.vala:173
+#: ../src/gnome-mines.vala:191
 msgid "Hint"
 msgstr "רמז"
 
-#. New game screen
-#: ../src/gnome-mines.vala:222
+#: ../src/gnome-mines.vala:256
 msgid "Field Size"
 msgstr "גודל השדה"
 
-#: ../src/gnome-mines.vala:277
+#: ../src/gnome-mines.vala:317
 msgid "H_orizontal:"
 msgstr "_אופקי:"
 
-#: ../src/gnome-mines.vala:287
+#: ../src/gnome-mines.vala:327
 msgid "_Vertical:"
 msgstr "א_נכי:"
 
-#: ../src/gnome-mines.vala:297
+#: ../src/gnome-mines.vala:337
 msgid "_Number of mines:"
 msgstr "מ_ספר המוקשים:"
 
-#: ../src/gnome-mines.vala:316
+#: ../src/gnome-mines.vala:358
 msgid "_Play Game"
 msgstr "ל_שחק במשחק"
 
-#: ../src/gnome-mines.vala:351
+#: ../src/gnome-mines.vala:388
 msgid "_Leave Fullscreen"
 msgstr "י_ציאה ממסך מלא"
 
-#: ../src/gnome-mines.vala:366
+#: ../src/gnome-mines.vala:419
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "מוקש <b>אחד</b>"
 msgstr[1] "<b>%d</b> מוקשים"
 
-#: ../src/gnome-mines.vala:430
+#: ../src/gnome-mines.vala:484
 #, c-format
 msgid "Flags: %u/%u"
 msgstr "דגלים: %u/%u"
 
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:527
 msgid "Do you want to start a new game?"
 msgstr "האם ברצונך להתחיל משחק חדש?"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:528
 msgid "If you start a new game, your current progress will be lost."
 msgstr "אם בחירתך תהיה להתחיל משחק חדש אז התהליך הנוכחי שלך יאבד."
 
-#: ../src/gnome-mines.vala:473
+#: ../src/gnome-mines.vala:529
 msgid "Keep Current Game"
 msgstr "שמירת המשחק הנוכחי"
 
-#: ../src/gnome-mines.vala:474
+#: ../src/gnome-mines.vala:530
 msgid "Start New Game"
 msgstr "הֹתחלת משחק חדש"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:669
+#: ../src/gnome-mines.vala:671
 msgid "Res_ume"
 msgstr "המש_ך"
 
-#: ../src/gnome-mines.vala:637
-#: ../src/gnome-mines.vala:942
+#: ../src/gnome-mines.vala:720
+#: ../src/gnome-mines.vala:1040
 #, c-format
 msgid "Time"
 msgstr "זמן"
 
-#: ../src/gnome-mines.vala:654
+#: ../src/gnome-mines.vala:737
 msgid "Main game:"
 msgstr "משחק ראשי:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:742
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../src/gnome-mines.vala:662
+#: ../src/gnome-mines.vala:745
 msgid "Resizing and SVG support:"
 msgstr "תמיכה באפשרות שינוי גודל ובגרפיקה וקטורית (SVG):"
 
-#: ../src/gnome-mines.vala:670
+#: ../src/gnome-mines.vala:753
 msgid "Faces:"
 msgstr "פנים:"
 
-#: ../src/gnome-mines.vala:674
+#: ../src/gnome-mines.vala:757
 msgid "Graphics:"
 msgstr "גרפיקה:"
 
-#: ../src/gnome-mines.vala:691
+#: ../src/gnome-mines.vala:774
 msgid ""
 "The popular logic puzzle minesweeper. Clear mines from a board using hints from squares you have already uncovered.\n"
 "\n"
@@ -240,7 +250,7 @@ msgstr ""
 "משחק החשיבה הפופולרי \"שולה מוקשים\". נקה מוקשים מהלוח בעזרת רמזים מהריבועים שכבר חשפת.\n"
 "\"שולה מוקשים\" הוא חלק מחבילת משחקי GNOME."
 
-#: ../src/gnome-mines.vala:698
+#: ../src/gnome-mines.vala:781
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -254,42 +264,46 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/gnome-mines.vala:701
+#: ../src/gnome-mines.vala:784
 msgid "GNOME Games web site"
 msgstr "אתר משחקי GNOME"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:855
 msgid "Mines Preferences"
 msgstr "העדפות 'מוקשים'"
 
-#: ../src/gnome-mines.vala:783
+#: ../src/gnome-mines.vala:873
 msgid "_Use \"I'm not sure\" flags"
 msgstr "שימוש בדגלי \"_אני לא בטוח\"."
 
-#: ../src/gnome-mines.vala:789
+#: ../src/gnome-mines.vala:879
 msgid "_Warn if too many flags have been placed"
 msgstr "_יש להציג אזהרה אם הוצבו יותר מדי דגלים"
 
-#: ../src/gnome-mines.vala:899
+#: ../src/gnome-mines.vala:885
+msgid "_Display numbers with border"
+msgstr "הצגת מספרים עם מ_סגרות"
+
+#: ../src/gnome-mines.vala:996
 msgid "New Game"
 msgstr "משחק חדש"
 
-#: ../src/gnome-mines.vala:914
+#: ../src/gnome-mines.vala:1012
 msgid "Size:"
 msgstr "גודל:"
 
-#: ../src/gnome-mines.vala:939
+#: ../src/gnome-mines.vala:1037
 msgid "Date"
 msgstr "תאריך"
 
-#: ../src/gnome-mines.vala:1024
+#: ../src/gnome-mines.vala:1122
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, מוקש אחד"
 msgstr[1] "%u × %u, %u מוקשים"
 
-#: ../src/minefield-view.vala:398
+#: ../src/minefield-view.vala:578
 msgid "Paused"
 msgstr "הושהה"
 
