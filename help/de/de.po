@@ -1,13 +1,13 @@
 # Florian Purucker <florian@purucker.net>, 2007.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2013.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-08-22 19:45+0000\n"
-"PO-Revision-Date: 2012-09-04 21:29+0100\n"
+"POT-Creation-Date: 2012-12-02 22:00+0000\n"
+"PO-Revision-Date: 2013-02-28 20:41+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -20,7 +20,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Florian Purucker <florian@purucker.net>, 2007.\n"
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012.\n"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2013.\n"
 "Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012."
 
 #. This is a reference to an external file such as an image or video. When
@@ -88,13 +88,13 @@ msgstr ""
 
 #: C/index.page:24(page/p)
 msgid ""
-"<app>Gnomine</app> is a clone of the game Minesweeper. The aim is to locate "
-"all the mines that are hidden under tiles on a rectangular board. You will "
-"need to use a combination of logic and luck to find all the mines without "
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate all "
+"the mines that are hidden under tiles on a rectangular board. You will need "
+"to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
 msgstr ""
 "<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist es, "
-"die unter den Feldern eines quadratischen Spielfelds verborgenen Minen "
+"die unter den Feldern eines rechteckigen Spielfelds verborgenen Minen "
 "aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen zu "
 "finden, ohne eine Explosion zu verursachen."
 
@@ -183,7 +183,7 @@ msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #: C/bug-filing.page:18(page/title)
-msgid "Help make <app>Gnomine</app> better"
+msgid "Help make <app>Mines</app> better"
 msgstr "Helfen Sie, <app>Minen</app> zu verbessern"
 
 #: C/bug-filing.page:21(section/title)
@@ -192,7 +192,7 @@ msgstr "Einen Fehler melden oder einen Verbesserungsvorschlag einreichen"
 
 #: C/bug-filing.page:22(section/p)
 msgid ""
-"<app>Gnomine</app> is maintained by a volunteer community. You are welcome to "
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
 "participate. If you notice a problem you can file a <em>bug report</em>. To "
 "file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
@@ -225,14 +225,14 @@ msgstr ""
 #: C/bug-filing.page:31(section/p)
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before reporting "
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
 "a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
 "id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
 "\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
 "for the bug to see if it already exists."
 msgstr ""
 "Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
-"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></"
+"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-mines</gui></"
 "guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
 "\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
 "guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
@@ -240,14 +240,6 @@ msgstr ""
 "schon gemeldet wurde."
 
 #: C/bug-filing.page:35(section/p)
-msgid ""
-"To file your bug, choose the component <gui>gnomine</gui> in the "
-"<gui>Component</gui> menu."
-msgstr ""
-"Um einen Fehler zu melden, wählen Sie <gui>gnomine</gui> im <gui>Component</"
-"gui>-Menü."
-
-#: C/bug-filing.page:38(section/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -258,14 +250,14 @@ msgstr ""
 "Abschnitte summary (Zusammenfassung) und description (Beschreibung) aus und "
 "klicken Sie auf <gui>Commit</gui>."
 
-#: C/bug-filing.page:42(section/p)
+#: C/bug-filing.page:39(section/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
-"is being dealt with. Thanks for helping make <app>Gnomine</app> better!"
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
 msgstr ""
 "Ihr Bericht bekommt eine Kennung (ID) zugewiesen und der Status wird mit "
 "laufender Bearbeitung stets aktualisiert. Danke für Ihre Mithilfe bei der "
-"Verbesserung der GNOME-Hilfe!"
+"Verbesserung von <app>Minen</app>!"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
@@ -507,8 +499,8 @@ msgid ""
 "sure\" flags</gui>."
 msgstr ""
 "Um diese Fahnen freizuschalten, klicken Sie auf <guiseq><gui style=\"manu"
-"\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und "
-"wählen Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
+"\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und wählen "
+"Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
 
 #: C/get-help.page:21(page/title)
 msgid "Hints and warnings"
