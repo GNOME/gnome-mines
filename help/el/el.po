@@ -1,17 +1,19 @@
 # Greek translation of gnomine.HEAD.po
 # Marios Zindilis <m.zindilis@dmajor.org>, 2009.
+# Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2012-09-24 23:49+0000\n"
-"PO-Revision-Date: 2012-09-29 13:25+0200\n"
-"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
-"Language-Team: Greek <team@gnome.gr>\n"
+"POT-Creation-Date: 2013-01-21 21:14+0000\n"
+"PO-Revision-Date: 2013-03-10 20:57+0300\n"
+"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"Language-Team: team@gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -90,7 +92,7 @@ msgstr ""
 
 #: C/index.page:24(page/p)
 msgid ""
-"<app>Gnomine</app> is a clone of the game Minesweeper. The aim is to locate "
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
 "need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
@@ -185,8 +187,8 @@ msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #: C/bug-filing.page:18(page/title)
-msgid "Help make <app>Gnomine</app> better"
-msgstr "Βοήθηστε να κάνουμε καλύτερο τις <app>Νάρκες</app>"
+msgid "Help make <app>Mines</app> better"
+msgstr "Βοηθήστε να κάνουμε καλύτερο το παιχνίδι <app>Νάρκες</app>"
 
 #: C/bug-filing.page:21(section/title)
 msgid "Report a bug or suggest an improvement"
@@ -194,14 +196,14 @@ msgstr "Αναφορά σφάλματος ή πρόταση βελτίωσης"
 
 #: C/bug-filing.page:22(section/p)
 msgid ""
-"<app>Gnomine</app> is maintained by a volunteer community. You are welcome "
-"to participate. If you notice a problem you can file a <em>bug report</em>. "
-"To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
 "Οι <app>Νάρκες</app> διατηρούνται από μια εθελοντική κοινότητα. Είστε "
 "ευπρόσδεκτοι να συμμετάσχετε. Αν παρατηρήσετε κάποιο πρόβλημα μπορείτε να "
 "κάνετε μια <em>αναφορά σφάλματος (bug report)</em>. Για να κάνετε αναφορά "
-"σφάλματος πηγαίνετε <link href=\"https://bugzilla.gnome.org/\"/>."
+"σφάλματος πηγαίνετε στο <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #: C/bug-filing.page:25(section/p)
 msgid ""
@@ -227,29 +229,20 @@ msgstr ""
 #: C/bug-filing.page:31(section/p)
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Before reporting "
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
 "a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
 "id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
 "\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
 "for the bug to see if it already exists."
 msgstr ""
-"Μόλις δημιουργήσετε λογαριασμό, συνδεθείτε (log in), πατήστε στο "
-"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></"
-"guiseq>. Πριν αναφέρετε ένα σφάλμα, παρακαλώ διαβάστε το <link href="
-"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
-"guidelines</link>, και παρακαλώ κάντε <link href=\"https://bugzilla.gnome."
-"org/browse.cgi?product=gnome-games\">αναζήτηση</link> για να δείτε αν "
-"υπάρχει η ίδια αναφορά ήδη."
+"Μόλις δημιουργήσετε λογαριασμό, συνδεθείτε και πατήστε στο <guiseq><gui>File "
+"a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Πριν "
+"αναφέρετε ένα σφάλμα, παρακαλούμε διαβάστε το <link href=\"https://bugzilla."
+"gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, και "
+"κάντε <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
+"\">αναζήτηση</link> για να δείτε αν υπάρχει η ίδια αναφορά ήδη."
 
 #: C/bug-filing.page:35(section/p)
-msgid ""
-"To file your bug, choose the component <gui>gnomine</gui> in the "
-"<gui>Component</gui> menu."
-msgstr ""
-"Για να αναφέρετε το σφάλμα, διαλέξτε το συστατικό <gui>glines</gui> στο "
-"μενού <gui>Component</gui>."
-
-#: C/bug-filing.page:38(section/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -259,14 +252,14 @@ msgstr ""
 "στο μενού <gui>Severity</gui>. Συμπληρώστε την Περίληψη και την Περιγραφή "
 "και πατήστε <gui>Commit</gui>."
 
-#: C/bug-filing.page:42(section/p)
+#: C/bug-filing.page:39(section/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
-"is being dealt with. Thanks for helping make <app>Gnomine</app> better!"
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
 msgstr ""
 "Στην αναφορά σας θα δοθεί ένας αριθμός ID και η κατάστασή της θα ενημερωθεί "
-"όταν θα επεξεργαστεί. Ευχαριστούμε για τη βοήθειά σας να κάνουμε τα "
-"<app>μαθήματα ανάπτυξης του GNOME</app> καλύτερα!"
+"όταν θα επεξεργαστεί. Ευχαριστούμε για τη βοήθειά σας να κάνουμε το παιχνίδι "
+"<app>Νάρκες</app> καλύτερο!"
 
 #: C/develop.page:19(page/title)
 msgid "Help develop"
@@ -897,6 +890,13 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid ""
+#~ "To file your bug, choose the component <gui>gnomine</gui> in the "
+#~ "<gui>Component</gui> menu."
+#~ msgstr ""
+#~ "Για να αναφέρετε το σφάλμα, διαλέξτε το συστατικό <gui>glines</gui> στο "
+#~ "μενού <gui>Component</gui>."
 
 #~ msgid "Select an existing or custom field size"
 #~ msgstr "Επιλέξτε ένα υπάρχον ή ένα προσαρμοσμένο μέγεθος πεδίου"
