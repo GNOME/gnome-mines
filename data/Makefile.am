@@ -13,7 +13,7 @@ pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg \
 	flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnome-mines.desktop.in.in
+desktop_in_files = gnomine.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
