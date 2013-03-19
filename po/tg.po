@@ -1,0 +1,290 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Victor Ibragimov <victor.ibragimov@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tajik Gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mines&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-03-18 18:39+0000\n"
+"PO-Revision-Date: 2013-01-21 13:46+0500\n"
+"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"Language-Team: \n"
+"Language: Tajik\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
+#: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
+msgid "Mines"
+msgstr ""
+
+#: ../data/gnomine.desktop.in.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr ""
+
+#: ../data/gnomine.desktop.in.in.h:3
+msgid "minesweeper;"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:1
+msgid "Use the unknown flag"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:2
+msgid "Set to true to be able to mark squares as unknown."
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:3
+msgid "Warning about too many flags"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:4
+msgid "Set to true to enable warning icons when too many flags are placed."
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:5
+msgid "Display border around numbers"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:6
+msgid "Set to true to display a border around mine indication numbers."
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:7
+msgid "Enable automatic placing of flags"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:8
+msgid ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:9
+msgid "Number of columns in a custom game"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:10
+msgid "Number of rows in a custom game"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:11
+msgid "The number of mines in a custom game"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:12
+msgid "Board size"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:13
+msgid "Size of the board (0-2 = small-large, 3=custom)"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:14
+msgid "Width of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:15
+msgid "Height of the window in pixels"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:16
+msgid "true if the window is maximized"
+msgstr ""
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:17
+msgid "true if the window is fullscren"
+msgstr ""
+
+#: ../src/gnome-mines.vala:114
+msgid "_New Game"
+msgstr "_Бозии нав"
+
+#: ../src/gnome-mines.vala:115
+msgid "_Replay Size"
+msgstr ""
+
+#: ../src/gnome-mines.vala:116
+msgid "_Hint"
+msgstr ""
+
+#: ../src/gnome-mines.vala:117 ../src/gnome-mines.vala:199
+#: ../src/gnome-mines.vala:673 ../src/gnome-mines.vala:679
+#: ../src/gnome-mines.vala:680
+msgid "_Pause"
+msgstr "_Таваққуф кардан"
+
+#: ../src/gnome-mines.vala:118 ../src/gnome-mines.vala:206
+#: ../src/gnome-mines.vala:393
+msgid "_Fullscreen"
+msgstr "_Экрани пурра"
+
+#: ../src/gnome-mines.vala:119
+msgid "_Scores"
+msgstr ""
+
+#: ../src/gnome-mines.vala:120
+msgid "_Preferences"
+msgstr "_Хусусиятҳо"
+
+#: ../src/gnome-mines.vala:123
+msgid "_Help"
+msgstr "_Кӯмак"
+
+#: ../src/gnome-mines.vala:124
+msgid "_About"
+msgstr "_Дар бораи барнома"
+
+#: ../src/gnome-mines.vala:127
+msgid "_Quit"
+msgstr "_Баромад"
+
+#: ../src/gnome-mines.vala:182
+msgid "_New"
+msgstr "_Нав"
+
+#: ../src/gnome-mines.vala:191
+msgid "Hint"
+msgstr ""
+
+#: ../src/gnome-mines.vala:256
+msgid "Field Size"
+msgstr ""
+
+#: ../src/gnome-mines.vala:317
+msgid "H_orizontal:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:327
+msgid "_Vertical:"
+msgstr "_Амудӣ:"
+
+#: ../src/gnome-mines.vala:337
+msgid "_Number of mines:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:358
+msgid "_Play Game"
+msgstr ""
+
+#: ../src/gnome-mines.vala:388
+msgid "_Leave Fullscreen"
+msgstr ""
+
+#: ../src/gnome-mines.vala:419
+#, c-format
+msgid "<b>%d</b> mine"
+msgid_plural "<b>%d</b> mines"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/gnome-mines.vala:484
+#, c-format
+msgid "Flags: %u/%u"
+msgstr ""
+
+#: ../src/gnome-mines.vala:527
+msgid "Do you want to start a new game?"
+msgstr ""
+
+#: ../src/gnome-mines.vala:528
+msgid "If you start a new game, your current progress will be lost."
+msgstr ""
+
+#: ../src/gnome-mines.vala:529
+msgid "Keep Current Game"
+msgstr ""
+
+#: ../src/gnome-mines.vala:530
+msgid "Start New Game"
+msgstr ""
+
+#: ../src/gnome-mines.vala:669 ../src/gnome-mines.vala:671
+msgid "Res_ume"
+msgstr ""
+
+#: ../src/gnome-mines.vala:720 ../src/gnome-mines.vala:1040
+#, c-format
+msgid "Time"
+msgstr "Вақт"
+
+#: ../src/gnome-mines.vala:737
+msgid "Main game:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:742
+msgid "Score:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:745
+msgid "Resizing and SVG support:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:753
+msgid "Faces:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:757
+msgid "Graphics:"
+msgstr ""
+
+#: ../src/gnome-mines.vala:774
+msgid ""
+"The popular logic puzzle minesweeper. Clear mines from a board using hints "
+"from squares you have already uncovered.\n"
+"\n"
+"Mines is a part of GNOME Games."
+msgstr ""
+
+#: ../src/gnome-mines.vala:781
+msgid "translator-credits"
+msgstr ""
+
+#: ../src/gnome-mines.vala:784
+msgid "GNOME Games web site"
+msgstr ""
+
+#: ../src/gnome-mines.vala:855
+msgid "Mines Preferences"
+msgstr ""
+
+#: ../src/gnome-mines.vala:873
+msgid "_Use \"I'm not sure\" flags"
+msgstr ""
+
+#: ../src/gnome-mines.vala:879
+msgid "_Warn if too many flags have been placed"
+msgstr ""
+
+#: ../src/gnome-mines.vala:885
+msgid "_Display numbers with border"
+msgstr ""
+
+#: ../src/gnome-mines.vala:996
+msgid "New Game"
+msgstr "Бозии нав"
+
+#: ../src/gnome-mines.vala:1012
+msgid "Size:"
+msgstr "Андоза:"
+
+#: ../src/gnome-mines.vala:1037
+msgid "Date"
+msgstr "Сана"
+
+#: ../src/gnome-mines.vala:1122
+#, c-format
+msgid "%u × %u, %u mine"
+msgid_plural "%u × %u, %u mines"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/minefield-view.vala:578
+msgid "Paused"
+msgstr "Таваққуфшуда"
