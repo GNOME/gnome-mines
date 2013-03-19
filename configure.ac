@@ -43,7 +43,7 @@ Makefile
 po/Makefile.in
 data/Makefile
 data/icons/Makefile
-data/gnome-mines.desktop.in
+data/gnomine.desktop.in
 help/Makefile
 src/Makefile
 ])
