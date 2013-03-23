@@ -36,7 +36,7 @@ msgstr "യുദ്ധഭൂമിയില്‍നിന്ന് കുഴ�
 
 #: ../data/gnome-mines.desktop.in.in.h:3
 msgid "minesweeper;"
-msgstr "മൈന്‍സ്വീപ്പര്‍ "
+msgstr "മൈന്‍സ്വീപ്പര്‍ ;"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:1
 msgid "Use the unknown flag"
