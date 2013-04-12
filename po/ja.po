@@ -13,8 +13,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-18 12:35+0000\n"
-"PO-Revision-Date: 2013-03-19 00:26+0900\n"
+"POT-Creation-Date: 2013-03-27 16:39+0000\n"
+"PO-Revision-Date: 2013-04-10 00:51+0900\n"
 "Last-Translator: OKANO Takayoshi <kano@na.rim.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -23,16 +23,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:95
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
 #: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
 msgid "Mines"
 msgstr "GNOME マインスイーパー"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "地雷原から見えない地雷を除去してください"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnomine.desktop.in.in.h:3
 msgid "minesweeper;"
 msgstr "minesweeper;マインスイーパー;"
 
@@ -42,7 +42,7 @@ msgstr "不明なフラグを使う"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:2
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "不明なエリアをマークできるようにする場合は TRUE にしてください。"
+msgstr "不明なエリアをマークできるようにする場合は true にしてください。"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:3
 msgid "Warning about too many flags"
@@ -50,25 +50,23 @@ msgstr "フラグを置きすぎたら警告する"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:4
 msgid "Set to true to enable warning icons when too many flags are placed."
-msgstr "フラグをたくさん置いた時に警告アイコンを表示する場合は TRUE にしてください。"
+msgstr "フラグをたくさん置いた時に警告アイコンを表示する場合は true にしてください。"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:5
 msgid "Display border around numbers"
-msgstr ""
+msgstr "数字に縁取りを表示する"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:6
 msgid "Set to true to display a border around mine indication numbers."
-msgstr ""
+msgstr "周辺の地雷数を示す数字に縁取りを表示する場合は true にしてください。"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:7
 msgid "Enable automatic placing of flags"
 msgstr "フラグを自動的に置くかどうか"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:8
-#, fuzzy
-#| msgid "Set to true to have gnomine automatically flag squares as mined when enough squares are revealed"
 msgid "Set to true to automatically flag squares as mined when enough squares are revealed"
-msgstr "マス目に地雷が埋まっていることが明らかであることを表すフラグを自動的に付与する場合は TRUE にしてください。"
+msgstr "マス目に地雷が埋まっていることが明らかであることを表すフラグを自動的に付与する場合は true にしてください。"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:9
 msgid "Number of columns in a custom game"
@@ -92,19 +90,19 @@ msgstr "ボードの大きさ (0-2 = 小さい〜大きい、3=その他)"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:14
 msgid "Width of the window in pixels"
-msgstr "ウィンドウの幅 (ピクセル単位) です。"
+msgstr "ウィンドウの幅 (ピクセル単位)"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:15
 msgid "Height of the window in pixels"
-msgstr "ウィンドウの高さ (ピクセル単位) です。"
+msgstr "ウィンドウの高さ (ピクセル単位)"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:16
 msgid "true if the window is maximized"
-msgstr "ウィンドウが最小化されている場合は TRUE"
+msgstr "ウィンドウが最小化されている場合は true"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:17
 msgid "true if the window is fullscren"
-msgstr "ウィンドウがフルスクリーンの場合は TRUE"
+msgstr "ウィンドウがフルスクリーンの場合は true"
 
 #: ../src/gnome-mines.vala:114
 msgid "_New Game"
@@ -154,10 +152,8 @@ msgid "_New"
 msgstr "新しいゲーム(_N)"
 
 #: ../src/gnome-mines.vala:191
-#, fuzzy
-#| msgid "_Hint"
 msgid "Hint"
-msgstr "ヒント(_H)"
+msgstr "ヒント"
 
 #: ../src/gnome-mines.vala:256
 msgid "Field Size"
@@ -279,7 +275,7 @@ msgstr "フラグを置きすぎたら警告する(_W)"
 
 #: ../src/gnome-mines.vala:885
 msgid "_Display numbers with border"
-msgstr ""
+msgstr "数字を縁取り付きで表示する(_D)"
 
 #: ../src/gnome-mines.vala:996
 msgid "New Game"
@@ -297,7 +293,7 @@ msgstr "日付"
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
-msgstr[0] ""
+msgstr[0] "%u × %u, 地雷 %u 個"
 
 #: ../src/minefield-view.vala:578
 msgid "Paused"
