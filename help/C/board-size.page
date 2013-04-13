@@ -25,7 +25,9 @@
 
   <steps>
     <item>
-      <p>Click <gui style="button">New</gui> or <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New Game</gui></guiseq>.</p>
+      <p>Click <gui style="button">New</gui> or
+      <guiseq><gui style="menu">Mines</gui>
+      <gui style="menuitem">New Game</gui></guiseq>.</p>
     </item>
     <item>
       <p>Select one of the grid sizes:</p>

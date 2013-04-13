@@ -17,15 +17,25 @@
       <email>kittykat3756@gmail.com</email>
       <years>2012</years>
     </credit>
-
+    <credit type="editor">
+      <name>Aruna Sankaranarayanan</name>
+      <email>aruna.evam@gmail.com</email>
+    </credit>
   </info>
 
   <title>Start a new game</title>
 
   <p>To start a new game:</p>
   <steps>
-    <item><p>click the <gui style="button">New</gui> button or select <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New Game</gui></guiseq> from the application menu</p></item>
-    <item><p><link xref="board-size">select your preferred board size</link></p></item>
+    <item>
+      <p>Click the <gui style="button">New</gui> button or select
+      <guiseq><gui style="menu">Mines</gui>
+      <gui style="menuitem">New Game</gui></guiseq> from
+      the application menu.</p>
+    </item>
+    <item>
+      <p>Select your preferred <link xref="board-size">board size</link>.</p>
+    </item>
   </steps>
 
   <note>
