@@ -11,6 +11,10 @@
       <years>2011</years>
     </credit>
 
+    <credit>
+      <name>Aruna Sankaranarayanan</name>
+      <email>aruna.evam@gmail.com</email>
+    </credit>
   </info>
 
   <title>The meaning of the faces</title>
@@ -18,23 +22,23 @@
   <table shade="rows">
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-smile.svg"/></td>
-      <td><p>This is a new game and you didn't clicked on any tile for the moment.</p></td>
+      <td><p>This is a new game and you have not clicked on any tile yet.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-sad.svg"/></td>
-      <td><p>You clicked on a mine, you loose.</p></td>
+      <td><p>You have uncovered a mine, you lose.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-cool.svg"/></td>
-      <td><p>The tile you clicked on is safe. You can continue.</p></td>
+      <td><p>The tile you just clicked on is safe, you can continue.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-worried.svg"/></td>
-      <td><p>This face appears when you're clicking a on tile.</p></td>
+      <td><p>You are clicking on a tile.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-win.svg"/></td>
-      <td><p>You found all the mines, you win.</p></td>
+      <td><p>You have found all the mines, you win.</p></td>
     </tr>
   </table>
 
