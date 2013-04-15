@@ -1,3 +1,13 @@
+gnome-mines 3.8.1
+=================
+
+Gabor Kelemen (2):
+      Add hu to HELP_LINGUAS
+      Add initial Hungarian translation
+
+OKANO Takayoshi (1):
+      l10n: Update Japanese translation
+
 gnome-mines 3.8.0
 =================
 
