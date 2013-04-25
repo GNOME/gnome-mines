@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-01-21 21:14+0000\n"
-"PO-Revision-Date: 2013-03-10 20:57+0300\n"
+"POT-Creation-Date: 2013-04-17 18:30+0000\n"
+"PO-Revision-Date: 2013-04-25 17:52+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -22,6 +22,7 @@ msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
 " Μάριος Ζηντίλης <m.zindilis@dmajor.org>, 2009\n"
 " Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013\n"
 "\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
 
@@ -77,7 +78,7 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:19(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
 #: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
@@ -151,30 +152,33 @@ msgid "You can select a field size at the start of a new game."
 msgstr "Μπορείτε να επιλέξετε το μέγεθος του πεδίου στην αρχή του παιχνιδιού."
 
 #: C/board-size.page:28(item/p)
+#| msgid ""
+#| "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
+#| "\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq>."
 msgid ""
 "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui><gui style=\"menuitem\">New Game</gui></guiseq>."
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
 msgstr ""
-"Κάντε κλικ στο <gui style=\"button\">Νέο</gui> ή <guiseq><gui style=\"menu"
-"\">Νάρκες</gui><gui style=\"menuitem\">Νέο παιχνίδι</gui></guiseq>."
+"Πατήστε στο <gui style=\"button\">Νέο</gui> ή <guiseq><gui "
+"style=\"menu\">Νάρκες</gui> <gui style=\"menuitem\">Νέο παιχνίδι</gui></guiseq>."
 
-#: C/board-size.page:31(item/p)
+#: C/board-size.page:33(item/p)
 msgid "Select one of the grid sizes:"
 msgstr "Επιλέξτε ένα μέγεθος πλέγματος:"
 
-#: C/board-size.page:33(item/p)
+#: C/board-size.page:35(item/p)
 msgid "a 8 × 8 board with 10 mines"
 msgstr "ένας πίνακας 8 × 8 με 10 νάρκες"
 
-#: C/board-size.page:34(item/p)
+#: C/board-size.page:36(item/p)
 msgid "a 16 × 16 board with 40 mines"
 msgstr "ένας πίνακας 16 × 16 με 40 νάρκες"
 
-#: C/board-size.page:35(item/p)
+#: C/board-size.page:37(item/p)
 msgid "a 30 × 16 board with 99 mines"
 msgstr "ένας πίνακας 30 × 16 με 99 νάρκες"
 
-#: C/board-size.page:36(item/p)
+#: C/board-size.page:38(item/p)
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr ""
 "ένας προσαρμοσμένος πίνακας, όπου επιλέγετε το μέγεθος και τον αριθμό των "
@@ -226,23 +230,32 @@ msgstr ""
 "σφάλματος σας. Εάν δεν έχετε ήδη λογαριασμό, απλά πατήστε <gui>Νέος "
 "λογαριασμός</gui> για να δημιουργήσετε."
 
-#: C/bug-filing.page:31(section/p)
+#: C/bug-filing.page:32(section/p)
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
 "a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
 "id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
 "for the bug to see if it already exists."
 msgstr ""
-"Μόλις δημιουργήσετε λογαριασμό, συνδεθείτε και πατήστε στο <guiseq><gui>File "
-"a Bug</gui><gui>Applications</gui><gui>gnome-games</gui></guiseq>. Πριν "
-"αναφέρετε ένα σφάλμα, παρακαλούμε διαβάστε το <link href=\"https://bugzilla."
-"gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, και "
-"κάντε <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
-"\">αναζήτηση</link> για να δείτε αν υπάρχει η ίδια αναφορά ήδη."
+"Μόλις δημιουργήσετε λογαριασμό, συνδεθείτε και πατήστε στο "
+"<guiseq><gui>Αποστολή "
+"σφάλματος</gui><gui>Εφαρμογές</gui><gui>gnome-νάρκες</gui></guiseq>. Πριν "
+"αναφέρετε ένα σφάλμα, παρακαλούμε διαβάστε το <link "
+"href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">οδηγίες "
+"συγγραφής σφάλματος</link> και <link "
+"href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-"
+"mines\">περιηγηθείτε</link> για να δείτε αν υπάρχει ήδη το σφάλμα."
 
-#: C/bug-filing.page:35(section/p)
+#: C/bug-filing.page:40(section/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -252,7 +265,7 @@ msgstr ""
 "στο μενού <gui>Severity</gui>. Συμπληρώστε την Περίληψη και την Περιγραφή "
 "και πατήστε <gui>Commit</gui>."
 
-#: C/bug-filing.page:39(section/p)
+#: C/bug-filing.page:44(section/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
@@ -289,11 +302,16 @@ msgstr ""
 "games\">irc</link>, ή μέσα από τη <link href=\"http://mail.gnome.org/mailman/"
 "listinfo/games-list\">λίστα αλληλογραφίας</link> μας."
 
-#: C/documentation.page:23(page/title)
+#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
+#: C/new-game.page:21(credit/name)
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#: C/documentation.page:27(page/title)
 msgid "Help write documentation"
 msgstr "Βοήθεια συγγραφής τεκμηρίωσης"
 
-#: C/documentation.page:25(page/p)
+#: C/documentation.page:29(page/p)
 msgid ""
 "The GNOME Games user help is maintained by a volunteer community. You are "
 "welcome to participate."
@@ -301,22 +319,28 @@ msgstr ""
 "Τα <app>παιχνίδια του GNOME</app> αναπτύσσονται και συντηρούνται από μια "
 "εθελοντική κοινότητα. Είσαστε καλοδεχούμενοι να συμμετάσχετε."
 
-#: C/documentation.page:28(page/p)
+#: C/documentation.page:32(page/p)
+#| msgid ""
+#| "To contribute to the Documentation Project, get in touch with us on the "
+#| "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+#| "org%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+#| "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://"
+#| "mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
 "%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
-"Για συμμετοχή στο έργο τεκμηρίωσης, επικοινωνήστε μαζί μας χρησιμοποιώντας "
-"στο κανάλι <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fdocs\">#docs</link> του <link href=\"http://live.gnome."
-"org/GnomeIrcChannels\">irc.gnome.org</link> ή μέσα από τη <link href="
-"\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">λίστα "
-"αλληλογραφίας μας</link>."
+"Για συμμετοχή στο έργο τεκμηρίωσης, επικοινωνήστε μαζί μας στο κανάλι <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fdocs\">#docs</link> του <link "
+"href=\"http://live.gnome.org/GnomeIrcChannels\">irc.gnome.org</link> ή μέσα "
+"από τη <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-"
+"list\">λίστα αλληλογραφίας μας</link>."
 
-#: C/documentation.page:33(page/p)
+#: C/documentation.page:40(page/p)
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
@@ -328,23 +352,12 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:20(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-msgstr ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
 #: C/faces.page:24(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -353,9 +366,9 @@ msgstr ""
 #: C/faces.page:28(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -364,6 +377,17 @@ msgstr ""
 #: C/faces.page:32(media)
 msgctxt "_"
 msgid ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+msgstr ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:36(media)
+msgctxt "_"
+msgid ""
 "external ref='figures/face-worried.svg' "
 "md5='f0a66a1c5046deef93c14eeb9993b367'"
 msgstr ""
@@ -374,38 +398,42 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:36(media)
+#: C/faces.page:40(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
 msgstr ""
 "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
 
-#: C/faces.page:16(page/title)
+#: C/faces.page:20(page/title)
 msgid "The meaning of the faces"
 msgstr "Η έννοια των προσώπων"
 
-#: C/faces.page:21(td/p)
-msgid "This is a new game and you didn't clicked on any tile for the moment."
-msgstr ""
-"Αυτό είναι ένα νέο παιχνίδι και δεν έχετε κάνει κλικ σε κανένα πλακίδιο "
-"μέχρι στιγμής."
-
 #: C/faces.page:25(td/p)
-msgid "You clicked on a mine, you loose."
-msgstr "Πατήσατε σε νάρκη, χάσατε."
+#| msgid ""
+#| "This is a new game and you didn't clicked on any tile for the moment."
+msgid "This is a new game and you have not clicked on any tile yet."
+msgstr ""
+"Αυτό είναι ένα νέο παιχνίδι και δεν έχετε πατήσει σε κανένα πλακίδιο ακόμα."
 
 #: C/faces.page:29(td/p)
-msgid "The tile you clicked on is safe. You can continue."
-msgstr ""
-"Είναι ασφαλές το πλακίδιο που έχετε κάνει κλικ. Μπορείτε να συνεχίσετε."
+#| msgid "You clicked on a mine, you loose."
+msgid "You have uncovered a mine, you lose."
+msgstr "Πατήσατε σε νάρκη, χάσατε."
 
 #: C/faces.page:33(td/p)
-msgid "This face appears when you're clicking a on tile."
-msgstr "Αυτό το πρόσωπο εμφανίζεται όταν έχετε κάνει κλικ ένα πλακίδιο."
+#| msgid "The tile you clicked on is safe. You can continue."
+msgid "The tile you just clicked on is safe, you can continue."
+msgstr "Είναι ασφαλές το πλακίδιο που πατήσατε, μπορείτε να συνεχίσετε."
 
 #: C/faces.page:37(td/p)
-msgid "You found all the mines, you win."
+#| msgid "right click on a blank tile."
+msgid "You are clicking on a tile."
+msgstr "Πατάτε σε ένα πλακίδιο."
+
+#: C/faces.page:41(td/p)
+#| msgid "You found all the mines, you win."
+msgid "You have found all the mines, you win."
 msgstr "Βρήκατε όλες τις νάρκες, κερδίσατε."
 
 #. This is a reference to an external file such as an image or video. When
@@ -654,30 +682,34 @@ msgstr ""
 "link>, ή διαβάστε όλη την <link href=\"http://creativecommons.org/licenses/"
 "by-sa/3.0/\">Πράξη Commons</link>."
 
-#: C/new-game.page:23(page/title)
+#: C/new-game.page:26(page/title)
 msgid "Start a new game"
 msgstr "Εκκίνηση νέου παιχνιδιού"
 
-#: C/new-game.page:25(page/p)
+#: C/new-game.page:28(page/p)
 msgid "To start a new game:"
 msgstr "Για να ξεκινήσετε ένα νέο παιχνίδι:"
 
-#: C/new-game.page:27(item/p)
+#: C/new-game.page:31(item/p)
+#| msgid ""
+#| "click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+#| "style=\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> "
+#| "from the application menu"
 msgid ""
-"click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu"
+"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
+"from the application menu."
 msgstr ""
-"Κάντε κλικ στο κουμπί <gui style=\"button\">Νέο</gui> ή επιλέξτε "
-"<guiseq><gui style=\"menu\">Νάρκες</gui><gui style=\"menuitem\">Νέο "
-"παιχνίδι</gui></guiseq> από το μενού της εφαρμογής"
+"Πατήστε στο κουμπί <gui style=\"button\">Νέο</gui> ή επιλέξτε <guiseq><gui "
+"style=\"menu\">Νάρκες</gui> <gui style=\"menuitem\">Νέο παιχνίδι</gui></guiseq> "
+"από το μενού της εφαρμογής."
 
-#: C/new-game.page:28(item/p)
-msgid "<link xref=\"board-size\">select your preferred board size</link>"
-msgstr ""
-"<link xref=\"board-size\">Επιλέξτε το επιθυμητό μέγεθος του ταμπλό</link>"
+#: C/new-game.page:37(item/p)
+#| msgid "<link xref=\"board-size\">select your preferred board size</link>"
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr "Επιλέξτε το προτιμώμενο <link xref=\"board-size\">μέγεθος πίνακα</link>."
 
-#: C/new-game.page:32(note/p)
+#: C/new-game.page:42(note/p)
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
@@ -890,6 +922,9 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid "This face appears when you're clicking a on tile."
+#~ msgstr "Αυτό το πρόσωπο εμφανίζεται όταν έχετε κάνει κλικ ένα πλακίδιο."
 
 #~ msgid ""
 #~ "To file your bug, choose the component <gui>gnomine</gui> in the "
