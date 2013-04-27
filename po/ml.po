@@ -2,39 +2,41 @@
 # translation of gnome-games.HEAD.ml.po to
 # This file is distributed under the same license as the gnome-games package.
 # Copyright (C) 2003-2009 gnome-games' COPYRIGHT HOLDER.
-#
 # FSF-India <locale@gnu.org.in>, 2003.
 # Ani Peter <apeter@redhat.com>, 2006, 2007.
 # Abhishek Jacob <abhishekjacob123@gmail.com>, 2009.
 # Mohammed Sadik pk <sadiqpkp@gmail.com>, 2012.
 # Akhilan <akhilkrishnans@gmail.com>, 2013.
+# Nandaja Varma <nandaja.varma@gmail.com>, 2013.
+# Balasankar C <c.balasankar@gmail.com>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master.ml\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-10 20:33+0000\n"
-"PO-Revision-Date: 2013-02-13 01:57+0530\n"
-"Last-Translator: Akhilan <akhilkrishnans@gmail.com>\n"
-"Language-Team:  <discuss@lists.smc.org.in>\n"
+"POT-Creation-Date: 2013-04-25 14:54+0000\n"
+"PO-Revision-Date: 2013-04-26 18:26+0530\n"
+"Last-Translator: Balasankar C <c.balasankar@gmail.com>\n"
+"Language-Team: Malayalam team\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
 "X-DamnedLies-Scope: partial\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Project-Style: gnome\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:81
-#: ../src/gnome-mines.vala:125 ../src/gnome-mines.vala:704
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
+#: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
 msgid "Mines"
-msgstr "മൈനുകളുടെ കളി"
+msgstr "കുഴിബോംബുകള്‍"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "യുദ്ധഭൂമിയില്‍നിന്ന് കുഴിബോംബുകള്‍ എടുത്ത് മാറ്റുക"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnomine.desktop.in.in.h:3
 msgid "minesweeper;"
 msgstr "മൈന്‍സ്വീപ്പര്‍ ;"
 
@@ -55,201 +57,194 @@ msgid "Set to true to enable warning icons when too many flags are placed."
 msgstr "അമിതമായി കൊടികള്‍ സ്ഥാപിക്കുമ്പോള്‍ മുന്നറിയിപ്പ് ലഭിക്കണമെങ്കില്‍ ശരി അടയാളപ്പെടുത്തുക"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:5
+msgid "Display border around numbers"
+msgstr "അക്കങ്ങള്‍ക്ക് ചുറ്റും  അതിര് കാണിക്കുക"
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:6
+msgid "Set to true to display a border around mine indication numbers."
+msgstr "കുഴിബോംബുകളെ സൂചിപ്പിക്കുന്ന അക്കങ്ങൾക്ക് ചുറ്റും  അതിര് കാണിക്കുവാൻ വേണ്ടി ശരി എന്ന് ആക്കുക"
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:7
 msgid "Enable automatic placing of flags"
 msgstr "കൊടികള്‍ യാന്ത്രികമായി സ്ഥാപിക്കുക"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:6
+#: ../data/org.gnome.mines.gschema.xml.in.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
+"ആവശ്യത്തിന് ചതുരങ്ങൾ വെളിപ്പെട്ടു കഴിഞ്ഞാൽ ചതുരങ്ങളെ കുഴിബോംബുകൾ ഉള്ളത് എന്ന് അടയാളപ്പെടുത്താൻ "
+"ശരി എന്ന് ആക്കുക"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.in.h:9
 msgid "Number of columns in a custom game"
 msgstr "നിങ്ങളുടെ കളിയിലുള്ള വരികളുടെ എണ്ണം"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:8
+#: ../data/org.gnome.mines.gschema.xml.in.h:10
 msgid "Number of rows in a custom game"
 msgstr "നിങ്ങളുടെ കളിയിലുള്ള നിരകളുടെ എണ്ണം"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:9
-#, fuzzy
+#: ../data/org.gnome.mines.gschema.xml.in.h:11
 msgid "The number of mines in a custom game"
-msgstr "നിങ്ങളുടെ കളിയിലുള്ള വരികളുടെ എണ്ണം"
+msgstr "നിങ്ങളുടെ കളിയിലുള്ള കുഴിബോംബുകളുടെ എണ്ണം"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:10
+#: ../data/org.gnome.mines.gschema.xml.in.h:12
 msgid "Board size"
 msgstr "ബോര്‍ഡിന്റെ വലിപ്പം "
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.in.h:13
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "ബോര്‍ഡിന്റെ വ്യാപ്തി (0-2 = ചെറിയത്-വലുത്, 3=സ്വന്തം)"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:12
-#, fuzzy
-#| msgid "The width of the main window in pixels."
-msgid "Width of the window in pixels"
-msgstr "പ്രധാന ജാലകത്തിന്റെ വീതി പിക്സലുകളില്‍."
-
-#: ../data/org.gnome.mines.gschema.xml.in.h:13
-#, fuzzy
-#| msgid "The height of the main window in pixels."
-msgid "Height of the window in pixels"
-msgstr "പ്രധാന ജാലകത്തിന്റെ ഉയരം പിക്സലുകളില്‍."
-
 #: ../data/org.gnome.mines.gschema.xml.in.h:14
-msgid "true if the window is maximized"
-msgstr ""
+msgid "Width of the window in pixels"
+msgstr "ജാലകത്തിന്റെ വീതി പിക്സലുകളില്‍."
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:15
-msgid "true if the window is fullscren"
-msgstr ""
+msgid "Height of the window in pixels"
+msgstr "ജാലകത്തിന്റെ ഉയരം പിക്സലുകളില്‍."
 
-#: ../src/gnome-mines.vala:100
+#: ../data/org.gnome.mines.gschema.xml.in.h:16
+msgid "true if the window is maximized"
+msgstr "ജാലകം നിറഞ്ഞിരിക്കുക ആണെങ്കിൽ ശരി"
+
+#: ../data/org.gnome.mines.gschema.xml.in.h:17
+msgid "true if the window is fullscren"
+msgstr "ജാലകം മുഴുവൻ രൂപത്തിൽ ആണെങ്കിൽ ശരി"
+
+#: ../src/gnome-mines.vala:114
 msgid "_New Game"
 msgstr "പുതിയ കളി (_N)"
 
-#: ../src/gnome-mines.vala:101
-#, fuzzy
-#| msgid "Field Size"
+#: ../src/gnome-mines.vala:115
 msgid "_Replay Size"
-msgstr "ഫീള്‍ഡിന്റെ വലിപ്പം"
+msgstr "_വീണ്ടും കളിക്കുമ്പോള്‍ ആവശ്യമായ വലിപ്പം"
 
-#: ../src/gnome-mines.vala:102
+#: ../src/gnome-mines.vala:116
 msgid "_Hint"
 msgstr "_സൂചന"
 
-#: ../src/gnome-mines.vala:103 ../src/gnome-mines.vala:183
-#: ../src/gnome-mines.vala:612 ../src/gnome-mines.vala:613
+#: ../src/gnome-mines.vala:117 ../src/gnome-mines.vala:199
+#: ../src/gnome-mines.vala:673 ../src/gnome-mines.vala:679
+#: ../src/gnome-mines.vala:680
 msgid "_Pause"
 msgstr "ചെറിയ _ഇടവേള"
 
-#: ../src/gnome-mines.vala:104 ../src/gnome-mines.vala:190
-#: ../src/gnome-mines.vala:358
+#: ../src/gnome-mines.vala:118 ../src/gnome-mines.vala:206
+#: ../src/gnome-mines.vala:393
 msgid "_Fullscreen"
 msgstr "സ്ക്രീന്‍ _പരമാവധി വലുപ്പത്തില്‍"
 
-#: ../src/gnome-mines.vala:105
+#: ../src/gnome-mines.vala:119
 msgid "_Scores"
 msgstr "_സ്കോറുകള്‍"
 
-#: ../src/gnome-mines.vala:106
+#: ../src/gnome-mines.vala:120
 msgid "_Preferences"
 msgstr "_മുന്‍ഗണനകള്‍"
 
-#: ../src/gnome-mines.vala:109
+#: ../src/gnome-mines.vala:123
 msgid "_Help"
 msgstr "_സഹായം"
 
-#: ../src/gnome-mines.vala:110
+#: ../src/gnome-mines.vala:124
 msgid "_About"
 msgstr "_സംബന്ധിച്ച്"
 
-#: ../src/gnome-mines.vala:113
+#: ../src/gnome-mines.vala:127
 msgid "_Quit"
 msgstr "_നിര്‍ത്തുക"
 
-#: ../src/gnome-mines.vala:166
+#: ../src/gnome-mines.vala:182
 msgid "_New"
 msgstr "_പുതിയ"
 
-#: ../src/gnome-mines.vala:175
-#, fuzzy
-#| msgid "_Hint"
+#: ../src/gnome-mines.vala:191
 msgid "Hint"
-msgstr "_സൂചന"
+msgstr "സൂചന"
 
-#. New game screen
-#: ../src/gnome-mines.vala:224
+#: ../src/gnome-mines.vala:256
 msgid "Field Size"
-msgstr "ഫീള്‍ഡിന്റെ വലിപ്പം"
+msgstr "കളിക്കളത്തിന്റെ വലിപ്പം"
 
-#: ../src/gnome-mines.vala:279
+#: ../src/gnome-mines.vala:317
 msgid "H_orizontal:"
 msgstr "കു_റുകെ:"
 
-#: ../src/gnome-mines.vala:289
+#: ../src/gnome-mines.vala:327
 msgid "_Vertical:"
 msgstr "_നെടുകെ:"
 
-#: ../src/gnome-mines.vala:299
+#: ../src/gnome-mines.vala:337
 msgid "_Number of mines:"
-msgstr "മൈനുകളുടെ _എണ്ണം:"
+msgstr "കുഴിബോംബുകളുടെ _എണ്ണം:"
 
-#: ../src/gnome-mines.vala:318
-#, fuzzy
-#| msgid "Player Names"
+#: ../src/gnome-mines.vala:358
 msgid "_Play Game"
-msgstr "കളിക്കാരുടെ പേരുകള്‍"
+msgstr "_കളി കളിക്കുക"
 
-#: ../src/gnome-mines.vala:353
+#: ../src/gnome-mines.vala:388
 msgid "_Leave Fullscreen"
 msgstr "സ്ക്രീന്‍ പരാമാവധി _വലുപ്പത്തില്‍ ഉപേക്ഷിക്കുക"
 
-#: ../src/gnome-mines.vala:368
+#: ../src/gnome-mines.vala:419
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> മൈന്‍"
-msgstr[1] "<b>%d</b> മൈനുകള്‍"
+msgstr[1] "<b>%d</b> കുഴിബോംബുകള്‍"
 
-#: ../src/gnome-mines.vala:432
-#, fuzzy, c-format
-#| msgid "Flags: %d/%d"
+#: ../src/gnome-mines.vala:484
+#, c-format
 msgid "Flags: %u/%u"
-msgstr "കൊടികള്‍: %d/%d"
+msgstr "കൊടികള്‍: %u/%u"
 
-#: ../src/gnome-mines.vala:475
-#, fuzzy
-#| msgid "Do you want to start a new game with this map?"
+#: ../src/gnome-mines.vala:527
 msgid "Do you want to start a new game?"
-msgstr "ഈ ഭൂപടത്തില്‍ പുതിയ കളി തുടങ്ങണോ?"
+msgstr "പുതിയ കളി തുടങ്ങണോ?"
 
-#: ../src/gnome-mines.vala:476
+#: ../src/gnome-mines.vala:528
 msgid "If you start a new game, your current progress will be lost."
-msgstr ""
+msgstr "പുതിയ കളി തുടങ്ങിയാല്‍ നിങ്ങളുടെ ഇതുവരെയുള്ള് പുരോഗതി നഷ്ടമാകും."
 
-#: ../src/gnome-mines.vala:477
-#, fuzzy
+#: ../src/gnome-mines.vala:529
 msgid "Keep Current Game"
-msgstr "ഈ കളി സൂക്ഷിക്കുക"
+msgstr "ഈ കളി നിലനിര്‍ത്തുക"
 
-#: ../src/gnome-mines.vala:478
+#: ../src/gnome-mines.vala:530
 msgid "Start New Game"
 msgstr "പുതിയ കളി തുടങ്ങുക"
 
-#: ../src/gnome-mines.vala:605 ../src/gnome-mines.vala:606
+#: ../src/gnome-mines.vala:669 ../src/gnome-mines.vala:671
 msgid "Res_ume"
 msgstr "വീണ്ടും ആ_രംഭിക്കുക"
 
-#: ../src/gnome-mines.vala:653 ../src/gnome-mines.vala:958
-#, fuzzy, c-format
-#| msgctxt "score-dialog"
-#| msgid "Time"
+#: ../src/gnome-mines.vala:720 ../src/gnome-mines.vala:1040
+#, c-format
 msgid "Time"
 msgstr " സമയം"
 
-#: ../src/gnome-mines.vala:670
+#: ../src/gnome-mines.vala:737
 msgid "Main game:"
 msgstr "പ്രധാന കളി:"
 
-#: ../src/gnome-mines.vala:675
+#: ../src/gnome-mines.vala:742
 msgid "Score:"
 msgstr "സ്കോര്‍:"
 
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:745
 msgid "Resizing and SVG support:"
-msgstr ""
+msgstr "വലിപ്പവിത്യാസം വരുത്തലും SVG സപ്പോര്‍ട്ടും:"
 
-#: ../src/gnome-mines.vala:686
+#: ../src/gnome-mines.vala:753
 msgid "Faces:"
 msgstr "കൊടികള്‍: "
 
-#: ../src/gnome-mines.vala:690
+#: ../src/gnome-mines.vala:757
 msgid "Graphics:"
 msgstr "ഗ്രാഫിക്സ്:"
 
-#: ../src/gnome-mines.vala:707
+#: ../src/gnome-mines.vala:774
 msgid ""
 "The popular logic puzzle minesweeper. Clear mines from a board using hints "
 "from squares you have already uncovered.\n"
@@ -257,55 +252,59 @@ msgid ""
 "Mines is a part of GNOME Games."
 msgstr ""
 "പ്രശസ്തമായ ചിന്താശേഷി പരീക്ഷിക്കുന്ന കളി, മൈ‌‌ന്‍സ്വീപ്പര്‍. നിങ്ങള്‍ ഇതിനകം തന്നെ വെളിവാക്കിയ "
-"ചതുരങ്ങളില്‍ നിന്നു് ലഭിക്കുന്ന സൂചനകളിലൂടെ മൈനുകള്‍ വെളിവാക്കുക \n"
+"ചതുരങ്ങളില്‍ നിന്നു് ലഭിക്കുന്ന സൂചനകളിലൂടെ കുഴിബോംബുകള്‍ വെളിവാക്കുക \n"
 "\n"
-"മൈനുകള്‍ ഗ്നോം കളികളുടെ ഒരു ഭാഗമാണു്. "
+"കുഴിബോംബുകള്‍ ഗ്നോം കളികളുടെ ഒരു ഭാഗമാണു്. "
 
-#: ../src/gnome-mines.vala:714
+#: ../src/gnome-mines.vala:781
 msgid "translator-credits"
 msgstr ""
 "എഫ്.എസ്.എഫ് - ഇന്ത്യ <gnu@gnu.org.in>\n"
 "അനി പീറ്റര്‍ <apeter@redhat.com>\n"
 "അഭിഷേക് ജേക്കബ് <abhishekjacob123@gmail.com>\n"
-"Mohammed Sadiq <sadiqpkp@gmail.com"
+"Mohammed Sadiq <sadiqpkp@gmail.com>\n"
+"നന്ദജ വര്‍മ്മ <nandaja.varma@gmail.com>"
 
-#: ../src/gnome-mines.vala:717
+#: ../src/gnome-mines.vala:784
 msgid "GNOME Games web site"
 msgstr "ഗ്നോ കളികളുടെ വെബ് സൈറ്റ്"
 
-#: ../src/gnome-mines.vala:781
+#: ../src/gnome-mines.vala:855
 msgid "Mines Preferences"
 msgstr "Mines മുന്‍ഗണനകള്‍"
 
-#: ../src/gnome-mines.vala:799
+#: ../src/gnome-mines.vala:873
 msgid "_Use \"I'm not sure\" flags"
 msgstr "\"എനിക്ക്‌ തീര്‍ച്ചയില്\" എന്ന ഫ്ളാഗുകള്‍ ഉപയോഗിക്കുക (_U)"
 
-#: ../src/gnome-mines.vala:805
-#, fuzzy
+#: ../src/gnome-mines.vala:879
 msgid "_Warn if too many flags have been placed"
-msgstr "അനവധി ഫ്ളാഗുകള്‍ എന്ന മുന്നറിയിപ്പ്"
+msgstr "_അനവധി ഫ്ളാഗുകള്‍ നാട്ടിയെങ്ങില്‍ മുന്നറിയിപ്പ് തരിക "
 
-#: ../src/gnome-mines.vala:915
+#: ../src/gnome-mines.vala:885
+msgid "_Display numbers with border"
+msgstr "_നമ്പറുകള്‍ ബോര്‍ഡറുകളോടു കൂടെ കാണിക്കുക"
+
+#: ../src/gnome-mines.vala:996
 msgid "New Game"
 msgstr "പുതിയ കളി"
 
-#: ../src/gnome-mines.vala:930
+#: ../src/gnome-mines.vala:1012
 msgid "Size:"
 msgstr "വലിപ്പം:"
 
-#: ../src/gnome-mines.vala:955
+#: ../src/gnome-mines.vala:1037
 msgid "Date"
 msgstr "തീയ്യതി"
 
-#: ../src/gnome-mines.vala:1040
+#: ../src/gnome-mines.vala:1122
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u മൈന്‍ "
-msgstr[1] "%u × %u, %u മൈനുകള്‍ "
+msgstr[1] "%u × %u, %u കുഴിബോംബുകള്‍ "
 
-#: ../src/minefield-view.vala:398
+#: ../src/minefield-view.vala:578
 msgid "Paused"
 msgstr "കളി നിര്‍ത്തിവച്ചിരിക്കുന്നു"
 
@@ -1961,10 +1960,10 @@ msgstr "കളി നിര്‍ത്തിവച്ചിരിക്കു�
 #~ msgstr "ഒരു സൂചന നല്‍കുക"
 
 #~ msgid "The Mines Have Been Cleared!"
-#~ msgstr "മൈനുകള്‍ വെടിപ്പാക്കിയിരിക്കുന്നു!"
+#~ msgstr "കുഴിബോംബുകള്‍ വെടിപ്പാക്കിയിരിക്കുന്നു!"
 
 #~ msgid "Mines Scores"
-#~ msgstr "മൈനുകളുടെ കളിയുടെ സ്ക്കോറുകള്‍"
+#~ msgstr "കുഴിബോംബുകളുടെ കളിയുടെ സ്ക്കോറുകള്‍"
 
 #~ msgid "Cancel current game?"
 #~ msgstr "നിലവിലുള്ള കളി റദ്ദാക്കേണമോ?"
@@ -5863,7 +5862,7 @@ msgstr "കളി നിര്‍ത്തിവച്ചിരിക്കു�
 #~ msgstr "കളത്തിന്റെ ഉയരം"
 
 #~ msgid "Number of mines"
-#~ msgstr "മൈനുകളുടെ എണ്ണം"
+#~ msgstr "കുഴിബോംബുകളുടെ എണ്ണം"
 
 #~ msgid "Press to Resume"
 #~ msgstr "വീണ്ടും ആരംഭിക്കുന്നതിനായി അമര്‍ത്തുക"
