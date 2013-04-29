@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-04-17 18:30+0000\n"
-"PO-Revision-Date: 2013-04-24 18:15+0200\n"
+"POT-Creation-Date: 2013-04-25 08:28+0000\n"
+"PO-Revision-Date: 2013-04-29 14:04+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -21,7 +21,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2012\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2013\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. This is a reference to an external file such as an image or video. When
@@ -149,9 +149,6 @@ msgid "You can select a field size at the start of a new game."
 msgstr "Puede seleccionar un tamaño de tablero al inicio de cada partida."
 
 #: C/board-size.page:28(item/p)
-#| msgid ""
-#| "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
-#| "\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq>."
 msgid ""
 "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
 "gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
@@ -227,7 +224,6 @@ msgstr ""
 "Account</gui> para crear una."
 
 #: C/bug-filing.page:32(section/p)
-#, fuzzy
 #| msgid ""
 #| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 #| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
@@ -247,8 +243,8 @@ msgstr ""
 "de un error</gui><gui>Aplicaciones</gui><gui>gnome-mines</gui></guiseq>. "
 "Antes de informar de un error, lea las <link href=\"https://bugzilla.gnome."
 "org/page.cgi?id=bug-writing.html\">guías para informar de un error</link> y "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=evince\">busque</"
-"link> el error para ver si ya existe."
+"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+"\">busque</link> el error para ver si ya existe."
 
 #: C/bug-filing.page:40(section/p)
 msgid ""
@@ -299,7 +295,7 @@ msgstr ""
 #: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
 #: C/new-game.page:21(credit/name)
 msgid "Aruna Sankaranarayanan"
-msgstr ""
+msgstr "Aruna Sankaranarayanan"
 
 #: C/documentation.page:27(page/title)
 msgid "Help write documentation"
@@ -314,7 +310,6 @@ msgstr ""
 "voluntarios. Si quiere participar es bienvenido."
 
 #: C/documentation.page:32(page/p)
-#, fuzzy
 #| msgid ""
 #| "To contribute to the Documentation Project, get in touch with us on the "
 #| "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
@@ -404,35 +399,30 @@ msgid "The meaning of the faces"
 msgstr "El significado de los emoticonos"
 
 #: C/faces.page:25(td/p)
-#, fuzzy
 #| msgid ""
 #| "This is a new game and you didn't clicked on any tile for the moment."
 msgid "This is a new game and you have not clicked on any tile yet."
 msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
 
 #: C/faces.page:29(td/p)
-#, fuzzy
 #| msgid "You clicked on a mine, you loose."
 msgid "You have uncovered a mine, you lose."
-msgstr "Ha pulsado sobre una mina, ha perdido."
+msgstr "Ha descubierto una mina, ha perdido."
 
 #: C/faces.page:33(td/p)
-#, fuzzy
 #| msgid "The tile you clicked on is safe. You can continue."
 msgid "The tile you just clicked on is safe, you can continue."
 msgstr "La casilla que ha pulsado es segura. Puede continuar."
 
 #: C/faces.page:37(td/p)
-#, fuzzy
 #| msgid "right click on a blank tile."
 msgid "You are clicking on a tile."
-msgstr "pulse con el botón derecho sobre una casilla no descubierta."
+msgstr "Está pulsando en una casilla."
 
 #: C/faces.page:41(td/p)
-#, fuzzy
 #| msgid "You found all the mines, you win."
 msgid "You have found all the mines, you win."
-msgstr "Ha encontrado todas las minas, ha ganado"
+msgstr "Ha encontrado todas las minas, ha ganado."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -685,7 +675,6 @@ msgid "To start a new game:"
 msgstr "Para iniciar un juego nuevo:"
 
 #: C/new-game.page:31(item/p)
-#, fuzzy
 #| msgid ""
 #| "click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
 #| "style=\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> "
@@ -695,16 +684,15 @@ msgid ""
 "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
 "from the application menu."
 msgstr ""
-"pulse <gui style=\"button\">Nuevo</gui> o seleccione <guiseq><gui style="
+"Pulse <gui style=\"button\">Nuevo</gui> o seleccione <guiseq><gui style="
 "\"menu\">Minas</gui><gui style=\"menuitem\">Juego nuevo</gui></guiseq> en el "
 "menú de la aplicación."
 
 #: C/new-game.page:37(item/p)
-#, fuzzy
 #| msgid "<link xref=\"board-size\">select your preferred board size</link>"
 msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
-"<link xref=\"board-size\">seleccione su tamaño de tablero preferido</link>"
+"Seleccione su <link xref=\"board-size\">tamaño de tablero</link> preferido."
 
 #: C/new-game.page:42(note/p)
 msgid ""
