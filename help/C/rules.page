@@ -41,7 +41,7 @@
 	  you can mark them with <link xref="flags"/>.</p>
         </item>
         <item>
-	  <p>A blank title, which means there are no mines under any of the
+	  <p>A blank tile, which means there are no mines under any of the
 	  adjacent tiles.</p>
         </item>
         <item>
