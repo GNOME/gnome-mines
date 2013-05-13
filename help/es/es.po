@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-04-25 08:28+0000\n"
-"PO-Revision-Date: 2013-04-29 14:04+0200\n"
+"POT-Creation-Date: 2013-05-13 06:26+0000\n"
+"PO-Revision-Date: 2013-05-13 12:43+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -224,13 +224,6 @@ msgstr ""
 "Account</gui> para crear una."
 
 #: C/bug-filing.page:32(section/p)
-#| msgid ""
-#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-#| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
-#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
-#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
@@ -310,12 +303,6 @@ msgstr ""
 "voluntarios. Si quiere participar es bienvenido."
 
 #: C/documentation.page:32(page/p)
-#| msgid ""
-#| "To contribute to the Documentation Project, get in touch with us on the "
-#| "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
-#| "org%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-#| "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://"
-#| "mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
@@ -399,28 +386,22 @@ msgid "The meaning of the faces"
 msgstr "El significado de los emoticonos"
 
 #: C/faces.page:25(td/p)
-#| msgid ""
-#| "This is a new game and you didn't clicked on any tile for the moment."
 msgid "This is a new game and you have not clicked on any tile yet."
 msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
 
 #: C/faces.page:29(td/p)
-#| msgid "You clicked on a mine, you loose."
 msgid "You have uncovered a mine, you lose."
 msgstr "Ha descubierto una mina, ha perdido."
 
 #: C/faces.page:33(td/p)
-#| msgid "The tile you clicked on is safe. You can continue."
 msgid "The tile you just clicked on is safe, you can continue."
 msgstr "La casilla que ha pulsado es segura. Puede continuar."
 
 #: C/faces.page:37(td/p)
-#| msgid "right click on a blank tile."
 msgid "You are clicking on a tile."
 msgstr "Está pulsando en una casilla."
 
 #: C/faces.page:41(td/p)
-#| msgid "You found all the mines, you win."
 msgid "You have found all the mines, you win."
 msgstr "Ha encontrado todas las minas, ha ganado."
 
@@ -675,10 +656,6 @@ msgid "To start a new game:"
 msgstr "Para iniciar un juego nuevo:"
 
 #: C/new-game.page:31(item/p)
-#| msgid ""
-#| "click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-#| "style=\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> "
-#| "from the application menu"
 msgid ""
 "Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
 "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
@@ -689,7 +666,6 @@ msgstr ""
 "menú de la aplicación."
 
 #: C/new-game.page:37(item/p)
-#| msgid "<link xref=\"board-size\">select your preferred board size</link>"
 msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
 "Seleccione su <link xref=\"board-size\">tamaño de tablero</link> preferido."
@@ -743,9 +719,11 @@ msgstr ""
 "poner <link xref=\"flags\"/>."
 
 #: C/rules.page:44(item/p)
+#| msgid ""
+#| "A blank title, which means there are no mines under any of the adjacent "
+#| "tiles."
 msgid ""
-"A blank title, which means there are no mines under any of the adjacent "
-"tiles."
+"A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
 "Una casilla vacía, lo que significa que no hay minas en las casillas "
 "adyacentes."
