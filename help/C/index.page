@@ -20,7 +20,7 @@
   </info>
 
   <title><media type="image" src="figures/logo32.png">GNOME Mines
-  logo</media>GNOME Mines</title>
+  logo</media> GNOME Mines</title>
   <p>
     <app>Mines</app> is a clone of the game Minesweeper. The aim is to locate
     all the mines that are hidden under tiles on a rectangular board. You will

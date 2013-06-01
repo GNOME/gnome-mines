@@ -21,8 +21,8 @@
 
   <title>High scores</title>
 
-  <p>The scores lists the ten fastest times in which each type of mine field
-  has been cleared.</p>
+  <p>The high scores list the ten fastest times in which each type of mine
+  field has been cleared.</p>
 
   <p>To view the high scores, select <guiseq><gui style="menu">Mines</gui><gui
   style="menuitem">Scores</gui></guiseq>. The dialog will display the

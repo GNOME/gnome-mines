@@ -20,11 +20,11 @@
 
   <title>Hints and warnings</title>
 
-  <p>You can use hints to reveal safe tiles and flag warnings to help you keep
+  <p>You can use hints to reveal safe tiles, and flag warnings to help you keep
   track of flags.</p>
 
   <p>Click <gui style="button">Hint</gui> in the toolbar to reveal a hidden
-  tile that is safe. You will be penalised for using hints: ten seconds will be
+  tile that is safe. You will be penalized for using hints: ten seconds will be
   added to your total time.</p>
 
   <p>To enable warnings, edit the preferences by selecting

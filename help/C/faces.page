@@ -25,20 +25,20 @@
       <td><p>This is a new game and you have not clicked on any tile yet.</p></td>
     </tr>
     <tr>
+      <td><media type="image" mime="image/svg" src="figures/face-worried.svg"/></td>
+      <td><p>You are currently clicking on a tile.</p></td>
+    </tr>
+    <tr>
       <td><media type="image" mime="image/svg" src="figures/face-sad.svg"/></td>
-      <td><p>You have uncovered a mine, you lose.</p></td>
+      <td><p>You have uncovered a mine. You lose.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-cool.svg"/></td>
-      <td><p>The tile you just clicked on is safe, you can continue.</p></td>
-    </tr>
-    <tr>
-      <td><media type="image" mime="image/svg" src="figures/face-worried.svg"/></td>
-      <td><p>You are clicking on a tile.</p></td>
+      <td><p>The tile you just clicked on is safe. You can continue.</p></td>
     </tr>
     <tr>
       <td><media type="image" mime="image/svg" src="figures/face-win.svg"/></td>
-      <td><p>You have found all the mines, you win.</p></td>
+      <td><p>You have found all the mines. You win!</p></td>
     </tr>
   </table>
 
