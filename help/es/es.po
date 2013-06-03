@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-05-13 06:26+0000\n"
-"PO-Revision-Date: 2013-05-13 12:43+0200\n"
+"POT-Creation-Date: 2013-06-02 15:03+0000\n"
+"PO-Revision-Date: 2013-06-03 11:26+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -82,11 +82,14 @@ msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
 #: C/index.page:22(page/title)
+#| msgid ""
+#| "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
+#| "media>GNOME Mines"
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
-"media>GNOME Mines"
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
 msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media>Minas"
+"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media> Minas"
 
 #: C/index.page:24(page/p)
 msgid ""
@@ -202,26 +205,34 @@ msgstr ""
 "\"https://bugzilla.gnome.org/\"/>."
 
 #: C/bug-filing.page:25(section/p)
+#| msgid ""
+#| "This is a bug tracking system where users and developers can file details "
+#| "about bugs, crashes and request enhancements."
 msgid ""
 "This is a bug tracking system where users and developers can file details "
-"about bugs, crashes and request enhancements."
+"about bugs and crashes, or request enhancements."
 msgstr ""
 "Este es un sistema de seguimiento de errores donde los usuarios y "
 "desarrolladores pueden rellenar detalles acerca de los errores, cuelgues y "
 "solicitudes de mejoras."
 
 #: C/bug-filing.page:28(section/p)
+#| msgid ""
+#| "To participate you need an account which will give you the ability to "
+#| "gain access, file bugs, and make comments. Also, you need to register so "
+#| "you can receive updates by e-mail about the status of your bug. If you "
+#| "don't already have an account, just click on the <gui>New Account</gui> "
+#| "link to create one."
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
 msgstr ""
 "Para participar necesita una cuenta, que le permitirá obtener acceso, "
-"informar de errores y hacer comentarios. También debe registrarte para poder "
-"recibir actualizaciones por correo-e sobre el estado de su informe de error. "
-"Si todavía no tiene una cuenta, simplemente pulse en el enlace <gui>New "
-"Account</gui> para crear una."
+"informar de errores, hacer comentarios y recibir actualizaciones por correo-"
+"e sobre el estado de su informe de error. Si todavía no tiene una cuenta, "
+"simplemente pulse en el enlace <gui>New Account</gui> para crear una."
 
 #: C/bug-filing.page:32(section/p)
 msgid ""
@@ -342,9 +353,11 @@ msgstr ""
 #: C/faces.page:28(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
 msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -353,9 +366,9 @@ msgstr ""
 #: C/faces.page:32(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -364,11 +377,9 @@ msgstr ""
 #: C/faces.page:36(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
 msgstr ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -390,20 +401,24 @@ msgid "This is a new game and you have not clicked on any tile yet."
 msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
 
 #: C/faces.page:29(td/p)
-msgid "You have uncovered a mine, you lose."
-msgstr "Ha descubierto una mina, ha perdido."
-
-#: C/faces.page:33(td/p)
-msgid "The tile you just clicked on is safe, you can continue."
-msgstr "La casilla que ha pulsado es segura. Puede continuar."
-
-#: C/faces.page:37(td/p)
-msgid "You are clicking on a tile."
+#| msgid "You are clicking on a tile."
+msgid "You are currently clicking on a tile."
 msgstr "Está pulsando en una casilla."
 
+#: C/faces.page:33(td/p)
+#| msgid "You have uncovered a mine, you lose."
+msgid "You have uncovered a mine. You lose."
+msgstr "Ha descubierto una mina. Ha perdido."
+
+#: C/faces.page:37(td/p)
+#| msgid "The tile you just clicked on is safe, you can continue."
+msgid "The tile you just clicked on is safe. You can continue."
+msgstr "La casilla en la que ha pulsado es segura. Puede continuar."
+
 #: C/faces.page:41(td/p)
-msgid "You have found all the mines, you win."
-msgstr "Ha encontrado todas las minas, ha ganado."
+#| msgid "You have found all the mines, you win."
+msgid "You have found all the mines. You win!"
+msgstr "Ha encontrado todas las minas. Ha ganado."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -513,17 +528,24 @@ msgid "Hints and warnings"
 msgstr "Pistas y advertencias"
 
 #: C/get-help.page:23(page/p)
+#| msgid ""
+#| "You can use hints to reveal safe tiles and flag warnings to help you keep "
+#| "track of flags."
 msgid ""
-"You can use hints to reveal safe tiles and flag warnings to help you keep "
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
 msgstr ""
 "Puede usar las pistas para revelar las casillas seguras y las banderas de "
 "advertencia para ayudarle a llevar un control de las banderas."
 
 #: C/get-help.page:26(page/p)
+#| msgid ""
+#| "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+#| "tile that is safe. You will be penalised for using hints: ten seconds "
+#| "will be added to your total time."
 msgid ""
 "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalised for using hints: ten seconds will "
+"tile that is safe. You will be penalized for using hints: ten seconds will "
 "be added to your total time."
 msgstr ""
 "Pulse <gui style=\"button\">Pista</gui> en la barra de herramientas para "
@@ -548,9 +570,12 @@ msgid "High scores"
 msgstr "Puntuación más alta"
 
 #: C/high-scores.page:24(page/p)
+#| msgid ""
+#| "The scores lists the ten fastest times in which each type of mine field "
+#| "has been cleared."
 msgid ""
-"The scores lists the ten fastest times in which each type of mine field has "
-"been cleared."
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
 msgstr ""
 "La puntuación muestra los 10 mejores tiempos en los que se ha limpiado cada "
 "tipo de campo de minas."
@@ -701,27 +726,31 @@ msgstr ""
 "tablero personalizado."
 
 #: C/rules.page:35(item/p)
+#| msgid ""
+#| "The game begins with the board covered in tiles, click on any tile to "
+#| "uncover it. You will reveal:"
 msgid ""
-"The game begins with the board covered in tiles, click on any tile to "
+"The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
 msgstr ""
-"El juego empieza con el tablero lleno de casillas; pulse sobre una de ella "
+"El juego empieza con el tablero lleno de casillas. Pulse sobre una de ellas "
 "para descubrirla. Revelará:"
 
 #: C/rules.page:39(item/p)
+#| msgid ""
+#| "A colored number, which represent the number of mines in the adjacent "
+#| "tiles. This will help you deduce where the mines are so that you can mark "
+#| "them with <link xref=\"flags\"/>."
 msgid ""
 "A colored number, which represent the number of mines in the adjacent tiles. "
 "This will help you deduce where the mines are so that you can mark them with "
-"<link xref=\"flags\"/>."
+"<link xref=\"flags\">flags</link>."
 msgstr ""
 "Un número de color, que representa el número de minas en las casillas "
-"adyacentes. Esto de la una pista de cuántas minas hay, y de dónde tiene que "
-"poner <link xref=\"flags\"/>."
+"adyacentes. Esto le ayudará a deducir dónde están las minas, por lo que "
+"puede marcarlas con <link xref=\"flags\">banderas</link>."
 
 #: C/rules.page:44(item/p)
-#| msgid ""
-#| "A blank title, which means there are no mines under any of the adjacent "
-#| "tiles."
 msgid ""
 "A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
@@ -845,11 +874,14 @@ msgstr ""
 "participar, es bienvenido."
 
 #: C/translate.page:27(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Hay <link href=\"http://l10n.gnome.org/module/gnome-games/\">muchos idiomas</"
+"Hay <link href=\"http://l10n.gnome.org/module/gnome-mines/\">muchos idiomas</"
 "link> para los que se siguen necesitando traducciones."
 
 #: C/translate.page:30(page/p)
