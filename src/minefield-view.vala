@@ -748,6 +748,10 @@ public class MinefieldView : Gtk.DrawingArea
         if (!selected.is_set || keyboard_cursor.is_set)
             return false;
 
+        /* Check if the user released button outside the minefield */
+        if (!minefield.is_location(selected.x, selected.y))
+            return false;
+
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
