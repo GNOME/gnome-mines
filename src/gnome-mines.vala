@@ -296,7 +296,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 1, 1, 1, 1);
 
         label = new Gtk.Label (null);
-        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", "Custom") + "</span>");
+        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")) + "</span>");
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
