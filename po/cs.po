@@ -42,15 +42,15 @@ msgstr "Miny"
 
 #: ../data/gnome-mines.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
-msgstr "Vyčistit skryté miny z minového pole"
+msgstr "Vyčistěte skryté miny z minového pole"
 
 #: ../data/gnome-mines.desktop.in.in.h:3
 msgid "minesweeper;"
-msgstr "odminování;"
+msgstr "odminování;hledání min;"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:1
 msgid "Use the unknown flag"
-msgstr "Používat vlaječku neznámého"
+msgstr "Používat vlaječku pro neznámé"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:2
 msgid "Set to true to be able to mark squares as unknown."
@@ -86,7 +86,7 @@ msgid ""
 "revealed"
 msgstr ""
 "Nastavte na zapnuto, chcete-li, aby se automaticky umisťovaly vlajky na "
-"políčka s minami v případě, že je odkryto dostatek okolních políček"
+"dlaždice s minami v případě, že je odkryto dostatek okolních dlaždic"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:9
 msgid "Number of columns in a custom game"
@@ -102,11 +102,11 @@ msgstr "Počet min ve vlastní hře"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:12
 msgid "Board size"
-msgstr "Velikost desky"
+msgstr "Velikost hrací desky"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:13
 msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Velikost desky (0-2 = malá-velká, 3=vlastní)"
+msgstr "Velikost hrací desky (0-2 = malá-velká, 3=vlastní)"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:14
 msgid "Width of the window in pixels"
@@ -250,7 +250,7 @@ msgstr "Změna velikosti a podpora SVG:"
 
 #: ../src/gnome-mines.vala:717
 msgid "Faces:"
-msgstr "Tváře:"
+msgstr "Smajlíci:"
 
 #: ../src/gnome-mines.vala:721
 msgid "Graphics:"
@@ -263,8 +263,8 @@ msgid ""
 "\n"
 "Mines is a part of GNOME Games."
 msgstr ""
-"Oblíbená logická hra hledač min. Odstraňte miny z hrací desky pomocí "
-"informací na již odkrytých polích.\n"
+"Oblíbená logická hra hledání min. Odstraňte miny z hrací desky pomocí "
+"informací na již odkrytých dlaždicích.\n"
 "\n"
 "Miny jsou součástí her GNOME."
 
@@ -321,9 +321,9 @@ msgstr "Datum"
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mina"
-msgstr[1] "%u × %u, %u miny"
-msgstr[2] "%u × %u, %u min"
+msgstr[0] "%u × %u, %u mina"
+msgstr[1] "%u × %u, %u miny"
+msgstr[2] "%u × %u, %u min"
 
 #: ../src/minefield-view.vala:578
 msgid "Paused"
