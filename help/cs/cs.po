@@ -1,15 +1,16 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-# Marek Černocký <marek@manet.cz>, 2009.
+# Marek Černocký <marek@manet.cz>, 2009, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2009-07-01 18:48+0000\n"
-"PO-Revision-Date: 2009-07-03 18:19+0100\n"
+"POT-Creation-Date: 2013-06-01 17:16+0000\n"
+"PO-Revision-Date: 2013-07-26 08:25+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,942 +18,869 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:148(None)
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4(media)
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:22(media)
+msgctxt "_"
 msgid ""
-"@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 msgstr ""
-"@@image: 'figures/main-window.png'; md5=7d46d67dbdc7405ac11b526fa601ae76"
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:166(None)
-msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-msgstr "@@image: 'figures/statusbar.png'; md5=0c26fd945d3b8ec15489738301bdf203"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:187(None)
-msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:279(None)
-msgid ""
-"@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
-msgstr ""
-"@@image: 'figures/preferences.png'; md5=de1c9311213ed02c1a57e722c24a5e04"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:301(None)
-msgid ""
-"@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=58be021ed1cf90add08931282ec19bad"
-msgstr ""
-"@@image: 'figures/imnotsureflagscheckbox.png'; "
-"md5=22a0a4d6f151b7aed4b9ace7525f4a7c"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:322(None)
-msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
-msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:373(None)
-msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
-msgstr ""
-"@@image: 'figures/highscores.png'; md5=a6700f22bdfab7a3f30b28e11902076e"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:434(None)
-msgid ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
-msgstr ""
-"@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:448(None)
-msgid ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-msgstr ""
-"@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:461(None)
-msgid ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-msgstr ""
-"@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:500(None)
-msgid ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-msgstr ""
-"@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:513(None)
-msgid ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-msgstr ""
-"@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:544(None)
-msgid ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-msgstr ""
-"@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-
-#: C/gnomine.xml:27(title)
-msgid "<application>Mines</application> Manual"
-msgstr "Příručka ke hře <application>Miny</application>"
-
-#: C/gnomine.xml:29(para)
-msgid ""
-"Mines is GNOME's take on the popular logic puzzle minesweeper, which "
-"includes avoiding mines while receiving clues for the location of the mines."
-msgstr ""
-"Miny jsou GNOME variantou populární logického hlavolamu Minesweeper "
-"(odminovávač), ve které se vyhýbáte minám podle nápověd o jejich umístění."
-
-#: C/gnomine.xml:36(year)
-msgid "2006"
-msgstr "2006"
-
-#: C/gnomine.xml:37(holder)
-msgid "Callum McKenzie"
-msgstr "Callum McKenzie"
-
-#: C/gnomine.xml:52(publishername) C/gnomine.xml:92(para)
-msgid "GNOME Documentation Project"
-msgstr "Dokumentační projekt GNOME"
-
-#: C/gnomine.xml:2(para)
-msgid ""
-"This document is dual-licensed. You may either distribute and/or modify it "
-"under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU "
-"General Public License</ulink>, which the <link linkend=\"license\">program "
-"is licensed</link> under, or you can distribute it under the terms of the "
-"GNU Free Documentation License. A copy of this follows."
-msgstr ""
-"Tento dokument má dvojitou licenci. Můžete jej buď šířit a/nebo upravovat "
-"pod podmínkami <ulink type=\"help\" url=\"help:gpl\">GNU General "
-"Public License</ulink>, pod kterou je i <link linkend=\"license"
-"\">licencovaný program</link> nebo šířit pod podmínkami GNU Free "
-"Documentation License. Její kopie následuje."
-
-#: C/gnomine.xml:11(para)
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-"Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU "
-"Free Documentation License, verze 1.1 nebo jakékoli další verze vydané "
-"nadací Free Software Foundation; bez neměnných oddílů, bez textů předních "
-"desek a bez textů zadních desek. Kopie této licence je zahrnuta v oddílu "
-"jménem <ulink type=\"help\" url=\"help:fdl\">GNU Free Documentation "
-"License</ulink> nebo v souboru COPYING-DOCS dodávaném s touto příručkou."
-
-#: C/gnomine.xml:21(para)
-msgid ""
-"This manual is part of a collection of GNOME manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
-msgstr ""
-"Tato příručka je součástí kolekce příruček GNOME, distribuovaných pod "
-"licencí GNU FDL. Pokud chcete tento dokument šířit odděleně od kolekce, "
-"musíte přiložit kopii licence dle popisu v sekci 6 dané licence."
-
-#: C/gnomine.xml:28(para)
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any GNOME "
-"documentation, and the members of the GNOME Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-"Mnoho užívaných jmen určených k zviditelnění produktů nebo služeb jsou "
-"ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a "
-"členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se "
-"jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s "
-"velkým písmenem na začátku."
-
-#: C/gnomine.xml:44(para)
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-"DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“ BEZ ZÁRUKY V JAKÉKOLIV PODOBĚ, "
-"NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ "
-"VERZE, JE BEZCHYBNÝ NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL NEBO "
-"NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ DOKUMENTU, "
-"NEBO JEHO UPRAVENÉ VERZE, LEŽÍ NA VÁS. POKUD KVŮLI TOMUTO DOKUMENTU, NEBO "
-"JEHO UPRAVENÉ VERZI, NASTANE PROBLÉM, VY (NIKOLIV PŮVODNÍ AUTOR NEBO "
-"JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE JAKÉKOLIV NÁKLADY ZA NUTNÉ ÚPRAVY, OPRAVY "
-"ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE ZÁKLADNÍ SOUČÁST TÉTO "
-"LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ, PODLE TÉTO DOHODY, POVOLENO UŽÍVÁNÍ ANI "
-"ÚPRAVY TOHOTO DOKUMENTU; DÁLE"
-
-#: C/gnomine.xml:64(para)
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-"ZA ŽÁDNÝCH OKOLNOSTÍ A ŽÁDNÝCH PRÁVNÍCH PŘEDPOKLADŮ, AŤ SE JEDNÁ O PŘEČIN "
-"(VČETNĚ NEDBALOSTNÍCH), SMLOUVU NEBO JINÉ, NENÍ AUTOR, PŮVODNÍ PISATEL, "
-"KTERÝKOLIV PŘISPĚVATEL NEBO KTERÝKOLIV DISTRIBUTOR TOHOTO DOKUMENTU NEBO "
-"UPRAVENÉ VERZE DOKUMENTU NEBO KTERÝKOLIV DODAVATEL NĚKTERÉ Z TĚCHTO STRAN "
-"ODPOVĚDNÝ NĚJAKÉ OSOBĚ ZA PŘÍMÉ, NEPŘÍMÉ, SPECIÁLNÍ, NAHODILÉ NEBO NÁSLEDNÉ "
-"ŠKODY JAKÉHOKOLIV CHARAKTERU, VČETNĚ, ALE NEJEN, ZA POŠKOZENÍ ZE ZTRÁTY "
-"DOBRÉHO JMÉNA, PŘERUŠENÍ PRÁCE, PORUCHY NEBO NESPRÁVNÉ FUNKCE POČÍTAČE NEBO "
-"JINÉHO A VŠECH DALŠÍCH ŠKOD NEBO ZTRÁT VYVSTÁVAJÍCÍCH Z NEBO VZTAHUJÍCÍCH SE "
-"K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY "
-"TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ."
-
-#: C/gnomine.xml:37(para)
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<placeholder-1/>"
-msgstr ""
-"DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU "
-"FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <placeholder-1/>"
-
-#: C/gnomine.xml:62(firstname)
-msgid "Callum"
-msgstr "Callum"
-
-#: C/gnomine.xml:63(surname)
-msgid "McKenzie"
-msgstr "McKenzie"
-
-#: C/gnomine.xml:65(email)
-msgid "callum@spooky-possum.org"
-msgstr "callum@spooky-possum.org"
-
-#: C/gnomine.xml:86(revnumber)
-msgid "Mines Manual V2.9"
-msgstr "Příručka V2.9 ke hře Miny"
-
-#: C/gnomine.xml:87(date)
-msgid "January 2006"
-msgstr "Leden 206"
-
-#: C/gnomine.xml:89(para)
-msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
-msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
-
-#: C/gnomine.xml:97(releaseinfo)
-msgid "This manual describes version 2.14 of Mines."
-msgstr "Tato příručka popisuje Miny verze 2.14"
-
-#: C/gnomine.xml:104(title)
-msgid "Feedback"
-msgstr "Ohlasy"
-
-#: C/gnomine.xml:105(para)
-msgid ""
-"To report a bug or make a suggestion regarding the <application>Mines</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
-msgstr ""
-"Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci "
-"<application>Miny</application> nebo této příručce, postupujte dle instrukcí "
-"na stránce <ulink url=\"ghelp:gnome-feedback\" type=\"help\">Stránka s "
-"ohlasy na GNOME</ulink>."
-
-#: C/gnomine.xml:114(primary)
+#: C/index.page:6(info/title)
+msgctxt "link"
 msgid "GNOME Mines"
-msgstr "Miny"
+msgstr "Miny GNOME"
 
-#: C/gnomine.xml:121(title)
-msgid "Introduction"
-msgstr "Úvod"
+#: C/index.page:7(info/title)
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "Miny GNOME"
 
-#: C/gnomine.xml:123(para)
+#: C/index.page:10(credit/name) C/shortcuts.page:9(credit/name)
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
+#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
+#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
+#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
+#: C/translate.page:19(license/p)
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#: C/index.page:22(page/title)
 msgid ""
-"<application><application>Mines</application></application> is a puzzle game "
-"where you locate mines floating in an ocean using only your brain and a "
-"little bit of luck."
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
 msgstr ""
-"<application><application>Miny</application></application> jsou herní "
-"hlavolam, ve kterém se snažíte při plavbě oceánem najít miny jen s pomocí "
-"mozku a trochy štěstí."
+"<media type=\"image\" src=\"figures/logo32.png\">Logo hry Miny GNOME</media> "
+"Miny GNOME"
 
-#: C/gnomine.xml:129(para)
+#: C/index.page:24(page/p)
 msgid ""
-"You start the game with a grid of covered squares and no idea what is in "
-"them. Clicking on a square reveals what is in it: either empty ocean or a "
-"mine. If you find a mine bad things happen and the game is over. If you "
-"uncover an empty square, you survive and get to try again. We do give you a "
-"bit of help; if you find an empty piece of ocean a number is printed there "
-"telling you how many mines are in the adjacent squares (or no number if "
-"there are no nearby mines). Once you find a few clear squares you can start "
-"to deduce which squares have mines in them and which don't. You win the game "
-"once you have revealed all the un-mined squares and marked all the mined "
-"squares."
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
 msgstr ""
-"Hru začínáte s mřížkou zakrytých polí a bez tušení, co se pod nimi skrývá. "
-"Kliknutím na políčko odkryjete, co v něm je - prázdný oceán nebo mina. Pokud "
-"narazíte na minu, tak máte smůlu a hra končí. Pokud odkryjete prázdné "
-"políčko, tak jste přežili a můžete pokoušet osud dál. Poskytneme vám ale "
-"drobnou pomoc. Když najdete prázdný kousek oceánu, vypíše se vám číslo, "
-"které říká, kolik min leží v okolních políčcích. A nebo se neobjeví žádné "
-"číslo, což znamená, že v okolí žádná mina není. Jakmile najdete pár čistých "
-"polí, můžete začít dedukovat, která políčka jsou zaminovaná a která ne. "
-"Vyhráváte ve chvíli, kdy odkryjete všechna nezaminovaná políčka a označíte "
-"všechna zaminovaná."
+"<app>Miny</app> jsou klonem hry Minesweeper (v češtině pojmenované Hledání "
+"min). Jejím cílem je najít všechny miny, které jsou jsou ukryté pod "
+"dlaždicemi čtvercové hrací desky. Abyste našli všechny miny, aniž by vám "
+"některá vybuchla, musíte použít kombinaci logiky a trochy štěstí."
 
-#: C/gnomine.xml:144(title)
-msgid "The stages of the game: the start, playing, losing, and winning."
-msgstr "Stavy hry: začátek, průběh, prohra, výhra."
+#: C/index.page:31(section/title)
+msgid "Game Play"
+msgstr "Hraní hry"
 
-#: C/gnomine.xml:152(para)
+#: C/index.page:34(section/title)
+msgid "Useful tips"
+msgstr "Užitečné tipy"
+
+#: C/index.page:37(section/title)
+msgid "Advanced"
+msgstr "Pokročilé"
+
+#: C/index.page:40(section/title)
+msgid "Get Involved"
+msgstr "Zapojte se"
+
+#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
+#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
+#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
+#: C/rules.page:11(credit/name)
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
+#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
+#: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
+#: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
+msgid "2011"
+msgstr "2011"
+
+#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
+#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
+#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
+#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
+#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
+#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
+#: C/toolbar.page:10(credit/years)
+msgid "2012"
+msgstr "2012"
+
+#: C/board-size.page:22(page/title)
+msgid "How to change the game board size"
+msgstr "Jak změnit velikost hrací desky"
+
+#: C/board-size.page:24(page/p)
+msgid "You can select a field size at the start of a new game."
+msgstr "Velikost hrací desky si můžete vybrat na začátku nové hry."
+
+#: C/board-size.page:28(item/p)
 msgid ""
-"To mark a square as having a mine you right-click on it and a flag is placed "
-"there. If you click on a square with a number and you have placed precisely "
-"that number of flags on adjacent squares then the remaining squares are "
-"revealed. If you didn't mark the mines correctly then an explosion will "
-"occur and the game is over. Squares with no adjacent mines (i.e. blank "
-"squares) have their adjacent squares automatically cleared."
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
 msgstr ""
-"Políčka s minou označíte kliknutím pravým tlačítkem a místo se označí "
-"vlaječkou. Pokud kliknete na políčko s číslem a v okolí máte rozmístěný "
-"správný počet vlaječek na správných místech, zbývající políčka se odkryjí. "
-"Pokud ale vlaječky nejsou rozmístěné správně, pak dojde k explozi a hra "
-"končí. Políčka, která nesousedí s minami (t.j. prázdná políčka) automaticky "
-"odkryjí jejich sousední políčka."
+"Klikněte na <gui style=\"button\">Nová</gui> nebo <guiseq><gui style=\"menu"
+"\">Miny</gui> <gui style=\"menuitem\">Nová hra</gui></guiseq>."
 
-#: C/gnomine.xml:163(title)
-msgid "Important information."
-msgstr "Důležité informace"
+#: C/board-size.page:33(item/p)
+msgid "Select one of the grid sizes:"
+msgstr "Vyberte jednu z velikostí mřížky:"
 
-#: C/gnomine.xml:170(para)
+#: C/board-size.page:35(item/p)
+msgid "a 8 × 8 board with 10 mines"
+msgstr "deska 8 × 8 s 10 minami"
+
+#: C/board-size.page:36(item/p)
+msgid "a 16 × 16 board with 40 mines"
+msgstr "deska 16 × 16 se 40 minami"
+
+#: C/board-size.page:37(item/p)
+msgid "a 30 × 16 board with 99 mines"
+msgstr "deska 30 × 16 s 99 minami"
+
+#: C/board-size.page:38(item/p)
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "vlastní deska, kdy si můžete zvolit velikost desky a počet min"
+
+#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
+#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#: C/bug-filing.page:18(page/title)
+msgid "Help make <app>Mines</app> better"
+msgstr "Pomozte vylepšovat hru <app>Miny</app>"
+
+#: C/bug-filing.page:21(section/title)
+msgid "Report a bug or suggest an improvement"
+msgstr "Hlaste chyby nebo navrhujte vylepšení"
+
+#: C/bug-filing.page:22(section/p)
 msgid ""
-"You are being timed. To be good at this game you have to work both quickly "
-"and correctly. Once you have found all the mines and revealed all the un-"
-"mined squares the clock is stopped. Your score is the time you took; the "
-"shorter the better."
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
-"Počítá se vám čas. Abyste byli v této hře dobří, musíte postupovat rychle a "
-"současně správně. Jakmile najdete všechny miny a odkryjete všechna "
-"nezaminovaná políčka, čas se zastaví. Vaším skóre je čas, kterého jste "
-"dosáhli. Čím kratší, tím lepší."
+"O hru <app>Miny</app> se stará komunita dobrovolníků. Vaše případná účast "
+"bude vítána. Pokud si povšimnete nějakého problému, můžete vyplnit "
+"<em>chybové hlášení</em> na <link href=\"https://bugzilla.gnome.org/\"/>."
 
-#: C/gnomine.xml:177(para)
+#: C/bug-filing.page:25(section/p)
 msgid ""
-"The time you have taken is displayed on the bottom right of the window. "
-"Beside it, on the left, is a count of the number of mines you have cleared "
-"and the total number hidden on the board."
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
 msgstr ""
-"Čas, kterého jste dosáhli, se zobrazuje v pravé dolní části okna. Naproti v "
-"levé části je počet min, které jste našli a celkový počet min na herní desce."
+"Jedná se o systém ke sledování chyb, kde uživatelé a vývojáři mohou uvádět "
+"podrobnosti k dané chybě nebo žádosti o vylepšení. Komunikace probíhá v "
+"angličtině."
 
-#: C/gnomine.xml:184(title)
-msgid "The yellow face shows you how well you are going."
-msgstr "Žluté ksichtíky vám naznačují, jak si vedete"
-
-#: C/gnomine.xml:197(title)
-msgid "The Details"
-msgstr "Podrobnosti"
-
-#: C/gnomine.xml:199(para)
+#: C/bug-filing.page:28(section/p)
 msgid ""
-"This section provides information on the controls and the important menu "
-"items. If you need help figuring where the mines are, see the <link linkend="
-"\"strategy\">strategy section</link>."
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
 msgstr ""
-"Tato kapitola poskytuje informace o ovládání a důležitých položkách nabídky. "
-"Pokud potřebujete nápovědu objasňující, kde jsou miny, přeskočte na <link "
-"linkend=\"strategy\">kapitolu o strategii</link>."
+"Abyste se mohli zapojit, musíte si vytvořit účet, díky kterému získáte "
+"přistup, můžete hlásit chyby a psát komentáře. Registraci potřebujete také k "
+"tomu, aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet "
+"zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Nový účet</gui>."
 
-#: C/gnomine.xml:206(title)
-msgid "The Goal"
-msgstr "Cíl"
-
-#: C/gnomine.xml:208(para)
+#: C/bug-filing.page:32(section/p)
 msgid ""
-"Starting from an ocean of squares with unknown contents you must mark all "
-"the squares with mines and reveal all the clear squares. You don't actually "
-"have to mark the squares with mines, but it is a lot easier if you do. Once "
-"you have cleared all the un-mined squares, any remaining mined squares will "
-"be marked for you."
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
 msgstr ""
-"Začínáte na oceánu polí s neznámým obsahem. Musíte označit všechna políčka s "
-"minami a odkrýt všechna prázdná políčka. Políčka s minami nemusíte nutně "
-"označovat, ale je pro vás snadnější, když to budete dělat. Pokud odkryjete "
-"všechna nezaminovaná políčka, zbývající zaminovaná políčka se vám označí."
+"Když už účet máte, přihlaste se, klikněte na <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Před nahlášením "
+"chyby si prosím přečtěte <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">přiručku k hlášení chyb</link> (odkaz je v angličtině) "
+"a <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+"\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
-#: C/gnomine.xml:217(para)
+#: C/bug-filing.page:40(section/p)
 msgid ""
-"If you left click on a mine, or auto-clear a square with a mine in it you "
-"lose. To help prevent accidents, you aren't allowed to auto-clear around a "
-"square unless the number of marked mines equals the number given in the "
-"square."
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Commit</gui>."
 msgstr ""
-"Pokud kliknete na minu nebo necháte automaticky vyčistit zaminovaná políčka, "
-"jste ztraceni. Aby nedocházelo k nehodám, není možné automaticky vyčistit "
-"okolní políčka v případě, že počet polí označených jako zaminovaná "
-"neodpovídá počtu vypsanému v políčku."
+"V případě, že žádáte o novou funkčnost, zvolte v nabídce <gui>Severity</gui> "
+"položku <gui>enhancement</gui>. Vyplňte pole Summary a Description a "
+"klikněte na <gui>Commit</gui>."
 
-#: C/gnomine.xml:227(title)
-msgid "Using the Mouse"
-msgstr "Používání myši"
-
-#: C/gnomine.xml:234(entry)
-msgid "Action"
-msgstr "Úkon"
-
-#: C/gnomine.xml:234(entry)
-msgid "Result"
-msgstr "Výsledek"
-
-#: C/gnomine.xml:239(entry)
-msgid "Left click on an un-revealed square."
-msgstr "Kliknutí levým tlačítkem na neodkrytém políčku."
-
-#: C/gnomine.xml:240(entry)
-msgid "Reveals the contents of that square. For better or for worse."
-msgstr "Odkryje obsah tohoto políčka. Buď si polepšíte nebo dopadnete špatně."
-
-#: C/gnomine.xml:244(entry)
-msgid "Left click in a revealed square."
-msgstr "Kliknutí levým tlačítkem na odkrytém políčku."
-
-#: C/gnomine.xml:245(entry)
+#: C/bug-filing.page:44(section/p)
 msgid ""
-"Auto-clear. Reveals the unmarked squares around the clicked square, but only "
-"if enough squares have been marked to match the number in the square."
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
 msgstr ""
-"Automatické vyčištění. Odkryje neoznačená políčka okolo políčka, na které "
-"jste klikli, ale pouze v případě, že počet označených políček odpovídá číslu "
-"uvedenému v políčku."
+"Vaše hlášení dostane přiděleno identifikační číslo a jak bude postupně "
+"řešeno, bude se měnit jeho stav."
 
-#: C/gnomine.xml:251(entry)
-msgid "Right click on an un-revealed square."
-msgstr "Kliknutí pravým tlačítkem na neodkrytém políčku."
+#: C/develop.page:19(page/title)
+msgid "Help develop"
+msgstr "Pomozte s vývojem"
 
-#: C/gnomine.xml:252(entry)
+#: C/develop.page:20(page/p)
 msgid ""
-"Marks the square as a mine. If it is already marked, the mark will be "
-"removed."
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
 msgstr ""
-"Označí políčko jako zaminované. Pokud je již označené, tak se značka "
-"odstraní."
+"<app>Hry GNOME</app> jsou vyvíjeny a udržovány komunitou dobrovolníků. Vaše "
+"případná účast bude vítána."
 
-#: C/gnomine.xml:259(para)
+#: C/develop.page:23(page/p)
 msgid ""
-"If you are used to the more traditional mouse controls, don't worry, they "
-"still work."
-msgstr "I když používáte starobylé myši, nemusíte se bát, stále fungují."
-
-#: C/gnomine.xml:264(title)
-msgid "Game Size and Difficulty"
-msgstr "Velikost hry a obtížnost"
-
-#: C/gnomine.xml:266(para)
-msgid ""
-"By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
-"guimenuitem></menuchoice> from the menu you can change the size of the "
-"games. Larger sizes obviously take longer and require more concentration. "
-"Smaller games are more frantic. We provide Small, Medium, Large and Custom "
-"sizes."
+"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
 msgstr ""
-"Po spuštění <menuchoice><guimenu>Nastavení</guimenu><guimenuitem>Volby</"
-"guimenuitem></menuchoice> z nabídky můžete měnit velikost hry. Větší hra "
-"trvá déle a vyžaduje více koncentrace. Menší hra bývá zběsilejší. K "
-"dispozici máte malou, střední, velkou a vlastní velikost."
+"Jestli chcete <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
+"%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
+"mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
+"komunikaci se používá angličtina."
 
-#: C/gnomine.xml:276(title)
-msgid "The preferences dialog."
-msgstr "Dialog voleb."
+#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
+#: C/new-game.page:21(credit/name)
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
 
-#: C/gnomine.xml:283(para)
+#: C/documentation.page:27(page/title)
+msgid "Help write documentation"
+msgstr "Pomozte psát dokumentaci"
+
+#: C/documentation.page:29(page/p)
 msgid ""
-"On the right hand side of the dialog there are three parameters for "
-"controlling the custom size. Horizontal and Vertical are the width and "
-"height of the desired grid in squares. The number of mines is - obviously - "
-"the number of mines you need to find. If this number is set too high or too "
-"low then the game becomes very easy. The number of mines is limited to "
-"slightly less than the total number of squares."
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
 msgstr ""
-"Na pravé straně dialogu jsou tři parametry pro zadání vlastní velikosti. "
-"Vodorovně a svisle jsou šířka a výška požadované mřížky polí. Počet min, jak "
-"je asi jasné, udává počet min, které chcete hledat. Pokud je toto číslo "
-"příliš velké nebo příliš malé, stává se hra velmi snadnou. Počet min je "
-"omezen na hodnotu mírně nižší, než je počet polí."
+"O dokumentaci <app>her GNOME</app> se stará komunitou dobrovolníků. Vaše "
+"případná účast bude vítána."
 
-#: C/gnomine.xml:296(title)
-msgid "\"I'm not sure\" Flags"
-msgstr "Vlaječka „Nejsem si jist“"
-
-#: C/gnomine.xml:305(para)
+#: C/documentation.page:32(page/p)
 msgid ""
-"There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
-"flags. If you enable this then, when right-clicking on a square, it cycles "
-"between the normal flags used to mark the square as mined, a flag with a "
-"question mark on it and no flag. This new flag is to help you with your "
-"reasoning, to mark mines you think might be a mine but aren't sure about. "
-"These flags have no effect on the game; you still have to use the "
-"appropriate number of red marker flags to be able to clear around a numbered "
-"square."
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
-"V nastavení je volba nazvaná Používat vlaječky „Nejsem si jist(á)“. V "
-"případě, že ji povolíte, bude se při klikání pravým tlačítkem na políčku "
-"cyklicky přepínat normální vlaječka označující zaminované políčko, vlaječka "
-"s otazníkem a prázdná plocha bez vlaječky. Tato nová vlaječka s otazníkem je "
-"pomůcka pro vás, abyste si mohli označit políčko, o kterém si myslíte, že by "
-"mohlo být zaminované, ale nejste si jistí. Vlaječka nemá žádný vliv na "
-"průběh hry. Stále musíte nastavit správný počet červených vlaječek, aby se "
-"mohla vyčistit políčka okolo."
+"Jestli chcete přispívat do Dokumentačního projektu, nebojte se nás "
+"kontaktovat na <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F"
+"%2Firc.gnome.org%2Fdocs\">IRC</link> nebo přes <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">poštovní konferenci</link>. Ke "
+"komunikaci se používá angličtina."
 
-#: C/gnomine.xml:319(title)
-msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
-msgstr "Sekvence vlaječek v případě povolené vlaječky „Nejsem si jist“."
-
-#: C/gnomine.xml:329(title)
-msgid "Use \"Too many flags\" warning"
-msgstr "Použít varování „Příliš mnoho vlaječek“"
-
-#: C/gnomine.xml:331(para)
+#: C/documentation.page:40(page/p)
 msgid ""
-"The other check-box in the properties dialog is entitled Use \"Too many flags"
-"\" warning. This feature will show you a warning when you have placed too "
-"many flags. This is disabled by default, as it provides so much hint that it "
-"could be considered \"cheating\"."
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
 msgstr ""
-"Další volba v dialogu s nastavením je nazvaná Použít varování „Příliš mnoho "
-"vlaječek“. Díky ní se vám zobrazí varování v případě, že umístíte příliš "
-"mnoho vlaječek. Standardně je vypnutá, protože poskytuje radu, která by "
-"mohla být považovaná za „podvádění“."
+"Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
+"DocumentationProject/Contributing\">wikistránka</link>."
 
-#: C/gnomine.xml:342(title)
-msgid "Hints"
-msgstr "Rady"
-
-#: C/gnomine.xml:344(para)
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:24(media)
+msgctxt "_"
 msgid ""
-"If you get stuck - it is reasonably common to end up with two options that "
-"you can't logically resolve - then you can either guess, or ask for a hint. "
-"When you choose <guimenuitem>Hint</guimenuitem> from the <guimenu>Game</"
-"guimenu> menu a single square is revealed (plus surrounding squares if it is "
-"blank). The choice of square is random, but should be helpful. There is 10 "
-"second penalty added to your time whenever you use a hint."
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 msgstr ""
-"Pokud se při hře zaseknete - a občas se stává, že skončíte na dvou "
-"možnostech, které nelze logicky rozhodnout - tak můžete buď hádat nebo "
-"požádat o radu. Pokud zvolíte <guimenuitem>Rada</guimenuitem> z nabídky "
-"<guimenu>Hra</guimenu>, odkryje se jedno políčko (plus okolní políčka, pokud "
-"je prázdné). Políčko je zvolené náhodně, ale i tak vám to může pomoci. Za "
-"poskytnutí rady jste však penalizování 10 trestnými vteřinami."
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 
-#: C/gnomine.xml:358(title)
-msgid "High Scores"
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:28(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
+msgstr ""
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:32(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+msgstr ""
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:36(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+msgstr ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:40(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+msgstr ""
+"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+
+#: C/faces.page:20(page/title)
+msgid "The meaning of the faces"
+msgstr "Význam smajlíků"
+
+#: C/faces.page:25(td/p)
+msgid "This is a new game and you have not clicked on any tile yet."
+msgstr "Jde o novou hru a zatím jste neklikli na žádnou dlaždici."
+
+#: C/faces.page:29(td/p)
+msgid "You are currently clicking on a tile."
+msgstr "Právě klikáte na dlaždici."
+
+#: C/faces.page:33(td/p)
+msgid "You have uncovered a mine. You lose."
+msgstr "Odhalili jste minu. Jste ztraceni."
+
+#: C/faces.page:37(td/p)
+msgid "The tile you just clicked on is safe. You can continue."
+msgstr "Dlaždice, na kterou jste klikli, je bezpečná. Můžete pokračovat."
+
+#: C/faces.page:41(td/p)
+msgid "You have found all the mines. You win!"
+msgstr "Našli jste všechny miny. Vyhráváte!"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:34(media)
+#| msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
+msgctxt "_"
+msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+msgstr ""
+"external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:56(media)
+msgctxt "_"
+msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
+msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:85(media)
+msgctxt "_"
+msgid ""
+"external ref='figures/flag-question.svg' "
+"md5='544c1aaa711ee86a03a817a1e3b57733'"
+msgstr ""
+"external ref='figures/flag-question.svg' "
+"md5='544c1aaa711ee86a03a817a1e3b57733'"
+
+#: C/flags.page:30(page/title)
+msgid "How to use flags"
+msgstr "Jak používat vlaječky"
+
+#: C/flags.page:37(td/p)
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"Vlaječky se používají k označení dlaždic, u kterých předpokládáte, že "
+"skrývají minu. Umístěním vlaječky zabráníte kliknutí na dlaždici a "
+"následnému způsobení výbuchu, který znamená konec hry."
+
+#: C/flags.page:45(section/title)
+msgid "How to place a flag on a tile"
+msgstr "Jak na dlaždici umístit vlaječku"
+
+#: C/flags.page:49(td/p)
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr ""
+"Červené vlaječky jsou takové, na které nelze kliknout. Když chcete na "
+"dlaždici umístit červenou vlaječku:"
+
+#: C/flags.page:52(item/p)
+#| msgid "Right click on an un-revealed square."
+msgid "right click on a blank tile."
+msgstr "Klikněte pravým tlačítkem na neodkryté dlaždici."
+
+#: C/flags.page:62(note/p)
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"Abyste měli jistotu, že počet vlaječek nepřekročí počet zbývajících min "
+"okolo odkryté dlaždice, zapněte si v předvolbách <gui style=\"checkbox"
+"\">Varovat, když máte příliš mnoho vlaječek</gui> a <gui style=\"checkbox"
+"\">Používat vlaječky „Nejsem si jist(á)“</gui>."
+
+#: C/flags.page:72(section/title)
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr "Používání vlaječek <em>Nejsem si jist(á)</em>"
+
+#: C/flags.page:73(section/p)
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
+msgstr ""
+"Pro případ, že si nejste jisti, zda dlaždice minu skrývá či ne, můžete "
+"použít modrou vlaječku <em>Nejsem si jist(á)</em>."
+
+#: C/flags.page:78(td/p)
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Když chcete na dlaždici umístit vlaječku <em>Nejsem si jist(á)</em>:"
+
+#: C/flags.page:80(item/p)
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr ""
+"Klikněte dvojitě pravým tlačítkem na prázdnou dlaždici nebo jednoduše na "
+"červenou vlaječku."
+
+#: C/flags.page:91(note/p)
+msgid ""
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
+msgstr ""
+"Abyste mohli používat tento typ vlaječek, klikněte na <guiseq><gui style="
+"\"manu\">Miny</gui> <gui style=\"menuitem\">Předvolby</gui></guiseq> a "
+"zaškrtněte <gui>Používat vlaječky „Nejsem si jist(á)“</gui>."
+
+#: C/get-help.page:21(page/title)
+msgid "Hints and warnings"
+msgstr "Rady a varování"
+
+#: C/get-help.page:23(page/p)
+msgid ""
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
+"track of flags."
+msgstr ""
+"Můžete používat rady pro odhalení bezpečných dlaždic a varování k vlaječkám "
+"pro hlídání jejich počtu."
+
+#: C/get-help.page:26(page/p)
+msgid ""
+"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+"tile that is safe. You will be penalized for using hints: ten seconds will "
+"be added to your total time."
+msgstr ""
+"Klikněte na nástrojové liště na <gui style=\"button\">Rada</gui>, aby se vám "
+"odhalila dlaždice, která je bezpečná. Za každé použití rady jste "
+"penalizováni – k celkovému času je přičteno 10 sekund."
+
+#: C/get-help.page:30(page/p)
+msgid ""
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
+"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
+"you try to place too many flags next to an open tile."
+msgstr ""
+"Jestli chcete zapnout varování, upravte předvolby tím, že vyberete "
+"<guiseq><gui>Miny</gui> <gui>Předvolby</gui></guiseq> a zaškrtnete políčko "
+"vedle <gui>Varovat, když máte příliš mnoho vlaječek</gui>. Díky tomu budete "
+"varováni, když se pokusíte vedle odkryté dlaždice umístit příliš mnoho "
+"vlaječek."
+
+#: C/high-scores.page:22(page/title)
+#| msgid "High Scores"
+msgid "High scores"
 msgstr "Nejvyšší skóre"
 
-#: C/gnomine.xml:360(para)
+#: C/high-scores.page:24(page/p)
 msgid ""
-"If your score is in the top ten you will be shown the list of top scores and "
-"have an opportunity to change the name recorded in the high score table. You "
-"can also review the scores later by choosing <guimenuitem>Scores</"
-"guimenuitem> from the <guimenu>Game</guimenu> menu. The drop-down menu at "
-"the top of the dialog lets you look at the scores for other board sizes."
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
 msgstr ""
-"Pokud se se svým skóre dostanete do první desítky, zobrazí se vám seznam "
-"Skóre min a můžete upravit jméno, které se do tabulky zapíše. Skóre si "
-"můžete později znovu zobrazit přes <guimenuitem>Skóre</guimenuitem> z "
-"nabídky <guimenu>Hra</guimenu>. Pomocí vyskakovacího seznamu v horní části "
-"dialogu si můžete prohlédnout skóre i pro ostatní velikosti hry."
+"V nejvyšších skóre je uvedeno deset nejrychlejších časů, za které byl ten "
+"který typ herní desky vyčištěn od min."
 
-#: C/gnomine.xml:370(title)
-msgid "The high scores dialog."
-msgstr "Dialog s nejvyšším skóre."
-
-#: C/gnomine.xml:378(para)
+#: C/high-scores.page:27(page/p)
 msgid ""
-"The high score for the custom size is usually meaningless. Any other player "
-"can make the game size smaller and get a better time. If you only ever play "
-"one custom size then it will tell you how well you are doing. This is the "
-"only reason it is still recorded."
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
 msgstr ""
-"Nejvyšší skóre pro vlastní velikost je obvykle nesmyslné. Nějaký jiný hráč "
-"si může nastavit menší velikost a tím dosáhnout lepších výsledků. Jen v "
-"případě, že hrajete vždy se stejnou vlastní velikostí, řekne vám to, jak "
-"jste doopravdy byli dobří. To je jediný důvod, proč se i přesto tyto údaje "
-"zaznamenávají."
+"Jestli se chcete podívat na nejvyšší skóre, vyberte <guiseq><gui style=\"menu"
+"\">Miny</gui> <gui style=\"menuitem\">Skóre</gui></guiseq>. Dialogové okno "
+"zobrazí jako výchozí výsledky pro nejmenší hrací desku <gui>8 × 8, 10 min</"
+"gui>. Pro jinou velikost si výsledky zobrazíte výběrem z rozbalovací nabídky."
 
-#: C/gnomine.xml:386(title)
-msgid "Window Size"
-msgstr "Velikost okna"
+#: C/license.page:8(info/desc)
+msgid "Legal information."
+msgstr "Právní informace."
 
-#: C/gnomine.xml:388(para)
-msgid ""
-"Resizing the window makes the squares bigger or smaller to suit. If you want "
-"to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
-"guimenuitem> option under the <guimenu>Settings</guimenu> menu. You can also "
-"use the <keycap>F11</keycap> key to toggle full-screen mode."
-msgstr ""
-"Změna velikosti okna mění velikost polí. Pokud chcete maximálně využít "
-"obrazovku, máte k dispozici volbu <guimenuitem>Celá obrazovka</guimenuitem> "
-"pod nabídkou <guimenu>Nastavení</guimenu>. K přepínání celoobrazovkového "
-"režimu můžete také použít <keycap>F11</keycap>."
-
-#: C/gnomine.xml:397(title)
-msgid "Pausing the Game"
-msgstr "Pozastavení hry"
-
-#: C/gnomine.xml:399(para)
-msgid ""
-"The game can be paused automatically when you start using another window, or "
-"paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
-"guimenu> menu. The playing area is blanked so you can't think ahead while "
-"the clock is stopped. To start playing again press the button labelled "
-"\"Press to Resume\"."
-msgstr ""
-"Hra se pozastaví automaticky v případě, že se přepnete do jiného okna a nebo "
-"ji můžete pozastavit ručně pomocí <guimenuitem>Pozastavit</guimenuitem> v "
-"nabídce <guimenu>Hra</guimenu>. Hrací oblast se smaže, abyste si nemohli "
-"promýšlet tahy dopředu, když jsou zastavené hodiny. Pokračování hry spustíte "
-"tlačítkem „Pokračujte stisknutím“."
-
-#: C/gnomine.xml:413(title)
-msgid "Strategy"
-msgstr "Strategie"
-
-#: C/gnomine.xml:415(para)
-msgid ""
-"The first half of this section explains the very basics of deducing where "
-"mines are. If you are familiar with how to play the game skip down to the "
-"<link linkend=\"advanced\">Advanced Situations</link> subsection."
-msgstr ""
-"První část této kapitoly vysvětluje úplně základní dedukce, kde se miny "
-"nachází. Pokud jste s hraním hry důvěrně seznámení, můžete přeskočit dolů na "
-"podkapitolu <link linkend=\"advanced\">Pokročilé situace</link>."
-
-#: C/gnomine.xml:422(title)
-msgid "The Basics"
-msgstr "Základy"
-
-#: C/gnomine.xml:423(para)
-msgid ""
-"These are a few basic situations which should be incredibly obvious, but if "
-"you're struggling with how to play the game, they should be useful. The "
-"first case is where you have an isolated covered square and most of the "
-"squares around it read 1. That covered square is a mine."
-msgstr ""
-"Zde je několik základních situací, které by měly být naprosto jasné, ale "
-"pokud s hraním hry zápolíte, mohly by vám být užitečné. V prvním případě "
-"máte izolované zakryté políčko a většina políček okolo je označená 1. "
-"Zakryté políčko je zaminované."
-
-#: C/gnomine.xml:432(title)
-msgid "The simplest case."
-msgstr "Nejjednodušší situace."
-
-#: C/gnomine.xml:438(para)
-msgid ""
-"The next simplest case is where you have two covered squares adjacent to "
-"each other and both squares on one side are marked with a 2. If they have no "
-"other uncleared neighbors, then both squares are mines."
-msgstr ""
-"V následujícím jednoduchém případě máte dvě zakrytá navzájem sousedící "
-"políčka a obě obě políčka sousedící na stejné straně jsou označené číslem 2. "
-"Pokud v jejich sousedství nejsou žádná další nevyčištěná políčka, pak obě "
-"políčka jsou zaminovaná."
-
-#: C/gnomine.xml:446(title)
-msgid "The two mine case."
-msgstr "Situace se dvěma minami."
-
-#: C/gnomine.xml:452(para)
-msgid ""
-"Finally, when there are three uncovered squares in a row and the clear "
-"square beside the middle one is a 3 (once again this square should have no "
-"other neighbors) then all three are mines."
-msgstr ""
-"Nakonec zde máme tři zakrytá políčka v řadě a vyčištěná políčka po jedná "
-"straně jsou s číslem 3 (a opět by tato políčka neměla mít žádné neodkryté "
-"sousedy), kdy ona tři políčka jsou zaminovaná."
-
-#: C/gnomine.xml:459(title)
-msgid "The three mine case."
-msgstr "Situace se třemi minami"
-
-#: C/gnomine.xml:465(para)
-msgid ""
-"These are the simplest cases. Other permutations on these simple situations "
-"are possible, for example the three squares in the previous example could be "
-"in an L shape."
-msgstr ""
-"Toto jsou nejjednodušší situace. Možné jsou i různé varianty těchto "
-"jednoduchých situací, např. tři políčka z předchozího příkladu mohou být "
-"umístěná do L."
-
-#: C/gnomine.xml:470(para)
-msgid ""
-"Simple analysis will solve most of the puzzle, but not all. Before going on "
-"to the next sections, where we give you more advanced hints, you should play "
-"for a bit and see what you can work out for yourself."
-msgstr ""
-"Jednoduchá analýza řeší větší část hlavolamu, ale ne vše. Dříve než přejdeme "
-"na další kapitolu, kde dostanete pokročilejší rady, měli byste si trochu "
-"zahrát, abyste viděli, co dokážete sami."
-
-#: C/gnomine.xml:479(title)
-msgid "Advanced Situations"
-msgstr "Pokročilé situace"
-
-#: C/gnomine.xml:481(para)
-msgid ""
-"These are some more complicated situations. They are a bit of a step up from "
-"the last section, so we hope you took our advice and played for a bit first."
-msgstr ""
-"Zde jsou složitější situace. Na rozdíl od předchozí kapitoly jsou již na "
-"vyšší úrovni, takže doufáme, že jste si vzali k srdci naši radu a nejdříve "
-"si trochu pohráli."
-
-#: C/gnomine.xml:487(para)
-msgid ""
-"In the example below the mines are to the left of the ones. We figure this "
-"out by a process of elimination. If the square to the left of the 2 was a "
-"mine then the 1s would both have their maximum number of mines leaving no "
-"free square for the second mine adjacent to the 2 (since they would also be "
-"adjacent to the 1s). Having eliminated the middle square we are left with "
-"two squares we require for the 2 so they are both mined."
-msgstr ""
-"V následujícím příkladu jsou miny nalevo od jedniček. Vyřešili jsme to "
-"postupným vylučováním. Pokud by políčko nalevo od 2 byla mina, pak by i obě "
-"sousedních políčka s 1 měla svůj plný počet min a nezbylo by místo na druhou "
-"minu pro 2 (poněvadž sousedí s políčky s 1). Když takto vyloučíme prostřední "
-"políčko, zůstali nám dvě políčka, která potřebujeme pro políčko s 2, a tudíž "
-"jsou obě zaminovaná."
-
-#: C/gnomine.xml:498(title)
-msgid "A not-so-obvious pattern."
-msgstr "Nepříliš jasná sestava."
-
-#: C/gnomine.xml:504(para)
-msgid ""
-"This situation can be disguised, for example consider the figure below. It "
-"is the same situation, but the extra mined square on the right has increased "
-"all the numbers by 1."
-msgstr ""
-"Situaci můžeme ještě zkomplikovat, např. podle dalšího obrázku. Je to ta "
-"stejná situace, akorát s ještě další minou napravo, která zvyšuje všechna "
-"čísla o 1."
-
-#: C/gnomine.xml:511(title)
-msgid "The extra mine disguises a copy of the previous example."
-msgstr "Ještě jedna mina mění předlohu z předchozího příkladu."
-
-#: C/gnomine.xml:517(para)
-msgid ""
-"Now we're going to try a complicated example. It illustrates two points. The "
-"first is that even if you aren't sure which squares are mined, restricting "
-"the possibilities is helpful. The second is that knowing which squares "
-"aren't mined is nearly as good as knowing which are mined."
-msgstr ""
-"A teď zkusíme něco složitějšího. Ukáže nám to dvě věci. Zaprvé, že i když si "
-"nejsme jistí, která políčka jsou zaminovaná, i snížení možností je užitečné. "
-"A zadruhé, že znalost, která políčka nejsou zaminovaná je stejně užitečná, "
-"jako která jsou."
-
-#: C/gnomine.xml:525(para)
-msgid ""
-"Assume that, in the figure below, we start off knowing that the top left "
-"square is mined and so the two squares marked 2 on the left only require one "
-"more mine. Next observe that the left-most 2 implies that one of the covered "
-"squares beneath it is mined, but we don't yet know which one. Since at least "
-"one of these squares is mined and they are both neighbors of the second 2 "
-"then we know that that 2 is also satisfied by one of these two squares (we "
-"still don't know which one). This means that the square beneath the 4 is "
-"clear because it is also a neighbor of the second 2 and not one of the two "
-"squares we identified previously. This one blank square now leaves the 4 "
-"with only four neighbors - all of which must be mines. Not only does it tell "
-"us which mines surround the 4, it now tells us which of the squares beside "
-"the 2 is mined!"
-msgstr ""
-"Předpokládejme, podle obrázku níže, že začínáme se znalosti, že horní levé "
-"políčko je zaminované a tak dvě políčka označené 2 nalevo vyžadují jen jednu "
-"další minu. Dale si všimněte, že 2 nejvíce vlevo naznačuje, že jedno ze "
-"zakrytých polí pod je zaminované, ale nevíme které z nich. Poněvadž nejméně "
-"jedno z těchto polí je zaminované a obě dvě jsou v sousedství druhé 2, víme "
-"že tato 2 je také uspokojená jedním z těchto dvou polí (ale stále nevíme "
-"kterým z nich). Znamená to, že políčko pod 4 je čisté, protože je také "
-"sousedem druhé 2 a té už jsem určili jedno z předchozích dvou políček. Tímto "
-"prázdným políčkem nám pro 4 zůstávají jen čtyři sousedé, takže všichni čtyři "
-"musí být zaminovaní. To nám nakonec řeklo, nejen která čtyři políčka okolo 4 "
-"jsou zaminovaná, ale i které políčka pod 2 je zaminované."
-
-#: C/gnomine.xml:542(title)
-msgid "As tricky as it gets."
-msgstr "Tak záludné jak to vypadá."
-
-#: C/gnomine.xml:549(para)
-msgid ""
-"This sort of situation is tricky. In all the other examples you can learn to "
-"look for patterns and avoid thinking hard. Situations like the one in the "
-"figure don't crop up easily or in easily recognisable places. Often it is "
-"easier to just ignore them and keep playing elsewhere in the hope that you "
-"can start clearing the squares from the other side."
-msgstr ""
-"Tato kategorie situací je ošemetná. Ve všech dalších příkladech se můžete "
-"naučit podívat a rozložení a přemýšlením ho vyřešit. Situace jako je tato "
-"vám ale nepřinese ovoce tak snadno. Často je jednodušší ji pro teď "
-"ignorovat, pokračovat v hraní v jiném místě a doufat, že se postupně vyčistí "
-"další políčko okolo."
-
-#: C/gnomine.xml:561(title)
-msgid "Tips"
-msgstr "Typy"
-
-#: C/gnomine.xml:563(para)
-msgid ""
-"Remember, the edge of the board is just the same as a large cleared area "
-"(but without the numbers). Often working at the edge of the board is the "
-"easiest way forward."
-msgstr ""
-"Pamatujte, že okraj hrací desky je v podstatě to stejné jako velká vyčištěná "
-"plocha (ale bez čísel). Hraní u kraje desky je často nejjednodušší cestou, "
-"jak se pohnout vpřed."
-
-#: C/gnomine.xml:569(para)
-msgid ""
-"Sometimes you end up in a situation where there is no way to deduce what the "
-"configuration is. In these cases you either have to guess or use the hint "
-"function (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</"
-"guimenuitem></menuchoice>). Sometimes it isn't a 50/50 situation and instead "
-"of taking a hint you might like to gamble on the most likely outcome."
-msgstr ""
-"Občas můžete skončit v situaci, kdy není způsob, jak vydedukovat rozložení. "
-"V těchto situacích můžete buď hádat nebo použít funkci rady "
-"(<menuchoice><guimenu>Hra</guimenu><guimenuitem>Rada</guimenuitem></"
-"menuchoice>). Někdy to není jen sázka 50/50 a když nevyužijete radu, tak "
-"jdete do hazardu, který obvykle skončí prohrou."
-
-#: C/gnomine.xml:578(para)
-msgid ""
-"One final hint: remember the counter on the bottom left of the window that "
-"tells you how many mines you have left? Often, near the end of the game, "
-"this number can help you figure out what possible places mines can be. How "
-"to do this is up to you to figure out."
-msgstr ""
-"A jedna rada na závěr: Pamatujte, že počítadlo v levém dolním rohu okna vám "
-"říká, kolik min vám ještě zbývá. Na konci hry vám toto číslo často může "
-"pomoci odhalit, na kterých místech mohou miny být. Jak to udělat už si ale "
-"musíte vyřešit sami."
-
-#: C/gnomine.xml:590(title)
-msgid "Authors"
-msgstr "Autoři"
-
-#: C/gnomine.xml:591(para)
-msgid ""
-"<application>GNOME Mines</application> was written by Pista "
-"(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
-"Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from "
-"Vincent Povirk and based on an earlier manual by Tim Riehle "
-"(<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion "
-"regarding this application or this manual, follow the directions in this "
-"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
-msgstr ""
-"<application>GNOME Miny</application> napsal Pista "
-"(<email>szekeres@cyberspace.mht.bme.hu</email>). Tuto příručku napsal Callum "
-"McKenzie (<email>callum@spooky-possum.org</email>) za pomoci Vincenta "
-"Povirka na základě starší příručky, kterou napsal Tim Riehle "
-"(<email>tkriehle@citilink.com</email>). Pokud chcete nahlásit chybu nebo "
-"podat návrh týkající se této aplikace nebo tohoto návodu, tak se řiďte "
-"instrukcemi v tomto <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help"
-"\">dokumentu</ulink>."
-
-#: C/gnomine.xml:607(title)
+#: C/license.page:11(page/title)
 msgid "License"
 msgstr "Licence"
 
-#: C/gnomine.xml:608(para)
+#: C/license.page:12(page/p)
 msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl"
-"\">GNU General Public License</ulink></citetitle> as published by the <ulink "
-"type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; "
-"either version 2 of the License, or (at your option) any later version."
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
 msgstr ""
-"Tento program je svobodný software. Můžete jej dále šířit a/nebo upravovat "
-"za dodržení podmínek <ulink type=\"help\" url=\"help:gpl"
-"\"><citetitle>GNU General Public License</citetitle></ulink>, tak jak ji "
-"vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) novější."
+"Tato práce je šířena pod licencí CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
 
-#: C/gnomine.xml:616(para)
+#: C/license.page:20(page/p)
+msgid "You are free:"
+msgstr "Můžete volně:"
+
+#: C/license.page:25(item/title)
+msgid "<em>To share</em>"
+msgstr "<em>Sdílet</em>"
+
+#: C/license.page:26(item/p)
+msgid "To copy, distribute and transmit the work."
+msgstr "Kopírovat, šířit a rozesílat dílo."
+
+#: C/license.page:29(item/title)
+msgid "<em>To remix</em>"
+msgstr "<em>Měnit</em>"
+
+#: C/license.page:30(item/p)
+msgid "To adapt the work."
+msgstr "Přizpůsobovat dílo."
+
+#: C/license.page:33(page/p)
+msgid "Under the following conditions:"
+msgstr "Za následujících podmínek:"
+
+#: C/license.page:38(item/title)
+msgid "<em>Attribution</em>"
+msgstr "<em>Označení</em>"
+
+#: C/license.page:39(item/p)
 msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle><ulink type=\"help\" "
-"url=\"help:gpl\">GNU General Public License</ulink></citetitle> for "
-"more details."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
-"Tento program je šířen s přesvědčením, že může být užitečný, ale BEZ "
-"JAKÝCHKOLIV ZÁRUK, bez předpokládané záruky na OBCHODOVATELNOST nebo "
-"VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General "
-"Public License</citetitle>."
+"Musíte dílo označit v souladu s požadavky autora nebo licence (ale ne žádným "
+"způsobem, který předpokládá, že podporují vás nebo vaše použití díla)."
 
-#: C/gnomine.xml:622(para)
+#: C/license.page:46(item/title)
+msgid "<em>Share Alike</em>"
+msgstr "<em>Stejné sdílení</em>"
+
+#: C/license.page:47(item/p)
 msgid ""
-"A copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU "
-"General Public License</ulink></citetitle> is included as an appendix to the "
-"<citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy of the "
-"<citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public "
-"License</ulink></citetitle> from the Free Software Foundation by visiting "
-"<ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by "
-"writing to <address> Free Software Foundation, Inc. <street>59 Temple Place</"
-"street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-"
-"1307</postcode><country>USA</country></address>"
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
 msgstr ""
-"Kopie <citetitle>GNU General Public License</citetitle> je zahrnuta v "
-"dodatku <citetitle>Uživatelské přiručky GNOME</citetitle>. Kopii "
-"<citetitle>GNU General Public License</citetitle> můžete také získat od Free "
-"Software Foundation navštívením <ulink type=\"http\" url=\"http://www.fsf.org"
-"\">jejich webu</ulink> nebo zasláním žádosti na <address> Free Software "
-"Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</"
-"city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</"
-"country></address>"
+"Pokud dílo změníte, převedete nebo na něm založíte jiné, můžete výsledek "
+"této práce šířit pouze pod stejnou, podobnou nebo kompatibilní licencí."
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/gnomine.xml:0(None)
-msgid "translator-credits"
-msgstr "Marek Černocký <marek@manet.cz>, 2009."
+#: C/license.page:53(page/p)
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Text licence v plném znění najdete na <link href=\"http://creativecommons."
+"org/licenses/by-sa/3.0/legalcode\">webových stránkách CreativeCommons</link> "
+"nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
+"\">výtah dokumentu pro neprávníky</link>."
+
+#: C/new-game.page:26(page/title)
+msgid "Start a new game"
+msgstr "Jak spustit novou hru"
+
+#: C/new-game.page:28(page/p)
+msgid "To start a new game:"
+msgstr "Když chcete spustit novou hru:"
+
+#: C/new-game.page:31(item/p)
+msgid ""
+"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
+"from the application menu."
+msgstr ""
+"Klikněte na tlačítko <gui style=\"button\">Nová</gui> nebo v nabídce "
+"aplikace vyberte <guiseq><gui style=\"menu\">Miny</gui> <gui style=\"menuitem"
+"\">Nová hra</gui></guiseq>."
+
+#: C/new-game.page:37(item/p)
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr ""
+"Vyberte si <link xref=\"board-size\">velikost hrací desky</link>, která vám "
+"vyhovuje."
+
+#: C/new-game.page:42(note/p)
+msgid ""
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"former, your current game will be lost."
+msgstr ""
+"V situaci, kdy máte nějakou hru rozehranou, dotáží se vás <app>Miny</app>, "
+"jestli chcete <gui>Začít novou hru</gui> nebo <gui>Zachovat stávající hru</"
+"gui>. Pokud zvolíte první jmenované, o právě rozehranou hru příjdete."
+
+#: C/rules.page:24(page/title)
+msgid "Game rules"
+msgstr "Pravidla hry"
+
+#: C/rules.page:26(page/p)
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"Cílem hry <app>Miny</app> je vyčistit minové pole, aniž byste některou z min "
+"odpálili."
+
+#: C/rules.page:31(item/p)
+msgid ""
+"Start by chosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"Hru začněte výběrem jedné ze tří velikostí hrací desky nebo výběrem vlastní "
+"desky."
+
+#: C/rules.page:35(item/p)
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"Hra začíná s hrací deskou pokrytou dlaždicemi. Kliknutím na dlaždici ji "
+"odkryjete. Tím můžete odhalit:"
+
+#: C/rules.page:39(item/p)
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"Barevné číslo, které udává počet min pod sousedními dlaždicemi. To vám "
+"umožní vydedukovat, kde se miny nachází, takže si je můžete označit <link "
+"xref=\"flags\">vlaječkami</link>."
+
+#: C/rules.page:44(item/p)
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr ""
+"Prádné políčko, což znamená, že ani pod žádnou sousední dlaždicí se neukrývá "
+"mina."
+
+#: C/rules.page:48(item/p)
+msgid "A mine, which will detonate and end the game."
+msgstr "Minu, která detonuje a tím pro vás hra končí."
+
+#: C/rules.page:53(item/p)
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr ""
+"Opakujte předchozí krok tak dlouho, dokud neodkryjete všechny dlaždice, pod "
+"kterými nejsou miny."
+
+#: C/rules.page:58(page/p)
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
+msgstr ""
+"V případě, že hru dokončíte dostatečně rychle, budete přidáni do žebříčku "
+"<link xref=\"high-scores\">nejvyšších skóre</link>."
+
+#: C/shortcuts.page:17(page/title)
+msgid "Keyboard shortcuts"
+msgstr "Klávesové zkratky"
+
+#: C/shortcuts.page:20(td/p)
+msgid "New game"
+msgstr "Nová hra"
+
+#: C/shortcuts.page:21(td/p)
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#: C/shortcuts.page:24(td/p)
+msgid "Fullscreen"
+msgstr "Celá obrazovka"
+
+#: C/shortcuts.page:25(td/p)
+msgid "<key>F11</key>"
+msgstr "<key>F11</key>"
+
+#: C/shortcuts.page:28(td/p)
+#| msgid "Hints"
+msgid "Hint"
+msgstr "Rada"
+
+#: C/shortcuts.page:29(td/p)
+msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+
+#: C/shortcuts.page:32(td/p)
+msgid "Pause"
+msgstr "Pozastavit"
+
+#: C/shortcuts.page:33(td/p)
+msgid "<key>Pause</key>"
+msgstr "<key>Pause</key>"
+
+#: C/shortcuts.page:34(note/p)
+msgid ""
+"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
+"key."
+msgstr ""
+"V případě, že na klávesnici nemáte klávesu <key>Pause</key>, použijte "
+"tlačítko na nástrojové liště."
+
+#: C/shortcuts.page:37(td/p)
+msgid "Help"
+msgstr "Nápověda"
+
+#: C/shortcuts.page:38(td/p)
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#: C/shortcuts.page:41(td/p)
+msgid "Quit"
+msgstr "Ukončit"
+
+#: C/shortcuts.page:42(td/p)
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#: C/toolbar.page:15(page/title)
+msgid "Toolbar"
+msgstr "Nástrojová lišta"
+
+#: C/toolbar.page:17(page/p)
+msgid ""
+"The toolbar, located under the menu bar, lets you perform common actions "
+"with your mouse. To use a toolbar item, just click on it. The buttons, from "
+"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
+"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
+msgstr ""
+"Nástrojová lišta umístěná pod nabídkovou lištou usnadňuje provádění činností "
+"pomocí myši. Když chcete použít některou její položku, stačí na ni kliknout. "
+"Tlačítka, bráno zleva doprava, jsou <gui><link xref=\"new-game\">Nová hra</"
+"link></gui>, <link xref=\"get-help\">Rada</link>, <gui>Pozastavit</gui> a "
+"<gui>Celá obrazovka</gui>."
+
+#: C/translate.page:15(credit/name)
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#: C/translate.page:23(page/title)
+msgid "Help translate"
+msgstr "Pomozte překládat"
+
+#: C/translate.page:24(page/p)
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Uživatelské rozhraní a dokumentaci <app>her GNOME</app> překládá komunita "
+"dobrovolníků z celého světa. Vaše případná účast bude vítána."
+
+#: C/translate.page:27(page/p)
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Stále je <link href=\"http://l10n.gnome.org/module/quadrapassel/\">řada "
+"jazyků</link>, do kterých je třeba překlad udělat."
+
+#: C/translate.page:30(page/p)
+msgid ""
+"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Jestli chcete překládat, musíte si <link href=\"http:l10n.gnome.org"
+"\">vytvořit účet</link> a přidat se k <link href=\"http://l10n.gnome.org/"
+"teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
+"své nové překlady."
+
+#: C/translate.page:34(page/p)
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"S ostatními překladateli můžete komunikovat pomocí <link href=\"https://"
+"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>. "
+"Lidé na tomto kanále jsou z celého světa, tak počítejte s tím, že kvůli "
+"rozdílným časovým pásmům, nemusí reagovat hned."
+
+#: C/translate.page:37(page/p)
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
+"link>."
