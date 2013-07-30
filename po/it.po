@@ -9,10 +9,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games\n"
+"Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-25 22:05+0100\n"
-"PO-Revision-Date: 2013-02-25 22:05+0100\n"
+"POT-Creation-Date: 2013-07-30 22:09+0200\n"
+"PO-Revision-Date: 2013-07-30 22:09+0200\n"
 "Last-Translator: Milo Casagrande <milo@ubuntu.com>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
 "Language: it\n"
@@ -20,17 +20,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:95
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
 #: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
 msgid "Mines"
 msgstr "Mine"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "Scova le mine nascoste in un campo minato"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnomine.desktop.in.in.h:3
 msgid "minesweeper;"
 msgstr "minesweeper;mine;"
 
@@ -165,6 +166,16 @@ msgstr "Indizio"
 #: ../src/gnome-mines.vala:256
 msgid "Field Size"
 msgstr "Dimensione campo"
+
+# Note:
+# (ndt) si riferisce alla dimensione
+# (Modifica)
+#
+# Percorsi:
+# ../src/gnome-mines.vala:299
+#: ../src/gnome-mines.vala:299
+msgid "Custom"
+msgstr "Personalizzata"
 
 #: ../src/gnome-mines.vala:317
 msgid "H_orizontal:"
