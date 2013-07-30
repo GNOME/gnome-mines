@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games 3.7.x\n"
+"Project-Id-Version: gnome-games 3.9.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-25 17:40+0100\n"
-"PO-Revision-Date: 2013-02-25 17:41+0100\n"
+"POT-Creation-Date: 2013-07-30 20:25+0200\n"
+"PO-Revision-Date: 2013-07-30 20:25+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -17,16 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:95
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
 #: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
 msgid "Mines"
 msgstr "Miner"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "Fjern skjulte miner fra et minefelt"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnomine.desktop.in.in.h:3
 msgid "minesweeper;"
 msgstr "minesveiper;"
 
@@ -158,6 +158,10 @@ msgstr "Hint"
 #: ../src/gnome-mines.vala:256
 msgid "Field Size"
 msgstr "Feltstørrelse"
+
+#: ../src/gnome-mines.vala:299
+msgid "Custom"
+msgstr "Egendefinert"
 
 #: ../src/gnome-mines.vala:317
 msgid "H_orizontal:"
