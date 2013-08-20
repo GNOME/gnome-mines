@@ -1,3 +1,18 @@
+gnome-mines 3.8.2
+=================
+
+Andika Triwidada (1):
+      Updated Indonesian translation
+
+Michael Catanzaro (1):
+      help: update damned lies module name to gnome-mines
+
+Mislav Blazevic (1):
+      Fix crash when releasing button outside minefield
+
+Yuri Myasoedov (1):
+      Updated Russian translation
+
 gnome-mines 3.8.1
 =================
 
