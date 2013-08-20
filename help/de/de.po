@@ -6,14 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-02 22:00+0000\n"
-"PO-Revision-Date: 2013-02-28 20:41+0100\n"
-"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
+"POT-Creation-Date: 2013-08-17 20:36+0000\n"
+"PO-Revision-Date: 2013-08-19 13:38+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -21,7 +22,7 @@ msgid "translator-credits"
 msgstr ""
 "Florian Purucker <florian@purucker.net>, 2007.\n"
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2013.\n"
-"Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012."
+"Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013."
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -48,7 +49,8 @@ msgstr "original"
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:22(media)
 msgctxt "_"
-msgid "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+msgid ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 msgstr "original"
 
 #: C/index.page:6(info/title)
@@ -73,30 +75,34 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:19(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
 #: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #: C/index.page:22(page/title)
+#, fuzzy
+#| msgid ""
+#| "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
+#| "media>GNOME Mines"
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
-"media>GNOME Mines"
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
 msgstr ""
 "<media type=\"image\" src=\"figures/logo32.png\">GNOME Minen-Logo</"
 "media>GNOME Minen"
 
 #: C/index.page:24(page/p)
 msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate all "
-"the mines that are hidden under tiles on a rectangular board. You will need "
-"to use a combination of logic and luck to find all the mines without "
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
 msgstr ""
-"<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist es, "
-"die unter den Feldern eines rechteckigen Spielfelds verborgenen Minen "
-"aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen zu "
-"finden, ohne eine Explosion zu verursachen."
+"<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist "
+"es, die unter den Feldern eines rechteckigen Spielfelds verborgenen Minen "
+"aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen "
+"zu finden, ohne eine Explosion zu verursachen."
 
 #: C/index.page:31(section/title)
 msgid "Game Play"
@@ -149,28 +155,28 @@ msgstr "Zu Beginn eines neuen Spiels können Sie eine Spielfeldgröße wählen."
 #: C/board-size.page:28(item/p)
 msgid ""
 "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui><gui style=\"menuitem\">New Game</gui></guiseq>."
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
 msgstr ""
-"Klicken Sie auf <gui style=\"button\">Neu</gui> oder <guiseq><gui style=\"menu"
-"\">Minen</gui><gui style=\"menuitem\">Neues Spiel</gui></guiseq>."
+"Klicken Sie auf <gui style=\"button\">Neu</gui> oder <guiseq><gui style="
+"\"menu\">Minen</gui><gui style=\"menuitem\">Neues Spiel</gui></guiseq>."
 
-#: C/board-size.page:31(item/p)
+#: C/board-size.page:33(item/p)
 msgid "Select one of the grid sizes:"
 msgstr "Wählen Sie eine der vorgeschlagenen Rastergrößen:"
 
-#: C/board-size.page:33(item/p)
+#: C/board-size.page:35(item/p)
 msgid "a 8 × 8 board with 10 mines"
 msgstr "ein 8x8-Spielfeld mit 10 Minen"
 
-#: C/board-size.page:34(item/p)
+#: C/board-size.page:36(item/p)
 msgid "a 16 × 16 board with 40 mines"
 msgstr "ein 16x16-Spielfeld mit 40 zu findenden Minen"
 
-#: C/board-size.page:35(item/p)
+#: C/board-size.page:37(item/p)
 msgid "a 30 × 16 board with 99 mines"
 msgstr "ein 30x16-Spielfeld mit 99 Minen"
 
-#: C/board-size.page:36(item/p)
+#: C/board-size.page:38(item/p)
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr ""
 "ein benutzerdefiniertes Spielfeld, in dem Sie die Größe und die Anzahl der "
@@ -197,49 +203,49 @@ msgid ""
 "file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
 "<app>GNOME Minen</app> wird von einer Gemeinschaft aus Freiwilligen "
-"entwickelt. Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie "
-"ein Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. "
-"Besuchen Sie hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
+"entwickelt. Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls "
+"Sie ein Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</"
+"em>. Besuchen Sie hierzu <link href=\"https://bugzilla.gnome.org/\"/>."
 
 #: C/bug-filing.page:25(section/p)
 msgid ""
 "This is a bug tracking system where users and developers can file details "
-"about bugs, crashes and request enhancements."
+"about bugs and crashes, or request enhancements."
 msgstr ""
 "Die ist eine Fehlerdatenbank, in der Benutzer und Entwickler Details zu "
 "Fehlern, Abstürzen und Erweiterungswünschen hinterlegen."
 
 #: C/bug-filing.page:28(section/p)
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
 msgstr ""
 "Zum Arbeiten benötigen Sie Anmeldeinformationen, um Zugang zum System zu "
 "bekommen, Fehler zu berichten und Kommentare zu schreiben. Sie müssen sich "
-"auch registrieren, um Aktualisierungen zu Fehlerberichten per E-Mail erhalten "
-"zu können. Wenn Sie noch keinen Zugang haben, können Sie auf <gui>New "
-"Account</gui> klicken und ein Konto einrichten."
+"auch registrieren, um Aktualisierungen zu Ihren Fehlerberichten per E-Mail "
+"erhalten zu können. Wenn Sie noch keinen Zugang haben, können Sie auf "
+"<gui>New Account</gui> klicken und ein Konto einrichten."
 
-#: C/bug-filing.page:31(section/p)
+#: C/bug-filing.page:32(section/p)
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
 "a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
 "id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse</link> "
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
 "for the bug to see if it already exists."
 msgstr ""
-"Sobald die Erstellung des Kontos abgeschlossen ist, klicken Sie auf "
-"<guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-mines</gui></"
-"guiseq>. Bevor Sie einen Fehler melden, lesen Sie bitte die <link href="
-"\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing "
-"guidelines</link> und <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-games\">schauen Sie bitte nach</link>, ob der Fehler vielleicht "
-"schon gemeldet wurde."
+"Sobald die Erstellung des Kontos abgeschlossen ist, melden Sie sich an und "
+"klicken Sie auf <guiseq><gui>File a Bug</gui><gui>Applications</"
+"gui><gui>gnome-mines</gui></guiseq>. Bevor Sie einen Fehler melden, lesen "
+"Sie bitte die <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
+"writing.html\">bug writing guidelines</link> und <link href=\"https://"
+"bugzilla.gnome.org/browse.cgi?product=gnome-mines\">schauen Sie bitte nach</"
+"link>, ob der Fehler vielleicht schon gemeldet wurde."
 
-#: C/bug-filing.page:35(section/p)
+#: C/bug-filing.page:40(section/p)
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -250,7 +256,7 @@ msgstr ""
 "Abschnitte summary (Zusammenfassung) und description (Beschreibung) aus und "
 "klicken Sie auf <gui>Commit</gui>."
 
-#: C/bug-filing.page:39(section/p)
+#: C/bug-filing.page:44(section/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
@@ -283,16 +289,21 @@ msgid ""
 msgstr ""
 "Falls Sie <link href=\"https://live.gnome.org/GnomeGames/Contributing\">bei "
 "der Entwicklung der <app>GNOME Games</app> helfen möchten</link>, können Sie "
-"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A"
-"%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc"
+"%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
 "\"http://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
 "Kontakt aufnehmen."
 
-#: C/documentation.page:23(page/title)
+#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
+#: C/new-game.page:21(credit/name)
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#: C/documentation.page:27(page/title)
 msgid "Help write documentation"
 msgstr "Beim Schreiben der Dokumentation helfen"
 
-#: C/documentation.page:25(page/p)
+#: C/documentation.page:29(page/p)
 msgid ""
 "The GNOME Games user help is maintained by a volunteer community. You are "
 "welcome to participate."
@@ -300,13 +311,20 @@ msgstr ""
 "Die Dokumentation der <app>GNOME Games</app> wird von einer Gemeinschaft aus "
 "Freiwilligen betreut. Sie sind herzlich eingeladen, sich daran zu beteiligen."
 
-#: C/documentation.page:28(page/p)
+#: C/documentation.page:32(page/p)
+#, fuzzy
+#| msgid ""
+#| "To contribute to the Documentation Project, get in touch with us on the "
+#| "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+#| "org%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+#| "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://"
+#| "mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgid ""
-"To contribute to the Documentation Project, get in touch with us on the <link "
-"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> channel on <link href=\"http://live.gnome.org/GnomeIrcChannels"
-"\">irc.gnome.org</link> or via our <link href=\"http://mail.gnome.org/mailman/"
-"listinfo/gnome-doc-list\">mailing list</link>."
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
 "Falls Sie sich am Dokumentationsprojekt beteiligen wollen, nehmen Sie im "
 "Kanal <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
@@ -315,7 +333,7 @@ msgstr ""
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">Mailingliste</link> mit uns "
 "Kontakt auf."
 
-#: C/documentation.page:33(page/p)
+#: C/documentation.page:40(page/p)
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
@@ -327,7 +345,7 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:20(media)
+#: C/faces.page:24(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
@@ -337,20 +355,11 @@ msgstr "original"
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:24(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-msgstr "original"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
 #: C/faces.page:28(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
@@ -360,7 +369,7 @@ msgstr "original"
 #: C/faces.page:32(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-worried.svg' md5='f0a66a1c5046deef93c14eeb9993b367'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 msgstr "original"
 
 #. This is a reference to an external file such as an image or video. When
@@ -370,32 +379,42 @@ msgstr "original"
 #: C/faces.page:36(media)
 msgctxt "_"
 msgid ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+msgstr "original"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:40(media)
+msgctxt "_"
+msgid ""
 "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
 msgstr "original"
 
-#: C/faces.page:16(page/title)
+#: C/faces.page:20(page/title)
 msgid "The meaning of the faces"
 msgstr "Die Bedeutung der Gesichter"
 
-#: C/faces.page:21(td/p)
-msgid "This is a new game and you didn't clicked on any tile for the moment."
+#: C/faces.page:25(td/p)
+msgid "This is a new game and you have not clicked on any tile yet."
 msgstr "Dies ist ein neues Spiel und Sie haben noch kein Feld freigelegt."
 
-#: C/faces.page:25(td/p)
-msgid "You clicked on a mine, you loose."
-msgstr "Sie haben eine Mine freigelegt. Sie haben verloren."
-
 #: C/faces.page:29(td/p)
-msgid "The tile you clicked on is safe. You can continue."
-msgstr "Das freigelegte Feld ist sicher. Sie dürfen das Spiel fortsetzen."
+msgid "You are currently clicking on a tile."
+msgstr "Sie legen gerade ein Feld frei."
 
 #: C/faces.page:33(td/p)
-msgid "This face appears when you're clicking a on tile."
-msgstr "Dieses Gesicht erscheint, während Sie ein Feld freilegen."
+msgid "You have uncovered a mine. You lose."
+msgstr "Sie haben eine Mine freigelegt. Sie haben verloren."
 
 #: C/faces.page:37(td/p)
-msgid "You found all the mines, you win."
-msgstr "Sie haben alle Minen gefunden und gewonnen."
+msgid "The tile you just clicked on is safe. You can continue."
+msgstr "Das freigelegte Feld ist sicher. Sie dürfen das Spiel fortsetzen."
+
+#: C/faces.page:41(td/p)
+msgid "You have found all the mines. You win!"
+msgstr "Sie haben alle Minen gefunden. Sie haben gewonnen!"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -449,8 +468,8 @@ msgstr "So setzen Sie eine Fahne auf ein Feld"
 msgid ""
 "Red flags are those that cannot be clicked. To place a red flag on a tile:"
 msgstr ""
-"Rote Fahnen können nicht angeklickt werden. So platzieren Sie eine rote Fahne "
-"auf einem Feld:"
+"Rote Fahnen können nicht angeklickt werden. So platzieren Sie eine rote "
+"Fahne auf einem Feld:"
 
 #: C/flags.page:52(item/p)
 msgid "right click on a blank tile."
@@ -458,15 +477,15 @@ msgstr "Klicken Sie mit der rechten Maustaste auf ein leeres Feld."
 
 #: C/flags.page:62(note/p)
 msgid ""
-"To make the number of available flags equal to the number of remaining mines, "
-"enable <gui style=\"checkbox\">Warn if too many flags placed</gui> and <gui "
-"style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference options, then "
-"restart the application."
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
 msgstr ""
-"Um die gleiche Anzahl verfügbarer Fahnen und verbleibender Minen zu erhalten, "
-"aktivieren Sie die Optionen <gui style=\"checkbox\">Warnen, wenn zu viele "
-"Fahnen platziert werden</gui> und <gui style=\"checkbox\">»Ich bin nicht "
-"sicher«-Fahnen verwenden</gui> in den Einstellungen und starten Sie "
+"Um die gleiche Anzahl verfügbarer Fahnen und verbleibender Minen zu "
+"erhalten, aktivieren Sie die Optionen <gui style=\"checkbox\">Warnen, wenn "
+"zu viele Fahnen platziert werden</gui> und <gui style=\"checkbox\">»Ich bin "
+"nicht sicher«-Fahnen verwenden</gui> in den Einstellungen und starten Sie "
 "anschließend die Anwendung neu."
 
 #: C/flags.page:72(section/title)
@@ -475,8 +494,8 @@ msgstr "Verwendung der Fahne »Ich bin mir nicht sicher«"
 
 #: C/flags.page:73(section/p)
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue <em>I'm "
-"not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
 msgstr ""
 "Wenn Sie nicht sicher sind, ob sich unter einem Feld eine Mine verbirgt, so "
 "können Sie die blaue Fahne <em>Ich bin mir nicht sicher</em> einsetzen."
@@ -489,8 +508,8 @@ msgstr ""
 #: C/flags.page:80(item/p)
 msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr ""
-"Klicken Sie zweimal mit der rechten Maustaste auf ein leeres Feld oder einmal "
-"auf eine rote Fahne."
+"Klicken Sie zweimal mit der rechten Maustaste auf ein leeres Feld oder "
+"einmal auf eine rote Fahne."
 
 #: C/flags.page:91(note/p)
 msgid ""
@@ -499,8 +518,8 @@ msgid ""
 "sure\" flags</gui>."
 msgstr ""
 "Um diese Fahnen freizuschalten, klicken Sie auf <guiseq><gui style=\"manu"
-"\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und wählen "
-"Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
+"\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und "
+"wählen Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
 
 #: C/get-help.page:21(page/title)
 msgid "Hints and warnings"
@@ -508,7 +527,7 @@ msgstr "Hinweise und Warnungen"
 
 #: C/get-help.page:23(page/p)
 msgid ""
-"You can use hints to reveal safe tiles and flag warnings to help you keep "
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
 msgstr ""
 "Sie können Tipps verwenden, um sichere Felder und Fahnen-Warnungen "
@@ -516,9 +535,9 @@ msgstr ""
 
 #: C/get-help.page:26(page/p)
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden tile "
-"that is safe. You will be penalised for using hints: ten seconds will be "
-"added to your total time."
+"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+"tile that is safe. You will be penalized for using hints: ten seconds will "
+"be added to your total time."
 msgstr ""
 "Klicken Sie auf <gui style=\"button\">Tipp</gui> in der Werkzeugleiste, um "
 "ein als sicher erkanntes Feld aufzudecken. Sie erhalten eine Zeitstrafe von "
@@ -544,11 +563,11 @@ msgstr "Bestenliste"
 
 #: C/high-scores.page:24(page/p)
 msgid ""
-"The scores lists the ten fastest times in which each type of mine field has "
-"been cleared."
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
 msgstr ""
-"In den Ergebnissen werden die schnellsten zehn erzielten Zeiten für die "
-"vollständige Auflösung des Feldes aufgelistet."
+"In der Bestenliste werden die schnellsten zehn erzielten Zeiten für die "
+"vollständige Auflösung des Feldes jeden Typs aufgelistet."
 
 #: C/high-scores.page:27(page/p)
 msgid ""
@@ -611,13 +630,13 @@ msgstr "<em>Weitergabe</em>"
 
 #: C/license.page:39(item/p)
 msgid ""
-"You must attribute the work in the manner specified by the author or licensor "
-"(but not in any way that suggests that they endorse you or your use of the "
-"work)."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
 "Sie dürfen das Werk nur unter gleichen Bedingungen weitergeben, wie Sie vom "
-"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr Werk "
-"aussieht)."
+"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr "
+"Werk aussieht)."
 
 #: C/license.page:46(item/title)
 msgid "<em>Share Alike</em>"
@@ -636,49 +655,49 @@ msgstr ""
 
 #: C/license.page:53(page/p)
 msgid ""
-"For the full text of the license, see the <link href=\"http://creativecommons."
-"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
-"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
-"\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Den vollständigen Text der Lizenz finden Sie auf der <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons-Webseite</"
 "link>. Oder Sie können den vollständigen <link href=\"http://creativecommons."
 "org/licenses/by-sa/3.0/\">Commons Deed</link> lesen."
 
-#: C/new-game.page:23(page/title)
+#: C/new-game.page:26(page/title)
 msgid "Start a new game"
 msgstr "Ein neues Spiel starten"
 
-#: C/new-game.page:25(page/p)
+#: C/new-game.page:28(page/p)
 msgid "To start a new game:"
 msgstr "Ein neues Spiel starten"
 
-#: C/new-game.page:27(item/p)
+#: C/new-game.page:31(item/p)
 msgid ""
-"click the <gui style=\"button\">New</gui> button or select <guiseq><gui style="
-"\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> from the "
-"application menu"
+"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
+"from the application menu."
 msgstr ""
 "Klicken Sie auf den Knopf <gui style=\"button\">Neu</gui> oder wählen Sie "
 "<guiseq><gui style=\"menu\">Minen</gui><gui style=\"menuitem\">Neues Spiel</"
-"gui></guiseq> aus dem Anwendungsmenü"
+"gui></guiseq> aus dem Anwendungsmenü."
 
-#: C/new-game.page:28(item/p)
-msgid "<link xref=\"board-size\">select your preferred board size</link>"
+#: C/new-game.page:37(item/p)
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
-"<link xref=\"board-size\">Wählen Sie Ihre bevorzugte Spielfeldgröße</link>"
+"Wählen Sie Ihre bevorzugte <link xref=\"board-size\">Spielfeldgröße</link>."
 
-#: C/new-game.page:32(note/p)
+#: C/new-game.page:42(note/p)
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
 "former, your current game will be lost."
 msgstr ""
-"Fall Sie bereits ein Spiel spielten, so würde eine Nachricht eingeblendet und "
-"Sie fragen, ob Sie <gui>ein neues Spiel starten</gui> oder <gui>das aktuelle "
-"Spiel behalten</gui> wollen. Wenn Sie die erste Option wählen, so geht der "
-"aktuelle Spielstand verloren."
+"Fall Sie bereits ein Spiel spielten, so würde eine Nachricht eingeblendet "
+"und Sie fragen, ob Sie <gui>ein neues Spiel starten</gui> oder <gui>das "
+"aktuelle Spiel behalten</gui> wollen. Wenn Sie die erste Option wählen, so "
+"geht der aktuelle Spielstand verloren."
 
 #: C/rules.page:24(page/title)
 msgid "Game rules"
@@ -702,25 +721,25 @@ msgstr ""
 
 #: C/rules.page:35(item/p)
 msgid ""
-"The game begins with the board covered in tiles, click on any tile to uncover "
-"it. You will reveal:"
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
 msgstr ""
-"Das Spiel beginnt mit einem gekachelten Spielfeld. Klicken Sie auf eines der "
-"Felder, um es aufzudecken. Sie öffnen damit:"
+"Das Spiel beginnt mit einem von Kacheln verdeckten Spielfeld. Klicken Sie "
+"auf eines der Felder, um es aufzudecken. Sie öffnen damit:"
 
 #: C/rules.page:39(item/p)
 msgid ""
 "A colored number, which represent the number of mines in the adjacent tiles. "
 "This will help you deduce where the mines are so that you can mark them with "
-"<link xref=\"flags\"/>."
+"<link xref=\"flags\">flags</link>."
 msgstr ""
-"Eine farbige Zahl gibt die Anzahl der Minen in benachbarten Feldern an. Dies "
-"gibt Ihnen einen Hinweis darauf, wo sich Minen befinden und wo Sie <link xref="
-"\"flags\"/> setzen müssen."
+"Eine farbige Zahl gibt die Anzahl der Minen unter benachbarten Feldern an. "
+"Dies gibt Ihnen einen Hinweis darauf, wo sich Minen befinden und wo Sie "
+"<link xref=\"flags\">Fahnen</link> setzen müssen."
 
 #: C/rules.page:44(item/p)
 msgid ""
-"A blank title, which means there are no mines under any of the adjacent tiles."
+"A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
 "Ein leeres Feld bedeutet, dass es keine Minen unter den unmittelbar "
 "angrenzenden Feldern gibt."
@@ -812,15 +831,15 @@ msgstr "Werkzeugleiste"
 
 #: C/toolbar.page:17(page/p)
 msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions with "
-"your mouse. To use a toolbar item, just click on it. The buttons, from left "
-"to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link xref="
-"\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
+"The toolbar, located under the menu bar, lets you perform common actions "
+"with your mouse. To use a toolbar item, just click on it. The buttons, from "
+"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
+"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
 msgstr ""
-"Die Werkzeugleiste unter der Menüleiste ermöglicht es Ihnen, häufige Aktionen "
-"per Maus auszuführen. Dazu klicken Sie auf das entsprechende Objekt in der "
-"Werkzeugleiste. Die Knöpfe sind von links nach rechts <gui><link xref=\"new-"
-"game\">Neues Spiel</link></gui>, <link xref=\"get-help\">Tipp</link>, "
+"Die Werkzeugleiste unter der Menüleiste ermöglicht es Ihnen, häufige "
+"Aktionen per Maus auszuführen. Dazu klicken Sie auf das entsprechende Objekt "
+"in der Werkzeugleiste. Die Knöpfe sind von links nach rechts <gui><link xref="
+"\"new-game\">Neues Spiel</link></gui>, <link xref=\"get-help\">Tipp</link>, "
 "<gui>Pause</gui> und <gui>Vollbild</gui>."
 
 #: C/translate.page:15(credit/name)
@@ -838,16 +857,16 @@ msgid ""
 "participate."
 msgstr ""
 "Die Benutzeroberfläche und die Dokumentation der <app>GNOME games</app> "
-"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie sind "
-"herzlich eingeladen, sich daran zu beteiligen."
+"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie "
+"sind herzlich eingeladen, sich daran zu beteiligen."
 
 #: C/translate.page:27(page/p)
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Übersetzungen sind noch für <link href=\"http://l10n.gnome.org/module/gnome-"
-"games/\">zahlreiche Sprachen</link> nötig."
+"Übersetzungen stehen noch für <link href=\"http://l10n.gnome.org/module/"
+"gnome-mines/\">zahlreiche Sprachen</link> aus."
 
 #: C/translate.page:30(page/p)
 msgid ""
