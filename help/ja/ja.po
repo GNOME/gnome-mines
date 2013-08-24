@@ -1,0 +1,608 @@
+# Japanese translation for gnome-mines.
+# Copyright (C) 2013 gnome-mines's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mines package.
+# Kai Takahashi <www.carrotsoft@gmail.com>, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines master\n"
+"POT-Creation-Date: 2013-08-24 01:08+0000\n"
+"PO-Revision-Date: 2013-08-24 21:05+0900\n"
+"Last-Translator: Kai Takahashi <www.carrotsoft@gmail.com>\n"
+"Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Kai Takahashi <www.carrotsoft@gmail.com>, 2013"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4(media)
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#.
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:22(media)
+msgctxt "_"
+msgid "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+msgstr ""
+
+#: C/index.page:6(info/title)
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "GNOME マインスイーパー"
+
+#: C/index.page:7(info/title)
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "GNOME マインスイーパー"
+
+#: C/index.page:10(credit/name) C/shortcuts.page:9(credit/name)
+msgid "Brian Grohe"
+msgstr ""
+
+#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
+#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
+#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
+#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
+msgid "Ekaterina Gerasimova"
+msgstr ""
+
+#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
+#: C/translate.page:19(license/p)
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#: C/index.page:22(page/title)
+msgid "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> GNOME Mines"
+msgstr ""
+
+#: C/index.page:24(page/p)
+msgid "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate all the mines that are hidden under tiles on a rectangular board. You will need to use a combination of logic and luck to find all the mines without triggering an explosion."
+msgstr ""
+
+#: C/index.page:31(section/title)
+msgid "Game Play"
+msgstr "ゲームをプレイする"
+
+#: C/index.page:34(section/title)
+msgid "Useful tips"
+msgstr ""
+
+#: C/index.page:37(section/title)
+msgid "Advanced"
+msgstr ""
+
+#: C/index.page:40(section/title)
+msgid "Get Involved"
+msgstr ""
+
+#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
+#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
+#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
+#: C/rules.page:11(credit/name)
+msgid "Baptiste Mille-Mathias"
+msgstr ""
+
+#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
+#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
+#: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
+#: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
+msgid "2011"
+msgstr "2011"
+
+#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
+#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
+#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
+#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
+#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
+#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
+#: C/toolbar.page:10(credit/years)
+msgid "2012"
+msgstr "2012"
+
+#: C/board-size.page:22(page/title)
+msgid "How to change the game board size"
+msgstr ""
+
+#: C/board-size.page:24(page/p)
+msgid "You can select a field size at the start of a new game."
+msgstr ""
+
+#: C/board-size.page:28(item/p)
+msgid "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+
+#: C/board-size.page:33(item/p)
+msgid "Select one of the grid sizes:"
+msgstr "以下からフィールドの大きさを選択します。"
+
+#: C/board-size.page:35(item/p)
+msgid "a 8 × 8 board with 10 mines"
+msgstr "8 × 8 (地雷10個)"
+
+#: C/board-size.page:36(item/p)
+msgid "a 16 × 16 board with 40 mines"
+msgstr "16 × 16 (地雷40個)"
+
+#: C/board-size.page:37(item/p)
+msgid "a 30 × 16 board with 99 mines"
+msgstr "30 × 16 (地雷99個)"
+
+#: C/board-size.page:38(item/p)
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr ""
+
+#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
+#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
+msgid "Tiffany Antopolski"
+msgstr ""
+
+#: C/bug-filing.page:18(page/title)
+msgid "Help make <app>Mines</app> better"
+msgstr ""
+
+#: C/bug-filing.page:21(section/title)
+msgid "Report a bug or suggest an improvement"
+msgstr ""
+
+#: C/bug-filing.page:22(section/p)
+msgid "<app>Mines</app> is maintained by a volunteer community. You are welcome to participate. If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr ""
+
+#: C/bug-filing.page:25(section/p)
+msgid "This is a bug tracking system where users and developers can file details about bugs and crashes, or request enhancements."
+msgstr ""
+
+#: C/bug-filing.page:28(section/p)
+msgid "To participate you need an account, which will give you the ability to gain access, file bugs, make comments, and receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>New Account</gui> link to create one."
+msgstr ""
+
+#: C/bug-filing.page:32(section/p)
+msgid "Once you have an account, log in, click on <guiseq><gui>File a Bug</gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please <link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> for the bug to see if it already exists."
+msgstr ""
+
+#: C/bug-filing.page:40(section/p)
+msgid "If you are requesting a new feature, choose <gui>enhancement</gui> in the <gui>Severity</gui> menu. Fill in the Summary and Description sections and click <gui>Commit</gui>."
+msgstr ""
+
+#: C/bug-filing.page:44(section/p)
+msgid "Your report will be given an ID number, and its status will be updated as it is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+
+#: C/develop.page:19(page/title)
+msgid "Help develop"
+msgstr ""
+
+#: C/develop.page:20(page/p)
+msgid "The <app>GNOME Games</app> are developed and maintained by a volunteer community. You are welcome to participate."
+msgstr ""
+
+#: C/develop.page:23(page/p)
+msgid "If you would like to <link href=\"https://live.gnome.org/GnomeGames/Contributing\">help develop <app>GNOME Games</app></link>, you can get in touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</link>."
+msgstr ""
+
+#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
+#: C/new-game.page:21(credit/name)
+msgid "Aruna Sankaranarayanan"
+msgstr ""
+
+#: C/documentation.page:27(page/title)
+msgid "Help write documentation"
+msgstr ""
+
+#: C/documentation.page:29(page/p)
+msgid "The GNOME Games user help is maintained by a volunteer community. You are welcome to participate."
+msgstr ""
+
+#: C/documentation.page:32(page/p)
+msgid "To contribute to the Documentation Project, get in touch with us on the <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+msgstr ""
+
+#: C/documentation.page:40(page/p)
+msgid "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing\">wiki</link> page contains useful information."
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:24(media)
+msgctxt "_"
+msgid "external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:28(media)
+msgctxt "_"
+msgid "external ref='figures/face-worried.svg' md5='f0a66a1c5046deef93c14eeb9993b367'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:32(media)
+msgctxt "_"
+msgid "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:36(media)
+msgctxt "_"
+msgid "external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:40(media)
+msgctxt "_"
+msgid "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+msgstr ""
+
+#: C/faces.page:20(page/title)
+msgid "The meaning of the faces"
+msgstr ""
+
+#: C/faces.page:25(td/p)
+msgid "This is a new game and you have not clicked on any tile yet."
+msgstr ""
+
+#: C/faces.page:29(td/p)
+#, fuzzy
+#| msgid "right click on a blank tile."
+msgid "You are currently clicking on a tile."
+msgstr "空のマスを右クリックします。"
+
+#: C/faces.page:33(td/p)
+#, fuzzy
+#| msgid "You found all the mines, you win."
+msgid "You have uncovered a mine. You lose."
+msgstr "すべての地雷を発見すれば、あなたの勝ちです。"
+
+#: C/faces.page:37(td/p)
+msgid "The tile you just clicked on is safe. You can continue."
+msgstr ""
+
+#: C/faces.page:41(td/p)
+#, fuzzy
+#| msgid "You found all the mines, you win."
+msgid "You have found all the mines. You win!"
+msgstr "すべての地雷を発見すれば、あなたの勝ちです。"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:34(media)
+msgctxt "_"
+msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:56(media)
+msgctxt "_"
+msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
+msgstr ""
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/flags.page:85(media)
+msgctxt "_"
+msgid "external ref='figures/flag-question.svg' md5='544c1aaa711ee86a03a817a1e3b57733'"
+msgstr ""
+
+#: C/flags.page:30(page/title)
+msgid "How to use flags"
+msgstr "フラグの使い方"
+
+#: C/flags.page:37(td/p)
+msgid "Flags are used to mark tiles which you suspect may hide a mine. Putting a flag on a tile prevents you from clicking on it and possibly causing an explosion, which would end the game."
+msgstr ""
+
+#: C/flags.page:45(section/title)
+msgid "How to place a flag on a tile"
+msgstr "フラグを設置する"
+
+#: C/flags.page:49(td/p)
+msgid "Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr "赤いフラグはクリックすることができません。フラグを設置する方法は次の通りです:"
+
+#: C/flags.page:52(item/p)
+msgid "right click on a blank tile."
+msgstr "空のマスを右クリックします。"
+
+#: C/flags.page:62(note/p)
+msgid "To make the number of available flags equal to the number of remaining mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference options, then restart the application."
+msgstr ""
+
+#: C/flags.page:72(section/title)
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr ""
+
+#: C/flags.page:73(section/p)
+msgid "If you are not sure whether a tile hides a mine, you can use the blue <em>I'm not sure</em> flag."
+msgstr ""
+
+#: C/flags.page:78(td/p)
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr ""
+
+#: C/flags.page:80(item/p)
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr ""
+
+#: C/flags.page:91(note/p)
+msgid "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not sure\" flags</gui>."
+msgstr ""
+
+#: C/get-help.page:21(page/title)
+msgid "Hints and warnings"
+msgstr ""
+
+#: C/get-help.page:23(page/p)
+msgid "You can use hints to reveal safe tiles, and flag warnings to help you keep track of flags."
+msgstr ""
+
+#: C/get-help.page:26(page/p)
+msgid "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden tile that is safe. You will be penalized for using hints: ten seconds will be added to your total time."
+msgstr ""
+
+#: C/get-help.page:30(page/p)
+msgid "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to <gui>Warn if too many flags have been placed</gui>. This will warn you when you try to place too many flags next to an open tile."
+msgstr ""
+
+#: C/high-scores.page:22(page/title)
+msgid "High scores"
+msgstr ""
+
+#: C/high-scores.page:24(page/p)
+msgid "The high scores list the ten fastest times in which each type of mine field has been cleared."
+msgstr ""
+
+#: C/high-scores.page:27(page/p)
+msgid "To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the <gui>Small</gui> field size by default; to view other sizes, select them in the drop down menu at the top of the dialog."
+msgstr ""
+
+#: C/license.page:8(info/desc)
+msgid "Legal information."
+msgstr ""
+
+#: C/license.page:11(page/title)
+msgid "License"
+msgstr ""
+
+#: C/license.page:12(page/p)
+msgid "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 Unported license."
+msgstr ""
+
+#: C/license.page:20(page/p)
+msgid "You are free:"
+msgstr ""
+
+#: C/license.page:25(item/title)
+msgid "<em>To share</em>"
+msgstr ""
+
+#: C/license.page:26(item/p)
+msgid "To copy, distribute and transmit the work."
+msgstr ""
+
+#: C/license.page:29(item/title)
+msgid "<em>To remix</em>"
+msgstr ""
+
+#: C/license.page:30(item/p)
+msgid "To adapt the work."
+msgstr ""
+
+#: C/license.page:33(page/p)
+msgid "Under the following conditions:"
+msgstr ""
+
+#: C/license.page:38(item/title)
+msgid "<em>Attribution</em>"
+msgstr ""
+
+#: C/license.page:39(item/p)
+msgid "You must attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."
+msgstr ""
+
+#: C/license.page:46(item/title)
+msgid "<em>Share Alike</em>"
+msgstr ""
+
+#: C/license.page:47(item/p)
+msgid "If you alter, transform, or build upon this work, you may distribute the resulting work only under the same, similar or a compatible license."
+msgstr ""
+
+#: C/license.page:53(page/p)
+msgid "For the full text of the license, see the <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+msgstr ""
+
+#: C/new-game.page:26(page/title)
+msgid "Start a new game"
+msgstr "新しいゲームをはじめる"
+
+#: C/new-game.page:28(page/p)
+msgid "To start a new game:"
+msgstr "新しいゲームは、次のようにして始めます:"
+
+#: C/new-game.page:31(item/p)
+msgid "Click the <gui style=\"button\">New</gui> button or select <guiseq><gui style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> from the application menu."
+msgstr ""
+
+#: C/new-game.page:37(item/p)
+#, fuzzy
+#| msgid "<link xref=\"board-size\">select your preferred board size</link>"
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr "<link xref=\"board-size\">お好みのボードサイズを選択します。</link>"
+
+#: C/new-game.page:42(note/p)
+msgid "If you are already playing a game, <app>Mines</app> will ask if you want to <gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the former, your current game will be lost."
+msgstr "すでにゲームが開始している場合、<app>マインスイーパー</app>は<gui>新しいゲームを開始</gui>するか<gui>現在のゲームを継続</gui>するか質問します。<gui>新しいゲームを開始</gui>を選択すると、プレイ中のゲームは失われます。"
+
+#: C/rules.page:24(page/title)
+msgid "Game rules"
+msgstr "ゲームのルール"
+
+#: C/rules.page:26(page/p)
+msgid "The aim of <app>Mines</app> is to clear the minefield without detonating any of the mines."
+msgstr "<app>マインスイーパー</app> は一つの地雷も爆発させずに地雷を除去するゲームです。"
+
+#: C/rules.page:31(item/p)
+msgid "Start by chosing one of the three default board sizes, or by selecting a custom board."
+msgstr "標準の3つのフィールドの大きさから選択するか、カスタムを選択してゲームを開始します。"
+
+#: C/rules.page:35(item/p)
+msgid "The game begins with the board covered in tiles. Click on any tile to uncover it. You will reveal:"
+msgstr "ゲームは、ボードがマスで区切られた状態でスタートします。どれかマスをクリックして開きます。マスを開くと次のいずれかが出現します。"
+
+#: C/rules.page:39(item/p)
+msgid "A colored number, which represent the number of mines in the adjacent tiles. This will help you deduce where the mines are so that you can mark them with <link xref=\"flags\">flags</link>."
+msgstr "色付き数字。隣接する地雷の数を示します。どのマスが地雷であり、<link xref=\"flags\">フラグ</link>でマークするべきか判断する助けになります。"
+
+#: C/rules.page:44(item/p)
+msgid "A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr "空のマス。隣接するマスに地雷がないことを示します。"
+
+#: C/rules.page:48(item/p)
+msgid "A mine, which will detonate and end the game."
+msgstr "地雷。クリックすると爆発し、ゲームは終了します。"
+
+#: C/rules.page:53(item/p)
+msgid "Repeat the previous step until you have uncovered all the tiles which do not have mines underneath them."
+msgstr "このステップを、地雷以外のすべてのマスを開けるまで繰り返します。"
+
+#: C/rules.page:58(page/p)
+msgid "If you complete the game quickly enough, you will be added to the <link xref=\"high-scores\">high scores</link> list."
+msgstr "ゲームを素早くクリアできた場合は、あなたのスコアは<link xref=\"high-scores\">ハイスコア</link>リストに追加されます。"
+
+#: C/shortcuts.page:17(page/title)
+msgid "Keyboard shortcuts"
+msgstr "キーボードショートカット"
+
+#: C/shortcuts.page:20(td/p)
+msgid "New game"
+msgstr "新しいゲーム"
+
+#: C/shortcuts.page:21(td/p)
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#: C/shortcuts.page:24(td/p)
+msgid "Fullscreen"
+msgstr "フルスクリーン"
+
+#: C/shortcuts.page:25(td/p)
+msgid "<key>F11</key>"
+msgstr "<key>F11</key>"
+
+#: C/shortcuts.page:28(td/p)
+msgid "Hint"
+msgstr "ヒント"
+
+#: C/shortcuts.page:29(td/p)
+msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+
+#: C/shortcuts.page:32(td/p)
+msgid "Pause"
+msgstr "一時停止"
+
+#: C/shortcuts.page:33(td/p)
+msgid "<key>Pause</key>"
+msgstr "<key>Pause</key>"
+
+#: C/shortcuts.page:34(note/p)
+msgid "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> key."
+msgstr "お使いのキーボードに<key>Pause</key>キーがない場合は、ツールバーのショートカットを使用してください。"
+
+#: C/shortcuts.page:37(td/p)
+msgid "Help"
+msgstr "ヘルプ"
+
+#: C/shortcuts.page:38(td/p)
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#: C/shortcuts.page:41(td/p)
+msgid "Quit"
+msgstr "終了"
+
+#: C/shortcuts.page:42(td/p)
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#: C/toolbar.page:15(page/title)
+msgid "Toolbar"
+msgstr ""
+
+#: C/toolbar.page:17(page/p)
+msgid "The toolbar, located under the menu bar, lets you perform common actions with your mouse. To use a toolbar item, just click on it. The buttons, from left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
+msgstr ""
+
+#: C/translate.page:15(credit/name)
+msgid "Michael Hill"
+msgstr ""
+
+#: C/translate.page:23(page/title)
+msgid "Help translate"
+msgstr ""
+
+#: C/translate.page:24(page/p)
+msgid "The <app>GNOME games</app> user interface and documentation is being translated by a world-wide volunteer community. You are welcome to participate."
+msgstr ""
+
+#: C/translate.page:27(page/p)
+msgid "There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many languages</link> for which translations are still needed."
+msgstr ""
+
+#: C/translate.page:30(page/p)
+msgid "To start translating you will need to <link href=\"http:l10n.gnome.org\">create an account</link> and join the <link href=\"http://l10n.gnome.org/teams/\">translation team</link> for your language. This will give you the ability to upload new translations."
+msgstr ""
+
+#: C/translate.page:34(page/p)
+msgid "You can chat with GNOME translators using <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the channel are located worldwide, so you may not get an immediate response as a result of timezone differences."
+msgstr "<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>を使用してGNOMEの翻訳者とチャットをすることができます。ただし、チャンネルの人々は世界中におり、時差があるのですぐに返答を得られるとは限りません。"
+
+#: C/translate.page:37(page/p)
+msgid "Alternatively, you can contact the Internationalization Team using their <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing list</link>."
+msgstr "代わりに、<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">メーリングリスト</link>を使用してコンタクトを取ることも可能です。"
