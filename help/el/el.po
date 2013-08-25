@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-01-21 21:14+0000\n"
-"PO-Revision-Date: 2013-03-10 20:57+0300\n"
+"POT-Creation-Date: 2013-08-17 20:38+0000\n"
+"PO-Revision-Date: 2013-08-25 16:43+0300\n"
 "Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
 "Language-Team: team@gnome.gr\n"
 "Language: el\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
 " Μάριος Ζηντίλης <m.zindilis@dmajor.org>, 2009\n"
 " Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
-"\n"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013\n"
 "Για περισσότερα δείτε http://www.gnome.gr/"
 
 #. This is a reference to an external file such as an image or video. When
@@ -850,11 +850,14 @@ msgstr ""
 "συμμετάσχετε."
 
 #: C/translate.page:27(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Υπάρχουν <link href=\"http://l10n.gnome.org/module/gnome-games/\">πολλές "
+"Υπάρχουν <link href=\"http://l10n.gnome.org/module/gnome-mines/\">πολλές "
 "γλώσσες</link> για τις οποίες απαιτούνται μεταφράσεις."
 
 #: C/translate.page:30(page/p)
