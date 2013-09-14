@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+ <id type="desktop">gnomine.desktop</id>
+ <licence>CC0</licence>
+ <name>GNOME Mines</name>
+ <description>
+  <p>
+   GNOME Mines is a puzzle game where you search for hidden mines. Flag the
+   spaces with mines as quickly as possible to make the board a safer place and
+   win the game. Be careful not to trigger one, or the game is over!
+  </p>
+  <p>
+   When you click on a square, you'll find out if that square contained a mine.
+   If so, the game is over. Otherwise, you'll find out the number of mines in
+   adjacent squares. If no adjacent squares contain a mine, the safe portion of
+   the board will be revealed, so you have more dangerous territory to work on.
+  </p>
+  <p>
+   You can select the size of the field you want to play on at the start of the
+   game. If you get stuck, you can ask for a hint: there's a time penalty, but
+   that's better than hitting a mine!
+  </p>
+ </description>
+ <screenshots>
+  <screenshot type="default" width="659" height="578">https://wiki.gnome.org/Mines?action=AttachFile&#x26;do=get&#x26;target=mines.png</screenshot>
+ </screenshots>
+ <url type="homepage">https://wiki.gnome.org/Mines</url>
+ <updatecontact>games_list_at_gnome.org</updatecontact>
+</application>

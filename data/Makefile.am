@@ -17,7 +17,11 @@ desktop_in_files = gnomine.desktop.in.in
 desktop_DATA = $(desktop_in_files:.desktop.in.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
+appdatadir = $(datadir)/appdata
+appdata_DATA = gnome-mines.appdata.xml
+
 EXTRA_DIST = \
+	     $(appdata_DATA) \
              $(gsettings_in_file) \
              $(desktop_in_files) \
              $(man_MANS) \
