@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-20 12:54+0000\n"
-"PO-Revision-Date: 2013-02-20 15:53+0100\n"
+"POT-Creation-Date: 2013-09-10 17:55+0000\n"
+"PO-Revision-Date: 2013-09-12 10:06+0100\n"
 "Last-Translator: Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -22,16 +22,16 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 "X-Generator: Poedit 1.5.4\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:95
-#: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
+#: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:98
+#: ../src/gnome-mines.vala:142 ../src/gnome-mines.vala:778
 msgid "Mines"
 msgstr "Míny"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "Odhaľte skryté míny v mínovom poli"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnomine.desktop.in.in.h:3
 msgid "minesweeper;"
 msgstr "hľadanie mín, míny;"
 
@@ -116,84 +116,88 @@ msgstr "true, ak je okno maximalizované"
 msgid "true if the window is fullscren"
 msgstr "true, ak je okno v celoobrazovkovom režime"
 
-#: ../src/gnome-mines.vala:114
+#: ../src/gnome-mines.vala:117
 msgid "_New Game"
 msgstr "_Nová hra"
 
-#: ../src/gnome-mines.vala:115
+#: ../src/gnome-mines.vala:118
 msgid "_Replay Size"
 msgstr "_Hrať znovu s touto veľkosťou"
 
-#: ../src/gnome-mines.vala:116
+#: ../src/gnome-mines.vala:119
 msgid "_Hint"
 msgstr "_Rada"
 
-#: ../src/gnome-mines.vala:117 ../src/gnome-mines.vala:199
-#: ../src/gnome-mines.vala:673 ../src/gnome-mines.vala:679
-#: ../src/gnome-mines.vala:680
+#: ../src/gnome-mines.vala:120 ../src/gnome-mines.vala:202
+#: ../src/gnome-mines.vala:680 ../src/gnome-mines.vala:686
+#: ../src/gnome-mines.vala:687
 msgid "_Pause"
 msgstr "_Pozastaviť"
 
-#: ../src/gnome-mines.vala:118 ../src/gnome-mines.vala:206
-#: ../src/gnome-mines.vala:393
+#: ../src/gnome-mines.vala:121 ../src/gnome-mines.vala:209
+#: ../src/gnome-mines.vala:398
 msgid "_Fullscreen"
 msgstr "Na _celú obrazovku"
 
-#: ../src/gnome-mines.vala:119
+#: ../src/gnome-mines.vala:122
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: ../src/gnome-mines.vala:120
+#: ../src/gnome-mines.vala:123
 msgid "_Preferences"
 msgstr "_Nastavenia"
 
-#: ../src/gnome-mines.vala:123
+#: ../src/gnome-mines.vala:126
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: ../src/gnome-mines.vala:124
+#: ../src/gnome-mines.vala:127
 msgid "_About"
 msgstr "_O programe"
 
-#: ../src/gnome-mines.vala:127
+#: ../src/gnome-mines.vala:130
 msgid "_Quit"
-msgstr "_Ukončiť"
+msgstr "U_končiť"
 
-#: ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:185
 msgid "_New"
 msgstr "_Nová"
 
-#: ../src/gnome-mines.vala:191
+#: ../src/gnome-mines.vala:194
 msgid "Hint"
 msgstr "Rada"
 
-#: ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:259
 msgid "Field Size"
 msgstr "Veľkosť plochy"
 
+#: ../src/gnome-mines.vala:302
+msgid "Custom"
+msgstr "Vlastná"
+
 # PM: je to titulok pred spin boxom v ktorom sa nastavuje vodorovný rozmer hracej plochy
-#: ../src/gnome-mines.vala:317
+#: ../src/gnome-mines.vala:320
 msgid "H_orizontal:"
 msgstr "_Vodorovne:"
 
 # PM: je to titulok pred spin boxom v ktorom sa nastavuje zvislý rozmer hracej plochy
-#: ../src/gnome-mines.vala:327
+#: ../src/gnome-mines.vala:330
 msgid "_Vertical:"
 msgstr "_Zvislo:"
 
-#: ../src/gnome-mines.vala:337
+#: ../src/gnome-mines.vala:340
 msgid "_Number of mines:"
 msgstr "Počet _mín:"
 
-#: ../src/gnome-mines.vala:358
+#: ../src/gnome-mines.vala:361
 msgid "_Play Game"
 msgstr "_Hrať hru"
 
-#: ../src/gnome-mines.vala:388
+#: ../src/gnome-mines.vala:393
 msgid "_Leave Fullscreen"
 msgstr "_Opustiť celoobrazovkový režim"
 
-#: ../src/gnome-mines.vala:419
+#: ../src/gnome-mines.vala:424
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -204,57 +208,57 @@ msgstr[2] "<b>%d</b>  míny"
 # PK: nie nahodou vlajky?
 # PM: nemám nič proti vlajkam ale zástavky boli pôvodný preklad (jeden z prekladatelov je aj marcel)
 # PK: ok, ale ja by som to asi zmenil
-#: ../src/gnome-mines.vala:484
+#: ../src/gnome-mines.vala:489
 #, c-format
 msgid "Flags: %u/%u"
 msgstr "Vlajky: %u/%u"
 
-#: ../src/gnome-mines.vala:527
+#: ../src/gnome-mines.vala:532
 msgid "Do you want to start a new game?"
 msgstr "Chcete spustiť novú hru?"
 
-#: ../src/gnome-mines.vala:528
+#: ../src/gnome-mines.vala:533
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ak spustíte novú hru stratíte doterajší postup v aktuálnej hre."
 
-#: ../src/gnome-mines.vala:529
+#: ../src/gnome-mines.vala:534
 msgid "Keep Current Game"
 msgstr "Pokračovať v aktuálnej hre"
 
-#: ../src/gnome-mines.vala:530
+#: ../src/gnome-mines.vala:535
 msgid "Start New Game"
 msgstr "Začať novú hru"
 
-#: ../src/gnome-mines.vala:669 ../src/gnome-mines.vala:671
+#: ../src/gnome-mines.vala:676 ../src/gnome-mines.vala:678
 msgid "Res_ume"
 msgstr "Po_kračovať"
 
-#: ../src/gnome-mines.vala:720 ../src/gnome-mines.vala:1040
+#: ../src/gnome-mines.vala:727 ../src/gnome-mines.vala:1050
 #, c-format
 msgid "Time"
 msgstr "Čas"
 
-#: ../src/gnome-mines.vala:737
+#: ../src/gnome-mines.vala:744
 msgid "Main game:"
 msgstr "Hlavná hra:"
 
-#: ../src/gnome-mines.vala:742
+#: ../src/gnome-mines.vala:749
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../src/gnome-mines.vala:745
+#: ../src/gnome-mines.vala:752
 msgid "Resizing and SVG support:"
 msgstr "Zmena veľkosti a podpora SVG:"
 
-#: ../src/gnome-mines.vala:753
+#: ../src/gnome-mines.vala:760
 msgid "Faces:"
 msgstr "Vzhľad:"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:764
 msgid "Graphics:"
 msgstr "Grafika:"
 
-#: ../src/gnome-mines.vala:774
+#: ../src/gnome-mines.vala:781
 msgid ""
 "The popular logic puzzle minesweeper. Clear mines from a board using hints "
 "from squares you have already uncovered.\n"
@@ -266,7 +270,7 @@ msgstr ""
 "\n"
 "Hra Míny je súčasťou Hier GNOME."
 
-#: ../src/gnome-mines.vala:781
+#: ../src/gnome-mines.vala:788
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -274,39 +278,39 @@ msgstr ""
 "Peter Mráz <etkinator@gmail.com>\n"
 "Ján Kyselica <kyselica.jan@gmail.com>"
 
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:791
 msgid "GNOME Games web site"
 msgstr "Webové stránky Hier GNOME"
 
-#: ../src/gnome-mines.vala:855
+#: ../src/gnome-mines.vala:862
 msgid "Mines Preferences"
 msgstr "Nastavenia hry Míny"
 
-#: ../src/gnome-mines.vala:873
+#: ../src/gnome-mines.vala:880
 msgid "_Use \"I'm not sure\" flags"
 msgstr "_Používať vlajky „Nie som si istý“"
 
-#: ../src/gnome-mines.vala:879
+#: ../src/gnome-mines.vala:886
 msgid "_Warn if too many flags have been placed"
 msgstr "_Upozorniť na príliš veľa vlajok"
 
-#: ../src/gnome-mines.vala:885
+#: ../src/gnome-mines.vala:892
 msgid "_Display numbers with border"
 msgstr "_Zobraziť čísla s okrajom"
 
-#: ../src/gnome-mines.vala:996
+#: ../src/gnome-mines.vala:1006
 msgid "New Game"
 msgstr "Nová hra"
 
-#: ../src/gnome-mines.vala:1012
+#: ../src/gnome-mines.vala:1022
 msgid "Size:"
 msgstr "Veľkosť:"
 
-#: ../src/gnome-mines.vala:1037
+#: ../src/gnome-mines.vala:1047
 msgid "Date"
 msgstr "Dátum"
 
-#: ../src/gnome-mines.vala:1122
+#: ../src/gnome-mines.vala:1132
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
@@ -317,136 +321,3 @@ msgstr[2] "%u × %u, %u míny"
 #: ../src/minefield-view.vala:578
 msgid "Paused"
 msgstr "Pozastavené"
-
-#~ msgid "Chess"
-#~ msgstr "Šach"
-
-#~ msgid "Play the classic two-player boardgame of chess"
-#~ msgstr "Hrajte klasický stolný šach pre dvoch hráčov"
-
-#~ msgid "_Game"
-#~ msgstr "_Hra"
-
-#~ msgid "_Undo Move"
-#~ msgstr "_Vrátiť ťah"
-
-#~ msgid "_Resign"
-#~ msgstr "V_zdať sa"
-
-#~ msgid "Claim _Draw"
-#~ msgstr "Navrhnúť _remízu"
-
-#~ msgid "_Settings"
-#~ msgstr "_Nastavenia"
-
-#~ msgid "_Contents"
-#~ msgstr "Ob_sah"
-
-#~ msgid "Start a new game"
-#~ msgstr "Začať novú hru"
-
-#~ msgid "Undo Move"
-#~ msgstr "Vrátiť ťah"
-
-#~ msgid "Resign"
-#~ msgstr "Vzdať sa"
-
-#~ msgid "Rewind to the game start"
-#~ msgstr "Presunie hru na začiatok"
-
-#~ msgid "Show the previous move"
-#~ msgstr "Ukáže predchádzajúci ťah"
-
-#~ msgid "Show the next move"
-#~ msgstr "Ukáže ďalší ťah"
-
-#~ msgid "Show the current move"
-#~ msgstr "Ukáže aktuálny stav hry"
-
-#~ msgid "The width of the window"
-#~ msgstr "Šírka okna"
-
-#~ msgid "The height of the window"
-#~ msgstr "Výška okna"
-
-#~ msgid "A flag to enable maximized mode"
-#~ msgstr "Príznak povoľujúci režim maximalizovaného okna"
-
-#~ msgid "A flag to enable fullscreen mode"
-#~ msgstr "Príznak povoľujúci režim zobrazenia na celú obrazovku"
-
-#~ msgid "The piece to promote pawns to"
-#~ msgstr "Figúrka, na ktorú premieňať pešiakov"
-
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
-#~ msgstr ""
-#~ "Figúrka, na ktorú sa premení pešiak, keď ho hráč posunie na posledné pole"
-
-#~ msgid "A flag to enable 3D mode"
-#~ msgstr "Príznak povoľujúci 3D režim"
-
-#~ msgid "A flag to smooth (anti-alias) the 3D display"
-#~ msgstr "Príznak vyhladzujúci (anti-alias) 3D zobrazenie"
-
-#~ msgid "The piece theme to use"
-#~ msgstr "Téma figúrok, ktorá sa má použiť"
-
-#~ msgid "A flag to enable move hints"
-#~ msgstr "Príznak povoľujúci zobrazenie možných ťahov"
-
-#~ msgid "A flag to enable board numbering"
-#~ msgstr "Príznak povoľujúci číslovanie šachovnice"
-
-#~ msgid "A flag to enable the move history browser"
-#~ msgstr "Príznak povoľujúci prechádzať históriou ťahov"
-
-#~ msgid "A flag to enable the toolbar"
-#~ msgstr "Príznak povoľujúci lištu nástrojov"
-
-#~ msgid "The directory to open the save game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na uloženie hry"
-
-#~ msgid "The directory to open the load game dialog in"
-#~ msgstr "Adresár, ktorý sa má otvoriť v dialógovom okne na nahranie hry"
-
-#~ msgid "The format to display moves in"
-#~ msgstr "Formát zobrazenia ťahov"
-
-#~ msgid "The side of the board that is in the foreground"
-#~ msgstr "Strana šachovnice, ktorá je vpredu"
-
-#~ msgid "The duration of a game in seconds (0 for no limit)"
-#~ msgstr "Trvanie hry v sekundách (0 znamená bez obmedzenia)"
-
-#~ msgid "true if the human player is playing white"
-#~ msgstr "true, ak človek hrá bielymi figúrkami"
-
-#~ msgid "The opponent player"
-#~ msgstr "Protihráč"
-
-#~ msgid ""
-#~ "Can be 'human' (play against another human player), '' (use the first "
-#~ "available chess engine) or the name of a specific engine to play against"
-#~ msgstr ""
-#~ "Môže byť 'human' (hra proti druhému človeku v úlohe protihráča), "
-#~ "'' (použije prvý dostupný šachový stroj) alebo názov konkrétneho "
-#~ "šachového stroja, proti ktorému sa bude hrať"
-
-#~ msgid "Difficulty of the opponent chess engine"
-#~ msgstr "Obtiažnosť šachového stroja v úlohe protihráča"
-
-#~ msgid "Preferences"
-#~ msgstr "Nastavenia"
-
-#~ msgid "Play as:"
-#~ msgstr "Hrá ako:"
-
-#~ msgid "Opposing Player:"
-#~ msgstr "Protihráč:"
-
-#~ msgid "Difficulty:"
-#~ msgstr "Obtiažnosť:"
-
-#~ msgid "Game Duration:"
-#~ msgstr "Trvanie hry:"
