@@ -7,11 +7,11 @@
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mines gnome-3-8\n"
+"Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-03-27 16:39+0000\n"
-"PO-Revision-Date: 2013-05-04 15:35+0700\n"
+"POT-Creation-Date: 2013-07-26 06:40+0000\n"
+"PO-Revision-Date: 2013-09-16 19:36+0700\n"
 "Last-Translator: Andika Triwidada <andika@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id_ID\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 1.5.7\n"
 
 #: ../data/gnomine.desktop.in.in.h:1 ../src/gnome-mines.vala:95
 #: ../src/gnome-mines.vala:139 ../src/gnome-mines.vala:771
@@ -67,9 +67,6 @@ msgid "Enable automatic placing of flags"
 msgstr "Aktifkan penempatan bendera otomatis"
 
 #: ../data/org.gnome.mines.gschema.xml.in.h:8
-#| msgid ""
-#| "Set to true to have gnomine automatically flag squares as mined when "
-#| "enough squares are revealed"
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -167,6 +164,10 @@ msgstr "Petunjuk"
 #: ../src/gnome-mines.vala:256
 msgid "Field Size"
 msgstr "Ukuran Papan"
+
+#: ../src/gnome-mines.vala:299
+msgid "Custom"
+msgstr "Gubahan"
 
 #: ../src/gnome-mines.vala:317
 msgid "H_orizontal:"
