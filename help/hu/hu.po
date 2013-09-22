@@ -1,21 +1,21 @@
 # Hungarian translation of gnome-mines help
 # Copyright (C) 2013. Free Software Foundation, Inc.
-# This file is distributed under the same license as the gnome-mines package.
+# This file is distributed under the same license as the gnome-mines help.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2013-03-27 16:41+0000\n"
-"PO-Revision-Date: 2013-04-14 18:17+0200\n"
+"POT-Creation-Date: 2013-07-26 06:13+0000\n"
+"PO-Revision-Date: 2013-09-22 03:41+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
-"Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: hu\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -32,7 +32,6 @@ msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2013."
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:4(media)
-#: C/index.page:4(media)
 msgctxt "_"
 msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
 msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
@@ -47,7 +46,6 @@ msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
 #: C/index.page:22(media)
-#: C/index.page:22(media)
 msgctxt "_"
 msgid ""
 "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
@@ -55,159 +53,135 @@ msgstr ""
 "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 
 #: C/index.page:6(info/title)
-#: C/index.page:6(info/title)
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "GNOME Aknakereső"
 
 #: C/index.page:7(info/title)
-#: C/index.page:7(info/title)
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "GNOME Aknakereső"
 
-#: C/index.page:10(credit/name)
-#: C/index.page:10(credit/name)
-#: C/shortcuts.page:9(credit/name)
+#: C/index.page:10(credit/name) C/shortcuts.page:9(credit/name)
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
-#: C/index.page:14(credit/name)
-#: C/board-size.page:15(credit/name)
-#: C/documentation.page:14(credit/name)
-#: C/flags.page:23(credit/name)
-#: C/get-help.page:14(credit/name)
-#: C/high-scores.page:15(credit/name)
-#: C/index.page:14(credit/name)
-#: C/new-game.page:16(credit/name)
-#: C/rules.page:16(credit/name)
+#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
+#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
+#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
+#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
-#: C/index.page:18(license/p)
-#: C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p)
-#: C/documentation.page:19(license/p)
-#: C/index.page:18(license/p)
+#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
+#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
 #: C/translate.page:19(license/p)
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
 #: C/index.page:22(page/title)
-#: C/index.page:22(page/title)
+#| msgid ""
+#| "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
+#| "media>GNOME Mines"
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media>"
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
 "GNOME Mines"
 msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Aknakereső logó</media>"
-"GNOME Aknakereső"
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Aknakereső logó</"
+"media>GNOME Aknakereső"
 
-#: C/index.page:24(page/p)
 #: C/index.page:24(page/p)
 msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate all "
-"the mines that are hidden under tiles on a rectangular board. You will need "
-"to use a combination of logic and luck to find all the mines without "
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
 msgstr ""
+"Az <app>Aknakereső</app> a más rendszerekről ismerős aknakereső játékok "
+"klónja. A cél az aknák megtalálása egy téglalap alakú tábla mezői alatt. Az "
+"összes akna robbanás nélküli megtalálásához logika és szerencse "
+"kombinációjára lesz szüksége."
 
-#: C/index.page:31(section/title)
 #: C/index.page:31(section/title)
 msgid "Game Play"
 msgstr "Játékmenet"
 
 #: C/index.page:34(section/title)
-#: C/index.page:34(section/title)
 msgid "Useful tips"
 msgstr "Hasznos tippek"
 
-#: C/index.page:37(section/title)
 #: C/index.page:37(section/title)
 msgid "Advanced"
 msgstr "Speciális"
 
 #: C/index.page:40(section/title)
-#: C/index.page:40(section/title)
 msgid "Get Involved"
 msgstr "Közreműködés"
 
-#: C/board-size.page:10(credit/name)
-#: C/faces.page:9(credit/name)
-#: C/flags.page:17(credit/name)
-#: C/get-help.page:9(credit/name)
-#: C/high-scores.page:10(credit/name)
-#: C/new-game.page:11(credit/name)
+#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
+#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
+#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
 #: C/rules.page:11(credit/name)
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
-#: C/board-size.page:12(credit/years)
-#: C/bug-filing.page:11(credit/years)
-#: C/develop.page:12(credit/years)
-#: C/documentation.page:11(credit/years)
-#: C/faces.page:11(credit/years)
-#: C/get-help.page:11(credit/years)
-#: C/rules.page:13(credit/years)
-#: C/translate.page:12(credit/years)
+#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
+#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
+#: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
+#: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
 msgid "2011"
 msgstr "2011"
 
-#: C/board-size.page:17(credit/years)
-#: C/documentation.page:16(credit/years)
-#: C/flags.page:13(credit/years)
-#: C/flags.page:19(credit/years)
-#: C/flags.page:25(credit/years)
-#: C/get-help.page:16(credit/years)
-#: C/high-scores.page:12(credit/years)
-#: C/high-scores.page:17(credit/years)
-#: C/new-game.page:13(credit/years)
-#: C/new-game.page:18(credit/years)
-#: C/rules.page:18(credit/years)
-#: C/shortcuts.page:11(credit/years)
+#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
+#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
+#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
+#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
+#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
+#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
 #: C/toolbar.page:10(credit/years)
 msgid "2012"
 msgstr "2012"
 
 #: C/board-size.page:22(page/title)
 msgid "How to change the game board size"
-msgstr ""
+msgstr "A játéktábla méretének megváltoztatása"
 
 #: C/board-size.page:24(page/p)
 msgid "You can select a field size at the start of a new game."
-msgstr ""
+msgstr "A mező méretét az új játék indításakor választhatja ki."
 
 #: C/board-size.page:28(item/p)
 msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines<"
-"/gui><gui style=\"menuitem\">New Game</gui></guiseq>."
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
 msgstr ""
-
-#: C/board-size.page:31(item/p)
-msgid "Select one of the grid sizes:"
-msgstr ""
+"Nyomja meg az <gui style=\"button\">Új</gui> gombot, vagy válassza az <guiseq>"
+"<gui style=\"menu\">Aknakereső</gui><gui style=\"menuitem\">Új játék</gui><"
+"/guiseq> menüpontot."
 
 #: C/board-size.page:33(item/p)
-msgid "a 8 × 8 board with 10 mines"
-msgstr ""
-
-#: C/board-size.page:34(item/p)
-msgid "a 16 × 16 board with 40 mines"
-msgstr ""
+msgid "Select one of the grid sizes:"
+msgstr "Válasszon az elérhető táblaméretekből:"
 
 #: C/board-size.page:35(item/p)
-msgid "a 30 × 16 board with 99 mines"
-msgstr ""
+msgid "a 8 × 8 board with 10 mines"
+msgstr "8 × 8-as tábla 10 aknával"
 
 #: C/board-size.page:36(item/p)
-msgid "a custom board, where you chose the size and the number of mines"
-msgstr ""
+msgid "a 16 × 16 board with 40 mines"
+msgstr "16 × 16-os tábla 40 aknával"
 
-#: C/bug-filing.page:9(credit/name)
-#: C/develop.page:10(credit/name)
-#: C/documentation.page:9(credit/name)
-#: C/flags.page:11(credit/name)
-#: C/toolbar.page:8(credit/name)
-#: C/translate.page:10(credit/name)
+#: C/board-size.page:37(item/p)
+msgid "a 30 × 16 board with 99 mines"
+msgstr "30 × 16-os tábla 99 aknával"
+
+#: C/board-size.page:38(item/p)
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "egyéni tábla, amelyen kiválaszthatja a méretet és az aknák számát is"
+
+#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
+#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
+#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -225,56 +199,76 @@ msgid ""
 "participate. If you notice a problem you can file a <em>bug report</em>. To "
 "file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgstr ""
+"Az <app>Aknakeresőt</app> egy önkéntes közösség készíti. Közreműködését "
+"szívesen fogadjuk. Ha hibát észlelt, beküldhet egy <em>hibajelentést</em>. "
+"Ehhez keresse fel a <link href=\"https://bugzilla.gnome.org/\"/> oldalt."
 
 #: C/bug-filing.page:25(section/p)
+#| msgid ""
+#| "This is a bug tracking system where users and developers can file details "
+#| "about bugs, crashes and request enhancements."
 msgid ""
 "This is a bug tracking system where users and developers can file details "
-"about bugs, crashes and request enhancements."
+"about bugs and crashes, or request enhancements."
 msgstr ""
 "Ez egy hibakövető rendszer, ahová a felhasználók és fejlesztők beküldhetik a "
-"hibákkal, összeomlásokkal kapcsolatos adatokat, és továbbfejlesztéseket "
+"hibákkal és összeomlásokkal kapcsolatos adatokat, vagy továbbfejlesztéseket "
 "kérhetnek."
 
 #: C/bug-filing.page:28(section/p)
+#| msgid ""
+#| "To participate you need an account which will give you the ability to "
+#| "gain access, file bugs, and make comments. Also, you need to register so "
+#| "you can receive updates by e-mail about the status of your bug. If you "
+#| "don't already have an account, just click on the <gui>New Account</gui> "
+#| "link to create one."
 msgid ""
-"To participate you need an account which will give you the ability to gain "
-"access, file bugs, and make comments. Also, you need to register so you can "
-"receive updates by e-mail about the status of your bug. If you don't already "
-"have an account, just click on the <gui>New Account</gui> link to create one."
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
 msgstr ""
 "A részvételhez létre kell hoznia egy fiókot, amely lehetővé teszi a "
-"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást. A "
-"regisztráció után a hozzászólásokat e-mailben is megkaphatja. Ha még nincs "
+"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást, "
+"és a hiba állapotával kapcsolatos változásokat e-mailben is megkaphatja. Ha "
+"még nincs "
 "fiókja, akkor a <gui>New Account</gui> hivatkozásra kattintva létrehozhat "
 "egyet."
 
-#: C/bug-filing.page:31(section/p)
+#: C/bug-filing.page:32(section/p)
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</gui><gui>"
-"Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting a bug, "
-"please read the <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writin"
-"g.html\">bug writing guidelines</link>, and please <link "
-"href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-games\">browse<"
-"/link> for the bug to see if it already exists."
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
 msgstr ""
 "Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>File a "
 "Bug</gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq> "
 "hivatkozásokra Hiba jelentése előtt olvassa el a <link href=\"https://"
 "bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
 "irányelveket</link>, és <link href=\"https://bugzilla.gnome.org/browse.cgi?"
-"product=gnome-games\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
+"product=gnome-mines\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
 
-#: C/bug-filing.page:35(section/p)
+#: C/bug-filing.page:40(section/p)
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the <"
-"gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
 "click <gui>Commit</gui>."
 msgstr ""
 "Ha új szolgáltatást kér, válassza az <gui>enhancement</gui> lehetőséget a "
 "<gui>Severity</gui> menüben. Töltse ki a Summary és Description szakaszokat, "
 "és kattintson a <gui>Commit</gui> gombra."
 
-#: C/bug-filing.page:39(section/p)
+#: C/bug-filing.page:44(section/p)
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
@@ -297,12 +291,12 @@ msgstr ""
 
 #: C/develop.page:23(page/p)
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/Contributi"
-"ng\">help develop <app>GNOME Games</app></link>, you can get in touch with "
-"the developers using <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%"
-"2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</link>"
-"."
+"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
 msgstr ""
 "Ha szeretne <link href=\"https://live.gnome.org/GnomeGames/Contributing"
 "\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
@@ -311,32 +305,49 @@ msgstr ""
 "\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
 "veheti fel."
 
-#: C/documentation.page:23(page/title)
+#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
+#: C/new-game.page:21(credit/name)
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#: C/documentation.page:27(page/title)
 msgid "Help write documentation"
 msgstr "Segítsen dokumentációt írni"
 
-#: C/documentation.page:25(page/p)
+#: C/documentation.page:29(page/p)
 msgid ""
 "The GNOME Games user help is maintained by a volunteer community. You are "
 "welcome to participate."
 msgstr ""
-"A GNOME játékok dokumentációját egy önkéntes közösség tartja "
-"karban. Közreműködését szívesen fogadjuk!"
+"A GNOME játékok dokumentációját egy önkéntes közösség tartja karban. "
+"Közreműködését szívesen fogadjuk!"
 
-#: C/documentation.page:28(page/p)
+#: C/documentation.page:32(page/p)
+#| msgid ""
+#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
 msgid ""
-"To contribute to the Documentation Project, get in touch with us on the <link "
-"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
-"2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/GnomeIrcCh"
-"annels\">irc.gnome.org</link> or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list<"
-"/link>."
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
+"A dokumentációs projekthez csatlakozáshoz keresse fel az <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fdocs\">#docs</link> csatornát az <link "
+"href=\"http://live.gnome.org/GnomeIrcChannels\">irc.gnome.org</link>-on, vagy "
+"a <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">"
+"levelezőlistát</link>."
 
-#: C/documentation.page:33(page/p)
+#: C/documentation.page:40(page/p)
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing\">"
-"wiki</link> page contains useful information."
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
 msgstr ""
 "A projekt <link href=\"https://live.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> oldala tartalmazza a legfontosabb információkat."
@@ -345,23 +356,12 @@ msgstr ""
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:20(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-msgstr ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
 #: C/faces.page:24(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -370,9 +370,11 @@ msgstr ""
 #: C/faces.page:28(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
 msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+"external ref='figures/face-worried.svg' "
+"md5='f0a66a1c5046deef93c14eeb9993b367'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -381,9 +383,9 @@ msgstr ""
 #: C/faces.page:32(media)
 msgctxt "_"
 msgid ""
-"external ref='figures/face-worried.svg' md5='f0a66a1c5046deef93c14eeb9993b367'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 msgstr ""
-"external ref='figures/face-worried.svg' md5='f0a66a1c5046deef93c14eeb9993b367'"
+"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -392,33 +394,44 @@ msgstr ""
 #: C/faces.page:36(media)
 msgctxt "_"
 msgid ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+msgstr ""
+"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
+
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/faces.page:40(media)
+msgctxt "_"
+msgid ""
 "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
 msgstr ""
 "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
 
-#: C/faces.page:16(page/title)
+#: C/faces.page:20(page/title)
 msgid "The meaning of the faces"
-msgstr ""
-
-#: C/faces.page:21(td/p)
-msgid "This is a new game and you didn't clicked on any tile for the moment."
-msgstr ""
+msgstr "Az arcok jelentése"
 
 #: C/faces.page:25(td/p)
-msgid "You clicked on a mine, you loose."
-msgstr ""
+msgid "This is a new game and you have not clicked on any tile yet."
+msgstr "Ez egy új játék, és még nem kattintott egyik mezőre sem."
 
 #: C/faces.page:29(td/p)
-msgid "The tile you clicked on is safe. You can continue."
-msgstr ""
+msgid "You are currently clicking on a tile."
+msgstr "Épp egy mezőre kattint."
 
 #: C/faces.page:33(td/p)
-msgid "This face appears when you're clicking a on tile."
-msgstr ""
+msgid "You have uncovered a mine. You lose."
+msgstr "Aknát talált, vesztett."
 
 #: C/faces.page:37(td/p)
-msgid "You found all the mines, you win."
-msgstr ""
+msgid "The tile you just clicked on is safe. You can continue."
+msgstr "A mező biztonságos, folytathatja."
+
+#: C/faces.page:41(td/p)
+msgid "You have found all the mines. You win!"
+msgstr "Minden aknát megtalált, nyert!"
 
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
@@ -454,7 +467,7 @@ msgstr ""
 
 #: C/flags.page:30(page/title)
 msgid "How to use flags"
-msgstr ""
+msgstr "Hogyan használja a zászlókat"
 
 #: C/flags.page:37(td/p)
 msgid ""
@@ -462,45 +475,55 @@ msgid ""
 "flag on a tile prevents you from clicking on it and possibly causing an "
 "explosion, which would end the game."
 msgstr ""
+"A zászlók azon mezők megjelölésére használhatók, amelyekről úgy sejti, aknát "
+"rejtenek. A zászló elhelyezésével megakadályozza, hogy a mezőre kattintson és "
+"ezzel robbanást idézzen elő, ami a játék végét jelentené."
 
 #: C/flags.page:45(section/title)
 msgid "How to place a flag on a tile"
-msgstr ""
+msgstr "Hogyan helyezzen el zászlót egy mezőn"
 
 #: C/flags.page:49(td/p)
 msgid ""
 "Red flags are those that cannot be clicked. To place a red flag on a tile:"
 msgstr ""
+"A piros zászlókra nem lehet kattintani. Egy piros zászló elhelyezéséhez:"
 
 #: C/flags.page:52(item/p)
 msgid "right click on a blank tile."
-msgstr ""
+msgstr "kattintson a jobb egérgombbal egy üres mezőre."
 
 #: C/flags.page:62(note/p)
 msgid ""
-"To make the number of available flags equal to the number of remaining mines, "
-"enable <gui style=\"checkbox\">Warn if too many flags placed</gui> and <gui "
-"style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference options, then "
-"restart the application."
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
 msgstr ""
+"Az elérhető zászlók számának egyenlővé tételéhez a hátralévő aknák számával, "
+"kapcsolja be a <gui style=\"checkbox\">Figyelmeztetés a túl sok zászlóról<"
+"/gui> és a <gui style=\"checkbox\">„Nem vagyok benne biztos” zászlók "
+"használata</gui> beállításokat, majd indítsa újra az alkalmazást."
 
 #: C/flags.page:72(section/title)
 msgid "Use of the <em>I'm not sure</em> flag"
-msgstr ""
+msgstr "A <em>Nem vagyok benne biztos</em> zászló használata"
 
 #: C/flags.page:73(section/p)
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue <em>I'm "
-"not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
 msgstr ""
+"Ha nem biztos benne, hogy egy mező aknát rejt, használhatja a kék <em>Nem "
+"vagyok benne biztos</em> zászlót."
 
 #: C/flags.page:78(td/p)
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
-msgstr ""
+msgstr "A <em>Nem vagyok benne biztos</em> zászló elhelyezéséhez egy mezőn:"
 
 #: C/flags.page:80(item/p)
 msgid "Right-click twice on a blank tile or once on a red flag."
-msgstr ""
+msgstr "Kattintson kétszer egy üres mezőre, vagy egyszer egy piros zászlóra."
 
 #: C/flags.page:91(note/p)
 msgid ""
@@ -508,31 +531,44 @@ msgid ""
 "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
 "sure\" flags</gui>."
 msgstr ""
+"Ezen zászlók bekapcsolásához válassza az <guiseq><gui style=\"manu\">"
+"Aknakereső</gui><gui style=\"menuitem\">Beállítások</gui></guiseq> "
+"menüpontot, és jelölje be a <gui>„Nem vagyok benne biztos” zászlók "
+"használata</gui> négyzetet."
 
 #: C/get-help.page:21(page/title)
 msgid "Hints and warnings"
-msgstr ""
+msgstr "Javaslatok és figyelmeztetések"
 
 #: C/get-help.page:23(page/p)
 msgid ""
-"You can use hints to reveal safe tiles and flag warnings to help you keep "
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
 msgstr ""
+"A javaslatok használatával megjeleníthet biztonságos mezőket, és "
+"figyelmeztető zászlókat helyezhet el az aknák számon tartásához."
 
 #: C/get-help.page:26(page/p)
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden tile "
-"that is safe. You will be penalised for using hints: ten seconds will be "
-"added to your total time."
+"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+"tile that is safe. You will be penalized for using hints: ten seconds will "
+"be added to your total time."
 msgstr ""
+"Nyomja meg az eszköztár <gui style=\"button\">Javaslat</gui> gombját egy "
+"biztonságos mező megjelenítéséhez. A javaslatok használatáért büntetés jár: a "
+"teljes felhasznált idő tíz másodperccel nő."
 
 #: C/get-help.page:30(page/p)
 msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</gui>"
-"<gui>Preferences</gui></guiseq> and ticking the checkbox next to <gui>Warn if "
-"too many flags have been placed</gui>. This will warn you when you try to "
-"place too many flags next to an open tile."
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
+"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
+"you try to place too many flags next to an open tile."
 msgstr ""
+"A figyelmeztetések bekapcsolásához válassza az <guiseq><gui>Aknakereső</gui><"
+"gui>Beállítások</gui></guiseq> menüpontot, és jelölje be a <gui>"
+"Figyelmeztetés a túl sok zászlóról</gui> négyzetet. Ekkor figyelmeztetést fog "
+"kapni, ha túl sok zászlót próbál egy szabad mező mellé elhelyezni."
 
 #: C/high-scores.page:22(page/title)
 msgid "High scores"
@@ -540,17 +576,23 @@ msgstr "Pontszámok"
 
 #: C/high-scores.page:24(page/p)
 msgid ""
-"The scores lists the ten fastest times in which each type of mine field has "
-"been cleared."
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
 msgstr ""
+"A pontszámok listája felsorolja a tíz legjobb időt, amelyek alatt az egyes "
+"aknamező-típusok meg lettek tisztítva."
 
 #: C/high-scores.page:27(page/p)
 msgid ""
 "To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the <gui>"
-"Small</gui> field size by default; to view other sizes, select them in the "
-"drop down menu at the top of the dialog."
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
 msgstr ""
+"A pontszámok megjelenítéséhez válassza az <guiseq><gui style=\"menu\">"
+"Aknakereső</gui><gui style=\"menuitem\">Pontszámok</gui></guiseq> menüpontot. "
+"Az ablak alapesetben a <gui>Kicsi</gui> mezőméretet jeleníti meg. Más méretek "
+"megjelenítéséhez válassza ki azokat az ablak tetején lévő legördülő menüből."
 
 #: C/license.page:8(info/desc)
 msgid "Legal information."
@@ -598,9 +640,9 @@ msgstr "<em>Nevezd meg!</em>"
 
 #: C/license.page:39(item/p)
 msgid ""
-"You must attribute the work in the manner specified by the author or licensor "
-"(but not in any way that suggests that they endorse you or your use of the "
-"work)."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
 "A szerző vagy a jogosult által meghatározott módon fel kell tüntetnie a "
 "műhöz kapcsolódó információkat (pl. a szerző nevét vagy álnevét, a Mű címét)."
@@ -619,91 +661,113 @@ msgstr ""
 
 #: C/license.page:53(page/p)
 msgid ""
-"For the full text of the license, see the <link "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">"
-"CreativeCommons website</link>, or read the full <link "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "A licenc teljes szövegéért lásd a <link href=\"http://creativecommons.org/"
 "licenses/by-sa/3.0/legalcode\">CreativeCommons weboldalát</link>, vagy a "
 "teljes <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
 "összefoglalót</link>."
 
-#: C/new-game.page:23(page/title)
+#: C/new-game.page:26(page/title)
 msgid "Start a new game"
 msgstr "Új játék indítása"
 
-#: C/new-game.page:25(page/p)
+#: C/new-game.page:28(page/p)
 msgid "To start a new game:"
-msgstr ""
+msgstr "Új játék indítása:"
 
-#: C/new-game.page:27(item/p)
+#: C/new-game.page:31(item/p)
 msgid ""
-"click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui><gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu"
+"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
+"from the application menu."
 msgstr ""
+"Kattintson az <gui style=\"button\">Új</gui> gombra, vagy válassza az <guiseq>"
+"<gui style=\"menu\">Aknakereső</gui><gui style=\"menuitem\">Új játék</gui><"
+"/guiseq> menüpontot az alkalmazásmenüből."
 
-#: C/new-game.page:28(item/p)
-msgid "<link xref=\"board-size\">select your preferred board size</link>"
+#: C/new-game.page:37(item/p)
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
+"Válassza ki az előnyben részesített <link xref=\"board-size\">táblaméretet<"
+"/link>."
 
-#: C/new-game.page:32(note/p)
+#: C/new-game.page:42(note/p)
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to <"
-"gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
 "former, your current game will be lost."
 msgstr ""
+"Ha már folyik egy játék, az <app>Aknakereső</app> megkérdezi, hogy <gui>Új "
+"játékot indít</gui>, vagy <gui>A jelenlegi játékot folytatja</gui>. Az előbbi "
+"választása esetén a játékállás elvész."
 
 #: C/rules.page:24(page/title)
 msgid "Game rules"
-msgstr ""
+msgstr "Játékszabály"
 
 #: C/rules.page:26(page/p)
 msgid ""
 "The aim of <app>Mines</app> is to clear the minefield without detonating any "
 "of the mines."
 msgstr ""
+"Az <app>Aknakereső</app> célja az aknamező megtisztítása egyetlen akna "
+"felrobbantása nélkül."
 
 #: C/rules.page:31(item/p)
 msgid ""
 "Start by chosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
+"Kezdésként válasszon egyet az alapértelmezett három táblaméretből, vagy "
+"válasszon egyéni méretet."
 
 #: C/rules.page:35(item/p)
 msgid ""
-"The game begins with the board covered in tiles, click on any tile to uncover "
-"it. You will reveal:"
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
 msgstr ""
+"A játék egy mezőkkel fedett táblával kezdődik. Kattintson egy mezőre annak "
+"felfedéséhez. A következők jelenhetnek meg:"
 
 #: C/rules.page:39(item/p)
 msgid ""
 "A colored number, which represent the number of mines in the adjacent tiles. "
 "This will help you deduce where the mines are so that you can mark them with "
-"<link xref=\"flags\"/>."
+"<link xref=\"flags\">flags</link>."
 msgstr ""
+"Egy színes szám, amely a szomszédos mezőkön lévő aknák számát képviseli. Ez "
+"segít kikövetkeztetni, hogy hol vannak az aknák, így a <link xref=\"flags\">"
+"zászlókkal</link> megjelölheti azokat."
 
 #: C/rules.page:44(item/p)
 msgid ""
-"A blank title, which means there are no mines under any of the adjacent tiles."
+"A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
+"Egy üres mező, ami azt jelzi, hogy a szomszédos mezőkön nincsenek aknák."
 
 #: C/rules.page:48(item/p)
 msgid "A mine, which will detonate and end the game."
-msgstr ""
+msgstr "Egy akna, amely felrobban és ezzel vége a játéknak."
 
 #: C/rules.page:53(item/p)
 msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
 msgstr ""
+"Ismételje az előző lépést, amíg nem fedi fel az összes mezőt, amely nem "
+"tartalmaz aknákat."
 
 #: C/rules.page:58(page/p)
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link "
-"xref=\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
 msgstr ""
+"Ha elég hamar fejezi be a játékot, akkor felkerül a <link "
+"xref=\"high-scores\">pontszámok listájára</link>."
 
 #: C/shortcuts.page:17(page/title)
 msgid "Keyboard shortcuts"
@@ -746,6 +810,8 @@ msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
 msgstr ""
+"Használja az eszköztár gombját, ha a billentyűzete nem rendelkezik <key>"
+"Pause</key> gombbal."
 
 #: C/shortcuts.page:37(td/p)
 msgid "Help"
@@ -769,11 +835,16 @@ msgstr "Eszköztár"
 
 #: C/toolbar.page:17(page/p)
 msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions with "
-"your mouse. To use a toolbar item, just click on it. The buttons, from left "
-"to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
+"The toolbar, located under the menu bar, lets you perform common actions "
+"with your mouse. To use a toolbar item, just click on it. The buttons, from "
+"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
 "xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
 msgstr ""
+"Az eszköztár a menüsor alatt található, amelyen alapvető műveleteket "
+"tud végrehajtani az egér segítségével. Egy eszköztárművelet használatához "
+"kattintson rá. A gombok balról jobbra a következőek: <gui><link "
+"xref=\"new-game\">Új játék</link></gui>, <link xref=\"get-help\">Javaslat<"
+"/link>, <gui>Szünet</gui> és <gui>Teljes képernyő</gui>."
 
 #: C/translate.page:15(credit/name)
 msgid "Michael Hill"
@@ -793,19 +864,22 @@ msgstr ""
 "önkéntes közösség fordítja. Közreműködését szívesen fogadjuk!"
 
 #: C/translate.page:27(page/p)
+#| msgid ""
+#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+#| "languages</link> for which translations are still needed."
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"<link href=\"http://l10n.gnome.org/module/gnome-games/\">Számos nyelv "
-"van</link>, amelyhez még szükség van fordításokra."
+"<link href=\"http://l10n.gnome.org/module/gnome-mines/\">Számos nyelv van</"
+"link>, amelyhez még szükség van fordításokra."
 
 #: C/translate.page:30(page/p)
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org\">"
-"create an account</link> and join the <link "
-"href=\"http://l10n.gnome.org/teams/\">translation team</link> for your "
-"language. This will give you the ability to upload new translations."
+"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
 msgstr ""
 "A fordítás elkezdéséhez <link href=\"http://l10n.gnome.org\">létre kell "
 "hoznia egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link "
@@ -814,10 +888,10 @@ msgstr ""
 
 #: C/translate.page:34(page/p)
 msgid ""
-"You can chat with GNOME translators using <link "
-"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">"
-"irc</link>. People on the channel are located worldwide, so you may not get "
-"an immediate response as a result of timezone differences."
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
 msgstr ""
 "A GNOME fordítókkal <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
 "%2F%2Firc.gnome.org%2Fi18n\">IRC-en</link> is cseveghet. A csatornán a világ "
@@ -826,9 +900,9 @@ msgstr ""
 
 #: C/translate.page:37(page/p)
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their <"
-"link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing list<"
-"/link>."
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
 msgstr ""
 "Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">levelezőlistán</link> "
