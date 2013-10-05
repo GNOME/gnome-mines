@@ -46,7 +46,6 @@ Makefile
 po/Makefile.in
 data/Makefile
 data/icons/Makefile
-data/gnomine.desktop.in
 help/Makefile
 src/Makefile
 ])
