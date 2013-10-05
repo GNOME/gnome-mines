@@ -16,16 +16,20 @@ desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
 appdatadir = $(datadir)/appdata
-appdata_DATA = gnome-mines.appdata.xml
+appdata_in_files = gnome-mines.appdata.xml.in
+appdata_DATA = $(appdata_in_files:.xml.in=.xml)
+@INTLTOOL_XML_RULE@
 
 EXTRA_DIST = \
-	     $(appdata_DATA) \
+	     $(appdata_in_files) \
              $(gsettings_SCHEMAS) \
              $(desktop_in_files) \
              $(man_MANS) \
              $(pixmap_DATA)
 
-CLEANFILES = $(desktop_DATA)
+CLEANFILES = \
+	$(appdata_DATA)	\
+	$(desktop_DATA)
 
 check-local: $(appdata_DATA) $(desktop_DATA)
 	$(APPDATA_VALIDATE) $(appdata_DATA)
