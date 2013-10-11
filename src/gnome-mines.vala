@@ -25,16 +25,13 @@ public class Mines : Gtk.Application
     private const string KEY_USE_AUTOFLAG = "use-autoflag";
     private const string KEY_USE_NUMBER_BORDER = "use-number-border";
 
-    /* Faces for new game button */
-    private Gtk.ToolButton face_button;
-    private Gtk.Image win_face_image;
-    private Gtk.Image sad_face_image;
-    private Gtk.Image smile_face_image;
-    private Gtk.Image cool_face_image;
-    private Gtk.Image worried_face_image;
-
-    private Gtk.ToolButton fullscreen_button;
-    private Gtk.ToolButton pause_button;
+    private Gtk.Box buttons_box;
+    private Gtk.Button new_game_button;
+    private Gtk.Label new_game_label;
+    private Gtk.ToggleButton pause_button;
+    private Gtk.Image pause_image;
+    private Gtk.Label pause_label;
+    private Gtk.Button hint_button;
 
     private Menu app_main_menu;
 
@@ -42,7 +39,6 @@ public class Mines : Gtk.Application
     private Gtk.Window window;
     private int window_width;
     private int window_height;
-    private bool is_fullscreen;
     private bool is_maximized;
 
     /* true when the user has requested the game to pause. */
@@ -60,10 +56,13 @@ public class Mines : Gtk.Application
     /* Minefield widget */
     private MinefieldView minefield_view;
 
-    private Gtk.Dialog? pref_dialog = null;
+    /* Game status */
+    private Gtk.Box status_box;
     private Gtk.Label flag_label;
-    private Gtk.SpinButton n_mines_spin;
     private Gtk.Label clock_label;
+
+    private Gtk.Dialog? pref_dialog = null;
+    private Gtk.SpinButton n_mines_spin;
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
@@ -78,7 +77,6 @@ public class Mines : Gtk.Application
         { "repeat-size",   repeat_size_cb                                         },
         { "hint",          hint_cb                                                },
         { "pause",         toggle_pause_cb                                        },
-        { "fullscreen",    fullscreen_cb                                          },
         { "scores",        scores_cb                                              },
         { "preferences",   preferences_cb                                         },
         { "quit",          quit_cb                                                },
@@ -118,7 +116,6 @@ public class Mines : Gtk.Application
         app_main_menu.append (_("_Replay Size"), "app.repeat-size");
         app_main_menu.append (_("_Hint"), "app.hint");
         app_main_menu.append (_("_Pause"), "app.pause");
-        app_main_menu.append (_("_Fullscreen"), "app.fullscreen");
         app_main_menu.append (_("_Scores"), "app.scores");
         app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
@@ -133,7 +130,6 @@ public class Mines : Gtk.Application
         add_accelerator ("<Primary>n", "app.new-game", null);
         add_accelerator ("<Primary>r", "app.repeat-size", null);
         add_accelerator ("Pause", "app.pause", null);
-        add_accelerator ("F11", "app.fullscreen", null);
         add_accelerator ("F1", "app.help", null);
         add_accelerator ("<Primary>w", "app.quit", null);
         add_accelerator ("<Primary>q", "app.quit", null);
@@ -145,85 +141,21 @@ public class Mines : Gtk.Application
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));        
-        if (settings.get_boolean ("window-is-fullscreen"))
-            window.fullscreen ();
-        else if (settings.get_boolean ("window-is-maximized"))
+        if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
+
+        var headerbar = new Gtk.HeaderBar ();
+        headerbar.show_close_button = true;
+        headerbar.set_title (_("Mines"));
+        headerbar.show ();
+        window.set_titlebar (headerbar);
 
         add_window (window);
 
-        var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        var main_vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 15);
+        main_vbox.margin = 15;
         window.add (main_vbox);
         main_vbox.show ();
-
-        var status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 10);
-        status_box.show ();
-
-        /* show the numbers of total and remaining mines */
-        flag_label = new Gtk.Label ("");
-        flag_label.show ();
-
-        status_box.pack_start (flag_label, false, false, 0);
-
-        /* game clock */
-        clock_label = new Gtk.Label ("");
-        clock_label.show ();
-        status_box.pack_start (clock_label, false, false, 0);
-
-        /* create fancy faces */
-        win_face_image = load_face_image ("face-win.svg");
-        sad_face_image = load_face_image ("face-sad.svg");
-        smile_face_image = load_face_image ("face-smile.svg");
-        cool_face_image = load_face_image ("face-cool.svg");
-        worried_face_image = load_face_image ("face-worried.svg");
-
-        var toolbar = new Gtk.Toolbar ();
-        toolbar.show ();
-        toolbar.show_arrow = false;
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_PRIMARY_TOOLBAR);
-
-        face_button = new Gtk.ToolButton (null, _("_New"));
-        face_button.use_underline = true;
-        face_button.icon_name = "document-new";
-        face_button.action_name = "app.new-game";
-        face_button.is_important = true;
-        set_face_image (smile_face_image);
-        face_button.show ();
-        toolbar.insert (face_button, -1);
-
-        var hint_button = new Gtk.ToolButton (null, _("Hint"));
-        hint_button.use_underline = true;
-        hint_button.icon_name = "dialog-information";
-        hint_button.action_name = "app.hint";
-        hint_button.is_important = true;
-        hint_button.show ();
-        toolbar.insert (hint_button, -1);
-
-        pause_button = new Gtk.ToolButton (null, _("_Pause"));
-        pause_button.icon_name = "media-playback-pause";
-        pause_button.use_underline = true;
-        pause_button.action_name = "app.pause";
-        pause_button.show ();
-        toolbar.insert (pause_button, -1);
-
-        fullscreen_button = new Gtk.ToolButton (null, _("_Fullscreen"));
-        fullscreen_button.icon_name = "view-fullscreen";
-        fullscreen_button.use_underline = true;
-        fullscreen_button.action_name = "app.fullscreen";
-        fullscreen_button.show ();
-        toolbar.insert (fullscreen_button, -1);
-
-        var status_alignment = new Gtk.Alignment (1.0f, 0.5f, 0.0f, 0.0f);
-        status_alignment.add (status_box);
-        status_alignment.show ();
-
-        var status_item = new Gtk.ToolItem ();
-        status_item.set_expand (true);
-        status_item.add (status_alignment);
-        status_item.show ();
-
-        toolbar.insert (status_item, -1);
-        main_vbox.pack_start (toolbar, false, false, 0);
 
         var view_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         view_box.border_width = 3;
@@ -236,8 +168,6 @@ public class Mines : Gtk.Application
         minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
         minefield_view.set_use_number_border (settings.get_boolean (KEY_USE_NUMBER_BORDER));
         minefield_view.button_press_event.connect (view_button_press_event);
-        minefield_view.look.connect (look_cb);
-        minefield_view.unlook.connect (unlook_cb);
         view_box.pack_start (minefield_view, true, true, 0);
 
         /* Initialize New Game Screen */
@@ -246,19 +176,77 @@ public class Mines : Gtk.Application
 
         /* Initialize Custom Game Screen */
         startup_custom_game_screen ();
-        view_box.pack_start (custom_game_screen, true, false);
-
-        tick_cb ();
+        view_box.pack_start (custom_game_screen, true, true);
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
         history.load ();
+
+        buttons_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        buttons_box.show ();
+        main_vbox.pack_start (buttons_box);
+
+        var size = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
+
+        new_game_button = new Gtk.Button ();
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+        var image = new Gtk.Image.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.DIALOG);
+        box.pack_start (image);
+        new_game_label = new Gtk.Label.with_mnemonic (_("_Start Over"));
+        box.pack_start (new_game_label);
+        new_game_button.add (box);
+        new_game_button.valign = Gtk.Align.CENTER;
+        new_game_button.halign = Gtk.Align.CENTER;
+        new_game_button.relief = Gtk.ReliefStyle.NONE;
+        new_game_button.action_name = "app.new-game";
+        buttons_box.pack_start (new_game_button);
+        size.add_widget (new_game_button);
+
+        pause_button = new Gtk.ToggleButton ();
+        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+        pause_image = new Gtk.Image.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.DIALOG);
+        box.pack_start (pause_image);
+        pause_label = new Gtk.Label.with_mnemonic (_("_Pause"));
+        box.pack_start (pause_label);
+        pause_button.add (box);
+        pause_button.valign = Gtk.Align.CENTER;
+        pause_button.halign = Gtk.Align.CENTER;
+        pause_button.relief = Gtk.ReliefStyle.NONE;
+        pause_button.action_name = "app.pause";
+        buttons_box.pack_start (pause_button);
+        size.add_widget (pause_button);
+
+        hint_button = new Gtk.Button ();
+        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+        image = new Gtk.Image.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.DIALOG);
+        box.pack_start (image);
+        var label = new Gtk.Label.with_mnemonic (_("_Hint"));
+        box.pack_start (label);
+        hint_button.add (box);
+        hint_button.valign = Gtk.Align.CENTER;
+        hint_button.halign = Gtk.Align.CENTER;
+        hint_button.relief = Gtk.ReliefStyle.NONE;
+        hint_button.action_name = "app.hint";
+        buttons_box.pack_start (hint_button);
+        size.add_widget (hint_button);
+
+        status_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+        status_box.show ();
+        main_vbox.pack_start (status_box);
+
+        /* show the numbers of total and remaining mines */
+        flag_label = new Gtk.Label ("");
+        status_box.pack_start (flag_label, true, true, 0);
+
+        /* game clock */
+        clock_label = new Gtk.Label ("");
+        status_box.pack_start (clock_label, true, true, 0);
     }
 
     private void startup_new_game_screen ()
     {
         new_game_screen = new Gtk.AspectFrame (_("Field Size"), 0.5f, 0.5f, 1.0f, false);
         new_game_screen.set_shadow_type (Gtk.ShadowType.NONE);
-        new_game_screen.set_size_request (200, 200);
+        new_game_screen.set_size_request (450, 450);
 
         var new_game_grid = new Gtk.Grid ();
         new_game_grid.column_homogeneous = true;
@@ -353,14 +341,15 @@ public class Mines : Gtk.Application
         button_grid.column_spacing = 5;
         custom_game_grid.attach (button_grid, 0, 3, 2, 1);
 
-        var button = new Gtk.Button.from_stock (Gtk.Stock.CANCEL);
+        var button = new Gtk.Button.with_mnemonic (_("_Cancel"));
+        button.valign = Gtk.Align.CENTER;
         button.expand = true;
         button.clicked.connect (show_new_game_screen);
         button_grid.attach (button, 0, 0, 1, 1);
 
         button = new Gtk.Button.with_mnemonic (_("_Play Game"));
+        button.valign = Gtk.Align.CENTER;
         button.expand = true;
-        button.set_image (new Gtk.Image.from_stock (Gtk.Stock.GO_FORWARD, Gtk.IconSize.BUTTON));
         button.clicked.connect (custom_size_clicked_cb);
         button_grid.attach (button, 1, 0, 1, 1);
 
@@ -370,7 +359,7 @@ public class Mines : Gtk.Application
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
     {
-        if (!is_maximized && !is_fullscreen && !window_skip_configure)
+        if (!is_maximized && !window_skip_configure)
         {
             window_width = event.width;
             window_height = event.height;
@@ -385,20 +374,6 @@ public class Mines : Gtk.Application
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
             is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
-        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
-        {
-            is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
-            if (is_fullscreen)
-            {
-                fullscreen_button.label = _("_Leave Fullscreen");
-                fullscreen_button.icon_name = "view-restore";
-            }
-            else
-            {
-                fullscreen_button.label = _("_Fullscreen");            
-                fullscreen_button.icon_name = "view-fullscreen";
-            }
-        }
         return false;
     }
 
@@ -429,7 +404,6 @@ public class Mines : Gtk.Application
     {
         window.show ();
         show_new_game_screen ();
-        set_face_image (smile_face_image);
     }
 
     protected override void shutdown ()
@@ -440,30 +414,11 @@ public class Mines : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
-        settings.set_boolean ("window-is-fullscreen", is_fullscreen);
     }
 
     public override void activate ()
     {
         window.show ();
-    }
-
-    private Gtk.Image load_face_image (string name)
-    {
-        var image = new Gtk.Image ();
-        var filename = Path.build_filename (DATA_DIRECTORY, name);
-
-        if (filename != null)
-            image.set_from_file (filename);
-
-        image.show ();
-
-        return image;
-    }
-
-    private void set_face_image (Gtk.Image face_image)
-    {
-        face_button.set_icon_widget (face_image);
     }
 
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
@@ -499,14 +454,6 @@ public class Mines : Gtk.Application
         dialog.destroy ();
 
         return result;
-    }
-
-    private void fullscreen_cb ()
-    {
-        if (is_fullscreen)
-            window.unfullscreen ();
-        else
-            window.fullscreen ();
     }
 
     private void scores_cb ()
@@ -562,14 +509,14 @@ public class Mines : Gtk.Application
         custom_game_screen.hide ();
         minefield_view.hide ();
         new_game_screen.show ();
-        flag_label.set_text("");
-        set_face_image (smile_face_image);
+        status_box.hide ();
         window.resize (window_width, window_height);
 
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
+        buttons_box.hide ();
     }
 
     private void start_game ()
@@ -580,8 +527,11 @@ public class Mines : Gtk.Application
         minefield_view.show ();
         minefield_view.has_focus = true;
         new_game_screen.hide ();
+        new_game_label.label = _("_Start Over");
+        buttons_box.show_all ();
+        status_box.show_all ();
 
-        set_face_image (smile_face_image);
+        tick_cb ();
 
         int x, y, n;
         switch (settings.get_int (KEY_MODE))
@@ -672,8 +622,13 @@ public class Mines : Gtk.Application
         if (minefield.paused)
         {
             hint_action.set_enabled (false);
-            pause_button.icon_name = "media-playback-start";
-            pause_button.label = _("Res_ume");
+
+            if (pause_button.get_direction () == Gtk.TextDirection.RTL)
+                pause_image.icon_name = "media-playback-start-rtl-symbolic";
+            else
+                pause_image.icon_name = "media-playback-start-symbolic";
+
+            pause_label.label = _("Res_ume");
             if (pause_requested)
                 app_main_menu.insert (3, _("Res_ume"), "app.pause");
             else
@@ -682,8 +637,8 @@ public class Mines : Gtk.Application
         else
         {
             hint_action.set_enabled (true);
-            pause_button.icon_name = "media-playback-pause";
-            pause_button.label = _("_Pause");
+            pause_image.icon_name = "media-playback-pause-symbolic";
+            pause_label.label = _("_Pause");
             app_main_menu.insert (3, _("_Pause"), "app.pause");
         }
     }
@@ -695,15 +650,13 @@ public class Mines : Gtk.Application
 
     private void explode_cb (Minefield minefield)
     {
-        set_face_image (sad_face_image);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
+        new_game_label.label = _("Play _Again");
     }
 
     private void cleared_cb (Minefield minefield)
     {
-        set_face_image (win_face_image);
-
         var date = new DateTime.now_local ();
         var duration = (uint) (minefield.elapsed + 0.5);
         var entry = new HistoryEntry (date, minefield.width, minefield.height, minefield.n_mines, duration);
@@ -725,16 +678,6 @@ public class Mines : Gtk.Application
         var minutes = (elapsed - hours * 3600) / 60;
         var seconds = elapsed - hours * 3600 - minutes * 60;
         clock_label.set_text ("%s: %02d:%02d:%02d".printf (_("Time"), hours, minutes, seconds));
-    }
-
-    private void look_cb (MinefieldView minefield_view)
-    {
-        set_face_image (worried_face_image);
-    }
-
-    private void unlook_cb (MinefieldView minefield_view)
-    {
-        set_face_image (cool_face_image);
     }
 
     private void about_cb ()

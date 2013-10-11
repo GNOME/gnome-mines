@@ -6,9 +6,7 @@ gsettings_SCHEMAS = org.gnome.mines.gschema.xml
 man_MANS = gnome-mines.6
 
 pixmapdir   = $(datadir)/gnome-mines
-pixmap_DATA = face-cool.svg face-sad.svg face-smile.svg face-win.svg \
-	face-worried.svg \
-	flag.svg flag-question.svg mine.svg bang.svg warning.svg
+pixmap_DATA = flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 desktopdir = $(datadir)/applications
 desktop_in_files = gnomine.desktop.in
