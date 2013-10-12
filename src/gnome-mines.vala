@@ -252,7 +252,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 0, 0, 1, 1);
 
         var label = new Gtk.Label (null);
-        label.set_markup (make_minefield_description ("#0000ff", 8, 8, 10));
+        label.set_markup (make_minefield_description (8, 8, 10));
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
@@ -261,7 +261,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 1, 0, 1, 1);
 
         label = new Gtk.Label (null);
-        label.set_markup (make_minefield_description ("#00a000", 16, 16, 40));
+        label.set_markup (make_minefield_description (16, 16, 40));
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
@@ -270,7 +270,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 0, 1, 1, 1);
 
         label = new Gtk.Label (null);
-        label.set_markup (make_minefield_description ("#ff0000", 30, 16, 99));
+        label.set_markup (make_minefield_description (30, 16, 99));
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
@@ -279,7 +279,7 @@ public class Mines : Gtk.Application
         new_game_grid.attach (button, 1, 1, 1, 1);
 
         label = new Gtk.Label (null);
-        label.set_markup_with_mnemonic ("<span fgcolor='#00007f'><span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")) + "</span>");
+        label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
         label.set_justify (Gtk.Justification.CENTER);
         button.add (label);
 
@@ -385,11 +385,11 @@ public class Mines : Gtk.Application
         return false;
     }
 
-    private string make_minefield_description (string color, int width, int height, int n_mines)
+    private string make_minefield_description (int width, int height, int n_mines)
     {
         var size_label = "%d × %d".printf (width, height);
         var mines_label = ngettext ("<b>%d</b> mine", "<b>%d</b> mines", n_mines).printf (n_mines);
-        return "<span fgcolor='%s'><span size='x-large' weight='ultrabold'>%s</span>\n%s</span>".printf (color, size_label, mines_label);
+        return "<span size='x-large' weight='ultrabold'>%s</span>\n%s".printf (size_label, mines_label);
     }
 
     public void start ()
