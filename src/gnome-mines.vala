@@ -64,7 +64,6 @@ public class Mines : Gtk.Application
     private Gtk.Dialog? pref_dialog = null;
     private Gtk.SpinButton n_mines_spin;
     private SimpleAction new_game_action;
-    private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
     private SimpleAction hint_action;
     private Gtk.AspectFrame new_game_screen;
@@ -74,7 +73,6 @@ public class Mines : Gtk.Application
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",      new_game_cb                                            },
-        { "repeat-size",   repeat_size_cb                                         },
         { "hint",          hint_cb                                                },
         { "pause",         toggle_pause_cb                                        },
         { "scores",        scores_cb                                              },
@@ -102,8 +100,6 @@ public class Mines : Gtk.Application
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
         new_game_action.set_enabled (false);
-        repeat_size_action = lookup_action ("repeat-size") as SimpleAction;
-        repeat_size_action.set_enabled (false);
         hint_action = lookup_action ("hint") as SimpleAction;
         hint_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
@@ -113,7 +109,6 @@ public class Mines : Gtk.Application
         app_main_menu = new Menu ();
         menu.append_section (null, app_main_menu);
         app_main_menu.append (_("_New Game"), "app.new-game");
-        app_main_menu.append (_("_Replay Size"), "app.repeat-size");
         app_main_menu.append (_("_Scores"), "app.scores");
         app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
@@ -126,7 +121,6 @@ public class Mines : Gtk.Application
         set_app_menu (menu);
 
         add_accelerator ("<Primary>n", "app.new-game", null);
-        add_accelerator ("<Primary>r", "app.repeat-size", null);
         add_accelerator ("Pause", "app.pause", null);
         add_accelerator ("F1", "app.help", null);
         add_accelerator ("<Primary>w", "app.quit", null);
@@ -511,7 +505,6 @@ public class Mines : Gtk.Application
         window.resize (window_width, window_height);
 
         new_game_action.set_enabled (false);
-        repeat_size_action.set_enabled (false);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
         buttons_box.hide ();
@@ -571,7 +564,6 @@ public class Mines : Gtk.Application
         update_flag_label ();
 
         new_game_action.set_enabled (true);
-        repeat_size_action.set_enabled (true);
         hint_action.set_enabled (true);
         pause_action.set_enabled (true);
 
@@ -588,12 +580,6 @@ public class Mines : Gtk.Application
     {
         if (can_start_new_game ())
             show_new_game_screen ();
-    }
-
-    private void repeat_size_cb ()
-    {
-        if (can_start_new_game ())
-            start_game ();
     }
 
     private void toggle_pause_cb ()
