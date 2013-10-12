@@ -116,7 +116,6 @@ public class Mines : Gtk.Application
         menu.append_section (null, app_main_menu);
         app_main_menu.append (_("_New Game"), "app.new-game");
         app_main_menu.append (_("_Replay Size"), "app.repeat-size");
-        app_main_menu.append (_("_Hint"), "app.hint");
         app_main_menu.append (_("_Pause"), "app.pause");
         app_main_menu.append (_("_Fullscreen"), "app.fullscreen");
         app_main_menu.append (_("_Scores"), "app.scores");
@@ -667,7 +666,7 @@ public class Mines : Gtk.Application
          *  but it doesn't seem we have much of an option, lets just
          *  hope the C compiler can optimise this.
          */
-        app_main_menu.remove (3);  // Remove pause/resume menuitem
+        app_main_menu.remove (2);  // Remove pause/resume menuitem
 
         if (minefield.paused)
         {
@@ -675,16 +674,16 @@ public class Mines : Gtk.Application
             pause_button.icon_name = "media-playback-start";
             pause_button.label = _("Res_ume");
             if (pause_requested)
-                app_main_menu.insert (3, _("Res_ume"), "app.pause");
+                app_main_menu.insert (2, _("Res_ume"), "app.pause");
             else
-                app_main_menu.insert (3, _("_Pause"), "app.pause");
+                app_main_menu.insert (2, _("_Pause"), "app.pause");
         }
         else
         {
             hint_action.set_enabled (true);
             pause_button.icon_name = "media-playback-pause";
             pause_button.label = _("_Pause");
-            app_main_menu.insert (3, _("_Pause"), "app.pause");
+            app_main_menu.insert (2, _("_Pause"), "app.pause");
         }
     }
 
