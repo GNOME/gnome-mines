@@ -236,7 +236,7 @@ public class Mines : Gtk.Application
 
     private void startup_new_game_screen ()
     {
-        new_game_screen = new Gtk.AspectFrame (_("Field Size"), 0.5f, 0.5f, 1.0f, false);
+        new_game_screen = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
         new_game_screen.set_shadow_type (Gtk.ShadowType.NONE);
         new_game_screen.set_size_request (450, 450);
 
