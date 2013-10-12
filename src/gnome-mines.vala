@@ -28,7 +28,7 @@ public class Mines : Gtk.Application
     private Gtk.Box buttons_box;
     private Gtk.Button new_game_button;
     private Gtk.Label new_game_label;
-    private Gtk.ToggleButton pause_button;
+    private Gtk.Button pause_button;
     private Gtk.Image pause_image;
     private Gtk.Label pause_label;
     private Gtk.Button hint_button;
@@ -115,7 +115,6 @@ public class Mines : Gtk.Application
         app_main_menu.append (_("_New Game"), "app.new-game");
         app_main_menu.append (_("_Replay Size"), "app.repeat-size");
         app_main_menu.append (_("_Hint"), "app.hint");
-        app_main_menu.append (_("_Pause"), "app.pause");
         app_main_menu.append (_("_Scores"), "app.scores");
         app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
@@ -201,7 +200,7 @@ public class Mines : Gtk.Application
         buttons_box.pack_start (new_game_button);
         size.add_widget (new_game_button);
 
-        pause_button = new Gtk.ToggleButton ();
+        pause_button = new Gtk.Button ();
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
         pause_image = new Gtk.Image.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.DIALOG);
         box.pack_start (pause_image);
@@ -613,12 +612,6 @@ public class Mines : Gtk.Application
 
     private void paused_changed_cb ()
     {
-        /* KLUDGE: This is a very expensive way to change a label,
-         *  but it doesn't seem we have much of an option, lets just
-         *  hope the C compiler can optimise this.
-         */
-        app_main_menu.remove (3);  // Remove pause/resume menuitem
-
         if (minefield.paused)
         {
             hint_action.set_enabled (false);
@@ -629,17 +622,12 @@ public class Mines : Gtk.Application
                 pause_image.icon_name = "media-playback-start-symbolic";
 
             pause_label.label = _("Res_ume");
-            if (pause_requested)
-                app_main_menu.insert (3, _("Res_ume"), "app.pause");
-            else
-                app_main_menu.insert (3, _("_Pause"), "app.pause");
         }
         else
         {
             hint_action.set_enabled (true);
             pause_image.icon_name = "media-playback-pause-symbolic";
             pause_label.label = _("_Pause");
-            app_main_menu.insert (3, _("_Pause"), "app.pause");
         }
     }
 
