@@ -114,7 +114,6 @@ public class Mines : Gtk.Application
         menu.append_section (null, app_main_menu);
         app_main_menu.append (_("_New Game"), "app.new-game");
         app_main_menu.append (_("_Replay Size"), "app.repeat-size");
-        app_main_menu.append (_("_Hint"), "app.hint");
         app_main_menu.append (_("_Scores"), "app.scores");
         app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
