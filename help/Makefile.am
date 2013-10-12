@@ -5,12 +5,6 @@ HELP_MEDIA = \
 	figures/easy-hints-1.png \
 	figures/easy-hints-2.png \
 	figures/easy-hints-3.png \
-	figures/face-cool.svg \
-	figures/face-sad.svg \
-	figures/face-smile.svg \
-	figures/faces.png \
-	figures/face-win.svg \
-	figures/face-worried.svg \
 	figures/flag-question.svg \
 	figures/flags.png \
 	figures/flag.svg \
@@ -31,7 +25,6 @@ HELP_FILES = \
 	bug-filing.page \
 	develop.page \
 	documentation.page \
-	faces.page \
 	flags.page \
 	get-help.page \
 	high-scores.page \
