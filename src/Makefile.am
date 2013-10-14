@@ -12,6 +12,7 @@ gnome_mines_CFLAGS = \
 	-DGETTEXT_PACKAGE=\"$(GETTEXT_PACKAGE)\" \
 	-DDATA_DIRECTORY=\"$(datadir)/gnome-mines\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
+	-w \
 	$(GNOME_MINES_CFLAGS)
 
 gnome_mines_VALAFLAGS = \
