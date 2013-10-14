@@ -235,18 +235,20 @@ public class MinefieldView : Gtk.DrawingArea
     {
         var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, (int) mine_size, (int) mine_size); 
         var c = new Cairo.Context (surface);
-        Gdk.Pixbuf pixbuf;
-        var size = (int) mine_size - 2;
+        var size = (double) mine_size - 2;
         try
         {
-            pixbuf = Rsvg.pixbuf_from_file_at_size (filename, size, size);
+            var h = new Rsvg.Handle.from_file (filename);
+            var m = Cairo.Matrix.identity ();
+            m.translate (1.0, 1.0);
+            m.scale (size / h.width, size / h.height);
+            c.set_matrix (m);
+            h.render_cairo (c);
         }
         catch (Error e)
         {
-            pixbuf = new Gdk.Pixbuf (Gdk.Colorspace.RGB, true, 8, size, size);
+            warning ("Failed to load texture %s: %s", filename, e.message);
         }
-        Gdk.cairo_set_source_pixbuf (c, pixbuf, 1, 1);
-        c.paint ();
 
         var pattern = new Cairo.Pattern.for_surface (surface);
         pattern.set_extend (Cairo.Extend.REPEAT);
