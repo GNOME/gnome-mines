@@ -778,7 +778,7 @@ public class Mines : Gtk.Application
         var dialog = new Gtk.Dialog.with_buttons (_("Mines Preferences"),
                                                   window,
                                                   0,
-                                                  Gtk.Stock.CLOSE,
+                                                  _("_Close"),
                                                   Gtk.ResponseType.CLOSE, null);
         dialog.response.connect (pref_response_cb);
         dialog.delete_event.connect (pref_delete_event_cb);
@@ -917,13 +917,13 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (Gtk.Stock.QUIT, Gtk.ResponseType.CLOSE);
+            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
 
             var button = add_button (_("New Game"), Gtk.ResponseType.OK);
             button.has_focus = true;
         }
         else
-            add_button (Gtk.Stock.OK, Gtk.ResponseType.DELETE_EVENT);
+            add_button (_("_OK"), Gtk.ResponseType.DELETE_EVENT);
         set_size_request (200, 300);
 
         var vbox = new Gtk.Box (Gtk.Orientation.VERTICAL, 5);
