@@ -8,7 +8,7 @@
     <key name="use-overmine-warning" type="b">
       <default>false</default>
       <summary>Warning about too many flags</summary>
-      <description>Set to true to enable warning icons when too many flags are placed.</description>
+      <description>Set to true to enable warning icons when too many flags are placed next to a numbered tile.</description>
     </key>
     <key name="use-autoflag" type="b">
       <default>false</default>
