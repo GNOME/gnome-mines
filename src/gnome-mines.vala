@@ -23,7 +23,6 @@ public class Mines : Gtk.Application
     private const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     private const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     private const string KEY_USE_AUTOFLAG = "use-autoflag";
-    private const string KEY_USE_NUMBER_BORDER = "use-number-border";
 
     private Gtk.Box buttons_box;
     private Gtk.Button new_game_button;
@@ -158,7 +157,6 @@ public class Mines : Gtk.Application
         minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
         minefield_view.set_use_overmine_warning (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
         minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
-        minefield_view.set_use_number_border (settings.get_boolean (KEY_USE_NUMBER_BORDER));
         minefield_view.button_press_event.connect (view_button_press_event);
         view_box.pack_start (minefield_view, true, true, 0);
 
@@ -776,13 +774,6 @@ public class Mines : Gtk.Application
         minefield_view.set_use_overmine_warning (use_overmine_warning);
     }
 
-    private void use_number_border_toggle_cb (Gtk.ToggleButton button)
-    {
-        var use_number_border = button.get_active ();
-        settings.set_boolean (KEY_USE_NUMBER_BORDER, use_number_border);
-        minefield_view.set_use_number_border (use_number_border);
-    }
-
     private Gtk.Dialog create_preferences ()
     {
         var dialog = new Gtk.Dialog.with_buttons (_("Mines Preferences"),
@@ -814,12 +805,6 @@ public class Mines : Gtk.Application
         overmine_toggle.toggled.connect (use_overmine_toggle_cb);
         overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
         grid.attach (overmine_toggle, 0, 1, 1, 1);
-
-        var border_toggle = new Gtk.CheckButton.with_mnemonic (_("_Display numbers with border"));
-        border_toggle.show ();
-        border_toggle.toggled.connect (use_number_border_toggle_cb);
-        border_toggle.set_active (settings.get_boolean (KEY_USE_NUMBER_BORDER));
-        grid.attach (border_toggle, 0, 2, 1, 1);
 
         return dialog;
     }

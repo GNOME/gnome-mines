@@ -105,9 +105,6 @@ public class MinefieldView : Gtk.DrawingArea
     private Position keyboard_cursor;
     private Position selected;
 
-    /* true if numbers should be drawn with border */
-    private bool use_number_border;
-
     /* Pre-rendered images */
     private uint render_size = 0;
     private Cairo.Pattern? flag_pattern;
@@ -214,14 +211,6 @@ public class MinefieldView : Gtk.DrawingArea
         this.use_autoflag = use_autoflag;
     }
 
-    public void set_use_number_border (bool use_number_border)
-    {
-        if (this.use_number_border != use_number_border)
-            render_size = 0;
-
-        this.use_number_border = use_number_border;
-    }
-
     private void explode_cb (Minefield minefield)
     {
         /* Show the mines that we missed or the flags that were wrong */
@@ -326,18 +315,6 @@ public class MinefieldView : Gtk.DrawingArea
         var dy = ((int) mine_size - 2 - extent.height / Pango.SCALE) / 2 + 1;
         c.move_to (dx, dy);
         Pango.cairo_show_layout (c, layout);
-
-        if (use_number_border)
-        {
-            c.save ();
-            c.set_line_width(1.0);
-            c.set_source_rgb(color_outline[0],
-                             color_outline[1],
-                             color_outline[2]);
-            Pango.cairo_layout_path(c, layout);
-            c.stroke_preserve();
-            c.restore ();
-        }
 
         var pattern = new Cairo.Pattern.for_surface (surface);
         pattern.set_extend (Cairo.Extend.REPEAT);
