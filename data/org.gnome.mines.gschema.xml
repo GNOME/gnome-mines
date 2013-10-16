@@ -10,11 +10,6 @@
       <summary>Warning about too many flags</summary>
       <description>Set to true to enable warning icons when too many flags are placed.</description>
     </key>
-    <key name="use-number-border" type="b">
-      <default>false</default>
-      <summary>Display border around numbers</summary>
-      <description>Set to true to display a border around mine indication numbers.</description>
-    </key>
     <key type="b" name="use-newgame-confirm">
       <default>false</default>
       <summary>Confirm before a new game</summary>
