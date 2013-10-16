@@ -230,8 +230,15 @@ public class Mines : Gtk.Application
         status_box.pack_start (flag_label, true, true, 0);
 
         /* game clock */
+        box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 2);
+        box.spacing = 8;
+        image = new Gtk.Image.from_icon_name ("preferences-system-time-symbolic", Gtk.IconSize.MENU);
+        box.add (image);
         clock_label = new Gtk.Label ("");
-        status_box.pack_start (clock_label, true, true, 0);
+        box.add (clock_label);
+        box.halign = Gtk.Align.CENTER;
+        box.valign = Gtk.Align.BASELINE;
+        status_box.pack_start (box, true, true, 0);
     }
 
     private void startup_new_game_screen ()
@@ -650,7 +657,10 @@ public class Mines : Gtk.Application
         var hours = elapsed / 3600;
         var minutes = (elapsed - hours * 3600) / 60;
         var seconds = elapsed - hours * 3600 - minutes * 60;
-        clock_label.set_text ("%s: %02d:%02d:%02d".printf (_("Time"), hours, minutes, seconds));
+        if (hours > 0)
+            clock_label.set_text ("%02d:%02d:%02d".printf (hours, minutes, seconds));
+        else
+            clock_label.set_text ("%02d:%02d".printf (minutes, seconds));
     }
 
     private void about_cb ()
