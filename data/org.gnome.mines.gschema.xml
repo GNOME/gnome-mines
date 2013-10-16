@@ -10,12 +10,6 @@
       <summary>Warning about too many flags</summary>
       <description>Set to true to enable warning icons when too many flags are placed.</description>
     </key>
-    <key type="b" name="use-newgame-confirm">
-      <default>false</default>
-      <summary>Confirm before a new game</summary>
-      <description>When click the smiley face a confirmation messagebox will pop up. This
-          prevents the current game session from getting lost when you click the smiley face accidentally</description>
-    </key>
     <key name="use-autoflag" type="b">
       <default>false</default>
       <summary>Enable automatic placing of flags</summary>
