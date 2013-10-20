@@ -18,7 +18,7 @@
   </_p>
  </description>
  <screenshots>
-  <_screenshot type="default" width="659" height="578">https://people.gnome.org/~mcatanzaro/gnome-mines.png</_screenshot>
+  <screenshot type="default" width="1176" height="703">https://people.gnome.org/~mcatanzaro/gnome-mines.png</screenshot>
  </screenshots>
  <url type="homepage">https://wiki.gnome.org/Mines</url>
  <updatecontact>games_list_at_gnome.org</updatecontact>
