@@ -1,3 +1,11 @@
+GNOME Mines 3.11.1
+==================
+
+* Redesigned interface
+* Depend on intltool 0.50, gtk 3.10, and glib 2.36
+* Remove BugBuddy support
+* Translation updates
+
 GNOME Mines 3.10.0
 ==================
 
