@@ -1,7 +1,7 @@
 <schemalist>
   <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-games">
     <key name="use-question-marks" type="b">
-      <default>false</default>
+      <default>true</default>
       <summary>Use the unknown flag</summary>
       <description>Set to true to be able to mark squares as unknown.</description>
     </key>
