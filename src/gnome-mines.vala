@@ -612,10 +612,13 @@ public class Mines : Gtk.Application
         history.add (entry);
         history.save ();
 
-        if (show_scores (entry, true) == Gtk.ResponseType.CLOSE)
-            window.destroy ();
-        else
+        if (show_scores (entry, true) == Gtk.ResponseType.OK)
             show_new_game_screen ();
+        else
+        {
+            hint_action.set_enabled (false);
+            pause_action.set_enabled (false);
+        }
     }
 
     private void tick_cb ()
@@ -884,7 +887,7 @@ public class ScoreDialog : Gtk.Dialog
 
         if (show_quit)
         {
-            add_button (_("_Quit"), Gtk.ResponseType.CLOSE);
+            add_button (_("_Close"), Gtk.ResponseType.CLOSE);
 
             var button = add_button (_("New Game"), Gtk.ResponseType.OK);
             button.has_focus = true;
