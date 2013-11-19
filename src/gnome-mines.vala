@@ -681,8 +681,6 @@ public class Mines : Gtk.Application
             null
         };
 
-        var license = "Mines is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.\n\nMines is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.\n\nYou should have received a copy of the GNU General Public License along with Mines; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA";
-
         Gtk.show_about_dialog (window,
                                "name", _("Mines"),
                                "version", VERSION,
@@ -690,7 +688,7 @@ public class Mines : Gtk.Application
                                _("Clear explosive mines off the board\n\nMines is a part of GNOME Games."),
                                "copyright",
                                "Copyright \xc2\xa9 1997-2008 Free Software Foundation, Inc.",
-                               "license", license,
+                               "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
@@ -698,7 +696,7 @@ public class Mines : Gtk.Application
                                "logo-icon-name", "gnome-mines", "website",
                                "http://www.gnome.org/projects/gnome-games/",
                                "website-label", _("GNOME Games web site"),
-                               "wrap-license", true, null);
+                               null);
     }
 
     private void set_n_mines_limit ()
