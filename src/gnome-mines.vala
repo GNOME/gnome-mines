@@ -429,9 +429,9 @@ public class Mines : Gtk.Application
         flag_label.set_text (_("%u/%u").printf (minefield.n_flags, minefield.n_mines));
     }
 
-    private int show_scores (HistoryEntry? selected_entry = null, bool show_quit = false)
+    private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_quit);
+        var dialog = new ScoreDialog (history, selected_entry, show_close);
         dialog.modal = true;
         dialog.transient_for = window;
 
@@ -930,13 +930,13 @@ public class ScoreDialog : Gtk.Dialog
     private Gtk.ComboBox size_combo;
     private Gtk.TreeView scores;
 
-    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_quit = false)
+    public ScoreDialog (History history, HistoryEntry? selected_entry = null, bool show_close = false)
     {
         this.history = history;
         history.entry_added.connect (entry_added_cb);
         this.selected_entry = selected_entry;
 
-        if (show_quit)
+        if (show_close)
         {
             add_button (_("_Close"), Gtk.ResponseType.CLOSE);
 
