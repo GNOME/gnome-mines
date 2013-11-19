@@ -825,7 +825,7 @@ public class Mines : Gtk.Application
         question_toggle.set_active (settings.get_boolean (KEY_USE_QUESTION_MARKS));
         grid.attach (question_toggle, 0, 0, 1, 1);
 
-        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags have been placed"));
+        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags are placed next to a number"));
         overmine_toggle.show ();
         overmine_toggle.toggled.connect (use_overmine_toggle_cb);
         overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
