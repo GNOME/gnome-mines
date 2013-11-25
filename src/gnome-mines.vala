@@ -125,6 +125,7 @@ public class Mines : Gtk.Application
 
         window = new Gtk.ApplicationWindow (this);
         window.title = _("Mines");
+        window.icon_name = "gnome-mines";
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.focus_out_event.connect (window_focus_out_event_cb);
@@ -135,6 +136,7 @@ public class Mines : Gtk.Application
 
         var headerbar = new Gtk.HeaderBar ();
         headerbar.show_close_button = true;
+        headerbar.show_fallback_app_menu = true;
         headerbar.set_title (_("Mines"));
         headerbar.show ();
         window.set_titlebar (headerbar);
