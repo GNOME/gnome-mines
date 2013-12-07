@@ -20,6 +20,6 @@
  <screenshots>
   <screenshot type="default" width="1176" height="703">https://people.gnome.org/~mcatanzaro/gnome-mines.png</screenshot>
  </screenshots>
- <url type="homepage">https://wiki.gnome.org/Mines</url>
+ <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
  <updatecontact>games_list_at_gnome.org</updatecontact>
 </application>
