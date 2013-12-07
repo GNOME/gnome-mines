@@ -7,4482 +7,3192 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"games&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-03-23 09:59+0000\n"
-"PO-Revision-Date: 2012-03-23 17:59+0800\n"
-"Last-Translator: tuhaihe <wangdianjin@linuxdeepin.com>\n"
+"mines&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-11-25 18:59+0000\n"
+"PO-Revision-Date: 2013-09-19 01:07+0700\n"
+"Last-Translator: 甘露(Gan Lu) <rhythm.gan@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: zh_CN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#. Title of the main window
-#: ../glchess/data/glchess.desktop.in.in.h:1 ../glchess/src/glchess.vala:227
-msgid "Chess"
-msgstr "国际象棋"
+#: ../data/gnome-mines.appdata.xml.in.h:1
+msgid "GNOME Mines"
+msgstr "GNOME 扫雷"
 
-#: ../glchess/data/glchess.desktop.in.in.h:2
-msgid "Play the classic two-player boardgame of chess"
-msgstr "经典的国际象棋对战游戏"
-
-#. Game menu name
-#: ../glchess/data/glchess.ui.h:2 ../glines/data/glines.ui.h:2
-#: ../gnect/src/main.c:1195 ../gnibbles/src/main.c:605
-#: ../gnobots2/src/menu.c:65 ../gnome-sudoku/src/lib/main.py:195
-#: ../gnotski/src/gnotski.c:397 ../gtali/src/gyahtzee.c:711
-#: ../mahjongg/src/mahjongg.vala:654
-msgid "_Game"
-msgstr "游戏(_G)"
-
-#. Undo move menu item
-#: ../glchess/data/glchess.ui.h:4 ../libgames-support/games-stock.c:259
-msgid "_Undo Move"
-msgstr "撤消移动(_U)"
-
-#. Save menu item
-#: ../glchess/data/glchess.ui.h:6
-msgid "_Resign"
-msgstr "认输(_R)"
-
-#. Claim draw menu item
-#: ../glchess/data/glchess.ui.h:8
-msgid "Claim _Draw"
-msgstr "声明和棋(_D)"
-
-#. Settings menu item
-#: ../glchess/data/glchess.ui.h:10 ../glines/data/glines.ui.h:3
-#: ../gnect/src/main.c:1197 ../gnibbles/src/main.c:607
-#: ../gnobots2/src/menu.c:68 ../gnome-sudoku/src/lib/main.py:209
-#: ../gtali/src/gyahtzee.c:712 ../mahjongg/src/mahjongg.vala:655
-msgid "_Settings"
-msgstr "设置(_S)"
-
-#. Help menu item
-#: ../glchess/data/glchess.ui.h:12 ../glines/data/glines.ui.h:4
-#: ../gnect/src/main.c:1198 ../gnibbles/src/main.c:608
-#: ../gnobots2/src/menu.c:69 ../gnome-sudoku/src/lib/main.py:218
-#: ../gnomine/data/gnomine.ui.h:7 ../gnotravex/data/gnotravex.ui.h:16
-#: ../gnotski/src/gnotski.c:399 ../gtali/src/gyahtzee.c:713
-#: ../iagno/data/iagno.ui.h:4 ../lightsoff/src/lightsoff.vala:32
-#: ../mahjongg/src/mahjongg.vala:656 ../quadrapassel/src/quadrapassel.vala:81
-#: ../swell-foop/src/swell-foop.vala:81
-msgid "_Help"
-msgstr "帮助(_H)"
-
-#. Help contents menu item
-#: ../glchess/data/glchess.ui.h:14 ../glines/data/glines.ui.h:6
-#: ../gnome-sudoku/src/lib/main.py:219 ../libgames-support/games-stock.c:247
-msgid "_Contents"
-msgstr "目录(_C)"
-
-#. Tooltip for start new game toolbar button
-#: ../glchess/data/glchess.ui.h:16 ../gnobots2/src/menu.c:70
-#: ../gnomine/src/gnomine.vala:325 ../gnotravex/src/gnotravex.vala:45
-#: ../libgames-support/games-stock.c:48 ../mahjongg/src/mahjongg.vala:657
-msgid "Start a new game"
-msgstr "开始新游戏"
-
-#. The New Game toolbar button
-#: ../glchess/data/glchess.ui.h:18
-#: ../libgames-support/games-scores-dialog.c:461
-msgid "New Game"
-msgstr "新游戏"
-
-#. The undo move toolbar button
-#: ../glchess/data/glchess.ui.h:20
-msgid "Undo Move"
-msgstr "撤消移动"
-
-#. The tooltip for the Resign toolbar button
-#: ../glchess/data/glchess.ui.h:22
-msgid "Resign"
-msgstr "认输"
-
-#. Tooltip on the show first move (i.e. game start) navigation button
-#: ../glchess/data/glchess.ui.h:24
-msgid "Rewind to the game start"
-msgstr "定位到游戏开始"
-
-#. Tooltip on the show previous move navigation button
-#: ../glchess/data/glchess.ui.h:26
-msgid "Show the previous move"
-msgstr "显示上一着"
-
-#. Tooltip on the show next move navigation button
-#: ../glchess/data/glchess.ui.h:28
-msgid "Show the next move"
-msgstr "显示下一着"
-
-#. Tooltip on the show current move navigation button
-#: ../glchess/data/glchess.ui.h:30
-msgid "Show the current move"
-msgstr "显示当前移动"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:1
-msgid "The width of the window"
-msgstr "窗口的宽度"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:2
-msgid "The width of the main window in pixels."
-msgstr "主窗口的宽度，以像素计。"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:3
-msgid "The height of the window"
-msgstr "窗口的高度"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:4
-msgid "The height of the main window in pixels."
-msgstr "主窗口的高度，以像素计。"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:5
-msgid "A flag to enable maximized mode"
-msgstr "启用最大化模式的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:6
-msgid "A flag to enable fullscreen mode"
-msgstr "启用全屏模式的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:7
-msgid "The piece to promote pawns to"
-msgstr "兵升变为子力"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:8
+#: ../data/gnome-mines.appdata.xml.in.h:2
 msgid ""
-"The piece to promote to when a human player moves a pawn to the far rank"
-msgstr "当人类玩家的兵直进到对方底线时，就可升变为子力"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:9
-msgid "A flag to enable 3D mode"
-msgstr "启用 3D 模式的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:10
-msgid "A flag to smooth (anti-alias) the 3D display"
-msgstr "启用 3D 模式平滑的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:11
-msgid "The piece theme to use"
-msgstr "使用的棋子主题"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:12
-msgid "A flag to enable move hints"
-msgstr "启用提示模式的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:13
-msgid "A flag to enable board numbering"
-msgstr "显示棋盘坐标模式的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:14
-msgid "A flag to enable the move history browser"
-msgstr "启用走棋历史浏览器的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:15
-msgid "A flag to enable the toolbar"
-msgstr "启用工具栏的标记"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:16
-msgid "The directory to open the save game dialog in"
-msgstr "保存游戏对话框打开时所在的目录"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:17
-msgid "The directory to open the load game dialog in"
-msgstr "载入游戏对话框打开时所在的目录"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:18
-msgid "The format to display moves in"
-msgstr "着法显示格式"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:19
-msgid "The side of the board that is in the foreground"
-msgstr "前景上的板边缘"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:20
-msgid "The duration of a game in seconds (0 for no limit)"
-msgstr "游戏的时间限制(以秒为单位，0 表示无限制)"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:21
-msgid "true if the human player is playing white"
-msgstr "如果人类玩家执白，则为真"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:22
-msgid "The opponent player"
-msgstr "对手"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:23
-msgid ""
-"Can be 'human' (play against another human player), '' (use the first "
-"available chess engine) or the name of a specific engine to play against"
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you've flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
 msgstr ""
-"可以是“human”(和另一个人类玩家对战)，“”(第一个可用的游戏引擎)或者要指定与之对"
-"战的引擎名称"
-
-#: ../glchess/data/org.gnome.glchess.gschema.xml.in.h:24
-msgid "Difficulty of the opponent chess engine"
-msgstr "与之对战的国际象棋引擎的难度"
-
-#. Title for preferences dialog
-#: ../glchess/data/preferences.ui.h:2 ../glines/src/glines.c:175
-msgid "Preferences"
-msgstr "首选项"
-
-#. Preferences Dialog: Label before player side (white/black) combo box
-#: ../glchess/data/preferences.ui.h:4
-msgid "Play as:"
-msgstr "玩家身份："
-
-#. Preferences Dialog: Label before opposing player combo box
-#: ../glchess/data/preferences.ui.h:6
-msgid "Opposing Player:"
-msgstr "对手："
-
-#. Preferences Dialog: Label before promotion type combo box
-#: ../glchess/data/preferences.ui.h:8
-msgid "Difficulty:"
-msgstr "难度："
-
-#. New Game Dialog: Label before game timer settings
-#: ../glchess/data/preferences.ui.h:10
-msgid "Game Duration:"
-msgstr "游戏时长："
-
-#. Preferences Dialog: Label before promotion type combo box
-#: ../glchess/data/preferences.ui.h:12
-msgid "Promotion Type:"
-msgstr "棋子升级："
-
-#. Preferences dialog: Label to notify user that the settings are applied for the next game
-#: ../glchess/data/preferences.ui.h:14
-msgid "Changes will take effect for the next game."
-msgstr "改动将在下一盘游戏中生效。"
-
-#. Preferences Dialog: Tab title for game preferences
-#: ../glchess/data/preferences.ui.h:16 ../gnect/src/prefs.c:263
-#: ../gnibbles/src/preferences.c:238 ../gnobots2/src/properties.c:497
-#: ../iagno/src/iagno.vala:490 ../quadrapassel/src/quadrapassel.vala:258
-msgid "Game"
-msgstr "游戏"
-
-#. Preferences Dialog: Check box for selecting if 3D view is available
-#: ../glchess/data/preferences.ui.h:18
-msgid "3_D Chess View"
-msgstr "3_D 象棋视图"
-
-#. Preferences Dialog: Check box for selecting if the 3D view is smoothed (anti-aliased)
-#: ../glchess/data/preferences.ui.h:20
-msgid "_Smooth Display"
-msgstr "平滑显示(_S)"
-
-#. Preferences Dialog: Label before piece style combo box
-#: ../glchess/data/preferences.ui.h:22
-msgid "Piece Style:"
-msgstr "棋子样式："
-
-#. Preferences Dialog: Check box for selecting if toolbar is visible
-#: ../glchess/data/preferences.ui.h:24 ../gnome-sudoku/src/lib/main.py:239
-msgid "Show _Toolbar"
-msgstr "显示工具栏(_T)"
-
-#. Preferences Dialog: Check box for selecting if history browser is visible
-#: ../glchess/data/preferences.ui.h:26
-msgid "Show _History"
-msgstr "显示历史(_H)"
-
-#. Preferences Dialog: Check box for selecting if move hints are visible
-#: ../glchess/data/preferences.ui.h:28
-msgid "_Move Hints"
-msgstr "走子提示(_M)"
-
-#. Preferences Dialog: Check box for selecting if board numbering is visible
-#: ../glchess/data/preferences.ui.h:30
-msgid "_Board Numbering"
-msgstr "棋盘编号(_B)"
-
-#. Preferences Dialog: Label before board orientation combo box
-#: ../glchess/data/preferences.ui.h:32
-msgid "Board Orientation:"
-msgstr "盘面方向："
-
-#. Preferences Dialog: Label before move format combo box
-#: ../glchess/data/preferences.ui.h:34
-msgid "Move Format:"
-msgstr "棋谱："
-
-#. Preferences Dialog: Title of appearance options tab
-#: ../glchess/data/preferences.ui.h:36
-msgid "_Appearance"
-msgstr "外观(_A)"
-
-#. Preferences Dialog: Combo box entry for easy game difficulty
-#: ../glchess/data/preferences.ui.h:38 ../gtali/src/setup.c:344
-msgctxt "difficulty"
-msgid "Easy"
-msgstr "简单"
-
-#. Preferences Dialog: Combo box entry for normal game difficulty
-#: ../glchess/data/preferences.ui.h:40
-msgctxt "difficulty"
-msgid "Normal"
-msgstr "正常"
-
-#. Preferences Dialog: Combo box entry for hard game difficulty
-#: ../glchess/data/preferences.ui.h:42 ../gtali/src/setup.c:346
-msgctxt "difficulty"
-msgid "Hard"
-msgstr "困难"
-
-#. Preferences Dialog: Combo box entry for human opponent
-#: ../glchess/data/preferences.ui.h:44
-msgctxt "chess-opponent"
-msgid "Human"
-msgstr "人类玩家"
-
-#. Preferences Dialog: Combo box entry for playing as white
-#: ../glchess/data/preferences.ui.h:46
-msgctxt "chess-player"
-msgid "White"
-msgstr "白方"
-
-#. Preferences Dialog: Combo box entry for playing as black
-#: ../glchess/data/preferences.ui.h:48
-msgctxt "chess-player"
-msgid "Black"
-msgstr "黑方"
-
-#. Preferences Dialog: Combo box entry for no game timer
-#: ../glchess/data/preferences.ui.h:50
-msgid "No limit"
-msgstr "无限"
-
-#. Preferences Dialog: Combo box entry for game timer of one minute
-#: ../glchess/data/preferences.ui.h:52
-msgid "One minute"
-msgstr "1 分钟"
-
-#. Preferences Dialog: Combo box entry for game timer of five minutes
-#: ../glchess/data/preferences.ui.h:54
-msgid "Five minutes"
-msgstr "5 分钟"
-
-#. Preferences Dialog: Combo box entry for game timer of thirty minutes
-#: ../glchess/data/preferences.ui.h:56
-msgid "30 minutes"
-msgstr "30 分钟"
-
-#. Preferences Dialog: Combo box entry for game timer of one hour
-#: ../glchess/data/preferences.ui.h:58
-msgid "One hour"
-msgstr "1 小时"
-
-#. Preferences Dialog: Combo box entry for custom game timer
-#: ../glchess/data/preferences.ui.h:60
-msgid "Custom"
-msgstr "自定义"
-
-#. Preferences Dialog: Combo box entry for simple theme
-#: ../glchess/data/preferences.ui.h:62
-msgid "Simple"
-msgstr "简单"
-
-#. Preferences Dialog: Combo box entry for fancy theme
-#: ../glchess/data/preferences.ui.h:64
-msgid "Fancy"
-msgstr "花俏"
-
-#. Preferences Dialog: Combo box entry for setting the board orientation to the white side
-#: ../glchess/data/preferences.ui.h:66
-msgctxt "chess-side"
-msgid "White Side"
-msgstr "白方"
-
-#. Preferences Dialog: Combo box entry for setting the board orientation to the black side
-#: ../glchess/data/preferences.ui.h:68
-msgctxt "chess-side"
-msgid "Black Side"
-msgstr "黑方"
-
-#. Preferences Dialog: Combo box entry for setting the board orientation to the side the human player is on
-#: ../glchess/data/preferences.ui.h:70
-msgctxt "chess-side"
-msgid "Human Side"
-msgstr "人类玩家方"
-
-#. Preferences Dialog: Combo box entry for setting the board orientation to the side the current active player is on
-#: ../glchess/data/preferences.ui.h:72
-msgctxt "chess-side"
-msgid "Current Player"
-msgstr "当前玩家"
-
-#. Preferences Dialog: Combo box entry for setting the board orientation face to face mode where opponents are looking at the same screen from opposite sides (e.g. with a tablet)
-#: ../glchess/data/preferences.ui.h:74
-msgctxt "chess-side"
-msgid "Face to Face"
-msgstr "面对面"
-
-#. Preferences Dialog: Combo box entry for setting the notation type to human readable descriptions
-#: ../glchess/data/preferences.ui.h:76
-msgctxt "chess-move-format"
-msgid "Human"
-msgstr "易读格式"
-
-#. Preferences Dialog: Combo box entry for setting the notation type to standard algebraic (SAN)
-#: ../glchess/data/preferences.ui.h:78
-msgctxt "chess-move-format"
-msgid "Standard Algebraic"
-msgstr "标准代数格式"
-
-#. Preferences Dialog: Combo box entry for setting the notation type to long figurine notation (FAN)
-#: ../glchess/data/preferences.ui.h:80
-msgctxt "chess-move-format"
-msgid "Figurine"
-msgstr "雕像格式"
-
-#. Preferences Dialog: Combo box entry for setting the notation type to long algebraic (LAN)
-#: ../glchess/data/preferences.ui.h:82
-msgctxt "chess-move-format"
-msgid "Long Algebraic"
-msgstr "长代数格式"
-
-#. Preferences Dialog: Combo box entry for setting the promition type to a queen
-#: ../glchess/data/preferences.ui.h:84
-msgctxt "chess-piece"
-msgid "Queen"
-msgstr "后"
-
-#. Preferences Dialog: Combo box entry for setting the promition type to a knight
-#: ../glchess/data/preferences.ui.h:86
-msgctxt "chess-piece"
-msgid "Knight"
-msgstr "骑士"
-
-#. Preferences Dialog: Combo box entry for setting the promition type to a rook
-#: ../glchess/data/preferences.ui.h:88
-msgctxt "chess-piece"
-msgid "Rook"
-msgstr "车"
-
-#. Preferences Dialog: Combo box entry for setting the promition type to a bishop
-#: ../glchess/data/preferences.ui.h:90
-msgctxt "chess-piece"
-msgid "Bishop"
-msgstr "相"
-
-#. Title of the window when explicitly loaded a file. The first argument is the
-#. * base name of the file (e.g. test.pgn), the second argument is the directory
-#. * (e.g. /home/fred)
-#: ../glchess/src/glchess.vala:235
-#, c-format
-msgid "%1$s (%2$s) - Chess"
-msgstr "%1$s (%2$s) - 国际象棋"
-
-#. Move History Combo: Go to the start of the game
-#: ../glchess/src/glchess.vala:244
-msgid "Game Start"
-msgstr "游戏开始"
-
-#. Note there are no move formats for pieces taking kings and this is not allowed in Chess rules
-#. Human Move String: Description of a white pawn moving from %1$s to %2s, e.g. 'c2 to c4'
-#: ../glchess/src/glchess.vala:461
-#, c-format
-msgid "White pawn moves from %1$s to %2$s"
-msgstr "白兵从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white pawn at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:463
-#, c-format
-msgid "White pawn at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white pawn at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:465
-#, c-format
-msgid "White pawn at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white pawn at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:467
-#, c-format
-msgid "White pawn at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white pawn at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:469
-#, c-format
-msgid "White pawn at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white pawn at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:471
-#, c-format
-msgid "White pawn at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a white rook moving from %1$s to %2$s, e.g. 'a1 to a5'
-#: ../glchess/src/glchess.vala:473
-#, c-format
-msgid "White rook moves from %1$s to %2$s"
-msgstr "白车从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white rook at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:475
-#, c-format
-msgid "White rook at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白车吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white rook at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:477
-#, c-format
-msgid "White rook at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白车吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white rook at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:479
-#, c-format
-msgid "White rook at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白车吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white rook at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:481
-#, c-format
-msgid "White rook at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白车吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white rook at %1$s capturing a queen at %2$s"
-#: ../glchess/src/glchess.vala:483
-#, c-format
-msgid "White rook at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白车吃掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a white knight moving from %1$s to %2$s, e.g. 'b1 to c3'
-#: ../glchess/src/glchess.vala:485
-#, c-format
-msgid "White knight moves from %1$s to %2$s"
-msgstr "白马从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white knight at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:487
-#, c-format
-msgid "White knight at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白马吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white knight at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:489
-#, c-format
-msgid "White knight at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白马吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white knight at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:491
-#, c-format
-msgid "White knight at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白马吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white knight at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:493
-#, c-format
-msgid "White knight at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白马吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white knight at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:495
-#, c-format
-msgid "White knight at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白马吃掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a white bishop moving from %1$s to %2$s, e.g. 'f1 to b5'
-#: ../glchess/src/glchess.vala:497
-#, c-format
-msgid "White bishop moves from %1$s to %2$s"
-msgstr "白象从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white bishop at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:499
-#, c-format
-msgid "White bishop at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白象吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white bishop at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:501
-#, c-format
-msgid "White bishop at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白象吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white bishop at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:503
-#, c-format
-msgid "White bishop at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白象吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white bishop at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:505
-#, c-format
-msgid "White bishop at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白象吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white bishop at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:507
-#, c-format
-msgid "White bishop at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白象吃掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a white queen moving from %1$s to %2$s, e.g. 'd1 to d4'
-#: ../glchess/src/glchess.vala:509
-#, c-format
-msgid "White queen moves from %1$s to %2$s"
-msgstr "白后从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white queen at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:511
-#, c-format
-msgid "White queen at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白后吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white queen at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:513
-#, c-format
-msgid "White queen at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白后吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white queen at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:515
-#, c-format
-msgid "White queen at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白后吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white queen at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:517
-#, c-format
-msgid "White queen at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白后吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white queen at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:519
-#, c-format
-msgid "White queen at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白后吃掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a white king moving from %1$s to %2$s, e.g. 'e1 to f1'
-#: ../glchess/src/glchess.vala:521
-#, c-format
-msgid "White king moves from %1$s to %2$s"
-msgstr "白王从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a white king at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:523
-#, c-format
-msgid "White king at %1$s takes the black pawn at %2$s"
-msgstr "在 %1$s 的白王吃掉在 %2$s 的黑兵"
-
-#. Human Move String: Description of a white king at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:525
-#, c-format
-msgid "White king at %1$s takes the black rook at %2$s"
-msgstr "在 %1$s 的白王吃掉在 %2$s 的黑车"
-
-#. Human Move String: Description of a white king at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:527
-#, c-format
-msgid "White king at %1$s takes the black knight at %2$s"
-msgstr "在 %1$s 的白王吃掉在 %2$s 的黑马"
-
-#. Human Move String: Description of a white king at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:529
-#, c-format
-msgid "White king at %1$s takes the black bishop at %2$s"
-msgstr "在 %1$s 的白王吃掉在 %2$s 的黑象"
-
-#. Human Move String: Description of a white king at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:531
-#, c-format
-msgid "White king at %1$s takes the black queen at %2$s"
-msgstr "在 %1$s 的白王掉在 %2$s 的黑后"
-
-#. Human Move String: Description of a black pawn moving from %1$s to %2$s, e.g. 'c8 to c6'
-#: ../glchess/src/glchess.vala:533
-#, c-format
-msgid "Black pawn moves from %1$s to %2$s"
-msgstr "黑兵从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black pawn at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:535
-#, c-format
-msgid "Black pawn at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black pawn at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:537
-#, c-format
-msgid "Black pawn at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black pawn at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:539
-#, c-format
-msgid "Black pawn at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black pawn at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:541
-#, c-format
-msgid "Black pawn at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black pawn at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:543
-#, c-format
-msgid "Black pawn at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白后"
-
-#. Human Move String: Description of a black rook moving from %1$s to %2$s, e.g. 'a8 to a4'
-#: ../glchess/src/glchess.vala:545
-#, c-format
-msgid "Black rook moves from %1$s to %2$s"
-msgstr "黑车从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black rook at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:547
-#, c-format
-msgid "Black rook at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑车吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black rook at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:549
-#, c-format
-msgid "Black rook at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑车吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black rook at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:551
-#, c-format
-msgid "Black rook at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑车吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black rook at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:553
-#, c-format
-msgid "Black rook at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑车吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black rook at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:555
-#, c-format
-msgid "Black rook at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑车吃掉在 %2$s 的白后"
-
-#. Human Move String: Description of a black knight moving from %1$s to %2$s, e.g. 'b8 to c6'
-#: ../glchess/src/glchess.vala:557
-#, c-format
-msgid "Black knight moves from %1$s to %2$s"
-msgstr "黑马从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black knight at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:559
-#, c-format
-msgid "Black knight at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑马吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black knight at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:561
-#, c-format
-msgid "Black knight at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑马吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black knight at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:563
-#, c-format
-msgid "Black knight at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑马吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black knight at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:565
-#, c-format
-msgid "Black knight at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑马吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black knight at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:567
-#, c-format
-msgid "Black knight at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑马吃掉在 %2$s 的白后"
-
-#. Human Move String: Description of a black bishop moving from %1$s to %2$s, e.g. 'f8 to b3'
-#: ../glchess/src/glchess.vala:569
-#, c-format
-msgid "Black bishop moves from %1$s to %2$s"
-msgstr "黑象从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black bishop at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:571
-#, c-format
-msgid "Black bishop at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑象吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black bishop at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:573
-#, c-format
-msgid "Black bishop at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑象吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black bishop at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:575
-#, c-format
-msgid "Black bishop at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑象吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black bishop at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:577
-#, c-format
-msgid "Black bishop at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑象吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black bishop at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:579
-#, c-format
-msgid "Black bishop at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑象吃掉在 %2$s 的白后"
-
-#. Human Move String: Description of a black queen moving from %1$s to %2$s, e.g. 'd8 to d5'
-#: ../glchess/src/glchess.vala:581
-#, c-format
-msgid "Black queen moves from %1$s to %2$s"
-msgstr "黑后从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black queen at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:583
-#, c-format
-msgid "Black queen at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑后吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black queen at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:585
-#, c-format
-msgid "Black queen at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑后吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black queen at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:587
-#, c-format
-msgid "Black queen at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑后吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black queen at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:589
-#, c-format
-msgid "Black queen at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑后吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black queen at %1$s capturing a queen at %2$s
-#: ../glchess/src/glchess.vala:591
-#, c-format
-msgid "Black queen at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑后吃掉在 %2$s 的白后"
-
-#. Human Move String: Description of a black king moving from %1$s to %2$s, e.g. 'e8 to f8'
-#: ../glchess/src/glchess.vala:593
-#, c-format
-msgid "Black king moves from %1$s to %2$s"
-msgstr "黑王从 %1$s 移动到 %2$s"
-
-#. Human Move String: Description of a black king at %1$s capturing a pawn at %2$s
-#: ../glchess/src/glchess.vala:595
-#, c-format
-msgid "Black king at %1$s takes the white pawn at %2$s"
-msgstr "在 %1$s 的黑王吃掉在 %2$s 的白兵"
-
-#. Human Move String: Description of a black king at %1$s capturing a rook at %2$s
-#: ../glchess/src/glchess.vala:597
-#, c-format
-msgid "Black king at %1$s takes the white rook at %2$s"
-msgstr "在 %1$s 的黑王吃掉在 %2$s 的白车"
-
-#. Human Move String: Description of a black king at %1$s capturing a knight at %2$s
-#: ../glchess/src/glchess.vala:599
-#, c-format
-msgid "Black king at %1$s takes the white knight at %2$s"
-msgstr "在 %1$s 的黑王吃掉在 %2$s 的白马"
-
-#. Human Move String: Description of a black king at %1$s capturing a bishop at %2$s
-#: ../glchess/src/glchess.vala:601
-#, c-format
-msgid "Black king at %1$s takes the white bishop at %2$s"
-msgstr "在 %1$s 的黑王吃掉在 %2$s 的白象"
-
-#. Human Move String: Description of a black king at %1$s capturing a queen at %2$s"
-#: ../glchess/src/glchess.vala:603
-#, c-format
-msgid "Black king at %1$s takes the white queen at %2$s"
-msgstr "在 %1$s 的黑王吃掉在 %2$s 的白后"
-
-#. Message display when the white player wins
-#: ../glchess/src/glchess.vala:723
-msgid "White wins"
-msgstr "白方获胜"
-
-#. Message display when the black player wins
-#: ../glchess/src/glchess.vala:728
-msgid "Black wins"
-msgstr "黑方获胜"
-
-#. Message display when the game is drawn
-#: ../glchess/src/glchess.vala:733
-msgid "Game is drawn"
-msgstr "和棋"
-
-#. Message displayed when the game ends due to a player being checkmated
-#: ../glchess/src/glchess.vala:745
-msgid "Opponent is in check and cannot move (checkmate)"
-msgstr "对方正被将军且无子可走(将死)"
-
-#. Message displayed when the game terminates due to a stalemate
-#: ../glchess/src/glchess.vala:749
-msgid "Opponent cannot move (stalemate)"
-msgstr "对方无子可走(逼和)"
-
-#. Message displayed when the game is drawn due to the fifty move rule
-#: ../glchess/src/glchess.vala:753
-msgid "No piece has been taken or pawn moved in the last fifty moves"
-msgstr "过去十五步内没有子被吃且兵没有移动"
-
-#. Message displayed when the game ends due to one player's clock stopping
-#: ../glchess/src/glchess.vala:757
-msgid "Opponent has run out of time"
-msgstr "对方超时"
-
-#. Message displayed when the game is drawn due to the three-fold-repitition rule
-#: ../glchess/src/glchess.vala:761
-msgid "The same board state has occurred three times (three fold repetition)"
-msgstr "对局中同一局面已出现三次 (三次折叠重复)"
-
-#. Message displayed when the game is drawn due to the insufficient material rule
-#: ../glchess/src/glchess.vala:765
-msgid "Neither player can cause checkmate (insufficient material)"
-msgstr "双方都无法将死对方 (子力不足)"
-
-#. Message displayed when the game ends due to the black player resigning
-#: ../glchess/src/glchess.vala:771
-msgid "The black player has resigned"
-msgstr "黑方已认输"
-
-#. Message displayed when the game ends due to the white player resigning
-#: ../glchess/src/glchess.vala:776
-msgid "The white player has resigned"
-msgstr "白方已认输"
-
-#. Message displayed when a game is abandoned
-#: ../glchess/src/glchess.vala:781
-msgid "The game has been abandoned"
-msgstr "已放弃游戏"
-
-#. Message displayed when the game ends due to a player dying
-#: ../glchess/src/glchess.vala:786
-msgid "One of the players has died"
-msgstr "一方已被将死"
-
-#: ../glchess/src/glchess.vala:851
-msgid "Save this game before starting a new one?"
-msgstr "开始新游戏前保存当前游戏？"
-
-#: ../glchess/src/glchess.vala:853 ../gnome-sudoku/src/lib/main.py:403
-msgid "_Abandon game"
-msgstr "放弃游戏(_A)"
-
-#: ../glchess/src/glchess.vala:854 ../gnome-sudoku/src/lib/main.py:402
-msgid "_Save game for later"
-msgstr "保存游戏以后再玩(_S)"
-
-#. Preferences Dialog: Combo box entry for a custom game timer set in seconds
-#: ../glchess/src/glchess.vala:1245
-msgid "second"
-msgid_plural "seconds"
-msgstr[0] "秒"
-
-#. Preferences Dialog: Combo box entry for a custom game timer set in minutes
-#: ../glchess/src/glchess.vala:1249
-msgid "minute"
-msgid_plural "minutes"
-msgstr[0] "分"
-
-#. Preferences Dialog: Combo box entry for a custom game timer set in hours
-#: ../glchess/src/glchess.vala:1253
-msgid "hour"
-msgid_plural "hours"
-msgstr[0] "小时"
-
-#: ../glchess/src/glchess.vala:1374
+"GNOME 扫雷是一款寻找隐藏地雷的解谜游戏。以最快的速度给棋盘上有雷的地方插上"
+"旗，让棋盘变安全。棋盘上所有雷都插上旗时游戏胜利。小心别点到雷哦，点到游戏就"
+"结束了！"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
-"The 2D/3D chess game for GNOME. \n"
-"\n"
-"glChess is a part of GNOME Games."
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
+"that's better than hitting a mine!"
 msgstr ""
-"GNOME 的 2D/3D 国际象棋游戏。\n"
-"\n"
-"国际象棋是 GNOME 游戏的一部分。"
-
-#: ../glchess/src/glchess.vala:1379 ../glines/src/glines.c:1183
-#: ../gnect/src/main.c:831 ../gnibbles/src/main.c:177
-#: ../gnobots2/src/menu.c:269 ../gnomine/src/gnomine.vala:687
-#: ../gnotravex/src/gnotravex.vala:295 ../gnotski/src/gnotski.c:1461
-#: ../gtali/src/gyahtzee.c:619 ../iagno/src/iagno.vala:286
-#: ../lightsoff/src/lightsoff.vala:155 ../mahjongg/src/mahjongg.vala:542
-#: ../quadrapassel/src/quadrapassel.vala:681
-#: ../swell-foop/src/swell-foop.vala:390
-msgid "GNOME Games web site"
-msgstr "GNOME 游戏网站"
-
-#. Title of save game dialog
-#: ../glchess/src/glchess.vala:1433
-msgid "Save Chess Game"
-msgstr "保存象棋游戏"
-
-#. Save Game Dialog: Name of filter to show only PGN files
-#. Load Game Dialog: Name of filter to show only PGN files
-#: ../glchess/src/glchess.vala:1446 ../glchess/src/glchess.vala:1514
-msgid "PGN files"
-msgstr "PGN 文件"
-
-#. Save Game Dialog: Name of filter to show all files
-#. Load Game Dialog: Name of filter to show all files
-#: ../glchess/src/glchess.vala:1453 ../glchess/src/glchess.vala:1521
-msgid "All files"
-msgstr "所有文件"
-
-#: ../glchess/src/glchess.vala:1477
-#, c-format
-msgid "Failed to save game: %s"
-msgstr "无法保存游戏：%s"
-
-#. Title of load game dialog
-#: ../glchess/src/glchess.vala:1501
-msgid "Load Chess Game"
-msgstr "载入象棋游戏"
-
-#: ../glchess/src/glchess.vala:1543
-#, c-format
-msgid "Failed to open game: %s"
-msgstr "无法打开游戏：%s"
-
-#. Help string for command line --version flag
-#: ../glchess/src/glchess.vala:1604
-msgid "Show release version"
-msgstr "显示发行版本"
-
-#. Arguments and description for --help text
-#: ../glchess/src/glchess.vala:1619
-msgid "[FILE] - Play Chess"
-msgstr "[文件] - 玩国际象棋"
-
-#. Text printed out when an unknown command-line argument provided
-#: ../glchess/src/glchess.vala:1630
-#, c-format
-msgid "Run '%s --help' to see a full list of available command line options."
-msgstr "运行“%s --help”来查看可用命令行选项的完整列表。"
-
-#: ../glines/data/glines.desktop.in.in.h:1 ../glines/src/glines.c:1169
-#: ../glines/src/glines.c:1172 ../glines/src/glines.c:1530
-msgid "Five or More"
-msgstr "连珠消球"
-
-#: ../glines/data/glines.desktop.in.in.h:2
-msgid "Remove colored balls from the board by forming lines"
-msgstr "将彩球连成一线以消去"
-
-#: ../glines/data/glines-preferences.ui.h:1
-msgid "Five or More Preferences"
-msgstr "连珠消球首选项"
-
-#: ../glines/data/glines-preferences.ui.h:2 ../gnect/src/prefs.c:295
-#: ../gnobots2/src/properties.c:536 ../iagno/src/iagno.vala:568
-#: ../swell-foop/data/preferences.ui.h:6
-msgid "Appearance"
-msgstr "外观"
-
-#: ../glines/data/glines-preferences.ui.h:3
-msgid "_Image:"
-msgstr "图像(_I)："
-
-#: ../glines/data/glines-preferences.ui.h:4
-msgid "B_ackground color:"
-msgstr "背景颜色(_A)："
-
-#: ../glines/data/glines-preferences.ui.h:5
-msgid "Board Size"
-msgstr "盘面大小"
-
-#: ../glines/data/glines-preferences.ui.h:6
-msgid "_Small"
-msgstr "小(_S)"
-
-#: ../glines/data/glines-preferences.ui.h:7
-#: ../gnome-sudoku/data/print_games.ui.h:7
-msgid "_Medium"
-msgstr "中等(_M)"
-
-#: ../glines/data/glines-preferences.ui.h:8
-msgid "_Large"
-msgstr "大(_L)"
-
-#: ../glines/data/glines-preferences.ui.h:9
-msgid "General"
-msgstr "常规"
-
-#: ../glines/data/glines-preferences.ui.h:10
-msgid "_Use fast moves"
-msgstr "使用快速移动(_U)"
-
-#: ../glines/data/glines.ui.h:1
-msgid "Five or more"
-msgstr "五或更多"
-
-#: ../glines/data/glines.ui.h:7
-msgid "Next:"
-msgstr "下个球："
-
-#: ../glines/data/glines.ui.h:8
-msgid "0"
-msgstr "0"
-
-#: ../glines/data/glines.ui.h:9 ../gnobots2/src/statusbar.c:68
-#: ../gnomine/src/gnomine.vala:647 ../quadrapassel/src/quadrapassel.vala:174
-msgid "Score:"
-msgstr "得分:"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:1
-msgid "Playing field size"
-msgstr "场地大小"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:2
-msgid ""
-"Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
-msgstr "游戏区大小。1=小，2=中，3=大。其它值非法。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:3
-msgid "Ball style"
-msgstr "小球样式"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:4
-msgid "Ball style. The filename of the images to use for the balls."
-msgstr "球的样式。球所使用的图片文件。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:5
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:5
-msgid "Background color"
-msgstr "背景颜色"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:6
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:6
-msgid "Background color. The hex specification of the background color."
-msgstr "背景颜色，用十六进制表示。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:7
-msgid "Time between moves"
-msgstr "移动之间的时间"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:8
-msgid "Time between moves in milliseconds."
-msgstr "移动之间的时间，以毫秒计。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:9
-msgid "Game score"
-msgstr "游戏得分"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:10
-msgid "Game score from last saved session."
-msgstr "自上次保存的会话后的游戏得分。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:11
-msgid "Game field"
-msgstr "游戏状态"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:12
-msgid "Game field from last saved session."
-msgstr "游戏上次保存时的状态。"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:13
-msgid "Game preview"
-msgstr "游戏预览"
-
-#: ../glines/data/org.gnome.glines.gschema.xml.in.h:14
-msgid "Game preview from last saved session."
-msgstr "自上次保存的会话后的游戏预览。"
-
-#: ../glines/src/glines.c:80 ../gnomine/src/gnomine.vala:62
-msgctxt "board size"
-msgid "Small"
-msgstr "小"
-
-#: ../glines/src/glines.c:81 ../gnomine/src/gnomine.vala:63
-msgctxt "board size"
-msgid "Medium"
-msgstr "中"
-
-#: ../glines/src/glines.c:82 ../gnomine/src/gnomine.vala:64
-msgctxt "board size"
-msgid "Large"
-msgstr "大"
-
-#: ../glines/src/glines.c:169
-msgid "Could not load theme"
-msgstr "无法载入主题"
-
-#: ../glines/src/glines.c:195
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"The default theme will be loaded instead."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"将载入默认主题。"
-
-#: ../glines/src/glines.c:202
-#, c-format
-msgid ""
-"Unable to locate file:\n"
-"%s\n"
-"\n"
-"Please check that Five or More is installed correctly."
-msgstr ""
-"无法定位文件：\n"
-"%s\n"
-"\n"
-"请检查您的连珠消球安装是否正确。"
-
-#: ../glines/src/glines.c:407
-msgid "Match five objects of the same type in a row to score!"
-msgstr "在一线上放置五个以上同色球以便得分！"
-
-#: ../glines/src/glines.c:469
-msgid "GNOME Five or More"
-msgstr "GNOME 连珠消球"
-
-#: ../glines/src/glines.c:471
-msgid "_Board size:"
-msgstr "棋盘大小(_B)："
-
-#: ../glines/src/glines.c:488 ../swell-foop/src/game-view.vala:338
-msgid "Game Over!"
-msgstr "游戏结束！"
-
-#. Can't move there!
-#: ../glines/src/glines.c:645
-msgid "You can't move there!"
-msgstr "不能放在这儿！"
-
-#: ../glines/src/glines.c:1174
-msgid ""
-"GNOME port of the once-popular Color Lines game.\n"
-"\n"
-"Five or More is a part of GNOME Games."
-msgstr ""
-"流行的连珠消球游戏的 GNOME 版本\n"
-"\n"
-"连珠消球是 GNOME 游戏的一部分。"
-
-#: ../glines/src/glines.c:1180 ../gnect/src/main.c:834
-#: ../gnibbles/src/main.c:174 ../gnobots2/src/menu.c:274
-#: ../gnome-sudoku/src/lib/main.py:669 ../gnomine/src/gnomine.vala:684
-#: ../gnotravex/src/gnotravex.vala:292 ../gnotski/src/gnotski.c:1458
-#: ../gtali/src/gyahtzee.c:615 ../iagno/src/iagno.vala:284
-#: ../lightsoff/src/lightsoff.vala:152 ../mahjongg/src/mahjongg.vala:539
-#: ../quadrapassel/src/quadrapassel.vala:684
-#: ../swell-foop/src/swell-foop.vala:387
-msgid "translator-credits"
-msgstr ""
-"Yang Zhang <zyangmath@gmail.com>, 2007\n"
-"Ping Z <zpsigma@gmail.com>, 2007\n"
-"Xhacker Liu <liu.dongyuan@gmail.com>, 2010"
-
-#: ../gnect/data/gnect.desktop.in.in.h:1
-msgid "Four-in-a-Row"
-msgstr "四子连线"
-
-#: ../gnect/data/gnect.desktop.in.in.h:2
-msgid "Make lines of the same color to win"
-msgstr "将四粒棋子排成一线以取胜"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:1
-msgid "Level of Player One"
-msgstr "玩家一的级别"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:2
-msgid ""
-"Zero is human; one through three correspond to the level of the computer "
-"player."
-msgstr "0 代表玩家；1 至 3 代表相应的计算机玩家。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:3
-msgid "Level of Player Two"
-msgstr "玩家二的级别"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:4
-msgid "Theme ID"
-msgstr "主题编号"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:5
-msgid "A number specifying the preferred theme."
-msgstr "指定首选主题的数字。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:6
-msgid "Animate"
-msgstr "动画"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:7
-msgid "Whether or not to use animation."
-msgstr "是否使用动画。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:8
-#: ../gnobots2/src/properties.c:483
-#: ../iagno/data/org.gnome.iagno.gschema.xml.in.h:1
-msgid "Sound"
-msgstr "音效"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:9
-#: ../iagno/data/org.gnome.iagno.gschema.xml.in.h:2
-msgid "Whether or not to play event sounds."
-msgstr "是否播放事件声音。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:10 ../gnect/src/prefs.c:332
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:25
-#: ../gnibbles/src/preferences.c:421
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:23
-#: ../quadrapassel/src/quadrapassel.vala:362
-msgid "Move left"
-msgstr "向左移动"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:11
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:24
-msgid "Key press to move left."
-msgstr "左移的按键。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:12 ../gnect/src/prefs.c:333
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:27
-#: ../gnibbles/src/preferences.c:422
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:25
-#: ../quadrapassel/src/quadrapassel.vala:363
-msgid "Move right"
-msgstr "向右移动"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:13
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:26
-msgid "Key press to move right."
-msgstr "右移的按键。"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:14 ../gnect/src/prefs.c:334
-msgid "Drop marble"
-msgstr "落下小球"
-
-#: ../gnect/data/org.gnome.gnect.gschema.xml.in.h:15
-msgid "Key press to drop a marble."
-msgstr "落下小球的按键。"
-
-#: ../gnect/src/gfx.c:248
-#, c-format
-msgid ""
-"Unable to load image:\n"
-"%s"
-msgstr ""
-"无法载入图像：\n"
-"%s"
-
-#: ../gnect/src/main.c:525
-msgid "It's a draw!"
-msgstr "平局！"
-
-#: ../gnect/src/main.c:534 ../gnome-sudoku/src/lib/main.py:391
-msgid "You win!"
-msgstr "您赢了！"
-
-#: ../gnect/src/main.c:536 ../gnect/src/main.c:555
-msgid "It is your move."
-msgstr "该您了。"
-
-#: ../gnect/src/main.c:539
-msgid "I win!"
-msgstr "我赢了！"
-
-#: ../gnect/src/main.c:541 ../gnect/src/main.c:643
-msgid "Thinking..."
-msgstr "思考中..."
-
-#: ../gnect/src/main.c:552
-#, c-format
-msgid "%s wins!"
-msgstr "%s 赢了！"
-
-#: ../gnect/src/main.c:559
-#, c-format
-msgid "Waiting for %s to move."
-msgstr "等待 %s 走棋。"
-
-#: ../gnect/src/main.c:660
-#, c-format
-msgid "Hint: Column %d"
-msgstr "提示：列 %d"
-
-#: ../gnect/src/main.c:688 ../gnect/src/main.c:692
-msgid "You:"
-msgstr "您："
-
-#: ../gnect/src/main.c:689 ../gnect/src/main.c:691
-msgid "Me:"
-msgstr "我："
-
-#: ../gnect/src/main.c:737
-msgid "Scores"
-msgstr "得分"
-
-#: ../gnect/src/main.c:781
-msgid "Drawn:"
-msgstr "平局："
-
-#: ../gnect/src/main.c:830
-msgid ""
-"\"Four in a Row\" for GNOME, with a computer player driven by Giuliano "
-"Bertoletti's Velena Engine.\n"
-"\n"
-"\"Four in a Row\" is a part of GNOME Games."
-msgstr ""
-"GNOME 的四子连线游戏，带有由 Giuliano Bertoletti 编写的 Velena 引擎驱动的电脑"
-"玩家。\n"
-"\n"
-"四子连线是 GNOME 游戏的一部分。"
-
-#: ../gnect/src/main.c:1196 ../gnibbles/src/main.c:606
-#: ../gnobots2/src/menu.c:66 ../gnotski/src/gnotski.c:398
-msgid "_View"
-msgstr "查看(_V)"
-
-#: ../gnect/src/prefs.c:90
-#, c-format
-msgid ""
-"Player One:\n"
-"%s"
-msgstr ""
-"玩家一：\n"
-"%s"
-
-#: ../gnect/src/prefs.c:94
-#, c-format
-msgid ""
-"Player Two:\n"
-"%s"
-msgstr ""
-"玩家二：\n"
-"%s"
-
-#: ../gnect/src/prefs.c:211 ../gtali/src/gyahtzee.c:999
-#: ../gtali/src/yahtzee.c:69 ../iagno/src/iagno.vala:514
-#: ../iagno/src/iagno.vala:544
-msgid "Human"
-msgstr "人"
-
-#: ../gnect/src/prefs.c:213 ../iagno/src/iagno.vala:520
-#: ../iagno/src/iagno.vala:550
-msgid "Level one"
-msgstr "一级"
-
-#: ../gnect/src/prefs.c:215 ../iagno/src/iagno.vala:526
-#: ../iagno/src/iagno.vala:556
-msgid "Level two"
-msgstr "二级"
-
-#: ../gnect/src/prefs.c:217 ../iagno/src/iagno.vala:532
-#: ../iagno/src/iagno.vala:562
-msgid "Level three"
-msgstr "三级"
-
-#: ../gnect/src/prefs.c:241
-msgid "Four-in-a-Row Preferences"
-msgstr "四子连线首选项"
-
-#: ../gnect/src/prefs.c:304
-msgid "_Theme:"
-msgstr "主题(_T)："
-
-#: ../gnect/src/prefs.c:319
-msgid "Enable _animation"
-msgstr "启用动画(_A)"
-
-#: ../gnect/src/prefs.c:323 ../gnibbles/src/preferences.c:322
-#: ../iagno/src/iagno.vala:503
-msgid "E_nable sounds"
-msgstr "启用声音(_N)"
-
-#. keyboard tab
-#: ../gnect/src/prefs.c:328 ../gnibbles/src/preferences.c:416
-#: ../gnobots2/src/properties.c:543 ../quadrapassel/src/quadrapassel.vala:355
-msgid "Keyboard Controls"
-msgstr "键盘控制"
-
-#: ../gnect/src/theme.c:41
-msgid "Classic"
-msgstr "经典"
-
-#: ../gnect/src/theme.c:45 ../gnect/src/theme.c:66 ../gnect/src/theme.c:73
-#: ../gnect/src/theme.c:80 ../gnibbles/src/preferences.c:449
-msgid "Red"
-msgstr "红色"
-
-#: ../gnect/src/theme.c:45 ../gnibbles/src/preferences.c:452
-msgid "Yellow"
-msgstr "黄色"
-
-#: ../gnect/src/theme.c:48
-msgid "High Contrast"
-msgstr "黑白"
-
-#: ../gnect/src/theme.c:52 ../gnect/src/theme.c:59
-msgid "Circle"
-msgstr "圈"
-
-#: ../gnect/src/theme.c:52 ../gnect/src/theme.c:59
-msgid "Cross"
-msgstr "叉"
-
-#: ../gnect/src/theme.c:55
-msgid "High Contrast Inverse"
-msgstr "白黑"
-
-#: ../gnect/src/theme.c:62
-msgid "Cream Marbles"
-msgstr "弹球"
-
-#: ../gnect/src/theme.c:66 ../gnect/src/theme.c:73 ../gnect/src/theme.c:80
-#: ../gnect/src/theme.c:87 ../gnibbles/src/preferences.c:451
-msgid "Blue"
-msgstr "蓝色"
-
-#: ../gnect/src/theme.c:69
-msgid "Glass Marbles"
-msgstr "玻璃球"
-
-#: ../gnect/src/theme.c:76
-msgid "Nightfall"
-msgstr "夜色"
-
-#: ../gnect/src/theme.c:83
-msgid "Blocks"
-msgstr "砖块"
-
-#: ../gnect/src/theme.c:87
-msgid "Orange"
-msgstr "橙色"
-
-#: ../gnibbles/data/gnibbles.desktop.in.in.h:1 ../gnibbles/src/main.c:162
-#: ../gnibbles/src/main.c:165 ../gnibbles/src/main.c:700
-#: ../gnibbles/src/main.c:771 ../gnibbles/src/main.c:902
-msgid "Nibbles"
-msgstr "贪食蛇"
-
-#: ../gnibbles/data/gnibbles.desktop.in.in.h:2
-msgid "Guide a worm around a maze"
-msgstr "小蛇游走于迷宫"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:1
-msgid "Number of human players"
-msgstr "人类玩家数量"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:2
-msgid "Number of human players."
-msgstr "人类玩家数量。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:3
-msgid "Number of AI players"
-msgstr "AI 玩家数量"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:4
-msgid "Number of AI players."
-msgstr "AI 玩家数量。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:5
-msgid "Game speed"
-msgstr "游戏速度"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:6
-msgid "Game speed (1=fast, 4=slow)."
-msgstr "游戏速度(1=最快，4=最慢)。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:7
-msgid "Enable fake bonuses"
-msgstr "启用虚假奖品"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:8
-msgid "Enable fake bonuses."
-msgstr "启用虚假食物。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:9
-msgid "Play levels in random order"
-msgstr "以随机顺序排列级别"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:10
-msgid "Play levels in random order."
-msgstr "以随机顺序排列级别。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:11
-msgid "Game level to start on"
-msgstr "开始的游戏级别"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:12
-msgid "Game level to start on."
-msgstr "开始的游戏级别。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:13
-msgid "Enable sounds"
-msgstr "启用声音"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:14
-msgid "Enable sounds."
-msgstr "启用声音。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:15
-msgid "Size of game tiles"
-msgstr "游戏界面大小"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:16
-msgid "Size of game tiles."
-msgstr "游戏界面大小。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:17
-msgid "Color to use for worm"
-msgstr "小蛇要使用的颜色"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:18
-msgid "Color to use for worm."
-msgstr "小蛇要使用的颜色。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:19
-msgid "Use relative movement"
-msgstr "使用相对移动"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:20
-msgid "Use relative movement (ie. left or right only)."
-msgstr "使用相对移动(即只有左转右转)。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:21
-#: ../gnibbles/src/preferences.c:423
-msgid "Move up"
-msgstr "上移"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:22
-msgid "Key to use for motion up."
-msgstr "向上移动所用的键。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:23
-#: ../gnibbles/src/preferences.c:424
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:27
-#: ../quadrapassel/src/quadrapassel.vala:364
-msgid "Move down"
-msgstr "下移"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:24
-msgid "Key to use for motion down."
-msgstr "向下移动所用的键。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:26
-msgid "Key to use for motion left."
-msgstr "向左移动所用的键。"
-
-#: ../gnibbles/data/org.gnome.gnibbles.gschema.xml.in.h:28
-msgid "Key to use for motion right."
-msgstr "向右移动所用的键。"
-
-#: ../gnibbles/src/board.c:245
-#, c-format
-msgid ""
-"Nibbles couldn't load level file:\n"
-"%s\n"
-"\n"
-"Please check your Nibbles installation"
-msgstr ""
-"贪食蛇无法载入级别文件：\n"
-"%s\n"
-"\n"
-"请检查贪食蛇的安装"
-
-#: ../gnibbles/src/board.c:264
-#, c-format
-msgid ""
-"Level file appears to be damaged:\n"
-"%s\n"
-"\n"
-"Please check your Nibbles installation"
-msgstr ""
-"级别文件看起来损坏了：\n"
-"%s\n"
-"\n"
-"请检查贪食蛇的安装"
-
-#: ../gnibbles/src/gnibbles.c:85
-#, c-format
-msgid ""
-"Nibbles couldn't find pixmap file:\n"
-"%s\n"
-"\n"
-"Please check your Nibbles installation"
-msgstr ""
-"贪食蛇无法找到位图文件：\n"
-"%s\n"
-"\n"
-"请检查贪食蛇的安装"
-
-#: ../gnibbles/src/gnibbles.c:356
-msgid "Nibbles Scores"
-msgstr "贪食蛇得分"
-
-#: ../gnibbles/src/gnibbles.c:359
-msgid "Speed:"
-msgstr "速度："
-
-#: ../gnibbles/src/gnibbles.c:364 ../gnobots2/src/game.c:179
-#: ../gnomine/src/gnomine.vala:422 ../gnotravex/src/gnotravex.vala:201
-#: ../gnotski/src/gnotski.c:773 ../gtali/src/gyahtzee.c:195
-#, c-format
-msgid "Congratulations!"
-msgstr "恭喜！"
-
-#: ../gnibbles/src/gnibbles.c:365 ../gnobots2/src/game.c:180
-#: ../gnomine/src/gnomine.vala:422 ../gnotravex/src/gnotravex.vala:201
-#: ../gnotski/src/gnotski.c:774 ../gtali/src/gyahtzee.c:196
-#: ../mahjongg/src/mahjongg.vala:263 ../quadrapassel/src/quadrapassel.vala:619
-msgid "Your score is the best!"
-msgstr "您取得了最好成绩！"
-
-#: ../gnibbles/src/gnibbles.c:366 ../gnobots2/src/game.c:181
-#: ../gnomine/src/gnomine.vala:422 ../gnotravex/src/gnotravex.vala:201
-#: ../gnotski/src/gnotski.c:775 ../gtali/src/gyahtzee.c:197
-#: ../mahjongg/src/mahjongg.vala:265 ../quadrapassel/src/quadrapassel.vala:621
-msgid "Your score has made the top ten."
-msgstr "您已经进入了前十名。"
-
-#: ../gnibbles/src/main.c:66
-msgctxt "game speed"
-msgid "Beginner"
-msgstr "初学"
-
-#: ../gnibbles/src/main.c:67
-msgctxt "game speed"
-msgid "Slow"
-msgstr "慢速"
-
-#: ../gnibbles/src/main.c:68
-msgctxt "game speed"
-msgid "Medium"
-msgstr "中等"
-
-#: ../gnibbles/src/main.c:69
-msgctxt "game speed"
-msgid "Fast"
-msgstr "快速"
-
-#: ../gnibbles/src/main.c:70
-msgctxt "game speed"
-msgid "Beginner with Fakes"
-msgstr "初学 (含虚假食物)"
-
-#: ../gnibbles/src/main.c:71
-msgctxt "game speed"
-msgid "Slow with Fakes"
-msgstr "慢速 (含虚假食物)"
-
-#: ../gnibbles/src/main.c:72
-msgctxt "game speed"
-msgid "Medium with Fakes"
-msgstr "中等 (含虚假食物)"
-
-#: ../gnibbles/src/main.c:73
-msgctxt "game speed"
-msgid "Fast with Fakes"
-msgstr "快速 (含虚假食物)"
-
-#: ../gnibbles/src/main.c:171
-msgid ""
-"A worm game for GNOME.\n"
-"\n"
-"Nibbles is a part of GNOME Games."
-msgstr ""
-"GNOME 中的贪食蛇游戏。\n"
-"\n"
-"贪食蛇是 GNOME 游戏的一部分。"
-
-#: ../gnibbles/src/main.c:492
-#, c-format
-msgid "Game over! The game has been won by %s!"
-msgstr "游戏结束！%s 赢得了游戏！"
-
-#. Translators: This string will be included in the intro screen, so don't make sure it fits!
-#: ../gnibbles/src/main.c:773
-msgid "A worm game for GNOME."
-msgstr "GNOME 下的贪食蛇游戏。"
-
-#: ../gnibbles/src/preferences.c:225
-msgid "Nibbles Preferences"
-msgstr "贪食蛇首选项"
-
-#: ../gnibbles/src/preferences.c:245
-msgid "Speed"
-msgstr "速度"
-
-#: ../gnibbles/src/preferences.c:255
-msgid "Nibbles newbie"
-msgstr "贪食蛇新手"
-
-#: ../gnibbles/src/preferences.c:265
-msgid "My second day"
-msgstr "我的第二天"
-
-#: ../gnibbles/src/preferences.c:275
-msgid "Not too shabby"
-msgstr "不要太卑劣"
-
-#: ../gnibbles/src/preferences.c:285
-msgid "Finger-twitching good"
-msgstr "手指痉挛才好"
-
-#. Options
-#: ../gnibbles/src/preferences.c:295 ../gnibbles/src/preferences.c:430
-#: ../gnobots2/src/properties.c:459 ../iagno/src/iagno.vala:575
-msgid "Options"
-msgstr "选项"
-
-#: ../gnibbles/src/preferences.c:302
-msgid "_Play levels in random order"
-msgstr "以随机顺序排列级别(_P)"
-
-#: ../gnibbles/src/preferences.c:312
-msgid "_Enable fake bonuses"
-msgstr "启用虚假食物(_E)"
-
-#. starting level
-#: ../gnibbles/src/preferences.c:335 ../quadrapassel/src/quadrapassel.vala:295
-msgid "_Starting level:"
-msgstr "起始级别(_S)："
-
-#: ../gnibbles/src/preferences.c:364
-msgid "Number of _human players:"
-msgstr "人类玩家数目(_H)："
-
-#: ../gnibbles/src/preferences.c:385
-msgid "Number of _AI players:"
-msgstr "AI 玩家数目(_A)："
-
-#: ../gnibbles/src/preferences.c:407
-msgid "Worm"
-msgstr "小蛇"
-
-#: ../gnibbles/src/preferences.c:436
-msgid "_Use relative movement"
-msgstr "使用相对移动(_U)"
-
-#: ../gnibbles/src/preferences.c:443
-msgid "_Worm color:"
-msgstr "小蛇颜色(_W)："
-
-#: ../gnibbles/src/preferences.c:450
-msgid "Green"
-msgstr "绿"
-
-#: ../gnibbles/src/preferences.c:453
-msgid "Cyan"
-msgstr "青"
-
-#: ../gnibbles/src/preferences.c:454
-msgid "Purple"
-msgstr "紫"
-
-#: ../gnibbles/src/preferences.c:455
-msgid "Gray"
-msgstr "灰"
-
-#: ../gnibbles/src/scoreboard.c:48
-#, c-format
-msgid "Worm %d:"
-msgstr "小蛇%d:"
-
-#: ../gnobots2/data/gnobots2.desktop.in.in.h:1 ../gnobots2/src/gnobots.c:171
-#: ../gnobots2/src/gnobots.c:184 ../gnobots2/src/menu.c:262
-#: ../gnobots2/src/menu.c:265
-msgid "Robots"
-msgstr "机器人"
-
-#: ../gnobots2/data/gnobots2.desktop.in.in.h:2
-msgid "Avoid the robots and make them crash into each other"
-msgstr "避免碰到机器人并让它们撞在一起"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:1
-msgid "Show toolbar"
-msgstr "显示工具栏"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:2
-msgid "Show toolbar. A standard option for toolbars."
-msgstr "显示工具栏。工具栏的标准选项。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:3
-msgid "Robot image theme"
-msgstr "机器人图像主题"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:4
-msgid "Robot image theme. The theme of the images to use for the robots."
-msgstr "机器人图像主题。机器人所用的图像主题。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:7
-msgid "Game type"
-msgstr "游戏类型"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:8
-msgid "Game type. The name of the game variation to use."
-msgstr "游戏类型。要使用的游戏变种的名称。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:9
-msgid "Use safe moves"
-msgstr "使用安全移动"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:10
-msgid ""
-"Use safe moves. The safe moves option will help you to avoid being killed "
-"due to a mistake. If you try to make a move that would lead to your death "
-"when there is a safe move available you will not be allowed to proceed."
-msgstr ""
-"使用安全移动。安全移动选项将帮助您避免因失误而被杀死。如果您在使用了安全移动"
-"时试图作出一步将导致您死亡的移动的话，您将不会被允许那样移动。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:11
-msgid "Use super safe moves"
-msgstr "使用超级安全移动"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:12
-msgid ""
-"Use super safe moves. The player is alerted when there is no safe move and "
-"the only option is to teleport out."
-msgstr ""
-"使用超级安全移动。当没有可用的安全移动时，用户会收到警告，此时唯一的选择是使"
-"用随机移动。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:13
-msgid "Enable game sounds"
-msgstr "启用游戏音效"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:14
-msgid "Enable game sounds. Play sounds for various events throughout the game."
-msgstr "启用游戏音效。在玩游戏的过程中的各种事件可播放声音。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:15
-#: ../gnobots2/src/properties.c:550
-msgid "Key to move NW"
-msgstr "左上移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:16
-msgid "The key used to move north-west."
-msgstr "左上移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:17
-#: ../gnobots2/src/properties.c:551
-msgid "Key to move N"
-msgstr "上移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:18
-msgid "The key used to move north."
-msgstr "上移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:19
-#: ../gnobots2/src/properties.c:552
-msgid "Key to move NE"
-msgstr "右上移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:20
-msgid "The key used to move north-east."
-msgstr "右上移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:21
-#: ../gnobots2/src/properties.c:553
-msgid "Key to move W"
-msgstr "左移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:22
-msgid "The key used to move west."
-msgstr "左移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:23
-#: ../gnobots2/src/properties.c:558
-msgid "Key to hold"
-msgstr "停住键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:24
-msgid "The key used to hold still."
-msgstr "用于停住的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:25
-#: ../gnobots2/src/properties.c:554
-msgid "Key to move E"
-msgstr "右移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:26
-msgid "The key used to move east."
-msgstr "右移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:27
-#: ../gnobots2/src/properties.c:555
-msgid "Key to move SW"
-msgstr "左下移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:28
-msgid "The key used to move south-west."
-msgstr "左下移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:29
-#: ../gnobots2/src/properties.c:556
-msgid "Key to move S"
-msgstr "下移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:30
-msgid "The key used to move south."
-msgstr "下移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:31
-#: ../gnobots2/src/properties.c:557
-msgid "Key to move SE"
-msgstr "右下移键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:32
-msgid "The key used to move south-east."
-msgstr "右下移的按键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:33
-#: ../gnobots2/src/properties.c:559
-msgid "Key to teleport"
-msgstr "传送键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:34
-msgid "The key used to teleport safely (if possible)."
-msgstr "尽可能安全传送的键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:35
-#: ../gnobots2/src/properties.c:560
-msgid "Key to teleport randomly"
-msgstr "随机传送键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:36
-msgid "The key used to teleport randomly."
-msgstr "随机传送键。"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:37
-#: ../gnobots2/src/properties.c:561
-msgid "Key to wait"
-msgstr "等候键"
-
-#: ../gnobots2/data/org.gnome.gnobots2.gschema.xml.in.h:38
-msgid "The key used to wait."
-msgstr "用于等候的按键"
-
-#: ../gnobots2/src/game.c:150 ../gtali/src/gyahtzee.c:213
-msgid "Game over!"
-msgstr "游戏结束！"
-
-#: ../gnobots2/src/game.c:152 ../gnomine/src/gnomine.vala:405
-#: ../gnotski/src/gnotski.c:748
-msgid "Great work, but unfortunately your score did not make the top ten."
-msgstr "干得不错，但您还没有入围前十名。"
-
-#. Translators: This "_New Game" is for the game-over dialogue
-#: ../gnobots2/src/game.c:154 ../gnome-sudoku/data/select_game.ui.h:1
-#: ../gnomine/data/gnomine.ui.h:1 ../gnomine/src/gnomine.vala:407
-#: ../gnotravex/data/gnotravex.ui.h:1 ../gnotski/src/gnotski.c:750
-#: ../iagno/data/iagno.ui.h:1 ../libgames-support/games-stock.c:253
-#: ../lightsoff/src/lightsoff.vala:29 ../quadrapassel/src/quadrapassel.vala:75
-#: ../swell-foop/src/swell-foop.vala:76
-msgid "_New Game"
-msgstr "新建游戏(_N)"
-
-#: ../gnobots2/src/game.c:167
-msgid "Robots Scores"
-msgstr "机器人得分"
-
-#: ../gnobots2/src/game.c:170 ../mahjongg/src/mahjongg.vala:259
-#: ../mahjongg/src/mahjongg.vala:563
-msgid "Map:"
-msgstr "地图："
-
-#: ../gnobots2/src/game.c:409 ../gnobots2/src/game.c:425
-msgid ""
-"Congratulations, You Have Defeated the Robots!! \n"
-"But Can You do it Again?"
-msgstr ""
-"恭喜，您已击败机器人！\n"
-"但您能再次击败它吗？"
-
-#. This should never happen.
-#: ../gnobots2/src/game.c:1201
-msgid "There are no teleport locations left!!"
-msgstr "没有剩下传送点了！"
-
-#: ../gnobots2/src/game.c:1229
-msgid "There are no safe locations to teleport to!!"
-msgstr "没有可传送到的安全的位置了！"
-
-#: ../gnobots2/src/gnobots.c:82
-msgid "Set game scenario"
-msgstr "设定游戏情节"
-
-#: ../gnobots2/src/gnobots.c:82 ../gnobots2/src/gnobots.c:84
-msgid "NAME"
-msgstr "名称"
-
-#: ../gnobots2/src/gnobots.c:84
-msgid "Set game configuration"
-msgstr "设定游戏配置"
-
-#: ../gnobots2/src/gnobots.c:86 ../gnobots2/src/gnobots.c:88
-msgid "Initial window position"
-msgstr "初始窗口位置"
-
-#: ../gnobots2/src/gnobots.c:86 ../gnotski/src/gnotski.c:445
-msgid "X"
-msgstr "X"
-
-#: ../gnobots2/src/gnobots.c:88 ../gnotski/src/gnotski.c:447
-msgid "Y"
-msgstr "Y"
-
-#: ../gnobots2/src/gnobots.c:93
-msgid "Classic robots"
-msgstr "经典机器人"
-
-#: ../gnobots2/src/gnobots.c:94
-msgid "Classic robots with safe moves"
-msgstr "带安全移动的经典机器人"
-
-#: ../gnobots2/src/gnobots.c:95
-msgid "Classic robots with super-safe moves"
-msgstr "带超级安全移动的经典机器人"
-
-#: ../gnobots2/src/gnobots.c:96
-msgid "Nightmare"
-msgstr "噩梦"
-
-#: ../gnobots2/src/gnobots.c:97
-msgid "Nightmare with safe moves"
-msgstr "带安全移动的噩梦"
-
-#: ../gnobots2/src/gnobots.c:98
-msgid "Nightmare with super-safe moves"
-msgstr "带超级安全移动的噩梦"
-
-#: ../gnobots2/src/gnobots.c:99
-msgid "Robots2"
-msgstr "机器人2"
-
-#: ../gnobots2/src/gnobots.c:100
-msgid "Robots2 with safe moves"
-msgstr "带安全移动的机器人2"
-
-#: ../gnobots2/src/gnobots.c:101
-msgid "Robots2 with super-safe moves"
-msgstr "带超级安全移动的机器人2"
-
-#: ../gnobots2/src/gnobots.c:102
-msgid "Robots2 easy"
-msgstr "机器人2简单"
-
-#: ../gnobots2/src/gnobots.c:103
-msgid "Robots2 easy with safe moves"
-msgstr "带安全移动的机器人2 简单"
-
-#: ../gnobots2/src/gnobots.c:104
-msgid "Robots2 easy with super-safe moves"
-msgstr "带超级安全移动的机器人2 简单"
-
-#: ../gnobots2/src/gnobots.c:105
-msgid "Robots with safe teleport"
-msgstr "带有安全传送点的机器人"
-
-#: ../gnobots2/src/gnobots.c:106
-msgid "Robots with safe teleport with safe moves"
-msgstr "带有安全传送点的机器人"
-
-#: ../gnobots2/src/gnobots.c:107
-msgid "Robots with safe teleport with super-safe moves"
-msgstr "带有安全传送点的机器人"
-
-#: ../gnobots2/src/gnobots.c:247
-msgid "No game data could be found."
-msgstr "没有找到游戏数据。"
-
-#: ../gnobots2/src/gnobots.c:249
-msgid ""
-"The program Robots was unable to find any valid game configuration files. "
-"Please check that the program is installed correctly."
-msgstr ""
-"GNOME 机器人程序无法找到任何可用的游戏配置文件。请检查程序是否正确安装。"
-
-#: ../gnobots2/src/gnobots.c:265
-msgid "Some graphics files are missing or corrupt."
-msgstr "某些图像文件缺少或损坏。"
-
-#: ../gnobots2/src/gnobots.c:267
-msgid ""
-"The program Robots was unable to load all the necessary graphics files. "
-"Please check that the program is installed correctly."
-msgstr "GNOME 机器人程序无法载入必需的图像文件。请检查程序是否正确安装。"
-
-#: ../gnobots2/src/graphics.c:152
-#, c-format
-msgid "Could not find '%s' pixmap file\n"
-msgstr "无法找到“%s”位图文件\n"
-
-#: ../gnobots2/src/menu.c:67 ../gnotravex/data/gnotravex.ui.h:4
-msgid "_Move"
-msgstr "移动(_M)"
-
-#: ../gnobots2/src/menu.c:74
-msgid "_Teleport"
-msgstr "传送点(_T)"
-
-#: ../gnobots2/src/menu.c:75
-msgid "Teleport, safely if possible"
-msgstr "传送点，尽可能安全"
-
-#: ../gnobots2/src/menu.c:76
-msgid "_Random"
-msgstr "随机(_R)"
-
-#: ../gnobots2/src/menu.c:77
-msgid "Teleport randomly"
-msgstr "随机传送"
-
-#: ../gnobots2/src/menu.c:78
-msgid "_Wait"
-msgstr "等待(_W)"
-
-#: ../gnobots2/src/menu.c:78
-msgid "Wait for the robots"
-msgstr "等候机器人"
-
-#: ../gnobots2/src/menu.c:89 ../mahjongg/src/mahjongg.vala:671
-msgid "_Toolbar"
-msgstr "工具栏(_T)"
-
-#: ../gnobots2/src/menu.c:89 ../mahjongg/src/mahjongg.vala:671
-msgid "Show or hide the toolbar"
-msgstr "显示或隐藏工具栏"
-
-#: ../gnobots2/src/menu.c:270
-msgid ""
-"Based on classic BSD Robots.\n"
-"\n"
-"Robots is a part of GNOME Games."
-msgstr ""
-"基于经典的 BSD 机器人。\n"
-"\n"
-"机器人是 GNOME 游戏的一部分。"
-
-#: ../gnobots2/src/properties.c:317
-msgid "classic robots"
-msgstr "经典机器人"
-
-#: ../gnobots2/src/properties.c:318
-msgid "robots2"
-msgstr "机器人 2"
-
-#: ../gnobots2/src/properties.c:319
-msgid "robots2 easy"
-msgstr "机器人 2 简单"
-
-#: ../gnobots2/src/properties.c:320
-msgid "robots with safe teleport"
-msgstr "带有安全传送点的机器人"
-
-#: ../gnobots2/src/properties.c:321
-msgid "nightmare"
-msgstr "噩梦"
-
-#: ../gnobots2/src/properties.c:363
-msgid "robots"
-msgstr "机器人"
-
-#: ../gnobots2/src/properties.c:364
-msgid "cows"
-msgstr "奶牛"
-
-#: ../gnobots2/src/properties.c:365
-msgid "eggs"
-msgstr "蛋"
-
-#: ../gnobots2/src/properties.c:366
-msgid "gnomes"
-msgstr "小人"
-
-#: ../gnobots2/src/properties.c:367
-msgid "mice"
-msgstr "老鼠"
-
-#: ../gnobots2/src/properties.c:368
-msgid "ufo"
-msgstr "飞碟"
-
-#: ../gnobots2/src/properties.c:369
-msgid "boo"
-msgstr "怪物"
-
-#: ../gnobots2/src/properties.c:423
-msgid "Robots Preferences"
-msgstr "机器人首选项"
-
-#. --- Combo (yahtzee or kismet style ----
-#: ../gnobots2/src/properties.c:443 ../gtali/src/setup.c:357
-msgid "Game Type"
-msgstr "游戏类型"
-
-#: ../gnobots2/src/properties.c:465
-msgid "_Use safe moves"
-msgstr "使用安全移动(_U)"
-
-#: ../gnobots2/src/properties.c:472
-msgid "Prevent accidental moves that result in getting killed."
-msgstr "阻止会导致死亡的意外移动。"
-
-#: ../gnobots2/src/properties.c:474
-msgid "U_se super safe moves"
-msgstr "使用超级安全移动(_S)"
-
-#: ../gnobots2/src/properties.c:481
-msgid "Prevents all moves that result in getting killed."
-msgstr "避免将导致丢命的全部移动。"
-
-#: ../gnobots2/src/properties.c:489 ../quadrapassel/src/quadrapassel.vala:314
-msgid "_Enable sounds"
-msgstr "启用声音(_E)"
-
-#: ../gnobots2/src/properties.c:495
-msgid "Play sounds for events like winning a level and dying."
-msgstr "对通关或死亡等事件使用声音通知。"
-
-#: ../gnobots2/src/properties.c:505
-msgid "Graphics Theme"
-msgstr "图形主题"
-
-#: ../gnobots2/src/properties.c:513
-msgid "_Image theme:"
-msgstr "图像主题(_I)："
-
-#: ../gnobots2/src/properties.c:524 ../mahjongg/src/mahjongg.vala:415
-msgid "_Background color:"
-msgstr "背景颜色(_B)："
-
-#: ../gnobots2/src/properties.c:570
-msgid "_Restore Defaults"
-msgstr "恢复默认值(_R)"
-
-#: ../gnobots2/src/properties.c:575
-msgid "Keyboard"
-msgstr "键盘"
-
-#: ../gnobots2/src/statusbar.c:76
-msgid "Safe Teleports:"
-msgstr "安全传送点:"
-
-#: ../gnobots2/src/statusbar.c:85 ../quadrapassel/src/quadrapassel.vala:192
-msgid "Level:"
-msgstr "级别:"
-
-#: ../gnobots2/src/statusbar.c:94
-msgid "Remaining:"
-msgstr "剩下:"
-
-#. ********************************************************************
-#: ../gnome-sudoku/data/gnome-sudoku.desktop.in.in.h:1
-msgid "Sudoku"
-msgstr "数独"
-
-#: ../gnome-sudoku/data/gnome-sudoku.desktop.in.in.h:2
-msgid "Test your logic skills in this number grid puzzle"
-msgstr "通过这个数字格子解谜游戏测试您的逻辑能力"
-
-#: ../gnome-sudoku/data/print_games.ui.h:1
-msgid "Print Sudokus"
-msgstr "打印数独"
-
-#: ../gnome-sudoku/data/print_games.ui.h:2
-msgid "Print Games"
-msgstr "打印游戏"
-
-#: ../gnome-sudoku/data/print_games.ui.h:3
-msgid "_Number of sudoku to print: "
-msgstr "待打印的数独数量(_N)："
-
-#: ../gnome-sudoku/data/print_games.ui.h:4
-msgid "_Sudokus per page: "
-msgstr "每页数独数目(_S)："
-
-#: ../gnome-sudoku/data/print_games.ui.h:5
-msgid "Levels of difficulty to print"
-msgstr "待打印的游戏的困难级别"
-
-#: ../gnome-sudoku/data/print_games.ui.h:6
-msgid "_Easy"
-msgstr "简单(_E)"
-
-#: ../gnome-sudoku/data/print_games.ui.h:8
-msgid "_Hard"
-msgstr "困难(_H)"
-
-#: ../gnome-sudoku/data/print_games.ui.h:9
-msgid "_Very Hard"
-msgstr "极困难(_V)"
-
-#: ../gnome-sudoku/data/print_games.ui.h:10
-msgid "Details"
-msgstr "细节"
-
-#: ../gnome-sudoku/data/print_games.ui.h:11
-msgid "_Mark games as played once you've printed them."
-msgstr "打印游戏后将其标记为已玩(_M)。"
-
-#: ../gnome-sudoku/data/print_games.ui.h:12
-msgid "_Include games you've already played in list of games to print"
-msgstr "在待打印游戏列表中包含已玩过的游戏(_I)"
-
-#: ../gnome-sudoku/data/select_game.ui.h:2
-msgid "_Saved Games"
-msgstr "保存的游戏(_S)"
-
-#: ../gnome-sudoku/data/tracker.ui.h:1
-msgid "Add a new tracker"
-msgstr "添加跟踪器"
-
-#: ../gnome-sudoku/data/tracker.ui.h:2
-msgid "Remove the selected tracker"
-msgstr "移除所选的跟踪器"
-
-#: ../gnome-sudoku/data/tracker.ui.h:3
-msgid "Make the tracked changes permanent"
-msgstr "永久保留跟踪的值"
-
-#: ../gnome-sudoku/data/tracker.ui.h:4 ../gnome-sudoku/src/lib/main.py:750
-msgid "H_ide"
-msgstr "隐藏(_I)"
-
-#: ../gnome-sudoku/data/tracker.ui.h:5
-msgid "Hide the tracked values"
-msgstr "隐藏跟踪的值"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:121
-#: ../gnome-sudoku/src/lib/main.py:627 ../gnome-sudoku/src/lib/printing.py:185
-msgid "Easy"
-msgstr "简单"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:122
-#: ../gnome-sudoku/src/lib/main.py:628 ../gnome-sudoku/src/lib/printing.py:186
-msgid "Medium"
-msgstr "中等"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:123
-#: ../gnome-sudoku/src/lib/main.py:629 ../gnome-sudoku/src/lib/printing.py:187
-msgid "Hard"
-msgstr "困难"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:124
-#: ../gnome-sudoku/src/lib/printing.py:188
-msgid "Very hard"
-msgstr "极困难"
-
-#. Then we're today
-#. within the minute
-#: ../gnome-sudoku/src/lib/game_selector.py:160
-#, python-format
-msgid "Last played %(n)s second ago"
-msgid_plural "Last played %(n)s seconds ago"
-msgstr[0] "上次游戏于 %(n)s 秒前"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:164
-#, python-format
-msgid "Last played %(n)s minute ago"
-msgid_plural "Last played %(n)s minutes ago"
-msgstr[0] "上次游戏于 %(n)s 分钟前"
-
-#. Translators, see strftime manual in order to translate %? format strings
-#: ../gnome-sudoku/src/lib/game_selector.py:168
-msgid "Last played at %I:%M %p"
-msgstr "上次游戏于 %H:%M"
-
-#. Translators, see strftime manual in order to translate %? format strings
-#: ../gnome-sudoku/src/lib/game_selector.py:171
-msgid "Last played yesterday at %I:%M %p"
-msgstr "上次游戏于昨天 %H:%M"
-
-#. Translators, see strftime manual in order to translate %? format strings
-#: ../gnome-sudoku/src/lib/game_selector.py:174
-msgid "Last played on %A at %I:%M %p"
-msgstr "上次游戏于%A %H:%M"
-
-#. Translators, see strftime manual in order to translate %? format strings
-#: ../gnome-sudoku/src/lib/game_selector.py:177
-msgid "Last played on %B %e %Y"
-msgstr "上次游戏于 %Y年%m月%e日"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:190
-msgid "Easy puzzle"
-msgstr "简单谜题"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:191
-msgid "Medium puzzle"
-msgstr "中等谜题"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:192
-msgid "Hard puzzle"
-msgstr "困难谜题"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:193
-msgid "Very hard puzzle"
-msgstr "极困难谜题"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:199
-#, python-format
-msgid "Played for %d hour"
-msgid_plural "Played for %d hours"
-msgstr[0] "玩了 %d 小时"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:202
-#, python-format
-msgid "Played for %d minute"
-msgid_plural "Played for %d minutes"
-msgstr[0] "玩了 %d 分钟"
-
-#: ../gnome-sudoku/src/lib/game_selector.py:205
-#, python-format
-msgid "Played for %d second"
-msgid_plural "Played for %d seconds"
-msgstr[0] "玩了 %d 秒"
-
-#: ../gnome-sudoku/src/lib/gtk_goodies/dialog_extras.py:162
-msgid "Do you really want to do this?"
-msgstr "您真的想要这样做吗？"
-
-#: ../gnome-sudoku/src/lib/gtk_goodies/dialog_extras.py:196
-msgid "Don't ask me this again."
-msgstr "不要再询问我。"
-
-#: ../gnome-sudoku/src/lib/main.py:196
-msgid "New game"
-msgstr "新游戏"
-
-#. Translators: this is the "Reset" scores button in a scores dialogue
-#: ../gnome-sudoku/src/lib/main.py:197 ../libgames-support/games-stock.c:256
-msgid "_Reset"
-msgstr "重置(_R)"
-
-#: ../gnome-sudoku/src/lib/main.py:199 ../iagno/data/iagno.ui.h:2
-msgid "_Undo"
-msgstr "撤消(_U)"
-
-#: ../gnome-sudoku/src/lib/main.py:200
-msgid "Undo last action"
-msgstr "撤消最后一着"
-
-#: ../gnome-sudoku/src/lib/main.py:201
-msgid "_Redo"
-msgstr "重做(_R)"
-
-#: ../gnome-sudoku/src/lib/main.py:202
-msgid "Redo last action"
-msgstr "重做最后一着"
-
-#: ../gnome-sudoku/src/lib/main.py:203
-msgid "Puzzle _Statistics..."
-msgstr "谜题统计信息(_S)..."
-
-#: ../gnome-sudoku/src/lib/main.py:205
-msgid "_Print..."
-msgstr "打印(_P)..."
-
-#: ../gnome-sudoku/src/lib/main.py:206
-msgid "Print _Multiple Sudokus..."
-msgstr "打印多个数独(_M)..."
-
-#: ../gnome-sudoku/src/lib/main.py:211
-msgid "_Tools"
-msgstr "工具(_T)"
-
-#: ../gnome-sudoku/src/lib/main.py:212 ../gnomine/data/gnomine.ui.h:2
-#: ../libgames-support/games-stock.c:249
-msgid "_Hint"
-msgstr "提示(_H)"
-
-#: ../gnome-sudoku/src/lib/main.py:213
-msgid "Show a square that is easy to fill."
-msgstr "显示一个容易填写的方块"
-
-#: ../gnome-sudoku/src/lib/main.py:214
-msgid "Clear _Top Notes"
-msgstr "清除上方注记(_T)"
-
-#: ../gnome-sudoku/src/lib/main.py:216
-msgid "Clear _Bottom Notes"
-msgstr "清除下方注记(_B)"
-
-#: ../gnome-sudoku/src/lib/main.py:225
-msgid "Show _Possible Numbers"
-msgstr "显示可能的数字(_P)"
-
-#: ../gnome-sudoku/src/lib/main.py:227
-msgid "Always show possible numbers in a square"
-msgstr "总是在方块中显示可能的数字"
-
-#: ../gnome-sudoku/src/lib/main.py:231
-msgid "Warn About _Unfillable Squares"
-msgstr "警告不可填充的方块(_U)"
-
-#: ../gnome-sudoku/src/lib/main.py:233
-msgid "Warn about squares made unfillable by a move"
-msgstr "就某一步导致的不可填充的方块发出警告"
-
-#: ../gnome-sudoku/src/lib/main.py:235
-msgid "_Track Additions"
-msgstr "跟踪器(_T)"
-
-#: ../gnome-sudoku/src/lib/main.py:237
-msgid "Mark new additions in a separate color so you can keep track of them."
-msgstr "将新填入的数字标记为不同的颜色以便您能跟踪它们。"
-
-#: ../gnome-sudoku/src/lib/main.py:240
-msgid "_Highlighter"
-msgstr "高亮显示(_H)"
-
-#: ../gnome-sudoku/src/lib/main.py:241
-msgid "Highlight the current row, column and box"
-msgstr "高亮显示当前行、列和盒子"
-
-#: ../gnome-sudoku/src/lib/main.py:366
-#, python-format
-msgid "You completed the puzzle in %d second"
-msgid_plural "You completed the puzzle in %d seconds"
-msgstr[0] "您在 %d 秒内完成了谜题。"
-
-#: ../gnome-sudoku/src/lib/main.py:371 ../gnome-sudoku/src/lib/main.py:379
-#, python-format
-msgid "%d minute"
-msgid_plural "%d minutes"
-msgstr[0] "%d 分钟"
-
-#: ../gnome-sudoku/src/lib/main.py:372 ../gnome-sudoku/src/lib/main.py:380
-#, python-format
-msgid "%d second"
-msgid_plural "%d seconds"
-msgstr[0] "%d 秒"
-
-#: ../gnome-sudoku/src/lib/main.py:373
-#, python-format
-msgid "You completed the puzzle in %(minute)s and %(second)s"
-msgstr "您在 %(minute)s 分 %(second)s 秒内完成了谜题。"
-
-#: ../gnome-sudoku/src/lib/main.py:378
-#, python-format
-msgid "%d hour"
-msgid_plural "%d hours"
-msgstr[0] "%d 小时"
-
-#: ../gnome-sudoku/src/lib/main.py:381
-#, python-format
-msgid "You completed the puzzle in %(hour)s, %(minute)s and %(second)s"
-msgstr "您在 %(hour)s小时%(minute)s分%(second)s秒内完成了谜题。"
-
-#: ../gnome-sudoku/src/lib/main.py:383
-#, python-format
-msgid "You got %(n)s hint."
-msgid_plural "You got %(n)s hints."
-msgstr[0] "您有 %(n)s 个提示。"
-
-#: ../gnome-sudoku/src/lib/main.py:386
-#, python-format
-msgid "You had %(n)s impossibility pointed out."
-msgid_plural "You had %(n)s impossibilities pointed out."
-msgstr[0] "已为您指出 %(n)s 种不可能性。"
-
-#: ../gnome-sudoku/src/lib/main.py:401
-msgid "Save this game before starting new one?"
-msgstr "开始新游戏前保存现有游戏？"
-
-#: ../gnome-sudoku/src/lib/main.py:421
-msgid "Save game before closing?"
-msgstr "关闭之前保存游戏？"
-
-#: ../gnome-sudoku/src/lib/main.py:619
-msgid "Puzzle Information"
-msgstr "谜题信息"
-
-#: ../gnome-sudoku/src/lib/main.py:620
-msgid "There is no current puzzle."
-msgstr "当前没有谜题。"
-
-#: ../gnome-sudoku/src/lib/main.py:625
-msgid "Calculated difficulty: "
-msgstr "经计算后的难度："
-
-#: ../gnome-sudoku/src/lib/main.py:630
-msgid "Very Hard"
-msgstr "极困难"
-
-#: ../gnome-sudoku/src/lib/main.py:635
-msgid "Number of moves instantly fillable by elimination: "
-msgstr "通过消去法立即能填出的格子数："
-
-#: ../gnome-sudoku/src/lib/main.py:638
-msgid "Number of moves instantly fillable by filling: "
-msgstr "通过填充法立即能填出的格子数："
-
-#: ../gnome-sudoku/src/lib/main.py:641
-msgid "Amount of trial-and-error required to solve: "
-msgstr "解决谜题需要使用试错法的次数："
-
-#: ../gnome-sudoku/src/lib/main.py:644 ../gnome-sudoku/src/lib/main.py:645
-msgid "Puzzle Statistics"
-msgstr "谜题统计信息"
-
-#. FIXME: This should create a pop-up dialog
-#: ../gnome-sudoku/src/lib/main.py:679
-#, python-format
-msgid "Unable to display help: %s"
-msgstr "无法显示帮助：%s"
-
-#: ../gnome-sudoku/src/lib/main.py:735
-msgid "Untracked"
-msgstr "未跟踪"
-
-#: ../gnome-sudoku/src/lib/main.py:744
-msgid "_Remove"
-msgstr "移除(_R)"
-
-#: ../gnome-sudoku/src/lib/main.py:745
-msgid "Delete selected tracker."
-msgstr "删除所选的跟踪器。"
-
-#: ../gnome-sudoku/src/lib/main.py:751
-msgid "Hide current tracker entries."
-msgstr "隐藏当前跟踪器条目。"
-
-#: ../gnome-sudoku/src/lib/main.py:756
-msgid "A_pply"
-msgstr "应用(_P)"
-
-#: ../gnome-sudoku/src/lib/main.py:757
-msgid "Apply all tracked values and remove the tracker."
-msgstr "应用所有被跟踪的值并移除跟踪器。"
-
-#: ../gnome-sudoku/src/lib/main.py:795
-#, python-format
-msgid "Tracker %s"
-msgstr "跟踪器 %s"
-
-#: ../gnome-sudoku/src/lib/number_box.py:68
-msgid "_Clear"
-msgstr "清除(_C)"
-
-#: ../gnome-sudoku/src/lib/saver.py:138
-msgid "No Space"
-msgstr "没有空间"
-
-#: ../gnome-sudoku/src/lib/saver.py:139
-msgid "No space left on disk"
-msgstr "磁盘没有剩余空间了"
-
-#: ../gnome-sudoku/src/lib/saver.py:141 ../gnome-sudoku/src/lib/saver.py:148
-#, python-format
-msgid "Unable to create data folder %(path)s."
-msgstr "无法创建数据文件夹 %(path)s。"
-
-#: ../gnome-sudoku/src/lib/saver.py:142
-msgid "There is no disk space left!"
-msgstr "磁盘没有剩余空间了！"
-
-#: ../gnome-sudoku/src/lib/saver.py:149 ../gnome-sudoku/src/lib/saver.py:174
-#: ../gnome-sudoku/src/lib/saver.py:198 ../gnome-sudoku/src/lib/saver.py:216
-#, python-format
-msgid "Error %(errno)s: %(error)s"
-msgstr "错误 %(errno)s：%(error)s"
-
-#: ../gnome-sudoku/src/lib/saver.py:169 ../gnome-sudoku/src/lib/saver.py:170
-msgid "Unable to save game."
-msgstr "无法保存游戏。"
-
-#: ../gnome-sudoku/src/lib/saver.py:172 ../gnome-sudoku/src/lib/saver.py:197
-#: ../gnome-sudoku/src/lib/saver.py:215
-#, python-format
-msgid "Unable to save file %(filename)s."
-msgstr "无法保存文件 %(filename)s"
-
-#: ../gnome-sudoku/src/lib/saver.py:194 ../gnome-sudoku/src/lib/saver.py:195
-msgid "Unable to mark game as finished."
-msgstr "无法将游戏标记为完成。"
-
-#: ../gnome-sudoku/src/lib/saver.py:212 ../gnome-sudoku/src/lib/saver.py:213
-msgid "Sudoku unable to mark game as finished."
-msgstr "数独无法标记游戏完成。"
-
-#: ../gnomine/data/gnomine.desktop.in.in.h:1 ../gnomine/src/gnomine.vala:79
-#: ../gnomine/src/gnomine.vala:105 ../gnomine/src/gnomine.vala:674
-#: ../gnomine/src/gnomine.vala:680
+"您可以在游戏启动时选择棋盘大小。陷入僵局时，您可以寻求提示：使用提示会有惩"
+"罚，但总比踩到雷好嘛！"
+
+#: ../data/gnomine.desktop.in.h:1 ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:127 ../src/gnome-mines.vala:140
+#: ../src/gnome-mines.vala:687
 msgid "Mines"
 msgstr "扫雷"
 
-#: ../gnomine/data/gnomine.desktop.in.in.h:2
+#: ../data/gnomine.desktop.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "扫除雷区里的隐藏的地雷"
 
-#: ../gnomine/data/gnomine.ui.h:3 ../gnotravex/data/gnotravex.ui.h:2
-#: ../libgames-support/games-stock.c:265
-#: ../quadrapassel/src/quadrapassel.vala:76
-msgid "_Pause"
-msgstr "暂停(_P)"
+#: ../data/gnomine.desktop.in.h:3
+msgid "minesweeper;"
+msgstr "minesweeper;挖雷;扫雷"
 
-#: ../gnomine/data/gnomine.ui.h:4 ../libgames-support/games-stock.c:248
-msgid "_Fullscreen"
-msgstr "全屏(_F)"
-
-#: ../gnomine/data/gnomine.ui.h:5 ../gnotravex/data/gnotravex.ui.h:9
-#: ../libgames-support/games-stock.c:267
-#: ../quadrapassel/src/quadrapassel.vala:77
-#: ../swell-foop/src/swell-foop.vala:77
-msgid "_Scores"
-msgstr "得分(_S)"
-
-#: ../gnomine/data/gnomine.ui.h:6 ../iagno/data/iagno.ui.h:3
-#: ../quadrapassel/src/quadrapassel.vala:78
-#: ../swell-foop/src/swell-foop.vala:78
-msgid "_Preferences"
-msgstr "首选项(_P)"
-
-#: ../gnomine/data/gnomine.ui.h:8 ../gnotravex/data/gnotravex.ui.h:17
-#: ../iagno/data/iagno.ui.h:5 ../lightsoff/src/lightsoff.vala:33
-#: ../quadrapassel/src/quadrapassel.vala:82
-#: ../swell-foop/src/swell-foop.vala:82
-msgid "_About"
-msgstr "关于(_A)"
-
-#: ../gnomine/data/gnomine.ui.h:9 ../gnotravex/data/gnotravex.ui.h:18
-#: ../iagno/data/iagno.ui.h:6 ../lightsoff/src/lightsoff.vala:36
-#: ../quadrapassel/src/quadrapassel.vala:85
-#: ../swell-foop/src/swell-foop.vala:85
-msgid "_Quit"
-msgstr "退出(_Q)"
-
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:1
+#: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
 msgstr "使用未知旗标"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:2
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "设为 true 可将方块标为未知。"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Warning about too many flags"
 msgstr "旗标过多时警告"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:4
-msgid "Set to true to enable warning icons when too many flags are placed."
-msgstr "设为 true 可在放置了太多旗标时启用警告图标。"
+#: ../data/org.gnome.mines.gschema.xml.h:4
+msgid ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
+msgstr "设为 true 可在放置了某个数字块附件放置了太多旗标时启用警告图标。"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:5
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Enable automatic placing of flags"
 msgstr "启用旗标自动放置"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:6
+#: ../data/org.gnome.mines.gschema.xml.h:6
 msgid ""
-"Set to true to have gnomine automatically flag squares as mined when enough "
-"squares are revealed"
-msgstr "设为 true 以让扫雷在足够的方块被揭开时自动标记方块为雷"
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr "设定为 True 可在已揭开足够的方块时自动标记方块为雷"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Number of columns in a custom game"
 msgstr "自定义游戏的列数"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:8
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid "Number of rows in a custom game"
 msgstr "自定义游戏的行数"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:9
 msgid "The number of mines in a custom game"
 msgstr "自定义游戏中雷的数目"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:10
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:10
 msgid "Board size"
 msgstr "盘面大小"
 
-#: ../gnomine/data/org.gnome.gnomine.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "盘面大小(0-2=小-大，3=自定义)"
 
-#: ../gnomine/src/gnomine.vala:65
-msgctxt "board size"
+#: ../data/org.gnome.mines.gschema.xml.h:12
+msgid "Width of the window in pixels"
+msgstr "窗口的宽度，以像素计。"
+
+#: ../data/org.gnome.mines.gschema.xml.h:13
+msgid "Height of the window in pixels"
+msgstr "窗口的高度，以像素计。"
+
+#: ../data/org.gnome.mines.gschema.xml.h:14
+msgid "true if the window is maximized"
+msgstr "如果窗口最大化则为 true"
+
+#: ../src/gnome-mines.vala:108
+msgid "_New Game"
+msgstr "新建游戏(_N)"
+
+#: ../src/gnome-mines.vala:109
+msgid "_Scores"
+msgstr "得分(_S)"
+
+#: ../src/gnome-mines.vala:110
+msgid "_Preferences"
+msgstr "首选项(_P)"
+
+#: ../src/gnome-mines.vala:113
+msgid "_Help"
+msgstr "帮助(_H)"
+
+#: ../src/gnome-mines.vala:114
+msgid "_About"
+msgstr "关于(_A)"
+
+#: ../src/gnome-mines.vala:117
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#: ../src/gnome-mines.vala:267
 msgid "Custom"
 msgstr "自定义"
 
-#: ../gnomine/src/gnomine.vala:159
-msgid "Time: "
-msgstr "时间："
-
-#. New game screen
-#: ../gnomine/src/gnomine.vala:209
-msgid "Field Size"
-msgstr "场地大小"
-
-#: ../gnomine/src/gnomine.vala:259
-msgid "Custom Size"
-msgstr "自定义大小"
-
-#: ../gnomine/src/gnomine.vala:267
+#: ../src/gnome-mines.vala:285
 msgid "H_orizontal:"
 msgstr "水平(_O)："
 
-#: ../gnomine/src/gnomine.vala:277
+#: ../src/gnome-mines.vala:295
 msgid "_Vertical:"
 msgstr "垂直(_V)："
 
-#: ../gnomine/src/gnomine.vala:287
+#: ../src/gnome-mines.vala:305
 msgid "_Number of mines:"
 msgstr "地雷数量(_N)："
 
-#: ../gnomine/src/gnomine.vala:306
+#: ../src/gnome-mines.vala:316
+msgid "_Percentage of mines:"
+msgstr "地雷百分比(_P)："
+
+#: ../src/gnome-mines.vala:331
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: ../src/gnome-mines.vala:337
 msgid "_Play Game"
 msgstr "玩游戏(_P)"
 
-#: ../gnomine/src/gnomine.vala:319
+#: ../src/gnome-mines.vala:386
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 个雷"
 
-#: ../gnomine/src/gnomine.vala:326 ../mahjongg/src/mahjongg.vala:661
-msgid "Show a hint"
-msgstr "显示提示"
-
-#: ../gnomine/src/gnomine.vala:388
+#: ../src/gnome-mines.vala:431
 #, c-format
-msgid "Flags: %u/%u"
-msgstr "旗标：%u/%u"
+msgid "%u/%u"
+msgstr "%u/%u"
 
-#: ../gnomine/src/gnomine.vala:404
-msgid "The Mines Have Been Cleared!"
-msgstr "扫清了所有雷！"
+#: ../src/gnome-mines.vala:466
+msgid "Do you want to start a new game?"
+msgstr "您想要启动新游戏吗？"
 
-#: ../gnomine/src/gnomine.vala:416
-msgid "Mines Scores"
-msgstr "扫雷得分"
+#: ../src/gnome-mines.vala:467
+msgid "If you start a new game, your current progress will be lost."
+msgstr "如果开始新游戏，您当前进度将丢失。"
 
-#: ../gnomine/src/gnomine.vala:417 ../gnotravex/src/gnotravex.vala:199
-#: ../gnotravex/src/gnotravex.vala:223 ../swell-foop/src/swell-foop.vala:348
-msgid "Size:"
-msgstr "大小："
-
-#: ../gnomine/src/gnomine.vala:463
-msgid "Cancel current game?"
-msgstr "结束当前游戏？"
-
-#: ../gnomine/src/gnomine.vala:464
-msgid "Start New Game"
-msgstr "开始新游戏"
-
-#: ../gnomine/src/gnomine.vala:465
+#: ../src/gnome-mines.vala:468
 msgid "Keep Current Game"
 msgstr "保存当前游戏"
 
-#: ../gnomine/src/gnomine.vala:642 ../mahjongg/src/mahjongg.vala:495
+#: ../src/gnome-mines.vala:469
+msgid "Start New Game"
+msgstr "开始新游戏"
+
+#: ../src/gnome-mines.vala:655
 msgid "Main game:"
 msgstr "主游戏："
 
-#: ../gnomine/src/gnomine.vala:650
+#: ../src/gnome-mines.vala:660
+msgid "Score:"
+msgstr "得分:"
+
+#: ../src/gnome-mines.vala:663
 msgid "Resizing and SVG support:"
 msgstr "缩放和 SVG 支持："
 
-#: ../gnomine/src/gnomine.vala:658
+#: ../src/gnome-mines.vala:671
 msgid "Faces:"
 msgstr "表面："
 
-#: ../gnomine/src/gnomine.vala:662
+#: ../src/gnome-mines.vala:675
 msgid "Graphics:"
 msgstr "图形："
 
-#: ../gnomine/src/gnomine.vala:677
+#: ../src/gnome-mines.vala:690
 msgid ""
-"The popular logic puzzle minesweeper. Clear mines from a board using hints "
-"from squares you have already uncovered.\n"
+"Clear explosive mines off the board\n"
 "\n"
 "Mines is a part of GNOME Games."
 msgstr ""
-"流行的扫雷游戏。通过不断揭开方块给出提示来找出剩余方块中的地雷。\n"
+"从棋盘中清除会爆炸的地雷\n"
 "\n"
-"扫雷是 GNOME 游戏的一部分。"
+"地雷 是 GNOME 游戏的一部分。"
 
-#: ../gnomine/src/gnomine.vala:753
-msgid "Flags"
-msgstr "旗标"
+#: ../src/gnome-mines.vala:697
+msgid "translator-credits"
+msgstr ""
+"Yang Zhang <zyangmath@gmail.com>, 2007\n"
+"Ping Z <zpsigma@gmail.com>, 2007\n"
+"Xhacker Liu <liu.dongyuan@gmail.com>, 2010\n"
+"Aron Xu <aronxu@gnome.org>, 2011\n"
+"YunQiang Su <wzssyqa@gmail.com>, 2011, 2012\n"
+"甘露(Gan Lu) <rhythm.gan@gmail.com>, 2013"
 
-#: ../gnomine/src/gnomine.vala:760
-msgid "_Use \"I'm not sure\" flags"
-msgstr "使用“不确定”旗标(_U)"
+#: ../src/gnome-mines.vala:700
+msgid "GNOME Games web site"
+msgstr "GNOME 游戏网站"
 
-#: ../gnomine/src/gnomine.vala:765
-msgid "_Warn if too many flags placed"
-msgstr "旗标过多时警告(_W)"
-
-#: ../gnomine/src/gnomine.vala:770
+#: ../src/gnome-mines.vala:804
 msgid "Mines Preferences"
 msgstr "扫雷首选项"
 
-#: ../gnomine/src/minefield-view.vala:420
-#: ../gnotravex/src/puzzle-view.vala:336 ../mahjongg/src/game-view.vala:133
-#: ../quadrapassel/src/game-view.vala:330
-msgid "Paused"
-msgstr "暂停"
-
-#: ../gnotravex/data/gnotravex.desktop.in.in.h:1
-#: ../gnotravex/src/gnotravex.vala:68 ../gnotravex/src/gnotravex.vala:92
-#: ../gnotravex/src/gnotravex.vala:280 ../gnotravex/src/gnotravex.vala:282
-msgid "Tetravex"
-msgstr "四邻"
-
-#: ../gnotravex/data/gnotravex.desktop.in.in.h:2
-msgid "Complete the puzzle by matching numbered tiles"
-msgstr "匹配编号的方块来完成谜题"
-
-#: ../gnotravex/data/gnotravex.ui.h:3
-msgid "_Solve"
-msgstr "解决(_S)"
-
-#: ../gnotravex/data/gnotravex.ui.h:5
-msgid "_Up"
-msgstr "上(_U)"
-
-#: ../gnotravex/data/gnotravex.ui.h:6
-msgid "_Left"
-msgstr "左(_L)"
-
-#: ../gnotravex/data/gnotravex.ui.h:7
-msgid "_Right"
-msgstr "右(_R)"
-
-#: ../gnotravex/data/gnotravex.ui.h:8
-msgid "_Down"
-msgstr "下(_D)"
-
-#: ../gnotravex/data/gnotravex.ui.h:10
-msgid "_Size"
-msgstr "大小(_S)"
-
-#: ../gnotravex/data/gnotravex.ui.h:11
-msgid "_2x2"
-msgstr "_2x2"
-
-#: ../gnotravex/data/gnotravex.ui.h:12
-msgid "_3x3"
-msgstr "_3x3"
-
-#: ../gnotravex/data/gnotravex.ui.h:13
-msgid "_4x4"
-msgstr "_4x4"
-
-#: ../gnotravex/data/gnotravex.ui.h:14
-msgid "_5x5"
-msgstr "_5x5"
-
-#: ../gnotravex/data/gnotravex.ui.h:15
-msgid "_6x6"
-msgstr "_6x6"
-
-#: ../gnotravex/data/org.gnome.gnotravex.gschema.xml.in.h:1
-msgid "The size of the playing grid"
-msgstr "游戏网格大小"
-
-#: ../gnotravex/data/org.gnome.gnotravex.gschema.xml.in.h:2
-msgid "The value of this key is used to decide the size of the playing grid."
-msgstr "此键的值用于决定游戏网格的大小。"
-
-#: ../gnotravex/src/gnotravex.vala:14
-msgid "2×2"
-msgstr "2×2"
-
-#: ../gnotravex/src/gnotravex.vala:15
-msgid "3×3"
-msgstr "3×3"
-
-#: ../gnotravex/src/gnotravex.vala:16
-msgid "4×4"
-msgstr "4×4"
-
-#: ../gnotravex/src/gnotravex.vala:17
-msgid "5×5"
-msgstr "5×5"
-
-#: ../gnotravex/src/gnotravex.vala:18
-msgid "6×6"
-msgstr "6×6"
-
-#: ../gnotravex/src/gnotravex.vala:46
-msgid "Solve"
-msgstr "解决"
-
-#: ../gnotravex/src/gnotravex.vala:46
-msgid "Solve the game"
-msgstr "解开这个游戏"
-
-#: ../gnotravex/src/gnotravex.vala:151 ../mahjongg/src/mahjongg.vala:62
-msgid "Time:"
-msgstr "时间:"
-
-#: ../gnotravex/src/gnotravex.vala:198 ../gnotravex/src/gnotravex.vala:222
-msgid "Tetravex Scores"
-msgstr "四邻得分"
-
-#: ../gnotravex/src/gnotravex.vala:285
-msgid ""
-"GNOME Tetravex is a simple puzzle where pieces must be positioned so that "
-"the same numbers are touching each other.\n"
-"\n"
-"Tetravex is a part of GNOME Games."
-msgstr ""
-"GNOME 四邻 是一个简单的解谜游戏，将方块放置为相同数字互相邻接即可。\n"
-"\n"
-"四邻是 GNOME 游戏的一部分。"
-
-#: ../gnotski/data/gnotski.desktop.in.in.h:1 ../gnotski/src/gnotski.c:42
-msgid "Klotski"
-msgstr "华容道"
-
-#: ../gnotski/data/gnotski.desktop.in.in.h:2
-msgid "Slide blocks to solve the puzzle"
-msgstr "滑动方块以解开布局"
-
-#: ../gnotski/data/org.gnome.gnotski.gschema.xml.in.h:1
-msgid "The puzzle in play"
-msgstr "正在玩的布局"
-
-#: ../gnotski/data/org.gnome.gnotski.gschema.xml.in.h:2
-msgid "The number of the puzzle being played."
-msgstr "正在玩的布局的编号。"
-
-#: ../gnotski/src/gnotski.c:93
-msgid "Only 18 steps"
-msgstr "十八步"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:94 ../gnotski/src/gnotski.c:177
-msgid "Daisy"
-msgstr "雏菊"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:95 ../gnotski/src/gnotski.c:183
-msgid "Violet"
-msgstr "紫罗兰"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:96 ../gnotski/src/gnotski.c:189
-msgid "Poppy"
-msgstr "罂粟"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:97 ../gnotski/src/gnotski.c:195
-msgid "Pansy"
-msgstr "三色堇"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:98 ../gnotski/src/gnotski.c:201
-msgid "Snowdrop"
-msgstr "雪花莲"
-
-#. puzzle name - sometimes called "Le'Ane Rouge"
-#: ../gnotski/src/gnotski.c:99 ../gnotski/src/gnotski.c:207
-msgid "Red Donkey"
-msgstr "横刀立马"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:100 ../gnotski/src/gnotski.c:213
-msgid "Trail"
-msgstr "小径"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:101 ../gnotski/src/gnotski.c:219
-msgid "Ambush"
-msgstr "埋伏"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:102 ../gnotski/src/gnotski.c:225
-msgid "Agatka"
-msgstr "龙舌兰"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:103 ../gnotski/src/gnotski.c:230
-msgid "Success"
-msgstr "成功"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:104 ../gnotski/src/gnotski.c:235
-msgid "Bone"
-msgstr "骨头"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:105 ../gnotski/src/gnotski.c:241
-msgid "Fortune"
-msgstr "财宝"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:106 ../gnotski/src/gnotski.c:249
-msgid "Fool"
-msgstr "傻瓜"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:107 ../gnotski/src/gnotski.c:255
-msgid "Solomon"
-msgstr "所罗门"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:108 ../gnotski/src/gnotski.c:262
-msgid "Cleopatra"
-msgstr "美人"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:109 ../gnotski/src/gnotski.c:267
-msgid "Shark"
-msgstr "鲨鱼"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:110 ../gnotski/src/gnotski.c:275
-msgid "Rome"
-msgstr "罗马"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:111 ../gnotski/src/gnotski.c:282
-msgid "Pennant Puzzle"
-msgstr "信号旗"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:112 ../gnotski/src/gnotski.c:288
-msgid "Ithaca"
-msgstr "伊萨卡"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:113 ../gnotski/src/gnotski.c:309
-msgid "Pelopones"
-msgstr "伯罗奔尼"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:114 ../gnotski/src/gnotski.c:316
-msgid "Transeuropa"
-msgstr "跨越欧罗巴"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:115 ../gnotski/src/gnotski.c:325
-msgid "Lodzianka"
-msgstr "洛德兹卡"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:116 ../gnotski/src/gnotski.c:331
-msgid "Polonaise"
-msgstr "波洛涅兹"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:117 ../gnotski/src/gnotski.c:336
-msgid "Baltic Sea"
-msgstr "波罗的海"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:118 ../gnotski/src/gnotski.c:341
-msgid "American Pie"
-msgstr "美国派"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:119 ../gnotski/src/gnotski.c:353
-msgid "Traffic Jam"
-msgstr "交通堵塞"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:120 ../gnotski/src/gnotski.c:360
-msgid "Sunshine"
-msgstr "阳光"
-
-#. puzzle name
-#: ../gnotski/src/gnotski.c:171
-msgid "Only 18 Steps"
-msgstr "十八步"
-
-#. set of puzzles
-#: ../gnotski/src/gnotski.c:401
-msgid "HuaRong Trail"
-msgstr "华容道"
-
-#. set of puzzles
-#: ../gnotski/src/gnotski.c:403
-msgid "Challenge Pack"
-msgstr "挑战包"
-
-#. set of puzzles
-#: ../gnotski/src/gnotski.c:405
-msgid "Skill Pack"
-msgstr "技巧包"
-
-#: ../gnotski/src/gnotski.c:406
-msgid "_Restart Puzzle"
-msgstr "重新开始(_R)"
-
-#: ../gnotski/src/gnotski.c:408
-msgid "Next Puzzle"
-msgstr "下一布局"
-
-#: ../gnotski/src/gnotski.c:410
-msgid "Previous Puzzle"
-msgstr "上一布局"
-
-#: ../gnotski/src/gnotski.c:444
-msgid "X location of window"
-msgstr "窗口的 X 位置"
-
-#: ../gnotski/src/gnotski.c:446
-msgid "Y location of window"
-msgstr "窗口的 Y 位置"
-
-#: ../gnotski/src/gnotski.c:600
-msgid "Level completed."
-msgstr "本级完成。"
-
-#: ../gnotski/src/gnotski.c:746
-msgid "The Puzzle Has Been Solved!"
-msgstr "布局已被解开！"
-
-#: ../gnotski/src/gnotski.c:763
-msgid "Klotski Scores"
-msgstr "华容道得分"
-
-#: ../gnotski/src/gnotski.c:766
-msgid "Puzzle:"
-msgstr "布局："
-
-#: ../gnotski/src/gnotski.c:869
-msgid ""
-"The theme for this game failed to render.\n"
-"\n"
-"Please check that Klotski is installed correctly."
-msgstr ""
-"游戏主题渲染失败。\n"
-"\n"
-"请检查华容道是否安装正确。"
-
-#: ../gnotski/src/gnotski.c:1119
-#, c-format
-msgid ""
-"Could not find the image:\n"
-"%s\n"
-"\n"
-"Please check that Klotski is installed correctly."
-msgstr ""
-"找不到图像：\n"
-"%s\n"
-"\n"
-"请检查华容道是否安装正确。"
-
-#: ../gnotski/src/gnotski.c:1158
-#, c-format
-msgid "Moves: %d"
-msgstr "步数：%d"
-
-#: ../gnotski/src/gnotski.c:1450
-msgid ""
-"Sliding Block Puzzles\n"
-"\n"
-"Klotski is a part of GNOME Games."
-msgstr ""
-"滑块类益智游戏\n"
-"\n"
-"华容道是 GNOME 游戏的一部分。"
-
-#: ../gtali/data/gtali.desktop.in.in.h:1 ../gtali/src/gyahtzee.c:57
-msgid "Tali"
-msgstr "掷骰子"
-
-#: ../gtali/data/gtali.desktop.in.in.h:2
-msgid "Beat the odds in a poker-style dice game"
-msgstr "一种类似扑克的的骰子游戏"
-
-#: ../gtali/data/org.gnome.gtali.gschema.xml.in.h:1
-msgid "Delay between rolls"
-msgstr "投掷之间的延迟"
-
-#: ../gtali/data/org.gnome.gtali.gschema.xml.in.h:2
-msgid ""
-"Choose whether or not to insert a delay between the computer's dice rolls so "
-"the player can follow what it is doing."
-msgstr "选择是否在计算机掷骰子时加入延时，使玩家可以知道它在做什么。"
-
-#: ../gtali/data/org.gnome.gtali.gschema.xml.in.h:3
-msgid "Display the computer's thoughts"
-msgstr "显示计算机的思考过程"
-
-#: ../gtali/data/org.gnome.gtali.gschema.xml.in.h:4
-msgid ""
-"If set to true, a dump of the AI's working will be done to standard output."
-msgstr "如果设为真，AI的思考将被输出到标准输出。"
-
-#: ../gtali/src/clist.c:158
-msgid "Already used! Where do you want to put that?"
-msgstr "已经在用了！您要把它摆在哪里？"
-
-#: ../gtali/src/clist.c:414
-#, c-format
-msgid "Score: %d"
-msgstr "得分:%d"
-
-#: ../gtali/src/clist.c:416
-#, c-format
-msgid "Field used"
-msgstr "使用的场地大小"
-
-#: ../gtali/src/gyahtzee.c:101
-msgid "Delay computer moves"
-msgstr "延迟计算机的动作"
-
-#: ../gtali/src/gyahtzee.c:103
-msgid "Display computer thoughts"
-msgstr "显示计算机的思考过程"
-
-#: ../gtali/src/gyahtzee.c:105
-msgid "Number of computer opponents"
-msgstr "计算机对手的数量"
-
-#: ../gtali/src/gyahtzee.c:105 ../gtali/src/gyahtzee.c:107
-#: ../gtali/src/gyahtzee.c:111 ../gtali/src/gyahtzee.c:113
-msgid "NUMBER"
-msgstr "数量"
-
-#: ../gtali/src/gyahtzee.c:107
-msgid "Number of human opponents"
-msgstr "人类对手的数量"
-
-#: ../gtali/src/gyahtzee.c:109
-msgid "Game choice: Regular or Colors"
-msgstr "游戏选择：常规或多色"
-
-#: ../gtali/src/gyahtzee.c:109
-msgid "STRING"
-msgstr "字符串"
-
-#: ../gtali/src/gyahtzee.c:111
-msgid "Number of computer-only games to play"
-msgstr "只含计算机对手的游戏数量"
-
-#: ../gtali/src/gyahtzee.c:113
-msgid "Number of trials for each roll for the computer"
-msgstr "电脑每掷可以尝试的次数"
-
-#: ../gtali/src/gyahtzee.c:118 ../gtali/src/setup.c:360
-msgctxt "game type"
-msgid "Regular"
-msgstr "常规"
-
-#: ../gtali/src/gyahtzee.c:119 ../gtali/src/setup.c:361
-msgctxt "game type"
-msgid "Colors"
-msgstr "多色"
-
-#: ../gtali/src/gyahtzee.c:142
-msgid "Roll all!"
-msgstr "全部重掷！"
-
-#: ../gtali/src/gyahtzee.c:145 ../gtali/src/gyahtzee.c:825
-msgid "Roll!"
-msgstr "掷！"
-
-#: ../gtali/src/gyahtzee.c:179
-msgid "The game is a draw!"
-msgstr "平局！"
-
-#: ../gtali/src/gyahtzee.c:193 ../gtali/src/gyahtzee.c:630
-msgid "Tali Scores"
-msgstr "掷骰子得分"
-
-#: ../gtali/src/gyahtzee.c:209
-#, c-format
-msgid "%s wins the game with %d point"
-msgid_plural "%s wins the game with %d points"
-msgstr[0] "%s 赢了，得到 %d 分"
-
-#: ../gtali/src/gyahtzee.c:257
-#, c-format
-msgid "Computer playing for %s"
-msgstr "计算机玩 %s"
-
-#: ../gtali/src/gyahtzee.c:259
-#, c-format
-msgid "%s! -- You're up."
-msgstr "%s！——该您了。"
-
-#: ../gtali/src/gyahtzee.c:448
-msgid "Select dice to roll or choose a score slot."
-msgstr "选择掷骰子或者分数槽。"
-
-#: ../gtali/src/gyahtzee.c:477
-msgid "Roll"
-msgstr "掷"
-
-#: ../gtali/src/gyahtzee.c:535
-msgid "You are only allowed three rolls. Choose a score slot."
-msgstr "您只能掷三次。选择一个分数槽。"
-
-#: ../gtali/src/gyahtzee.c:586
-msgid "GNOME version (1998):"
-msgstr "GNOME 版本(1998)："
-
-#: ../gtali/src/gyahtzee.c:589
-msgid "Console version (1992):"
-msgstr "控制台版本(1992)："
-
-#: ../gtali/src/gyahtzee.c:592
-msgid "Colors game and multi-level AI (2006):"
-msgstr "多色游戏和多等级 AI(2006)："
-
-#: ../gtali/src/gyahtzee.c:610
-msgid ""
-"A variation on poker with dice and less money.\n"
-"\n"
-"Tali is a part of GNOME Games."
-msgstr ""
-"扑克游戏的变种，改用骰子，而且不需要用钱。\n"
-"\n"
-"掷骰子是 GNOME 游戏的一部分。"
-
-#: ../gtali/src/setup.c:123
-msgid "Current game will complete with original number of players."
-msgstr "当前游戏将以原来的游戏人数完成。"
-
-#: ../gtali/src/setup.c:265
-msgid "Tali Preferences"
-msgstr "掷骰子首选项"
-
-#: ../gtali/src/setup.c:286
-msgid "Human Players"
-msgstr "人类玩家"
-
-#: ../gtali/src/setup.c:296
-msgid "_Number of players:"
-msgstr "玩家数量(_N)："
-
-#: ../gtali/src/setup.c:310
-msgid "Computer Opponents"
-msgstr "计算机对手"
-
-#. --- Button ---
-#: ../gtali/src/setup.c:317
-msgid "_Delay between rolls"
-msgstr "每次投掷之间的延迟(_D)"
-
-#: ../gtali/src/setup.c:327
-msgid "N_umber of opponents:"
-msgstr "对手数量(_U)："
-
-#: ../gtali/src/setup.c:341
-msgid "_Difficulty:"
-msgstr "难度(_D)"
-
-#: ../gtali/src/setup.c:345
-msgctxt "difficulty"
-msgid "Medium"
-msgstr "中等"
-
-#. --- PLAYER NAMES FRAME ----
-#: ../gtali/src/setup.c:369
-msgid "Player Names"
-msgstr "玩家姓名"
-
-#: ../gtali/src/yahtzee.c:85 ../gtali/src/yahtzee.c:109
-#: ../gtali/src/yahtzee.c:517
-msgid "1s [total of 1s]"
-msgstr "1 的总数"
-
-#: ../gtali/src/yahtzee.c:86 ../gtali/src/yahtzee.c:110
-#: ../gtali/src/yahtzee.c:518
-msgid "2s [total of 2s]"
-msgstr "2 的总数"
-
-#: ../gtali/src/yahtzee.c:87 ../gtali/src/yahtzee.c:111
-#: ../gtali/src/yahtzee.c:519
-msgid "3s [total of 3s]"
-msgstr "3 的总数"
-
-#: ../gtali/src/yahtzee.c:88 ../gtali/src/yahtzee.c:112
-#: ../gtali/src/yahtzee.c:520
-msgid "4s [total of 4s]"
-msgstr "4 的总数"
-
-#: ../gtali/src/yahtzee.c:89 ../gtali/src/yahtzee.c:113
-#: ../gtali/src/yahtzee.c:521
-msgid "5s [total of 5s]"
-msgstr "5 的总数"
-
-#: ../gtali/src/yahtzee.c:90 ../gtali/src/yahtzee.c:114
-#: ../gtali/src/yahtzee.c:522
-msgid "6s [total of 6s]"
-msgstr "6 的总数"
-
-#. End of upper panel
-#: ../gtali/src/yahtzee.c:92 ../gtali/src/yahtzee.c:117
-#: ../gtali/src/yahtzee.c:523
-msgid "3 of a Kind [total]"
-msgstr "3个相同 [合计]"
-
-#: ../gtali/src/yahtzee.c:93 ../gtali/src/yahtzee.c:524
-msgid "4 of a Kind [total]"
-msgstr "4个相同 [合计]"
-
-#: ../gtali/src/yahtzee.c:94 ../gtali/src/yahtzee.c:525
-msgid "Full House [25]"
-msgstr "满堂红 [25]"
-
-#: ../gtali/src/yahtzee.c:95 ../gtali/src/yahtzee.c:526
-msgid "Small Straight [30]"
-msgstr "小顺子 [30]"
-
-#: ../gtali/src/yahtzee.c:96 ../gtali/src/yahtzee.c:121
-#: ../gtali/src/yahtzee.c:527
-msgid "Large Straight [40]"
-msgstr "大顺子 [40]"
-
-#: ../gtali/src/yahtzee.c:97
-msgid "5 of a Kind [50]"
-msgstr "5个相同 [50]"
-
-#: ../gtali/src/yahtzee.c:98 ../gtali/src/yahtzee.c:124
-#: ../gtali/src/yahtzee.c:529
-msgid "Chance [total]"
-msgstr "机会 [合计]"
-
-#. End of lower panel
-#: ../gtali/src/yahtzee.c:100 ../gtali/src/yahtzee.c:126
-msgid "Lower Total"
-msgstr "下方合计"
-
-#: ../gtali/src/yahtzee.c:101 ../gtali/src/yahtzee.c:127
-msgid "Grand Total"
-msgstr "总计"
-
-#. Need to squish between upper and lower pannel
-#: ../gtali/src/yahtzee.c:103 ../gtali/src/yahtzee.c:129
-msgid "Upper total"
-msgstr "上方合计"
-
-#: ../gtali/src/yahtzee.c:104 ../gtali/src/yahtzee.c:130
-msgid "Bonus if >62"
-msgstr "奖励(合计＞62)"
-
-#. End of upper panel
-#: ../gtali/src/yahtzee.c:116 ../gtali/src/yahtzee.c:530
-msgid "2 pair Same Color [total]"
-msgstr "2对同色 [合计]"
-
-#: ../gtali/src/yahtzee.c:118 ../gtali/src/yahtzee.c:531
-msgid "Full House [15 + total]"
-msgstr "满堂红 [15 + 合计]"
-
-#: ../gtali/src/yahtzee.c:119 ../gtali/src/yahtzee.c:532
-msgid "Full House Same Color [20 + total]"
-msgstr "同色满堂红 [20 + 合计]"
-
-#: ../gtali/src/yahtzee.c:120 ../gtali/src/yahtzee.c:533
-msgid "Flush (all same color) [35]"
-msgstr "同花(全部同色) [35]"
-
-#: ../gtali/src/yahtzee.c:122 ../gtali/src/yahtzee.c:534
-msgid "4 of a Kind [25 + total]"
-msgstr "4个相同 [合计 + 25]"
-
-#: ../gtali/src/yahtzee.c:123 ../gtali/src/yahtzee.c:535
-msgid "5 of a Kind [50 + total]"
-msgstr "5个相同 [合计 + 50]"
-
-#: ../gtali/src/yahtzee.c:251
-msgid "Choose a score slot."
-msgstr "选择一个分数槽。"
-
-#: ../gtali/src/yahtzee.c:528
-msgid "5 of a Kind [total]"
-msgstr "5个相同 [合计]"
-
-#. Arrgh - lets all use the same tabs under emacs:
-#. Local Variables:
-#. tab-width: 8
-#. c-basic-offset: 8
-#. indent-tabs-mode: nil
-#.
-#: ../iagno/data/iagno.desktop.in.in.h:1 ../iagno/src/iagno.vala:82
-#: ../iagno/src/iagno.vala:276 ../iagno/src/iagno.vala:280
-#: ../iagno/src/iagno.vala:629
-msgid "Iagno"
-msgstr "黑白棋"
-
-#: ../iagno/data/iagno.desktop.in.in.h:2
-msgid "Dominate the board in a classic version of Reversi"
-msgstr "在经典版本的黑白棋中占领盘面"
-
-#: ../iagno/src/iagno.vala:136 ../iagno/src/iagno.vala:236
-#: ../iagno/src/iagno.vala:244
-msgid "Dark:"
-msgstr "黑方:"
-
-#: ../iagno/src/iagno.vala:144 ../iagno/src/iagno.vala:237
-#: ../iagno/src/iagno.vala:245
-msgid "Light:"
-msgstr "白方:"
-
-#: ../iagno/src/iagno.vala:228
-msgid "Light must pass, Dark's move"
-msgstr "白方必须略过，轮到黑方"
-
-#: ../iagno/src/iagno.vala:230
-msgid "Dark must pass, Light's move"
-msgstr "黑方必须略过，轮到白方"
-
-#. Translators: this is a 2 digit representation of the current score.
-#: ../iagno/src/iagno.vala:239 ../iagno/src/iagno.vala:240
-#: ../iagno/src/iagno.vala:247 ../iagno/src/iagno.vala:248
-#, c-format
-msgid "%.2d"
-msgstr "%.2d"
-
-#: ../iagno/src/iagno.vala:281
-msgid ""
-"A disk flipping game derived from Reversi.\n"
-"\n"
-"Iagno is a part of GNOME Games."
-msgstr ""
-"派生于黑白棋的翻转游戏。\n"
-"\n"
-"黑白棋是 GNOME 游戏的一部分。"
-
-#: ../iagno/src/iagno.vala:349
-msgid "Light player wins!"
-msgstr "白方获胜！"
-
-#: ../iagno/src/iagno.vala:351
-msgid "Dark player wins!"
-msgstr "黑方获胜！"
-
-#: ../iagno/src/iagno.vala:353
-msgid "The game was a draw."
-msgstr "游戏平局。"
-
-#: ../iagno/src/iagno.vala:377
-msgid "Invalid move."
-msgstr "非法移动。"
-
-#: ../iagno/src/iagno.vala:473
-msgid "Iagno Preferences"
-msgstr "黑白棋首选项"
-
-#: ../iagno/src/iagno.vala:508
-msgid "Dark"
-msgstr "黑方"
-
-#: ../iagno/src/iagno.vala:538
-msgid "Light"
-msgstr "白方"
-
-#: ../iagno/src/iagno.vala:581
-msgid "S_how grid"
-msgstr "显示网格(_H)"
-
-#: ../iagno/src/iagno.vala:586
-msgid "_Flip final results"
-msgstr "翻出最终结果(_F)"
-
-#: ../iagno/src/iagno.vala:594 ../mahjongg/src/mahjongg.vala:343
-msgid "_Tile set:"
-msgstr "棋子表面(_T)："
-
-#: ../libgames-support/games-controls.c:288
-msgid "Unknown Command"
-msgstr "未知命令"
-
-#. Score dialog column header for the score time (e.g. 1 minute)
-#: ../libgames-support/games-scores-dialog.c:135
-msgctxt "score-dialog"
+#: ../src/gnome-mines.vala:807 ../src/gnome-mines.vala:941
+msgid "_Close"
+msgstr "关闭(_C)"
+
+#: ../src/gnome-mines.vala:822
+msgid "_Use \"I'm not sure\" flags"
+msgstr "使用“不确定”旗标(_U)"
+
+#: ../src/gnome-mines.vala:828
+msgid "_Warn if too many flags are placed next to a number"
+msgstr "在数字附近插太多的旗时警告(_W)"
+
+#: ../src/gnome-mines.vala:943
+msgid "New Game"
+msgstr "新游戏"
+
+#: ../src/gnome-mines.vala:947
+msgid "_OK"
+msgstr "确认(_O)"
+
+#: ../src/gnome-mines.vala:959
+msgid "Size:"
+msgstr "大小："
+
+#: ../src/gnome-mines.vala:984
+msgid "Date"
+msgstr "日期"
+
+#: ../src/gnome-mines.vala:987
 msgid "Time"
 msgstr "时间"
 
-#. Score dialog column header for the score value (e.g. 30 moves)
-#: ../libgames-support/games-scores-dialog.c:141
-msgctxt "score-dialog"
-msgid "Score"
-msgstr "得分"
-
-#. Score format for time based scores.  %1$d is the time in minutes, %2$d is the time in seconds
-#: ../libgames-support/games-scores-dialog.c:299
+#: ../src/gnome-mines.vala:1083
 #, c-format
-msgctxt "score-dialog"
-msgid "%1$dm %2$ds"
-msgstr "%1$d分%2$d秒"
-
-#. Score dialog column header for the name of the player who recorded the score
-#: ../libgames-support/games-scores-dialog.c:560
-msgctxt "score-dialog"
-msgid "Name"
-msgstr "姓名"
-
-#: ../libgames-support/games-stock.c:41
-msgid "View help for this game"
-msgstr "查看此游戏的帮助"
-
-#: ../libgames-support/games-stock.c:42
-msgid "End the current game"
-msgstr "结束当前游戏"
-
-#: ../libgames-support/games-stock.c:43
-msgid "Toggle fullscreen mode"
-msgstr "全屏模式切换"
-
-#: ../libgames-support/games-stock.c:44
-msgid "Get a hint for your next move"
-msgstr "获取您的下一步的提示"
-
-#: ../libgames-support/games-stock.c:45
-msgid "Leave fullscreen mode"
-msgstr "离开全屏模式"
-
-#: ../libgames-support/games-stock.c:46
-msgid "Start a new multiplayer network game"
-msgstr "开始多人网络游戏"
-
-#: ../libgames-support/games-stock.c:47
-msgid "End the current network game and return to network server"
-msgstr "结束当前网络游戏并回到服务器"
-
-#: ../libgames-support/games-stock.c:49
-msgid "Pause the game"
-msgstr "暂停游戏"
-
-#: ../libgames-support/games-stock.c:50
-msgid "Show a list of players in the network game"
-msgstr "显示网络游戏中的玩家列表"
-
-#: ../libgames-support/games-stock.c:51
-msgid "Redo the undone move"
-msgstr "重做撤消的一着"
-
-#: ../libgames-support/games-stock.c:52
-msgid "Restart the game"
-msgstr "重新开始游戏"
-
-#: ../libgames-support/games-stock.c:53
-msgid "Resume the paused game"
-msgstr "恢复暂停的游戏"
-
-#: ../libgames-support/games-stock.c:54
-msgid "View the scores"
-msgstr "查看得分"
-
-#: ../libgames-support/games-stock.c:55 ../mahjongg/src/mahjongg.vala:659
-msgid "Undo the last move"
-msgstr "撤消最后一着"
-
-#: ../libgames-support/games-stock.c:56
-msgid "About this game"
-msgstr "关于此游戏"
-
-#: ../libgames-support/games-stock.c:57
-msgid "Close this window"
-msgstr "关闭此窗口"
-
-#: ../libgames-support/games-stock.c:58
-msgid "Configure the game"
-msgstr "配置游戏"
-
-#: ../libgames-support/games-stock.c:59
-msgid "Quit this game"
-msgstr "退出此游戏"
-
-#. Translators: This "_New" is for the menu item 'Game->New', implies "New Game"
-#: ../libgames-support/games-stock.c:251
-msgid "_New"
-msgstr "新建(_N)"
-
-#: ../libgames-support/games-stock.c:254
-msgid "_Redo Move"
-msgstr "重做移动(_R)"
-
-#. Translators: "_Restart" is the menu item 'Game->Restart', implies "Restart Game"
-#: ../libgames-support/games-stock.c:258 ../mahjongg/src/mahjongg.vala:290
-msgid "_Restart"
-msgstr "重新开始(_R)"
-
-#: ../libgames-support/games-stock.c:260
-msgid "_Deal"
-msgstr "发牌(_D)"
-
-#: ../libgames-support/games-stock.c:261
-msgid "_Leave Fullscreen"
-msgstr "离开全屏(_L)"
-
-#: ../libgames-support/games-stock.c:262
-msgid "Network _Game"
-msgstr "网络游戏(_G)"
-
-#: ../libgames-support/games-stock.c:263
-msgid "L_eave Game"
-msgstr "离开游戏(_E)"
-
-#: ../libgames-support/games-stock.c:264
-msgid "Player _List"
-msgstr "玩家列表(_L)"
-
-#: ../libgames-support/games-stock.c:266
-msgid "Res_ume"
-msgstr "继续(_U)"
-
-#: ../libgames-support/games-stock.c:268
-msgid "_End Game"
-msgstr "结束游戏(_E)"
-
-#. %s is replaced with the name of the game in gnome-games.
-#: ../libgames-support/games-stock.c:317
-#, c-format
-msgid ""
-"%s is free software; you can redistribute it and/or modify it under the "
-"terms of the GNU General Public License as published by the Free Software "
-"Foundation; either version %d of the License, or (at your option) any later "
-"version."
-msgstr ""
-"%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或修改"
-"它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
-
-#: ../libgames-support/games-stock.c:322
-#, c-format
-msgid ""
-"%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-"WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-"FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-"details."
-msgstr ""
-"%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用它所"
-"造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细节。"
-
-#: ../libgames-support/games-stock.c:327
-#, c-format
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
-"Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr ""
-"您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给自由"
-"软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  02110-"
-"1301  USA"
-
-#: ../libgames-support/games-stock.c:331
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"this program.  If not, see <http://www.gnu.org/licenses/>."
-msgstr ""
-"您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
-"<http://www.gnu.org/licenses/>。"
-
-#: ../lightsoff/data/lightsoff.desktop.in.in.h:1
-#: ../lightsoff/src/lightsoff.vala:142 ../lightsoff/src/lightsoff.vala:147
-msgid "Lights Off"
-msgstr "关灯"
-
-#: ../lightsoff/data/lightsoff.desktop.in.in.h:2
-msgid "Turn off all the lights"
-msgstr "关闭所有的灯"
-
-#: ../lightsoff/data/org.gnome.lightsoff.gschema.xml.in.h:1
-msgid "The current level"
-msgstr "当前级别"
-
-#: ../lightsoff/data/org.gnome.lightsoff.gschema.xml.in.h:2
-msgid "The users's most recent level."
-msgstr "用户最近的级别。"
-
-#: ../lightsoff/src/lightsoff.vala:145
-msgid ""
-"Turn off all the lights\n"
-"\n"
-"Lights Off is a part of GNOME Games."
-msgstr ""
-"关闭所有的灯。\n"
-"\n"
-"关灯是 GNOME 游戏的一部分。"
-
-#: ../mahjongg/data/mahjongg.desktop.in.in.h:1
-#: ../mahjongg/src/mahjongg.vala:45 ../mahjongg/src/mahjongg.vala:529
-#: ../mahjongg/src/mahjongg.vala:534 ../mahjongg/src/mahjongg.vala:801
-msgid "Mahjongg"
-msgstr "对对碰"
-
-#: ../mahjongg/data/mahjongg.desktop.in.in.h:2
-msgid "Disassemble a pile of tiles by removing matching pairs"
-msgstr "移除匹配的牌对以拆除牌堆"
-
-#.
-#. * Translatable strings file generated by get_titles.pl.
-#. * Add this file to your project's POTFILES.in.
-#. * DO NOT compile it as part of your application.
-#.
-#: ../mahjongg/data/translatable_game_names.h:6
-msgctxt "mahjongg map name"
-msgid "The Ziggurat"
-msgstr "巴比伦神塔"
-
-#: ../mahjongg/data/translatable_game_names.h:7
-msgctxt "mahjongg map name"
-msgid "Four Bridges"
-msgstr "四桥"
-
-#: ../mahjongg/data/translatable_game_names.h:8
-msgctxt "mahjongg map name"
-msgid "Cloud"
-msgstr "云"
-
-#: ../mahjongg/data/translatable_game_names.h:9
-msgctxt "mahjongg map name"
-msgid "Tic-Tac-Toe"
-msgstr "踢踏"
-
-#: ../mahjongg/data/translatable_game_names.h:10
-msgctxt "mahjongg map name"
-msgid "Red Dragon"
-msgstr "赤龙"
-
-#: ../mahjongg/data/translatable_game_names.h:11
-msgctxt "mahjongg map name"
-msgid "Pyramid's Walls"
-msgstr "金字塔之墙"
-
-#: ../mahjongg/data/translatable_game_names.h:12
-msgctxt "mahjongg map name"
-msgid "Confounding Cross"
-msgstr "讨厌的十字"
-
-#: ../mahjongg/data/translatable_game_names.h:13
-msgctxt "mahjongg map name"
-msgid "Difficult"
-msgstr "困难"
-
-#: ../mahjongg/src/mahjongg.vala:53
-msgid "Moves Left:"
-msgstr "剩下的着法:"
-
-#: ../mahjongg/src/mahjongg.vala:182
-msgid "Do you want to start a new game with this map?"
-msgstr "您想要使用这张地图启动新游戏吗？"
-
-#: ../mahjongg/src/mahjongg.vala:183
-msgid "If you continue playing the next game will use the new map."
-msgstr "如果您继续游戏，下一盘游戏将使用新地图。"
-
-#: ../mahjongg/src/mahjongg.vala:184
-msgid "_Continue playing"
-msgstr "继续游戏(_C)"
-
-#: ../mahjongg/src/mahjongg.vala:185
-msgid "Use _new map"
-msgstr "使用新地图(_N)"
-
-#: ../mahjongg/src/mahjongg.vala:258 ../mahjongg/src/mahjongg.vala:562
-msgid "Mahjongg Scores"
-msgstr "对对碰得分"
-
-#: ../mahjongg/src/mahjongg.vala:260 ../quadrapassel/src/quadrapassel.vala:616
-msgid "Puzzle solved!"
-msgstr "拼图完成了！"
-
-#: ../mahjongg/src/mahjongg.vala:261 ../quadrapassel/src/quadrapassel.vala:617
-msgid "You didn't make the top ten, better luck next time."
-msgstr "您未能进入前十，下次好运。"
-
-#: ../mahjongg/src/mahjongg.vala:287
-msgid "There are no more moves."
-msgstr "没有更多着法了。"
-
-#: ../mahjongg/src/mahjongg.vala:288
-msgid ""
-"Each puzzle has at least one solution.  You can undo your moves and try and "
-"find the solution for a time penalty, restart this game or start an new one."
-msgstr ""
-"每局都至少有一种解法。您可以撤销几次移动来尝试寻找解法，也可以重新开始一次游"
-"戏。"
-
-#: ../mahjongg/src/mahjongg.vala:291
-msgid "_New game"
-msgstr "新游戏(_N)"
-
-#: ../mahjongg/src/mahjongg.vala:319
-msgid "Mahjongg Preferences"
-msgstr "对对碰首选项"
-
-#: ../mahjongg/src/mahjongg.vala:336
-msgid "Tiles"
-msgstr "牌"
-
-#: ../mahjongg/src/mahjongg.vala:373
-msgid "Maps"
-msgstr "地图"
-
-#: ../mahjongg/src/mahjongg.vala:380
-msgid "_Select map:"
-msgstr "选择地图(_S)："
-
-#: ../mahjongg/src/mahjongg.vala:408 ../swell-foop/src/swell-foop.vala:246
-msgid "Colors"
-msgstr "颜色"
-
-#: ../mahjongg/src/mahjongg.vala:504
-msgid "Maps:"
-msgstr "地图："
-
-#: ../mahjongg/src/mahjongg.vala:512
-msgid "Tiles:"
-msgstr "牌数："
-
-#: ../mahjongg/src/mahjongg.vala:532
-msgid ""
-"A matching game played with Mahjongg tiles.\n"
-"\n"
-"Mahjongg is a part of GNOME Games."
-msgstr ""
-"用麻将牌玩的对对碰游戏。\n"
-"\n"
-"对对碰是 GNOME 游戏的一部分。"
-
-#. Translators: This is the window title for Mahjongg which contains the map name, e.g. 'Mahjongg - Red Dragon'
-#: ../mahjongg/src/mahjongg.vala:631
-#, c-format
-msgid "Mahjongg - %s"
-msgstr "对对碰 - %s"
-
-#: ../mahjongg/src/mahjongg.vala:658
-msgid "Restart the current game"
-msgstr "重新开始当前游戏"
-
-#: ../mahjongg/src/mahjongg.vala:660
-msgid "Redo the last move"
-msgstr "重做最后一着"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:1
-msgid "Image to use for drawing blocks"
-msgstr "要用做绘制方块的图像"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:2
-msgid "Image to use for drawing blocks."
-msgstr "要用做绘制方块的图像。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:3
-msgid "The theme used for rendering the blocks"
-msgstr "用来渲染方块的主题"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:4
-msgid "The name of the theme used for rendering the blocks and the background."
-msgstr "用以渲染方块和背景的主题的名称。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:5
-msgid "Level to start with"
-msgstr "起始级别"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:6
-msgid "Level to start with."
-msgstr "起始级别。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:7
-msgid "Whether to preview the next block"
-msgstr "是否预览下一个方块"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:8
-msgid "Whether to preview the next block."
-msgstr "是否预览下一个方块。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:9
-msgid "Whether to show where the moving piece will land"
-msgstr "是否显示方块将移动到何处"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:10
-msgid "Whether to show where the moving piece will land."
-msgstr "是否显示方块将移动到何处。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:11
-msgid "Whether to give blocks random colors"
-msgstr "是否给方块随机着色"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:12
-msgid "Whether to give blocks random colors."
-msgstr "是否给方块随机着色。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:13
-msgid "Whether to rotate counter clock wise"
-msgstr "是否逆时针旋转"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:14
-msgid "Whether to rotate counter clock wise."
-msgstr "是否逆时针旋转。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:15
-msgid "The number of rows to fill"
-msgstr "要填充的行数"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:16
-msgid ""
-"The number of rows that are filled with random blocks at the start of the "
-"game."
-msgstr "游戏开始时由随机方块填充的行数。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:17
-msgid "The density of filled rows"
-msgstr "填充行的浓度"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:18
-msgid ""
-"The density of blocks in rows filled at the start of the game. The value is "
-"between 0 (for no blocks) and 10 (for a completely filled row)."
-msgstr "游戏开始时已填充行的方块密度。可用值从0(没有方块)到10(完全填充)。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:19
-msgid "Whether to play sounds"
-msgstr "是否播放声音"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:20
-msgid "Whether to play sounds."
-msgstr "是否播放声音。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:21
-msgid "Whether to pick blocks that are hard to place"
-msgstr "是否挑选难以放置的方块"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:22
-msgid "Whether to pick blocks that are hard to place."
-msgstr "是否挑选难以放置的方块。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:28
-msgid "Key press to move down."
-msgstr "下移的按键。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:29
-#: ../quadrapassel/src/quadrapassel.vala:365
-msgid "Drop"
-msgstr "掉下"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:30
-msgid "Key press to drop."
-msgstr "下落的按键。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:31
-#: ../quadrapassel/src/quadrapassel.vala:366
-msgid "Rotate"
-msgstr "旋转"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:32
-msgid "Key press to rotate."
-msgstr "旋转的按键。"
-
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:33
-#: ../quadrapassel/src/quadrapassel.vala:367
-msgid "Pause"
+msgid "%u × %u, %u mine"
+msgid_plural "%u × %u, %u mines"
+msgstr[0] "%u × %u, %u 颗雷"
+
+#: ../src/minefield-view.vala:557
+msgid "Paused"
 msgstr "暂停"
 
-#: ../quadrapassel/data/org.gnome.quadrapassel.gschema.xml.in.h:34
-msgid "Key press to pause."
-msgstr "暂停的按键。"
+#~ msgid "Display border around numbers"
+#~ msgstr "环绕数字显示边框"
 
-#: ../quadrapassel/data/quadrapassel.desktop.in.in.h:1
-#: ../quadrapassel/src/quadrapassel.vala:92
-#: ../quadrapassel/src/quadrapassel.vala:676
-#: ../quadrapassel/src/quadrapassel.vala:680
-#: ../quadrapassel/src/quadrapassel.vala:722
-msgid "Quadrapassel"
-msgstr "俄罗斯方块"
+#~ msgid "Set to true to display a border around mine indication numbers."
+#~ msgstr "设定为 True 可在指示雷的数字上显示边框。"
 
-#: ../quadrapassel/data/quadrapassel.desktop.in.in.h:2
-msgid "Fit falling blocks together"
-msgstr "将下落的方块组合在一起"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "True 如果该窗口为全屏"
 
-#: ../quadrapassel/src/game-view.vala:332
-msgid "Game Over"
-msgstr "游戏结束"
+#~| msgid "Field Size"
+#~ msgid "_Replay Size"
+#~ msgstr "重玩时大小(_R)"
 
-#: ../quadrapassel/src/quadrapassel.vala:183
-msgid "Lines:"
-msgstr "行数："
+#~ msgid "_Hint"
+#~ msgstr "提示(_H)"
 
-#: ../quadrapassel/src/quadrapassel.vala:245
-msgid "Quadrapassel Preferences"
-msgstr "俄罗斯方块首选项"
+#~ msgid "_Pause"
+#~ msgstr "暂停(_P)"
 
-#: ../quadrapassel/src/quadrapassel.vala:261
-#: ../swell-foop/data/preferences.ui.h:4
-msgid "Setup"
-msgstr "设置"
+#~ msgid "_Fullscreen"
+#~ msgstr "全屏(_F)"
 
-#. pre-filled rows
-#: ../quadrapassel/src/quadrapassel.vala:267
-msgid "_Number of pre-filled rows:"
-msgstr "预填充行行数(_N)："
+#~ msgid "_New"
+#~ msgstr "新建(_N)"
 
-#. pre-filled rows density
-#: ../quadrapassel/src/quadrapassel.vala:281
-msgid "_Density of blocks in a pre-filled row:"
-msgstr "预填充行中方块的浓度(_D)："
+#~| msgid "_Hint"
+#~ msgid "Hint"
+#~ msgstr "提示"
 
-#: ../quadrapassel/src/quadrapassel.vala:311
-#: ../swell-foop/data/preferences.ui.h:8
-msgid "Operation"
-msgstr "操作"
+#~ msgid "Field Size"
+#~ msgstr "场地大小"
 
-#: ../quadrapassel/src/quadrapassel.vala:319
-msgid "_Preview next block"
-msgstr "预览下一个方块(_P)"
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "离开全屏(_L)"
 
-#: ../quadrapassel/src/quadrapassel.vala:324
-msgid "Choose difficult _blocks"
-msgstr "选择困难的方块(_B)"
+#~ msgid "Flags: %u/%u"
+#~ msgstr "旗标：%u/%u"
 
-#. rotate counter clock wise
-#: ../quadrapassel/src/quadrapassel.vala:330
-msgid "_Rotate blocks counterclockwise"
-msgstr "逆时针旋转块(_R)"
+#~ msgid "Res_ume"
+#~ msgstr "继续(_U)"
 
-#: ../quadrapassel/src/quadrapassel.vala:335
-msgid "Show _where the block will land"
-msgstr "显示方块将落到何处(_W)"
+#~ msgid ""
+#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
+#~ "hints from squares you have already uncovered.\n"
+#~ "\n"
+#~ "Mines is a part of GNOME Games."
+#~ msgstr ""
+#~ "流行的扫雷游戏。通过不断揭开方块给出提示来找出剩余方块中的地雷。\n"
+#~ "\n"
+#~ "扫雷是 GNOME 游戏的一部分。"
 
-#: ../quadrapassel/src/quadrapassel.vala:343
-#: ../quadrapassel/src/quadrapassel.vala:375
-msgid "Theme"
-msgstr "主题"
+#~ msgid "_Display numbers with border"
+#~ msgstr "数字显示边框(_D)"
 
-#: ../quadrapassel/src/quadrapassel.vala:352
-msgid "Controls"
-msgstr "控制"
+#~ msgid "Chess"
+#~ msgstr "国际象棋"
 
-#: ../quadrapassel/src/quadrapassel.vala:378
-msgid "Block Style"
-msgstr "方块样式"
+#~ msgid "Play the classic two-player boardgame of chess"
+#~ msgstr "经典的国际象棋对战游戏"
 
-#: ../quadrapassel/src/quadrapassel.vala:394
-msgid "Plain"
-msgstr "朴素"
+#~ msgid "_Game"
+#~ msgstr "游戏(_G)"
 
-#: ../quadrapassel/src/quadrapassel.vala:399
-msgid "Tango Flat"
-msgstr "Tango 平面"
+#~ msgid "_Undo Move"
+#~ msgstr "撤消移动(_U)"
 
-#: ../quadrapassel/src/quadrapassel.vala:404
-msgid "Tango Shaded"
-msgstr "Tango 阴影"
+#~ msgid "_Resign"
+#~ msgstr "认输(_R)"
 
-#: ../quadrapassel/src/quadrapassel.vala:409
-msgid "Clean"
-msgstr "简洁"
+#~ msgid "Claim _Draw"
+#~ msgstr "声明和棋(_D)"
 
-#: ../quadrapassel/src/quadrapassel.vala:615
-#: ../quadrapassel/src/quadrapassel.vala:693
-msgid "Quadrapassel Scores"
-msgstr "俄罗斯方块得分"
+#~ msgid "_Settings"
+#~ msgstr "设置(_S)"
 
-#: ../quadrapassel/src/quadrapassel.vala:678
-msgid ""
-"A classic game of fitting falling blocks together.\n"
-"\n"
-"Quadrapassel is a part of GNOME Games."
-msgstr ""
-"经典游戏俄罗斯方块。\n"
-"\n"
-"俄罗斯方块是 GNOME 游戏的一部分。"
+#~ msgid "_Contents"
+#~ msgstr "目录(_C)"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:1
-msgid "The theme to use"
-msgstr "要使用的主题"
+#~ msgid "Start a new game"
+#~ msgstr "开始新游戏"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:2
-msgid "The title of the tile theme to use."
-msgstr "要使用的牌面主题名称。"
+#~ msgid "Undo Move"
+#~ msgstr "撤消移动"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:4
-msgid "The size of the game board."
-msgstr "游戏棋盘大小"
+#~ msgid "Resign"
+#~ msgstr "认输"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:5
-msgid "Board color count"
-msgstr "棋盘颜色数量"
+#~ msgid "Rewind to the game start"
+#~ msgstr "定位到游戏开始"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:6
-msgid "The number of colors of tiles to use in the game."
-msgstr "游戏中色块的颜色数量。"
+#~ msgid "Show the previous move"
+#~ msgstr "显示上一着"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:7
-msgid "Zealous animation"
-msgstr "华丽的动画"
+#~ msgid "Show the next move"
+#~ msgstr "显示下一着"
 
-#: ../swell-foop/data/org.gnome.swell-foop.gschema.xml.in.h:8
-msgid "Use more flashy, but slower, animations."
-msgstr "使用更华丽、更缓慢的动画。"
+#~ msgid "Show the current move"
+#~ msgstr "显示当前移动"
 
-#: ../swell-foop/data/swell-foop.desktop.in.in.h:1
-#: ../swell-foop/data/preferences.ui.h:1 ../swell-foop/src/swell-foop.vala:65
-#: ../swell-foop/src/swell-foop.vala:377 ../swell-foop/src/swell-foop.vala:382
-#: ../swell-foop/src/swell-foop.vala:441
-msgid "Swell Foop"
-msgstr "消色块"
+#~ msgid "The width of the window"
+#~ msgstr "窗口的宽度"
 
-#: ../swell-foop/data/swell-foop.desktop.in.in.h:2
-msgid "Clear the screen by removing groups of colored and shaped tiles"
-msgstr "移除同样的色块以清空屏幕"
+#~ msgid "The height of the window"
+#~ msgstr "窗口的高度"
 
-#: ../swell-foop/data/preferences.ui.h:2
-msgid "Board size:"
-msgstr "棋盘大小："
+#~ msgid "A flag to enable maximized mode"
+#~ msgstr "启用最大化模式的标记"
 
-#: ../swell-foop/data/preferences.ui.h:3
-msgid "Number of colors:"
-msgstr "颜色数量："
+#~ msgid "A flag to enable fullscreen mode"
+#~ msgstr "启用全屏模式的标记"
 
-#: ../swell-foop/data/preferences.ui.h:5
-msgid "Theme:"
-msgstr "主题："
+#~ msgid "The piece to promote pawns to"
+#~ msgstr "兵升变为子力"
 
-#: ../swell-foop/data/preferences.ui.h:7
-msgid "Zealous Animation"
-msgstr "华丽的动画"
+#~ msgid ""
+#~ "The piece to promote to when a human player moves a pawn to the far rank"
+#~ msgstr "当人类玩家的兵直进到对方底线时，就可升变为子力"
 
-#: ../swell-foop/src/game-view.vala:338
-msgid "points"
-msgstr "得分"
+#~ msgid "A flag to enable 3D mode"
+#~ msgstr "启用 3D 模式的标记"
 
-#: ../swell-foop/src/swell-foop.vala:144 ../swell-foop/src/swell-foop.vala:175
-msgid "Small"
-msgstr "小"
+#~ msgid "A flag to smooth (anti-alias) the 3D display"
+#~ msgstr "启用 3D 模式平滑的标记"
 
-#: ../swell-foop/src/swell-foop.vala:145 ../swell-foop/src/swell-foop.vala:176
-msgid "Normal"
-msgstr "正常"
+#~ msgid "The piece theme to use"
+#~ msgstr "使用的棋子主题"
 
-#: ../swell-foop/src/swell-foop.vala:146 ../swell-foop/src/swell-foop.vala:177
-msgid "Large"
-msgstr "大"
+#~ msgid "A flag to enable move hints"
+#~ msgstr "启用提示模式的标记"
 
-#: ../swell-foop/src/swell-foop.vala:250
-msgid "Shapes and Colors"
-msgstr "形状和颜色"
+#~ msgid "A flag to enable board numbering"
+#~ msgstr "显示棋盘坐标模式的标记"
 
-#: ../swell-foop/src/swell-foop.vala:347
-msgid "Swell Foop Scores"
-msgstr "消色块得分"
+#~ msgid "A flag to enable the move history browser"
+#~ msgstr "启用走棋历史浏览器的标记"
 
-#: ../swell-foop/src/swell-foop.vala:380
-msgid ""
-"I want to play that game! You know, they all light-up and you click on them "
-"and they vanish!\n"
-"\n"
-"Swell Foop is a part of GNOME Games."
-msgstr ""
-"我想玩那个游戏！你点击那些闪动的块块，它们就消失了！\n"
-"\n"
-"消色块 是 GNOME 游戏的一部分。"
+#~ msgid "A flag to enable the toolbar"
+#~ msgstr "启用工具栏的标记"
 
-#: ../swell-foop/src/swell-foop.vala:381
-msgid "Copyright © 2009 Tim Horton"
-msgstr "Copyright © 2009 Tim Horton"
+#~ msgid "The directory to open the save game dialog in"
+#~ msgstr "保存游戏对话框打开时所在的目录"
+
+#~ msgid "The directory to open the load game dialog in"
+#~ msgstr "载入游戏对话框打开时所在的目录"
+
+#~ msgid "The format to display moves in"
+#~ msgstr "着法显示格式"
+
+#~ msgid "The side of the board that is in the foreground"
+#~ msgstr "前景上的板边缘"
+
+#~ msgid "The duration of a game in seconds (0 for no limit)"
+#~ msgstr "游戏的时间限制(以秒为单位，0 表示无限制)"
+
+#~ msgid "true if the human player is playing white"
+#~ msgstr "如果人类玩家执白，则为真"
+
+#~ msgid "The opponent player"
+#~ msgstr "对手"
+
+#~ msgid ""
+#~ "Can be 'human' (play against another human player), '' (use the first "
+#~ "available chess engine) or the name of a specific engine to play against"
+#~ msgstr ""
+#~ "可以是“human”(和另一个人类玩家对战)，“”(第一个可用的游戏引擎)或者要指定与"
+#~ "之对战的引擎名称"
+
+#~ msgid "Difficulty of the opponent chess engine"
+#~ msgstr "与之对战的国际象棋引擎的难度"
+
+#~ msgid "Preferences"
+#~ msgstr "首选项"
+
+#~ msgid "Play as:"
+#~ msgstr "玩家身份："
+
+#~ msgid "Opposing Player:"
+#~ msgstr "对手："
+
+#~ msgid "Difficulty:"
+#~ msgstr "难度："
+
+#~ msgid "Game Duration:"
+#~ msgstr "游戏时长："
+
+#~ msgid "Promotion Type:"
+#~ msgstr "棋子升级："
+
+#~ msgid "Changes will take effect for the next game."
+#~ msgstr "改动将在下一盘游戏中生效。"
+
+#~ msgid "Game"
+#~ msgstr "游戏"
+
+#~ msgid "3_D Chess View"
+#~ msgstr "3_D 象棋视图"
+
+#~ msgid "_Smooth Display"
+#~ msgstr "平滑显示(_S)"
+
+#~ msgid "Piece Style:"
+#~ msgstr "棋子样式："
+
+#~ msgid "Show _Toolbar"
+#~ msgstr "显示工具栏(_T)"
+
+#~ msgid "Show _History"
+#~ msgstr "显示历史(_H)"
+
+#~ msgid "_Move Hints"
+#~ msgstr "走子提示(_M)"
+
+#~ msgid "_Board Numbering"
+#~ msgstr "棋盘编号(_B)"
+
+#~ msgid "Board Orientation:"
+#~ msgstr "盘面方向："
+
+#~ msgid "Move Format:"
+#~ msgstr "棋谱："
+
+#~ msgid "_Appearance"
+#~ msgstr "外观(_A)"
+
+#~ msgctxt "difficulty"
+#~ msgid "Easy"
+#~ msgstr "简单"
+
+#~ msgctxt "difficulty"
+#~ msgid "Normal"
+#~ msgstr "正常"
+
+#~ msgctxt "difficulty"
+#~ msgid "Hard"
+#~ msgstr "困难"
+
+#~ msgctxt "chess-opponent"
+#~ msgid "Human"
+#~ msgstr "人类玩家"
+
+#~ msgctxt "chess-player"
+#~ msgid "White"
+#~ msgstr "白方"
+
+#~ msgctxt "chess-player"
+#~ msgid "Black"
+#~ msgstr "黑方"
+
+#~ msgid "No limit"
+#~ msgstr "无限"
+
+#~ msgid "One minute"
+#~ msgstr "1 分钟"
+
+#~ msgid "Five minutes"
+#~ msgstr "5 分钟"
+
+#~ msgid "30 minutes"
+#~ msgstr "30 分钟"
+
+#~ msgid "One hour"
+#~ msgstr "1 小时"
+
+#~ msgid "Simple"
+#~ msgstr "简单"
+
+#~ msgid "Fancy"
+#~ msgstr "花俏"
+
+#~ msgctxt "chess-side"
+#~ msgid "White Side"
+#~ msgstr "白方"
+
+#~ msgctxt "chess-side"
+#~ msgid "Black Side"
+#~ msgstr "黑方"
+
+#~ msgctxt "chess-side"
+#~ msgid "Human Side"
+#~ msgstr "人类玩家方"
+
+#~ msgctxt "chess-side"
+#~ msgid "Current Player"
+#~ msgstr "当前玩家"
+
+#~ msgctxt "chess-side"
+#~ msgid "Face to Face"
+#~ msgstr "面对面"
+
+#~ msgctxt "chess-move-format"
+#~ msgid "Human"
+#~ msgstr "易读格式"
+
+#~ msgctxt "chess-move-format"
+#~ msgid "Standard Algebraic"
+#~ msgstr "标准代数格式"
+
+#~ msgctxt "chess-move-format"
+#~ msgid "Figurine"
+#~ msgstr "雕像格式"
+
+#~ msgctxt "chess-move-format"
+#~ msgid "Long Algebraic"
+#~ msgstr "长代数格式"
+
+#~ msgctxt "chess-piece"
+#~ msgid "Queen"
+#~ msgstr "后"
+
+#~ msgctxt "chess-piece"
+#~ msgid "Knight"
+#~ msgstr "骑士"
+
+#~ msgctxt "chess-piece"
+#~ msgid "Rook"
+#~ msgstr "车"
+
+#~ msgctxt "chess-piece"
+#~ msgid "Bishop"
+#~ msgstr "相"
+
+#~ msgid "%1$s (%2$s) - Chess"
+#~ msgstr "%1$s (%2$s) - 国际象棋"
+
+#~ msgid "Game Start"
+#~ msgstr "游戏开始"
+
+#~ msgid "White pawn moves from %1$s to %2$s"
+#~ msgstr "白兵从 %1$s 移动到 %2$s"
+
+#~ msgid "White pawn at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑兵"
+
+#~ msgid "White pawn at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑车"
+
+#~ msgid "White pawn at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑马"
+
+#~ msgid "White pawn at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑象"
+
+#~ msgid "White pawn at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白兵吃掉在 %2$s 的黑后"
+
+#~ msgid "White rook moves from %1$s to %2$s"
+#~ msgstr "白车从 %1$s 移动到 %2$s"
+
+#~ msgid "White rook at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白车吃掉在 %2$s 的黑兵"
+
+#~ msgid "White rook at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白车吃掉在 %2$s 的黑车"
+
+#~ msgid "White rook at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白车吃掉在 %2$s 的黑马"
+
+#~ msgid "White rook at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白车吃掉在 %2$s 的黑象"
+
+#~ msgid "White rook at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白车吃掉在 %2$s 的黑后"
+
+#~ msgid "White knight moves from %1$s to %2$s"
+#~ msgstr "白马从 %1$s 移动到 %2$s"
+
+#~ msgid "White knight at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白马吃掉在 %2$s 的黑兵"
+
+#~ msgid "White knight at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白马吃掉在 %2$s 的黑车"
+
+#~ msgid "White knight at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白马吃掉在 %2$s 的黑马"
+
+#~ msgid "White knight at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白马吃掉在 %2$s 的黑象"
+
+#~ msgid "White knight at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白马吃掉在 %2$s 的黑后"
+
+#~ msgid "White bishop moves from %1$s to %2$s"
+#~ msgstr "白象从 %1$s 移动到 %2$s"
+
+#~ msgid "White bishop at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白象吃掉在 %2$s 的黑兵"
+
+#~ msgid "White bishop at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白象吃掉在 %2$s 的黑车"
+
+#~ msgid "White bishop at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白象吃掉在 %2$s 的黑马"
+
+#~ msgid "White bishop at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白象吃掉在 %2$s 的黑象"
+
+#~ msgid "White bishop at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白象吃掉在 %2$s 的黑后"
+
+#~ msgid "White queen moves from %1$s to %2$s"
+#~ msgstr "白后从 %1$s 移动到 %2$s"
+
+#~ msgid "White queen at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白后吃掉在 %2$s 的黑兵"
+
+#~ msgid "White queen at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白后吃掉在 %2$s 的黑车"
+
+#~ msgid "White queen at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白后吃掉在 %2$s 的黑马"
+
+#~ msgid "White queen at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白后吃掉在 %2$s 的黑象"
+
+#~ msgid "White queen at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白后吃掉在 %2$s 的黑后"
+
+#~ msgid "White king moves from %1$s to %2$s"
+#~ msgstr "白王从 %1$s 移动到 %2$s"
+
+#~ msgid "White king at %1$s takes the black pawn at %2$s"
+#~ msgstr "在 %1$s 的白王吃掉在 %2$s 的黑兵"
+
+#~ msgid "White king at %1$s takes the black rook at %2$s"
+#~ msgstr "在 %1$s 的白王吃掉在 %2$s 的黑车"
+
+#~ msgid "White king at %1$s takes the black knight at %2$s"
+#~ msgstr "在 %1$s 的白王吃掉在 %2$s 的黑马"
+
+#~ msgid "White king at %1$s takes the black bishop at %2$s"
+#~ msgstr "在 %1$s 的白王吃掉在 %2$s 的黑象"
+
+#~ msgid "White king at %1$s takes the black queen at %2$s"
+#~ msgstr "在 %1$s 的白王掉在 %2$s 的黑后"
+
+#~ msgid "Black pawn moves from %1$s to %2$s"
+#~ msgstr "黑兵从 %1$s 移动到 %2$s"
+
+#~ msgid "Black pawn at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白兵"
+
+#~ msgid "Black pawn at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白车"
+
+#~ msgid "Black pawn at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白马"
+
+#~ msgid "Black pawn at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白象"
+
+#~ msgid "Black pawn at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑兵吃掉在 %2$s 的白后"
+
+#~ msgid "Black rook moves from %1$s to %2$s"
+#~ msgstr "黑车从 %1$s 移动到 %2$s"
+
+#~ msgid "Black rook at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑车吃掉在 %2$s 的白兵"
+
+#~ msgid "Black rook at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑车吃掉在 %2$s 的白车"
+
+#~ msgid "Black rook at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑车吃掉在 %2$s 的白马"
+
+#~ msgid "Black rook at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑车吃掉在 %2$s 的白象"
+
+#~ msgid "Black rook at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑车吃掉在 %2$s 的白后"
+
+#~ msgid "Black knight moves from %1$s to %2$s"
+#~ msgstr "黑马从 %1$s 移动到 %2$s"
+
+#~ msgid "Black knight at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑马吃掉在 %2$s 的白兵"
+
+#~ msgid "Black knight at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑马吃掉在 %2$s 的白车"
+
+#~ msgid "Black knight at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑马吃掉在 %2$s 的白马"
+
+#~ msgid "Black knight at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑马吃掉在 %2$s 的白象"
+
+#~ msgid "Black knight at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑马吃掉在 %2$s 的白后"
+
+#~ msgid "Black bishop moves from %1$s to %2$s"
+#~ msgstr "黑象从 %1$s 移动到 %2$s"
+
+#~ msgid "Black bishop at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑象吃掉在 %2$s 的白兵"
+
+#~ msgid "Black bishop at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑象吃掉在 %2$s 的白车"
+
+#~ msgid "Black bishop at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑象吃掉在 %2$s 的白马"
+
+#~ msgid "Black bishop at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑象吃掉在 %2$s 的白象"
+
+#~ msgid "Black bishop at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑象吃掉在 %2$s 的白后"
+
+#~ msgid "Black queen moves from %1$s to %2$s"
+#~ msgstr "黑后从 %1$s 移动到 %2$s"
+
+#~ msgid "Black queen at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑后吃掉在 %2$s 的白兵"
+
+#~ msgid "Black queen at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑后吃掉在 %2$s 的白车"
+
+#~ msgid "Black queen at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑后吃掉在 %2$s 的白马"
+
+#~ msgid "Black queen at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑后吃掉在 %2$s 的白象"
+
+#~ msgid "Black queen at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑后吃掉在 %2$s 的白后"
+
+#~ msgid "Black king moves from %1$s to %2$s"
+#~ msgstr "黑王从 %1$s 移动到 %2$s"
+
+#~ msgid "Black king at %1$s takes the white pawn at %2$s"
+#~ msgstr "在 %1$s 的黑王吃掉在 %2$s 的白兵"
+
+#~ msgid "Black king at %1$s takes the white rook at %2$s"
+#~ msgstr "在 %1$s 的黑王吃掉在 %2$s 的白车"
+
+#~ msgid "Black king at %1$s takes the white knight at %2$s"
+#~ msgstr "在 %1$s 的黑王吃掉在 %2$s 的白马"
+
+#~ msgid "Black king at %1$s takes the white bishop at %2$s"
+#~ msgstr "在 %1$s 的黑王吃掉在 %2$s 的白象"
+
+#~ msgid "Black king at %1$s takes the white queen at %2$s"
+#~ msgstr "在 %1$s 的黑王吃掉在 %2$s 的白后"
+
+#~ msgid "White wins"
+#~ msgstr "白方获胜"
+
+#~ msgid "Black wins"
+#~ msgstr "黑方获胜"
+
+#~ msgid "Game is drawn"
+#~ msgstr "和棋"
+
+#~ msgid "Opponent is in check and cannot move (checkmate)"
+#~ msgstr "对方正被将军且无子可走(将死)"
+
+#~ msgid "Opponent cannot move (stalemate)"
+#~ msgstr "对方无子可走(逼和)"
+
+#~ msgid "No piece has been taken or pawn moved in the last fifty moves"
+#~ msgstr "过去十五步内没有子被吃且兵没有移动"
+
+#~ msgid "Opponent has run out of time"
+#~ msgstr "对方超时"
+
+#~ msgid ""
+#~ "The same board state has occurred three times (three fold repetition)"
+#~ msgstr "对局中同一局面已出现三次 (三次折叠重复)"
+
+#~ msgid "Neither player can cause checkmate (insufficient material)"
+#~ msgstr "双方都无法将死对方 (子力不足)"
+
+#~ msgid "The black player has resigned"
+#~ msgstr "黑方已认输"
+
+#~ msgid "The white player has resigned"
+#~ msgstr "白方已认输"
+
+#~ msgid "The game has been abandoned"
+#~ msgstr "已放弃游戏"
+
+#~ msgid "One of the players has died"
+#~ msgstr "一方已被将死"
+
+#~ msgid "Save this game before starting a new one?"
+#~ msgstr "开始新游戏前保存当前游戏？"
+
+#~ msgid "_Abandon game"
+#~ msgstr "放弃游戏(_A)"
+
+#~ msgid "_Save game for later"
+#~ msgstr "保存游戏以后再玩(_S)"
+
+#~ msgid "second"
+#~ msgid_plural "seconds"
+#~ msgstr[0] "秒"
+
+#~ msgid "minute"
+#~ msgid_plural "minutes"
+#~ msgstr[0] "分"
+
+#~ msgid "hour"
+#~ msgid_plural "hours"
+#~ msgstr[0] "小时"
+
+#~ msgid ""
+#~ "The 2D/3D chess game for GNOME. \n"
+#~ "\n"
+#~ "glChess is a part of GNOME Games."
+#~ msgstr ""
+#~ "GNOME 的 2D/3D 国际象棋游戏。\n"
+#~ "\n"
+#~ "国际象棋是 GNOME 游戏的一部分。"
+
+#~ msgid "Save Chess Game"
+#~ msgstr "保存象棋游戏"
+
+#~ msgid "PGN files"
+#~ msgstr "PGN 文件"
+
+#~ msgid "All files"
+#~ msgstr "所有文件"
+
+#~ msgid "Failed to save game: %s"
+#~ msgstr "无法保存游戏：%s"
+
+#~ msgid "Load Chess Game"
+#~ msgstr "载入象棋游戏"
+
+#~ msgid "Failed to open game: %s"
+#~ msgstr "无法打开游戏：%s"
+
+#~ msgid "Show release version"
+#~ msgstr "显示发行版本"
+
+#~ msgid "[FILE] - Play Chess"
+#~ msgstr "[文件] - 玩国际象棋"
+
+#~ msgid ""
+#~ "Run '%s --help' to see a full list of available command line options."
+#~ msgstr "运行“%s --help”来查看可用命令行选项的完整列表。"
+
+#~ msgid "Five or More"
+#~ msgstr "连珠消球"
+
+#~ msgid "Remove colored balls from the board by forming lines"
+#~ msgstr "将彩球连成一线以消去"
+
+#~ msgid "Five or More Preferences"
+#~ msgstr "连珠消球首选项"
+
+#~ msgid "Appearance"
+#~ msgstr "外观"
+
+#~ msgid "_Image:"
+#~ msgstr "图像(_I)："
+
+#~ msgid "B_ackground color:"
+#~ msgstr "背景颜色(_A)："
+
+#~ msgid "Board Size"
+#~ msgstr "盘面大小"
+
+#~ msgid "_Small"
+#~ msgstr "小(_S)"
+
+#~ msgid "_Medium"
+#~ msgstr "中等(_M)"
+
+#~ msgid "_Large"
+#~ msgstr "大(_L)"
+
+#~ msgid "General"
+#~ msgstr "常规"
+
+#~ msgid "_Use fast moves"
+#~ msgstr "使用快速移动(_U)"
+
+#~ msgid "Five or more"
+#~ msgstr "五或更多"
+
+#~ msgid "Next:"
+#~ msgstr "下个球："
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "Playing field size"
+#~ msgstr "场地大小"
+
+#~ msgid ""
+#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
+#~ "invalid."
+#~ msgstr "游戏区大小。1=小，2=中，3=大。其它值非法。"
+
+#~ msgid "Ball style"
+#~ msgstr "小球样式"
+
+#~ msgid "Ball style. The filename of the images to use for the balls."
+#~ msgstr "球的样式。球所使用的图片文件。"
+
+#~ msgid "Background color"
+#~ msgstr "背景颜色"
+
+#~ msgid "Background color. The hex specification of the background color."
+#~ msgstr "背景颜色，用十六进制表示。"
+
+#~ msgid "Time between moves"
+#~ msgstr "移动之间的时间"
+
+#~ msgid "Time between moves in milliseconds."
+#~ msgstr "移动之间的时间，以毫秒计。"
+
+#~ msgid "Game score"
+#~ msgstr "游戏得分"
+
+#~ msgid "Game score from last saved session."
+#~ msgstr "自上次保存的会话后的游戏得分。"
+
+#~ msgid "Game field"
+#~ msgstr "游戏状态"
+
+#~ msgid "Game field from last saved session."
+#~ msgstr "游戏上次保存时的状态。"
+
+#~ msgid "Game preview"
+#~ msgstr "游戏预览"
+
+#~ msgid "Game preview from last saved session."
+#~ msgstr "自上次保存的会话后的游戏预览。"
+
+#~ msgctxt "board size"
+#~ msgid "Small"
+#~ msgstr "小"
+
+#~ msgctxt "board size"
+#~ msgid "Medium"
+#~ msgstr "中"
+
+#~ msgctxt "board size"
+#~ msgid "Large"
+#~ msgstr "大"
+
+#~ msgid "Could not load theme"
+#~ msgstr "无法载入主题"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "The default theme will be loaded instead."
+#~ msgstr ""
+#~ "无法定位文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "将载入默认主题。"
+
+#~ msgid ""
+#~ "Unable to locate file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Five or More is installed correctly."
+#~ msgstr ""
+#~ "无法定位文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查您的连珠消球安装是否正确。"
+
+#~ msgid "Match five objects of the same type in a row to score!"
+#~ msgstr "在一线上放置五个以上同色球以便得分！"
+
+#~ msgid "GNOME Five or More"
+#~ msgstr "GNOME 连珠消球"
+
+#~ msgid "_Board size:"
+#~ msgstr "棋盘大小(_B)："
+
+#~ msgid "Game Over!"
+#~ msgstr "游戏结束！"
+
+#~ msgid "You can't move there!"
+#~ msgstr "不能放在这儿！"
+
+#~ msgid ""
+#~ "GNOME port of the once-popular Color Lines game.\n"
+#~ "\n"
+#~ "Five or More is a part of GNOME Games."
+#~ msgstr ""
+#~ "流行的连珠消球游戏的 GNOME 版本\n"
+#~ "\n"
+#~ "连珠消球是 GNOME 游戏的一部分。"
+
+#~ msgid "Four-in-a-Row"
+#~ msgstr "四子连线"
+
+#~ msgid "Make lines of the same color to win"
+#~ msgstr "将四粒棋子排成一线以取胜"
+
+#~ msgid "Level of Player One"
+#~ msgstr "玩家一的级别"
+
+#~ msgid ""
+#~ "Zero is human; one through three correspond to the level of the computer "
+#~ "player."
+#~ msgstr "0 代表玩家；1 至 3 代表相应的计算机玩家。"
+
+#~ msgid "Level of Player Two"
+#~ msgstr "玩家二的级别"
+
+#~ msgid "Theme ID"
+#~ msgstr "主题编号"
+
+#~ msgid "A number specifying the preferred theme."
+#~ msgstr "指定首选主题的数字。"
+
+#~ msgid "Animate"
+#~ msgstr "动画"
+
+#~ msgid "Whether or not to use animation."
+#~ msgstr "是否使用动画。"
+
+#~ msgid "Sound"
+#~ msgstr "音效"
+
+#~ msgid "Whether or not to play event sounds."
+#~ msgstr "是否播放事件声音。"
+
+#~ msgid "Move left"
+#~ msgstr "向左移动"
+
+#~ msgid "Key press to move left."
+#~ msgstr "左移的按键。"
+
+#~ msgid "Move right"
+#~ msgstr "向右移动"
+
+#~ msgid "Key press to move right."
+#~ msgstr "右移的按键。"
+
+#~ msgid "Drop marble"
+#~ msgstr "落下小球"
+
+#~ msgid "Key press to drop a marble."
+#~ msgstr "落下小球的按键。"
+
+#~ msgid ""
+#~ "Unable to load image:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "无法载入图像：\n"
+#~ "%s"
+
+#~ msgid "It's a draw!"
+#~ msgstr "平局！"
+
+#~ msgid "You win!"
+#~ msgstr "您赢了！"
+
+#~ msgid "It is your move."
+#~ msgstr "该您了。"
+
+#~ msgid "I win!"
+#~ msgstr "我赢了！"
+
+#~ msgid "Thinking..."
+#~ msgstr "思考中..."
+
+#~ msgid "%s wins!"
+#~ msgstr "%s 赢了！"
+
+#~ msgid "Waiting for %s to move."
+#~ msgstr "等待 %s 走棋。"
+
+#~ msgid "Hint: Column %d"
+#~ msgstr "提示：列 %d"
+
+#~ msgid "You:"
+#~ msgstr "您："
+
+#~ msgid "Me:"
+#~ msgstr "我："
+
+#~ msgid "Scores"
+#~ msgstr "得分"
+
+#~ msgid "Drawn:"
+#~ msgstr "平局："
+
+#~ msgid ""
+#~ "\"Four in a Row\" for GNOME, with a computer player driven by Giuliano "
+#~ "Bertoletti's Velena Engine.\n"
+#~ "\n"
+#~ "\"Four in a Row\" is a part of GNOME Games."
+#~ msgstr ""
+#~ "GNOME 的四子连线游戏，带有由 Giuliano Bertoletti 编写的 Velena 引擎驱动的"
+#~ "电脑玩家。\n"
+#~ "\n"
+#~ "四子连线是 GNOME 游戏的一部分。"
+
+#~ msgid "_View"
+#~ msgstr "查看(_V)"
+
+#~ msgid ""
+#~ "Player One:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "玩家一：\n"
+#~ "%s"
+
+#~ msgid ""
+#~ "Player Two:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "玩家二：\n"
+#~ "%s"
+
+#~ msgid "Human"
+#~ msgstr "人"
+
+#~ msgid "Level one"
+#~ msgstr "一级"
+
+#~ msgid "Level two"
+#~ msgstr "二级"
+
+#~ msgid "Level three"
+#~ msgstr "三级"
+
+#~ msgid "Four-in-a-Row Preferences"
+#~ msgstr "四子连线首选项"
+
+#~ msgid "_Theme:"
+#~ msgstr "主题(_T)："
+
+#~ msgid "Enable _animation"
+#~ msgstr "启用动画(_A)"
+
+#~ msgid "E_nable sounds"
+#~ msgstr "启用声音(_N)"
+
+#~ msgid "Keyboard Controls"
+#~ msgstr "键盘控制"
+
+#~ msgid "Classic"
+#~ msgstr "经典"
+
+#~ msgid "Red"
+#~ msgstr "红色"
+
+#~ msgid "Yellow"
+#~ msgstr "黄色"
+
+#~ msgid "High Contrast"
+#~ msgstr "黑白"
+
+#~ msgid "Circle"
+#~ msgstr "圈"
+
+#~ msgid "Cross"
+#~ msgstr "叉"
+
+#~ msgid "High Contrast Inverse"
+#~ msgstr "白黑"
+
+#~ msgid "Cream Marbles"
+#~ msgstr "弹球"
+
+#~ msgid "Blue"
+#~ msgstr "蓝色"
+
+#~ msgid "Glass Marbles"
+#~ msgstr "玻璃球"
+
+#~ msgid "Nightfall"
+#~ msgstr "夜色"
+
+#~ msgid "Blocks"
+#~ msgstr "砖块"
+
+#~ msgid "Orange"
+#~ msgstr "橙色"
+
+#~ msgid "Nibbles"
+#~ msgstr "贪食蛇"
+
+#~ msgid "Guide a worm around a maze"
+#~ msgstr "小蛇游走于迷宫"
+
+#~ msgid "Number of human players"
+#~ msgstr "人类玩家数量"
+
+#~ msgid "Number of human players."
+#~ msgstr "人类玩家数量。"
+
+#~ msgid "Number of AI players"
+#~ msgstr "AI 玩家数量"
+
+#~ msgid "Number of AI players."
+#~ msgstr "AI 玩家数量。"
+
+#~ msgid "Game speed"
+#~ msgstr "游戏速度"
+
+#~ msgid "Game speed (1=fast, 4=slow)."
+#~ msgstr "游戏速度(1=最快，4=最慢)。"
+
+#~ msgid "Enable fake bonuses"
+#~ msgstr "启用虚假奖品"
+
+#~ msgid "Enable fake bonuses."
+#~ msgstr "启用虚假食物。"
+
+#~ msgid "Play levels in random order"
+#~ msgstr "以随机顺序排列级别"
+
+#~ msgid "Play levels in random order."
+#~ msgstr "以随机顺序排列级别。"
+
+#~ msgid "Game level to start on"
+#~ msgstr "开始的游戏级别"
+
+#~ msgid "Game level to start on."
+#~ msgstr "开始的游戏级别。"
+
+#~ msgid "Enable sounds"
+#~ msgstr "启用声音"
+
+#~ msgid "Enable sounds."
+#~ msgstr "启用声音。"
+
+#~ msgid "Size of game tiles"
+#~ msgstr "游戏界面大小"
+
+#~ msgid "Size of game tiles."
+#~ msgstr "游戏界面大小。"
+
+#~ msgid "Color to use for worm"
+#~ msgstr "小蛇要使用的颜色"
+
+#~ msgid "Color to use for worm."
+#~ msgstr "小蛇要使用的颜色。"
+
+#~ msgid "Use relative movement"
+#~ msgstr "使用相对移动"
+
+#~ msgid "Use relative movement (ie. left or right only)."
+#~ msgstr "使用相对移动(即只有左转右转)。"
+
+#~ msgid "Move up"
+#~ msgstr "上移"
+
+#~ msgid "Key to use for motion up."
+#~ msgstr "向上移动所用的键。"
+
+#~ msgid "Move down"
+#~ msgstr "下移"
+
+#~ msgid "Key to use for motion down."
+#~ msgstr "向下移动所用的键。"
+
+#~ msgid "Key to use for motion left."
+#~ msgstr "向左移动所用的键。"
+
+#~ msgid "Key to use for motion right."
+#~ msgstr "向右移动所用的键。"
+
+#~ msgid ""
+#~ "Nibbles couldn't load level file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check your Nibbles installation"
+#~ msgstr ""
+#~ "贪食蛇无法载入级别文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查贪食蛇的安装"
+
+#~ msgid ""
+#~ "Level file appears to be damaged:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check your Nibbles installation"
+#~ msgstr ""
+#~ "级别文件看起来损坏了：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查贪食蛇的安装"
+
+#~ msgid ""
+#~ "Nibbles couldn't find pixmap file:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check your Nibbles installation"
+#~ msgstr ""
+#~ "贪食蛇无法找到位图文件：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查贪食蛇的安装"
+
+#~ msgid "Nibbles Scores"
+#~ msgstr "贪食蛇得分"
+
+#~ msgid "Speed:"
+#~ msgstr "速度："
+
+#~ msgid "Congratulations!"
+#~ msgstr "恭喜！"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "您取得了最好成绩！"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "您已经进入了前十名。"
+
+#~ msgctxt "game speed"
+#~ msgid "Beginner"
+#~ msgstr "初学"
+
+#~ msgctxt "game speed"
+#~ msgid "Slow"
+#~ msgstr "慢速"
+
+#~ msgctxt "game speed"
+#~ msgid "Medium"
+#~ msgstr "中等"
+
+#~ msgctxt "game speed"
+#~ msgid "Fast"
+#~ msgstr "快速"
+
+#~ msgctxt "game speed"
+#~ msgid "Beginner with Fakes"
+#~ msgstr "初学 (含虚假食物)"
+
+#~ msgctxt "game speed"
+#~ msgid "Slow with Fakes"
+#~ msgstr "慢速 (含虚假食物)"
+
+#~ msgctxt "game speed"
+#~ msgid "Medium with Fakes"
+#~ msgstr "中等 (含虚假食物)"
+
+#~ msgctxt "game speed"
+#~ msgid "Fast with Fakes"
+#~ msgstr "快速 (含虚假食物)"
+
+#~ msgid "Game over! The game has been won by %s!"
+#~ msgstr "游戏结束！%s 赢得了游戏！"
+
+#~ msgid "A worm game for GNOME."
+#~ msgstr "GNOME 下的贪食蛇游戏。"
+
+#~ msgid "Nibbles Preferences"
+#~ msgstr "贪食蛇首选项"
+
+#~ msgid "Speed"
+#~ msgstr "速度"
+
+#~ msgid "Nibbles newbie"
+#~ msgstr "贪食蛇新手"
+
+#~ msgid "My second day"
+#~ msgstr "我的第二天"
+
+#~ msgid "Not too shabby"
+#~ msgstr "不要太卑劣"
+
+#~ msgid "Finger-twitching good"
+#~ msgstr "手指痉挛才好"
+
+#~ msgid "Options"
+#~ msgstr "选项"
+
+#~ msgid "_Play levels in random order"
+#~ msgstr "以随机顺序排列级别(_P)"
+
+#~ msgid "_Enable fake bonuses"
+#~ msgstr "启用虚假食物(_E)"
+
+#~ msgid "_Starting level:"
+#~ msgstr "起始级别(_S)："
+
+#~ msgid "Number of _human players:"
+#~ msgstr "人类玩家数目(_H)："
+
+#~ msgid "Number of _AI players:"
+#~ msgstr "AI 玩家数目(_A)："
+
+#~ msgid "Worm"
+#~ msgstr "小蛇"
+
+#~ msgid "_Use relative movement"
+#~ msgstr "使用相对移动(_U)"
+
+#~ msgid "_Worm color:"
+#~ msgstr "小蛇颜色(_W)："
+
+#~ msgid "Green"
+#~ msgstr "绿"
+
+#~ msgid "Cyan"
+#~ msgstr "青"
+
+#~ msgid "Purple"
+#~ msgstr "紫"
+
+#~ msgid "Gray"
+#~ msgstr "灰"
+
+#~ msgid "Worm %d:"
+#~ msgstr "小蛇%d:"
+
+#~ msgid "Robots"
+#~ msgstr "机器人"
+
+#~ msgid "Avoid the robots and make them crash into each other"
+#~ msgstr "避免碰到机器人并让它们撞在一起"
+
+#~ msgid "Show toolbar"
+#~ msgstr "显示工具栏"
+
+#~ msgid "Show toolbar. A standard option for toolbars."
+#~ msgstr "显示工具栏。工具栏的标准选项。"
+
+#~ msgid "Robot image theme"
+#~ msgstr "机器人图像主题"
+
+#~ msgid "Robot image theme. The theme of the images to use for the robots."
+#~ msgstr "机器人图像主题。机器人所用的图像主题。"
+
+#~ msgid "Game type"
+#~ msgstr "游戏类型"
+
+#~ msgid "Game type. The name of the game variation to use."
+#~ msgstr "游戏类型。要使用的游戏变种的名称。"
+
+#~ msgid "Use safe moves"
+#~ msgstr "使用安全移动"
+
+#~ msgid ""
+#~ "Use safe moves. The safe moves option will help you to avoid being killed "
+#~ "due to a mistake. If you try to make a move that would lead to your death "
+#~ "when there is a safe move available you will not be allowed to proceed."
+#~ msgstr ""
+#~ "使用安全移动。安全移动选项将帮助您避免因失误而被杀死。如果您在使用了安全移"
+#~ "动时试图作出一步将导致您死亡的移动的话，您将不会被允许那样移动。"
+
+#~ msgid "Use super safe moves"
+#~ msgstr "使用超级安全移动"
+
+#~ msgid ""
+#~ "Use super safe moves. The player is alerted when there is no safe move "
+#~ "and the only option is to teleport out."
+#~ msgstr ""
+#~ "使用超级安全移动。当没有可用的安全移动时，用户会收到警告，此时唯一的选择是"
+#~ "使用随机移动。"
+
+#~ msgid "Enable game sounds"
+#~ msgstr "启用游戏音效"
+
+#~ msgid ""
+#~ "Enable game sounds. Play sounds for various events throughout the game."
+#~ msgstr "启用游戏音效。在玩游戏的过程中的各种事件可播放声音。"
+
+#~ msgid "Key to move NW"
+#~ msgstr "左上移键"
+
+#~ msgid "The key used to move north-west."
+#~ msgstr "左上移的按键。"
+
+#~ msgid "Key to move N"
+#~ msgstr "上移键"
+
+#~ msgid "The key used to move north."
+#~ msgstr "上移的按键。"
+
+#~ msgid "Key to move NE"
+#~ msgstr "右上移键"
+
+#~ msgid "The key used to move north-east."
+#~ msgstr "右上移的按键。"
+
+#~ msgid "Key to move W"
+#~ msgstr "左移键"
+
+#~ msgid "The key used to move west."
+#~ msgstr "左移的按键。"
+
+#~ msgid "Key to hold"
+#~ msgstr "停住键"
+
+#~ msgid "The key used to hold still."
+#~ msgstr "用于停住的按键。"
+
+#~ msgid "Key to move E"
+#~ msgstr "右移键"
+
+#~ msgid "The key used to move east."
+#~ msgstr "右移的按键。"
+
+#~ msgid "Key to move SW"
+#~ msgstr "左下移键"
+
+#~ msgid "The key used to move south-west."
+#~ msgstr "左下移的按键。"
+
+#~ msgid "Key to move S"
+#~ msgstr "下移键"
+
+#~ msgid "The key used to move south."
+#~ msgstr "下移的按键。"
+
+#~ msgid "Key to move SE"
+#~ msgstr "右下移键"
+
+#~ msgid "The key used to move south-east."
+#~ msgstr "右下移的按键。"
+
+#~ msgid "Key to teleport"
+#~ msgstr "传送键"
+
+#~ msgid "The key used to teleport safely (if possible)."
+#~ msgstr "尽可能安全传送的键。"
+
+#~ msgid "Key to teleport randomly"
+#~ msgstr "随机传送键"
+
+#~ msgid "The key used to teleport randomly."
+#~ msgstr "随机传送键。"
+
+#~ msgid "Key to wait"
+#~ msgstr "等候键"
+
+#~ msgid "The key used to wait."
+#~ msgstr "用于等候的按键"
+
+#~ msgid "Game over!"
+#~ msgstr "游戏结束！"
+
+#~ msgid "Great work, but unfortunately your score did not make the top ten."
+#~ msgstr "干得不错，但您还没有入围前十名。"
+
+#~ msgid "Robots Scores"
+#~ msgstr "机器人得分"
+
+#~ msgid "Map:"
+#~ msgstr "地图："
+
+#~ msgid ""
+#~ "Congratulations, You Have Defeated the Robots!! \n"
+#~ "But Can You do it Again?"
+#~ msgstr ""
+#~ "恭喜，您已击败机器人！\n"
+#~ "但您能再次击败它吗？"
+
+#~ msgid "There are no teleport locations left!!"
+#~ msgstr "没有剩下传送点了！"
+
+#~ msgid "There are no safe locations to teleport to!!"
+#~ msgstr "没有可传送到的安全的位置了！"
+
+#~ msgid "Set game scenario"
+#~ msgstr "设定游戏情节"
+
+#~ msgid "NAME"
+#~ msgstr "名称"
+
+#~ msgid "Set game configuration"
+#~ msgstr "设定游戏配置"
+
+#~ msgid "Initial window position"
+#~ msgstr "初始窗口位置"
+
+#~ msgid "X"
+#~ msgstr "X"
+
+#~ msgid "Y"
+#~ msgstr "Y"
+
+#~ msgid "Classic robots"
+#~ msgstr "经典机器人"
+
+#~ msgid "Classic robots with safe moves"
+#~ msgstr "带安全移动的经典机器人"
+
+#~ msgid "Classic robots with super-safe moves"
+#~ msgstr "带超级安全移动的经典机器人"
+
+#~ msgid "Nightmare"
+#~ msgstr "噩梦"
+
+#~ msgid "Nightmare with safe moves"
+#~ msgstr "带安全移动的噩梦"
+
+#~ msgid "Nightmare with super-safe moves"
+#~ msgstr "带超级安全移动的噩梦"
+
+#~ msgid "Robots2"
+#~ msgstr "机器人2"
+
+#~ msgid "Robots2 with safe moves"
+#~ msgstr "带安全移动的机器人2"
+
+#~ msgid "Robots2 with super-safe moves"
+#~ msgstr "带超级安全移动的机器人2"
+
+#~ msgid "Robots2 easy"
+#~ msgstr "机器人2简单"
+
+#~ msgid "Robots2 easy with safe moves"
+#~ msgstr "带安全移动的机器人2 简单"
+
+#~ msgid "Robots2 easy with super-safe moves"
+#~ msgstr "带超级安全移动的机器人2 简单"
+
+#~ msgid "Robots with safe teleport"
+#~ msgstr "带有安全传送点的机器人"
+
+#~ msgid "Robots with safe teleport with safe moves"
+#~ msgstr "带有安全传送点的机器人"
+
+#~ msgid "Robots with safe teleport with super-safe moves"
+#~ msgstr "带有安全传送点的机器人"
+
+#~ msgid "No game data could be found."
+#~ msgstr "没有找到游戏数据。"
+
+#~ msgid ""
+#~ "The program Robots was unable to find any valid game configuration files. "
+#~ "Please check that the program is installed correctly."
+#~ msgstr ""
+#~ "GNOME 机器人程序无法找到任何可用的游戏配置文件。请检查程序是否正确安装。"
+
+#~ msgid "Some graphics files are missing or corrupt."
+#~ msgstr "某些图像文件缺少或损坏。"
+
+#~ msgid ""
+#~ "The program Robots was unable to load all the necessary graphics files. "
+#~ "Please check that the program is installed correctly."
+#~ msgstr "GNOME 机器人程序无法载入必需的图像文件。请检查程序是否正确安装。"
+
+#~ msgid "Could not find '%s' pixmap file\n"
+#~ msgstr "无法找到“%s”位图文件\n"
+
+#~ msgid "_Move"
+#~ msgstr "移动(_M)"
+
+#~ msgid "_Teleport"
+#~ msgstr "传送点(_T)"
+
+#~ msgid "Teleport, safely if possible"
+#~ msgstr "传送点，尽可能安全"
+
+#~ msgid "_Random"
+#~ msgstr "随机(_R)"
+
+#~ msgid "Teleport randomly"
+#~ msgstr "随机传送"
+
+#~ msgid "_Wait"
+#~ msgstr "等待(_W)"
+
+#~ msgid "Wait for the robots"
+#~ msgstr "等候机器人"
+
+#~ msgid "_Toolbar"
+#~ msgstr "工具栏(_T)"
+
+#~ msgid "Show or hide the toolbar"
+#~ msgstr "显示或隐藏工具栏"
+
+#~ msgid ""
+#~ "Based on classic BSD Robots.\n"
+#~ "\n"
+#~ "Robots is a part of GNOME Games."
+#~ msgstr ""
+#~ "基于经典的 BSD 机器人。\n"
+#~ "\n"
+#~ "机器人是 GNOME 游戏的一部分。"
+
+#~ msgid "classic robots"
+#~ msgstr "经典机器人"
+
+#~ msgid "robots2"
+#~ msgstr "机器人 2"
+
+#~ msgid "robots2 easy"
+#~ msgstr "机器人 2 简单"
+
+#~ msgid "robots with safe teleport"
+#~ msgstr "带有安全传送点的机器人"
+
+#~ msgid "nightmare"
+#~ msgstr "噩梦"
+
+#~ msgid "robots"
+#~ msgstr "机器人"
+
+#~ msgid "cows"
+#~ msgstr "奶牛"
+
+#~ msgid "eggs"
+#~ msgstr "蛋"
+
+#~ msgid "gnomes"
+#~ msgstr "小人"
+
+#~ msgid "mice"
+#~ msgstr "老鼠"
+
+#~ msgid "ufo"
+#~ msgstr "飞碟"
+
+#~ msgid "boo"
+#~ msgstr "怪物"
+
+#~ msgid "Robots Preferences"
+#~ msgstr "机器人首选项"
+
+#~ msgid "Game Type"
+#~ msgstr "游戏类型"
+
+#~ msgid "_Use safe moves"
+#~ msgstr "使用安全移动(_U)"
+
+#~ msgid "Prevent accidental moves that result in getting killed."
+#~ msgstr "阻止会导致死亡的意外移动。"
+
+#~ msgid "U_se super safe moves"
+#~ msgstr "使用超级安全移动(_S)"
+
+#~ msgid "Prevents all moves that result in getting killed."
+#~ msgstr "避免将导致丢命的全部移动。"
+
+#~ msgid "_Enable sounds"
+#~ msgstr "启用声音(_E)"
+
+#~ msgid "Play sounds for events like winning a level and dying."
+#~ msgstr "对通关或死亡等事件使用声音通知。"
+
+#~ msgid "Graphics Theme"
+#~ msgstr "图形主题"
+
+#~ msgid "_Image theme:"
+#~ msgstr "图像主题(_I)："
+
+#~ msgid "_Background color:"
+#~ msgstr "背景颜色(_B)："
+
+#~ msgid "_Restore Defaults"
+#~ msgstr "恢复默认值(_R)"
+
+#~ msgid "Keyboard"
+#~ msgstr "键盘"
+
+#~ msgid "Safe Teleports:"
+#~ msgstr "安全传送点:"
+
+#~ msgid "Level:"
+#~ msgstr "级别:"
+
+#~ msgid "Remaining:"
+#~ msgstr "剩下:"
+
+#~ msgid "Sudoku"
+#~ msgstr "数独"
+
+#~ msgid "Test your logic skills in this number grid puzzle"
+#~ msgstr "通过这个数字格子解谜游戏测试您的逻辑能力"
+
+#~ msgid "Print Sudokus"
+#~ msgstr "打印数独"
+
+#~ msgid "Print Games"
+#~ msgstr "打印游戏"
+
+#~ msgid "_Number of sudoku to print: "
+#~ msgstr "待打印的数独数量(_N)："
+
+#~ msgid "_Sudokus per page: "
+#~ msgstr "每页数独数目(_S)："
+
+#~ msgid "Levels of difficulty to print"
+#~ msgstr "待打印的游戏的困难级别"
+
+#~ msgid "_Easy"
+#~ msgstr "简单(_E)"
+
+#~ msgid "_Hard"
+#~ msgstr "困难(_H)"
+
+#~ msgid "_Very Hard"
+#~ msgstr "极困难(_V)"
+
+#~ msgid "Details"
+#~ msgstr "细节"
+
+#~ msgid "_Mark games as played once you've printed them."
+#~ msgstr "打印游戏后将其标记为已玩(_M)。"
+
+#~ msgid "_Include games you've already played in list of games to print"
+#~ msgstr "在待打印游戏列表中包含已玩过的游戏(_I)"
+
+#~ msgid "_Saved Games"
+#~ msgstr "保存的游戏(_S)"
+
+#~ msgid "Add a new tracker"
+#~ msgstr "添加跟踪器"
+
+#~ msgid "Remove the selected tracker"
+#~ msgstr "移除所选的跟踪器"
+
+#~ msgid "Make the tracked changes permanent"
+#~ msgstr "永久保留跟踪的值"
+
+#~ msgid "H_ide"
+#~ msgstr "隐藏(_I)"
+
+#~ msgid "Hide the tracked values"
+#~ msgstr "隐藏跟踪的值"
+
+#~ msgid "Easy"
+#~ msgstr "简单"
+
+#~ msgid "Medium"
+#~ msgstr "中等"
+
+#~ msgid "Hard"
+#~ msgstr "困难"
+
+#~ msgid "Very hard"
+#~ msgstr "极困难"
+
+#~ msgid "Last played %(n)s second ago"
+#~ msgid_plural "Last played %(n)s seconds ago"
+#~ msgstr[0] "上次游戏于 %(n)s 秒前"
+
+#~ msgid "Last played %(n)s minute ago"
+#~ msgid_plural "Last played %(n)s minutes ago"
+#~ msgstr[0] "上次游戏于 %(n)s 分钟前"
+
+#~ msgid "Last played at %I:%M %p"
+#~ msgstr "上次游戏于 %H:%M"
+
+#~ msgid "Last played yesterday at %I:%M %p"
+#~ msgstr "上次游戏于昨天 %H:%M"
+
+#~ msgid "Last played on %A at %I:%M %p"
+#~ msgstr "上次游戏于%A %H:%M"
+
+#~ msgid "Last played on %B %e %Y"
+#~ msgstr "上次游戏于 %Y年%m月%e日"
+
+#~ msgid "Easy puzzle"
+#~ msgstr "简单谜题"
+
+#~ msgid "Medium puzzle"
+#~ msgstr "中等谜题"
+
+#~ msgid "Hard puzzle"
+#~ msgstr "困难谜题"
+
+#~ msgid "Very hard puzzle"
+#~ msgstr "极困难谜题"
+
+#~ msgid "Played for %d hour"
+#~ msgid_plural "Played for %d hours"
+#~ msgstr[0] "玩了 %d 小时"
+
+#~ msgid "Played for %d minute"
+#~ msgid_plural "Played for %d minutes"
+#~ msgstr[0] "玩了 %d 分钟"
+
+#~ msgid "Played for %d second"
+#~ msgid_plural "Played for %d seconds"
+#~ msgstr[0] "玩了 %d 秒"
+
+#~ msgid "Do you really want to do this?"
+#~ msgstr "您真的想要这样做吗？"
+
+#~ msgid "Don't ask me this again."
+#~ msgstr "不要再询问我。"
+
+#~ msgid "New game"
+#~ msgstr "新游戏"
+
+#~ msgid "_Reset"
+#~ msgstr "重置(_R)"
+
+#~ msgid "_Undo"
+#~ msgstr "撤消(_U)"
+
+#~ msgid "Undo last action"
+#~ msgstr "撤消最后一着"
+
+#~ msgid "_Redo"
+#~ msgstr "重做(_R)"
+
+#~ msgid "Redo last action"
+#~ msgstr "重做最后一着"
+
+#~ msgid "Puzzle _Statistics..."
+#~ msgstr "谜题统计信息(_S)..."
+
+#~ msgid "_Print..."
+#~ msgstr "打印(_P)..."
+
+#~ msgid "Print _Multiple Sudokus..."
+#~ msgstr "打印多个数独(_M)..."
+
+#~ msgid "_Tools"
+#~ msgstr "工具(_T)"
+
+#~ msgid "Show a square that is easy to fill."
+#~ msgstr "显示一个容易填写的方块"
+
+#~ msgid "Clear _Top Notes"
+#~ msgstr "清除上方注记(_T)"
+
+#~ msgid "Clear _Bottom Notes"
+#~ msgstr "清除下方注记(_B)"
+
+#~ msgid "Show _Possible Numbers"
+#~ msgstr "显示可能的数字(_P)"
+
+#~ msgid "Always show possible numbers in a square"
+#~ msgstr "总是在方块中显示可能的数字"
+
+#~ msgid "Warn About _Unfillable Squares"
+#~ msgstr "警告不可填充的方块(_U)"
+
+#~ msgid "Warn about squares made unfillable by a move"
+#~ msgstr "就某一步导致的不可填充的方块发出警告"
+
+#~ msgid "_Track Additions"
+#~ msgstr "跟踪器(_T)"
+
+#~ msgid ""
+#~ "Mark new additions in a separate color so you can keep track of them."
+#~ msgstr "将新填入的数字标记为不同的颜色以便您能跟踪它们。"
+
+#~ msgid "_Highlighter"
+#~ msgstr "高亮显示(_H)"
+
+#~ msgid "Highlight the current row, column and box"
+#~ msgstr "高亮显示当前行、列和盒子"
+
+#~ msgid "You completed the puzzle in %d second"
+#~ msgid_plural "You completed the puzzle in %d seconds"
+#~ msgstr[0] "您在 %d 秒内完成了谜题。"
+
+#~ msgid "%d minute"
+#~ msgid_plural "%d minutes"
+#~ msgstr[0] "%d 分钟"
+
+#~ msgid "%d second"
+#~ msgid_plural "%d seconds"
+#~ msgstr[0] "%d 秒"
+
+#~ msgid "You completed the puzzle in %(minute)s and %(second)s"
+#~ msgstr "您在 %(minute)s 分 %(second)s 秒内完成了谜题。"
+
+#~ msgid "%d hour"
+#~ msgid_plural "%d hours"
+#~ msgstr[0] "%d 小时"
+
+#~ msgid "You completed the puzzle in %(hour)s, %(minute)s and %(second)s"
+#~ msgstr "您在 %(hour)s小时%(minute)s分%(second)s秒内完成了谜题。"
+
+#~ msgid "You got %(n)s hint."
+#~ msgid_plural "You got %(n)s hints."
+#~ msgstr[0] "您有 %(n)s 个提示。"
+
+#~ msgid "You had %(n)s impossibility pointed out."
+#~ msgid_plural "You had %(n)s impossibilities pointed out."
+#~ msgstr[0] "已为您指出 %(n)s 种不可能性。"
+
+#~ msgid "Save this game before starting new one?"
+#~ msgstr "开始新游戏前保存现有游戏？"
+
+#~ msgid "Save game before closing?"
+#~ msgstr "关闭之前保存游戏？"
+
+#~ msgid "Puzzle Information"
+#~ msgstr "谜题信息"
+
+#~ msgid "There is no current puzzle."
+#~ msgstr "当前没有谜题。"
+
+#~ msgid "Calculated difficulty: "
+#~ msgstr "经计算后的难度："
+
+#~ msgid "Very Hard"
+#~ msgstr "极困难"
+
+#~ msgid "Number of moves instantly fillable by elimination: "
+#~ msgstr "通过消去法立即能填出的格子数："
+
+#~ msgid "Number of moves instantly fillable by filling: "
+#~ msgstr "通过填充法立即能填出的格子数："
+
+#~ msgid "Amount of trial-and-error required to solve: "
+#~ msgstr "解决谜题需要使用试错法的次数："
+
+#~ msgid "Puzzle Statistics"
+#~ msgstr "谜题统计信息"
+
+#~ msgid "Unable to display help: %s"
+#~ msgstr "无法显示帮助：%s"
+
+#~ msgid "Untracked"
+#~ msgstr "未跟踪"
+
+#~ msgid "_Remove"
+#~ msgstr "移除(_R)"
+
+#~ msgid "Delete selected tracker."
+#~ msgstr "删除所选的跟踪器。"
+
+#~ msgid "Hide current tracker entries."
+#~ msgstr "隐藏当前跟踪器条目。"
+
+#~ msgid "A_pply"
+#~ msgstr "应用(_P)"
+
+#~ msgid "Apply all tracked values and remove the tracker."
+#~ msgstr "应用所有被跟踪的值并移除跟踪器。"
+
+#~ msgid "Tracker %s"
+#~ msgstr "跟踪器 %s"
+
+#~ msgid "_Clear"
+#~ msgstr "清除(_C)"
+
+#~ msgid "No Space"
+#~ msgstr "没有空间"
+
+#~ msgid "No space left on disk"
+#~ msgstr "磁盘没有剩余空间了"
+
+#~ msgid "Unable to create data folder %(path)s."
+#~ msgstr "无法创建数据文件夹 %(path)s。"
+
+#~ msgid "There is no disk space left!"
+#~ msgstr "磁盘没有剩余空间了！"
+
+#~ msgid "Error %(errno)s: %(error)s"
+#~ msgstr "错误 %(errno)s：%(error)s"
+
+#~ msgid "Unable to save game."
+#~ msgstr "无法保存游戏。"
+
+#~ msgid "Unable to save file %(filename)s."
+#~ msgstr "无法保存文件 %(filename)s"
+
+#~ msgid "Unable to mark game as finished."
+#~ msgstr "无法将游戏标记为完成。"
+
+#~ msgid "Sudoku unable to mark game as finished."
+#~ msgstr "数独无法标记游戏完成。"
+
+#~ msgctxt "board size"
+#~ msgid "Custom"
+#~ msgstr "自定义"
+
+#~ msgid "Time: "
+#~ msgstr "时间："
+
+#~ msgid "Custom Size"
+#~ msgstr "自定义大小"
+
+#~ msgid "Show a hint"
+#~ msgstr "显示提示"
+
+#~ msgid "The Mines Have Been Cleared!"
+#~ msgstr "扫清了所有雷！"
+
+#~ msgid "Mines Scores"
+#~ msgstr "扫雷得分"
+
+#~ msgid "Cancel current game?"
+#~ msgstr "结束当前游戏？"
+
+#~ msgid "Flags"
+#~ msgstr "旗标"
+
+#~ msgid "Tetravex"
+#~ msgstr "四邻"
+
+#~ msgid "Complete the puzzle by matching numbered tiles"
+#~ msgstr "匹配编号的方块来完成谜题"
+
+#~ msgid "_Solve"
+#~ msgstr "解决(_S)"
+
+#~ msgid "_Up"
+#~ msgstr "上(_U)"
+
+#~ msgid "_Left"
+#~ msgstr "左(_L)"
+
+#~ msgid "_Right"
+#~ msgstr "右(_R)"
+
+#~ msgid "_Down"
+#~ msgstr "下(_D)"
+
+#~ msgid "_Size"
+#~ msgstr "大小(_S)"
+
+#~ msgid "_2x2"
+#~ msgstr "_2x2"
+
+#~ msgid "_3x3"
+#~ msgstr "_3x3"
+
+#~ msgid "_4x4"
+#~ msgstr "_4x4"
+
+#~ msgid "_5x5"
+#~ msgstr "_5x5"
+
+#~ msgid "_6x6"
+#~ msgstr "_6x6"
+
+#~ msgid "The size of the playing grid"
+#~ msgstr "游戏网格大小"
+
+#~ msgid ""
+#~ "The value of this key is used to decide the size of the playing grid."
+#~ msgstr "此键的值用于决定游戏网格的大小。"
+
+#~ msgid "2×2"
+#~ msgstr "2×2"
+
+#~ msgid "3×3"
+#~ msgstr "3×3"
+
+#~ msgid "4×4"
+#~ msgstr "4×4"
+
+#~ msgid "5×5"
+#~ msgstr "5×5"
+
+#~ msgid "6×6"
+#~ msgstr "6×6"
+
+#~ msgid "Solve"
+#~ msgstr "解决"
+
+#~ msgid "Solve the game"
+#~ msgstr "解开这个游戏"
+
+#~ msgid "Time:"
+#~ msgstr "时间:"
+
+#~ msgid "Tetravex Scores"
+#~ msgstr "四邻得分"
+
+#~ msgid ""
+#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that "
+#~ "the same numbers are touching each other.\n"
+#~ "\n"
+#~ "Tetravex is a part of GNOME Games."
+#~ msgstr ""
+#~ "GNOME 四邻 是一个简单的解谜游戏，将方块放置为相同数字互相邻接即可。\n"
+#~ "\n"
+#~ "四邻是 GNOME 游戏的一部分。"
+
+#~ msgid "Klotski"
+#~ msgstr "华容道"
+
+#~ msgid "Slide blocks to solve the puzzle"
+#~ msgstr "滑动方块以解开布局"
+
+#~ msgid "The puzzle in play"
+#~ msgstr "正在玩的布局"
+
+#~ msgid "The number of the puzzle being played."
+#~ msgstr "正在玩的布局的编号。"
+
+#~ msgid "Only 18 steps"
+#~ msgstr "十八步"
+
+#~ msgid "Daisy"
+#~ msgstr "雏菊"
+
+#~ msgid "Violet"
+#~ msgstr "紫罗兰"
+
+#~ msgid "Poppy"
+#~ msgstr "罂粟"
+
+#~ msgid "Pansy"
+#~ msgstr "三色堇"
+
+#~ msgid "Snowdrop"
+#~ msgstr "雪花莲"
+
+#~ msgid "Red Donkey"
+#~ msgstr "横刀立马"
+
+#~ msgid "Trail"
+#~ msgstr "小径"
+
+#~ msgid "Ambush"
+#~ msgstr "埋伏"
+
+#~ msgid "Agatka"
+#~ msgstr "龙舌兰"
+
+#~ msgid "Success"
+#~ msgstr "成功"
+
+#~ msgid "Bone"
+#~ msgstr "骨头"
+
+#~ msgid "Fortune"
+#~ msgstr "财宝"
+
+#~ msgid "Fool"
+#~ msgstr "傻瓜"
+
+#~ msgid "Solomon"
+#~ msgstr "所罗门"
+
+#~ msgid "Cleopatra"
+#~ msgstr "美人"
+
+#~ msgid "Shark"
+#~ msgstr "鲨鱼"
+
+#~ msgid "Rome"
+#~ msgstr "罗马"
+
+#~ msgid "Pennant Puzzle"
+#~ msgstr "信号旗"
+
+#~ msgid "Ithaca"
+#~ msgstr "伊萨卡"
+
+#~ msgid "Pelopones"
+#~ msgstr "伯罗奔尼"
+
+#~ msgid "Transeuropa"
+#~ msgstr "跨越欧罗巴"
+
+#~ msgid "Lodzianka"
+#~ msgstr "洛德兹卡"
+
+#~ msgid "Polonaise"
+#~ msgstr "波洛涅兹"
+
+#~ msgid "Baltic Sea"
+#~ msgstr "波罗的海"
+
+#~ msgid "American Pie"
+#~ msgstr "美国派"
+
+#~ msgid "Traffic Jam"
+#~ msgstr "交通堵塞"
+
+#~ msgid "Sunshine"
+#~ msgstr "阳光"
+
+#~ msgid "Only 18 Steps"
+#~ msgstr "十八步"
+
+#~ msgid "HuaRong Trail"
+#~ msgstr "华容道"
+
+#~ msgid "Challenge Pack"
+#~ msgstr "挑战包"
+
+#~ msgid "Skill Pack"
+#~ msgstr "技巧包"
+
+#~ msgid "_Restart Puzzle"
+#~ msgstr "重新开始(_R)"
+
+#~ msgid "Next Puzzle"
+#~ msgstr "下一布局"
+
+#~ msgid "Previous Puzzle"
+#~ msgstr "上一布局"
+
+#~ msgid "X location of window"
+#~ msgstr "窗口的 X 位置"
+
+#~ msgid "Y location of window"
+#~ msgstr "窗口的 Y 位置"
+
+#~ msgid "Level completed."
+#~ msgstr "本级完成。"
+
+#~ msgid "The Puzzle Has Been Solved!"
+#~ msgstr "布局已被解开！"
+
+#~ msgid "Klotski Scores"
+#~ msgstr "华容道得分"
+
+#~ msgid "Puzzle:"
+#~ msgstr "布局："
+
+#~ msgid ""
+#~ "The theme for this game failed to render.\n"
+#~ "\n"
+#~ "Please check that Klotski is installed correctly."
+#~ msgstr ""
+#~ "游戏主题渲染失败。\n"
+#~ "\n"
+#~ "请检查华容道是否安装正确。"
+
+#~ msgid ""
+#~ "Could not find the image:\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Please check that Klotski is installed correctly."
+#~ msgstr ""
+#~ "找不到图像：\n"
+#~ "%s\n"
+#~ "\n"
+#~ "请检查华容道是否安装正确。"
+
+#~ msgid "Moves: %d"
+#~ msgstr "步数：%d"
+
+#~ msgid ""
+#~ "Sliding Block Puzzles\n"
+#~ "\n"
+#~ "Klotski is a part of GNOME Games."
+#~ msgstr ""
+#~ "滑块类益智游戏\n"
+#~ "\n"
+#~ "华容道是 GNOME 游戏的一部分。"
+
+#~ msgid "Tali"
+#~ msgstr "掷骰子"
+
+#~ msgid "Beat the odds in a poker-style dice game"
+#~ msgstr "一种类似扑克的的骰子游戏"
+
+#~ msgid "Delay between rolls"
+#~ msgstr "投掷之间的延迟"
+
+#~ msgid ""
+#~ "Choose whether or not to insert a delay between the computer's dice rolls "
+#~ "so the player can follow what it is doing."
+#~ msgstr "选择是否在计算机掷骰子时加入延时，使玩家可以知道它在做什么。"
+
+#~ msgid "Display the computer's thoughts"
+#~ msgstr "显示计算机的思考过程"
+
+#~ msgid ""
+#~ "If set to true, a dump of the AI's working will be done to standard "
+#~ "output."
+#~ msgstr "如果设为真，AI的思考将被输出到标准输出。"
+
+#~ msgid "Already used! Where do you want to put that?"
+#~ msgstr "已经在用了！您要把它摆在哪里？"
+
+#~ msgid "Score: %d"
+#~ msgstr "得分:%d"
+
+#~ msgid "Field used"
+#~ msgstr "使用的场地大小"
+
+#~ msgid "Delay computer moves"
+#~ msgstr "延迟计算机的动作"
+
+#~ msgid "Display computer thoughts"
+#~ msgstr "显示计算机的思考过程"
+
+#~ msgid "Number of computer opponents"
+#~ msgstr "计算机对手的数量"
+
+#~ msgid "NUMBER"
+#~ msgstr "数量"
+
+#~ msgid "Number of human opponents"
+#~ msgstr "人类对手的数量"
+
+#~ msgid "Game choice: Regular or Colors"
+#~ msgstr "游戏选择：常规或多色"
+
+#~ msgid "STRING"
+#~ msgstr "字符串"
+
+#~ msgid "Number of computer-only games to play"
+#~ msgstr "只含计算机对手的游戏数量"
+
+#~ msgid "Number of trials for each roll for the computer"
+#~ msgstr "电脑每掷可以尝试的次数"
+
+#~ msgctxt "game type"
+#~ msgid "Regular"
+#~ msgstr "常规"
+
+#~ msgctxt "game type"
+#~ msgid "Colors"
+#~ msgstr "多色"
+
+#~ msgid "Roll all!"
+#~ msgstr "全部重掷！"
+
+#~ msgid "Roll!"
+#~ msgstr "掷！"
+
+#~ msgid "The game is a draw!"
+#~ msgstr "平局！"
+
+#~ msgid "Tali Scores"
+#~ msgstr "掷骰子得分"
+
+#~ msgid "%s wins the game with %d point"
+#~ msgid_plural "%s wins the game with %d points"
+#~ msgstr[0] "%s 赢了，得到 %d 分"
+
+#~ msgid "Computer playing for %s"
+#~ msgstr "计算机玩 %s"
+
+#~ msgid "%s! -- You're up."
+#~ msgstr "%s！——该您了。"
+
+#~ msgid "Select dice to roll or choose a score slot."
+#~ msgstr "选择掷骰子或者分数槽。"
+
+#~ msgid "Roll"
+#~ msgstr "掷"
+
+#~ msgid "You are only allowed three rolls. Choose a score slot."
+#~ msgstr "您只能掷三次。选择一个分数槽。"
+
+#~ msgid "GNOME version (1998):"
+#~ msgstr "GNOME 版本(1998)："
+
+#~ msgid "Console version (1992):"
+#~ msgstr "控制台版本(1992)："
+
+#~ msgid "Colors game and multi-level AI (2006):"
+#~ msgstr "多色游戏和多等级 AI(2006)："
+
+#~ msgid ""
+#~ "A variation on poker with dice and less money.\n"
+#~ "\n"
+#~ "Tali is a part of GNOME Games."
+#~ msgstr ""
+#~ "扑克游戏的变种，改用骰子，而且不需要用钱。\n"
+#~ "\n"
+#~ "掷骰子是 GNOME 游戏的一部分。"
+
+#~ msgid "Current game will complete with original number of players."
+#~ msgstr "当前游戏将以原来的游戏人数完成。"
+
+#~ msgid "Tali Preferences"
+#~ msgstr "掷骰子首选项"
+
+#~ msgid "Human Players"
+#~ msgstr "人类玩家"
+
+#~ msgid "_Number of players:"
+#~ msgstr "玩家数量(_N)："
+
+#~ msgid "Computer Opponents"
+#~ msgstr "计算机对手"
+
+#~ msgid "_Delay between rolls"
+#~ msgstr "每次投掷之间的延迟(_D)"
+
+#~ msgid "N_umber of opponents:"
+#~ msgstr "对手数量(_U)："
+
+#~ msgid "_Difficulty:"
+#~ msgstr "难度(_D)"
+
+#~ msgctxt "difficulty"
+#~ msgid "Medium"
+#~ msgstr "中等"
+
+#~ msgid "Player Names"
+#~ msgstr "玩家姓名"
+
+#~ msgid "1s [total of 1s]"
+#~ msgstr "1 的总数"
+
+#~ msgid "2s [total of 2s]"
+#~ msgstr "2 的总数"
+
+#~ msgid "3s [total of 3s]"
+#~ msgstr "3 的总数"
+
+#~ msgid "4s [total of 4s]"
+#~ msgstr "4 的总数"
+
+#~ msgid "5s [total of 5s]"
+#~ msgstr "5 的总数"
+
+#~ msgid "6s [total of 6s]"
+#~ msgstr "6 的总数"
+
+#~ msgid "3 of a Kind [total]"
+#~ msgstr "3个相同 [合计]"
+
+#~ msgid "4 of a Kind [total]"
+#~ msgstr "4个相同 [合计]"
+
+#~ msgid "Full House [25]"
+#~ msgstr "满堂红 [25]"
+
+#~ msgid "Small Straight [30]"
+#~ msgstr "小顺子 [30]"
+
+#~ msgid "Large Straight [40]"
+#~ msgstr "大顺子 [40]"
+
+#~ msgid "5 of a Kind [50]"
+#~ msgstr "5个相同 [50]"
+
+#~ msgid "Chance [total]"
+#~ msgstr "机会 [合计]"
+
+#~ msgid "Lower Total"
+#~ msgstr "下方合计"
+
+#~ msgid "Grand Total"
+#~ msgstr "总计"
+
+#~ msgid "Upper total"
+#~ msgstr "上方合计"
+
+#~ msgid "Bonus if >62"
+#~ msgstr "奖励(合计＞62)"
+
+#~ msgid "2 pair Same Color [total]"
+#~ msgstr "2对同色 [合计]"
+
+#~ msgid "Full House [15 + total]"
+#~ msgstr "满堂红 [15 + 合计]"
+
+#~ msgid "Full House Same Color [20 + total]"
+#~ msgstr "同色满堂红 [20 + 合计]"
+
+#~ msgid "Flush (all same color) [35]"
+#~ msgstr "同花(全部同色) [35]"
+
+#~ msgid "4 of a Kind [25 + total]"
+#~ msgstr "4个相同 [合计 + 25]"
+
+#~ msgid "5 of a Kind [50 + total]"
+#~ msgstr "5个相同 [合计 + 50]"
+
+#~ msgid "Choose a score slot."
+#~ msgstr "选择一个分数槽。"
+
+#~ msgid "5 of a Kind [total]"
+#~ msgstr "5个相同 [合计]"
+
+#~ msgid "Iagno"
+#~ msgstr "黑白棋"
+
+#~ msgid "Dominate the board in a classic version of Reversi"
+#~ msgstr "在经典版本的黑白棋中占领盘面"
+
+#~ msgid "Dark:"
+#~ msgstr "黑方:"
+
+#~ msgid "Light:"
+#~ msgstr "白方:"
+
+#~ msgid "Light must pass, Dark's move"
+#~ msgstr "白方必须略过，轮到黑方"
+
+#~ msgid "Dark must pass, Light's move"
+#~ msgstr "黑方必须略过，轮到白方"
+
+#~ msgid "%.2d"
+#~ msgstr "%.2d"
+
+#~ msgid ""
+#~ "A disk flipping game derived from Reversi.\n"
+#~ "\n"
+#~ "Iagno is a part of GNOME Games."
+#~ msgstr ""
+#~ "派生于黑白棋的翻转游戏。\n"
+#~ "\n"
+#~ "黑白棋是 GNOME 游戏的一部分。"
+
+#~ msgid "Light player wins!"
+#~ msgstr "白方获胜！"
+
+#~ msgid "Dark player wins!"
+#~ msgstr "黑方获胜！"
+
+#~ msgid "The game was a draw."
+#~ msgstr "游戏平局。"
+
+#~ msgid "Invalid move."
+#~ msgstr "非法移动。"
+
+#~ msgid "Iagno Preferences"
+#~ msgstr "黑白棋首选项"
+
+#~ msgid "Dark"
+#~ msgstr "黑方"
+
+#~ msgid "Light"
+#~ msgstr "白方"
+
+#~ msgid "S_how grid"
+#~ msgstr "显示网格(_H)"
+
+#~ msgid "_Flip final results"
+#~ msgstr "翻出最终结果(_F)"
+
+#~ msgid "_Tile set:"
+#~ msgstr "棋子表面(_T)："
+
+#~ msgid "Unknown Command"
+#~ msgstr "未知命令"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Score"
+#~ msgstr "得分"
+
+#~ msgctxt "score-dialog"
+#~ msgid "%1$dm %2$ds"
+#~ msgstr "%1$d分%2$d秒"
+
+#~ msgctxt "score-dialog"
+#~ msgid "Name"
+#~ msgstr "姓名"
+
+#~ msgid "View help for this game"
+#~ msgstr "查看此游戏的帮助"
+
+#~ msgid "End the current game"
+#~ msgstr "结束当前游戏"
+
+#~ msgid "Toggle fullscreen mode"
+#~ msgstr "全屏模式切换"
+
+#~ msgid "Get a hint for your next move"
+#~ msgstr "获取您的下一步的提示"
+
+#~ msgid "Leave fullscreen mode"
+#~ msgstr "离开全屏模式"
+
+#~ msgid "Start a new multiplayer network game"
+#~ msgstr "开始多人网络游戏"
+
+#~ msgid "End the current network game and return to network server"
+#~ msgstr "结束当前网络游戏并回到服务器"
+
+#~ msgid "Pause the game"
+#~ msgstr "暂停游戏"
+
+#~ msgid "Show a list of players in the network game"
+#~ msgstr "显示网络游戏中的玩家列表"
+
+#~ msgid "Redo the undone move"
+#~ msgstr "重做撤消的一着"
+
+#~ msgid "Restart the game"
+#~ msgstr "重新开始游戏"
+
+#~ msgid "Resume the paused game"
+#~ msgstr "恢复暂停的游戏"
+
+#~ msgid "View the scores"
+#~ msgstr "查看得分"
+
+#~ msgid "Undo the last move"
+#~ msgstr "撤消最后一着"
+
+#~ msgid "About this game"
+#~ msgstr "关于此游戏"
+
+#~ msgid "Close this window"
+#~ msgstr "关闭此窗口"
+
+#~ msgid "Configure the game"
+#~ msgstr "配置游戏"
+
+#~ msgid "Quit this game"
+#~ msgstr "退出此游戏"
+
+#~ msgid "_Redo Move"
+#~ msgstr "重做移动(_R)"
+
+#~ msgid "_Restart"
+#~ msgstr "重新开始(_R)"
+
+#~ msgid "_Deal"
+#~ msgstr "发牌(_D)"
+
+#~ msgid "Network _Game"
+#~ msgstr "网络游戏(_G)"
+
+#~ msgid "L_eave Game"
+#~ msgstr "离开游戏(_E)"
+
+#~ msgid "Player _List"
+#~ msgstr "玩家列表(_L)"
+
+#~ msgid "_End Game"
+#~ msgstr "结束游戏(_E)"
+
+#~ msgid ""
+#~ "%s is free software; you can redistribute it and/or modify it under the "
+#~ "terms of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any "
+#~ "later version."
+#~ msgstr ""
+#~ "%s 是自由软件；您可以按照自由软件基金会所发表的 GNU GPL 协议自由发放和/或"
+#~ "修改它；采用协议的第 %d 版，或者(根据您的选择)任何更高版本。"
+
+#~ msgid ""
+#~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
+#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
+#~ "details."
+#~ msgstr ""
+#~ "%s 发表的目的是希望它能够对您有用，但我们没有任何保证；对于以任何用途使用"
+#~ "它所造成的任何直接或间接后果都不承担任何责任。请参看 GNU GPL 协议中的细"
+#~ "节。"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
+#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ msgstr ""
+#~ "您应该在收到 %s 的同时收到了 GNU GPL 协议的副本；如果您没有收到的话，请给"
+#~ "自由软件基金会写信，地址是 51 Franklin Street, Fifth Floor, Boston, MA  "
+#~ "02110-1301  USA"
+
+#~ msgid ""
+#~ "You should have received a copy of the GNU General Public License along "
+#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ msgstr ""
+#~ "您应该在收到该程序的同时收到了 GNU GPL 协议的副本。如果没有的话，请参见"
+#~ "<http://www.gnu.org/licenses/>。"
+
+#~ msgid "Lights Off"
+#~ msgstr "关灯"
+
+#~ msgid "Turn off all the lights"
+#~ msgstr "关闭所有的灯"
+
+#~ msgid "The current level"
+#~ msgstr "当前级别"
+
+#~ msgid "The users's most recent level."
+#~ msgstr "用户最近的级别。"
+
+#~ msgid ""
+#~ "Turn off all the lights\n"
+#~ "\n"
+#~ "Lights Off is a part of GNOME Games."
+#~ msgstr ""
+#~ "关闭所有的灯。\n"
+#~ "\n"
+#~ "关灯是 GNOME 游戏的一部分。"
+
+#~ msgid "Mahjongg"
+#~ msgstr "对对碰"
+
+#~ msgid "Disassemble a pile of tiles by removing matching pairs"
+#~ msgstr "移除匹配的牌对以拆除牌堆"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "The Ziggurat"
+#~ msgstr "巴比伦神塔"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Four Bridges"
+#~ msgstr "四桥"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Cloud"
+#~ msgstr "云"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Tic-Tac-Toe"
+#~ msgstr "踢踏"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Red Dragon"
+#~ msgstr "赤龙"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Pyramid's Walls"
+#~ msgstr "金字塔之墙"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Confounding Cross"
+#~ msgstr "讨厌的十字"
+
+#~ msgctxt "mahjongg map name"
+#~ msgid "Difficult"
+#~ msgstr "困难"
+
+#~ msgid "Moves Left:"
+#~ msgstr "剩下的着法:"
+
+#~ msgid "If you continue playing the next game will use the new map."
+#~ msgstr "如果您继续游戏，下一盘游戏将使用新地图。"
+
+#~ msgid "_Continue playing"
+#~ msgstr "继续游戏(_C)"
+
+#~ msgid "Use _new map"
+#~ msgstr "使用新地图(_N)"
+
+#~ msgid "Mahjongg Scores"
+#~ msgstr "对对碰得分"
+
+#~ msgid "Puzzle solved!"
+#~ msgstr "拼图完成了！"
+
+#~ msgid "You didn't make the top ten, better luck next time."
+#~ msgstr "您未能进入前十，下次好运。"
+
+#~ msgid "There are no more moves."
+#~ msgstr "没有更多着法了。"
+
+#~ msgid ""
+#~ "Each puzzle has at least one solution.  You can undo your moves and try "
+#~ "and find the solution for a time penalty, restart this game or start an "
+#~ "new one."
+#~ msgstr ""
+#~ "每局都至少有一种解法。您可以撤销几次移动来尝试寻找解法，也可以重新开始一次"
+#~ "游戏。"
+
+#~ msgid "_New game"
+#~ msgstr "新游戏(_N)"
+
+#~ msgid "Mahjongg Preferences"
+#~ msgstr "对对碰首选项"
+
+#~ msgid "Tiles"
+#~ msgstr "牌"
+
+#~ msgid "Maps"
+#~ msgstr "地图"
+
+#~ msgid "_Select map:"
+#~ msgstr "选择地图(_S)："
+
+#~ msgid "Colors"
+#~ msgstr "颜色"
+
+#~ msgid "Maps:"
+#~ msgstr "地图："
+
+#~ msgid "Tiles:"
+#~ msgstr "牌数："
+
+#~ msgid ""
+#~ "A matching game played with Mahjongg tiles.\n"
+#~ "\n"
+#~ "Mahjongg is a part of GNOME Games."
+#~ msgstr ""
+#~ "用麻将牌玩的对对碰游戏。\n"
+#~ "\n"
+#~ "对对碰是 GNOME 游戏的一部分。"
+
+#~ msgid "Mahjongg - %s"
+#~ msgstr "对对碰 - %s"
+
+#~ msgid "Restart the current game"
+#~ msgstr "重新开始当前游戏"
+
+#~ msgid "Redo the last move"
+#~ msgstr "重做最后一着"
+
+#~ msgid "Image to use for drawing blocks"
+#~ msgstr "要用做绘制方块的图像"
+
+#~ msgid "Image to use for drawing blocks."
+#~ msgstr "要用做绘制方块的图像。"
+
+#~ msgid "The theme used for rendering the blocks"
+#~ msgstr "用来渲染方块的主题"
+
+#~ msgid ""
+#~ "The name of the theme used for rendering the blocks and the background."
+#~ msgstr "用以渲染方块和背景的主题的名称。"
+
+#~ msgid "Level to start with"
+#~ msgstr "起始级别"
+
+#~ msgid "Level to start with."
+#~ msgstr "起始级别。"
+
+#~ msgid "Whether to preview the next block"
+#~ msgstr "是否预览下一个方块"
+
+#~ msgid "Whether to preview the next block."
+#~ msgstr "是否预览下一个方块。"
+
+#~ msgid "Whether to show where the moving piece will land"
+#~ msgstr "是否显示方块将移动到何处"
+
+#~ msgid "Whether to show where the moving piece will land."
+#~ msgstr "是否显示方块将移动到何处。"
+
+#~ msgid "Whether to give blocks random colors"
+#~ msgstr "是否给方块随机着色"
+
+#~ msgid "Whether to give blocks random colors."
+#~ msgstr "是否给方块随机着色。"
+
+#~ msgid "Whether to rotate counter clock wise"
+#~ msgstr "是否逆时针旋转"
+
+#~ msgid "Whether to rotate counter clock wise."
+#~ msgstr "是否逆时针旋转。"
+
+#~ msgid "The number of rows to fill"
+#~ msgstr "要填充的行数"
+
+#~ msgid ""
+#~ "The number of rows that are filled with random blocks at the start of the "
+#~ "game."
+#~ msgstr "游戏开始时由随机方块填充的行数。"
+
+#~ msgid "The density of filled rows"
+#~ msgstr "填充行的浓度"
+
+#~ msgid ""
+#~ "The density of blocks in rows filled at the start of the game. The value "
+#~ "is between 0 (for no blocks) and 10 (for a completely filled row)."
+#~ msgstr "游戏开始时已填充行的方块密度。可用值从0(没有方块)到10(完全填充)。"
+
+#~ msgid "Whether to play sounds"
+#~ msgstr "是否播放声音"
+
+#~ msgid "Whether to play sounds."
+#~ msgstr "是否播放声音。"
+
+#~ msgid "Whether to pick blocks that are hard to place"
+#~ msgstr "是否挑选难以放置的方块"
+
+#~ msgid "Whether to pick blocks that are hard to place."
+#~ msgstr "是否挑选难以放置的方块。"
+
+#~ msgid "Key press to move down."
+#~ msgstr "下移的按键。"
+
+#~ msgid "Drop"
+#~ msgstr "掉下"
+
+#~ msgid "Key press to drop."
+#~ msgstr "下落的按键。"
+
+#~ msgid "Rotate"
+#~ msgstr "旋转"
+
+#~ msgid "Key press to rotate."
+#~ msgstr "旋转的按键。"
+
+#~ msgid "Pause"
+#~ msgstr "暂停"
+
+#~ msgid "Key press to pause."
+#~ msgstr "暂停的按键。"
+
+#~ msgid "Quadrapassel"
+#~ msgstr "俄罗斯方块"
+
+#~ msgid "Fit falling blocks together"
+#~ msgstr "将下落的方块组合在一起"
+
+#~ msgid "Game Over"
+#~ msgstr "游戏结束"
+
+#~ msgid "Lines:"
+#~ msgstr "行数："
+
+#~ msgid "Quadrapassel Preferences"
+#~ msgstr "俄罗斯方块首选项"
+
+#~ msgid "Setup"
+#~ msgstr "设置"
+
+#~ msgid "_Number of pre-filled rows:"
+#~ msgstr "预填充行行数(_N)："
+
+#~ msgid "_Density of blocks in a pre-filled row:"
+#~ msgstr "预填充行中方块的浓度(_D)："
+
+#~ msgid "Operation"
+#~ msgstr "操作"
+
+#~ msgid "_Preview next block"
+#~ msgstr "预览下一个方块(_P)"
+
+#~ msgid "Choose difficult _blocks"
+#~ msgstr "选择困难的方块(_B)"
+
+#~ msgid "_Rotate blocks counterclockwise"
+#~ msgstr "逆时针旋转块(_R)"
+
+#~ msgid "Show _where the block will land"
+#~ msgstr "显示方块将落到何处(_W)"
+
+#~ msgid "Theme"
+#~ msgstr "主题"
+
+#~ msgid "Controls"
+#~ msgstr "控制"
+
+#~ msgid "Block Style"
+#~ msgstr "方块样式"
+
+#~ msgid "Plain"
+#~ msgstr "朴素"
+
+#~ msgid "Tango Flat"
+#~ msgstr "Tango 平面"
+
+#~ msgid "Tango Shaded"
+#~ msgstr "Tango 阴影"
+
+#~ msgid "Clean"
+#~ msgstr "简洁"
+
+#~ msgid "Quadrapassel Scores"
+#~ msgstr "俄罗斯方块得分"
+
+#~ msgid ""
+#~ "A classic game of fitting falling blocks together.\n"
+#~ "\n"
+#~ "Quadrapassel is a part of GNOME Games."
+#~ msgstr ""
+#~ "经典游戏俄罗斯方块。\n"
+#~ "\n"
+#~ "俄罗斯方块是 GNOME 游戏的一部分。"
+
+#~ msgid "The theme to use"
+#~ msgstr "要使用的主题"
+
+#~ msgid "The title of the tile theme to use."
+#~ msgstr "要使用的牌面主题名称。"
+
+#~ msgid "The size of the game board."
+#~ msgstr "游戏棋盘大小"
+
+#~ msgid "Board color count"
+#~ msgstr "棋盘颜色数量"
+
+#~ msgid "The number of colors of tiles to use in the game."
+#~ msgstr "游戏中色块的颜色数量。"
+
+#~ msgid "Zealous animation"
+#~ msgstr "华丽的动画"
+
+#~ msgid "Use more flashy, but slower, animations."
+#~ msgstr "使用更华丽、更缓慢的动画。"
+
+#~ msgid "Swell Foop"
+#~ msgstr "消色块"
+
+#~ msgid "Clear the screen by removing groups of colored and shaped tiles"
+#~ msgstr "移除同样的色块以清空屏幕"
+
+#~ msgid "Board size:"
+#~ msgstr "棋盘大小："
+
+#~ msgid "Number of colors:"
+#~ msgstr "颜色数量："
+
+#~ msgid "Theme:"
+#~ msgstr "主题："
+
+#~ msgid "Zealous Animation"
+#~ msgstr "华丽的动画"
+
+#~ msgid "points"
+#~ msgstr "得分"
+
+#~ msgid "Small"
+#~ msgstr "小"
+
+#~ msgid "Normal"
+#~ msgstr "正常"
+
+#~ msgid "Large"
+#~ msgstr "大"
+
+#~ msgid "Shapes and Colors"
+#~ msgstr "形状和颜色"
+
+#~ msgid "Swell Foop Scores"
+#~ msgstr "消色块得分"
+
+#~ msgid ""
+#~ "I want to play that game! You know, they all light-up and you click on "
+#~ "them and they vanish!\n"
+#~ "\n"
+#~ "Swell Foop is a part of GNOME Games."
+#~ msgstr ""
+#~ "我想玩那个游戏！你点击那些闪动的块块，它们就消失了！\n"
+#~ "\n"
+#~ "消色块 是 GNOME 游戏的一部分。"
+
+#~ msgid "Copyright © 2009 Tim Horton"
+#~ msgstr "Copyright © 2009 Tim Horton"
 
 #~ msgid ""
 #~ "The name of the key used to hold still. The name is a standard X key name."
@@ -5511,9 +4221,6 @@ msgstr "Copyright © 2009 Tim Horton"
 #~ msgid "Total:"
 #~ msgstr "总计："
 
-#~ msgid "Percentage:"
-#~ msgstr "百分比："
-
 #~ msgid "Wins"
 #~ msgstr "胜利"
 
@@ -6384,15 +5091,6 @@ msgstr "Copyright © 2009 Tim Horton"
 
 #~ msgid "Could not show link"
 #~ msgstr "无法显示链接"
-
-#~ msgid "_Cancel"
-#~ msgstr "取消(_C)"
-
-#~ msgid "_Close"
-#~ msgstr "关闭(_C)"
-
-#~ msgid "_OK"
-#~ msgstr "确认(_O)"
 
 #~ msgid "_Animations"
 #~ msgstr "动画(_A)"
@@ -8230,15 +6928,15 @@ msgstr "Copyright © 2009 Tim Horton"
 #~ "%(move)s White %(piece)s at %1$s takes the black %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s 白棋在 %1$s 的 %(piece)s 吃掉黑棋在 %2$s 的 %(victim_piece)s  (%"
-#~ "(result)s)"
+#~ "%(move)s 白棋在 %1$s 的 %(piece)s 吃掉黑棋在 %2$s 的 %(victim_piece)s  "
+#~ "(%(result)s)"
 
 #~ msgid ""
 #~ "%(move)s Black %(piece)s at %1$s takes the white %(victim_piece)s at %2$s "
 #~ "(%(result)s)"
 #~ msgstr ""
-#~ "%(move)s 黑棋在 %1$s 的 %(piece)s 吃掉白棋在 %2$s 的 %(victim_piece)s  (%"
-#~ "(result)s)"
+#~ "%(move)s 黑棋在 %1$s 的 %(piece)s 吃掉白棋在 %2$s 的 %(victim_piece)s  "
+#~ "(%(result)s)"
 
 #~ msgid "%(move)s White %(piece)s moves from %1$s to %2$s (%(result)s)"
 #~ msgstr "%(move)s 白棋的 %(piece)s 从 %1$s 移动到 %2$s (%(result)s)"
