@@ -55,7 +55,7 @@ msgstr "扫除雷区里的隐藏的地雷"
 
 #: ../data/gnomine.desktop.in.h:3
 msgid "minesweeper;"
-msgstr "minesweeper;挖雷;扫雷"
+msgstr "minesweeper;挖雷;扫雷;"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
