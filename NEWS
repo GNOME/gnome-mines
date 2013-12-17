@@ -1,3 +1,13 @@
+GNOME Mines 3.11.3
+==================
+
+* Move buttons to side of window (Robert Roth)
+* Enable question flags by default (Michael Catanzaro)
+* Allow setting percentage of mines on the board in custom games (Isaac Lenton)
+* Scores dialog: autoscroll to new score (Isaac Lenton)
+* Scores dialog: replace Quit button with Close (Isaac Lenton)
+* Updated translations
+
 GNOME Mines 3.11.1
 ==================
 
