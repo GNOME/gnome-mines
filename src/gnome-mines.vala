@@ -693,8 +693,7 @@ public class Mines : Gtk.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "gnome-mines", "website",
-                               "http://www.gnome.org/projects/gnome-games/",
-                               "website-label", _("GNOME Games web site"),
+                               "https://wiki.gnome.org/Apps/Mines",
                                null);
     }
 
