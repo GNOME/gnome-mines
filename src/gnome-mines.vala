@@ -686,7 +686,7 @@ public class Mines : Gtk.Application
                                "comments",
                                _("Clear explosive mines off the board\n\nMines is a part of GNOME Games."),
                                "copyright",
-                               "Copyright \xc2\xa9 1997-2008 Free Software Foundation, Inc.",
+                               "Copyright © 1997–2008 Free Software Foundation, Inc.",
                                "license-type", Gtk.License.GPL_2_0,
                                "authors", authors,
                                "artists", artists,
