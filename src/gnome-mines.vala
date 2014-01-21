@@ -676,7 +676,7 @@ public class Mines : Gtk.Application
 
         string[] documenters =
         {
-            "Callum McKenzie",
+            "Ekaterina Gerasimova",
             null
         };
 
