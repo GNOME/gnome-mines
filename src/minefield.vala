@@ -89,6 +89,11 @@ public class Minefield
     private Timer? clock;
     private uint clock_timeout;
 
+    /* Time penalty for a hint increases the more you use it */
+    private static const uint HINT_TIME_PENALTY_MAX = 90;
+    private static const uint HINT_TIME_PENALTY_INCREASE = 10;
+    private uint hint_time_penalty_seconds = 10;
+
     public double elapsed
     {
         get
@@ -321,7 +326,9 @@ public class Minefield
 
         /* There is a ten second penalty for accepting a hint_action. */
         clear_mine (x, y);
-        clock_elapsed += 10.0;
+        clock_elapsed += hint_time_penalty_seconds;
+        if (hint_time_penalty_seconds < HINT_TIME_PENALTY_MAX)
+            hint_time_penalty_seconds += HINT_TIME_PENALTY_INCREASE;
         tick ();
     }
 
