@@ -8,3 +8,4 @@ src/gnome-mines.vala
 src/history.vala
 src/minefield.vala
 src/minefield-view.vala
+src/score-dialog.vala
