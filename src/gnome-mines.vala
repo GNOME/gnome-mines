@@ -25,9 +25,8 @@ public class Mines : Gtk.Application
     private const string KEY_USE_AUTOFLAG = "use-autoflag";
 
     private Gtk.Box buttons_box;
-    private Gtk.Button new_game_button;
-    private Gtk.Button pause_button;
-    private Gtk.Image pause_image;
+    private Gtk.Button play_pause_button;
+    private Gtk.Image play_pause_image;
     private Gtk.Label clock_label;
     private Gtk.Button hint_button;
 
@@ -190,30 +189,19 @@ public class Mines : Gtk.Application
         buttons_box.pack_start (hint_button, false, false, 0);
         size.add_widget (hint_button);
 
-        pause_button = new Gtk.Button ();
+        play_pause_button = new Gtk.Button ();
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        pause_image = new Gtk.Image.from_icon_name ("media-playback-pause-symbolic", Gtk.IconSize.DND);
-        box.pack_start (pause_image);
+        play_pause_image = new Gtk.Image.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.DND);
+        box.pack_start (play_pause_image);
         clock_label = new Gtk.Label ("");
         box.pack_start (clock_label);
-        pause_button.add (box);
-        pause_button.valign = Gtk.Align.CENTER;
-        pause_button.halign = Gtk.Align.CENTER;
-        pause_button.relief = Gtk.ReliefStyle.NONE;
-        pause_button.action_name = "app.pause";
-        buttons_box.pack_start (pause_button, false, false, 0);
-        size.add_widget (pause_button);
-
-        new_game_button = new Gtk.Button ();
-        image = new Gtk.Image.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.DND);
-        new_game_button.add (image);
-        new_game_button.valign = Gtk.Align.CENTER;
-        new_game_button.halign = Gtk.Align.CENTER;
-        new_game_button.relief = Gtk.ReliefStyle.NONE;
-        new_game_button.action_name = "app.new-game";
-        buttons_box.pack_end (new_game_button, false, false, 0);
-        size.add_widget (new_game_button);
-
+        play_pause_button.add (box);
+        play_pause_button.valign = Gtk.Align.CENTER;
+        play_pause_button.halign = Gtk.Align.CENTER;
+        play_pause_button.relief = Gtk.ReliefStyle.NONE;
+        play_pause_button.action_name = "app.new-game";
+        buttons_box.pack_end (play_pause_button, false, false, 0);
+        size.add_widget (play_pause_button);
     }
 
     private void startup_new_game_screen ()
@@ -495,6 +483,9 @@ public class Mines : Gtk.Application
         new_game_screen.show ();
         window.resize (window_width, window_height);
 
+        play_pause_button.action_name = "app.new-game";
+        play_pause_image.icon_name = "view-refresh-symbolic";
+
         new_game_action.set_enabled (false);
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
@@ -547,14 +538,15 @@ public class Mines : Gtk.Application
         minefield.cleared.connect (cleared_cb);
         minefield.tick.connect (tick_cb);
         minefield.paused_changed.connect (paused_changed_cb);
+        minefield.clock_started.connect (clock_started_cb);
 
         minefield_view.minefield = minefield;
 
         update_flag_label ();
 
         new_game_action.set_enabled (true);
-        hint_action.set_enabled (true);
         pause_action.set_enabled (true);
+        hint_action.set_enabled (true);
 
         minefield.paused = false;
         pause_requested = false;
@@ -590,16 +582,16 @@ public class Mines : Gtk.Application
         {
             hint_action.set_enabled (false);
 
-            if (pause_button.get_direction () == Gtk.TextDirection.RTL)
-                pause_image.icon_name = "media-playback-start-rtl-symbolic";
+            if (play_pause_button.get_direction () == Gtk.TextDirection.RTL)
+                play_pause_image.icon_name = "media-playback-start-rtl-symbolic";
             else
-                pause_image.icon_name = "media-playback-start-symbolic";
+                play_pause_image.icon_name = "media-playback-start-symbolic";
 
         }
-        else
+        else if (minefield.elapsed > 0)
         {
             hint_action.set_enabled (true);
-            pause_image.icon_name = "media-playback-pause-symbolic";
+            play_pause_image.icon_name = "media-playback-pause-symbolic";
         }
     }
 
@@ -610,6 +602,8 @@ public class Mines : Gtk.Application
 
     private void explode_cb (Minefield minefield)
     {
+        play_pause_button.action_name = "app.new-game";
+        play_pause_image.icon_name = "view-refresh-symbolic";
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
     }
@@ -629,6 +623,12 @@ public class Mines : Gtk.Application
             hint_action.set_enabled (false);
             pause_action.set_enabled (false);
         }
+    }
+
+    private void clock_started_cb ()
+    {
+        play_pause_image.icon_name = "media-playback-pause-symbolic";
+        play_pause_button.action_name = "app.pause";
     }
 
     private void tick_cb ()

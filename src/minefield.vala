@@ -121,6 +121,7 @@ public class Minefield
         get { return _paused; }
     }
 
+    public signal void clock_started ();
     public signal void paused_changed ();
     public signal void tick ();
 
@@ -395,6 +396,7 @@ public class Minefield
     {
         if (clock == null)
             clock = new Timer ();
+        clock_started ();
         timeout_cb ();
     }
 
