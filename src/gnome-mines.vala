@@ -170,7 +170,6 @@ public class Mines : Gtk.Application
         buttons_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
         buttons_box.margin_right = 15;
         buttons_box.margin_left = 15;
-        buttons_box.show ();
         main_vbox.pack_start (buttons_box, false, false, 0);
 
         var size = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
