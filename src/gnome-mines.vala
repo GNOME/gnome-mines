@@ -176,7 +176,7 @@ public class Mines : Gtk.Application
 
         hint_button = new Gtk.Button ();
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        var image = new Gtk.Image.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.DND);
+        var image = new Gtk.Image.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.DIALOG);
         box.pack_start (image);
         flag_label = new Gtk.Label ("");
         box.pack_start (flag_label);
@@ -190,7 +190,7 @@ public class Mines : Gtk.Application
 
         play_pause_button = new Gtk.Button ();
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        play_pause_image = new Gtk.Image.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.DND);
+        play_pause_image = new Gtk.Image.from_icon_name ("view-refresh-symbolic", Gtk.IconSize.DIALOG);
         box.pack_start (play_pause_image);
         clock_label = new Gtk.Label ("");
         box.pack_start (clock_label);
