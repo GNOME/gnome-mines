@@ -9,7 +9,7 @@ pixmapdir   = $(datadir)/gnome-mines
 pixmap_DATA = flag.svg flag-question.svg mine.svg bang.svg warning.svg
 
 desktopdir = $(datadir)/applications
-desktop_in_files = gnomine.desktop.in
+desktop_in_files = gnome-mines.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
 @INTLTOOL_DESKTOP_RULE@
 
