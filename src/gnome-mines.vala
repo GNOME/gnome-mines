@@ -548,6 +548,7 @@ public class Mines : Gtk.Application
         minefield_view.minefield = minefield;
 
         update_flag_label ();
+        clock_label.hide ();
 
         new_game_action.set_enabled (true);
         repeat_size_action.set_enabled (true);
@@ -618,6 +619,7 @@ public class Mines : Gtk.Application
         play_pause_image.icon_name = "view-refresh-symbolic";
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
+        clock_label.hide ();
     }
 
     private void cleared_cb (Minefield minefield)
@@ -636,6 +638,7 @@ public class Mines : Gtk.Application
             play_pause_image.icon_name = "view-refresh-symbolic";
             hint_action.set_enabled (false);
             pause_action.set_enabled (false);
+            clock_label.hide ();
         }
     }
 
@@ -643,6 +646,7 @@ public class Mines : Gtk.Application
     {
         play_pause_image.icon_name = "media-playback-pause-symbolic";
         play_pause_button.action_name = "app.pause";
+        clock_label.show ();
     }
 
     private void tick_cb ()
