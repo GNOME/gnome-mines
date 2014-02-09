@@ -22,4 +22,5 @@
  </screenshots>
  <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
  <updatecontact>games_list_at_gnome.org</updatecontact>
+ <project_group>GNOME</project_group>
 </application>
