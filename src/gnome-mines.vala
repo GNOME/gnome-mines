@@ -632,6 +632,8 @@ public class Mines : Gtk.Application
             show_new_game_screen ();
         else
         {
+            play_pause_button.action_name = "app.new-game";
+            play_pause_image.icon_name = "view-refresh-symbolic";
             hint_action.set_enabled (false);
             pause_action.set_enabled (false);
         }
