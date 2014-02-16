@@ -203,7 +203,7 @@ public class Mines : Gtk.Application
         play_pause_button.valign = Gtk.Align.CENTER;
         play_pause_button.halign = Gtk.Align.CENTER;
         play_pause_button.relief = Gtk.ReliefStyle.NONE;
-        play_pause_button.action_name = "app.new-game";
+        display_new_game_button ();
         buttons_box.pack_end (play_pause_button, false, false, 0);
         size.add_widget (play_pause_button);
     }
@@ -487,8 +487,7 @@ public class Mines : Gtk.Application
         new_game_screen.show ();
         window.resize (window_width, window_height);
 
-        play_pause_button.action_name = "app.new-game";
-        play_pause_image.icon_name = "view-refresh-symbolic";
+        display_new_game_button ();
 
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
@@ -594,17 +593,12 @@ public class Mines : Gtk.Application
         if (minefield.paused)
         {
             hint_action.set_enabled (false);
-
-            if (play_pause_button.get_direction () == Gtk.TextDirection.RTL)
-                play_pause_image.icon_name = "media-playback-start-rtl-symbolic";
-            else
-                play_pause_image.icon_name = "media-playback-start-symbolic";
-
+            display_unpause_button ();
         }
         else if (minefield.elapsed > 0)
         {
             hint_action.set_enabled (true);
-            play_pause_image.icon_name = "media-playback-pause-symbolic";
+            display_pause_button ();
         }
     }
 
@@ -615,8 +609,7 @@ public class Mines : Gtk.Application
 
     private void explode_cb (Minefield minefield)
     {
-        play_pause_button.action_name = "app.new-game";
-        play_pause_image.icon_name = "view-refresh-symbolic";
+        display_new_game_button ();
         hint_action.set_enabled (false);
         pause_action.set_enabled (false);
         clock_label.hide ();
@@ -634,8 +627,7 @@ public class Mines : Gtk.Application
             show_new_game_screen ();
         else
         {
-            play_pause_button.action_name = "app.new-game";
-            play_pause_image.icon_name = "view-refresh-symbolic";
+            display_new_game_button ();
             hint_action.set_enabled (false);
             pause_action.set_enabled (false);
             clock_label.hide ();
@@ -644,8 +636,7 @@ public class Mines : Gtk.Application
 
     private void clock_started_cb ()
     {
-        play_pause_image.icon_name = "media-playback-pause-symbolic";
-        play_pause_button.action_name = "app.pause";
+        display_pause_button ();
         clock_label.show ();
     }
 
@@ -904,6 +895,28 @@ public class Mines : Gtk.Application
         {
             warning ("Failed to show help: %s", e.message);
         }
+    }
+
+    private void display_new_game_button ()
+    {
+        play_pause_button.action_name = "app.new-game";
+        play_pause_image.icon_name = "view-refresh-symbolic";
+    }
+
+    private void display_pause_button ()
+    {
+        play_pause_button.action_name = "app.pause";
+        play_pause_image.icon_name = "media-playback-pause-symbolic";
+    }
+
+    private void display_unpause_button ()
+    {
+        play_pause_button.action_name = "app.pause";
+
+        if (play_pause_button.get_direction () == Gtk.TextDirection.RTL)
+            play_pause_image.icon_name = "media-playback-start-rtl-symbolic";
+        else
+            play_pause_image.icon_name = "media-playback-start-symbolic";
     }
 
     public static int main (string[] args)
