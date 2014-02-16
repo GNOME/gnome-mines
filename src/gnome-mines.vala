@@ -190,6 +190,7 @@ public class Mines : Gtk.Application
         hint_button.halign = Gtk.Align.CENTER;
         hint_button.relief = Gtk.ReliefStyle.NONE;
         hint_button.action_name = "app.hint";
+        hint_button.tooltip_text = _("Receive a hint for your next move");
         buttons_box.pack_start (hint_button, false, false, 0);
         size.add_widget (hint_button);
 
@@ -900,18 +901,21 @@ public class Mines : Gtk.Application
     private void display_new_game_button ()
     {
         play_pause_button.action_name = "app.new-game";
+        play_pause_button.tooltip_text = _("Start a new game");
         play_pause_image.icon_name = "view-refresh-symbolic";
     }
 
     private void display_pause_button ()
     {
         play_pause_button.action_name = "app.pause";
+        play_pause_button.tooltip_text = _("Pause the game");
         play_pause_image.icon_name = "media-playback-pause-symbolic";
     }
 
     private void display_unpause_button ()
     {
         play_pause_button.action_name = "app.pause";
+        play_pause_button.tooltip_text = _("Unpause the game");
 
         if (play_pause_button.get_direction () == Gtk.TextDirection.RTL)
             play_pause_image.icon_name = "media-playback-start-rtl-symbolic";
