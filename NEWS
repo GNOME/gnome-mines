@@ -1,3 +1,11 @@
+GNOME Mines 3.11.90
+===================
+
+* Appdata: specify project_group
+* Rename desktop file to gnome-mines.desktop
+* Hint time penalty now increases
+* Add tooltips to buttons
+
 GNOME Mines 3.11.3
 ==================
 
