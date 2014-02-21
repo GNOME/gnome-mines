@@ -165,7 +165,7 @@ msgstr "U_končit"
 
 #: ../src/gnome-mines.vala:193
 msgid "Receive a hint for your next move"
-msgstr "Obdržet radu pro váš následující tah"
+msgstr "Získat radu pro váš další tah"
 
 #: ../src/gnome-mines.vala:257
 msgid "Custom"
