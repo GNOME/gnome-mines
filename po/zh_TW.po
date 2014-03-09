@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-01-21 04:18+0000\n"
-"PO-Revision-Date: 2014-02-02 12:23+0800\n"
+"POT-Creation-Date: 2014-03-05 19:57+0000\n"
+"PO-Revision-Date: 2014-03-08 20:00+0800\n"
 "Last-Translator: Chao-Hsiung Liao <j_h_liau@yahoo.com.tw>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: zh_TW\n"
@@ -23,7 +23,6 @@ msgstr ""
 "X-Generator: Poedit 1.6.3\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
-#| msgid "Mines"
 msgid "GNOME Mines"
 msgstr "GNOME 拆地雷"
 
@@ -47,17 +46,17 @@ msgstr ""
 "在遊戲開始時您可以選擇想要玩的尺寸。如果您卡關了，您可以尋求提示：這樣會被追"
 "加大量的時間，但是比觸發地雷好！"
 
-#: ../data/gnomine.desktop.in.h:1 ../src/gnome-mines.vala:90
-#: ../src/gnome-mines.vala:124 ../src/gnome-mines.vala:136
-#: ../src/gnome-mines.vala:684
+#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:92
+#: ../src/gnome-mines.vala:129 ../src/gnome-mines.vala:141
+#: ../src/gnome-mines.vala:694
 msgid "Mines"
 msgstr "拆地雷"
 
-#: ../data/gnomine.desktop.in.h:2
+#: ../data/gnome-mines.desktop.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "清除方格陣中的隱藏的地雷"
 
-#: ../data/gnomine.desktop.in.h:3
+#: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "minesweeper;踩地雷;"
 
@@ -74,7 +73,6 @@ msgid "Warning about too many flags"
 msgstr "標記過多時警告"
 
 #: ../data/org.gnome.mines.gschema.xml.h:4
-#| msgid "Set to true to enable warning icons when too many flags are placed."
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -123,111 +121,111 @@ msgstr "視窗的高度 (像素)"
 msgid "true if the window is maximized"
 msgstr "如果視窗為最大化則設定為‘TRUE’"
 
-#: ../src/gnome-mines.vala:107
+#: ../src/gnome-mines.vala:111
 msgid "_New Game"
 msgstr "開新局(_N)"
 
-#: ../src/gnome-mines.vala:108
+#: ../src/gnome-mines.vala:112
 msgid "_Scores"
 msgstr "分數(_S)"
 
-#: ../src/gnome-mines.vala:109
+#: ../src/gnome-mines.vala:113
 msgid "_Preferences"
 msgstr "偏好設定(_P)"
 
-#: ../src/gnome-mines.vala:112
+#: ../src/gnome-mines.vala:116
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: ../src/gnome-mines.vala:113
+#: ../src/gnome-mines.vala:117
 msgid "_About"
 msgstr "關於(_A)"
 
-#: ../src/gnome-mines.vala:114
+#: ../src/gnome-mines.vala:118
 msgid "_Quit"
 msgstr "結束(_Q)"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:193
+#| msgid "Get a hint for your next move"
+msgid "Receive a hint for your next move"
+msgstr "給下一步的提示"
+
+#: ../src/gnome-mines.vala:257
 msgid "Custom"
 msgstr "自訂"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:275
 msgid "H_orizontal:"
 msgstr "水平(_O):"
 
-#: ../src/gnome-mines.vala:280
+#: ../src/gnome-mines.vala:285
 msgid "_Vertical:"
 msgstr "垂直(_V)："
 
-#: ../src/gnome-mines.vala:290
+#: ../src/gnome-mines.vala:295
 msgid "_Number of mines:"
 msgstr "地雷數量(_N)："
 
-#: ../src/gnome-mines.vala:301
-#| msgid "_Number of mines:"
+#: ../src/gnome-mines.vala:306
 msgid "_Percentage of mines:"
 msgstr "地雷百分比(_P)："
 
-#: ../src/gnome-mines.vala:316
+#: ../src/gnome-mines.vala:321
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: ../src/gnome-mines.vala:322
+#: ../src/gnome-mines.vala:327
 msgid "_Play Game"
 msgstr "玩遊戲(_P)"
 
-#: ../src/gnome-mines.vala:371
+#: ../src/gnome-mines.vala:376
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 個地雷"
 
-#: ../src/gnome-mines.vala:416
+#: ../src/gnome-mines.vala:421
 #, c-format
 msgid "%u/%u"
 msgstr "%u/%u"
 
-#: ../src/gnome-mines.vala:451
+#: ../src/gnome-mines.vala:456
 msgid "Do you want to start a new game?"
 msgstr "您是否要開始新的遊戲？"
 
-#: ../src/gnome-mines.vala:452
+#: ../src/gnome-mines.vala:457
 msgid "If you start a new game, your current progress will be lost."
 msgstr "如果您開始新的遊戲，您目前的進度會遺失。"
 
-#: ../src/gnome-mines.vala:453
+#: ../src/gnome-mines.vala:458
 msgid "Keep Current Game"
 msgstr "繼續目前這局遊戲"
 
-#: ../src/gnome-mines.vala:454
+#: ../src/gnome-mines.vala:459
 msgid "Start New Game"
 msgstr "開始另一局遊戲"
 
-#: ../src/gnome-mines.vala:652
+#: ../src/gnome-mines.vala:662
 msgid "Main game:"
 msgstr "主遊戲："
 
-#: ../src/gnome-mines.vala:657
+#: ../src/gnome-mines.vala:667
 msgid "Score:"
 msgstr "得分："
 
-#: ../src/gnome-mines.vala:660
+#: ../src/gnome-mines.vala:670
 msgid "Resizing and SVG support:"
 msgstr "放大縮小和 SVG 支援："
 
-#: ../src/gnome-mines.vala:668
+#: ../src/gnome-mines.vala:678
 msgid "Faces:"
 msgstr "笑臉："
 
-#: ../src/gnome-mines.vala:672
+#: ../src/gnome-mines.vala:682
 msgid "Graphics:"
 msgstr "圖形："
 
-#: ../src/gnome-mines.vala:687
-#| msgid ""
-#| "The 2D/3D chess game for GNOME. \n"
-#| "\n"
-#| "glChess is a part of GNOME Games."
+#: ../src/gnome-mines.vala:697
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -237,7 +235,7 @@ msgstr ""
 "\n"
 "拆地雷 (Mines) 是 GNOME 遊戲的一部分。"
 
-#: ../src/gnome-mines.vala:694
+#: ../src/gnome-mines.vala:704
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -247,22 +245,34 @@ msgstr ""
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
 "Fernando <bv1al@journalist.com.tw>, 1999"
 
-#: ../src/gnome-mines.vala:800
+#: ../src/gnome-mines.vala:810
 msgid "Mines Preferences"
 msgstr "GNOME 拆地雷偏好設定"
 
-#: ../src/gnome-mines.vala:803 ../src/score-dialog.vala:18
+#: ../src/gnome-mines.vala:813 ../src/score-dialog.vala:18
 msgid "_Close"
 msgstr "關閉(_C)"
 
-#: ../src/gnome-mines.vala:818
+#: ../src/gnome-mines.vala:828
 msgid "_Use \"I'm not sure\" flags"
 msgstr "可將方格標記為「不知道」(_U)"
 
-#: ../src/gnome-mines.vala:824
-#| msgid "_Warn if too many flags have been placed"
+#: ../src/gnome-mines.vala:834
 msgid "_Warn if too many flags are placed next to a number"
 msgstr "數字旁標記過多時警告(_W)"
+
+#: ../src/gnome-mines.vala:904
+msgid "Start a new game"
+msgstr "開始另一局"
+
+#: ../src/gnome-mines.vala:911
+msgid "Pause the game"
+msgstr "暫停遊戲"
+
+#: ../src/gnome-mines.vala:918
+#| msgid "Pause the game"
+msgid "Unpause the game"
+msgstr "取消暫停遊戲"
 
 #: ../src/minefield-view.vala:557
 msgid "Paused"
@@ -373,9 +383,6 @@ msgstr[0] "%u × %u, %u 個地雷"
 
 #~ msgid "_Contents"
 #~ msgstr "內容(_C)"
-
-#~ msgid "Start a new game"
-#~ msgstr "開始另一局"
 
 #~ msgid "Undo Move"
 #~ msgstr "回手"
@@ -1036,9 +1043,6 @@ msgstr[0] "%u × %u, %u 個地雷"
 #~ msgid "Toggle fullscreen mode"
 #~ msgstr "切換全螢幕模式"
 
-#~ msgid "Get a hint for your next move"
-#~ msgstr "給下一步的提示"
-
 #~ msgid "Leave fullscreen mode"
 #~ msgstr "離開全螢幕模式"
 
@@ -1047,9 +1051,6 @@ msgstr[0] "%u × %u, %u 個地雷"
 
 #~ msgid "End the current network game and return to network server"
 #~ msgstr "終止目前的網路遊戲，回到伺服器"
-
-#~ msgid "Pause the game"
-#~ msgstr "暫停遊戲"
 
 #~ msgid "Show a list of players in the network game"
 #~ msgstr "顯示網路遊戲中的玩家名單"
