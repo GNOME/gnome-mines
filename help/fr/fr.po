@@ -244,7 +244,7 @@ msgstr ""
 "possibilité d'obtenir les fichiers de bogues, de faire des commentaires, et "
 "de recevoir des mises à jour par e-mail sur l'état de votre bogue. Si vous "
 "n'avez pas déjà un compte, il suffit de cliquer sur le lien <gui>Nouveau "
-"compte</ gui> pour en créer un."
+"compte</gui> pour en créer un."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
@@ -257,12 +257,12 @@ msgid ""
 "for the bug to see if it already exists."
 msgstr ""
 "Une fois que vous avez un compte, connectez-vous. Il s'agit d'un site en "
-"anglais. Cliquez sur <guiseq><gui>File a Bug (Déposer un bogue)</ gui><gui> "
-"Applications</ gui><gui>gnome-mines</ gui></ guiseq>. Avant de rapporter un "
+"anglais. Cliquez sur <guiseq><gui>File a Bug (Déposer un bogue)</gui><gui> "
+"Applications</gui><gui>gnome-mines</gui></guiseq>. Avant de rapporter un "
 "bogue, lisez les <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
 "writing.html\">bug writing guidelines (en anglais)</link>, et cliquez sur "
 "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
-"\">Browse (Parcourir)</ link> pour voir si le bogue existe déjà."
+"\">Browse (Parcourir)</link> pour voir si le bogue existe déjà."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:40
@@ -347,7 +347,7 @@ msgid ""
 msgstr ""
 "Pour contribuer au projet de documentation, entrer en contact avec nous sur "
 "le canal <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">#docs</ link> sur <link href=\"http://live.gnome.org/"
+"gnome.org%2Fdocs\">#docs</link> sur <link href=\"http://live.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> ou via notre <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link> ."
 
@@ -597,7 +597,7 @@ msgid ""
 "tile that is safe. You will be penalized for using hints: ten seconds will "
 "be added to your total time."
 msgstr ""
-"Cliquez <gui style=\"button\">Astuce</ gui> dans la barre d'outils pour "
+"Cliquez <gui style=\"button\">Astuce</gui> dans la barre d'outils pour "
 "révéler une tuile cachée qui est sûre. Vous serez pénalisé pour "
 "l'utilisation des astuces : dix secondes seront ajoutées à votre temps total."
 
