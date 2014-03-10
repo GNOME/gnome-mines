@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-03-08 07:58+0000\n"
+"POT-Creation-Date: 2014-03-10 07:59+0000\n"
 "PO-Revision-Date: 2013-09-19 01:07+0700\n"
 "Last-Translator: Wylmer Wang <wantinghard@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
@@ -73,7 +73,7 @@ msgstr "旗标过多时警告"
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
-msgstr "设为 true 可在放置了某个数字块附件放置了太多旗标时启用警告图标。"
+msgstr "设为 true 可在某个数字块附近放置了太多旗标时启用警告图标。"
 
 #: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Enable automatic placing of flags"
@@ -142,7 +142,6 @@ msgid "_Quit"
 msgstr "退出(_Q)"
 
 #: ../src/gnome-mines.vala:193
-#| msgid "Get a hint for your next move"
 msgid "Receive a hint for your next move"
 msgstr "获得您下一步走法的提示"
 
@@ -266,7 +265,6 @@ msgid "Pause the game"
 msgstr "暂停游戏"
 
 #: ../src/gnome-mines.vala:918
-#| msgid "Pause the game"
 msgid "Unpause the game"
 msgstr "继续游戏"
 
