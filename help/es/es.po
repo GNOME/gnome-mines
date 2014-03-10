@@ -1,13 +1,13 @@
 # translation of gnomine.HEAD.po to Español
 # translation of gnomine manual to Spanish
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2011.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-06-02 15:03+0000\n"
-"PO-Revision-Date: 2013-06-03 11:26+0200\n"
+"POT-Creation-Date: 2014-03-10 07:59+0000\n"
+"PO-Revision-Date: 2014-03-10 11:45+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -24,134 +24,46 @@ msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2013\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4(media)
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
-#: C/index.page:6(info/title)
-msgctxt "link"
-msgid "GNOME Mines"
-msgstr "Minas"
-
-#: C/index.page:7(info/title)
-msgctxt "text"
-msgid "GNOME Mines"
-msgstr "Minas"
-
-#: C/index.page:10(credit/name) C/shortcuts.page:9(credit/name)
-msgid "Brian Grohe"
-msgstr "Brian Grohe"
-
-#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
-#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
-#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
-#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
-msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
-
-#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
-#: C/translate.page:19(license/p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Compartir Igual 3.0"
-
-#: C/index.page:22(page/title)
-#| msgid ""
-#| "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
-#| "media>GNOME Mines"
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media> Minas"
-
-#: C/index.page:24(page/p)
-msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
-"all the mines that are hidden under tiles on a rectangular board. You will "
-"need to use a combination of logic and luck to find all the mines without "
-"triggering an explosion."
-msgstr ""
-"<app>Minas</app> es un clon del Buscaminas. El objetivo del juego es "
-"encontrar todas las minas ocultas en el tablero. Necesitará usar una "
-"combinación de lógica y suerte para encontrarlas todas sin provocar una "
-"explosión."
-
-#: C/index.page:31(section/title)
-msgid "Game Play"
-msgstr "Juego"
-
-#: C/index.page:34(section/title)
-msgid "Useful tips"
-msgstr "Consejos útiles"
-
-#: C/index.page:37(section/title)
-msgid "Advanced"
-msgstr "Avanzado"
-
-#: C/index.page:40(section/title)
-msgid "Get Involved"
-msgstr "Involucrarse"
-
-#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
-#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
-#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
-#: C/rules.page:11(credit/name)
+#. (itstool) path: credit/name
+#: C/board-size.page:10 C/flags.page:17 C/get-help.page:9
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
-#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
-#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
-#: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
-#: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
+#. (itstool) path: credit/years
+#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:11 C/rules.page:13
+#: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
-#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
-#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
-#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
-#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
-#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
-#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
-#: C/toolbar.page:10(credit/years)
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
+#: C/get-help.page:14 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
+#: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11 C/toolbar.page:10
 msgid "2012"
 msgstr "2012"
 
-#: C/board-size.page:22(page/title)
+#. (itstool) path: page/title
+#: C/board-size.page:22
 msgid "How to change the game board size"
 msgstr "Cómo cambiar la tamaño del tablero del juego"
 
-#: C/board-size.page:24(page/p)
+#. (itstool) path: page/p
+#: C/board-size.page:24
 msgid "You can select a field size at the start of a new game."
 msgstr "Puede seleccionar un tamaño de tablero al inicio de cada partida."
 
-#: C/board-size.page:28(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:28
 msgid ""
 "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
 "gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
@@ -159,41 +71,55 @@ msgstr ""
 "Pulse <gui style=\"button\">Nuevo</gui> o <guiseq><gui style=\"menu\">Minas</"
 "gui> <gui style=\"menuitem\">Juego nuevo</gui></guiseq>."
 
-#: C/board-size.page:33(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:33
 msgid "Select one of the grid sizes:"
 msgstr "Seleccione uno de los tamaños de tablero:"
 
-#: C/board-size.page:35(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:35
 msgid "a 8 × 8 board with 10 mines"
 msgstr "un tablero de 8×8 con 10 minas"
 
-#: C/board-size.page:36(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:36
 msgid "a 16 × 16 board with 40 mines"
 msgstr "un tablero de 16×16 con 10 minas"
 
-#: C/board-size.page:37(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:37
 msgid "a 30 × 16 board with 99 mines"
 msgstr "un tablero de 30×16 con 10 minas"
 
-#: C/board-size.page:38(item/p)
+#. (itstool) path: item/p
+#: C/board-size.page:38
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr "un tablero personalizado, donde elije el tamaño y el número de minas"
 
-#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
-#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
+#: C/flags.page:11 C/toolbar.page:8 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
-#: C/bug-filing.page:18(page/title)
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:18 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Compartir Igual 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
 msgid "Help make <app>Mines</app> better"
 msgstr "Ayudar a mejorar <app>Minas</app>"
 
-#: C/bug-filing.page:21(section/title)
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
 msgid "Report a bug or suggest an improvement"
 msgstr "Informar de un error o sugerir una mejora"
 
-#: C/bug-filing.page:22(section/p)
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
 msgid ""
 "<app>Mines</app> is maintained by a volunteer community. You are welcome to "
 "participate. If you notice a problem you can file a <em>bug report</em>. To "
@@ -204,10 +130,8 @@ msgstr ""
 "<em>informe de error</em>. Para informar de un error, vaya a <link href="
 "\"https://bugzilla.gnome.org/\"/>."
 
-#: C/bug-filing.page:25(section/p)
-#| msgid ""
-#| "This is a bug tracking system where users and developers can file details "
-#| "about bugs, crashes and request enhancements."
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
 msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs and crashes, or request enhancements."
@@ -216,13 +140,8 @@ msgstr ""
 "desarrolladores pueden rellenar detalles acerca de los errores, cuelgues y "
 "solicitudes de mejoras."
 
-#: C/bug-filing.page:28(section/p)
-#| msgid ""
-#| "To participate you need an account which will give you the ability to "
-#| "gain access, file bugs, and make comments. Also, you need to register so "
-#| "you can receive updates by e-mail about the status of your bug. If you "
-#| "don't already have an account, just click on the <gui>New Account</gui> "
-#| "link to create one."
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
 msgid ""
 "To participate you need an account, which will give you the ability to gain "
 "access, file bugs, make comments, and receive updates by e-mail about the "
@@ -234,7 +153,8 @@ msgstr ""
 "e sobre el estado de su informe de error. Si todavía no tiene una cuenta, "
 "simplemente pulse en el enlace <gui>New Account</gui> para crear una."
 
-#: C/bug-filing.page:32(section/p)
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
@@ -250,7 +170,8 @@ msgstr ""
 "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
 "\">busque</link> el error para ver si ya existe."
 
-#: C/bug-filing.page:40(section/p)
+#. (itstool) path: section/p
+#: C/bug-filing.page:40
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -260,7 +181,8 @@ msgstr ""
 "en el menú <gui>Severity</gui>. Rellene las secciones «Summary» y "
 "«Description» y pulse en <gui>Commit</gui>."
 
-#: C/bug-filing.page:44(section/p)
+#. (itstool) path: section/p
+#: C/bug-filing.page:44
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
@@ -268,11 +190,13 @@ msgstr ""
 "Su informe obtendrá un número de ID, y su estado se actualizará a medida que "
 "se trata.Gracias por ayudar a mejorar <app>Minas</app>."
 
-#: C/develop.page:19(page/title)
+#. (itstool) path: page/title
+#: C/develop.page:19
 msgid "Help develop"
 msgstr "Contribuir al desarrollo"
 
-#: C/develop.page:20(page/p)
+#. (itstool) path: page/p
+#: C/develop.page:20
 msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
@@ -280,7 +204,8 @@ msgstr ""
 "Los <app>juegos de GNOME</app> los desarrolla y los mantiene una comunidad "
 "de voluntarios. Si quiere participar es bienvenido."
 
-#: C/develop.page:23(page/p)
+#. (itstool) path: page/p
+#: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
@@ -296,16 +221,18 @@ msgstr ""
 "link>, o mediante la <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "games-list\">lista de correo</link>."
 
-#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
-#: C/new-game.page:21(credit/name)
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:22
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
-#: C/documentation.page:27(page/title)
+#. (itstool) path: page/title
+#: C/documentation.page:27
 msgid "Help write documentation"
 msgstr "Ayudar a escribir la documentación"
 
-#: C/documentation.page:29(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:29
 msgid ""
 "The GNOME Games user help is maintained by a volunteer community. You are "
 "welcome to participate."
@@ -313,11 +240,12 @@ msgstr ""
 "Los juegos de GNOME los desarrolla y los mantiene una comunidad de "
 "voluntarios. Si quiere participar es bienvenido."
 
-#: C/documentation.page:32(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
-"2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
@@ -327,7 +255,8 @@ msgstr ""
 "GnomeIrcChannels\">irc.gnome.org</link>, o mediante la <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">lista de correo</link>."
 
-#: C/documentation.page:40(page/p)
+#. (itstool) path: page/p
+#: C/documentation.page:40
 msgid ""
 "Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
@@ -335,115 +264,33 @@ msgstr ""
 "El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> contiene información útil."
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/faces.page:24(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-msgstr ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:28(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-msgstr ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:32(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:36(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:40(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-msgstr ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-
-#: C/faces.page:20(page/title)
-msgid "The meaning of the faces"
-msgstr "El significado de los emoticonos"
-
-#: C/faces.page:25(td/p)
-msgid "This is a new game and you have not clicked on any tile yet."
-msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
-
-#: C/faces.page:29(td/p)
-#| msgid "You are clicking on a tile."
-msgid "You are currently clicking on a tile."
-msgstr "Está pulsando en una casilla."
-
-#: C/faces.page:33(td/p)
-#| msgid "You have uncovered a mine, you lose."
-msgid "You have uncovered a mine. You lose."
-msgstr "Ha descubierto una mina. Ha perdido."
-
-#: C/faces.page:37(td/p)
-#| msgid "The tile you just clicked on is safe, you can continue."
-msgid "The tile you just clicked on is safe. You can continue."
-msgstr "La casilla en la que ha pulsado es segura. Puede continuar."
-
-#: C/faces.page:41(td/p)
-#| msgid "You have found all the mines, you win."
-msgid "You have found all the mines. You win!"
-msgstr "Ha encontrado todas las minas. Ha ganado."
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:34(media)
+#: C/flags.page:34
 msgctxt "_"
 msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
 msgstr ""
 "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/flags.page:56(media)
+#: C/flags.page:56
 msgctxt "_"
 msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
 msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
 
+#. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
 #. the file changes, the md5 hash will change to let you know you need to
 #. update your localized copy. The msgstr is not used at all. Set it to
 #. whatever you like once you have updated your copy of the file.
-#: C/flags.page:85(media)
+#: C/flags.page:85
 msgctxt "_"
 msgid ""
 "external ref='figures/flag-question.svg' "
@@ -452,11 +299,13 @@ msgstr ""
 "external ref='figures/flag-question.svg' "
 "md5='544c1aaa711ee86a03a817a1e3b57733'"
 
-#: C/flags.page:30(page/title)
+#. (itstool) path: page/title
+#: C/flags.page:30
 msgid "How to use flags"
 msgstr "Cómo usar las banderas"
 
-#: C/flags.page:37(td/p)
+#. (itstool) path: td/p
+#: C/flags.page:37
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -466,22 +315,26 @@ msgstr ""
 "contener una mina. Poner una bandera sobre una casilla evita que pulse en "
 "ella, causando una probable explosión que terminaría el juego."
 
-#: C/flags.page:45(section/title)
+#. (itstool) path: section/title
+#: C/flags.page:45
 msgid "How to place a flag on a tile"
 msgstr "Cómo poner una bandera en una casilla"
 
-#: C/flags.page:49(td/p)
+#. (itstool) path: td/p
+#: C/flags.page:49
 msgid ""
 "Red flags are those that cannot be clicked. To place a red flag on a tile:"
 msgstr ""
 "Las banderas rojas no se pueden pulsar. Para colocar una bandera roja en una "
 "casilla:"
 
-#: C/flags.page:52(item/p)
+#. (itstool) path: item/p
+#: C/flags.page:52
 msgid "right click on a blank tile."
 msgstr "pulse con el botón derecho sobre una casilla no descubierta."
 
-#: C/flags.page:62(note/p)
+#. (itstool) path: note/p
+#: C/flags.page:62
 msgid ""
 "To make the number of available flags equal to the number of remaining "
 "mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
@@ -493,11 +346,13 @@ msgstr ""
 "demasiadas banderas</gui> y <gui style=\"checkbox\">Usar banderas «No estoy "
 "seguro»</gui> y reinicie la aplicación."
 
-#: C/flags.page:72(section/title)
+#. (itstool) path: section/title
+#: C/flags.page:72
 msgid "Use of the <em>I'm not sure</em> flag"
 msgstr "Uso de la bandera <em>No estoy seguro</em>"
 
-#: C/flags.page:73(section/p)
+#. (itstool) path: section/p
+#: C/flags.page:73
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the blue "
 "<em>I'm not sure</em> flag."
@@ -505,15 +360,18 @@ msgstr ""
 "Si no está seguro de si una casilla esconde o no una mina puede usar la "
 "bandera azul <em>no estoy seguro</em>."
 
-#: C/flags.page:78(td/p)
+#. (itstool) path: td/p
+#: C/flags.page:78
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera <em>No estoy seguro</em> en una casilla:"
 
-#: C/flags.page:80(item/p)
+#. (itstool) path: item/p
+#: C/flags.page:80
 msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr "Pulse dos veces con el botón derecho en una bandera roja."
 
-#: C/flags.page:91(note/p)
+#. (itstool) path: note/p
+#: C/flags.page:91
 msgid ""
 "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
 "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
@@ -523,14 +381,13 @@ msgstr ""
 "gui><gui style=\"menuitem\">Preferencias</gui></guiseq>, y elija <gui>Usar "
 "banderas «no estoy seguro»</gui>."
 
-#: C/get-help.page:21(page/title)
+#. (itstool) path: page/title
+#: C/get-help.page:21
 msgid "Hints and warnings"
 msgstr "Pistas y advertencias"
 
-#: C/get-help.page:23(page/p)
-#| msgid ""
-#| "You can use hints to reveal safe tiles and flag warnings to help you keep "
-#| "track of flags."
+#. (itstool) path: page/p
+#: C/get-help.page:23
 msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
@@ -538,11 +395,8 @@ msgstr ""
 "Puede usar las pistas para revelar las casillas seguras y las banderas de "
 "advertencia para ayudarle a llevar un control de las banderas."
 
-#: C/get-help.page:26(page/p)
-#| msgid ""
-#| "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-#| "tile that is safe. You will be penalised for using hints: ten seconds "
-#| "will be added to your total time."
+#. (itstool) path: page/p
+#: C/get-help.page:26
 msgid ""
 "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
 "tile that is safe. You will be penalized for using hints: ten seconds will "
@@ -552,7 +406,8 @@ msgstr ""
 "revelar una casilla oculta que es segura. Tendrá una penalización por usar "
 "pistas: se añadirán 10 segundos a su tiempo total."
 
-#: C/get-help.page:30(page/p)
+#. (itstool) path: page/p
+#: C/get-help.page:30
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
 "gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
@@ -565,14 +420,13 @@ msgstr ""
 "advertirá cuando intente colocar demasiadas banderas junto a una casilla "
 "abierta."
 
-#: C/high-scores.page:22(page/title)
+#. (itstool) path: page/title
+#: C/high-scores.page:22
 msgid "High scores"
 msgstr "Puntuación más alta"
 
-#: C/high-scores.page:24(page/p)
-#| msgid ""
-#| "The scores lists the ten fastest times in which each type of mine field "
-#| "has been cleared."
+#. (itstool) path: page/p
+#: C/high-scores.page:24
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -580,7 +434,8 @@ msgstr ""
 "La puntuación muestra los 10 mejores tiempos en los que se ha limpiado cada "
 "tipo de campo de minas."
 
-#: C/high-scores.page:27(page/p)
+#. (itstool) path: page/p
+#: C/high-scores.page:27
 msgid ""
 "To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
 "style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
@@ -593,15 +448,98 @@ msgstr ""
 "para ver otros tamaños, selecciónelos en el menú desplegable en la parte "
 "superior de diálogo."
 
-#: C/license.page:8(info/desc)
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:22
+msgctxt "_"
+msgid ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+msgstr ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+
+#. (itstool) path: info/title
+#: C/index.page:6
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "Minas"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "Minas"
+
+#. (itstool) path: credit/name
+#: C/index.page:10 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid ""
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
+msgstr ""
+"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media> Minas"
+
+#. (itstool) path: page/p
+#: C/index.page:24
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"<app>Minas</app> es un clon del Buscaminas. El objetivo del juego es "
+"encontrar todas las minas ocultas en el tablero. Necesitará usar una "
+"combinación de lógica y suerte para encontrarlas todas sin provocar una "
+"explosión."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Game Play"
+msgstr "Juego"
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Useful tips"
+msgstr "Consejos útiles"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Advanced"
+msgstr "Avanzado"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Get Involved"
+msgstr "Involucrarse"
+
+#. (itstool) path: info/desc
+#: C/license.page:8
 msgid "Legal information."
 msgstr "Información legal."
 
-#: C/license.page:11(page/title)
+#. (itstool) path: page/title
+#: C/license.page:11
 msgid "License"
 msgstr "Licencia"
 
-#: C/license.page:12(page/p)
+#. (itstool) path: page/p
+#: C/license.page:12
 msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
@@ -609,35 +547,43 @@ msgstr ""
 "Este trabajo está distribuido bajo una licencia sin soporte CreativeCommons "
 "Compartir-Igual 3.0."
 
-#: C/license.page:20(page/p)
+#. (itstool) path: page/p
+#: C/license.page:20
 msgid "You are free:"
 msgstr "Es libre de:"
 
-#: C/license.page:25(item/title)
+#. (itstool) path: item/title
+#: C/license.page:25
 msgid "<em>To share</em>"
 msgstr "<em>Compartir</em>"
 
-#: C/license.page:26(item/p)
+#. (itstool) path: item/p
+#: C/license.page:26
 msgid "To copy, distribute and transmit the work."
 msgstr "Copiar, distribuir y comunicar públicamente la obra"
 
-#: C/license.page:29(item/title)
+#. (itstool) path: item/title
+#: C/license.page:29
 msgid "<em>To remix</em>"
 msgstr "<em>Hacer obras derivadas</em>"
 
-#: C/license.page:30(item/p)
+#. (itstool) path: item/p
+#: C/license.page:30
 msgid "To adapt the work."
 msgstr "Adaptar el trabajo."
 
-#: C/license.page:33(page/p)
+#. (itstool) path: page/p
+#: C/license.page:33
 msgid "Under the following conditions:"
 msgstr "Bajo las siguientes condiciones:"
 
-#: C/license.page:38(item/title)
+#. (itstool) path: item/title
+#: C/license.page:38
 msgid "<em>Attribution</em>"
 msgstr "<em>Atribución</em>"
 
-#: C/license.page:39(item/p)
+#. (itstool) path: item/p
+#: C/license.page:39
 msgid ""
 "You must attribute the work in the manner specified by the author or "
 "licensor (but not in any way that suggests that they endorse you or your use "
@@ -647,11 +593,13 @@ msgstr ""
 "autor o el licenciador (pero no de una manera que sugiera que tiene su apoyo "
 "o apoyan el uso que hace de su obra)."
 
-#: C/license.page:46(item/title)
+#. (itstool) path: item/title
+#: C/license.page:46
 msgid "<em>Share Alike</em>"
 msgstr "<em>Compartir igual</em>"
 
-#: C/license.page:47(item/p)
+#. (itstool) path: item/p
+#: C/license.page:47
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
@@ -660,7 +608,8 @@ msgstr ""
 "puede distribuir la obra resultante bajo la misma licencia, una similar o "
 "una compatible."
 
-#: C/license.page:53(page/p)
+#. (itstool) path: page/p
+#: C/license.page:53
 msgid ""
 "For the full text of the license, see the <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
@@ -672,30 +621,42 @@ msgstr ""
 "Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Escrito de Commons</link>."
 
-#: C/new-game.page:26(page/title)
+#. (itstool) path: credit/name
+#: C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#: C/new-game.page:31
 msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
-#: C/new-game.page:28(page/p)
+#. (itstool) path: page/p
+#: C/new-game.page:33
 msgid "To start a new game:"
 msgstr "Para iniciar un juego nuevo:"
 
-#: C/new-game.page:31(item/p)
+#. (itstool) path: item/p
+#: C/new-game.page:36
+#| msgid ""
+#| "Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+#| "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></"
+#| "guiseq> from the application menu."
 msgid ""
-"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu."
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
 msgstr ""
-"Pulse <gui style=\"button\">Nuevo</gui> o seleccione <guiseq><gui style="
-"\"menu\">Minas</gui><gui style=\"menuitem\">Juego nuevo</gui></guiseq> en el "
-"menú de la aplicación."
+"Seleccione <guiseq><gui style=\"menu\">Minas</gui><gui style=\"menuitem"
+"\">Juego nuevo</gui></guiseq> en el menú de la aplicación."
 
-#: C/new-game.page:37(item/p)
+#. (itstool) path: item/p
+#: C/new-game.page:41
 msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
 "Seleccione su <link xref=\"board-size\">tamaño de tablero</link> preferido."
 
-#: C/new-game.page:42(note/p)
+#. (itstool) path: note/p
+#: C/new-game.page:46
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
@@ -705,11 +666,13 @@ msgstr ""
 "<gui>Iniciar un juego nuevo</gui> o <gui>Mantener el juego actual</gui>; si "
 "elige la primera opción, su partida actual terminará."
 
-#: C/rules.page:24(page/title)
+#. (itstool) path: page/title
+#: C/rules.page:24
 msgid "Game rules"
 msgstr "Reglas del juego"
 
-#: C/rules.page:26(page/p)
+#. (itstool) path: page/p
+#: C/rules.page:26
 msgid ""
 "The aim of <app>Mines</app> is to clear the minefield without detonating any "
 "of the mines."
@@ -717,7 +680,8 @@ msgstr ""
 "El objetivo de <app>Minas</app> es descubrir todas las minas ocultas bajo "
 "las casillas sin hacer que exploten."
 
-#: C/rules.page:31(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:31
 msgid ""
 "Start by chosing one of the three default board sizes, or by selecting a "
 "custom board."
@@ -725,10 +689,8 @@ msgstr ""
 "Empiece eligiendo uno de estos tres tamaños de tablero, o seleccionando un "
 "tablero personalizado."
 
-#: C/rules.page:35(item/p)
-#| msgid ""
-#| "The game begins with the board covered in tiles, click on any tile to "
-#| "uncover it. You will reveal:"
+#. (itstool) path: item/p
+#: C/rules.page:35
 msgid ""
 "The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
@@ -736,11 +698,8 @@ msgstr ""
 "El juego empieza con el tablero lleno de casillas. Pulse sobre una de ellas "
 "para descubrirla. Revelará:"
 
-#: C/rules.page:39(item/p)
-#| msgid ""
-#| "A colored number, which represent the number of mines in the adjacent "
-#| "tiles. This will help you deduce where the mines are so that you can mark "
-#| "them with <link xref=\"flags\"/>."
+#. (itstool) path: item/p
+#: C/rules.page:39
 msgid ""
 "A colored number, which represent the number of mines in the adjacent tiles. "
 "This will help you deduce where the mines are so that you can mark them with "
@@ -750,18 +709,21 @@ msgstr ""
 "adyacentes. Esto le ayudará a deducir dónde están las minas, por lo que "
 "puede marcarlas con <link xref=\"flags\">banderas</link>."
 
-#: C/rules.page:44(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:44
 msgid ""
 "A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
 "Una casilla vacía, lo que significa que no hay minas en las casillas "
 "adyacentes."
 
-#: C/rules.page:48(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:48
 msgid "A mine, which will detonate and end the game."
 msgstr "Una mina, que explotará y hará que termine la partida."
 
-#: C/rules.page:53(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:53
 msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
@@ -769,7 +731,8 @@ msgstr ""
 "Repita los pasos anteriores hasta que descubra todas las casillas que no "
 "contienen una mina."
 
-#: C/rules.page:58(page/p)
+#. (itstool) path: page/p
+#: C/rules.page:58
 msgid ""
 "If you complete the game quickly enough, you will be added to the <link xref="
 "\"high-scores\">high scores</link> list."
@@ -777,43 +740,53 @@ msgstr ""
 "Si ha sido lo bastante rápido para completar el juego, se le añadirá a la "
 "lista de <link xref=\"high-scores\">puntuaciones más altas</link>."
 
-#: C/shortcuts.page:17(page/title)
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
 msgid "Keyboard shortcuts"
 msgstr "Atajos de teclado"
 
-#: C/shortcuts.page:20(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
 msgid "New game"
 msgstr "Juego nuevo"
 
-#: C/shortcuts.page:21(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
-#: C/shortcuts.page:24(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
 msgid "Fullscreen"
 msgstr "Pantalla completa"
 
-#: C/shortcuts.page:25(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
 msgid "<key>F11</key>"
 msgstr "<key>F11</key>"
 
-#: C/shortcuts.page:28(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
 msgid "Hint"
 msgstr "Sugerencia"
 
-#: C/shortcuts.page:29(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
 msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
 
-#: C/shortcuts.page:32(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:32
 msgid "Pause"
 msgstr "Pausa"
 
-#: C/shortcuts.page:33(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:33
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
-#: C/shortcuts.page:34(note/p)
+#. (itstool) path: note/p
+#: C/shortcuts.page:34
 msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
@@ -821,27 +794,33 @@ msgstr ""
 "Use el atajo de la barra de herramientas si su teclado no tiene una tecla "
 "<key>Pause</key>."
 
-#: C/shortcuts.page:37(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:37
 msgid "Help"
 msgstr "Ayuda"
 
-#: C/shortcuts.page:38(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:38
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
-#: C/shortcuts.page:41(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:41
 msgid "Quit"
 msgstr "Salir"
 
-#: C/shortcuts.page:42(td/p)
+#. (itstool) path: td/p
+#: C/shortcuts.page:42
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#: C/toolbar.page:15(page/title)
+#. (itstool) path: page/title
+#: C/toolbar.page:15
 msgid "Toolbar"
 msgstr "Barra de herramientas"
 
-#: C/toolbar.page:17(page/p)
+#. (itstool) path: page/p
+#: C/toolbar.page:17
 msgid ""
 "The toolbar, located under the menu bar, lets you perform common actions "
 "with your mouse. To use a toolbar item, just click on it. The buttons, from "
@@ -855,15 +834,18 @@ msgstr ""
 "\">Pista</link>, <gui><link xref=\"pause\">Pausa</link></gui> y "
 "<gui>Pantalla completa</gui>."
 
-#: C/translate.page:15(credit/name)
+#. (itstool) path: credit/name
+#: C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
-#: C/translate.page:23(page/title)
+#. (itstool) path: page/title
+#: C/translate.page:23
 msgid "Help translate"
 msgstr "Ayudar a traducir"
 
-#: C/translate.page:24(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:24
 msgid ""
 "The <app>GNOME games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
@@ -873,10 +855,8 @@ msgstr ""
 "las traduce una comunidad de voluntarios de todo el mundo. Si quiere "
 "participar, es bienvenido."
 
-#: C/translate.page:27(page/p)
-#| msgid ""
-#| "There are <link href=\"http://l10n.gnome.org/module/gnome-games/\">many "
-#| "languages</link> for which translations are still needed."
+#. (itstool) path: page/p
+#: C/translate.page:27
 msgid ""
 "There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
@@ -884,7 +864,8 @@ msgstr ""
 "Hay <link href=\"http://l10n.gnome.org/module/gnome-mines/\">muchos idiomas</"
 "link> para los que se siguen necesitando traducciones."
 
-#: C/translate.page:30(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:30
 msgid ""
 "To start translating you will need to <link href=\"http:l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
@@ -896,7 +877,8 @@ msgstr ""
 "\">equipo de traducción</link> de su idioma. Esto le dará la posibilidad de "
 "subir traducciones nuevas."
 
-#: C/translate.page:34(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:34
 msgid ""
 "You can chat with GNOME translators using <link href=\"https://cbe003.chat."
 "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
@@ -909,7 +891,8 @@ msgstr ""
 "que puede que no obtenga una respuesta inmediata debido a las diferencias "
 "horarias."
 
-#: C/translate.page:37(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
@@ -918,6 +901,64 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-smile.svg' "
+#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
+#~ msgstr ""
+#~ "external ref='figures/face-smile.svg' "
+#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-worried.svg' "
+#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
+#~ msgstr ""
+#~ "external ref='figures/face-worried.svg' "
+#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+#~ msgstr ""
+#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-cool.svg' "
+#~ "md5='6ce4a904009988e203e3d50896f6016e'"
+#~ msgstr ""
+#~ "external ref='figures/face-cool.svg' "
+#~ "md5='6ce4a904009988e203e3d50896f6016e'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+#~ msgstr ""
+#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+
+#~ msgid "The meaning of the faces"
+#~ msgstr "El significado de los emoticonos"
+
+#~ msgid "This is a new game and you have not clicked on any tile yet."
+#~ msgstr "Esto es un juego nuevo y todavía no ha pulsado en ninguna casilla."
+
+#~| msgid "You are clicking on a tile."
+#~ msgid "You are currently clicking on a tile."
+#~ msgstr "Está pulsando en una casilla."
+
+#~| msgid "You have uncovered a mine, you lose."
+#~ msgid "You have uncovered a mine. You lose."
+#~ msgstr "Ha descubierto una mina. Ha perdido."
+
+#~| msgid "The tile you just clicked on is safe, you can continue."
+#~ msgid "The tile you just clicked on is safe. You can continue."
+#~ msgstr "La casilla en la que ha pulsado es segura. Puede continuar."
+
+#~| msgid "You have found all the mines, you win."
+#~ msgid "You have found all the mines. You win!"
+#~ msgstr "Ha encontrado todas las minas. Ha ganado."
 
 #~ msgid "This face appears when you're clicking a on tile."
 #~ msgstr "Este emoticono aparece cuando pulsa sobre una casilla."
@@ -1517,14 +1558,14 @@ msgstr ""
 #~ "numbered square."
 #~ msgstr ""
 #~ "Hay una casilla de verificación en el diálogo de preferencias llamada "
-#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse con "
-#~ "el botón derecho sobre una casilla, rotará entre las banderas normales "
-#~ "usadas para marcar una casilla como minada, una bandera con n signo de "
-#~ "interrogación en ella y una ausencia de bandera. Esta nueva bandera es "
-#~ "para ayudarle con sus razonamientos, para marcar casillas que cree que "
-#~ "pueden ser minas pero no está seguro. Estas banderas no tienen efecto en "
-#~ "el juego; aún debe usar el número apropiado de marcadores rojos de "
-#~ "bandera para poder limpiar alrededor de la casilla numerada."
+#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse "
+#~ "con el botón derecho sobre una casilla, rotará entre las banderas "
+#~ "normales usadas para marcar una casilla como minada, una bandera con n "
+#~ "signo de interrogación en ella y una ausencia de bandera. Esta nueva "
+#~ "bandera es para ayudarle con sus razonamientos, para marcar casillas que "
+#~ "cree que pueden ser minas pero no está seguro. Estas banderas no tienen "
+#~ "efecto en el juego; aún debe usar el número apropiado de marcadores rojos "
+#~ "de bandera para poder limpiar alrededor de la casilla numerada."
 
 #~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 #~ msgstr ""
