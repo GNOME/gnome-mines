@@ -33,7 +33,6 @@ HELP_FILES = \
 	new-game.page \
 	rules.page \
 	shortcuts.page \
-	toolbar.page \
 	translate.page
 
 HELP_LINGUAS = ca cs da de el en_GB es eu fr gl hu it ja oc pt_BR sl sr sr@latin sv zh_CN
