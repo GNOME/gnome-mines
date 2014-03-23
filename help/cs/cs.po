@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-03-11 19:59+0000\n"
+"POT-Creation-Date: 2014-03-23 20:38+0000\n"
 "PO-Revision-Date: 2014-03-11 21:00+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -50,7 +50,7 @@ msgstr "Ekaterina Gerasimova"
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
 #: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11 C/toolbar.page:10
+#: C/shortcuts.page:11
 msgid "2012"
 msgstr "2012"
 
@@ -100,7 +100,7 @@ msgstr "vlastní deska, kdy si můžete zvolit velikost desky a počet min"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/toolbar.page:8 C/translate.page:10
+#: C/flags.page:11 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -208,15 +208,15 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://live.gnome.org/GnomeGames/Contributing"
-"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
 "%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
@@ -812,25 +812,6 @@ msgstr "Ukončit"
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#. (itstool) path: page/title
-#: C/toolbar.page:15
-msgid "Toolbar"
-msgstr "Nástrojová lišta"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:17
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
-"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
-msgstr ""
-"Nástrojová lišta umístěná pod nabídkovou lištou usnadňuje provádění činností "
-"pomocí myši. Když chcete použít některou její položku, stačí na ni kliknout. "
-"Tlačítka, bráno zleva doprava, jsou <gui><link xref=\"new-game\">Nová hra</"
-"link></gui>, <link xref=\"get-help\">Rada</link>, <gui>Pozastavit</gui> a "
-"<gui>Celá obrazovka</gui>."
-
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
@@ -863,12 +844,12 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Jestli chcete překládat, musíte si <link href=\"http:l10n.gnome.org"
+"Jestli chcete překládat, musíte si <link href=\"http://l10n.gnome.org"
 "\">vytvořit účet</link> a přidat se k <link href=\"http://l10n.gnome.org/"
 "teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
 "své nové překlady."
