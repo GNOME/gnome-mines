@@ -8,26 +8,25 @@
 # Andras Timar <timar at gnome dot hu>, 2002, 2003.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
 # Balázs Úr <urbalazs at gmail dot com>, 2013, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-02-16 16:46+0000\n"
-"PO-Revision-Date: 2014-03-04 19:39+0100\n"
-"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
+"POT-Creation-Date: 2014-03-23 20:08+0000\n"
+"PO-Revision-Date: 2014-03-24 00:47+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
-#| msgid "Mines"
 msgid "GNOME Mines"
 msgstr "GNOME Aknakereső"
 
@@ -83,7 +82,6 @@ msgid "Warning about too many flags"
 msgstr "Figyelmeztetés a túl sok zászlóról"
 
 #: ../data/org.gnome.mines.gschema.xml.h:4
-#| msgid "Set to true to enable warning icons when too many flags are placed."
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -160,9 +158,8 @@ msgid "_Quit"
 msgstr "_Kilépés"
 
 #: ../src/gnome-mines.vala:193
-#| msgid "Get a hint for your next move"
 msgid "Receive a hint for your next move"
-msgstr "Javaslat elfogadása a következő lépéshez"
+msgstr "Javaslat a következő lépéshez"
 
 #: ../src/gnome-mines.vala:257
 msgid "Custom"
@@ -181,7 +178,6 @@ msgid "_Number of mines:"
 msgstr "_Aknák száma:"
 
 #: ../src/gnome-mines.vala:306
-#| msgid "_Number of mines:"
 msgid "_Percentage of mines:"
 msgstr "Ak_nák aránya:"
 
@@ -242,10 +238,6 @@ msgid "Graphics:"
 msgstr "Grafika:"
 
 #: ../src/gnome-mines.vala:697
-#| msgid ""
-#| "A worm game for GNOME.\n"
-#| "\n"
-#| "Nibbles is a part of GNOME Games."
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -279,7 +271,6 @@ msgid "_Use \"I'm not sure\" flags"
 msgstr "„Nem vagyok benne biztos” _zászlók használata"
 
 #: ../src/gnome-mines.vala:834
-#| msgid "_Warn if too many flags have been placed"
 msgid "_Warn if too many flags are placed next to a number"
 msgstr "_Figyelmeztessen, ha túl sok zászló lett elhelyezve egy szám mellett"
 
@@ -292,7 +283,6 @@ msgid "Pause the game"
 msgstr "A játék szüneteltetése"
 
 #: ../src/gnome-mines.vala:918
-#| msgid "Pause the game"
 msgid "Unpause the game"
 msgstr "A játék folytatása"
 
