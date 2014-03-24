@@ -1,14 +1,13 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-#
 # Marek Černocký <marek@manet.cz>, 2009, 2013, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-03-23 20:38+0000\n"
-"PO-Revision-Date: 2014-03-11 21:00+0100\n"
+"POT-Creation-Date: 2014-03-24 08:06+0000\n"
+"PO-Revision-Date: 2014-03-24 15:07+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -27,28 +26,28 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:17 C/get-help.page:9
+#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:11 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
-#: C/get-help.page:14 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
+#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -215,8 +214,8 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
 "%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
 "mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
@@ -384,13 +383,23 @@ msgstr ""
 "\"manu\">Miny</gui> <gui style=\"menuitem\">Předvolby</gui></guiseq> a "
 "zaškrtněte <gui>Používat vlaječky „Nejsem si jist(á)“</gui>."
 
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
 #. (itstool) path: page/title
-#: C/get-help.page:21
+#: C/get-help.page:27
 msgid "Hints and warnings"
 msgstr "Rady a varování"
 
 #. (itstool) path: page/p
-#: C/get-help.page:23
+#: C/get-help.page:29
 msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
@@ -399,23 +408,26 @@ msgstr ""
 "pro hlídání jejich počtu."
 
 #. (itstool) path: page/p
-#: C/get-help.page:26
+#: C/get-help.page:32
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalized for using hints: ten seconds will "
-"be added to your total time."
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
 msgstr ""
-"Klikněte na nástrojové liště na <gui style=\"button\">Rada</gui>, aby se vám "
-"odhalila dlaždice, která je bezpečná. Za každé použití rady jste "
-"penalizováni – k celkovému času je přičteno 10 sekund."
+"Klikněte na tlačítko <gui style=\"button\">Získat radu pro váš další tah</"
+"gui> vpravo nahoře, aby se vám odhalila dlaždice, která je bezpečná. Za "
+"každé použití rady jste penalizováni – k celkovému času je přičteno deset "
+"sekund. Penalizace se bude postupně zvyšovat o deset sekund až do deváté "
+"rady."
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:38
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
-"you try to place too many flags next to an open tile."
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
 msgstr ""
 "Jestli chcete zapnout varování, upravte předvolby tím, že vyberete "
 "<guiseq><gui>Miny</gui> <gui>Předvolby</gui></guiseq> a zaškrtnete políčko "
@@ -621,11 +633,6 @@ msgstr ""
 "org/licenses/by-sa/3.0/legalcode\">webových stránkách CreativeCommons</link> "
 "nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\">výtah dokumentu pro neprávníky</link>."
-
-#. (itstool) path: credit/name
-#: C/new-game.page:26
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:31
