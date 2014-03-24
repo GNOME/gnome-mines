@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2014-03-10 07:59+0000\n"
-"PO-Revision-Date: 2014-03-10 11:45+0100\n"
+"POT-Creation-Date: 2014-03-24 08:06+0000\n"
+"PO-Revision-Date: 2014-03-24 13:49+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -21,34 +21,34 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2013\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2014\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:17 C/get-help.page:9
+#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:11 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
-#: C/get-help.page:14 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
+#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11 C/toolbar.page:10
+#: C/shortcuts.page:11
 msgid "2012"
 msgstr "2012"
 
@@ -98,7 +98,7 @@ msgstr "un tablero personalizado, donde elije el tamaño y el número de minas"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/toolbar.page:8 C/translate.page:10
+#: C/flags.page:11 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -206,15 +206,22 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
+#| msgid ""
+#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Si quiere <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"Si quiere <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">contribuir al desarrollo de los <app>juegos de GNOME</app></link>, puede "
 "ponerse en contacto con los desarrolladores usando <link href=\"https://"
 "cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
@@ -381,13 +388,23 @@ msgstr ""
 "gui><gui style=\"menuitem\">Preferencias</gui></guiseq>, y elija <gui>Usar "
 "banderas «no estoy seguro»</gui>."
 
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
 #. (itstool) path: page/title
-#: C/get-help.page:21
+#: C/get-help.page:27
 msgid "Hints and warnings"
 msgstr "Pistas y advertencias"
 
 #. (itstool) path: page/p
-#: C/get-help.page:23
+#: C/get-help.page:29
 msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
@@ -396,29 +413,37 @@ msgstr ""
 "advertencia para ayudarle a llevar un control de las banderas."
 
 #. (itstool) path: page/p
-#: C/get-help.page:26
+#: C/get-help.page:32
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalized for using hints: ten seconds will "
-"be added to your total time."
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
 msgstr ""
-"Pulse <gui style=\"button\">Pista</gui> en la barra de herramientas para "
-"revelar una casilla oculta que es segura. Tendrá una penalización por usar "
-"pistas: se añadirán 10 segundos a su tiempo total."
+"Pulse el botón <gui style=\"button\">Obtener una pista para el siguiente "
+"movimiento</gui> en la parte superior derecha para descubrir una casilla "
+"segura oculta. Se añadirá una penalización de 10 segundos al tiempo total. "
+"Esta penalización se incrementará progresivamente en 10 segundos en las "
+"siguientes pistas, hasta la novena pista."
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:38
+#| msgid ""
+#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+#| "gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
+#| "<gui>Warn if too many flags have been placed</gui>. This will warn you "
+#| "when you try to place too many flags next to an open tile."
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
-"you try to place too many flags next to an open tile."
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
 msgstr ""
 "Para activar las advertencias, edite las preferencias seleccionando "
 "<guiseq><gui>Minas</gui><gui>Preferencias</gui></guiseq> y marque la casilla "
-"junto a <gui>Advertir si se han colocado demasiadas banderas</gui>. Esto le "
-"advertirá cuando intente colocar demasiadas banderas junto a una casilla "
-"abierta."
+"junto a <gui>Advertir si se han colocado demasiadas banderas junto a un "
+"número</gui>. Esto le advertirá cuando intente colocar demasiadas banderas "
+"junto a una casilla abierta."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -621,11 +646,6 @@ msgstr ""
 "Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Escrito de Commons</link>."
 
-#. (itstool) path: credit/name
-#: C/new-game.page:26
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
 #. (itstool) path: page/title
 #: C/new-game.page:31
 msgid "Start a new game"
@@ -638,10 +658,6 @@ msgstr "Para iniciar un juego nuevo:"
 
 #. (itstool) path: item/p
 #: C/new-game.page:36
-#| msgid ""
-#| "Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-#| "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></"
-#| "guiseq> from the application menu."
 msgid ""
 "Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
 "Game</gui></guiseq> from the application menu."
@@ -814,26 +830,6 @@ msgstr "Salir"
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#. (itstool) path: page/title
-#: C/toolbar.page:15
-msgid "Toolbar"
-msgstr "Barra de herramientas"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:17
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
-"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
-msgstr ""
-"La barra de herramientas, situada bajo la barra de menú, le permite realizar "
-"acciones comunes con el ratón. Para usar un elemento de la barra de "
-"herramientas, simplemente púlselo. Los botones son, de izquierda a derecha "
-"<gui><link xref=\"new-game\">Juego nuevo</link></gui>, <link xref=\"get-help"
-"\">Pista</link>, <gui><link xref=\"pause\">Pausa</link></gui> y "
-"<gui>Pantalla completa</gui>."
-
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
@@ -866,8 +862,13 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:30
+#| msgid ""
+#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
+#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
+#| "org/teams/\">translation team</link> for your language. This will give "
+#| "you the ability to upload new translations."
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
@@ -901,6 +902,32 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid ""
+#~ "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+#~ "tile that is safe. You will be penalized for using hints: ten seconds "
+#~ "will be added to your total time."
+#~ msgstr ""
+#~ "Pulse <gui style=\"button\">Pista</gui> en la barra de herramientas para "
+#~ "revelar una casilla oculta que es segura. Tendrá una penalización por "
+#~ "usar pistas: se añadirán 10 segundos a su tiempo total."
+
+#~ msgid "Toolbar"
+#~ msgstr "Barra de herramientas"
+
+#~ msgid ""
+#~ "The toolbar, located under the menu bar, lets you perform common actions "
+#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#~ "from left to right, are <gui><link xref=\"new-game\">New Game</link></"
+#~ "gui>, <link xref=\"get-help\">Hint</link>, <gui>Pause</gui> and "
+#~ "<gui>Fullscreen</gui>."
+#~ msgstr ""
+#~ "La barra de herramientas, situada bajo la barra de menú, le permite "
+#~ "realizar acciones comunes con el ratón. Para usar un elemento de la barra "
+#~ "de herramientas, simplemente púlselo. Los botones son, de izquierda a "
+#~ "derecha <gui><link xref=\"new-game\">Juego nuevo</link></gui>, <link xref="
+#~ "\"get-help\">Pista</link>, <gui><link xref=\"pause\">Pausa</link></gui> y "
+#~ "<gui>Pantalla completa</gui>."
 
 #~ msgctxt "_"
 #~ msgid ""
