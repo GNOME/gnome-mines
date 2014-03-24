@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2014-03-23 22:47+0000\n"
-"PO-Revision-Date: 2014-03-24 00:52+0100\n"
+"POT-Creation-Date: 2014-03-24 08:06+0000\n"
+"PO-Revision-Date: 2014-03-24 19:22+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -147,7 +147,8 @@ msgid ""
 "<gui>New Account</gui> link to create one."
 msgstr ""
 "A részvételhez létre kell hoznia egy fiókot, amely lehetővé teszi a "
-"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást, és a "
+"hozzáférést, hibajelentések beküldését és a hibákhoz való hozzászólást, "
+"valamint a "
 "hiba állapotával kapcsolatos változásokat e-mailben is megkaphatja. Ha még "
 "nincs fiókja, akkor a <gui>New Account</gui> hivatkozásra kattintva "
 "létrehozhat egyet."
@@ -164,7 +165,7 @@ msgid ""
 msgstr ""
 "Ha létrehozta fiókját, jelentkezzen be, kattintson a <guiseq><gui>File a "
 "Bug</gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq> "
-"hivatkozásokra Hiba jelentése előtt olvassa el a <link href=\"https://"
+"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://"
 "bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
 "irányelveket</link>, és <link href=\"https://bugzilla.gnome.org/browse.cgi?"
 "product=gnome-mines\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
@@ -206,13 +207,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
-#| msgid ""
-#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
-#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
-#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
-#| "list</link>."
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
@@ -221,8 +215,8 @@ msgid ""
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">"
-"közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
+"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
 "fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
 "\"http://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
@@ -337,7 +331,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/flags.page:52
 msgid "right click on a blank tile."
-msgstr "kattintson a jobb egérgombbal egy üres mezőre."
+msgstr "Kattintson a jobb egérgombbal egy üres mezőre."
 
 #. (itstool) path: note/p
 #: C/flags.page:62
@@ -374,7 +368,9 @@ msgstr "A <em>Nem vagyok benne biztos</em> zászló elhelyezéséhez egy mezőn:
 #. (itstool) path: item/p
 #: C/flags.page:80
 msgid "Right-click twice on a blank tile or once on a red flag."
-msgstr "Kattintson kétszer egy üres mezőre, vagy egyszer egy piros zászlóra."
+msgstr ""
+"Kattintson kétszer a jobb egérgombbal egy üres mezőre, vagy egyszer egy piros "
+"zászlóra."
 
 #. (itstool) path: note/p
 #: C/flags.page:91
@@ -409,8 +405,8 @@ msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
 msgstr ""
-"A javaslatok használatával megjeleníthet biztonságos mezőket, és "
-"figyelmeztető zászlókat helyezhet el az aknák számon tartásához."
+"A javaslatok használatával megjeleníthet biztonságos mezőket, a "
+"zászlófigyelmeztetések használata pedig segíthet az aknák számon tartásában."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
@@ -420,18 +416,13 @@ msgid ""
 "seconds will be added to your total time. The penalty will be increased by "
 "ten seconds progressively on subsequent hints till the ninth hint."
 msgstr ""
-"Kattintson a <gui style=\"button\">Javaslat a következő lépéshez</gui> gombra "
-"a jobb felső sarokban egy biztonságos mező felfedéséhez. A teljes ideje egy "
-"tíz másodperces büntetéssel nő. A büntetés minden további javaslat után tíz "
-"másodperccel nő a kilencedik javaslatig."
+"Kattintson a <gui style=\"button\">Javaslat a következő lépéshez</gui> "
+"gombra a jobb felső sarokban egy biztonságos mező felfedéséhez. A teljes "
+"ideje egy tíz másodperces büntetéssel nő. A büntetés minden további javaslat "
+"után tíz másodperccel nő a kilencedik javaslatig."
 
 #. (itstool) path: page/p
 #: C/get-help.page:38
-#| msgid ""
-#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-#| "gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-#| "<gui>Warn if too many flags have been placed</gui>. This will warn you "
-#| "when you try to place too many flags next to an open tile."
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
 "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
@@ -440,10 +431,9 @@ msgid ""
 msgstr ""
 "A figyelmeztetések bekapcsolásához válassza az <guiseq><gui>Aknakereső</"
 "gui><gui>Beállítások</gui></guiseq> menüpontot, és jelölje be a "
-"<gui>Figyelmeztessen, ha túl sok zászló lett elhelyezve egy szám mellett</gui>"
-" négyzetet. Ekkor "
-"figyelmeztetést fog kapni, ha túl sok zászlót próbál egy szabad mező mellé "
-"elhelyezni."
+"<gui>Figyelmeztessen, ha túl sok zászló lett elhelyezve egy szám mellett</"
+"gui> négyzetet. Ekkor figyelmeztetést fog kapni, ha túl sok zászlót próbál "
+"egy szabad mező mellé elhelyezni."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -860,11 +850,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:30
-#| msgid ""
-#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
-#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
-#| "org/teams/\">translation team</link> for your language. This will give "
-#| "you the ability to upload new translations."
 msgid ""
 "To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
