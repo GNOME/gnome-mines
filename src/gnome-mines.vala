@@ -812,9 +812,8 @@ public class Mines : Gtk.Application
     {
         var dialog = new Gtk.Dialog.with_buttons (_("Mines Preferences"),
                                                   window,
-                                                  0,
-                                                  _("_Close"),
-                                                  Gtk.ResponseType.CLOSE, null);
+                                                  Gtk.DialogFlags.USE_HEADER_BAR,
+                                                  null);
         dialog.response.connect (pref_response_cb);
         dialog.delete_event.connect (pref_delete_event_cb);
         dialog.set_border_width (5);
