@@ -1,7 +1,10 @@
-<page xmlns="http://projectmallard.org/1.0/" type="guide" style="task" id="index">
+<page xmlns="http://projectmallard.org/1.0/"
+    xmlns:its="http://www.w3.org/2005/11/its"
+    type="guide"
+    style="task" id="index">
   <info>
     <title type="link" role="trail">
-      <media type="image" src="figures/logo.png"/>
+      <media type="image" src="figures/logo.png" its:translate="no"/>
     </title>
     <title type="link">GNOME Mines</title>
     <title type="text">GNOME Mines</title>
@@ -19,7 +22,7 @@
     </license>
   </info>
 
-  <title><media type="image" src="figures/logo32.png">GNOME Mines
+  <title><media type="image" src="figures/logo32.png" its:translate="no">GNOME Mines
   logo</media> GNOME Mines</title>
   <p>
     <app>Mines</app> is a clone of the game Minesweeper. The aim is to locate
