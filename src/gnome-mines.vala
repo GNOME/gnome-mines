@@ -418,7 +418,7 @@ public class Mines : Gtk.Application
 
     private void update_flag_label ()
     {
-        flag_label.set_text (_("%u/%u").printf (minefield.n_flags, minefield.n_mines));
+        flag_label.set_text ("%u/%u".printf (minefield.n_flags, minefield.n_mines));
     }
 
     private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
