@@ -6,7 +6,7 @@ AM_SILENT_RULES([yes])
 AM_MAINTAINER_MODE
 GNOME_MAINTAINER_MODE_DEFINES
 
-AM_PROG_VALAC([0.22])
+AM_PROG_VALAC([0.24])
 AM_PROG_CC_C_O
 
 GLIB_GSETTINGS
@@ -16,7 +16,7 @@ dnl Dependencies
 dnl ###########################################################################
 
 GLIB_REQUIRED=2.36.0
-GTK_REQUIRED=3.10
+GTK_REQUIRED=3.12
 RSVG_REQUIRED=2.32.0
 
 PKG_CHECK_MODULES(GNOME_MINES, [
