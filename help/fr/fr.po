@@ -10,7 +10,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine doc fr\n"
-"POT-Creation-Date: 2013-10-12 09:21+0000\n"
+"POT-Creation-Date: 2014-04-09 07:23+0000\n"
 "PO-Revision-Date: 2013-10-15 16:20+0200\n"
 "Last-Translator: Julien Hardelin <jhardlin@orange.fr>\n"
 "Language-Team: French <GNOME French Team <gnomefr@traduc.org>\">\n"
@@ -31,119 +31,31 @@ msgstr ""
 "Yoann Fievez <yoann.fievez@gmail.com>, 2013\n"
 "Julien Hardelin <jhardlin@orange.fr>, 2013."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
-#. (itstool) path: info/title
-#: C/index.page:6
-msgctxt "link"
-msgid "GNOME Mines"
-msgstr "GNOME Mines"
-
-#. (itstool) path: info/title
-#: C/index.page:7
-msgctxt "text"
-msgid "GNOME Mines"
-msgstr "GNOME Mines"
-
 #. (itstool) path: credit/name
-#: C/index.page:10 C/shortcuts.page:9
-msgid "Brian Grohe"
-msgstr "Brian Grohe"
-
-#. (itstool) path: credit/name
-#: C/index.page:14 C/board-size.page:15 C/documentation.page:14
-#: C/flags.page:23 C/get-help.page:14 C/high-scores.page:15 C/new-game.page:16
-#: C/rules.page:16
-msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
-
-#. (itstool) path: license/p
-#: C/index.page:18 C/bug-filing.page:14 C/develop.page:15
-#: C/documentation.page:23 C/translate.page:19
-msgid "Creative Commons Share Alike 3.0"
-msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0"
-
-#. (itstool) path: page/title
-#: C/index.page:22
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">logo de GNOME Mines</media> "
-"GNOME Mines"
-
-#. (itstool) path: page/p
-#: C/index.page:24
-msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
-"all the mines that are hidden under tiles on a rectangular board. You will "
-"need to use a combination of logic and luck to find all the mines without "
-"triggering an explosion."
-msgstr ""
-"<app>Mines</app> est un clone du jeu Démineur. Le but du jeu est de repérer "
-"toutes les mines cachées sous les tuiles d'une grille carrée. Vous aurez "
-"besoin de réflexion et d'un peu de chance pour les trouver toutes sans "
-"provoquer d'explosion."
-
-#. (itstool) path: section/title
-#: C/index.page:31
-msgid "Game Play"
-msgstr "Partie"
-
-#. (itstool) path: section/title
-#: C/index.page:34
-msgid "Useful tips"
-msgstr "Astuces utiles"
-
-#. (itstool) path: section/title
-#: C/index.page:37
-msgid "Advanced"
-msgstr "Avancée"
-
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Get Involved"
-msgstr "Comment s'impliquer"
-
-#. (itstool) path: credit/name
-#: C/board-size.page:10 C/faces.page:9 C/flags.page:17 C/get-help.page:9
-#: C/high-scores.page:10 C/new-game.page:11 C/rules.page:11
+#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/faces.page:11 C/get-help.page:11 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:13 C/new-game.page:18 C/rules.page:18
-#: C/shortcuts.page:11 C/toolbar.page:10
+#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
 msgid "2012"
 msgstr "2012"
 
@@ -196,9 +108,16 @@ msgstr ""
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/toolbar.page:8 C/translate.page:10
+#: C/flags.page:11 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:18 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr ""
+"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
@@ -303,14 +222,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Si vous voulez <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"Si vous voulez <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">aider au développement des <app>jeux GNOME</app></link>, vous pouvez vous "
 "mettre en contact avec les développeurs en utilisant <link href=\"https://"
 "cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
@@ -318,7 +237,7 @@ msgstr ""
 "list\">liste de diffusion</link>."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/faces.page:15 C/new-game.page:21
+#: C/documentation.page:19 C/new-game.page:22
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -359,101 +278,6 @@ msgid ""
 msgstr ""
 "Notre page <link href=\"https://live.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> contient des informations utiles."
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:24
-msgctxt "_"
-msgid ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-msgstr ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:28
-msgctxt "_"
-msgid ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-msgstr ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:32
-msgctxt "_"
-msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:36
-msgctxt "_"
-msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:40
-msgctxt "_"
-msgid ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-msgstr ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-
-#. (itstool) path: page/title
-#: C/faces.page:20
-msgid "The meaning of the faces"
-msgstr "Signification des visages"
-
-#. (itstool) path: td/p
-#: C/faces.page:25
-msgid "This is a new game and you have not clicked on any tile yet."
-msgstr ""
-"C'est un nouveau jeu et vous n'avez pas encore cliqué sur n'importe quelle "
-"tuile."
-
-#. (itstool) path: td/p
-#: C/faces.page:29
-msgid "You are currently clicking on a tile."
-msgstr "Vous êtes actuellement en train de cliquer sur une tuile."
-
-#. (itstool) path: td/p
-#: C/faces.page:33
-msgid "You have uncovered a mine. You lose."
-msgstr "Vous avez découvert une mine. Vous perdez."
-
-#. (itstool) path: td/p
-#: C/faces.page:37
-msgid "The tile you just clicked on is safe. You can continue."
-msgstr ""
-"La tuile que vous venez de cliquer est sans danger. Vous pouvez continuer."
-
-#. (itstool) path: td/p
-#: C/faces.page:41
-msgid "You have found all the mines. You win!"
-msgstr "Vous avez trouvé toutes les mines. Vous avez gagné!"
 
 #. (itstool) path: media
 #. This is a reference to an external file such as an image or video. When
@@ -576,13 +400,23 @@ msgstr ""
 "gui><gui>Préférences</gui></guiseq> et cochez la case <gui>Utiliser le "
 "drapeau <em>« Je ne suis pas sûr »</em></gui>."
 
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
 #. (itstool) path: page/title
-#: C/get-help.page:21
+#: C/get-help.page:27
 msgid "Hints and warnings"
 msgstr "Astuces et avertissements"
 
 #. (itstool) path: page/p
-#: C/get-help.page:23
+#: C/get-help.page:29
 msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
@@ -591,23 +425,23 @@ msgstr ""
 "drapeaux d'avertissement pour vous aider à garder une trace des drapeaux."
 
 #. (itstool) path: page/p
-#: C/get-help.page:26
+#: C/get-help.page:32
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalized for using hints: ten seconds will "
-"be added to your total time."
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
 msgstr ""
-"Cliquez <gui style=\"button\">Astuce</gui> dans la barre d'outils pour "
-"révéler une tuile cachée qui est sûre. Vous serez pénalisé pour "
-"l'utilisation des astuces : dix secondes seront ajoutées à votre temps total."
+"Cliquez sur le bouton <gui style=\"button\">Recevoir une astuce pour votre prochain coup</gui> en haut à droite pour révéler une tuile cachée sécurisée. "
+"Une pénalité de dix secondes sera ajoutée à votre temps total. La pénalité augmente progressivement de dix secondes aux astuces suivantes jusqu'à la neuvième."
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:38
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
-"you try to place too many flags next to an open tile."
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
 msgstr ""
 "Pour activer les avertissements, cliquez sur <guiseq><gui>Mines</"
 "gui><gui>Préférences</gui></guiseq> et cochez la case <gui>Avertir s'il y a "
@@ -641,6 +475,87 @@ msgstr ""
 "dialogue affiche par défaut les scores pour la plus <gui>Petite</gui> taille "
 "de plateau. Pour voir les scores dans une autres taille, choisissez-en une "
 "dans le menu déroulant en haut de la boîte."
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:22
+msgctxt "_"
+msgid ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+msgstr ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+
+#. (itstool) path: info/title
+#: C/index.page:6
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "GNOME Mines"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "GNOME Mines"
+
+#. (itstool) path: credit/name
+#: C/index.page:10 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid ""
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
+msgstr ""
+"<media type=\"image\" src=\"figures/logo32.png\">logo de GNOME Mines</media> "
+"GNOME Mines"
+
+#. (itstool) path: page/p
+#: C/index.page:24
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"<app>Mines</app> est un clone du jeu Démineur. Le but du jeu est de repérer "
+"toutes les mines cachées sous les tuiles d'une grille carrée. Vous aurez "
+"besoin de réflexion et d'un peu de chance pour les trouver toutes sans "
+"provoquer d'explosion."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Game Play"
+msgstr "Partie"
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Useful tips"
+msgstr "Astuces utiles"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Advanced"
+msgstr "Avancée"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Get Involved"
+msgstr "Comment s'impliquer"
 
 #. (itstool) path: info/desc
 #: C/license.page:8
@@ -737,35 +652,33 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/\">contrat Commons</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:26
+#: C/new-game.page:31
 msgid "Start a new game"
 msgstr "Nouvelle partie"
 
 #. (itstool) path: page/p
-#: C/new-game.page:28
+#: C/new-game.page:33
 msgid "To start a new game:"
 msgstr "Pour commencer une nouvelle partie :"
 
 #. (itstool) path: item/p
-#: C/new-game.page:31
+#: C/new-game.page:36
 msgid ""
-"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu."
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
 msgstr ""
-"Cliquez sur le bouton <gui style=\"button\">Nouveau</gui> ou sélectionnez "
-"<guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">Nouvelle "
+"Cliquez sur <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">Nouvelle "
 "partie</gui></guiseq> à partir du menu d'application."
 
 #. (itstool) path: item/p
-#: C/new-game.page:37
+#: C/new-game.page:41
 msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
 "Sélectionnez votre <link xref=\"board-size\">taille du tableau</link> "
 "préférée."
 
 #. (itstool) path: note/p
-#: C/new-game.page:42
+#: C/new-game.page:46
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
@@ -924,26 +837,6 @@ msgstr "Quitter"
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#. (itstool) path: page/title
-#: C/toolbar.page:15
-msgid "Toolbar"
-msgstr "Barre d'outils"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:17
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
-"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
-msgstr ""
-"La barre d'outils, située au-dessous de la barre de menu, vous permet "
-"d'effectuer les actions usuelles à l'aide de la souris. Pour utiliser un "
-"élément de la barre d'outils, cliquez simplement dessus. De gauche à droite, "
-"vous trouverez les boutons <gui><link xref=\"new-game\">Nouveau</link></"
-"gui>, <link xref=\"get-help\">Astuce</link>, <gui>Pause</gui> et <gui> Plein "
-"écran</gui>."
-
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
@@ -978,12 +871,12 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Pour commencer à traduire, vous devez <link href=\"http:l10n.gnome.org"
+"Pour commencer à traduire, vous devez <link href=\"http://l10n.gnome.org"
 "\">créer un compte</link> et rejoindre <link href=\"http://l10n.gnome.org/"
 "teams/\">l'équipe de traduction</link> de votre langue. Ce compte va vous "
 "permettre de téléverser de nouvelles traductions."
@@ -1012,3 +905,87 @@ msgstr ""
 "Vous pouvez aussi joindre par courriel l'équipe d'internationalisation en "
 "utilisant leur <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">liste de diffusion</link>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-smile.svg' "
+#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
+#~ msgstr ""
+#~ "external ref='figures/face-smile.svg' "
+#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-worried.svg' "
+#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
+#~ msgstr ""
+#~ "external ref='figures/face-worried.svg' "
+#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+#~ msgstr ""
+#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-cool.svg' "
+#~ "md5='6ce4a904009988e203e3d50896f6016e'"
+#~ msgstr ""
+#~ "external ref='figures/face-cool.svg' "
+#~ "md5='6ce4a904009988e203e3d50896f6016e'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+#~ msgstr ""
+#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
+
+#~ msgid "The meaning of the faces"
+#~ msgstr "Signification des visages"
+
+#~ msgid "This is a new game and you have not clicked on any tile yet."
+#~ msgstr ""
+#~ "C'est un nouveau jeu et vous n'avez pas encore cliqué sur n'importe "
+#~ "quelle tuile."
+
+#~ msgid "You are currently clicking on a tile."
+#~ msgstr "Vous êtes actuellement en train de cliquer sur une tuile."
+
+#~ msgid "You have uncovered a mine. You lose."
+#~ msgstr "Vous avez découvert une mine. Vous perdez."
+
+#~ msgid "The tile you just clicked on is safe. You can continue."
+#~ msgstr ""
+#~ "La tuile que vous venez de cliquer est sans danger. Vous pouvez continuer."
+
+#~ msgid "You have found all the mines. You win!"
+#~ msgstr "Vous avez trouvé toutes les mines. Vous avez gagné!"
+
+#~ msgid ""
+#~ "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+#~ "tile that is safe. You will be penalized for using hints: ten seconds "
+#~ "will be added to your total time."
+#~ msgstr ""
+#~ "Cliquez <gui style=\"button\">Astuce</gui> dans la barre d'outils pour "
+#~ "révéler une tuile cachée qui est sûre. Vous serez pénalisé pour "
+#~ "l'utilisation des astuces : dix secondes seront ajoutées à votre temps "
+#~ "total."
+
+#~ msgid "Toolbar"
+#~ msgstr "Barre d'outils"
+
+#~ msgid ""
+#~ "The toolbar, located under the menu bar, lets you perform common actions "
+#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#~ "from left to right, are <gui><link xref=\"new-game\">New Game</link></"
+#~ "gui>, <link xref=\"get-help\">Hint</link>, <gui>Pause</gui> and "
+#~ "<gui>Fullscreen</gui>."
+#~ msgstr ""
+#~ "La barre d'outils, située au-dessous de la barre de menu, vous permet "
+#~ "d'effectuer les actions usuelles à l'aide de la souris. Pour utiliser un "
+#~ "élément de la barre d'outils, cliquez simplement dessus. De gauche à "
+#~ "droite, vous trouverez les boutons <gui><link xref=\"new-game\">Nouveau</"
+#~ "link></gui>, <link xref=\"get-help\">Astuce</link>, <gui>Pause</gui> et "
+#~ "<gui> Plein écran</gui>."
