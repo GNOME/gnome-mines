@@ -92,6 +92,7 @@ public class Mines : Gtk.Application
         Environment.set_application_name (_("Mines"));
 
         settings = new Settings ("org.gnome.mines");
+        settings.delay ();
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
@@ -391,6 +392,7 @@ public class Mines : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean ("window-is-maximized", is_maximized);
+        settings.apply ();
     }
 
     public override void activate ()
