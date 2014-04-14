@@ -217,9 +217,9 @@ public class Mines : Gtk.Application
 
         var new_game_grid = new Gtk.Grid ();
         new_game_grid.column_homogeneous = true;
-        new_game_grid.column_spacing = 0;
+        new_game_grid.column_spacing = 24;
         new_game_grid.row_homogeneous = true;
-        new_game_grid.row_spacing = 0;
+        new_game_grid.row_spacing = 24;
         new_game_screen.add (new_game_grid);
 
         var button = new Gtk.Button ();
