@@ -168,7 +168,7 @@ public class Mines : Gtk.Application
 
         /* Initialize Custom Game Screen */
         startup_custom_game_screen ();
-        view_box.pack_start (custom_game_screen, true, true);
+        view_box.pack_start (custom_game_screen, false, false);
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
         history.load ();
@@ -273,7 +273,7 @@ public class Mines : Gtk.Application
         custom_game_grid.row_spacing = 6;
         custom_game_screen.add (custom_game_grid);
 
-        var label = new Gtk.Label.with_mnemonic (_("H_orizontal:"));
+        var label = new Gtk.Label.with_mnemonic (_("_Height:"));
         label.set_alignment (0, 0.5f);
         custom_game_grid.attach (label, 0, 0, 1, 1);
 
@@ -283,7 +283,7 @@ public class Mines : Gtk.Application
         custom_game_grid.attach (field_width_entry, 1, 0, 1, 1);
         label.set_mnemonic_widget (field_width_entry);
 
-        label = new Gtk.Label.with_mnemonic (_("_Vertical:"));
+        label = new Gtk.Label.with_mnemonic (_("_Width:"));
         label.set_alignment (0, 0.5f);
         custom_game_grid.attach (label, 0, 1, 1, 1);
 
@@ -293,7 +293,7 @@ public class Mines : Gtk.Application
         custom_game_grid.attach (field_height_entry, 1, 1, 1, 1);
         label.set_mnemonic_widget (field_height_entry);
 
-        label = new Gtk.Label.with_mnemonic (_("_Number of mines:"));
+        label = new Gtk.Label.with_mnemonic (_("_Mines:"));
         label.set_alignment (0, 0.5f);
         custom_game_grid.attach (label, 0, 2, 1, 1);
 
@@ -315,21 +315,22 @@ public class Mines : Gtk.Application
         label.set_mnemonic_widget (p_mines_spin);
 
         var button_grid = new Gtk.Grid ();
-        button_grid.column_homogeneous = false;
-        button_grid.column_spacing = 5;
+        button_grid.margin_top = 18;
+        button_grid.row_spacing = 5;
         custom_game_grid.attach (button_grid, 0, 4, 2, 1);
 
         var button = new Gtk.Button.with_mnemonic (_("_Cancel"));
         button.valign = Gtk.Align.CENTER;
         button.expand = true;
         button.clicked.connect (show_new_game_screen);
-        button_grid.attach (button, 0, 0, 1, 1);
+        button_grid.attach (button, 0, 1, 1, 1);
 
         button = new Gtk.Button.with_mnemonic (_("_Play Game"));
         button.valign = Gtk.Align.CENTER;
         button.expand = true;
         button.clicked.connect (custom_size_clicked_cb);
-        button_grid.attach (button, 1, 0, 1, 1);
+        button.get_style_context().add_class("suggested-action");
+        button_grid.attach (button, 0, 0, 1, 1);
 
         custom_game_screen.show_all ();
         custom_game_screen.hide ();
