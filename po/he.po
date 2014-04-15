@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-16 16:28+0200\n"
-"PO-Revision-Date: 2014-03-16 16:31+0200\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"POT-Creation-Date: 2014-04-15 23:19+0300\n"
+"PO-Revision-Date: 2014-04-15 23:21+0300\n"
+"Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
@@ -28,18 +28,29 @@ msgid "GNOME Mines"
 msgstr "‏GNOME מוקשים"
 
 #: ../data/gnome-mines.appdata.xml.in.h:2
-msgid "GNOME Mines is a puzzle game where you search for hidden mines. Flag the spaces with mines as quickly as possible to make the board a safer place. You win the game when you've flagged every mine on the board. Be careful not to trigger one, or the game is over!"
-msgstr "מוקשים מבית GNOME הוא משחק בו ניתן לחפש אחר מוקשים מוסתרים. לסמן את המשבצות שיש בהן מוקשים בקלות רבה וכל זה על מנת להפוך את הלוח לבטוח יותר. כדי לנצח במשחק עליך לסמן בדגל כל מוקש על הלוח. עליך להיזהר כדי לא להפעיל אף מוקש אחרת הפסדת במשחק!"
+msgid ""
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you've flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
+msgstr ""
+"מוקשים מבית GNOME הוא משחק בו ניתן לחפש אחר מוקשים מוסתרים. לסמן את המשבצות "
+"שיש בהן מוקשים בקלות רבה וכל זה על מנת להפוך את הלוח לבטוח יותר. כדי לנצח "
+"במשחק עליך לסמן בדגל כל מוקש על הלוח. עליך להיזהר כדי לא להפעיל אף מוקש אחרת "
+"הפסדת במשחק!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
-msgid "You can select the size of the field you want to play on at the start of the game. If you get stuck, you can ask for a hint: there's a time penalty, but that's better than hitting a mine!"
-msgstr "ניתן לבחור את גודל השדה הרצוי למשחק בתחילת המשחק. אם נתקעת ניתן לבקש רמז: מתלווה אליו ענישת זמן אך זה עדיף על פגיעה במוקש!"
+msgid ""
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
+"that's better than hitting a mine!"
+msgstr ""
+"ניתן לבחור את גודל השדה הרצוי למשחק בתחילת המשחק. אם נתקעת ניתן לבקש רמז: "
+"מתלווה אליו ענישת זמן אך זה עדיף על פגיעה במוקש!"
 
-#: ../data/gnome-mines.desktop.in.h:1
-#: ../src/gnome-mines.vala:92
-#: ../src/gnome-mines.vala:129
-#: ../src/gnome-mines.vala:141
-#: ../src/gnome-mines.vala:694
+#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:92
+#: ../src/gnome-mines.vala:130 ../src/gnome-mines.vala:142
+#: ../src/gnome-mines.vala:697
 msgid "Mines"
 msgstr "מוקשים"
 
@@ -64,16 +75,24 @@ msgid "Warning about too many flags"
 msgstr "Warning about too many flags"
 
 #: ../data/org.gnome.mines.gschema.xml.h:4
-msgid "Set to true to enable warning icons when too many flags are placed next to a numbered tile."
-msgstr "Set to true to enable warning icons when too many flags are placed next to a numbered tile."
+msgid ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
+msgstr ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
 
 #: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Enable automatic placing of flags"
 msgstr "Enable automatic placing of flags"
 
 #: ../data/org.gnome.mines.gschema.xml.h:6
-msgid "Set to true to automatically flag squares as mined when enough squares are revealed"
-msgstr "Set to true to automatically flag squares as mined when enough squares are revealed"
+msgid ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
 
 #: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Number of columns in a custom game"
@@ -107,111 +126,106 @@ msgstr "Height of the window in pixels"
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
-#: ../src/gnome-mines.vala:111
+#: ../src/gnome-mines.vala:112
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: ../src/gnome-mines.vala:112
+#: ../src/gnome-mines.vala:113
 msgid "_Scores"
 msgstr "_תוצאות"
 
-#: ../src/gnome-mines.vala:113
+#: ../src/gnome-mines.vala:114
 msgid "_Preferences"
 msgstr "ה_עדפות"
 
-#: ../src/gnome-mines.vala:116
+#: ../src/gnome-mines.vala:117
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/gnome-mines.vala:117
+#: ../src/gnome-mines.vala:118
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/gnome-mines.vala:118
+#: ../src/gnome-mines.vala:119
 msgid "_Quit"
 msgstr "י_ציאה"
 
-#: ../src/gnome-mines.vala:193
+#: ../src/gnome-mines.vala:194
 msgid "Receive a hint for your next move"
 msgstr "קבלת רמז למהלך הבא שלך"
 
-#: ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:258
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: ../src/gnome-mines.vala:275
-msgid "H_orizontal:"
-msgstr "_אופקי:"
+#: ../src/gnome-mines.vala:276
+msgid "_Height:"
+msgstr "_גובה:"
 
-#: ../src/gnome-mines.vala:285
-msgid "_Vertical:"
-msgstr "א_נכי:"
+#: ../src/gnome-mines.vala:286
+msgid "_Width:"
+msgstr "_רוחב:"
 
-#: ../src/gnome-mines.vala:295
-msgid "_Number of mines:"
-msgstr "מ_ספר המוקשים:"
+#: ../src/gnome-mines.vala:296
+msgid "_Mines:"
+msgstr "_מוקשים:"
 
-#: ../src/gnome-mines.vala:306
+#: ../src/gnome-mines.vala:307
 msgid "_Percentage of mines:"
 msgstr "_אחוז של מוקשים:"
 
-#: ../src/gnome-mines.vala:321
+#: ../src/gnome-mines.vala:322
 msgid "_Cancel"
 msgstr "_ביטול"
 
-#: ../src/gnome-mines.vala:327
+#: ../src/gnome-mines.vala:328
 msgid "_Play Game"
 msgstr "ל_שחק במשחק"
 
-#: ../src/gnome-mines.vala:376
+#: ../src/gnome-mines.vala:378
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "מוקש <b>אחד</b>"
 msgstr[1] "<b>%d</b> מוקשים"
 
-#: ../src/gnome-mines.vala:421
-#, c-format
-msgid "%u/%u"
-msgstr "%u/%u"
-
-#: ../src/gnome-mines.vala:456
+#: ../src/gnome-mines.vala:459
 msgid "Do you want to start a new game?"
 msgstr "האם ברצונך להתחיל משחק חדש?"
 
-#: ../src/gnome-mines.vala:457
+#: ../src/gnome-mines.vala:460
 msgid "If you start a new game, your current progress will be lost."
 msgstr "אם בחירתך תהיה להתחיל משחק חדש אז התהליך הנוכחי שלך יאבד."
 
-#: ../src/gnome-mines.vala:458
+#: ../src/gnome-mines.vala:461
 msgid "Keep Current Game"
 msgstr "שמירת המשחק הנוכחי"
 
-#: ../src/gnome-mines.vala:459
+#: ../src/gnome-mines.vala:462
 msgid "Start New Game"
 msgstr "הֹתחלת משחק חדש"
 
-#: ../src/gnome-mines.vala:662
+#: ../src/gnome-mines.vala:665
 msgid "Main game:"
 msgstr "משחק ראשי:"
 
-#: ../src/gnome-mines.vala:667
+#: ../src/gnome-mines.vala:670
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../src/gnome-mines.vala:670
+#: ../src/gnome-mines.vala:673
 msgid "Resizing and SVG support:"
 msgstr "תמיכה באפשרות שינוי גודל ובגרפיקה וקטורית (SVG):"
 
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:681
 msgid "Faces:"
 msgstr "פנים:"
 
-#: ../src/gnome-mines.vala:682
+#: ../src/gnome-mines.vala:685
 msgid "Graphics:"
 msgstr "גרפיקה:"
 
-#: ../src/gnome-mines.vala:697
+#: ../src/gnome-mines.vala:700
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -221,7 +235,7 @@ msgstr ""
 "\n"
 "מוקשים הוא חלק מחבילת משחקי GNOME."
 
-#: ../src/gnome-mines.vala:704
+#: ../src/gnome-mines.vala:707
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -236,38 +250,37 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/gnome-mines.vala:810
+#: ../src/gnome-mines.vala:813
 msgid "Mines Preferences"
 msgstr "העדפות 'מוקשים'"
 
-#: ../src/gnome-mines.vala:813
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_סגירה"
-
-#: ../src/gnome-mines.vala:828
+#: ../src/gnome-mines.vala:830
 msgid "_Use \"I'm not sure\" flags"
 msgstr "שימוש בדגלי \"_אני לא בטוח\"."
 
-#: ../src/gnome-mines.vala:834
+#: ../src/gnome-mines.vala:836
 msgid "_Warn if too many flags are placed next to a number"
 msgstr "_יש להציג אזהרה אם הוצבו יותר מדי דגלים ליד מספר"
 
-#: ../src/gnome-mines.vala:904
+#: ../src/gnome-mines.vala:906
 msgid "Start a new game"
 msgstr "התחלת משחק חדש"
 
-#: ../src/gnome-mines.vala:911
+#: ../src/gnome-mines.vala:913
 msgid "Pause the game"
 msgstr "השהיית המשחק"
 
-#: ../src/gnome-mines.vala:918
+#: ../src/gnome-mines.vala:920
 msgid "Unpause the game"
 msgstr "המשכת המשחק"
 
 #: ../src/minefield-view.vala:557
 msgid "Paused"
 msgstr "הושהה"
+
+#: ../src/score-dialog.vala:18
+msgid "_Close"
+msgstr "_סגירה"
 
 #: ../src/score-dialog.vala:20
 msgid "New Game"
@@ -295,6 +308,18 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, מוקש אחד"
 msgstr[1] "%u × %u, %u מוקשים"
+
+#~ msgid "H_orizontal:"
+#~ msgstr "_אופקי:"
+
+#~ msgid "_Vertical:"
+#~ msgstr "א_נכי:"
+
+#~ msgid "_Number of mines:"
+#~ msgstr "מ_ספר המוקשים:"
+
+#~ msgid "%u/%u"
+#~ msgstr "%u/%u"
 
 #~ msgid "https://people.gnome.org/~mcatanzaro/gnome-mines.png"
 #~ msgstr ""
@@ -544,28 +569,28 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "_Appearance"
 #~ msgstr "מ_ראה"
-#~ msgctxt "difficulty"
 
+#~ msgctxt "difficulty"
 #~ msgid "Easy"
 #~ msgstr "קל"
-#~ msgctxt "difficulty"
 
+#~ msgctxt "difficulty"
 #~ msgid "Normal"
 #~ msgstr "רגיל"
-#~ msgctxt "difficulty"
 
+#~ msgctxt "difficulty"
 #~ msgid "Hard"
 #~ msgstr "קשה"
-#~ msgctxt "chess-opponent"
 
+#~ msgctxt "chess-opponent"
 #~ msgid "Human"
 #~ msgstr "אנושי"
-#~ msgctxt "chess-player"
 
+#~ msgctxt "chess-player"
 #~ msgid "White"
 #~ msgstr "לבן"
-#~ msgctxt "chess-player"
 
+#~ msgctxt "chess-player"
 #~ msgid "Black"
 #~ msgstr "שחור"
 
@@ -589,56 +614,56 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Fancy"
 #~ msgstr "מהודר"
-#~ msgctxt "chess-side"
 
+#~ msgctxt "chess-side"
 #~ msgid "White Side"
 #~ msgstr "צד לבן"
-#~ msgctxt "chess-side"
 
+#~ msgctxt "chess-side"
 #~ msgid "Black Side"
 #~ msgstr "צד שחור"
-#~ msgctxt "chess-side"
 
+#~ msgctxt "chess-side"
 #~ msgid "Human Side"
 #~ msgstr "צד אנושי"
-#~ msgctxt "chess-side"
 
+#~ msgctxt "chess-side"
 #~ msgid "Current Player"
 #~ msgstr "השחקן הנוכחי"
-#~ msgctxt "chess-side"
 
+#~ msgctxt "chess-side"
 #~ msgid "Face to Face"
 #~ msgstr "פנים מול פנים"
-#~ msgctxt "chess-move-format"
 
+#~ msgctxt "chess-move-format"
 #~ msgid "Human"
 #~ msgstr "בן אדם"
-#~ msgctxt "chess-move-format"
 
+#~ msgctxt "chess-move-format"
 #~ msgid "Standard Algebraic"
 #~ msgstr "אלגברי רגיל"
-#~ msgctxt "chess-move-format"
 
+#~ msgctxt "chess-move-format"
 #~ msgid "Figurine"
 #~ msgstr "דמות"
-#~ msgctxt "chess-move-format"
 
+#~ msgctxt "chess-move-format"
 #~ msgid "Long Algebraic"
 #~ msgstr "אלגברי ארוך"
-#~ msgctxt "chess-piece"
 
+#~ msgctxt "chess-piece"
 #~ msgid "Queen"
 #~ msgstr "מלכה"
-#~ msgctxt "chess-piece"
 
+#~ msgctxt "chess-piece"
 #~ msgid "Knight"
 #~ msgstr "אביר"
-#~ msgctxt "chess-piece"
 
+#~ msgctxt "chess-piece"
 #~ msgid "Rook"
 #~ msgstr "צריח"
-#~ msgctxt "chess-piece"
 
+#~ msgctxt "chess-piece"
 #~ msgid "Bishop"
 #~ msgstr "רץ"
 
@@ -914,19 +939,16 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "_שמירת המשחק למועד מאוחר יותר"
 
 #~ msgid "second"
-
 #~ msgid_plural "seconds"
 #~ msgstr[0] "שנייה"
 #~ msgstr[1] "שניות"
 
 #~ msgid "minute"
-
 #~ msgid_plural "minutes"
 #~ msgstr[0] "דקה"
 #~ msgstr[1] "דקות"
 
 #~ msgid "hour"
-
 #~ msgid_plural "hours"
 #~ msgstr[0] "שעה"
 #~ msgstr[1] "שעות"
@@ -1168,16 +1190,16 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr ""
 #~ "You should have received a copy of the GNU General Public License along "
 #~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
-#~ msgctxt "board size"
 
+#~ msgctxt "board size"
 #~ msgid "Small"
 #~ msgstr "קטן"
-#~ msgctxt "board size"
 
+#~ msgctxt "board size"
 #~ msgid "Medium"
 #~ msgstr "בינוני"
-#~ msgctxt "board size"
 
+#~ msgctxt "board size"
 #~ msgid "Large"
 #~ msgstr "גדול"
 
@@ -1547,36 +1569,36 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Your score has made the top ten."
 #~ msgstr "נכנסת לעשרת הגדולים!"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Beginner"
 #~ msgstr "מתחיל"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Slow"
 #~ msgstr "איטי"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Medium"
 #~ msgstr "בינוני"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Fast"
 #~ msgstr "מהיר"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Beginner with Fakes"
 #~ msgstr "מתחיל עם זיופים"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Slow with Fakes"
 #~ msgstr "איטי עם זיופים"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Medium with Fakes"
 #~ msgstr "בינוני עם זיופים"
-#~ msgctxt "game speed"
 
+#~ msgctxt "game speed"
 #~ msgid "Fast with Fakes"
 #~ msgstr "מהיר עם זיופים"
 
@@ -1973,36 +1995,36 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Disassemble a pile of tiles by removing matching pairs"
 #~ msgstr "פרק ערמת אריחים על-ידי הסרת זוגות תואמים"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "The Ziggurat"
 #~ msgstr "הזיגוראט"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Four Bridges"
 #~ msgstr "ארבע הגשרים"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Cloud"
 #~ msgstr "ענן"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Tic-Tac-Toe"
 #~ msgstr "איקס-מיקס-דריקס"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Red Dragon"
 #~ msgstr "דרקון אדום"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Pyramid's Walls"
 #~ msgstr "קירות פירמידה"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Confounding Cross"
 #~ msgstr "צלב מעורבב"
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Difficult"
 #~ msgstr "קשה"
 
@@ -2157,13 +2179,11 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "קשה מאד"
 
 #~ msgid "Last played %(n)s second ago"
-
 #~ msgid_plural "Last played %(n)s seconds ago"
 #~ msgstr[0] "משחק אחרון לפני שנייה %(n)s"
 #~ msgstr[1] "משחק אחרון לפני %(n)s שניות"
 
 #~ msgid "Last played %(n)s minute ago"
-
 #~ msgid_plural "Last played %(n)s minutes ago"
 #~ msgstr[0] "משחק אחרון לפני דקה %(n)s"
 #~ msgstr[1] "משחק אחרון לפני %(n)s דקות"
@@ -2193,19 +2213,16 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "לוח קשה מאוד"
 
 #~ msgid "Played for %d hour"
-
 #~ msgid_plural "Played for %d hours"
 #~ msgstr[0] "משחק למשך שעה %d"
 #~ msgstr[1] "משחק למשך %d שעות"
 
 #~ msgid "Played for %d minute"
-
 #~ msgid_plural "Played for %d minutes"
 #~ msgstr[0] "משחק למשך דקה %d"
 #~ msgstr[1] "משחק למשך %d דקות"
 
 #~ msgid "Played for %d second"
-
 #~ msgid_plural "Played for %d seconds"
 #~ msgstr[0] "משחק למשך שנייה %d"
 #~ msgstr[1] "משחק למשך %d שניות"
@@ -2278,19 +2295,16 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "_סמן בצבעים את השורה, הטור והתיבה הנוכחיים"
 
 #~ msgid "You completed the puzzle in %d second"
-
 #~ msgid_plural "You completed the puzzle in %d seconds"
 #~ msgstr[0] "השלמת את הלוח תוך שנייה %d "
 #~ msgstr[1] "השלמת את הלוח תוך %d שניות"
 
 #~ msgid "%d minute"
-
 #~ msgid_plural "%d minutes"
 #~ msgstr[0] "דקה %d"
 #~ msgstr[1] "%d דקות"
 
 #~ msgid "%d second"
-
 #~ msgid_plural "%d seconds"
 #~ msgstr[0] "שנייה %d "
 #~ msgstr[1] "%d שניות"
@@ -2299,7 +2313,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "השלמת את הלוח תוך %(minute)s ו־%(second)s"
 
 #~ msgid "%d hour"
-
 #~ msgid_plural "%d hours"
 #~ msgstr[0] "שעה %d"
 #~ msgstr[1] "%d שעות"
@@ -2308,13 +2321,11 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "השלמת את הלוח תוך %(hour)s, %(minute)s ו־%(second)s"
 
 #~ msgid "You got %(n)s hint."
-
 #~ msgid_plural "You got %(n)s hints."
 #~ msgstr[0] "השתמשת ברמז אחד."
 #~ msgstr[1] "השתמשת ב־%(n)s רמזים."
 
 #~ msgid "You had %(n)s impossibility pointed out."
-
 #~ msgid_plural "You had %(n)s impossibilities pointed out."
 #~ msgstr[0] "הייתה לך אי היתכנות אחת."
 #~ msgstr[1] "היו לך %(n)s אי היתכנויות."
@@ -2402,8 +2413,8 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Sudoku unable to mark game as finished."
 #~ msgstr "אין באפשרות סודוקו לסמן את המשחק כאחד שהסתיים."
-#~ msgctxt "board size"
 
+#~ msgctxt "board size"
 #~ msgid "Custom"
 #~ msgstr "מותאם אישית"
 
@@ -2722,12 +2733,12 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Number of trials for each roll for the computer"
 #~ msgstr "Number of trials for each roll for the computer"
-#~ msgctxt "game type"
 
+#~ msgctxt "game type"
 #~ msgid "Regular"
 #~ msgstr "רגיל"
-#~ msgctxt "game type"
 
+#~ msgctxt "game type"
 #~ msgid "Colors"
 #~ msgstr "צבעים"
 
@@ -2744,7 +2755,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "תוצאות טאלי"
 
 #~ msgid "%s wins the game with %d point"
-
 #~ msgid_plural "%s wins the game with %d points"
 #~ msgstr[0] "%s זוכה במשחק עם נקודה אחת"
 #~ msgstr[1] "%s זוכה במשחק עם %d נקודות"
@@ -2805,8 +2815,8 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "_Difficulty:"
 #~ msgstr "רמת קו_שי:"
-#~ msgctxt "difficulty"
 
+#~ msgctxt "difficulty"
 #~ msgid "Medium"
 #~ msgstr "בינוני"
 
@@ -2950,20 +2960,20 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "_Tile set:"
 #~ msgstr "_ערכת אריחים:"
-#~ msgctxt "score-dialog"
 
+#~ msgctxt "score-dialog"
 #~ msgid "Time"
 #~ msgstr "זמן"
-#~ msgctxt "score-dialog"
 
+#~ msgctxt "score-dialog"
 #~ msgid "Score"
 #~ msgstr "ניקוד"
-#~ msgctxt "score-dialog"
 
+#~ msgctxt "score-dialog"
 #~ msgid "%1$dm %2$ds"
 #~ msgstr "%1$dדק׳ %2$dשנ׳"
-#~ msgctxt "score-dialog"
 
+#~ msgctxt "score-dialog"
 #~ msgid "Name"
 #~ msgstr "שם"
 
@@ -3191,7 +3201,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "פינוי המסך על ידי הסרת קבוצות של אריחים צבעוניים ובעלי צורה"
 
 #~ msgid "%u point"
-
 #~ msgid_plural "%u points"
 #~ msgstr[0] "נקודה אחת"
 #~ msgstr[1] "%u נקודות"
@@ -3669,44 +3678,44 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "SIZE"
 #~ msgstr "SIZE"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "0"
 #~ msgstr "0"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "1"
 #~ msgstr "1"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "2"
 #~ msgstr "2"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "3"
 #~ msgstr "3"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "4"
 #~ msgstr "4"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "5"
 #~ msgstr "5"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "6"
 #~ msgstr "6"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "7"
 #~ msgstr "7"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "8"
 #~ msgstr "8"
-#~ msgctxt "number"
 
+#~ msgctxt "number"
 #~ msgid "9"
 #~ msgstr "9"
 
@@ -3747,8 +3756,8 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Remove matching pairs of tiles."
 #~ msgstr "הסר זוגות של אריחים תואמים."
-#~ msgctxt "mahjongg map name"
 
+#~ msgctxt "mahjongg map name"
 #~ msgid "Easy"
 #~ msgstr "קל"
 
@@ -3854,12 +3863,12 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ "Aisleriot cannot load the file “%s”. Please check your Aisleriot "
 #~ "installation."
 #~ msgstr "‏Aisleriot לא יכול לטעון את הקובץ “%s”. אנא בדוק את ההתקנה של המשחק."
-#~ msgctxt "slot type"
 
+#~ msgctxt "slot type"
 #~ msgid "tableau"
 #~ msgstr "שולחן המשחק"
-#~ msgctxt "slot hint"
 
+#~ msgctxt "slot hint"
 #~ msgid "%s on tableau"
 #~ msgstr "%s על השולחן"
 
@@ -4198,9 +4207,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgid "diamonds"
 #~ msgstr "יהלומים"
 
-#~ msgid "eight"
-#~ msgstr "שמונה"
-
 #~ msgid "five"
 #~ msgstr "חמש"
 
@@ -4465,8 +4471,8 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Display cards with “%s” card theme"
 #~ msgstr "הצגת קלפים עם ערכת הנושא \"%s\""
-#~ msgctxt "score"
 
+#~ msgctxt "score"
 #~ msgid "%6d"
 #~ msgstr "%6d"
 
@@ -4541,60 +4547,60 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Cannot start the game “%s”"
 #~ msgstr "לא ניתן להתחיל את המשחק “%s”"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "JOKER"
 #~ msgstr "ג׳וקר"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "A"
 #~ msgstr "A"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "2"
 #~ msgstr "2"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "3"
 #~ msgstr "3"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "4"
 #~ msgstr "4"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "5"
 #~ msgstr "5"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "6"
 #~ msgstr "6"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "7"
 #~ msgstr "7"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "8"
 #~ msgstr "8"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "9"
 #~ msgstr "9"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "J"
 #~ msgstr "J"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "Q"
 #~ msgstr "Q"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "K"
 #~ msgstr "K"
-#~ msgctxt "card symbol"
 
+#~ msgctxt "card symbol"
 #~ msgid "1"
 #~ msgstr "1"
 
@@ -5560,92 +5566,92 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "AI (%s)"
 #~ msgstr "בינה מלאכותית (%s)"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "a"
 #~ msgstr "א"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "b"
 #~ msgstr "ב"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "c"
 #~ msgstr "ג"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "d"
 #~ msgstr "ד"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "e"
 #~ msgstr "ה"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "f"
 #~ msgstr "ו"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "g"
 #~ msgstr "ז"
-#~ msgctxt "chess-file"
 
+#~ msgctxt "chess-file"
 #~ msgid "h"
 #~ msgstr "ח"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "1"
 #~ msgstr "1"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "2"
 #~ msgstr "2"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "3"
 #~ msgstr "3"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "4"
 #~ msgstr "4"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "5"
 #~ msgstr "5"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "6"
 #~ msgstr "6"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "7"
 #~ msgstr "7"
-#~ msgctxt "chess-rank"
 
+#~ msgctxt "chess-rank"
 #~ msgid "8"
 #~ msgstr "8"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "P"
 #~ msgstr "P"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "N"
 #~ msgstr "N"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "B"
 #~ msgstr "B"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "R"
 #~ msgstr "R"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "Q"
 #~ msgstr "Q"
-#~ msgctxt "chess-notation"
 
+#~ msgctxt "chess-notation"
 #~ msgid "K"
 #~ msgstr "K"
 
@@ -5726,25 +5732,21 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgstr "לוח ברמה %(level)s"
 
 #~ msgid "%(n)s year"
-
 #~ msgid_plural "%(n)s years"
 #~ msgstr[0] "שנה אחת"
 #~ msgstr[1] "%(n)s שנים"
 
 #~ msgid "%(n)s month"
-
 #~ msgid_plural "%(n)s months"
 #~ msgstr[0] "חודש אחד"
 #~ msgstr[1] "%(n)s חודשים"
 
 #~ msgid "%(n)s week"
-
 #~ msgid_plural "%(n)s weeks"
 #~ msgstr[0] "שבוע אחד"
 #~ msgstr[1] "%(n)s שבועות"
 
 #~ msgid "%(n)s day"
-
 #~ msgid_plural "%(n)s days"
 #~ msgstr[0] "יום אחד"
 #~ msgstr[1] "%(n)s ימים"
