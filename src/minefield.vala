@@ -146,6 +146,11 @@ public class Minefield
         this.height = height;
         this.n_mines = n_mines;
     }
+
+    public bool is_clock_started ()
+    {
+        return elapsed > 0;
+    }
    
     public bool has_mine (uint x, uint y)
     {
