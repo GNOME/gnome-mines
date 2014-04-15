@@ -357,7 +357,7 @@ public class Mines : Gtk.Application
 
     private bool window_focus_out_event_cb (Gdk.EventFocus event)
     {
-        if (minefield != null)
+        if (minefield != null && minefield.is_clock_started ())
             minefield.paused = true;
 
         return false;
