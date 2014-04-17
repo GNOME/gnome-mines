@@ -92,14 +92,34 @@ private class Position : Object
 
 public class MinefieldView : Gtk.DrawingArea
 {
+    private Settings settings;
+
     /* true if allowed to mark locations with question marks */
-    private bool use_question_marks;
+    private bool use_question_marks
+    {
+        get
+        {
+            return settings.get_boolean (Mines.KEY_USE_QUESTION_MARKS);
+        }
+    }
 
     /* true if should warn when too many flags set */
-    private bool use_overmine_warning;
+    private bool use_overmine_warning
+    {
+        get
+        {
+            return settings.get_boolean (Mines.KEY_USE_OVERMINE_WARNING);
+        }
+    }
 
-    /* true if automatically set flags on middle click */
-    private bool use_autoflag;
+    /* true if automatically set flags on middle click... for debugging */
+    private bool use_autoflag
+    {
+        get
+        {
+            return settings.get_boolean (Mines.KEY_USE_AUTOFLAG);
+        }
+    }
 
     /* Position of keyboard cursor and selected squares */
     private Position keyboard_cursor;
@@ -154,8 +174,9 @@ public class MinefieldView : Gtk.DrawingArea
     public signal void look ();
     public signal void unlook ();
 
-    public MinefieldView ()
+    public MinefieldView (Settings settings)
     {
+        this.settings = settings;
         set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
         can_focus = true;
         selected = new Position ();
@@ -193,22 +214,6 @@ public class MinefieldView : Gtk.DrawingArea
 
             queue_resize ();
         }
-    }
-
-    public void set_use_question_marks (bool use_question_marks)
-    {
-        this.use_question_marks = use_question_marks;
-    }
-
-    public void set_use_overmine_warning (bool use_overmine_warning)
-    {
-        this.use_overmine_warning = use_overmine_warning;
-        queue_draw ();
-    }
-
-    public void set_use_autoflag (bool use_autoflag)
-    {
-        this.use_autoflag = use_autoflag;
     }
 
     private void explode_cb (Minefield minefield)

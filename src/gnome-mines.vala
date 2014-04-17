@@ -20,9 +20,11 @@ public class Mines : Gtk.Application
     private const int YSIZE_MAX = 100;
     private const string KEY_NMINES = "nmines";
     private const string KEY_MODE = "mode";
-    private const string KEY_USE_QUESTION_MARKS = "use-question-marks";
-    private const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
-    private const string KEY_USE_AUTOFLAG = "use-autoflag";
+
+    /* Keys shared with MinefieldView */
+    public static const string KEY_USE_QUESTION_MARKS = "use-question-marks";
+    public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
+    public static const string KEY_USE_AUTOFLAG = "use-autoflag";
 
     private Gtk.Box buttons_box;
     private Gtk.Button play_pause_button;
@@ -58,7 +60,6 @@ public class Mines : Gtk.Application
     /* Game status */
     private Gtk.Label flag_label;
 
-    private Gtk.Dialog? pref_dialog = null;
     private Gtk.SpinButton mines_spin;
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
@@ -69,14 +70,13 @@ public class Mines : Gtk.Application
 
     private const GLib.ActionEntry[] action_entries =
     {
-        { "new-game",      new_game_cb                                            },
-        { "repeat-size",   repeat_size_cb                                         },
-        { "pause",         toggle_pause_cb                                        },
-        { "scores",        scores_cb                                              },
-        { "preferences",   preferences_cb                                         },
-        { "quit",          quit_cb                                                },
-        { "help",          help_cb                                                },
-        { "about",         about_cb                                               }
+        { "new-game",           new_game_cb                                   },
+        { "repeat-size",        repeat_size_cb                                },
+        { "pause",              toggle_pause_cb                               },
+        { "scores",             scores_cb                                     },
+        { "quit",               quit_cb                                       },
+        { "help",               help_cb                                       },
+        { "about",              about_cb                                      }
     };
 
     public Mines ()
@@ -102,14 +102,19 @@ public class Mines : Gtk.Application
         repeat_size_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
         pause_action.set_enabled (false);
+        add_action (settings.create_action (KEY_USE_OVERMINE_WARNING));
+        add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
         var menu = new Menu ();
         app_main_menu = new Menu ();
         menu.append_section (null, app_main_menu);
         app_main_menu.append (_("_New Game"), "app.new-game");
         app_main_menu.append (_("_Scores"), "app.scores");
-        app_main_menu.append (_("_Preferences"), "app.preferences");
         var section = new Menu ();
+        menu.append_section (null, section);
+        section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
+        section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
+        section = new Menu ();
         menu.append_section (null, section);
         section.append (_("_Help"), "app.help");
         section.append (_("_About"), "app.about");
@@ -153,10 +158,7 @@ public class Mines : Gtk.Application
         view_box.show ();
         main_vbox.pack_start (view_box, true, true, 0);
 
-        minefield_view = new MinefieldView ();
-        minefield_view.set_use_question_marks (settings.get_boolean (KEY_USE_QUESTION_MARKS));
-        minefield_view.set_use_overmine_warning (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
-        minefield_view.set_use_autoflag (settings.get_boolean (KEY_USE_AUTOFLAG));
+        minefield_view = new MinefieldView (settings);
         minefield_view.button_press_event.connect (view_button_press_event);
         view_box.pack_start (minefield_view, true, true, 0);
 
@@ -754,54 +756,6 @@ public class Mines : Gtk.Application
         settings.set_int (KEY_NMINES,
                           (int) Math.round (spin.get_value () * (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)) / 100.0f));
     }
-
-    private void use_question_toggle_cb (Gtk.ToggleButton button)
-    {
-        var use_question_marks = button.get_active ();
-        settings.set_boolean (KEY_USE_QUESTION_MARKS, use_question_marks);
-        minefield_view.set_use_question_marks (use_question_marks);
-    }
-
-    private void use_overmine_toggle_cb (Gtk.ToggleButton button)
-    {
-        var use_overmine_warning = button.get_active ();
-        settings.set_boolean (KEY_USE_OVERMINE_WARNING, use_overmine_warning);
-        minefield_view.set_use_overmine_warning (use_overmine_warning);
-    }
-
-    private Gtk.Dialog create_preferences ()
-    {
-        var dialog = new Gtk.Dialog.with_buttons (_("Mines Preferences"),
-                                                  window,
-                                                  Gtk.DialogFlags.USE_HEADER_BAR,
-                                                  null);
-        dialog.response.connect (pref_response_cb);
-        dialog.delete_event.connect (pref_delete_event_cb);
-        dialog.set_border_width (5);
-        dialog.set_resizable (false);
-        var box = (Gtk.Box) dialog.get_content_area ();
-
-        var grid = new Gtk.Grid ();
-        grid.show ();
-        grid.border_width = 6;
-        grid.set_row_spacing (6);
-        grid.set_column_spacing (18);
-        box.add (grid);
-
-        var question_toggle = new Gtk.CheckButton.with_mnemonic (_("_Use \"I'm not sure\" flags"));
-        question_toggle.show ();
-        question_toggle.toggled.connect (use_question_toggle_cb);
-        question_toggle.set_active (settings.get_boolean (KEY_USE_QUESTION_MARKS));
-        grid.attach (question_toggle, 0, 0, 1, 1);
-
-        var overmine_toggle = new Gtk.CheckButton.with_mnemonic (_("_Warn if too many flags are placed next to a number"));
-        overmine_toggle.show ();
-        overmine_toggle.toggled.connect (use_overmine_toggle_cb);
-        overmine_toggle.set_active (settings.get_boolean (KEY_USE_OVERMINE_WARNING));
-        grid.attach (overmine_toggle, 0, 1, 1, 1);
-
-        return dialog;
-    }
     
     private void set_mode (int mode)
     {
@@ -829,24 +783,6 @@ public class Mines : Gtk.Application
     private void custom_size_clicked_cb ()
     {
         set_mode (3);
-    }
-    
-    private void pref_response_cb (Gtk.Dialog dialog, int response_id)
-    {
-        pref_dialog.hide ();
-    }
-
-    private bool pref_delete_event_cb (Gtk.Widget widget, Gdk.EventAny event)
-    {
-        pref_dialog.hide ();
-        return true;
-    }
-
-    private void preferences_cb ()
-    {
-        if (pref_dialog == null)
-            pref_dialog = create_preferences ();
-        pref_dialog.present ();
     }
 
     private void help_cb ()
