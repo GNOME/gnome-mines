@@ -59,8 +59,7 @@ public class Mines : Gtk.Application
     private Gtk.Label flag_label;
 
     private Gtk.Dialog? pref_dialog = null;
-    private Gtk.SpinButton n_mines_spin;
-    private Gtk.SpinButton p_mines_spin;
+    private Gtk.SpinButton mines_spin;
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
@@ -316,31 +315,20 @@ public class Mines : Gtk.Application
         custom_game_grid.attach (field_height_entry, 1, 1, 1, 1);
         label.set_mnemonic_widget (field_height_entry);
 
-        label = new Gtk.Label.with_mnemonic (_("_Mines:"));
+        label = new Gtk.Label.with_mnemonic (_("Percent _mines:"));
         label.set_alignment (0, 0.5f);
         custom_game_grid.attach (label, 0, 2, 1, 1);
 
-        n_mines_spin = new Gtk.SpinButton.with_range (1, XSIZE_MAX * YSIZE_MAX, 1);
-        n_mines_spin.value_changed.connect (n_mines_spin_cb);
-        n_mines_spin.set_value (settings.get_int (KEY_NMINES));
-        custom_game_grid.attach (n_mines_spin, 1, 2, 1, 1);
-        set_n_mines_limit ();
-        label.set_mnemonic_widget (n_mines_spin);
-
-        label = new Gtk.Label.with_mnemonic (_("_Percentage of mines:"));
-        label.set_alignment (0, 0.5f);
-        custom_game_grid.attach (label, 0, 3, 1, 1);
-
-        p_mines_spin = new Gtk.SpinButton.with_range (1, 100, 1);
-        p_mines_spin.value_changed.connect (p_mines_spin_cb);
-        custom_game_grid.attach (p_mines_spin, 1, 3, 1, 1);
-        set_p_mines_limit ();
-        label.set_mnemonic_widget (p_mines_spin);
+        mines_spin = new Gtk.SpinButton.with_range (1, 100, 1);
+        mines_spin.value_changed.connect (mines_spin_cb);
+        custom_game_grid.attach (mines_spin, 1, 2, 1, 1);
+        set_mines_limit ();
+        label.set_mnemonic_widget (mines_spin);
 
         var button_grid = new Gtk.Grid ();
         button_grid.margin_top = 18;
         button_grid.row_spacing = 5;
-        custom_game_grid.attach (button_grid, 0, 4, 2, 1);
+        custom_game_grid.attach (button_grid, 0, 3, 2, 1);
 
         var button = new Gtk.Button.with_mnemonic (_("_Cancel"));
         button.valign = Gtk.Align.CENTER;
@@ -724,44 +712,18 @@ public class Mines : Gtk.Application
                                null);
     }
 
-    private void set_n_mines_limit ()
+    private float percent_mines ()
     {
-        var size = settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE);
-
-        /* Fix up the maximum number of mines so that there is always at least
-         * ten free spaces. Nine are so we can clear at least the immediate
-         * eight neighbours at the start and one more so the game isn't over
-         * immediately. */
-        var max_mines = size - 10;
-        if (settings.get_int (KEY_NMINES) > max_mines)
-        {
-            settings.set_int (KEY_NMINES, max_mines);
-            n_mines_spin.set_value (max_mines);
-        }
-
-        /* On large minefields, require a minimum of 1% mines */
-        var min_mines = int.max ((int) Math.round (0.01f * size), 1);
-        if (settings.get_int (KEY_NMINES) < min_mines)
-        {
-            settings.set_int (KEY_NMINES, min_mines);
-            n_mines_spin.set_value (min_mines);
-        }
-
-        n_mines_spin.set_range (min_mines, max_mines);
+        return 100.0f * (float) settings.get_int (KEY_NMINES) / (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE));
     }
 
-    private float p_mines
-    {
-        get { return 100.0f * (float) settings.get_int (KEY_NMINES) / (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)); }
-    }
-
-    private void set_p_mines_limit ()
+    private void set_mines_limit ()
     {
         var size = settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE);
         var max_mines = (int) Math.round (100.0f * (float) (size - 10) / size);
         var min_mines = int.max (1, (int) Math.round (100.0f / size));
-        p_mines_spin.set_range (min_mines, max_mines);
-        p_mines_spin.set_value ((int) Math.round (p_mines));
+        mines_spin.set_range (min_mines, max_mines);
+        mines_spin.set_value ((int) Math.round (percent_mines ()));
     }
 
     private void xsize_spin_cb (Gtk.SpinButton spin)
@@ -771,8 +733,7 @@ public class Mines : Gtk.Application
             return;
 
         settings.set_int (KEY_XSIZE, xsize);
-        set_n_mines_limit ();
-        set_p_mines_limit ();
+        set_mines_limit ();
     }
 
     private void ysize_spin_cb (Gtk.SpinButton spin)
@@ -782,30 +743,16 @@ public class Mines : Gtk.Application
             return;
 
         settings.set_int (KEY_YSIZE, ysize);
-        set_n_mines_limit ();
-        set_p_mines_limit ();
+        set_mines_limit ();
     }
 
-    private void n_mines_spin_cb (Gtk.SpinButton spin)
+    private void mines_spin_cb (Gtk.SpinButton spin)
     {
-        var n_mines = spin.get_value_as_int ();
-        if (n_mines == settings.get_int (KEY_NMINES))
+        if (Math.fabs (percent_mines () - spin.get_value ()) <= 0.5f)
             return;
 
-        settings.set_int (KEY_NMINES, n_mines);
-
-        if (Math.fabs (p_mines - p_mines_spin.get_value ()) <= 100.0f * 0.5f / (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)))
-            return;
-
-        p_mines_spin.set_value ((int) Math.round (p_mines));
-    }
-
-    private void p_mines_spin_cb (Gtk.SpinButton spin)
-    {
-        if (Math.fabs (p_mines - spin.get_value ()) <= 0.5f)
-            return;
-
-        n_mines_spin.set_value ((int) Math.round (spin.get_value () * (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)) / 100.0f));
+        settings.set_int (KEY_NMINES,
+                          (int) Math.round (spin.get_value () * (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)) / 100.0f));
     }
 
     private void use_question_toggle_cb (Gtk.ToggleButton button)
