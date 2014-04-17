@@ -30,7 +30,6 @@ public class Mines : Gtk.Application
     private Gtk.Button high_scores_button;
     private Gtk.Button new_game_button;
 
-    private Gtk.Box clock_box;
     private Gtk.Label clock_label;
 
     private Menu app_main_menu;
@@ -192,16 +191,16 @@ public class Mines : Gtk.Application
         size.add_widget (box);
         box.show_all ();
 
-        clock_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        var clock_image = new Gtk.Image.from_icon_name ("preferences-system-time-symbolic", Gtk.IconSize.DND);
-        clock_box.pack_start (clock_image, false, false, 0);
+        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
+        image = new Gtk.Image.from_icon_name ("preferences-system-time-symbolic", Gtk.IconSize.DND);
+        box.pack_start (image, false, false, 0);
         clock_label = new Gtk.Label ("");
         clock_label.show ();
-        clock_box.pack_start (clock_label, false, false, 0);
-        buttons_box.pack_start (clock_box, false, false, 0);
-        size.add_widget (clock_box);
-        clock_box.show_all ();
-        clock_box.margin_bottom = 22;
+        box.pack_start (clock_label, false, false, 0);
+        buttons_box.pack_start (box, false, false, 0);
+        size.add_widget (box);
+        box.show_all ();
+        box.margin_bottom = 22;
 
         play_pause_button = new Gtk.Button ();
         buttons_box.pack_end (play_pause_button, false, false, 0);
