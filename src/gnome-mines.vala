@@ -138,6 +138,7 @@ public class Mines : Gtk.Application
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        window.set_size_request (550, 550);
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
