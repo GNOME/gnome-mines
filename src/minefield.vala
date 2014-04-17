@@ -89,11 +89,6 @@ public class Minefield
     private Timer? clock;
     private uint clock_timeout;
 
-    /* Time penalty for a hint increases the more you use it */
-    private static const uint HINT_TIME_PENALTY_MAX = 90;
-    private static const uint HINT_TIME_PENALTY_INCREASE = 10;
-    private uint hint_time_penalty_seconds = 10;
-
     public double elapsed
     {
         get
@@ -263,78 +258,6 @@ public class Minefield
     public FlagType get_flag (uint x, uint y)
     {
         return locations[x, y].flag;
-    }
-
-    public void hint ()
-    {
-        /* We search for three cases:
-         *
-         * Case 1: we look for squares adjacent to both a mine and a revealed
-         * square since these are most likely to help the player and resolve
-         * ambiguous situations.
-         *
-         * Case 2: we look for squares that are adjacent to a mine
-         * (this will only occur in the rare case that a square is completely
-         * encircled by mines, but at that point this case is probably
-         * useful).
-         *
-         * Case 3: we look for any unrevealed square without a mine (as a
-         * consequence of the previous cases this won't be adjacent to a
-         * mine).
-         */
-
-        List<uint> case1list = null;
-        List<uint> case2list = null;
-        List<uint> case3list = null;
-
-        for (var mx = 0; mx < width; mx++)
-        {
-            for (var my = 0; my < height; my++)
-            {
-                var m = locations[mx, my];
-                if (!m.has_mine && !m.cleared)
-                {
-                    case3list.append (mx * width + my);
-                    if (m.flag != FlagType.FLAG && get_n_adjacent_mines (mx, my) > 0)
-                    {
-                        case2list.append (mx * width + my);
-                        foreach (var neighbour in neighbour_map)
-                        {
-                            if (!is_location (mx + neighbour.x, my + neighbour.y))
-                                 continue;
-                            if (locations[mx + neighbour.x, my + neighbour.y].cleared)
-                            {
-                                case1list.append (mx * width + my);
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        uint hint_location = 0;
-        if (case1list.length () > 0)
-            hint_location = case1list.nth_data (Random.int_range (0, (int32) case1list.length ()));
-        else if (case2list.length () > 0)
-            hint_location = case2list.nth_data (Random.int_range (0, (int32) case2list.length ()));
-        else if (case3list.length () > 0)
-            hint_location = case3list.nth_data (Random.int_range (0, (int32) case3list.length ()));
-
-        /* Makes sure that the program knows about the successful
-         * hint before a possible win. */
-        var x = hint_location / width;
-        var y = hint_location % width;
-
-        if (locations[x, y].flag == FlagType.FLAG)
-            locations[x, y].flag = FlagType.NONE;
-
-        /* There is a ten second penalty for accepting a hint_action. */
-        clear_mine (x, y);
-        clock_elapsed += hint_time_penalty_seconds;
-        if (hint_time_penalty_seconds < HINT_TIME_PENALTY_MAX)
-            hint_time_penalty_seconds += HINT_TIME_PENALTY_INCREASE;
-        tick ();
     }
 
     public uint get_n_adjacent_mines (uint x, uint y)

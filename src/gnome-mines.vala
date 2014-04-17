@@ -32,7 +32,6 @@ public class Mines : Gtk.Application
 
     private Gtk.Box clock_box;
     private Gtk.Label clock_label;
-    private Gtk.Button hint_button;
 
     private Menu app_main_menu;
 
@@ -66,7 +65,6 @@ public class Mines : Gtk.Application
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
-    private SimpleAction hint_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
     private bool is_new_game_screen;
@@ -75,7 +73,6 @@ public class Mines : Gtk.Application
     {
         { "new-game",      new_game_cb                                            },
         { "repeat-size",   repeat_size_cb                                         },
-        { "hint",          hint_cb                                                },
         { "pause",         toggle_pause_cb                                        },
         { "scores",        scores_cb                                              },
         { "preferences",   preferences_cb                                         },
@@ -105,8 +102,6 @@ public class Mines : Gtk.Application
         new_game_action.set_enabled (false);
         repeat_size_action = lookup_action ("repeat-size") as SimpleAction;
         repeat_size_action.set_enabled (false);
-        hint_action = lookup_action ("hint") as SimpleAction;
-        hint_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
         pause_action.set_enabled (false);
 
@@ -187,21 +182,15 @@ public class Mines : Gtk.Application
 
         var size = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
 
-        hint_button = new Gtk.Button ();
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        var image = new Gtk.Image.from_icon_name ("dialog-question-symbolic", Gtk.IconSize.DND);
-        box.pack_start (image);
+        // Obviously a FIXME image
+        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale-symbolic", Gtk.IconSize.DND);
+        box.pack_start (image, false, false, 0);
         flag_label = new Gtk.Label ("");
-        box.pack_start (flag_label);
-        hint_button.add (box);
-        hint_button.valign = Gtk.Align.CENTER;
-        hint_button.halign = Gtk.Align.CENTER;
-        hint_button.relief = Gtk.ReliefStyle.NONE;
-        hint_button.action_name = "app.hint";
-        hint_button.tooltip_text = _("Receive a hint for your next move");
-        buttons_box.pack_start (hint_button, false, false, 0);
-        size.add_widget (hint_button);
-        hint_button.show_all ();
+        box.pack_start (flag_label, false, false, 0);
+        buttons_box.pack_start (box, false, false, 0);
+        size.add_widget (box);
+        box.show_all ();
 
         clock_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
         var clock_image = new Gtk.Image.from_icon_name ("preferences-system-time-symbolic", Gtk.IconSize.DND);
@@ -530,7 +519,6 @@ public class Mines : Gtk.Application
 
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
-        hint_action.set_enabled (false);
         pause_action.set_enabled (false);
         buttons_box.hide ();
     }
@@ -593,15 +581,9 @@ public class Mines : Gtk.Application
         new_game_action.set_enabled (true);
         repeat_size_action.set_enabled (true);
         pause_action.set_enabled (true);
-        hint_action.set_enabled (true);
 
         minefield.paused = false;
         pause_requested = false;
-    }
-
-    private void hint_cb ()
-    {
-        minefield.hint ();
     }
 
     private void new_game_cb ()
@@ -632,15 +614,9 @@ public class Mines : Gtk.Application
     private void paused_changed_cb ()
     {
         if (minefield.paused)
-        {
-            hint_action.set_enabled (false);
             display_unpause_button ();
-        }
         else if (minefield.elapsed > 0)
-        {
-            hint_action.set_enabled (true);
             display_pause_button ();
-        }
     }
 
     private void marks_changed_cb (Minefield minefield)
@@ -653,7 +629,6 @@ public class Mines : Gtk.Application
         new_game_button.show ();
         replay_button.show ();
         high_scores_button.show ();
-        hint_action.set_enabled (false);
         pause_action.set_enabled (false);
         play_pause_button.hide ();
     }
@@ -673,7 +648,6 @@ public class Mines : Gtk.Application
             new_game_button.show ();
             replay_button.show ();
             high_scores_button.show ();
-            hint_action.set_enabled (false);
             pause_action.set_enabled (false);
             play_pause_button.hide ();
         }
