@@ -4,139 +4,50 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2013-11-19 17:32+0000\n"
-"PO-Revision-Date: 2013-11-23 12:05+0300\n"
-"Last-Translator: Dimitris Spingos (Δημήτρης Σπίγγος) <dmtrs32@gmail.com>\n"
+"POT-Creation-Date: 2014-04-18 19:21+0000\n"
+"PO-Revision-Date: 2014-04-19 01:25+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.0\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Ελληνική μεταφραστική ομάδα GNOME\n"
 " Μάριος Ζηντίλης <m.zindilis@dmajor.org>, 2009\n"
 " Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
-" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013\n"
-"Για περισσότερα δείτε http://www.gnome.gr/"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
-#. (itstool) path: info/title
-#: C/index.page:6
-msgctxt "link"
-msgid "GNOME Mines"
-msgstr "Νάρκες"
-
-#. (itstool) path: info/title
-#: C/index.page:7
-msgctxt "text"
-msgid "GNOME Mines"
-msgstr "Νάρκες"
+" Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013"
 
 #. (itstool) path: credit/name
-#: C/index.page:10 C/shortcuts.page:9
-msgid "Brian Grohe"
-msgstr "Brian Grohe"
-
-#. (itstool) path: credit/name
-#: C/index.page:14 C/board-size.page:15 C/documentation.page:14
-#: C/flags.page:23 C/get-help.page:14 C/high-scores.page:15 C/new-game.page:16
-#: C/rules.page:16
-msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
-
-#. (itstool) path: license/p
-#: C/index.page:18 C/bug-filing.page:14 C/develop.page:15
-#: C/documentation.page:23 C/translate.page:19
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Share Alike 3.0"
-
-#. (itstool) path: page/title
-#: C/index.page:22
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Λογότυπος του Νάρκες GNOME</"
-"media>Νάρκες GNOME"
-
-#. (itstool) path: page/p
-#: C/index.page:24
-msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
-"all the mines that are hidden under tiles on a rectangular board. You will "
-"need to use a combination of logic and luck to find all the mines without "
-"triggering an explosion."
-msgstr ""
-"Οι <app>Νάρκες</app> είναι ένας κλώνος του Ναρκαλιευτή. Ο στόχος είναι να "
-"εντοπίσετε όλες τις νάρκες που είναι κρυμμένες κάτω από τα πλακίδια στον "
-"ορθογώνιο πίνακα. Θα χρειαστεί να χρησιμοποιήσετε ένα συνδυασμό λογικής και "
-"τύχης για να βρείτε όλες τις νάρκες χωρίς να προκαλέσουν έκρηξη."
-
-#. (itstool) path: section/title
-#: C/index.page:31
-msgid "Game Play"
-msgstr "Παιχνίδι"
-
-#. (itstool) path: section/title
-#: C/index.page:34
-msgid "Useful tips"
-msgstr "Χρήσιμες συμβουλές"
-
-#. (itstool) path: section/title
-#: C/index.page:37
-msgid "Advanced"
-msgstr "Για προχωρημένους"
-
-#. (itstool) path: section/title
-#: C/index.page:40
-msgid "Get Involved"
-msgstr "Συμμετοχή"
-
-#. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:17 C/get-help.page:9
-#: C/high-scores.page:10 C/new-game.page:11 C/rules.page:11
+#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:11 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:16 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:13 C/new-game.page:18 C/rules.page:18
-#: C/shortcuts.page:11 C/toolbar.page:10
+#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
 msgid "2012"
 msgstr "2012"
 
@@ -188,9 +99,15 @@ msgstr ""
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/toolbar.page:8 C/translate.page:10
+#: C/flags.page:11 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:18 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
@@ -293,15 +210,22 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
+#| msgid ""
+#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
 msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
 "href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Εάν θα θέλετε να <link href=\"https://live.gnome.org/GnomeGames/Contributing"
+"Εάν θα θέλετε να <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
 "\">βοηθήσετε στην ανάπτυξη των <app>Παιχνιδιών του GNOME</app></link>, "
 "μπορείτε να επικοινωνήσετε με τους προγραμματιστές χρησιμοποιώντας το <link "
 "href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-"
@@ -309,7 +233,7 @@ msgstr ""
 "listinfo/games-list\">λίστα αλληλογραφίας</link> μας."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/new-game.page:21
+#: C/documentation.page:19 C/new-game.page:22
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -472,13 +396,23 @@ msgstr ""
 "style=\"manu\">Νάρκες</gui><gui style=\"menuitem\">Προτιμήσεις</gui></"
 "guiseq>, και επιλέξτε <gui>Χρήση σημαιών \"Δεν είμαι σίγουρος\"</gui>."
 
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
 #. (itstool) path: page/title
-#: C/get-help.page:21
+#: C/get-help.page:27
 msgid "Hints and warnings"
 msgstr "Υποδείξεις και προειδοποιήσεις"
 
 #. (itstool) path: page/p
-#: C/get-help.page:23
+#: C/get-help.page:29
 msgid ""
 "You can use hints to reveal safe tiles, and flag warnings to help you keep "
 "track of flags."
@@ -488,23 +422,31 @@ msgstr ""
 "τις σημαίες."
 
 #. (itstool) path: page/p
-#: C/get-help.page:26
+#: C/get-help.page:32
 msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalized for using hints: ten seconds will "
-"be added to your total time."
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
 msgstr ""
-"Πατήστε στο <gui style=\"button\">Υπόδειξη</gui> στην εργαλειοθήκη για να "
-"αποκαλύψετε ένα κρυφό πλακίδιο που είναι ασφαλές. Θα τιμωρηθείτε για τη "
-"χρήση των υποδείξεων: δέκα δευτερόλεπτα θα προστεθούν στο συνολικό σας χρόνο."
+"Κάντε κλικ πάνω δεξία στο κουμπί <gui style=\"button\">Λήψη υπόδειξης για "
+"την επόμενη κίνησή σας</gui> για να εμφανιστεί ένα κρυφό πλακίδιο που είναι "
+"ασφαλές να τοποθετηθεί.Μια ποινή χρόνου δέκα δευτερολέπτων θα προστεθεί στον "
+"συνολικό σας χρόνο. Η ποινή θα αυξάνεται προοδευτικά κατά δέκα δευτερόλεπτα "
+"για τις ακόλουθες εννέα υποδείξεις."
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:38
+#| msgid ""
+#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+#| "gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
+#| "<gui>Warn if too many flags have been placed</gui>. This will warn you "
+#| "when you try to place too many flags next to an open tile."
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
-"you try to place too many flags next to an open tile."
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
 msgstr ""
 "Για να ενεργοποιήσετε τις προειδοποιήσεις, επεξεργαστείτε τις προτιμήσεις "
 "επιλέγοντας <guiseq><gui>Νάρκες</gui><gui>Προτιμήσεις</gui></guiseq> και "
@@ -539,6 +481,87 @@ msgstr ""
 "παράθυρο διαλόγου θα εμφανίζει το <gui>μικρό</gui> μέγεθος πεδίου από "
 "προεπιλογή· για να δείτε τα άλλα μεγέθη, επιλέξτε τα από το αναπτυσσόμενο "
 "μενού στη κορυφή του διαλόγου."
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:4
+msgctxt "_"
+msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#. (itstool) path: media
+#. This is a reference to an external file such as an image or video. When
+#. the file changes, the md5 hash will change to let you know you need to
+#. update your localized copy. The msgstr is not used at all. Set it to
+#. whatever you like once you have updated your copy of the file.
+#: C/index.page:22
+msgctxt "_"
+msgid ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+msgstr ""
+"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+
+#. (itstool) path: info/title
+#: C/index.page:6
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "Νάρκες"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "Νάρκες"
+
+#. (itstool) path: credit/name
+#: C/index.page:10 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:22
+msgid ""
+"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+"GNOME Mines"
+msgstr ""
+"<media type=\"image\" src=\"figures/logo32.png\">Λογότυπος του Νάρκες GNOME</"
+"media>Νάρκες GNOME"
+
+#. (itstool) path: page/p
+#: C/index.page:24
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"Οι <app>Νάρκες</app> είναι ένας κλώνος του Ναρκαλιευτή. Ο στόχος είναι να "
+"εντοπίσετε όλες τις νάρκες που είναι κρυμμένες κάτω από τα πλακίδια στον "
+"ορθογώνιο πίνακα. Θα χρειαστεί να χρησιμοποιήσετε ένα συνδυασμό λογικής και "
+"τύχης για να βρείτε όλες τις νάρκες χωρίς να προκαλέσουν έκρηξη."
+
+#. (itstool) path: section/title
+#: C/index.page:31
+msgid "Game Play"
+msgstr "Παιχνίδι"
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Useful tips"
+msgstr "Χρήσιμες συμβουλές"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Get Involved"
+msgstr "Συμμετοχή"
 
 #. (itstool) path: info/desc
 #: C/license.page:8
@@ -633,34 +656,36 @@ msgstr ""
 "by-sa/3.0/\">Πράξη Commons</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:26
+#: C/new-game.page:31
 msgid "Start a new game"
 msgstr "Εκκίνηση νέου παιχνιδιού"
 
 #. (itstool) path: page/p
-#: C/new-game.page:28
+#: C/new-game.page:33
 msgid "To start a new game:"
 msgstr "Για να ξεκινήσετε ένα νέο παιχνίδι:"
 
 #. (itstool) path: item/p
-#: C/new-game.page:31
+#: C/new-game.page:36
+#| msgid ""
+#| "Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
+#| "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></"
+#| "guiseq> from the application menu."
 msgid ""
-"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu."
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
 msgstr ""
-"Πατήστε στο κουμπί <gui style=\"button\">Νέο</gui> ή επιλέξτε <guiseq><gui "
-"style=\"menu\">Νάρκες</gui> <gui style=\"menuitem\">Νέο παιχνίδι</gui></"
-"guiseq> από το μενού της εφαρμογής."
+"Επιλέξτε <guiseq><gui style=\"menu\">Νάρκες</gui><gui style=\"menuitem\">Νέο "
+"παιχνίδι</gui></guiseq> από το μενού της εφαρμογής."
 
 #. (itstool) path: item/p
-#: C/new-game.page:37
+#: C/new-game.page:41
 msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 msgstr ""
 "Επιλέξτε το προτιμώμενο <link xref=\"board-size\">μέγεθος πίνακα</link>."
 
 #. (itstool) path: note/p
-#: C/new-game.page:42
+#: C/new-game.page:46
 msgid ""
 "If you are already playing a game, <app>Mines</app> will ask if you want to "
 "<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
@@ -818,26 +843,6 @@ msgstr "Έξοδος"
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
-#. (itstool) path: page/title
-#: C/toolbar.page:15
-msgid "Toolbar"
-msgstr "Γραμμή εργαλείων"
-
-#. (itstool) path: page/p
-#: C/toolbar.page:17
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
-"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
-msgstr ""
-"Η εργαλειοθήκη που βρίσκεται κάτω από τη γραμμή του μενού, σας επιτρέπει να "
-"εκτελέσετε κοινές ενέργειες με το ποντίκι σας. Για να χρησιμοποιήσετε ένα "
-"αντικείμενο της εργαλειοθήκης, απλά κάντε κλικ σε αυτό. Τα κουμπιά, από "
-"αριστερά προς τα δεξιά, είναι <gui><link xref=\"new-game\">Νέο παιχνίδι</"
-"link></gui>, <link xref=\"get-help\">Υπόδειξη</link>, <gui>Παύση</gui> και "
-"<gui>Πλήρης οθόνη</gui>."
-
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
@@ -870,13 +875,18 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:30
+#| msgid ""
+#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
+#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
+#| "org/teams/\">translation team</link> for your language. This will give "
+#| "you the ability to upload new translations."
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Για να ξεκινήσετε να μεταφράζετε πρέπει να <link href=\"http:l10n.gnome.org"
+"Για να ξεκινήσετε να μεταφράζετε πρέπει να <link href=\"http://l10n.gnome.org"
 "\">δημιουργήσετε έναν λογαριασμό</link> και να συμμετάσχετε στην <link href="
 "\"http://l10n.gnome.org/teams/\">ομάδα μετάφρασης</link> της γλώσσας σας. "
 "Αυτό θα σας δώσει την δυνατότητα να ανεβάσετε νέες μεταφράσεις."
@@ -904,6 +914,33 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid ""
+#~ "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
+#~ "tile that is safe. You will be penalized for using hints: ten seconds "
+#~ "will be added to your total time."
+#~ msgstr ""
+#~ "Πατήστε στο <gui style=\"button\">Υπόδειξη</gui> στην εργαλειοθήκη για να "
+#~ "αποκαλύψετε ένα κρυφό πλακίδιο που είναι ασφαλές. Θα τιμωρηθείτε για τη "
+#~ "χρήση των υποδείξεων: δέκα δευτερόλεπτα θα προστεθούν στο συνολικό σας "
+#~ "χρόνο."
+
+#~ msgid "Toolbar"
+#~ msgstr "Γραμμή εργαλείων"
+
+#~ msgid ""
+#~ "The toolbar, located under the menu bar, lets you perform common actions "
+#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
+#~ "from left to right, are <gui><link xref=\"new-game\">New Game</link></"
+#~ "gui>, <link xref=\"get-help\">Hint</link>, <gui>Pause</gui> and "
+#~ "<gui>Fullscreen</gui>."
+#~ msgstr ""
+#~ "Η εργαλειοθήκη που βρίσκεται κάτω από τη γραμμή του μενού, σας επιτρέπει "
+#~ "να εκτελέσετε κοινές ενέργειες με το ποντίκι σας. Για να χρησιμοποιήσετε "
+#~ "ένα αντικείμενο της εργαλειοθήκης, απλά κάντε κλικ σε αυτό. Τα κουμπιά, "
+#~ "από αριστερά προς τα δεξιά, είναι <gui><link xref=\"new-game\">Νέο "
+#~ "παιχνίδι</link></gui>, <link xref=\"get-help\">Υπόδειξη</link>, "
+#~ "<gui>Παύση</gui> και <gui>Πλήρης οθόνη</gui>."
 
 #~ msgctxt "_"
 #~ msgid ""
