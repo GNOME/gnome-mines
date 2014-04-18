@@ -142,22 +142,6 @@ public class MinefieldView : Gtk.DrawingArea
         }
     }
     
-    private uint x_offset
-    {
-        get
-        {
-            return (get_allocated_width () - minefield.width * mine_size) / 2;
-        }
-    }
-
-    private uint y_offset
-    {
-        get
-        {
-            return (get_allocated_height () - minefield.height * mine_size) / 2;
-        }
-    }
-
     private uint minimum_size
     {
         get
@@ -338,7 +322,7 @@ public class MinefieldView : Gtk.DrawingArea
 
     private void redraw_sector_cb (uint x, uint y)
     {
-        queue_draw_area ((int) (x_offset + x * mine_size), (int) (y_offset + y * mine_size), (int) mine_size, (int) mine_size);
+        queue_draw_area ((int) (x * mine_size), (int) (y * mine_size), (int) mine_size, (int) mine_size);
     }
     
     private void draw_square (Cairo.Context cr, uint x, uint y)
@@ -480,7 +464,7 @@ public class MinefieldView : Gtk.DrawingArea
         }
 
         double dimensions[2] = {minefield.width * mine_size, minefield.height * mine_size};
-        double centre[2] = { x_offset + 0.5 * dimensions[0], y_offset + 0.5 * dimensions[1] };
+        double centre[2] = { 0.5 * dimensions[0], 0.5 * dimensions[1] };
         double radius = Math.fmax (dimensions[0], dimensions[1]);
 
         /* Draw Background */
@@ -488,7 +472,7 @@ public class MinefieldView : Gtk.DrawingArea
         pattern.add_color_stop_rgba (0.0, 0.0, 0.0, 0.0, 0.1);
         pattern.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.4);
 
-        cr.rectangle (x_offset - 0.5, y_offset - 0.5, dimensions[0] + 0.5, dimensions[1] + 0.5);
+        cr.rectangle (- 0.5, - 0.5, dimensions[0] + 0.5, dimensions[1] + 0.5);
         cr.save ();
         cr.set_source (pattern);
         cr.fill_preserve ();
@@ -506,15 +490,15 @@ public class MinefieldView : Gtk.DrawingArea
 
         for (var x = 1; x < minefield.width; x++)
         {
-            cr.move_to (x_offset + x * mine_size, y_offset);
-            cr.line_to (x_offset + x * mine_size, y_offset + dimensions[1]);
+            cr.move_to (x * mine_size, 0);
+            cr.line_to (x * mine_size, dimensions[1]);
             cr.stroke ();
         }
 
         for (var y = 1; y < minefield.height; y++)
         {
-            cr.move_to (x_offset, y_offset + y * mine_size);
-            cr.line_to (x_offset + dimensions[0], y_offset + y * mine_size);
+            cr.move_to (0, y * mine_size);
+            cr.line_to (dimensions[0], y * mine_size);
             cr.stroke ();
         }
 
@@ -526,7 +510,7 @@ public class MinefieldView : Gtk.DrawingArea
             for (var y = 0; y < minefield.height; y++)
             {
                 cr.save ();
-                cr.translate (x_offset + x * mine_size, y_offset + y * mine_size);
+                cr.translate (x * mine_size, y * mine_size);
                 draw_square (cr, x, y);
                 cr.restore ();
             }
@@ -535,7 +519,7 @@ public class MinefieldView : Gtk.DrawingArea
         /* Draw keyboard cursor */
         if (keyboard_cursor.is_set)
         {
-            double key_centre[2] = { x_offset + (keyboard_cursor.x+0.5) * mine_size, y_offset + (keyboard_cursor.y+0.5) * mine_size };
+            double key_centre[2] = { (keyboard_cursor.x+0.5) * mine_size, (keyboard_cursor.y+0.5) * mine_size };
             var key_cursor = new Cairo.Pattern.radial (key_centre[0], key_centre[1], 0.0, key_centre[0], key_centre[1], 0.25 * mine_size);
             key_cursor.add_color_stop_rgba (0.0, 1.0, 1.0, 1.0, 1.0);
             key_cursor.add_color_stop_rgba (0.8, 1.0, 1.0, 1.0, 0.1);
@@ -676,8 +660,8 @@ public class MinefieldView : Gtk.DrawingArea
 
         /* Hide any lingering previously selected and get new location */
         selected.is_set = false;
-        selected.x = (int) Math.floor ((event.x - x_offset) / mine_size);
-        selected.y = (int) Math.floor ((event.y - y_offset) / mine_size);
+        selected.x = (int) Math.floor ((event.x) / mine_size);
+        selected.y = (int) Math.floor ((event.y) / mine_size);
 
         /* Is the current position a minefield square? */
         if (!selected.is_valid)
@@ -712,8 +696,8 @@ public class MinefieldView : Gtk.DrawingArea
         if (!selected.is_set || keyboard_cursor.is_set)
             return false;
 
-        var x = (int) Math.floor ((event.x - x_offset) / mine_size);
-        var y = (int) Math.floor ((event.y - y_offset) / mine_size);
+        var x = (int) Math.floor ((event.x) / mine_size);
+        var y = (int) Math.floor ((event.y) / mine_size);
         selected.position = {x, y};
 
         return false;

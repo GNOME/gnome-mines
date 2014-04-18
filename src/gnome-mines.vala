@@ -31,7 +31,8 @@ public class Mines : Gtk.Application
     private Gtk.Button replay_button;
     private Gtk.Button high_scores_button;
     private Gtk.Button new_game_button;
-
+    private Gtk.AspectFrame minefield_aspect;
+    
     private Gtk.Label clock_label;
 
     private Menu app_main_menu;
@@ -159,8 +160,14 @@ public class Mines : Gtk.Application
         main_vbox.pack_start (view_box, true, true, 0);
 
         minefield_view = new MinefieldView (settings);
+        minefield_view.show ();
         minefield_view.button_press_event.connect (view_button_press_event);
-        view_box.pack_start (minefield_view, true, true, 0);
+
+        minefield_aspect = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f , false);
+        minefield_aspect.set_shadow_type (Gtk.ShadowType.NONE);
+        minefield_aspect.add (minefield_view);
+
+        view_box.pack_start (minefield_aspect, true, true, 0);
 
         /* Initialize New Game Screen */
         startup_new_game_screen ();
@@ -455,7 +462,7 @@ public class Mines : Gtk.Application
     {
         is_new_game_screen = false;
         custom_game_screen.show ();
-        minefield_view.hide ();
+        minefield_aspect.hide ();
         new_game_screen.hide ();
     }
 
@@ -497,7 +504,7 @@ public class Mines : Gtk.Application
 
         is_new_game_screen = true;
         custom_game_screen.hide ();
-        minefield_view.hide ();
+        minefield_aspect.hide ();
         new_game_screen.show ();
         window.resize (window_width, window_height);
 
@@ -514,7 +521,7 @@ public class Mines : Gtk.Application
         is_new_game_screen = false;
         custom_game_screen.hide ();
         window_skip_configure = true;
-        minefield_view.show ();
+        minefield_aspect.show ();
         minefield_view.has_focus = true;
         new_game_screen.hide ();
         play_pause_button.hide ();
@@ -561,6 +568,7 @@ public class Mines : Gtk.Application
         minefield.paused_changed.connect (paused_changed_cb);
         minefield.clock_started.connect (clock_started_cb);
 
+        minefield_aspect.ratio = (float)x / y;
         minefield_view.minefield = minefield;
 
         update_flag_label ();
