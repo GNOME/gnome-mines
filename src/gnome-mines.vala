@@ -136,7 +136,7 @@ public class Mines : Gtk.Application
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
-        window.set_size_request (550, 550);
+        window.set_size_request (550, 475);
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
@@ -176,7 +176,7 @@ public class Mines : Gtk.Application
         buttons_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 4);
         buttons_box.margin_right = 6;
         buttons_box.margin_left = 6;
-        buttons_box.set_size_request (100, -1);
+        buttons_box.set_size_request (115, -1);
 
         main_vbox.pack_start (buttons_box, false, false, 0);
 
@@ -188,8 +188,7 @@ public class Mines : Gtk.Application
         box.pack_start (image, false, false, 0);
         flag_label = new Gtk.Label ("");
         box.pack_start (flag_label, false, false, 0);
-        buttons_box.pack_start (box, false, false, 0);
-        size.add_widget (box);
+        buttons_box.pack_start (box, false, false, 8);
         box.show_all ();
 
         box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
@@ -198,16 +197,14 @@ public class Mines : Gtk.Application
         clock_label = new Gtk.Label ("");
         clock_label.show ();
         box.pack_start (clock_label, false, false, 0);
-        buttons_box.pack_start (box, false, false, 0);
-        size.add_widget (box);
+        buttons_box.pack_start (box, false, false, 8);
         box.show_all ();
-        box.margin_bottom = 22;
+        box.margin_bottom = 18;
 
         play_pause_button = new Gtk.Button ();
         buttons_box.pack_end (play_pause_button, false, false, 0);
         size.add_widget (play_pause_button);
         play_pause_button.use_underline = true;
-        play_pause_button.hide ();
 
         high_scores_button = new Gtk.Button.with_mnemonic (_("_Best Times"));
         var label = (Gtk.Label)high_scores_button.get_child ();
@@ -217,7 +214,7 @@ public class Mines : Gtk.Application
         high_scores_button.action_name = "app.scores";
         size.add_widget (high_scores_button);
 
-        new_game_button = new Gtk.Button.with_mnemonic (_("Change _Difficulty"));
+        new_game_button = new Gtk.Button.with_mnemonic (_("_Difficulty"));
         label = (Gtk.Label)new_game_button.get_child ();
         label.wrap = true;
         label.justify = Gtk.Justification.CENTER;
@@ -520,9 +517,10 @@ public class Mines : Gtk.Application
         minefield_view.show ();
         minefield_view.has_focus = true;
         new_game_screen.hide ();
-        replay_button.hide ();
-        high_scores_button.hide ();
         play_pause_button.hide ();
+        replay_button.hide ();
+        new_game_button.hide ();
+        high_scores_button.hide ();
         buttons_box.show ();
 
         tick_cb ();
@@ -645,7 +643,6 @@ public class Mines : Gtk.Application
     private void clock_started_cb ()
     {
         display_pause_button ();
-        new_game_button.hide ();
     }
 
     private void tick_cb ()
@@ -805,6 +802,10 @@ public class Mines : Gtk.Application
         play_pause_button.show ();
         play_pause_button.action_name = "app.pause";
         play_pause_button.label = _("_Pause");
+        var label = (Gtk.Label)play_pause_button.get_child ();
+        label.margin = 12;
+        label.margin_left = 24;
+        label.margin_right = 24;
     }
 
     private void display_unpause_button ()
@@ -815,6 +816,10 @@ public class Mines : Gtk.Application
         play_pause_button.show ();
         play_pause_button.action_name = "app.pause";
         play_pause_button.label = _("_Resume");
+        var label = (Gtk.Label)play_pause_button.get_child ();
+        label.margin = 12;
+        label.margin_left = 24;
+        label.margin_right = 24;
     }
 
     public static int main (string[] args)
