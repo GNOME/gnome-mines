@@ -1,0 +1,60 @@
+/*
+You can type here any CSS rule recognized by GTK+.
+You can temporarily disable this custom CSS by clicking on the "Pause" button above.
+
+Changes are applied instantly and globally, for the whole application.
+*/
+
+.tile {
+  background-image:none;
+  background-color:#d3d7cf;
+  border-radius:0px;
+  border-width:3px;
+  color:black;
+  border-color:transparent;
+  border-image:none;
+  font-size:18px;
+  font-weight: bold;
+}
+
+.tile:hover {
+  border-width:1px;
+  border-color:#babdb6;
+}
+
+.tile:active {
+  background-color:#888a85;
+}
+
+.count {
+  background-color:#eeeeec;
+}
+
+.flag {
+  background-color:#8ae234;
+}
+
+.exploded {
+  background-color:#8ae234;
+}
+
+.maybe {
+  background-color:#fce94f;
+}
+
+.incorrect {
+  background-color:#ef2929;
+}
+
+.mine {
+  background-color:#729fcf;
+}
+
+.exploded {
+  background-color:#cc0000;
+}
+
+.cursor {
+  background-color:#e9b96e;
+}
+

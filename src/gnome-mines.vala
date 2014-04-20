@@ -32,7 +32,7 @@ public class Mines : Gtk.Application
     private Gtk.Button high_scores_button;
     private Gtk.Button new_game_button;
     private Gtk.AspectFrame minefield_aspect;
-    
+
     private Gtk.Label clock_label;
 
     private Menu app_main_menu;
@@ -95,6 +95,18 @@ public class Mines : Gtk.Application
         settings.delay ();
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
+
+        var css_provider = new Gtk.CssProvider ();
+        var css_path = Path.build_filename (DATA_DIRECTORY, "gnome-mines.css");
+        try
+        {
+            css_provider.load_from_path (css_path);
+        }
+        catch (GLib.Error e)
+        {
+            warning ("Error loading css styles from %s: %s", css_path, e.message);
+        }
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
