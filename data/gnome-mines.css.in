@@ -68,3 +68,8 @@ Changes are applied instantly and globally, for the whole application.
   background-color:#e9b96e;
 }
 
+.pausedOverlay {
+  background-color:black;
+  color: white;
+  font-size:32px;
+}

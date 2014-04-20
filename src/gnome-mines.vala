@@ -32,6 +32,8 @@ public class Mines : Gtk.Application
     private Gtk.Button high_scores_button;
     private Gtk.Button new_game_button;
     private Gtk.AspectFrame minefield_aspect;
+    private Gtk.Overlay minefield_overlay;
+    private Gtk.Box paused_box;
 
     private Gtk.Label clock_label;
 
@@ -173,11 +175,27 @@ public class Mines : Gtk.Application
 
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
-        minefield_view.button_press_event.connect (view_button_press_event);
+
+        minefield_overlay = new Gtk.Overlay ();
+        minefield_overlay.add (minefield_view);
+        minefield_overlay.show ();
 
         minefield_aspect = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f , false);
         minefield_aspect.set_shadow_type (Gtk.ShadowType.NONE);
-        minefield_aspect.add (minefield_view);
+        minefield_aspect.add (minefield_overlay);
+
+        var paused_label = new Gtk.Label (_("Paused"));
+        paused_label.halign = Gtk.Align.CENTER;
+        paused_label.valign = Gtk.Align.CENTER;
+        paused_label.show ();
+
+        paused_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        paused_box.expand = true;
+        paused_box.pack_start (paused_label, true, true, 0);
+        paused_box.get_style_context ().add_class ("pausedOverlay");
+        paused_box.button_press_event.connect (view_button_press_event);
+
+        minefield_overlay.add_overlay (paused_box);
 
         view_box.pack_start (minefield_aspect, true, true, 0);
 
@@ -624,6 +642,7 @@ public class Mines : Gtk.Application
             display_unpause_button ();
         else if (minefield.elapsed > 0)
             display_pause_button ();
+        paused_box.visible = minefield.paused;
     }
 
     private void marks_changed_cb (Minefield minefield)
