@@ -423,8 +423,11 @@ public class MinefieldView : Gtk.Grid
                     mines[x, y].label = n.to_string ();
                     mines[x, y].sensitive = false;
                 } else {
+                    mines[x, y].label = "";
                     mines[x, y].sensitive = false;
                 }
+                mines[x,y].remove_class ("maybe");
+                mines[x,y].remove_class ("flag");
                 mines[x,y].add_class ("count");
                 mines[x,y].add_class ("mines" + n.to_string ());
             }
