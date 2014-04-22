@@ -90,7 +90,58 @@ private class Position : Object
     }
 }
 
-public class MinefieldView : Gtk.DrawingArea
+private class Tile : Gtk.Button
+{
+    private int _row;
+    private int _column;
+    public signal void tile_mouse_over (int x, int y);
+    public signal void tile_pressed (int x, int y, Gdk.EventButton event);
+    public signal void tile_released (int x, int y, Gdk.EventButton event);
+
+    public int row
+    {
+        get { return _row; }
+    }
+    public int column
+    {
+        get { return _column; }
+    }
+
+    public Tile (int prow, int pcol)
+    {
+        _row = prow;
+        _column = pcol;
+        can_focus = true;
+        add_class ("tile");
+        enter_notify_event.connect ( (event) =>
+        {
+            tile_mouse_over (prow, pcol);
+            return false;
+        } );
+        button_press_event.connect ( (event) =>
+        {
+            tile_pressed (prow, pcol, event);
+            return false;
+        } );
+        button_release_event.connect ( (event) =>
+        {
+            tile_released (prow, pcol, event);
+            return false;
+        } );
+    }
+
+    public void add_class (string style_class)
+    {
+        get_style_context ().add_class (style_class);
+    }
+
+    public void remove_class (string style_class)
+    {
+        get_style_context ().remove_class (style_class);
+    }
+}
+
+public class MinefieldView : Gtk.Grid
 {
     private Settings settings;
 
@@ -125,14 +176,7 @@ public class MinefieldView : Gtk.DrawingArea
     private Position keyboard_cursor;
     private Position selected;
 
-    /* Pre-rendered images */
-    private uint render_size = 0;
-    private Cairo.Pattern? flag_pattern;
-    private Cairo.Pattern? mine_pattern;
-    private Cairo.Pattern? question_pattern;
-    private Cairo.Pattern? bang_pattern;
-    private Cairo.Pattern? warning_pattern;
-    private Cairo.Pattern[] number_patterns;
+    private Tile[,] mines;
 
     private uint mine_size
     {
@@ -142,22 +186,6 @@ public class MinefieldView : Gtk.DrawingArea
         }
     }
     
-    private uint x_offset
-    {
-        get
-        {
-            return (get_allocated_width () - minefield.width * mine_size) / 2;
-        }
-    }
-
-    private uint y_offset
-    {
-        get
-        {
-            return (get_allocated_height () - minefield.height * mine_size) / 2;
-        }
-    }
-
     private uint minimum_size
     {
         get
@@ -177,11 +205,21 @@ public class MinefieldView : Gtk.DrawingArea
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
-        set_events (Gdk.EventMask.EXPOSURE_MASK | Gdk.EventMask.BUTTON_PRESS_MASK | Gdk.EventMask.POINTER_MOTION_MASK | Gdk.EventMask.BUTTON_RELEASE_MASK | Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
+        row_homogeneous = true;
+        column_homogeneous = true;
+        set_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
         can_focus = true;
+        expand = true;
+        get_style_context ().add_class ("minefield");
+
         selected = new Position ();
+        selected.set_x.connect ((x) => { return x; });
+        selected.set_y.connect ((y) => { return y; });
+        selected.redraw.connect (redraw_sector_cb);
+
         keyboard_cursor = new Position ();
-        number_patterns = new Cairo.Pattern[8];
+        keyboard_cursor.redraw.connect (redraw_sector_cb);
+        keyboard_cursor.validate.connect ((x, y) => { return true; });
     }
     
     private Minefield _minefield;
@@ -191,22 +229,33 @@ public class MinefieldView : Gtk.DrawingArea
         set
         {
             if (_minefield != null)
+            {
                 SignalHandler.disconnect_by_func (_minefield, null, this);
+            }
             _minefield = value;
-
+            mines = new Tile[_minefield.width, _minefield.height];
+            forall ( (child) => { remove (child);});
+            for (int i = 0; i < _minefield.width; i++)
+            {
+                for (int j = 0; j < _minefield.height; j++)
+                {
+                    mines[i,j] = new Tile (i, j);
+                    mines[i,j].show ();
+                    mines[i,j].tile_mouse_over.connect ( (x, y) => { tile_mouse_over_cb (x, y); });
+                    mines[i,j].tile_pressed.connect ( (x, y, event) => { tile_pressed_cb (x, y, event); });
+                    mines[i,j].tile_released.connect ( (x, y, event) => { tile_released_cb (x, y, event); });
+                    add (mines[i,j], i, j);
+                }
+            }
             selected.is_set = false;
-            selected.redraw.connect (redraw_sector_cb);
+
             selected.redraw.connect ((x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
-            selected.set_x.connect ((x) => { return x; });
-            selected.set_y.connect ((y) => { return y; });
             selected.validate.connect (_minefield.is_location);
 
             keyboard_cursor.is_set = false;
             keyboard_cursor.position = {0, 0};
-            keyboard_cursor.redraw.connect (redraw_sector_cb);
-            keyboard_cursor.set_x.connect ((x) => { return (int) (x % _minefield.width); });
-            keyboard_cursor.set_y.connect ((y) => { return (int) (y % _minefield.height); });
-            keyboard_cursor.validate.connect ((x, y) => { return true; });
+            keyboard_cursor.set_x.connect ((x) => { return x; }); //(int) (x % _minefield.width); });
+            keyboard_cursor.set_y.connect ((y) => { return y; }); //(int) (y % _minefield.height); });
 
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
@@ -216,6 +265,90 @@ public class MinefieldView : Gtk.DrawingArea
         }
     }
 
+    public void tile_mouse_over_cb (int x, int y)
+    {
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return;
+
+        /* Check that the user isn't currently navigating with keyboard */
+        if (!selected.is_set || keyboard_cursor.is_set)
+            return;
+
+        selected.position = {x, y};
+    }
+
+    public void tile_pressed_cb (int x, int y, Gdk.EventButton event)
+    {
+        /* Ignore double click events */
+        if (event.type != Gdk.EventType.BUTTON_PRESS)
+            return;
+
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return;
+
+        /* Does the user have the space key down? */
+        if (selected.is_set && keyboard_cursor.is_set)
+            return;
+
+        /* Hide any lingering previously selected and get new location */
+        selected.is_set = false;
+        selected.position = {x, y};
+
+        /* Is the current position a minefield square? */
+        if (!selected.is_valid)
+            return;
+
+        /* Right or Ctrl+Left button to toggle flags */
+        if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
+        {
+            toggle_mark (selected.x, selected.y);
+            unlook ();
+        }
+        /* Left button to clear */
+        else if (event.button == 1)
+        {
+            selected.is_set = true;
+            look ();
+        }
+
+        keyboard_cursor.is_set = false;
+        mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
+        keyboard_cursor.position = {selected.x, selected.y};
+    }
+
+    public void tile_released_cb (int x, int y, Gdk.EventButton event)
+    {
+        if (event.button != 1)
+            return;
+
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return;
+
+        /* Check that the user isn't currently using the mouse */
+        if (!selected.is_set || keyboard_cursor.is_set)
+            return;
+
+        /* Check if the user released button outside the minefield */
+        if (!minefield.is_location (selected.x, selected.y))
+            return;
+
+        unlook ();
+
+        if (minefield.is_cleared (selected.x, selected.y))
+        {
+            multi_release (selected.x, selected.y);
+            redraw_adjacent (selected.x, selected.y);
+        }
+        else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
+            minefield.clear_mine (selected.x, selected.y);
+
+        keyboard_cursor.position = {selected.x, selected.y};
+        selected.is_set = false;
+    }
+
     private void explode_cb (Minefield minefield)
     {
         /* Show the mines that we missed or the flags that were wrong */
@@ -223,107 +356,6 @@ public class MinefieldView : Gtk.DrawingArea
             for (var y = 0; y < minefield.height; y++)
                 if (minefield.has_mine (x, y) || (!minefield.has_mine (x, y) && minefield.get_flag (x, y) == FlagType.FLAG))
                     redraw_sector_cb (x, y);
-    }
-
-    private Cairo.Pattern render_svg_pattern (Cairo.Context cr, string filename)
-    {
-        var surface = new Cairo.Surface.similar (cr.get_target (), Cairo.Content.COLOR_ALPHA, (int) mine_size, (int) mine_size); 
-        var c = new Cairo.Context (surface);
-        var size = (double) mine_size - 2;
-        try
-        {
-            var h = new Rsvg.Handle.from_file (filename);
-            var m = Cairo.Matrix.identity ();
-            m.translate (1.0, 1.0);
-            m.scale (size / h.width, size / h.height);
-            c.set_matrix (m);
-            h.render_cairo (c);
-        }
-        catch (Error e)
-        {
-            warning ("Failed to load texture %s: %s", filename, e.message);
-        }
-
-        var pattern = new Cairo.Pattern.for_surface (surface);
-        pattern.set_extend (Cairo.Extend.REPEAT);
-        return pattern;
-    }
-    
-    private Cairo.Pattern render_number_pattern (uint n)
-    {
-        var layout = create_pango_layout ("%u".printf (n));
-        layout.set_alignment (Pango.Alignment.CENTER);
-
-        /* set attributes for the layout */
-        var attributes = new Pango.AttrList ();
-
-        /* Color */
-        Pango.Attribute color_attribute;
-        double color_outline[3];
-        switch (n)
-        {
-        case 1:
-            color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0xffff); /* Blue */
-            color_outline = {0.0, 0.0, 0.5};
-            break;
-        case 2:
-            color_attribute = Pango.attr_foreground_new (0x0000, 0xa0a0, 0x0000); /* Green */
-            color_outline = {0.0, 0.5*0.62745098039, 0.0};
-            break;
-        case 3:
-            color_attribute = Pango.attr_foreground_new (0xffff, 0x0000, 0x0000); /* Red */
-            color_outline = {0.5, 0.0, 0.0};
-            break;
-        case 4:
-            color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0x7fff); /* Dark Blue */
-            color_outline = {0.0, 0.0, 0.5*0.49999237048};
-            break;
-        case 5:
-            color_attribute = Pango.attr_foreground_new (0xa0a0, 0x0000, 0x0000); /* Dark Red */
-            color_outline = {0.5*0.62745098039, 0.0, 0.0};
-            break;
-        case 6:
-            color_attribute = Pango.attr_foreground_new (0x0000, 0xffff, 0xffff); /* Cyan */
-            color_outline = {0.0, 0.5, 0.5};
-            break;
-        case 7:
-            color_attribute = Pango.attr_foreground_new (0xa0a0, 0x0000, 0xa0a0); /* Dark Violet */
-            color_outline = {0.5*0.62745098039, 0.0, 0.5*0.62745098039};
-            break;
-        default:
-        case 8:
-            color_attribute = Pango.attr_foreground_new (0x0000, 0x0000, 0x0000); /* Black */
-            color_outline = {0.0, 0.0, 0.0};
-            break;
-        }
-        color_attribute.start_index = 0;
-        color_attribute.end_index = uint.MAX;
-        attributes.insert ((owned) color_attribute);
-
-        var font_desc = new Pango.FontDescription ();
-        font_desc.set_family ("Sans");
-        var font_size = (mine_size - 2) * Pango.SCALE * 0.85;
-        font_desc.set_absolute_size (font_size);
-        font_desc.set_weight (Pango.Weight.BOLD);
-        var font_attribute = new Pango.AttrFontDesc (font_desc);
-        font_attribute.start_index = 0;
-        font_attribute.end_index = uint.MAX;
-        attributes.insert ((owned) font_attribute);
-
-        layout.set_attributes (attributes);
-
-        var surface = new Cairo.ImageSurface (Cairo.Format.ARGB32, (int) mine_size, (int) mine_size);
-        var c = new Cairo.Context (surface);
-        Pango.Rectangle extent;
-        layout.get_extents (null, out extent);
-        var dx = ((int) mine_size - 2 - extent.width / Pango.SCALE) / 2 + 1;
-        var dy = ((int) mine_size - 2 - extent.height / Pango.SCALE) / 2 + 1;
-        c.move_to (dx, dy);
-        Pango.cairo_show_layout (c, layout);
-
-        var pattern = new Cairo.Pattern.for_surface (surface);
-        pattern.set_extend (Cairo.Extend.REPEAT);
-        return pattern;
     }
 
     public override void get_preferred_width (out int minimum, out int natural)
@@ -336,12 +368,13 @@ public class MinefieldView : Gtk.DrawingArea
         minimum = natural = (int) (minefield.height * minimum_size);
     }
 
-    private void redraw_sector_cb (uint x, uint y)
+    public new void add (Gtk.Widget child, int i, int j)
     {
-        queue_draw_area ((int) (x_offset + x * mine_size), (int) (y_offset + y * mine_size), (int) mine_size, (int) mine_size);
+        attach (child, i-1, j-1, 1, 1);
+        child.expand = true;
     }
-    
-    private void draw_square (Cairo.Context cr, uint x, uint y)
+
+    private void redraw_sector_cb (uint x, uint y)
     {
         /* Work out if the cursor is being held down on this square or neighbouring cleared squares */
         var is_down = false;
@@ -371,11 +404,8 @@ public class MinefieldView : Gtk.DrawingArea
             /* Draw explosion if have uncovered a mine */
             if (minefield.has_mine (x, y))
             {
-                if (bang_pattern == null)
-                    bang_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "bang.svg"));
-                cr.set_source (bang_pattern);
-                cr.rectangle (0, 0, mine_size, mine_size);
-                cr.fill ();
+                mines[x,y].label = "x";
+                mines[x,y].add_class ("exploded");
             }
             /* Indicate the number of mines around this location */
             else
@@ -383,191 +413,56 @@ public class MinefieldView : Gtk.DrawingArea
                 /* Warn if more flags than the number of mines available */
                 if (use_overmine_warning && minefield.has_flag_warning (x, y))
                 {
-                    if (warning_pattern == null)
-                        warning_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "warning.svg"));
-                    cr.set_source (warning_pattern);
-                    cr.rectangle (0, 0, mine_size, mine_size);
-                    cr.fill ();
+                    mines[x, y].label = "!";
+                    mines[x,y].add_class ("overmine");
                 }
 
                 var n = minefield.get_n_adjacent_mines (x, y);
                 if (n != 0)
                 {
-                    if (number_patterns[n-1] == null)
-                        number_patterns[n-1] = render_number_pattern (n);
-                    cr.set_source (number_patterns[n-1]);
-                    cr.rectangle (0, 0, mine_size, mine_size);
-                    cr.fill ();
+                    mines[x, y].label = n.to_string ();
+                    mines[x, y].sensitive = false;
+                } else {
+                    mines[x, y].label = "";
+                    mines[x, y].sensitive = false;
                 }
+                mines[x,y].remove_class ("maybe");
+                mines[x,y].remove_class ("flag");
+                mines[x,y].add_class ("count");
+                mines[x,y].add_class ("mines" + n.to_string ());
             }
         }
         else
         {
-            var style_context = get_style_context ();
-            style_context.save ();
-            style_context.add_class (Gtk.STYLE_CLASS_BUTTON);
-            style_context.set_state (is_down ? Gtk.StateFlags.ACTIVE : Gtk.StateFlags.NORMAL);
-            style_context.render_frame (cr, 0, 0, (int) mine_size, (int) mine_size);
-            style_context.render_background (cr, 0, 0, (int) mine_size, (int) mine_size);
-            style_context.restore ();
-
             if (minefield.paused)
                 return;
 
             /* Draw flags on uncleared locations */
             if (minefield.get_flag (x, y) == FlagType.FLAG)
             {
-                if (flag_pattern == null)
-                    flag_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "flag.svg"));                    
-                cr.set_source (flag_pattern);
-                cr.rectangle (0, 0, mine_size, mine_size);
-                cr.fill ();
-
+                mines[x,y].label = "F";
+                mines[x,y].add_class ("flag");
                 /* Cross out incorrect flags */
                 if (minefield.exploded && !minefield.has_mine (x, y))
                 {
-                    var x1 = 0.1 * mine_size;
-                    var y1 = 0.1 * mine_size;
-                    var x2 = 0.9 * mine_size;
-                    var y2 = 0.9 * mine_size;
-
-                    cr.move_to (x1, y1);
-                    cr.line_to (x2, y2);
-                    cr.move_to (x1, y2);
-                    cr.line_to (x2, y1);
-
-                    cr.save ();
-                    cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
-                    cr.set_line_width (double.max (1, 0.1 * mine_size));
-                    cr.set_line_join (Cairo.LineJoin.ROUND);
-                    cr.set_line_cap (Cairo.LineCap.ROUND);
-                    cr.stroke ();
-                    cr.restore ();
+                    mines[x,y].label="Fx";
+                    mines[x,y].add_class ("incorrect");
                 }
             }
             else if (minefield.exploded && minefield.has_mine (x, y))
             {
-                if (mine_pattern == null)
-                    mine_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "mine.svg"));
-                cr.set_source (mine_pattern);
-                cr.rectangle (0, 0, mine_size, mine_size);
-                cr.fill ();
+                mines[x,y].label = "x";
+                mines[x,y].add_class ("mine");
             }
             else if (minefield.get_flag (x, y) == FlagType.MAYBE)
             {
-                if (question_pattern == null)
-                    question_pattern = render_svg_pattern (cr, Path.build_filename (DATA_DIRECTORY, "flag-question.svg"));
-                cr.set_source (question_pattern);
-                cr.rectangle (0, 0, mine_size, mine_size);
-                cr.fill ();
+                mines[x,y].label = "?";
             }
-        }
-    }
-
-    public override bool draw (Cairo.Context cr)
-    {
-        /* Resize images */
-        if (render_size != mine_size)
-        {
-            render_size = mine_size;
-            flag_pattern = null;
-            mine_pattern = null;
-            question_pattern = null;
-            bang_pattern = null;
-            warning_pattern = null;
-            for (var i = 0; i < number_patterns.length; i++)
-                number_patterns[i] = null;
-        }
-
-        double dimensions[2] = {minefield.width * mine_size, minefield.height * mine_size};
-        double centre[2] = { x_offset + 0.5 * dimensions[0], y_offset + 0.5 * dimensions[1] };
-        double radius = Math.fmax (dimensions[0], dimensions[1]);
-
-        /* Draw Background */
-        var pattern = new Cairo.Pattern.radial (centre[0], centre[1], 0.0, centre[0], centre[1], radius);
-        pattern.add_color_stop_rgba (0.0, 0.0, 0.0, 0.0, 0.1);
-        pattern.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.4);
-
-        cr.rectangle (x_offset - 0.5, y_offset - 0.5, dimensions[0] + 0.5, dimensions[1] + 0.5);
-        cr.save ();
-        cr.set_source (pattern);
-        cr.fill_preserve ();
-        cr.set_line_width (0.5);
-        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
-        cr.stroke ();
-        cr.restore ();
-
-        /* Draw Grid */
-        cr.save ();
-        cr.set_line_width (0.5);
-        cr.set_source_rgba (0.0, 0.0, 0.0, 1.0);
-        double[] dots = {2, 2};
-        cr.set_dash (dots, 0);
-
-        for (var x = 1; x < minefield.width; x++)
-        {
-            cr.move_to (x_offset + x * mine_size, y_offset);
-            cr.line_to (x_offset + x * mine_size, y_offset + dimensions[1]);
-            cr.stroke ();
-        }
-
-        for (var y = 1; y < minefield.height; y++)
-        {
-            cr.move_to (x_offset, y_offset + y * mine_size);
-            cr.line_to (x_offset + dimensions[0], y_offset + y * mine_size);
-            cr.stroke ();
-        }
-
-        cr.restore ();
-
-        /* Draw Minefield */
-        for (var x = 0; x < minefield.width; x++)
-        {
-            for (var y = 0; y < minefield.height; y++)
+            else if (minefield.get_flag (x, y) == FlagType.NONE)
             {
-                cr.save ();
-                cr.translate (x_offset + x * mine_size, y_offset + y * mine_size);
-                draw_square (cr, x, y);
-                cr.restore ();
+                mines[x,y].label = "";
             }
         }
-
-        /* Draw keyboard cursor */
-        if (keyboard_cursor.is_set)
-        {
-            double key_centre[2] = { x_offset + (keyboard_cursor.x+0.5) * mine_size, y_offset + (keyboard_cursor.y+0.5) * mine_size };
-            var key_cursor = new Cairo.Pattern.radial (key_centre[0], key_centre[1], 0.0, key_centre[0], key_centre[1], 0.25 * mine_size);
-            key_cursor.add_color_stop_rgba (0.0, 1.0, 1.0, 1.0, 1.0);
-            key_cursor.add_color_stop_rgba (0.8, 1.0, 1.0, 1.0, 0.1);
-            key_cursor.add_color_stop_rgba (0.9, 0.0, 0.0, 0.0, 0.5);
-            key_cursor.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.2);
-            key_cursor.add_color_stop_rgba (1.0, 0.0, 0.0, 0.0, 0.0);
-
-            cr.save ();
-            cr.rectangle (key_centre[0] - 0.45 * mine_size, key_centre[1] - 0.45 * mine_size, 0.9 * mine_size, 0.9 * mine_size);
-            cr.set_source (key_cursor);
-            cr.fill ();
-            cr.restore ();
-        }
-
-        /* Draw pause overlay */
-        if (minefield.paused)
-        {
-            cr.set_source_rgba (0, 0, 0, 0.75);
-            cr.paint ();
-
-            cr.select_font_face ("Sans", Cairo.FontSlant.NORMAL, Cairo.FontWeight.BOLD);
-            cr.set_font_size (get_allocated_width () * 0.125);
-
-            var text = _("Paused");
-            Cairo.TextExtents extents;
-            cr.text_extents (text, out extents);
-            cr.move_to ((get_allocated_width () - extents.width) / 2.0, (get_allocated_height () + extents.height) / 2.0);
-            cr.set_source_rgb (1, 1, 1);
-            cr.show_text (text);
-        }
-
-        return false;
     }
 
     private void toggle_mark (uint x, uint y)
@@ -582,20 +477,33 @@ public class MinefieldView : Gtk.DrawingArea
              * this should be an indication to the player that they
              * have made a mistake. */
             if (minefield.n_flags >= minefield.n_mines && use_question_marks)
+            {
                 minefield.set_flag (x, y, FlagType.MAYBE);
+                mines[x,y].add_class ("maybe");
+            }
             else
+            {
                 minefield.set_flag (x, y, FlagType.FLAG);
+                mines[x,y].add_class ("flag");
+            }
             break;
 
         case FlagType.MAYBE:
+            mines[x,y].remove_class ("maybe");
             minefield.set_flag (x, y, FlagType.NONE);
             break;
 
         case FlagType.FLAG:
+            mines[x,y].remove_class ("flag");
             if (use_question_marks)
+            {
                 minefield.set_flag (x, y, FlagType.MAYBE);
+                mines[x,y].add_class ("maybe");
+            }
             else
+            {
                 minefield.set_flag (x, y, FlagType.NONE);
+            }
             break;
         }
     }
@@ -660,98 +568,6 @@ public class MinefieldView : Gtk.DrawingArea
         }
     }
 
-    public override bool button_press_event (Gdk.EventButton event)
-    {
-        /* Ignore double click events */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
-            return false;
-
-        /* Check for end cases and paused game */
-        if (minefield.exploded || minefield.is_complete || minefield.paused)
-            return false;
-
-        /* Does the user have the space key down? */
-        if (selected.is_set && keyboard_cursor.is_set)
-            return false;
-
-        /* Hide any lingering previously selected and get new location */
-        selected.is_set = false;
-        selected.x = (int) Math.floor ((event.x - x_offset) / mine_size);
-        selected.y = (int) Math.floor ((event.y - y_offset) / mine_size);
-
-        /* Is the current position a minefield square? */
-        if (!selected.is_valid)
-            return false;
-
-        /* Right or Ctrl+Left button to toggle flags */
-        if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
-        {
-            toggle_mark (selected.x, selected.y);
-            unlook ();
-        }
-        /* Left button to clear */
-        else if (event.button == 1)
-        {
-            selected.is_set = true;
-            look ();
-        }
-
-        keyboard_cursor.is_set = false;
-        keyboard_cursor.position = {selected.x, selected.y};
-
-        return false;
-    }
-
-    public override bool motion_notify_event (Gdk.EventMotion event)
-    {
-        /* Check for end cases and paused game */
-        if (minefield.exploded || minefield.is_complete || minefield.paused)
-            return false;
-
-        /* Check that the user isn't currently navigating with keyboard */
-        if (!selected.is_set || keyboard_cursor.is_set)
-            return false;
-
-        var x = (int) Math.floor ((event.x - x_offset) / mine_size);
-        var y = (int) Math.floor ((event.y - y_offset) / mine_size);
-        selected.position = {x, y};
-
-        return false;
-    }
-
-    public override bool button_release_event (Gdk.EventButton event)
-    {
-        if (event.button != 1)
-            return false;
-
-        /* Check for end cases and paused game */
-        if (minefield.exploded || minefield.is_complete || minefield.paused)
-            return false;
-
-        /* Check that the user isn't currently using the mouse */
-        if (!selected.is_set || keyboard_cursor.is_set)
-            return false;
-
-        /* Check if the user released button outside the minefield */
-        if (!minefield.is_location(selected.x, selected.y))
-            return false;
-
-        unlook ();
-
-        if (minefield.is_cleared (selected.x, selected.y))
-        {
-            multi_release (selected.x, selected.y);
-            redraw_adjacent (selected.x, selected.y);
-        }
-        else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
-            minefield.clear_mine (selected.x, selected.y);
-
-        keyboard_cursor.position = {selected.x, selected.y};
-        selected.is_set = false;
-
-        return false;
-    }
-
     public override bool key_press_event (Gdk.EventKey event)
     {
         /* Check for end cases and paused game */
@@ -764,6 +580,7 @@ public class MinefieldView : Gtk.DrawingArea
 
         var x = keyboard_cursor.x;
         var y = keyboard_cursor.y;
+        mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
 
         switch (event.keyval)
         {
@@ -811,16 +628,21 @@ public class MinefieldView : Gtk.DrawingArea
         }
 
         if (x == keyboard_cursor.x && y == keyboard_cursor.y)
+        {
+            mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
             return true;
+        }
 
         if (!keyboard_cursor.is_set)
         {
             keyboard_cursor.is_set = true;
+            mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
             return true;
         }
 
-        keyboard_cursor.position = {x, y};
+        keyboard_cursor.position = { (int) (x % _minefield.height), (int) (y % _minefield.width)};
 
+        mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
         if (selected.is_set)
             selected.position = {keyboard_cursor.x, keyboard_cursor.y};
 
@@ -854,4 +676,5 @@ public class MinefieldView : Gtk.DrawingArea
 
         return false;
     }
+
 }
