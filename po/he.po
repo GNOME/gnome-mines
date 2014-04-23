@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-23 20:48+0300\n"
-"PO-Revision-Date: 2014-04-23 20:52+0300\n"
+"POT-Creation-Date: 2014-04-23 20:57+0300\n"
+"PO-Revision-Date: 2014-04-23 20:59+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -48,8 +48,9 @@ msgstr ""
 "ניתן לבחור את גודל השדה הרצוי למשחק בתחילת המשחק. אם נתקעת ניתן לבקש רמז: "
 "מתלווה אליו ענישת זמן אך זה עדיף על פגיעה במוקש!"
 
-#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:95
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:625
+#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
+#: ../src/gnome-mines.vala:95 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:625
 msgid "Mines"
 msgstr "מוקשים"
 
@@ -124,6 +125,54 @@ msgstr "Height of the window in pixels"
 #: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
+
+#: ../data/interface.ui.h:2
+msgid "5/10"
+msgstr "5/10"
+
+#: ../data/interface.ui.h:3
+msgid "0:00"
+msgstr "0:00"
+
+#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:730
+msgid "_Pause"
+msgstr "ה_שהייה"
+
+#: ../data/interface.ui.h:5
+msgid "_Best Times"
+msgstr "הזמן הטוב _ביותר"
+
+#: ../data/interface.ui.h:6
+msgid "_Difficulty"
+msgstr "רמת קו_שי"
+
+#: ../data/interface.ui.h:7
+msgid "_Play Again"
+msgstr "ל_שחק שוב"
+
+#: ../data/interface.ui.h:8
+msgid "_Width"
+msgstr "_רוחב"
+
+#: ../data/interface.ui.h:9
+msgid "_Height"
+msgstr "_גובה"
+
+#: ../data/interface.ui.h:10
+msgid "Percent _mines"
+msgstr "_אחוז של מוקשים"
+
+#: ../data/interface.ui.h:11
+msgid "_Cancel"
+msgstr "_ביטול"
+
+#: ../data/interface.ui.h:12
+msgid "_Play Game"
+msgstr "ל_שחק במשחק"
+
+#: ../data/interface.ui.h:13
+msgid "Paused"
+msgstr "הושהה"
 
 #: ../src/gnome-mines.vala:136
 msgid "_New Game"
@@ -217,10 +266,6 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/gnome-mines.vala:730
-msgid "_Pause"
-msgstr "ה_שהייה"
-
 #: ../src/gnome-mines.vala:740
 msgid "_Resume"
 msgstr "_המשך"
@@ -262,23 +307,8 @@ msgstr[1] "%u × %u, %u מוקשים"
 #~ msgid "Receive a hint for your next move"
 #~ msgstr "קבלת רמז למהלך הבא שלך"
 
-#~ msgid "_Height:"
-#~ msgstr "_גובה:"
-
-#~ msgid "_Width:"
-#~ msgstr "_רוחב:"
-
 #~ msgid "_Mines:"
 #~ msgstr "_מוקשים:"
-
-#~ msgid "_Percentage of mines:"
-#~ msgstr "_אחוז של מוקשים:"
-
-#~ msgid "_Cancel"
-#~ msgstr "_ביטול"
-
-#~ msgid "_Play Game"
-#~ msgstr "ל_שחק במשחק"
 
 #~ msgid "Faces:"
 #~ msgstr "פנים:"
@@ -303,9 +333,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Unpause the game"
 #~ msgstr "המשכת המשחק"
-
-#~ msgid "Paused"
-#~ msgstr "הושהה"
 
 #~ msgid "H_orizontal:"
 #~ msgstr "_אופקי:"
@@ -353,9 +380,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Res_ume"
 #~ msgstr "המש_ך"
-
-#~ msgid "Play _Again"
-#~ msgstr "ל_שחק שוב"
 
 #~ msgid "GNOME Games web site"
 #~ msgstr "אתר משחקי GNOME"
@@ -2804,9 +2828,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "N_umber of opponents:"
 #~ msgstr "_מספר מתחרים:"
-
-#~ msgid "_Difficulty:"
-#~ msgstr "רמת קו_שי:"
 
 #~ msgctxt "difficulty"
 #~ msgid "Medium"
