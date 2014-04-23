@@ -175,23 +175,14 @@ public class Mines : Gtk.Application
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
-        minefield_overlay = new Gtk.Overlay ();
+        minefield_overlay = (Gtk.Overlay) ui_builder.get_object ("minefield_overlay");
         minefield_overlay.add (minefield_view);
         minefield_overlay.show ();
 
         minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");
-        minefield_aspect.add (minefield_overlay);
         minefield_aspect.show ();
 
-        var paused_label = new Gtk.Label (_("Paused"));
-        paused_label.halign = Gtk.Align.CENTER;
-        paused_label.valign = Gtk.Align.CENTER;
-        paused_label.show ();
-
-        paused_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        paused_box.expand = true;
-        paused_box.pack_start (paused_label, true, true, 0);
-        paused_box.get_style_context ().add_class ("pausedOverlay");
+        paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
         paused_box.button_press_event.connect (view_button_press_event);
 
         minefield_overlay.add_overlay (paused_box);
