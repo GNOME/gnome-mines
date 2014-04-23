@@ -162,8 +162,6 @@ public class Mines : Gtk.Application
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
-        window.get_settings ().gtk_application_prefer_dark_theme = true;
-
         var headerbar = new Gtk.HeaderBar ();
         headerbar.show_close_button = true;
         headerbar.set_title (_("Mines"));
