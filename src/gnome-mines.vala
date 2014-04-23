@@ -26,8 +26,9 @@ public class Mines : Gtk.Application
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public static const string KEY_USE_AUTOFLAG = "use-autoflag";
 
-    private Gtk.Box buttons_box;
+    private Gtk.Box main_screen;
     private Gtk.Button play_pause_button;
+    private Gtk.Label play_pause_label;
     private Gtk.Button replay_button;
     private Gtk.Button high_scores_button;
     private Gtk.Button new_game_button;
@@ -152,15 +153,12 @@ public class Mines : Gtk.Application
         add_accelerator ("<Primary>w", "app.quit", null);
         add_accelerator ("<Primary>q", "app.quit", null);
 
-        window = new Gtk.ApplicationWindow (this);
-        window.title = _("Mines");
-        window.icon_name = "gnome-mines";
+        window = (Gtk.ApplicationWindow) ui_builder.get_object ("main_window");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
-        window.set_size_request (550, 475);
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
 
@@ -174,16 +172,6 @@ public class Mines : Gtk.Application
 
         add_window (window);
 
-        var main_vbox = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 12);
-        main_vbox.margin = 12;
-        window.add (main_vbox);
-        main_vbox.show ();
-
-        var view_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        view_box.border_width = 3;
-        view_box.show ();
-        main_vbox.pack_start (view_box, true, true, 0);
-
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
@@ -191,9 +179,9 @@ public class Mines : Gtk.Application
         minefield_overlay.add (minefield_view);
         minefield_overlay.show ();
 
-        minefield_aspect = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f , false);
-        minefield_aspect.set_shadow_type (Gtk.ShadowType.NONE);
+        minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");
         minefield_aspect.add (minefield_overlay);
+        minefield_aspect.show ();
 
         var paused_label = new Gtk.Label (_("Paused"));
         paused_label.halign = Gtk.Align.CENTER;
@@ -208,67 +196,26 @@ public class Mines : Gtk.Application
 
         minefield_overlay.add_overlay (paused_box);
 
-        view_box.pack_start (minefield_aspect, true, true, 0);
+        main_screen = (Gtk.Box) ui_builder.get_object ("main_screen");
 
         /* Initialize New Game Screen */
         startup_new_game_screen (ui_builder);
-        view_box.pack_start (new_game_screen, true, true, 0);
 
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
-        view_box.pack_start (custom_game_screen, false, false);
 
         history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
         history.load ();
 
-        buttons_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 4);
-        buttons_box.margin_right = 6;
-        buttons_box.margin_left = 6;
-        buttons_box.set_size_request (115, -1);
+        flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
+        clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
 
-        main_vbox.pack_start (buttons_box, false, false, 0);
+        play_pause_button = (Gtk.Button) ui_builder.get_object ("play_pause_button");
+        play_pause_label = (Gtk.Label) ui_builder.get_object ("play_pause_label");
 
-        var size = new Gtk.SizeGroup (Gtk.SizeGroupMode.BOTH);
-
-        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        // Obviously a FIXME image
-        var image = new Gtk.Image.from_icon_name ("preferences-desktop-locale-symbolic", Gtk.IconSize.DND);
-        box.pack_start (image, false, false, 0);
-        flag_label = new Gtk.Label ("");
-        box.pack_start (flag_label, false, false, 0);
-        buttons_box.pack_start (box, false, false, 8);
-        box.show_all ();
-
-        box = new Gtk.Box (Gtk.Orientation.VERTICAL, 2);
-        image = new Gtk.Image.from_icon_name ("preferences-system-time-symbolic", Gtk.IconSize.DND);
-        box.pack_start (image, false, false, 0);
-        clock_label = new Gtk.Label ("");
-        clock_label.show ();
-        box.pack_start (clock_label, false, false, 0);
-        buttons_box.pack_start (box, false, false, 8);
-        box.show_all ();
-        box.margin_bottom = 18;
-
-        play_pause_button = new Gtk.Button ();
-        buttons_box.pack_end (play_pause_button, false, false, 0);
-        size.add_widget (play_pause_button);
-        play_pause_button.use_underline = true;
-
-        high_scores_button = new Gtk.Button.with_mnemonic (_("_Best Times"));
-        buttons_box.pack_end (high_scores_button, false, false, 0);
-        high_scores_button.action_name = "app.scores";
-        size.add_widget (high_scores_button);
-
-        new_game_button = new Gtk.Button.with_mnemonic (_("_Difficulty"));
-        buttons_box.pack_end (new_game_button, false, false, 0);
-        size.add_widget (new_game_button);
-        new_game_button.action_name = "app.new-game";
-        new_game_button.show ();
-
-        replay_button = new Gtk.Button.with_mnemonic (_("_Play Again"));
-        buttons_box.pack_end (replay_button, false, false, 0);
-        replay_button.action_name = "app.repeat-size";
-        size.add_widget (replay_button);
+        high_scores_button = (Gtk.Button) ui_builder.get_object ("high_scores_button");
+        replay_button = (Gtk.Button) ui_builder.get_object ("replay_button");
+        new_game_button = (Gtk.Button) ui_builder.get_object ("new_game_button");
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
@@ -448,7 +395,7 @@ public class Mines : Gtk.Application
     {
         is_new_game_screen = false;
         custom_game_screen.show ();
-        minefield_aspect.hide ();
+        main_screen.hide ();
         new_game_screen.hide ();
     }
 
@@ -490,7 +437,7 @@ public class Mines : Gtk.Application
 
         is_new_game_screen = true;
         custom_game_screen.hide ();
-        minefield_aspect.hide ();
+        main_screen.hide ();
         new_game_screen.show ();
         window.resize (window_width, window_height);
 
@@ -499,7 +446,7 @@ public class Mines : Gtk.Application
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
-        buttons_box.hide ();
+        main_screen.hide ();
     }
 
     private void start_game ()
@@ -507,14 +454,14 @@ public class Mines : Gtk.Application
         is_new_game_screen = false;
         custom_game_screen.hide ();
         window_skip_configure = true;
-        minefield_aspect.show ();
+        main_screen.show ();
         minefield_view.has_focus = true;
         new_game_screen.hide ();
-        play_pause_button.hide ();
+        play_pause_button.hide();
         replay_button.hide ();
         new_game_button.hide ();
         high_scores_button.hide ();
-        buttons_box.show ();
+        main_screen.show ();
 
         tick_cb ();
 
@@ -789,12 +736,8 @@ public class Mines : Gtk.Application
         new_game_button.hide ();
 
         play_pause_button.show ();
-        play_pause_button.action_name = "app.pause";
-        play_pause_button.label = _("_Pause");
-        var label = (Gtk.Label)play_pause_button.get_child ();
-        label.margin = 12;
-        label.margin_left = 24;
-        label.margin_right = 24;
+        play_pause_label.label = _("_Pause");
+        
     }
 
     private void display_unpause_button ()
@@ -803,12 +746,7 @@ public class Mines : Gtk.Application
         new_game_button.show ();
 
         play_pause_button.show ();
-        play_pause_button.action_name = "app.pause";
-        play_pause_button.label = _("_Resume");
-        var label = (Gtk.Label)play_pause_button.get_child ();
-        label.margin = 12;
-        label.margin_left = 24;
-        label.margin_right = 24;
+        play_pause_label.label = _("_Resume");
     }
 
     public static int main (string[] args)
