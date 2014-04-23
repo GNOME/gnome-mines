@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-04-22 18:50+0000\n"
-"PO-Revision-Date: 2014-04-23 09:05+0200\n"
+"POT-Creation-Date: 2014-04-23 18:50+0000\n"
+"PO-Revision-Date: 2014-04-23 21:22+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -61,9 +61,9 @@ msgstr ""
 "jste v nesnázích, můžete požádat o radu – to vás bude sice stát trestný čas, "
 "ale je to lepší než odpálit minu."
 
-#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:91
-#: ../src/gnome-mines.vala:132 ../src/gnome-mines.vala:145
-#: ../src/gnome-mines.vala:698
+#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
+#: ../src/gnome-mines.vala:95 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:625
 msgid "Mines"
 msgstr "Miny"
 
@@ -139,71 +139,87 @@ msgstr "Výška okna v pixelech."
 msgid "true if the window is maximized"
 msgstr "Zapnuto, pokud je okno maximalizováno"
 
-#: ../src/gnome-mines.vala:111
-msgid "_New Game"
-msgstr "_Nová hra"
+#: ../data/interface.ui.h:2
+msgid "5/10"
+msgstr "5/10"
 
-#: ../src/gnome-mines.vala:112
-msgid "_Scores"
-msgstr "_Skóre"
+#: ../data/interface.ui.h:3
+msgid "0:00"
+msgstr "0:00"
 
-#: ../src/gnome-mines.vala:115
-msgid "_Show Warnings"
-msgstr "_Zobrazovat varování"
+#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:730
+msgid "_Pause"
+msgstr "_Pozastavit"
 
-#: ../src/gnome-mines.vala:116
-msgid "_Use Question Flags"
-msgstr "Po_užívat vlaječky pro nejisté"
-
-#: ../src/gnome-mines.vala:119
-msgid "_Help"
-msgstr "_Nápověda"
-
-#: ../src/gnome-mines.vala:120
-msgid "_About"
-msgstr "O _aplikaci"
-
-#: ../src/gnome-mines.vala:121
-msgid "_Quit"
-msgstr "U_končit"
-
-#: ../src/gnome-mines.vala:209
+#: ../data/interface.ui.h:5
 msgid "_Best Times"
 msgstr "Nej_lepší časy"
 
-#: ../src/gnome-mines.vala:217
+#: ../data/interface.ui.h:6
 msgid "_Difficulty"
 msgstr "O_btížnost"
 
-#: ../src/gnome-mines.vala:226
+#: ../data/interface.ui.h:7
 msgid "_Play Again"
 msgstr "_Hrát znovu"
 
-#: ../src/gnome-mines.vala:279
-msgid "Custom"
-msgstr "Vlastní"
+#: ../data/interface.ui.h:8
+msgid "_Width"
+msgstr "Šířk_a"
 
-#: ../src/gnome-mines.vala:297
-msgid "_Height:"
-msgstr "_Výška:"
+#: ../data/interface.ui.h:9
+msgid "_Height"
+msgstr "_Výška"
 
-#: ../src/gnome-mines.vala:307
-msgid "_Width:"
-msgstr "Šířk_a:"
+#: ../data/interface.ui.h:10
+msgid "Percent _mines"
+msgstr "Procento _min"
 
-#: ../src/gnome-mines.vala:317
-msgid "Percent _mines:"
-msgstr "_Procento min:"
-
-#: ../src/gnome-mines.vala:332
+#: ../data/interface.ui.h:11
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: ../src/gnome-mines.vala:338
+#: ../data/interface.ui.h:12
 msgid "_Play Game"
 msgstr "_Hrát hru"
 
-#: ../src/gnome-mines.vala:388
+#: ../data/interface.ui.h:13
+msgid "Paused"
+msgstr "Pozastaveno"
+
+#: ../src/gnome-mines.vala:136
+msgid "_New Game"
+msgstr "_Nová hra"
+
+#: ../src/gnome-mines.vala:137
+msgid "_Scores"
+msgstr "_Skóre"
+
+#: ../src/gnome-mines.vala:140
+msgid "_Show Warnings"
+msgstr "_Zobrazovat varování"
+
+#: ../src/gnome-mines.vala:141
+msgid "_Use Question Flags"
+msgstr "Po_užívat vlaječky pro nejisté"
+
+#: ../src/gnome-mines.vala:144
+msgid "_Help"
+msgstr "_Nápověda"
+
+#: ../src/gnome-mines.vala:145
+msgid "_About"
+msgstr "O _aplikaci"
+
+#: ../src/gnome-mines.vala:146
+msgid "_Quit"
+msgstr "U_končit"
+
+#: ../src/gnome-mines.vala:244
+msgid "Custom"
+msgstr "Vlastní"
+
+#: ../src/gnome-mines.vala:319
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -211,43 +227,35 @@ msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> miny"
 msgstr[2] "<b>%d</b> min"
 
-#: ../src/gnome-mines.vala:469
+#: ../src/gnome-mines.vala:400
 msgid "Do you want to start a new game?"
 msgstr "Chcete začít novou hru?"
 
-#: ../src/gnome-mines.vala:470
+#: ../src/gnome-mines.vala:401
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Pokud začnete novou hru, bude váš postup v té stávající ztracen."
 
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:402
 msgid "Keep Current Game"
 msgstr "Zachovat stávající hru"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:403
 msgid "Start New Game"
 msgstr "Začít novou hru"
 
-#: ../src/gnome-mines.vala:666
+#: ../src/gnome-mines.vala:599
 msgid "Main game:"
 msgstr "Hlavní hra:"
 
-#: ../src/gnome-mines.vala:671
+#: ../src/gnome-mines.vala:603
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../src/gnome-mines.vala:674
+#: ../src/gnome-mines.vala:606
 msgid "Resizing and SVG support:"
 msgstr "Změna velikosti a podpora SVG:"
 
-#: ../src/gnome-mines.vala:682
-msgid "Faces:"
-msgstr "Smajlíci:"
-
-#: ../src/gnome-mines.vala:686
-msgid "Graphics:"
-msgstr "Grafika:"
-
-#: ../src/gnome-mines.vala:701
+#: ../src/gnome-mines.vala:628
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -257,7 +265,7 @@ msgstr ""
 "\n"
 "Miny jsou součástí her GNOME."
 
-#: ../src/gnome-mines.vala:708
+#: ../src/gnome-mines.vala:635
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -274,17 +282,9 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/gnome-mines.vala:804
-msgid "_Pause"
-msgstr "_Pozastavit"
-
-#: ../src/gnome-mines.vala:818
+#: ../src/gnome-mines.vala:740
 msgid "_Resume"
 msgstr "Pok_račovat"
-
-#: ../src/minefield-view.vala:562
-msgid "Paused"
-msgstr "Pozastaveno"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
