@@ -703,8 +703,7 @@ public class Mines : Gtk.Application
         string[] authors =
         {
             _("Main game:"),
-            "Pista",
-            "Szekeres Istvan",
+            "Szekeres Istvan (Pista)",
             "Robert Ancell",
             "",
             _("Score:"),
@@ -718,11 +717,6 @@ public class Mines : Gtk.Application
 
         string[] artists =
         {
-            _("Faces:"),
-            "tigert",
-            "Lapo Calamandrei and Ulisse Perusin",
-            "",
-            _("Graphics:"),
             "Richard Hoelscher",
             null
         };
