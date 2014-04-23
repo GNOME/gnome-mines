@@ -4,6 +4,7 @@
 data/gnome-mines.appdata.xml.in
 data/gnome-mines.desktop.in
 data/org.gnome.mines.gschema.xml
+data/interface.ui
 src/gnome-mines.vala
 src/history.vala
 src/minefield.vala

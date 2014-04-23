@@ -15,6 +15,9 @@ cssdir = $(pkgdatadir)
 css_in_files = gnome-mines.css.in
 css_DATA = $(css_in_files:.css.in=.css)
 
+uidir = $(pkgdatadir)
+ui_DATA = interface.ui
+
 desktopdir = $(datadir)/applications
 desktop_in_files = gnome-mines.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
@@ -31,7 +34,8 @@ EXTRA_DIST = \
              $(desktop_in_files) \
              $(man_MANS) \
              $(pixmap_DATA) \
-             $(css_in_files)
+             $(css_in_files) \
+             $(ui_DATA)
 
 CLEANFILES = \
 	$(appdata_DATA)	\
