@@ -26,7 +26,7 @@ public class Mines : Gtk.Application
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public static const string KEY_USE_AUTOFLAG = "use-autoflag";
 
-    private Gtk.Box main_screen;
+    private Gtk.Widget main_screen;
     private Gtk.Button play_pause_button;
     private Gtk.Label play_pause_label;
     private Gtk.Button replay_button;
@@ -196,7 +196,7 @@ public class Mines : Gtk.Application
 
         minefield_overlay.add_overlay (paused_box);
 
-        main_screen = (Gtk.Box) ui_builder.get_object ("main_screen");
+        main_screen = (Gtk.Widget) ui_builder.get_object ("main_screen");
 
         /* Initialize New Game Screen */
         startup_new_game_screen (ui_builder);
