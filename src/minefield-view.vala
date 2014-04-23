@@ -414,7 +414,6 @@ public class MinefieldView : Gtk.Grid
             /* Draw explosion if have uncovered a mine */
             if (minefield.has_mine (x, y))
             {
-                mines[x,y].label = "x";
                 mines[x,y].add_class ("exploded");
             }
             /* Indicate the number of mines around this location */
@@ -423,7 +422,6 @@ public class MinefieldView : Gtk.Grid
                 /* Warn if more flags than the number of mines available */
                 if (use_overmine_warning && minefield.has_flag_warning (x, y))
                 {
-                    mines[x, y].label = "!";
                     mines[x,y].add_class ("overmine");
                 }
 
@@ -431,10 +429,8 @@ public class MinefieldView : Gtk.Grid
                 if (n != 0)
                 {
                     mines[x, y].label = n.to_string ();
-                    mines[x, y].sensitive = false;
                 } else {
                     mines[x, y].label = "";
-                    mines[x, y].sensitive = false;
                 }
                 mines[x,y].remove_class ("maybe");
                 mines[x,y].remove_class ("flag");
@@ -450,28 +446,18 @@ public class MinefieldView : Gtk.Grid
             /* Draw flags on uncleared locations */
             if (minefield.get_flag (x, y) == FlagType.FLAG)
             {
-                mines[x,y].label = "F";
                 mines[x,y].add_class ("flag");
                 /* Cross out incorrect flags */
                 if (minefield.exploded && !minefield.has_mine (x, y))
                 {
-                    mines[x,y].label="Fx";
                     mines[x,y].add_class ("incorrect");
                 }
             }
             else if (minefield.exploded && minefield.has_mine (x, y))
             {
-                mines[x,y].label = "x";
                 mines[x,y].add_class ("mine");
             }
-            else if (minefield.get_flag (x, y) == FlagType.MAYBE)
-            {
-                mines[x,y].label = "?";
-            }
-            else if (minefield.get_flag (x, y) == FlagType.NONE)
-            {
-                mines[x,y].label = "";
-            }
+            
         }
     }
 
