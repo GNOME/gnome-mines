@@ -260,7 +260,7 @@ public class MinefieldView : Gtk.Grid
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
             _minefield.paused_changed.connect (() => { queue_draw (); });
-
+            _minefield.cleared.connect (complete_cb);
             queue_resize ();
         }
     }
@@ -354,8 +354,16 @@ public class MinefieldView : Gtk.Grid
         /* Show the mines that we missed or the flags that were wrong */
         for (var x = 0; x < minefield.width; x++)
             for (var y = 0; y < minefield.height; y++)
+            {
+                mines[x, y].add_class ("explodedField");
                 if (minefield.has_mine (x, y) || (!minefield.has_mine (x, y) && minefield.get_flag (x, y) == FlagType.FLAG))
                     redraw_sector_cb (x, y);
+            }
+    }
+
+    private void complete_cb (Minefield minefield)
+    {
+        forall ( (child) => { ((Tile)child).add_class("completedField"); } );
     }
 
     public override void get_preferred_width (out int minimum, out int natural)

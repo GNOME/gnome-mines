@@ -73,3 +73,13 @@ Changes are applied instantly and globally, for the whole application.
   color: white;
   font-size:32px;
 }
+
+.explodedField {
+  border-width:1px;
+  border-color:red;
+}
+
+.completedField {
+  border-width:1px;
+  border-color:green;
+}
