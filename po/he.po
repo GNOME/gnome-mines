@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-15 23:19+0300\n"
-"PO-Revision-Date: 2014-04-15 23:21+0300\n"
+"POT-Creation-Date: 2014-04-23 20:48+0300\n"
+"PO-Revision-Date: 2014-04-23 20:52+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gnome.org>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -48,9 +48,8 @@ msgstr ""
 "ניתן לבחור את גודל השדה הרצוי למשחק בתחילת המשחק. אם נתקעת ניתן לבקש רמז: "
 "מתלווה אליו ענישת זמן אך זה עדיף על פגיעה במוקש!"
 
-#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:92
-#: ../src/gnome-mines.vala:130 ../src/gnome-mines.vala:142
-#: ../src/gnome-mines.vala:697
+#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:95
+#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:625
 msgid "Mines"
 msgstr "מוקשים"
 
@@ -126,106 +125,74 @@ msgstr "Height of the window in pixels"
 msgid "true if the window is maximized"
 msgstr "true if the window is maximized"
 
-#: ../src/gnome-mines.vala:112
+#: ../src/gnome-mines.vala:136
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: ../src/gnome-mines.vala:113
+#: ../src/gnome-mines.vala:137
 msgid "_Scores"
 msgstr "_תוצאות"
 
-#: ../src/gnome-mines.vala:114
-msgid "_Preferences"
-msgstr "ה_עדפות"
+#: ../src/gnome-mines.vala:140
+msgid "_Show Warnings"
+msgstr "ה_צגת אזהרות"
 
-#: ../src/gnome-mines.vala:117
+#: ../src/gnome-mines.vala:141
+msgid "_Use Question Flags"
+msgstr "_שימוש בדגלי סימן שאלה"
+
+#: ../src/gnome-mines.vala:144
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/gnome-mines.vala:118
+#: ../src/gnome-mines.vala:145
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/gnome-mines.vala:119
+#: ../src/gnome-mines.vala:146
 msgid "_Quit"
 msgstr "י_ציאה"
 
-#: ../src/gnome-mines.vala:194
-msgid "Receive a hint for your next move"
-msgstr "קבלת רמז למהלך הבא שלך"
-
-#: ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:244
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: ../src/gnome-mines.vala:276
-msgid "_Height:"
-msgstr "_גובה:"
-
-#: ../src/gnome-mines.vala:286
-msgid "_Width:"
-msgstr "_רוחב:"
-
-#: ../src/gnome-mines.vala:296
-msgid "_Mines:"
-msgstr "_מוקשים:"
-
-#: ../src/gnome-mines.vala:307
-msgid "_Percentage of mines:"
-msgstr "_אחוז של מוקשים:"
-
-#: ../src/gnome-mines.vala:322
-msgid "_Cancel"
-msgstr "_ביטול"
-
-#: ../src/gnome-mines.vala:328
-msgid "_Play Game"
-msgstr "ל_שחק במשחק"
-
-#: ../src/gnome-mines.vala:378
+#: ../src/gnome-mines.vala:319
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "מוקש <b>אחד</b>"
 msgstr[1] "<b>%d</b> מוקשים"
 
-#: ../src/gnome-mines.vala:459
+#: ../src/gnome-mines.vala:400
 msgid "Do you want to start a new game?"
 msgstr "האם ברצונך להתחיל משחק חדש?"
 
-#: ../src/gnome-mines.vala:460
+#: ../src/gnome-mines.vala:401
 msgid "If you start a new game, your current progress will be lost."
 msgstr "אם בחירתך תהיה להתחיל משחק חדש אז התהליך הנוכחי שלך יאבד."
 
-#: ../src/gnome-mines.vala:461
+#: ../src/gnome-mines.vala:402
 msgid "Keep Current Game"
 msgstr "שמירת המשחק הנוכחי"
 
-#: ../src/gnome-mines.vala:462
+#: ../src/gnome-mines.vala:403
 msgid "Start New Game"
 msgstr "הֹתחלת משחק חדש"
 
-#: ../src/gnome-mines.vala:665
+#: ../src/gnome-mines.vala:599
 msgid "Main game:"
 msgstr "משחק ראשי:"
 
-#: ../src/gnome-mines.vala:670
+#: ../src/gnome-mines.vala:603
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../src/gnome-mines.vala:673
+#: ../src/gnome-mines.vala:606
 msgid "Resizing and SVG support:"
 msgstr "תמיכה באפשרות שינוי גודל ובגרפיקה וקטורית (SVG):"
 
-#: ../src/gnome-mines.vala:681
-msgid "Faces:"
-msgstr "פנים:"
-
-#: ../src/gnome-mines.vala:685
-msgid "Graphics:"
-msgstr "גרפיקה:"
-
-#: ../src/gnome-mines.vala:700
+#: ../src/gnome-mines.vala:628
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -235,7 +202,7 @@ msgstr ""
 "\n"
 "מוקשים הוא חלק מחבילת משחקי GNOME."
 
-#: ../src/gnome-mines.vala:707
+#: ../src/gnome-mines.vala:635
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -250,33 +217,13 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/gnome-mines.vala:813
-msgid "Mines Preferences"
-msgstr "העדפות 'מוקשים'"
+#: ../src/gnome-mines.vala:730
+msgid "_Pause"
+msgstr "ה_שהייה"
 
-#: ../src/gnome-mines.vala:830
-msgid "_Use \"I'm not sure\" flags"
-msgstr "שימוש בדגלי \"_אני לא בטוח\"."
-
-#: ../src/gnome-mines.vala:836
-msgid "_Warn if too many flags are placed next to a number"
-msgstr "_יש להציג אזהרה אם הוצבו יותר מדי דגלים ליד מספר"
-
-#: ../src/gnome-mines.vala:906
-msgid "Start a new game"
-msgstr "התחלת משחק חדש"
-
-#: ../src/gnome-mines.vala:913
-msgid "Pause the game"
-msgstr "השהיית המשחק"
-
-#: ../src/gnome-mines.vala:920
-msgid "Unpause the game"
-msgstr "המשכת המשחק"
-
-#: ../src/minefield-view.vala:557
-msgid "Paused"
-msgstr "הושהה"
+#: ../src/gnome-mines.vala:740
+msgid "_Resume"
+msgstr "_המשך"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
@@ -308,6 +255,57 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, מוקש אחד"
 msgstr[1] "%u × %u, %u מוקשים"
+
+#~ msgid "_Preferences"
+#~ msgstr "ה_עדפות"
+
+#~ msgid "Receive a hint for your next move"
+#~ msgstr "קבלת רמז למהלך הבא שלך"
+
+#~ msgid "_Height:"
+#~ msgstr "_גובה:"
+
+#~ msgid "_Width:"
+#~ msgstr "_רוחב:"
+
+#~ msgid "_Mines:"
+#~ msgstr "_מוקשים:"
+
+#~ msgid "_Percentage of mines:"
+#~ msgstr "_אחוז של מוקשים:"
+
+#~ msgid "_Cancel"
+#~ msgstr "_ביטול"
+
+#~ msgid "_Play Game"
+#~ msgstr "ל_שחק במשחק"
+
+#~ msgid "Faces:"
+#~ msgstr "פנים:"
+
+#~ msgid "Graphics:"
+#~ msgstr "גרפיקה:"
+
+#~ msgid "Mines Preferences"
+#~ msgstr "העדפות 'מוקשים'"
+
+#~ msgid "_Use \"I'm not sure\" flags"
+#~ msgstr "שימוש בדגלי \"_אני לא בטוח\"."
+
+#~ msgid "_Warn if too many flags are placed next to a number"
+#~ msgstr "_יש להציג אזהרה אם הוצבו יותר מדי דגלים ליד מספר"
+
+#~ msgid "Start a new game"
+#~ msgstr "התחלת משחק חדש"
+
+#~ msgid "Pause the game"
+#~ msgstr "השהיית המשחק"
+
+#~ msgid "Unpause the game"
+#~ msgstr "המשכת המשחק"
+
+#~ msgid "Paused"
+#~ msgstr "הושהה"
 
 #~ msgid "H_orizontal:"
 #~ msgstr "_אופקי:"
@@ -346,9 +344,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "_Start Over"
 #~ msgstr "ה_תחלה מחדש"
-
-#~ msgid "_Pause"
-#~ msgstr "ה_שהייה"
 
 #~ msgid "_Hint"
 #~ msgstr "_רמז"
@@ -1131,9 +1126,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "_Redo Move"
 #~ msgstr "_חזרה על המהלך"
-
-#~ msgid "_Reset"
-#~ msgstr "_איפוס"
 
 #~ msgid "_Restart"
 #~ msgstr "ה_תחלה מחדש"
@@ -3632,9 +3624,6 @@ msgstr[1] "%u × %u, %u מוקשים"
 
 #~ msgid "Maybe they're all mines ..."
 #~ msgstr "אולי כולם מוקשים..."
-
-#~ msgid "Warnings"
-#~ msgstr "אזהרות"
 
 #~ msgid "_Use \"Too many flags\" warning"
 #~ msgstr "_שימוש באזהרת \"יותר מדי דגלים\""
