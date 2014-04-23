@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-03-24 08:06+0000\n"
-"PO-Revision-Date: 2014-03-24 15:07+0100\n"
+"POT-Creation-Date: 2014-04-22 18:50+0000\n"
+"PO-Revision-Date: 2014-04-23 09:02+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,7 +26,7 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
@@ -39,15 +39,15 @@ msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
+#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -99,13 +99,13 @@ msgstr "vlastní deska, kdy si můžete zvolit velikost desky a počet min"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/translate.page:10
+#: C/flags.page:12 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:18 C/translate.page:19
+#: C/index.page:21 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -264,48 +264,13 @@ msgstr ""
 "Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:34
-msgctxt "_"
-msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-msgstr ""
-"external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:56
-msgctxt "_"
-msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:85
-msgctxt "_"
-msgid ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-msgstr ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-
 #. (itstool) path: page/title
-#: C/flags.page:30
+#: C/flags.page:31
 msgid "How to use flags"
 msgstr "Jak používat vlaječky"
 
 #. (itstool) path: td/p
-#: C/flags.page:37
+#: C/flags.page:38
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -316,12 +281,12 @@ msgstr ""
 "následnému způsobení výbuchu, který znamená konec hry."
 
 #. (itstool) path: section/title
-#: C/flags.page:45
+#: C/flags.page:46
 msgid "How to place a flag on a tile"
 msgstr "Jak na dlaždici umístit vlaječku"
 
 #. (itstool) path: td/p
-#: C/flags.page:49
+#: C/flags.page:50
 msgid ""
 "Red flags are those that cannot be clicked. To place a red flag on a tile:"
 msgstr ""
@@ -329,12 +294,12 @@ msgstr ""
 "dlaždici umístit červenou vlaječku:"
 
 #. (itstool) path: item/p
-#: C/flags.page:52
+#: C/flags.page:53
 msgid "right click on a blank tile."
 msgstr "Klikněte pravým tlačítkem na neodkryté dlaždici."
 
 #. (itstool) path: note/p
-#: C/flags.page:62
+#: C/flags.page:63
 msgid ""
 "To make the number of available flags equal to the number of remaining "
 "mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
@@ -347,12 +312,12 @@ msgstr ""
 "\">Používat vlaječky „Nejsem si jist(á)“</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:72
+#: C/flags.page:73
 msgid "Use of the <em>I'm not sure</em> flag"
 msgstr "Používání vlaječek <em>Nejsem si jist(á)</em>"
 
 #. (itstool) path: section/p
-#: C/flags.page:73
+#: C/flags.page:74
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the blue "
 "<em>I'm not sure</em> flag."
@@ -361,19 +326,19 @@ msgstr ""
 "použít modrou vlaječku <em>Nejsem si jist(á)</em>."
 
 #. (itstool) path: td/p
-#: C/flags.page:78
+#: C/flags.page:79
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Když chcete na dlaždici umístit vlaječku <em>Nejsem si jist(á)</em>:"
 
 #. (itstool) path: item/p
-#: C/flags.page:80
+#: C/flags.page:81
 msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr ""
 "Klikněte dvojitě pravým tlačítkem na prázdnou dlaždici nebo jednoduše na "
 "červenou vlaječku."
 
 #. (itstool) path: note/p
-#: C/flags.page:91
+#: C/flags.page:92
 msgid ""
 "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
 "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
@@ -462,56 +427,30 @@ msgstr ""
 "zobrazí jako výchozí výsledky pro nejmenší hrací desku <gui>8 × 8, 10 min</"
 "gui>. Pro jinou velikost si výsledky zobrazíte výběrem z rozbalovací nabídky."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
 #. (itstool) path: info/title
-#: C/index.page:6
+#: C/index.page:9
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: info/title
-#: C/index.page:7
+#: C/index.page:10
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:10 C/shortcuts.page:9
+#: C/index.page:13 C/shortcuts.page:9
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:22
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo hry Miny GNOME</media> "
-"Miny GNOME"
+#: C/index.page:25
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> Miny GNOME"
 
 #. (itstool) path: page/p
-#: C/index.page:24
+#: C/index.page:27
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -524,22 +463,22 @@ msgstr ""
 "některá vybuchla, musíte použít kombinaci logiky a trochy štěstí."
 
 #. (itstool) path: section/title
-#: C/index.page:31
+#: C/index.page:34
 msgid "Game Play"
 msgstr "Hraní hry"
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:37
 msgid "Useful tips"
 msgstr "Užitečné tipy"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:40
 msgid "Advanced"
 msgstr "Pokročilé"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:43
 msgid "Get Involved"
 msgstr "Zapojte se"
 
