@@ -233,6 +233,8 @@ public class MinefieldView : Gtk.Grid
                 SignalHandler.disconnect_by_func (_minefield, null, this);
             }
             _minefield = value;
+            get_style_context ().remove_class ("explodedField");
+            get_style_context ().remove_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
             forall ( (child) => { remove (child);});
             for (int i = 0; i < _minefield.width; i++)
@@ -351,11 +353,11 @@ public class MinefieldView : Gtk.Grid
 
     private void explode_cb (Minefield minefield)
     {
+        get_style_context  ().add_class ("explodedField");
         /* Show the mines that we missed or the flags that were wrong */
         for (var x = 0; x < minefield.width; x++)
             for (var y = 0; y < minefield.height; y++)
             {
-                mines[x, y].add_class ("explodedField");
                 if (minefield.has_mine (x, y) || (!minefield.has_mine (x, y) && minefield.get_flag (x, y) == FlagType.FLAG))
                     redraw_sector_cb (x, y);
             }
@@ -363,7 +365,7 @@ public class MinefieldView : Gtk.Grid
 
     private void complete_cb (Minefield minefield)
     {
-        forall ( (child) => { ((Tile)child).add_class("completedField"); } );
+        get_style_context  ().add_class ("completedField");
     }
 
     public override void get_preferred_width (out int minimum, out int natural)

@@ -74,12 +74,12 @@ Changes are applied instantly and globally, for the whole application.
   font-size:32px;
 }
 
-.explodedField {
+.explodedField .tile {
   border-width:1px;
   border-color:red;
 }
 
-.completedField {
+.completedField .tile {
   border-width:1px;
   border-color:green;
 }
