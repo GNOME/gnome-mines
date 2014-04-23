@@ -5,38 +5,28 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    width="64"
-   height="66.342773"
-   id="svg2"
+   height="64"
+   id="svg9373"
    inkscape:version="0.48.4 r9939"
    sodipodi:docname="flag.svg">
   <metadata
-     id="metadata47">
+     id="metadata9418">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs45">
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#paint"
-       id="linearGradient3062"
-       gradientUnits="userSpaceOnUse"
-       x1="14.5"
-       y1="99"
-       x2="119.5"
-       y2="99" />
-  </defs>
+     id="defs9416" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -46,21 +36,27 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1059"
-     inkscape:window-height="846"
-     id="namedview43"
+     inkscape:window-width="1600"
+     inkscape:window-height="834"
+     id="namedview9414"
      showgrid="false"
-     fit-margin-top="0"
-     fit-margin-left="0"
-     fit-margin-right="0"
-     fit-margin-bottom="0"
-     inkscape:zoom="1.4658385"
-     inkscape:cx="69.364407"
-     inkscape:cy="73.25"
-     inkscape:window-x="178"
-     inkscape:window-y="103"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg2" />
+     inkscape:snap-nodes="false"
+     inkscape:snap-bbox="true"
+     inkscape:zoom="1"
+     inkscape:cx="37.101481"
+     inkscape:cy="14.748665"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg9373">
+    <inkscape:grid
+       type="xygrid"
+       id="grid9641"
+       empspacing="5"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
   <linearGradient
      id="paint"
      gradientUnits="userSpaceOnUse"
@@ -71,99 +67,24 @@
     <stop
        offset="0"
        style="stop-color:#DA1800"
-       id="stop33" />
+       id="stop9404" />
     <stop
        offset="0.33"
        style="stop-color:#B42D2D"
-       id="stop35" />
+       id="stop9406" />
     <stop
        offset="0.66"
        style="stop-color:#FA1818"
-       id="stop37" />
+       id="stop9408" />
     <stop
        offset="1"
        style="stop-color:#B42D2D"
-       id="stop39" />
+       id="stop9410" />
   </linearGradient>
-  <g
-     id="g3045"
-     transform="matrix(0.44600517,0,0,0.44600517,-5.5750646,-2.2305214)">
-    <rect
-       id="rect4"
-       height="8"
-       width="36.669998"
-       y="19"
-       x="102.67"
-       style="fill:#777777;stroke:#000000;stroke-width:3" />
-    <rect
-       id="rect6"
-       height="8"
-       width="42.310001"
-       y="60"
-       x="98.669998"
-       style="fill:#777777;stroke:#000000;stroke-width:3" />
-    <rect
-       id="rect8"
-       height="8"
-       width="50.900002"
-       y="99"
-       x="94.669998"
-       style="fill:#777777;stroke:#000000;stroke-width:3" />
-    <polygon
-       id="polygon10"
-       points="151.64,126.87 144.6,126.87 132.03,27.19 139.07,27.19 "
-       style="fill:#404040" />
-    <polygon
-       id="polygon12"
-       points="148.1,127.17 144.6,126.87 132.03,27.19 135.53,27.48 "
-       style="fill:#777777" />
-    <polygon
-       id="polygon14"
-       points="151.64,126.87 144.6,126.87 132.03,27.19 139.07,27.19 "
-       style="fill:none;stroke:#000000;stroke-width:3" />
-    <polygon
-       id="polygon16"
-       points="90.86,126.87 97.9,126.87 110.47,27.19 103.43,27.19 "
-       style="fill:#404040" />
-    <polygon
-       id="polygon18"
-       points="90.86,126.87 94.9,126.87 107.47,27.19 103.43,27.19 "
-       style="fill:#777777" />
-    <polygon
-       id="polygon20"
-       points="90.86,126.87 97.9,126.87 110.47,27.19 103.43,27.19 "
-       style="fill:none;stroke:#000000;stroke-width:3" />
-    <path
-       id="path22"
-       d="m 154.18,121.94 h -5.24 c 0,0 0.98,24.81 -4.89,24.81 -5.87,0 -44.99,0 -50.86,0 -4.33,0 -4.93,-13.47 -4.95,-20.56 -0.02,8.28 0.51,25.81 5.38,25.81 6.38,0 48.87,0 55.24,0 6.39,0 5.32,-30.06 5.32,-30.06 z"
-       inkscape:connector-curvature="0"
-       style="fill:#404040;stroke:#404040" />
-    <path
-       id="path24"
-       d="m 93.2,146.75 c 5.87,0 44.99,0 50.86,0 5.87,0 4.89,-24.81 4.89,-24.81 H 88.32 88.31 c 0,0 -0.07,1.72 -0.06,4.25 0.02,7.08 0.63,20.56 4.95,20.56 z"
-       inkscape:connector-curvature="0"
-       style="fill:#777777;stroke:#777777" />
-    <path
-       id="path26"
-       d="m 93.63,152 c 6.38,0 48.87,0 55.24,0 6.37,0 5.31,-30.06 5.31,-30.06 H 88.32 c 0,0 -1.07,30.06 5.31,30.06 z"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#000000;stroke-width:3.5" />
-    <rect
-       id="rect28"
-       height="80"
-       width="7"
-       y="23"
-       x="118.5"
-       style="fill:#777777;stroke:#000000;stroke-width:2" />
-    <path
-       id="path30"
-       d="m 91.57,137.06 c -1.31,-13.13 -1.31,-13.43 24.89,-11.81 -24.89,1.91 -22.98,0.3 -24.89,11.81 z"
-       inkscape:connector-curvature="0"
-       style="fill:#ffffff" />
-    <path
-       id="path41"
-       d="m 67.35,13.97 c -13.99,13.43 -51.85,0 -51.85,0 v 46.63 47.93 c 0,0 37.86,13.43 51.85,0 14,-13.43 53.15,0 53.15,0 V 60.6 13.97 c 0,0 -39.15,-13.43 -53.15,0 z"
-       style="fill:url(#linearGradient3062);stroke:#000000;stroke-width:6"
-       inkscape:connector-curvature="0" />
-  </g>
+  <path
+     style="fill:#2e3436;fill-opacity:1;stroke-width:1;stroke-miterlimit:4"
+     d="M 8.086319,0.175024 17.084785,0 l 0,3.104056 L 58.104384,20.741065 17.040446,38.378074 16.99727,64 8,64 z"
+     id="path9621"
+     inkscape:connector-curvature="0"
+     sodipodi:nodetypes="cccccccc" />
 </svg>
