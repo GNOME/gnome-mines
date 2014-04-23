@@ -5,24 +5,28 @@ You can temporarily disable this custom CSS by clicking on the "Pause" button ab
 Changes are applied instantly and globally, for the whole application.
 */
 
+/* Standard 1px border for all styles */
+
 .tile {
   background-image:none;
-  background-color:#d3d7cf;
-  border-radius:0px;
-  border-width:3px;
-  color:black;
+  background-color:#babdb6;
   border-color:transparent;
+  border-radius:0px;
+  color:transparent;
   border-image:none;
-  font-size:0;
+  font-size:16px;
   font-weight: bold;
   background-size: 60%;
   background-position: 50%;
   background-repeat: no-repeat;
+
+  border-width:2px;
+  border-image:none;
 }
 
 .tile:hover {
-  border-width:1px;
-  border-color:#babdb6;
+  background-color:#d3d7cf;
+  transition-duration:0.4s;
 }
 
 .tile:active {
@@ -30,37 +34,34 @@ Changes are applied instantly and globally, for the whole application.
 }
 
 .count {
-  font-size:18px;
-  background-image:none;
-  background-color:#eeeeec;
+  color:black;
+  font-size:16px;
+  background-color:#cadbed;
+  transition-duration:0.4s;
+}
+
+.count:hover {
+  background-color:#cadbed;
 }
 
 .flag {
   background-image:url('@pkgdatadir@/flag.svg');
-  font-size:0;
-  background-color:#8ae234;
 }
 
 .exploded {
   background-image:url('@pkgdatadir@/bang.svg');
-  font-size:0;
-  background-color:#cc0000;
 }
 
 .maybe {
   background-image:url('@pkgdatadir@/flag-question.svg');
-  font-size:0;
-  background-color:#fce94f;
 }
 
 .incorrect {
-  font-size:0;
   background-color:#ef2929;
 }
 
 .mine {
   background-image:url('@pkgdatadir@/mine.svg');
-  font-size:0;
   background-color:#729fcf;
 }
 
@@ -75,11 +76,16 @@ Changes are applied instantly and globally, for the whole application.
 }
 
 .explodedField .tile {
-  border-width:1px;
-  border-color:red;
+  background-color:#888a85;
+  transition-duration:1s;
 }
 
-.completedField .tile {
-  border-width:1px;
-  border-color:green;
+.explodedField .count,
+.explodedField .exploded {
+  background-color:#d3d7cf;
+  transition-duration:1s;
+}
+
+.completedField .flag {
+  transition-duration:1s;
 }
