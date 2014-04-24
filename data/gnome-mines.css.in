@@ -35,7 +35,8 @@ Changes are applied instantly and globally, for the whole application.
 
 .count {
   color:black;
-  font-size:16px;
+  font-size:0px;
+  background-image:none;
   background-color:#cadbed;
   transition-duration:0.4s;
 }
@@ -64,6 +65,38 @@ Changes are applied instantly and globally, for the whole application.
 .mine {
   background-image:url('@pkgdatadir@/mine.svg');
   background-color:#729fcf;
+}
+
+.mines1 {
+  background-image:url('@pkgdatadir@/1mine.svg');
+}
+
+.mines2 {
+  background-image:url('@pkgdatadir@/2mines.svg');
+}
+
+.mines3 {
+  background-image:url('@pkgdatadir@/3mines.svg');
+}
+
+.mines4 {
+  background-image:url('@pkgdatadir@/4mines.svg');
+}
+
+.mines5 {
+  background-image:url('@pkgdatadir@/5mines.svg');
+}
+
+.mines6 {
+  background-image:url('@pkgdatadir@/6mines.svg');
+}
+
+.mines7 {
+  background-image:url('@pkgdatadir@/7mines.svg');
+}
+
+.mines8 {
+  background-image:url('@pkgdatadir@/8mines.svg');
 }
 
 .cursor {

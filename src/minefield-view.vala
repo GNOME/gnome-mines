@@ -426,16 +426,10 @@ public class MinefieldView : Gtk.Grid
                 }
 
                 var n = minefield.get_n_adjacent_mines (x, y);
-                if (n != 0)
-                {
-                    mines[x, y].label = n.to_string ();
-                } else {
-                    mines[x, y].label = "";
-                }
                 mines[x,y].remove_class ("maybe");
                 mines[x,y].remove_class ("flag");
                 mines[x,y].add_class ("count");
-                mines[x,y].add_class ("mines" + n.to_string ());
+                mines[x,y].add_class ("mines%u".printf (n));
             }
         }
         else
