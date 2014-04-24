@@ -6,7 +6,7 @@ gsettings_SCHEMAS = org.gnome.mines.gschema.xml
 man_MANS = gnome-mines.6
 
 pixmapdir   = $(pkgdatadir)
-pixmap_DATA = flag.svg flag-question.svg mine.svg bang.svg warning.svg
+pixmap_DATA = flag.svg flag-question.svg mine.svg bang.svg warning.svg flag-fallen.svg
 
 gnome-mines.css: gnome-mines.css.in Makefile
 	$(AM_V_GEN) sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@

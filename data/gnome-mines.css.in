@@ -58,6 +58,7 @@ Changes are applied instantly and globally, for the whole application.
 
 .incorrect {
   background-color:#ef2929;
+  background-image:url('@pkgdatadir@/flag-fallen.svg');
 }
 
 .mine {
