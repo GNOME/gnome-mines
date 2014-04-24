@@ -111,7 +111,7 @@ private class Tile : Gtk.Button
     {
         _row = prow;
         _column = pcol;
-        can_focus = true;
+        can_focus = false;
         add_class ("tile");
         enter_notify_event.connect ( (event) =>
         {
