@@ -57,11 +57,6 @@ Changes are applied instantly and globally, for the whole application.
   background-image:url('@pkgdatadir@/flag-question.svg');
 }
 
-.incorrect {
-  background-color:#ef2929;
-  background-image:url('@pkgdatadir@/flag-fallen.svg');
-}
-
 .mine {
   background-image:url('@pkgdatadir@/mine.svg');
   background-color:#729fcf;
@@ -118,6 +113,10 @@ Changes are applied instantly and globally, for the whole application.
 .explodedField .exploded {
   background-color:#d3d7cf;
   transition-duration:1s;
+}
+
+.explodedField .flag {
+  background-color:#cc0000;
 }
 
 .completedField .flag {
