@@ -13,7 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2014-03-31 19:23+0000\n"
-"PO-Revision-Date: 2014-03-31 22:51+0100\n"
+"PO-Revision-Date: 2014-04-28 20:03+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -36,6 +36,9 @@ msgid ""
 "You win the game when you've flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
+"Igra Gnome Mine je igra iskanja skritih min. Mesta, kjer so mine, je treba "
+"čim hitreje označiti z zastavicami. Igre je konec, ko so pravilno označena "
+"vsa polja z minami. Če je polje, kjer je mina, odprto, je igre konec."
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
@@ -43,6 +46,9 @@ msgid ""
 "game. If you get stuck, you can ask for a hint: there's a time penalty, but "
 "that's better than hitting a mine!"
 msgstr ""
+"Izbrati je mogoče velikost polja za igranje ob začetku igre. Kadar poteze "
+"niso povsem očitne, je mogoče zahtevati namig, ki pa je kaznovan s pribitkom "
+"časa. To je vseeno bolje, kot naleteti na mino!"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:92
 #: ../src/gnome-mines.vala:129 ../src/gnome-mines.vala:141
