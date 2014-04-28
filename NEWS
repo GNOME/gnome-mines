@@ -1,3 +1,16 @@
+GNOME Mines 3.13.1
+==================
+
+* Use delayed settings saving (Chris Johns)
+* New game screen improvements (Chris Johns)
+* Custom game screen improvements (Michael Catanzaro, Robert Roth)
+* Removed the preferences dialog (Michael Catanzaro)
+* Better minimum size request (Michael Catanzaro)
+* Reimplemented the minefield to be CSS stylable (Robert Roth)
+* Moved user interface creating code to Glade UI files (Robert Roth)
+* Added good-looking CSS style (Allan Day)
+* Updated translations and help
+
 GNOME Mines 3.12.0
 ==================
 
