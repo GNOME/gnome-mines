@@ -115,7 +115,7 @@ Changes are applied instantly and globally, for the whole application.
   transition-duration:1s;
 }
 
-.explodedField .flag {
+.explodedField .incorrect {
   background-color:#cc0000;
 }
 
