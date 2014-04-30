@@ -43,7 +43,7 @@ Changes are applied instantly and globally, for the whole application.
 }
 
 .count:hover {
-  background-color:#aeaeac;
+  background-color:#dededc;
 }
 
 .flag {
