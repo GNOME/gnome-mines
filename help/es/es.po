@@ -6,16 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2014-03-24 08:06+0000\n"
-"PO-Revision-Date: 2014-03-24 13:49+0100\n"
+"POT-Creation-Date: 2014-05-08 18:54+0000\n"
+"PO-Revision-Date: 2014-05-10 18:36+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -25,7 +25,7 @@ msgstr ""
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:17 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
@@ -38,15 +38,15 @@ msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:23
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:14 C/new-game.page:17
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:13
-#: C/flags.page:19 C/flags.page:25 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
+#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -98,13 +98,13 @@ msgstr "un tablero personalizado, donde elije el tamaño y el número de minas"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:11 C/translate.page:10
+#: C/flags.page:12 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:18 C/translate.page:19
+#: C/index.page:21 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Compartir Igual 3.0"
 
@@ -206,13 +206,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
-#| msgid ""
-#| "If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-#| "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
-#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
-#| "<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing "
-#| "list</link>."
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
@@ -271,48 +264,13 @@ msgstr ""
 "El <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> contiene información útil."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:34
-msgctxt "_"
-msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-msgstr ""
-"external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:56
-msgctxt "_"
-msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:85
-msgctxt "_"
-msgid ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-msgstr ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-
 #. (itstool) path: page/title
-#: C/flags.page:30
+#: C/flags.page:31
 msgid "How to use flags"
 msgstr "Cómo usar las banderas"
 
 #. (itstool) path: td/p
-#: C/flags.page:37
+#: C/flags.page:38
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -323,12 +281,12 @@ msgstr ""
 "ella, causando una probable explosión que terminaría el juego."
 
 #. (itstool) path: section/title
-#: C/flags.page:45
+#: C/flags.page:46
 msgid "How to place a flag on a tile"
 msgstr "Cómo poner una bandera en una casilla"
 
 #. (itstool) path: td/p
-#: C/flags.page:49
+#: C/flags.page:50
 msgid ""
 "Red flags are those that cannot be clicked. To place a red flag on a tile:"
 msgstr ""
@@ -336,12 +294,12 @@ msgstr ""
 "casilla:"
 
 #. (itstool) path: item/p
-#: C/flags.page:52
+#: C/flags.page:53
 msgid "right click on a blank tile."
 msgstr "pulse con el botón derecho sobre una casilla no descubierta."
 
 #. (itstool) path: note/p
-#: C/flags.page:62
+#: C/flags.page:63
 msgid ""
 "To make the number of available flags equal to the number of remaining "
 "mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
@@ -354,12 +312,12 @@ msgstr ""
 "seguro»</gui> y reinicie la aplicación."
 
 #. (itstool) path: section/title
-#: C/flags.page:72
+#: C/flags.page:73
 msgid "Use of the <em>I'm not sure</em> flag"
 msgstr "Uso de la bandera <em>No estoy seguro</em>"
 
 #. (itstool) path: section/p
-#: C/flags.page:73
+#: C/flags.page:74
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the blue "
 "<em>I'm not sure</em> flag."
@@ -368,17 +326,17 @@ msgstr ""
 "bandera azul <em>no estoy seguro</em>."
 
 #. (itstool) path: td/p
-#: C/flags.page:78
+#: C/flags.page:79
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera <em>No estoy seguro</em> en una casilla:"
 
 #. (itstool) path: item/p
-#: C/flags.page:80
+#: C/flags.page:81
 msgid "Right-click twice on a blank tile or once on a red flag."
 msgstr "Pulse dos veces con el botón derecho en una bandera roja."
 
 #. (itstool) path: note/p
-#: C/flags.page:91
+#: C/flags.page:92
 msgid ""
 "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
 "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
@@ -428,11 +386,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/get-help.page:38
-#| msgid ""
-#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-#| "gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-#| "<gui>Warn if too many flags have been placed</gui>. This will warn you "
-#| "when you try to place too many flags next to an open tile."
 msgid ""
 "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
 "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
@@ -473,55 +426,32 @@ msgstr ""
 "para ver otros tamaños, selecciónelos en el menú desplegable en la parte "
 "superior de diálogo."
 
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. (itstool) path: media
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
 #. (itstool) path: info/title
-#: C/index.page:6
+#: C/index.page:9
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Minas"
 
 #. (itstool) path: info/title
-#: C/index.page:7
+#: C/index.page:10
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Minas"
 
 #. (itstool) path: credit/name
-#: C/index.page:10 C/shortcuts.page:9
+#: C/index.page:13 C/shortcuts.page:9
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:22
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media> Minas"
+#: C/index.page:25
+#| msgctxt "link"
+#| msgid "GNOME Mines"
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> Minas"
 
 #. (itstool) path: page/p
-#: C/index.page:24
+#: C/index.page:27
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -534,22 +464,22 @@ msgstr ""
 "explosión."
 
 #. (itstool) path: section/title
-#: C/index.page:31
+#: C/index.page:34
 msgid "Game Play"
 msgstr "Juego"
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:37
 msgid "Useful tips"
 msgstr "Consejos útiles"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:40
 msgid "Advanced"
 msgstr "Avanzado"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:43
 msgid "Get Involved"
 msgstr "Involucrarse"
 
@@ -862,11 +792,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/translate.page:30
-#| msgid ""
-#| "To start translating you will need to <link href=\"http:l10n.gnome.org"
-#| "\">create an account</link> and join the <link href=\"http://l10n.gnome."
-#| "org/teams/\">translation team</link> for your language. This will give "
-#| "you the ability to upload new translations."
 msgid ""
 "To start translating you will need to <link href=\"http://l10n.gnome.org"
 "\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
@@ -902,6 +827,45 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+#~ msgstr ""
+#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
+#~ msgstr ""
+#~ "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/flag-question.svg' "
+#~ "md5='544c1aaa711ee86a03a817a1e3b57733'"
+#~ msgstr ""
+#~ "external ref='figures/flag-question.svg' "
+#~ "md5='544c1aaa711ee86a03a817a1e3b57733'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+#~ msgstr ""
+#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+#~ msgstr ""
+#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+
+#~ msgid ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
+#~ "GNOME Mines"
+#~ msgstr ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media> "
+#~ "Minas"
 
 #~ msgid ""
 #~ "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
