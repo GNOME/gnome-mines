@@ -76,7 +76,7 @@
                       <object class="GtkImage" id="flag_image">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="icon_name">preferences-desktop-locale-symbolic</property>
+                        <property name="icon_name">flag-symbolic</property>
                         <property name="icon_size">5</property>
                       </object>
                       <packing>

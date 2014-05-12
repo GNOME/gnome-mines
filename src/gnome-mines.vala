@@ -109,6 +109,7 @@ public class Mines : Gtk.Application
         {
             warning ("Error loading css styles from %s: %s", css_path, e.message);
         }
+
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         var ui_builder = new Gtk.Builder ();
         try
@@ -119,6 +120,8 @@ public class Mines : Gtk.Application
         {
             warning ("Could not load game UI: %s", e.message);
         }
+
+        Gtk.IconTheme.get_default ().append_search_path (DATA_DIRECTORY);
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
