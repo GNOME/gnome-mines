@@ -35,6 +35,7 @@ public class Mines : Gtk.Application
     private Gtk.AspectFrame minefield_aspect;
     private Gtk.Overlay minefield_overlay;
     private Gtk.Box paused_box;
+    private Gtk.ScrolledWindow scrolled;
 
     private Gtk.Label clock_label;
 
@@ -176,7 +177,7 @@ public class Mines : Gtk.Application
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
-        var scrolled = new Gtk.ScrolledWindow (null, null);
+        scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.show ();
         scrolled.add (minefield_view);
 
@@ -497,9 +498,20 @@ public class Mines : Gtk.Application
         minefield.paused_changed.connect (paused_changed_cb);
         minefield.clock_started.connect (clock_started_cb);
 
-        minefield_aspect.ratio = (float)x / y;
+        minefield_aspect.ratio = (float)x / y; 
         minefield_view.minefield = minefield;
-
+        int request_x = -1, request_y = -1;
+        if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x < Gdk.Screen.width ()) {
+            request_x = 30 * x;
+        } else {
+            request_x = Gdk.Screen.width () - window.get_allocated_width () + scrolled.get_allocated_width ();
+        }
+        if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < Gdk.Screen.height ()) {
+            request_y = 30 * y;
+        } else {
+            request_y = Gdk.Screen.height () - window.get_allocated_height () + scrolled.get_allocated_height ();
+        }
+        minefield_aspect.set_size_request (request_x, request_y);
         update_flag_label ();
 
         new_game_action.set_enabled (true);
