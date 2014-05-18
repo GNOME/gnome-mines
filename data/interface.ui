@@ -65,7 +65,7 @@
                 </child>
                 <child>
                   <object class="GtkBox" id="buttons_box">
-                    <property name="width_request">115</property>
+                    <property name="width_request">125</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="halign">start</property>
@@ -165,7 +165,7 @@
                     </child>
                     <child>
                       <object class="GtkButton" id="new_game_button">
-                        <property name="label" translatable="yes">_Difficulty</property>
+                        <property name="label" translatable="yes">Change _Difficulty</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
                         <property name="action_name">app.new-game</property>
