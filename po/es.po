@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-05-08 18:54+0000\n"
-"PO-Revision-Date: 2014-05-10 18:36+0200\n"
+"POT-Creation-Date: 2014-05-20 06:54+0000\n"
+"PO-Revision-Date: 2014-05-20 18:56+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -51,8 +51,8 @@ msgstr ""
 "penalización del tiempo, pero eso mejor que pisar una mina."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:95 ../src/gnome-mines.vala:167
-#: ../src/gnome-mines.vala:627
+#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:171
+#: ../src/gnome-mines.vala:642
 msgid "Mines"
 msgstr "Minas"
 
@@ -136,7 +136,7 @@ msgstr "5/10"
 msgid "0:00"
 msgstr "0:00"
 
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:732
+#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:747
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -145,12 +145,11 @@ msgid "_Best Times"
 msgstr "_Mejores tiempos"
 
 #: ../data/interface.ui.h:6
-#| msgid "_Difficulty:"
-msgid "_Difficulty"
-msgstr "_Dificultad"
+#| msgid "_Difficulty"
+msgid "Change _Difficulty"
+msgstr "Cambiar la _dificultad"
 
 #: ../data/interface.ui.h:7
-#| msgid "Play _Again"
 msgid "_Play Again"
 msgstr "Jugar _otra vez"
 
@@ -159,12 +158,10 @@ msgid "_Width"
 msgstr "A_nchura"
 
 #: ../data/interface.ui.h:9
-#| msgid "eight"
 msgid "_Height"
 msgstr "Al_tura"
 
 #: ../data/interface.ui.h:10
-#| msgid "_Percentage of mines:"
 msgid "Percent _mines"
 msgstr "_Porcentaje de minas"
 
@@ -180,75 +177,74 @@ msgstr "_Jugar partida"
 msgid "Paused"
 msgstr "Detenido"
 
-#: ../src/gnome-mines.vala:136
+#: ../src/gnome-mines.vala:140
 msgid "_New Game"
 msgstr "Juego _nuevo"
 
-#: ../src/gnome-mines.vala:137
+#: ../src/gnome-mines.vala:141
 msgid "_Scores"
 msgstr "_Puntuación"
 
-#: ../src/gnome-mines.vala:140
-#| msgid "Warnings"
+#: ../src/gnome-mines.vala:144
 msgid "_Show Warnings"
 msgstr "Mostrar _advertencias"
 
-#: ../src/gnome-mines.vala:141
+#: ../src/gnome-mines.vala:145
 msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
-#: ../src/gnome-mines.vala:144
+#: ../src/gnome-mines.vala:148
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../src/gnome-mines.vala:145
+#: ../src/gnome-mines.vala:149
 msgid "_About"
 msgstr "_Acerca de"
 
-#: ../src/gnome-mines.vala:146
+#: ../src/gnome-mines.vala:150
 msgid "_Quit"
 msgstr "_Salir"
 
-#: ../src/gnome-mines.vala:246
+#: ../src/gnome-mines.vala:250
 msgid "Custom"
 msgstr "Personalizado"
 
-#: ../src/gnome-mines.vala:321
+#: ../src/gnome-mines.vala:325
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: ../src/gnome-mines.vala:402
+#: ../src/gnome-mines.vala:406
 msgid "Do you want to start a new game?"
 msgstr "¿Quiere empezar una partida nueva?"
 
-#: ../src/gnome-mines.vala:403
+#: ../src/gnome-mines.vala:407
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Si inicia una partida nueva, perderá su progreso actual."
 
-#: ../src/gnome-mines.vala:404
+#: ../src/gnome-mines.vala:408
 msgid "Keep Current Game"
 msgstr "Mantener el juego actual"
 
-#: ../src/gnome-mines.vala:405
+#: ../src/gnome-mines.vala:409
 msgid "Start New Game"
 msgstr "Iniciar un juego nuevo"
 
-#: ../src/gnome-mines.vala:601
+#: ../src/gnome-mines.vala:616
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: ../src/gnome-mines.vala:605
+#: ../src/gnome-mines.vala:620
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: ../src/gnome-mines.vala:608
+#: ../src/gnome-mines.vala:623
 msgid "Resizing and SVG support:"
 msgstr "Soporte para redimensionado y SVG:"
 
-#: ../src/gnome-mines.vala:630
+#: ../src/gnome-mines.vala:645
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -258,7 +254,7 @@ msgstr ""
 "\n"
 "Minas es parte de los juegos de GNOME."
 
-#: ../src/gnome-mines.vala:637
+#: ../src/gnome-mines.vala:652
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -267,8 +263,7 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gnome-mines.vala:742
-#| msgid "_Reset"
+#: ../src/gnome-mines.vala:757
 msgid "_Resume"
 msgstr "_Continuar"
 
