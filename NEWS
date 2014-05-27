@@ -1,3 +1,13 @@
+GNOME Mines 3.13.2
+==================
+
+* Update CSS style (Jakub Steiner)
+* Flipped tiles should not appear sensitive on hover (Robert Roth)
+* Scrollbars added for large custom minefields (Robert Roth)
+* Use improved flag icon in right column (Allan Day, Robert Roth)
+* Rename Difficulty button to Change Difficulty (Michael Catanzaro)
+* Updated translations
+
 GNOME Mines 3.13.1
 ==================
 
