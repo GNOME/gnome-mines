@@ -8,7 +8,7 @@
  * license.
  */
 
-public class History
+public class History : Object
 {
     public string filename;
     public List<HistoryEntry> entries;
@@ -99,7 +99,7 @@ public class History
     }
 }
 
-public class HistoryEntry
+public class HistoryEntry : Object
 {
     public DateTime date;
     public uint width;

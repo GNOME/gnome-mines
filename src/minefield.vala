@@ -15,7 +15,7 @@ public enum FlagType
     MAYBE
 }
 
-private class Location
+private class Location : Object
 {
     /* true if contains a mine */
     public bool has_mine = false;
@@ -45,7 +45,7 @@ private static const Neighbour neighbour_map[] =
     {-1, 0}
 };
 
-public class Minefield
+public class Minefield : Object
 {
     /* Size of map */
     public uint width = 0;
