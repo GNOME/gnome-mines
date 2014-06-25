@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-games">
+  <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-mines">
     <key name="use-question-marks" type="b">
       <default>true</default>
       <summary>Use the unknown flag</summary>
