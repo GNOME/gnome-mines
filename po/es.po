@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-05-20 06:54+0000\n"
-"PO-Revision-Date: 2014-05-20 18:56+0200\n"
+"POT-Creation-Date: 2014-06-30 06:55+0000\n"
+"PO-Revision-Date: 2014-06-30 12:41+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
 #: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:171
-#: ../src/gnome-mines.vala:642
+#: ../src/gnome-mines.vala:657
 msgid "Mines"
 msgstr "Minas"
 
@@ -136,7 +136,7 @@ msgstr "5/10"
 msgid "0:00"
 msgstr "0:00"
 
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:747
+#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:762
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -145,7 +145,6 @@ msgid "_Best Times"
 msgstr "_Mejores tiempos"
 
 #: ../data/interface.ui.h:6
-#| msgid "_Difficulty"
 msgid "Change _Difficulty"
 msgstr "Cambiar la _dificultad"
 
@@ -232,19 +231,40 @@ msgstr "Mantener el juego actual"
 msgid "Start New Game"
 msgstr "Iniciar un juego nuevo"
 
-#: ../src/gnome-mines.vala:616
+#. Translators: sorry. This is the clock label when the game has exceeded
+#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
+#. * and the last is seconds. In between are ratio characters and LTR order
+#. * marks, so that nothing gets reversed in RTL languages. You probably do not
+#. * need to change this. Probably.
+#.
+#: ../src/gnome-mines.vala:614
+#, c-format
+msgid "%02d∶‎%02d∶‎%02d"
+msgstr "%02d∶‎%02d∶‎%02d"
+
+#. Translators: sorry. This is the clock label when the game is less than
+#. * one hour in length. The first %02d is minutes and the last is seconds.
+#. * In between is a ratio character and LTR order mark, so that nothing gets
+#. * reversed in RTL languages. You probably do not need to change this. Probably.
+#.
+#: ../src/gnome-mines.vala:623
+#, c-format
+msgid "%02d∶‎%02d"
+msgstr "%02d∶‎%02d"
+
+#: ../src/gnome-mines.vala:631
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: ../src/gnome-mines.vala:620
+#: ../src/gnome-mines.vala:635
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: ../src/gnome-mines.vala:623
+#: ../src/gnome-mines.vala:638
 msgid "Resizing and SVG support:"
 msgstr "Soporte para redimensionado y SVG:"
 
-#: ../src/gnome-mines.vala:645
+#: ../src/gnome-mines.vala:660
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -254,7 +274,7 @@ msgstr ""
 "\n"
 "Minas es parte de los juegos de GNOME."
 
-#: ../src/gnome-mines.vala:652
+#: ../src/gnome-mines.vala:667
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -263,7 +283,7 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:772
 msgid "_Resume"
 msgstr "_Continuar"
 
