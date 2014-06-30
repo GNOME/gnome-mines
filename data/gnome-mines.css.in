@@ -10,8 +10,8 @@ Changes are applied instantly and globally, for the whole application.
 .tile {
   background-image:none;
   background-color:#babdb6;
-  border-color:transparent;
-  border-radius:4px; /* border width might be affecting */
+  border-color:@theme_bg_color;
+  border-radius:5px; /* border width might be affecting */
   color:transparent;
   border-image:none;
   font-size:16px;
@@ -19,9 +19,8 @@ Changes are applied instantly and globally, for the whole application.
   background-size: 60%;
   background-position: 50%;
   background-repeat: no-repeat;
-
+  box-shadow:none;
   border-width:2px;
-  border-image:none;
 }
 
 .tile:hover {
