@@ -631,6 +631,7 @@ public class Mines : Gtk.Application
             _("Main game:"),
             "Szekeres Istvan (Pista)",
             "Robert Ancell",
+            "Robert Roth",
             "",
             _("Score:"),
             "Horacio J. Peña",
