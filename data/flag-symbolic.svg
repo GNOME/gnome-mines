@@ -11,8 +11,8 @@
    width="16"
    height="16"
    id="svg9373"
-   inkscape:version="0.48.4 r9939"
-   sodipodi:docname="flag-symbolic.svg">
+   inkscape:version="0.48+devel r"
+   sodipodi:docname="flag-symbolic-ltr.svg">
   <metadata
      id="metadata9418">
     <rdf:RDF>
@@ -28,27 +28,28 @@
   <defs
      id="defs9416" />
   <sodipodi:namedview
-     pagecolor="#ffffff"
+     pagecolor="#666666"
      bordercolor="#666666"
      borderopacity="1"
      objecttolerance="10"
      gridtolerance="10"
      guidetolerance="10"
-     inkscape:pageopacity="0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1014"
+     inkscape:window-width="1052"
+     inkscape:window-height="537"
      id="namedview9414"
      showgrid="false"
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="false"
      inkscape:zoom="4"
-     inkscape:cx="-7.077932"
+     inkscape:cx="-37.077932"
      inkscape:cy="-2.8623575"
-     inkscape:window-x="1280"
-     inkscape:window-y="27"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg9373">
+     inkscape:window-x="331"
+     inkscape:window-y="409"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg9373"
+     showborder="false">
     <inkscape:grid
        type="xygrid"
        id="grid9641"

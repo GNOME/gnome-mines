@@ -18,6 +18,7 @@ Changes are applied instantly and globally, for the whole application.
   font-weight: bold;
   background-size: 60%;
   background-position: 50%;
+  padding:0px;
   background-repeat: no-repeat;
   box-shadow:none;
   border-width:2px;
@@ -45,53 +46,8 @@ Changes are applied instantly and globally, for the whole application.
   background-color:#dededc;
 }
 
-.flag {
-  background-image:url('@pkgdatadir@/flag.svg');
-}
-
-.exploded {
-  background-image:url('@pkgdatadir@/bang.svg');
-}
-
-.maybe {
-  background-image:url('@pkgdatadir@/flag-question.svg');
-}
-
 .mine {
-  background-image:url('@pkgdatadir@/mine.svg');
   background-color:#729fcf;
-}
-
-.mines1 {
-  background-image:url('@pkgdatadir@/1mine.svg');
-}
-
-.mines2 {
-  background-image:url('@pkgdatadir@/2mines.svg');
-}
-
-.mines3 {
-  background-image:url('@pkgdatadir@/3mines.svg');
-}
-
-.mines4 {
-  background-image:url('@pkgdatadir@/4mines.svg');
-}
-
-.mines5 {
-  background-image:url('@pkgdatadir@/5mines.svg');
-}
-
-.mines6 {
-  background-image:url('@pkgdatadir@/6mines.svg');
-}
-
-.mines7 {
-  background-image:url('@pkgdatadir@/7mines.svg');
-}
-
-.mines8 {
-  background-image:url('@pkgdatadir@/8mines.svg');
 }
 
 .cursor {
