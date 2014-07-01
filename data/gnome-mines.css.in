@@ -11,7 +11,7 @@ Changes are applied instantly and globally, for the whole application.
   background-image:none;
   background-color:#babdb6;
   border-color:@theme_bg_color;
-  border-radius:5px; /* border width might be affecting */
+  border-radius:4px; /* border width might be affecting */
   color:transparent;
   border-image:none;
   font-size:16px;
@@ -21,7 +21,7 @@ Changes are applied instantly and globally, for the whole application.
   padding:0px;
   background-repeat: no-repeat;
   box-shadow:none;
-  border-width:2px;
+  border-width:0px;
 }
 
 .tile:hover {
