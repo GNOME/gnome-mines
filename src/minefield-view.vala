@@ -389,12 +389,12 @@ public class MinefieldView : Gtk.Grid
 
     public override void get_preferred_width (out int minimum, out int natural)
     {
-        minimum = natural = (int) (minefield.width * minimum_size);
+        minimum = natural = minefield != null ? (int) (minefield.width * minimum_size) : 0;
     }
 
     public override void get_preferred_height (out int minimum, out int natural)
     {
-        minimum = natural = (int) (minefield.height * minimum_size);
+        minimum = natural = minefield != null ? (int) (minefield.height * minimum_size) : 0;
     }
 
     public new void add (Gtk.Widget child, int i, int j)
