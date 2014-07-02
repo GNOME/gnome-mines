@@ -134,29 +134,6 @@ public class Mines : Gtk.Application
         add_action (settings.create_action (KEY_USE_OVERMINE_WARNING));
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
-        var menu = new Menu ();
-        app_main_menu = new Menu ();
-        menu.append_section (null, app_main_menu);
-        app_main_menu.append (_("_New Game"), "app.new-game");
-        app_main_menu.append (_("_Scores"), "app.scores");
-        var section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
-        section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
-        section = new Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Help"), "app.help");
-        section.append (_("_About"), "app.about");
-        section.append (_("_Quit"), "app.quit");
-        set_app_menu (menu);
-
-        add_accelerator ("<Primary>n", "app.new-game", null);
-        add_accelerator ("<Primary>r", "app.repeat-size", null);
-        add_accelerator ("Pause", "app.pause", null);
-        add_accelerator ("F1", "app.help", null);
-        add_accelerator ("<Primary>w", "app.quit", null);
-        add_accelerator ("<Primary>q", "app.quit", null);
-
         window = (Gtk.ApplicationWindow) ui_builder.get_object ("main_window");
         window.configure_event.connect (window_configure_event_cb);
         window.window_state_event.connect (window_state_event_cb);
@@ -165,14 +142,57 @@ public class Mines : Gtk.Application
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
-
-        var headerbar = new Gtk.HeaderBar ();
-        headerbar.show_close_button = true;
-        headerbar.set_title (_("Mines"));
-        headerbar.show ();
-        window.set_titlebar (headerbar);
-
         add_window (window);
+
+        bool shell_shows_menubar;
+        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
+        if (!shell_shows_menubar)
+        {
+            var headerbar = new Gtk.HeaderBar ();
+            headerbar.show_close_button = true;
+            headerbar.set_title (_("Mines"));
+            headerbar.show ();
+            window.set_titlebar (headerbar);
+
+            var menu = new Menu ();
+            app_main_menu = new Menu ();
+            menu.append_section (null, app_main_menu);
+            app_main_menu.append (_("_New Game"), "app.new-game");
+            app_main_menu.append (_("_Scores"), "app.scores");
+            var section = new Menu ();
+            menu.append_section (null, section);
+            section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
+            section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
+            section = new Menu ();
+            menu.append_section (null, section);
+            section.append (_("_Help"), "app.help");
+            section.append (_("_About"), "app.about");
+            section.append (_("_Quit"), "app.quit");
+            set_app_menu (menu);
+        }
+        else
+        {
+            var menu = new Menu ();
+            var mines_menu = new Menu ();
+            menu.append_submenu (_("_Mines"), mines_menu);
+            mines_menu.append (_("_New Game"), "app.new-game");
+            mines_menu.append (_("_Scores"), "app.scores");
+            mines_menu.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
+            mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
+            mines_menu.append (_("_Quit"), "app.quit");
+            var help_menu = new Menu ();
+            menu.append_submenu (_("_Help"), help_menu);
+            help_menu.append (_("_Contents"), "app.help");
+            help_menu.append (_("_About"), "app.about");
+            set_menubar (menu);
+        }
+
+        add_accelerator ("<Primary>n", "app.new-game", null);
+        add_accelerator ("<Primary>r", "app.repeat-size", null);
+        add_accelerator ("Pause", "app.pause", null);
+        add_accelerator ("F1", "app.help", null);
+        add_accelerator ("<Primary>w", "app.quit", null);
+        add_accelerator ("<Primary>q", "app.quit", null);
 
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
