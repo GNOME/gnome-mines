@@ -1,4 +1,3 @@
-data/gnomine.desktop.in
 src/gnome-mines.c
 src/minefield.c
 src/minefield-view.c
