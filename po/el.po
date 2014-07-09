@@ -36,8 +36,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-04-18 14:41+0000\n"
-"PO-Revision-Date: 2014-04-18 21:22+0200\n"
+"POT-Creation-Date: 2014-07-09 19:45+0000\n"
+"PO-Revision-Date: 2014-07-10 02:38+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: www.gnome.gr\n"
 "Language: el\n"
@@ -45,12 +45,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.6.5\n"
 "X-Project-Style: gnome\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
-msgstr "Νάρκες GNOME"
+msgstr "Νάρκες"
 
 #: ../data/gnome-mines.appdata.xml.in.h:2
 msgid ""
@@ -75,9 +75,9 @@ msgstr ""
 "υπόδειξη: υπάρχει ποινή χρόνου, αλλά είναι καλύτερα από το να χτυπήσετε μια "
 "νάρκη!"
 
-#: ../data/gnome-mines.desktop.in.h:1 ../src/gnome-mines.vala:91
-#: ../src/gnome-mines.vala:132 ../src/gnome-mines.vala:145
-#: ../src/gnome-mines.vala:698
+#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
+#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
+#: ../src/gnome-mines.vala:678
 msgid "Mines"
 msgstr "Νάρκες"
 
@@ -91,7 +91,7 @@ msgstr "ναρκαλιευτής;minesweeper;"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
-msgstr "Χρήση της άγνωστης σήμανσης"
+msgstr "Χρήση της άγνωστης σημαίας"
 
 #: ../data/org.gnome.mines.gschema.xml.h:2
 msgid "Set to true to be able to mark squares as unknown."
@@ -99,7 +99,7 @@ msgstr "Ορίστε σε αληθές για να είναι δυνατή η σ
 
 #: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Warning about too many flags"
-msgstr "Προειδοποίηση για μεγάλο αριθμό σημάνσεων"
+msgstr "Προειδοποίηση για μεγάλο αριθμό σημαιών"
 
 #: ../data/org.gnome.mines.gschema.xml.h:4
 msgid ""
@@ -107,19 +107,19 @@ msgid ""
 "numbered tile."
 msgstr ""
 "Ορίστε σε αληθές για να ενεργοποιηθούν τα εικονίδια προειδοποίησης όταν "
-"έχουν γίνει πάρα πολλές σημάνσεις κοντά σε ένα αριθμημένο πλακίδιο."
+"έχουν γίνει πάρα πολλές σημαίες κοντά σε ένα αριθμημένο πλακίδιο."
 
 #: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Enable automatic placing of flags"
-msgstr "Ενεργοποίηση αυτόματης σήμανσης"
+msgstr "Ενεργοποίηση αυτόματης τοποθέτησης σημαιών"
 
 #: ../data/org.gnome.mines.gschema.xml.h:6
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"Ορίστε σε αληθές για αυτόματη επισήμανση τετραγώνων ως ναρκοθετημένα όταν "
-"έχουν αποκαλυφθεί αρκετά τετράγωνα"
+"Ορίστε σε αληθές για αυτόματη τοποθέτηση σημαιών σε τετράγωνα ως "
+"ναρκοθετημένα όταν έχουν αποκαλυφθεί αρκετά τετράγωνα"
 
 #: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Number of columns in a custom game"
@@ -153,117 +153,153 @@ msgstr "Το ύψος του παραθύρου σε εικονοστοιχεί�
 msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
-#: ../src/gnome-mines.vala:111
-msgid "_New Game"
-msgstr "_Νέο παιχνίδι"
+#: ../data/interface.ui.h:2
+msgid "5/10"
+msgstr "5/10"
 
-#: ../src/gnome-mines.vala:112
-msgid "_Scores"
-msgstr "_Βαθμολογίες"
+#: ../data/interface.ui.h:3
+msgid "0:00"
+msgstr "0:00"
 
-#: ../src/gnome-mines.vala:115
-msgid "_Show Warnings"
-msgstr "Εμ_φάνιση προειδοποιήσεων"
+#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
+msgid "_Pause"
+msgstr "_Παύση"
 
-#: ../src/gnome-mines.vala:116
-msgid "_Use Question Flags"
-msgstr "Χ_ρήση σημάνσεων"
-
-#: ../src/gnome-mines.vala:119
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: ../src/gnome-mines.vala:120
-msgid "_About"
-msgstr "_Περί"
-
-#: ../src/gnome-mines.vala:121
-msgid "_Quit"
-msgstr "Έ_ξοδος"
-
-#: ../src/gnome-mines.vala:209
+#: ../data/interface.ui.h:5
 msgid "_Best Times"
 msgstr "Κα_λύτεροι χρόνοι"
 
-#: ../src/gnome-mines.vala:217
-msgid "_Difficulty"
-msgstr "_Δυσκολία"
+#: ../data/interface.ui.h:6
+msgid "Change _Difficulty"
+msgstr "Αλλαγή _δυσκολίας"
 
-#: ../src/gnome-mines.vala:226
-#| msgid "_Play Game"
+#: ../data/interface.ui.h:7
 msgid "_Play Again"
-msgstr "_Παίξτε ξανά"
+msgstr "Π_αίξτε ξανά"
 
-# Translation of "custom" sucks!  ("kata paraggelia"???  nah!)
-#: ../src/gnome-mines.vala:279
-msgid "Custom"
-msgstr "Προσαρμοσμένο"
+#: ../data/interface.ui.h:8
+msgid "_Width"
+msgstr "Π_λάτος"
 
-#: ../src/gnome-mines.vala:297
-msgid "_Height:"
-msgstr "Ύ_ψος:"
+#: ../data/interface.ui.h:9
+msgid "_Height"
+msgstr "Ύ_ψος"
 
-#: ../src/gnome-mines.vala:307
-msgid "_Width:"
-msgstr "_Πλάτος:"
+#: ../data/interface.ui.h:10
+msgid "Percent _mines"
+msgstr "Ποσοστό ναρ_κών"
 
-#: ../src/gnome-mines.vala:317
-#| msgid "_Percentage of mines:"
-msgid "Percent _mines:"
-msgstr "Ποσοστό ναρ_κών:"
-
-#: ../src/gnome-mines.vala:332
+#: ../data/interface.ui.h:11
 msgid "_Cancel"
-msgstr "_Ακύρωση"
+msgstr "Α_κύρωση"
 
-#: ../src/gnome-mines.vala:338
+#: ../data/interface.ui.h:12
 msgid "_Play Game"
 msgstr "Έναρ_ξη παιχνιδιού"
 
-#: ../src/gnome-mines.vala:388
+#: ../data/interface.ui.h:13
+msgid "Paused"
+msgstr "Παύση"
+
+#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+msgid "_New Game"
+msgstr "_Νέο παιχνίδι"
+
+#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+msgid "_Scores"
+msgstr "_Βαθμολογίες"
+
+#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+msgid "_Show Warnings"
+msgstr "Εμ_φάνιση προειδοποιήσεων"
+
+#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+msgid "_Use Question Flags"
+msgstr "Χ_ρήση ερωτηματικών"
+
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+msgid "_Help"
+msgstr "_Βοήθεια"
+
+#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+msgid "_About"
+msgstr "_Περί"
+
+#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#: ../src/gnome-mines.vala:177
+#| msgid "Mines"
+msgid "_Mines"
+msgstr "_Νάρκες"
+
+#: ../src/gnome-mines.vala:185
+msgid "_Contents"
+msgstr "Π_εριεχόμενα"
+
+# Translation of "custom" sucks!  ("kata paraggelia"???  nah!)
+#: ../src/gnome-mines.vala:270
+msgid "Custom"
+msgstr "Προσαρμοσμένο"
+
+#: ../src/gnome-mines.vala:345
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> νάρκη"
 msgstr[1] "<b>%d</b> νάρκες"
 
-#: ../src/gnome-mines.vala:469
+#: ../src/gnome-mines.vala:426
 msgid "Do you want to start a new game?"
 msgstr "Θέλετε να ξεκινήσετε νέο παιχνίδι;"
 
-#: ../src/gnome-mines.vala:470
+#: ../src/gnome-mines.vala:427
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Αν ξεκινήσετε ένα νέο παιχνίδι, η τωρινή σας πρόοδος θα χαθεί."
 
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:428
 msgid "Keep Current Game"
 msgstr "Κράτηση του τρέχοντος παιχνιδιού"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:429
 msgid "Start New Game"
 msgstr "Εκκίνηση νέου παιχνιδιού"
 
-#: ../src/gnome-mines.vala:666
+#. Translators: sorry. This is the clock label when the game has exceeded
+#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
+#. * and the last is seconds. In between are ratio characters and LTR order
+#. * marks, so that nothing gets reversed in RTL languages. You probably do not
+#. * need to change this. Probably.
+#.
+#: ../src/gnome-mines.vala:634
+#, c-format
+msgid "%02d∶‎%02d∶‎%02d"
+msgstr "%02d∶‎%02d∶‎%02d"
+
+#. Translators: sorry. This is the clock label when the game is less than
+#. * one hour in length. The first %02d is minutes and the last is seconds.
+#. * In between is a ratio character and LTR order mark, so that nothing gets
+#. * reversed in RTL languages. You probably do not need to change this. Probably.
+#.
+#: ../src/gnome-mines.vala:643
+#, c-format
+msgid "%02d∶‎%02d"
+msgstr "%02d∶‎%02d"
+
+#: ../src/gnome-mines.vala:651
 msgid "Main game:"
 msgstr "Κυρίως παιχνίδι:"
 
-#: ../src/gnome-mines.vala:671
+#: ../src/gnome-mines.vala:656
 msgid "Score:"
-msgstr "Βαθμοί:"
+msgstr "Βαθμολογία:"
 
-#: ../src/gnome-mines.vala:674
+#: ../src/gnome-mines.vala:659
 msgid "Resizing and SVG support:"
 msgstr "Αλλαγή μεγέθους και υποστήριξη SVG:"
 
-#: ../src/gnome-mines.vala:682
-msgid "Faces:"
-msgstr "Πρόσωπα:"
-
-#: ../src/gnome-mines.vala:686
-msgid "Graphics:"
-msgstr "Γραφικά:"
-
-#: ../src/gnome-mines.vala:701
+#: ../src/gnome-mines.vala:681
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -273,7 +309,7 @@ msgstr ""
 "\n"
 "Οι Νάρκες είναι μέρος των παιχνιδιών του GNOME."
 
-#: ../src/gnome-mines.vala:708
+#: ../src/gnome-mines.vala:688
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -283,20 +319,12 @@ msgstr ""
 " Κώστας Παπαδήμας <pkst@gmx.net>\n"
 " Τζένη Πετούμενου <epetoumenou@gmail.com>\n"
 " Ευστάθιος Ιωσηφίδης <iosifidis@opensuse.org>\n"
-"Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://www.gnome.gr/"
+" Μαρία Μαυρίδου <mavridou@gmail.com>\n"
+"Για περισσότερες πληροφορίες, επισκεφθείτε την σελίδα http://gnome.gr/"
 
-#: ../src/gnome-mines.vala:804
-#| msgid "Paused"
-msgid "_Pause"
-msgstr "_Παύση"
-
-#: ../src/gnome-mines.vala:818
+#: ../src/gnome-mines.vala:793
 msgid "_Resume"
 msgstr "_Συνέχιση"
-
-#: ../src/minefield-view.vala:562
-msgid "Paused"
-msgstr "Παύση"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
@@ -328,6 +356,12 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u νάρκη"
 msgstr[1] "%u × %u, %u νάρκες"
+
+#~ msgid "Faces:"
+#~ msgstr "Πρόσωπα:"
+
+#~ msgid "Graphics:"
+#~ msgstr "Γραφικά:"
 
 #~ msgid "_Preferences"
 #~ msgstr "Π_ροτιμήσεις"
