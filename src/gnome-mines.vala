@@ -52,7 +52,7 @@ public class Mines : Gtk.Application
 
     /* true when the next configure event should be ignored. */
     private bool window_skip_configure;
-    
+
     /* Game history */
     private History history;
 
@@ -75,13 +75,13 @@ public class Mines : Gtk.Application
 
     private const GLib.ActionEntry[] action_entries =
     {
-        { "new-game",           new_game_cb                                   },
-        { "repeat-size",        repeat_size_cb                                },
-        { "pause",              toggle_pause_cb                               },
-        { "scores",             scores_cb                                     },
-        { "quit",               quit_cb                                       },
-        { "help",               help_cb                                       },
-        { "about",              about_cb                                      }
+        { "new-game",           new_game_cb                                 },
+        { "repeat-size",        repeat_size_cb                              },
+        { "pause",              toggle_pause_cb                             },
+        { "scores",             scores_cb                                   },
+        { "quit",               quit_cb                                     },
+        { "help",               help_cb                                     },
+        { "about",              about_cb                                    }
     };
 
     public Mines ()
@@ -517,7 +517,7 @@ public class Mines : Gtk.Application
         minefield.paused_changed.connect (paused_changed_cb);
         minefield.clock_started.connect (clock_started_cb);
 
-        minefield_aspect.ratio = (float)x / y; 
+        minefield_aspect.ratio = (float)x / y;
         minefield_view.minefield = minefield;
         int request_x = -1, request_y = -1;
         if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x < Gdk.Screen.width ()) {
@@ -706,7 +706,7 @@ public class Mines : Gtk.Application
 
     private void xsize_spin_cb (Gtk.SpinButton spin)
     {
-        var xsize = spin.get_value_as_int ();        
+        var xsize = spin.get_value_as_int ();
         if (xsize == settings.get_int (KEY_XSIZE))
             return;
 
@@ -716,7 +716,7 @@ public class Mines : Gtk.Application
 
     private void ysize_spin_cb (Gtk.SpinButton spin)
     {
-        var ysize = spin.get_value_as_int ();        
+        var ysize = spin.get_value_as_int ();
         if (ysize == settings.get_int (KEY_YSIZE))
             return;
 
@@ -732,7 +732,7 @@ public class Mines : Gtk.Application
         settings.set_int (KEY_NMINES,
                           (int) Math.round (spin.get_value () * (settings.get_int (KEY_XSIZE) * settings.get_int (KEY_YSIZE)) / 100.0f));
     }
-    
+
     private void set_mode (int mode)
     {
         if (mode != settings.get_int (KEY_MODE))
@@ -780,7 +780,6 @@ public class Mines : Gtk.Application
 
         play_pause_button.show ();
         play_pause_label.label = _("_Pause");
-        
     }
 
     private void display_unpause_button ()
