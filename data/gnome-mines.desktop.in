@@ -8,3 +8,16 @@ Type=Application
 Categories=GNOME;GTK;Game;LogicGame;
 _Keywords=minesweeper;
 StartupNotify=true
+Actions=Small;Medium;Big
+
+[Desktop Action Small]
+_Name=Small board
+Exec=gnome-mines --small
+
+[Desktop Action Medium]
+_Name=Medium board
+Exec=gnome-mines --medium
+
+[Desktop Action Big]
+_Name=Big board
+Exec=gnome-mines --big
