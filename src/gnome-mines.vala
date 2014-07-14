@@ -21,6 +21,9 @@ public class Mines : Gtk.Application
     private const string KEY_NMINES = "nmines";
     private const string KEY_MODE = "mode";
 
+    /* For command-line options */
+    private static int game_mode = -1;
+
     /* Keys shared with MinefieldView */
     public static const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
@@ -76,6 +79,9 @@ public class Mines : Gtk.Application
     private const OptionEntry[] option_entries =
     {
         { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
+        { "small",  0, 0, OptionArg.NONE, null, N_("Small game"), null },
+        { "medium", 0, 0, OptionArg.NONE, null, N_("Medium game"), null },
+        { "big",    0, 0, OptionArg.NONE, null, N_("Big game"), null },
         { null }
     };
 
@@ -105,6 +111,9 @@ public class Mines : Gtk.Application
 
         settings = new Settings ("org.gnome.mines");
         settings.delay ();
+
+        if (game_mode != -1)
+            settings.set_int (KEY_MODE, game_mode);
 
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
@@ -240,6 +249,9 @@ public class Mines : Gtk.Application
         high_scores_button = (Gtk.Button) ui_builder.get_object ("high_scores_button");
         replay_button = (Gtk.Button) ui_builder.get_object ("replay_button");
         new_game_button = (Gtk.Button) ui_builder.get_object ("new_game_button");
+
+        if (game_mode != -1)
+            start_game ();
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
@@ -378,6 +390,13 @@ public class Mines : Gtk.Application
             stderr.printf ("%1$s %2$s\n", "gnome-mines", VERSION);
             return Posix.EXIT_SUCCESS;
         }
+
+        if (options.contains ("small"))
+            game_mode = 0;
+        if (options.contains ("medium"))
+            game_mode = 1;
+        if (options.contains ("big"))
+            game_mode = 2;
 
         /* Activate */
         return -1;
