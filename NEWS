@@ -1,3 +1,16 @@
+GNOME Mines 3.13.4
+==================
+
+* Theme tweaks for the latest Adwaita (Robert Roth)
+* Fixed rough image rendering (Robert Roth)
+* Do not use deprecated methods and properties (Robert Roth)
+* Fixed styling issues causing diamonds to appear in the grid (Robert Roth)
+* Fixed small flag icon (Robert Roth)
+* Translatable clock label (Michael Catanzaro)
+* Better-looking minimum width request for the small board (Robert Roth)
+* Don't show headerbar/appmenu on systems that don't support it (Robert Ancell)
+* Updated translations
+
 GNOME Mines 3.13.2
 ==================
 
