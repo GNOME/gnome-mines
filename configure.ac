@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Mines], [3.13.4], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Mines], [3.13.90], [https://bugzilla.gnome.org/],
         [gnome-mines], [https://wiki.gnome.org/Apps/Mines])
 AM_INIT_AUTOMAKE([1.11 no-dist-gzip dist-xz foreign])
 AM_SILENT_RULES([yes])
