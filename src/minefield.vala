@@ -164,7 +164,8 @@ public class Minefield : Object
 
     public void clear_mine (uint x, uint y)
     {
-        start_clock ();
+        if (!exploded)
+            start_clock ();
 
         /* Place mines on first attempt to clear */
         if (!placed_mines)
