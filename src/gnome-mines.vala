@@ -187,12 +187,11 @@ public class Mines : Gtk.Application
             set_menubar (menu);
         }
 
-        add_accelerator ("<Primary>n", "app.new-game", null);
-        add_accelerator ("<Primary>r", "app.repeat-size", null);
-        add_accelerator ("Pause", "app.pause", null);
-        add_accelerator ("F1", "app.help", null);
-        add_accelerator ("<Primary>w", "app.quit", null);
-        add_accelerator ("<Primary>q", "app.quit", null);
+        set_accels_for_action ("app.new-game", {"<Primary>n"});
+        set_accels_for_action ("app.repeat-size", {"<Primary>r"});
+        set_accels_for_action ("app.pause", {"Pause"});
+        set_accels_for_action ("app.help", {"F1"});
+        set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
 
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
