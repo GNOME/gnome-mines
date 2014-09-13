@@ -73,12 +73,6 @@ public class Mines : Gtk.Application
     private Gtk.AspectFrame custom_game_screen;
     private bool is_new_game_screen;
 
-    private const OptionEntry[] option_entries =
-    {
-        { "version", 'v', 0, OptionArg.NONE, null, N_("Print release version and exit"), null },
-        { null }
-    };
-
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",           new_game_cb                                 },
@@ -93,8 +87,6 @@ public class Mines : Gtk.Application
     public Mines ()
     {
         Object (application_id: "org.gnome.mines", flags: ApplicationFlags.FLAGS_NONE);
-
-        add_main_option_entries (option_entries);
     }
 
     protected override void startup ()
@@ -370,22 +362,9 @@ public class Mines : Gtk.Application
         settings.apply ();
     }
 
-    protected override int handle_local_options (GLib.VariantDict options)
+    public override void activate ()
     {
-        if (options.contains ("version"))
-        {
-            /* NOTE: Is not translated so can be easily parsed */
-            stderr.printf ("%1$s %2$s\n", "gnome-mines", VERSION);
-            return Posix.EXIT_SUCCESS;
-        }
-
-        /* Activate */
-        return -1;
-    }
-
-    protected override void activate ()
-    {
-        window.present ();
+        window.show ();
     }
 
     private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
@@ -819,7 +798,21 @@ public class Mines : Gtk.Application
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
 
+        var context = new OptionContext (null);
+        context.set_translation_domain (GETTEXT_PACKAGE);
+        context.add_group (Gtk.get_option_group (true));
+
+        try
+        {
+            context.parse (ref args);
+        }
+        catch (Error e)
+        {
+            stderr.printf ("%s\n", e.message);
+            return Posix.EXIT_FAILURE;
+        }
+
         var app = new Mines ();
-        return app.run (args);
+        return app.run ();
     }
 }
