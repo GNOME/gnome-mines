@@ -623,24 +623,9 @@ public class Mines : Gtk.Application
         var minutes = (elapsed - hours * 3600) / 60;
         var seconds = elapsed - hours * 3600 - minutes * 60;
         if (hours > 0)
-        {
-            /* Translators: sorry. This is the clock label when the game has exceeded
-             * one hour in length. The first %02d is hours, the middle %02d is minutes,
-             * and the last is seconds. In between are ratio characters and LTR order
-             * marks, so that nothing gets reversed in RTL languages. You probably do not
-             * need to change this. Probably.
-             */
-            clock_label.set_text (_("%02d\xE2\x88\xB6\xE2\x80\x8E%02d\xE2\x88\xB6\xE2\x80\x8E%02d").printf (hours, minutes, seconds));
-        }
+            clock_label.set_text ("%02d∶\xE2\x80\x8E%02d∶\xE2\x80\x8E%02d".printf (hours, minutes, seconds));
         else
-        {
-            /* Translators: sorry. This is the clock label when the game is less than
-             * one hour in length. The first %02d is minutes and the last is seconds.
-             * In between is a ratio character and LTR order mark, so that nothing gets
-             * reversed in RTL languages. You probably do not need to change this. Probably.
-             */
-            clock_label.set_text (_("%02d\xE2\x88\xB6\xE2\x80\x8E%02d").printf (minutes, seconds));
-        }
+            clock_label.set_text ("%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds));
     }
 
     private void about_cb ()
