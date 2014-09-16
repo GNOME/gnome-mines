@@ -1,3 +1,11 @@
+GNOME Mines 3.13.92
+==================
+
+* Don't translate timer labels (Michael Catanzaro)
+* Symbolic flag install path fixed (Robert Roth)
+* Use new function for setting accelerators (Arnaud Bonatti)
+* Updated translations
+
 GNOME Mines 3.13.91
 ==================
 
