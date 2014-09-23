@@ -623,7 +623,10 @@ public class Mines : Gtk.Application
     private void explode_cb (Minefield minefield)
     {
         new_game_button.show ();
+
+        replay_button.label = _("Play _Again");
         replay_button.show ();
+
         high_scores_button.show ();
         pause_action.set_enabled (false);
         play_pause_button.hide ();
@@ -642,7 +645,10 @@ public class Mines : Gtk.Application
         else
         {
             new_game_button.show ();
+
+            replay_button.label = _("Play _Again");
             replay_button.show ();
+
             high_scores_button.show ();
             pause_action.set_enabled (false);
             play_pause_button.hide ();
@@ -809,7 +815,9 @@ public class Mines : Gtk.Application
 
     private void display_unpause_button ()
     {
+        replay_button.label = _("St_art Over");
         replay_button.show ();
+
         new_game_button.show ();
 
         play_pause_button.show ();
