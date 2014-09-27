@@ -161,16 +161,20 @@ public class Mines : Gtk.Application
             window.maximize ();
         add_window (window);
 
-        bool shell_shows_menubar;
-        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
-        if (!shell_shows_menubar)
+        var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        if (desktop == null || desktop != "Unity")
         {
             var headerbar = new Gtk.HeaderBar ();
             headerbar.show_close_button = true;
             headerbar.set_title (_("Mines"));
             headerbar.show ();
             window.set_titlebar (headerbar);
+        }
 
+        bool shell_shows_menubar;
+        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
+        if (!shell_shows_menubar)
+        {
             var menu = new Menu ();
             app_main_menu = new Menu ();
             menu.append_section (null, app_main_menu);
