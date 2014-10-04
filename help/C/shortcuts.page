@@ -21,12 +21,12 @@
          <td><p><keyseq><key>Ctrl</key><key>N</key></keyseq></p></td>
        </tr>
        <tr>
-         <td><p>Fullscreen</p></td>
-         <td><p><key>F11</key></p></td>
+         <td><p>New game with last used settings</p></td>
+         <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
        </tr>
        <tr>
-         <td><p>Hint</p></td>
-         <td><p><keyseq><key>Ctrl</key><key>H</key></keyseq></p></td>
+         <td><p>Fullscreen</p></td>
+         <td><p><key>F11</key></p></td>
        </tr>
        <tr>
           <td><p>Pause</p></td>
