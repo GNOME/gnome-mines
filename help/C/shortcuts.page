@@ -25,10 +25,6 @@
          <td><p><keyseq><key>Ctrl</key><key>R</key></keyseq></p></td>
        </tr>
        <tr>
-         <td><p>Fullscreen</p></td>
-         <td><p><key>F11</key></p></td>
-       </tr>
-       <tr>
           <td><p>Pause</p></td>
           <td><p><key>Pause</key></p>
               <note><p>Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> key.</p></note></td>
