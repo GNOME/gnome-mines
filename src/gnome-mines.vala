@@ -39,6 +39,7 @@ public class Mines : Gtk.Application
     private Gtk.Overlay minefield_overlay;
     private Gtk.Box paused_box;
     private Gtk.ScrolledWindow scrolled;
+    private Gtk.Stack stack;
 
     private Gtk.Label clock_label;
 
@@ -74,7 +75,6 @@ public class Mines : Gtk.Application
     private SimpleAction pause_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
-    private bool is_new_game_screen;
 
     private const OptionEntry[] option_entries =
     {
@@ -217,6 +217,8 @@ public class Mines : Gtk.Application
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
+        stack = (Gtk.Stack) ui_builder.get_object ("stack");
+
         scrolled = new Gtk.ScrolledWindow (null, null);
         scrolled.show ();
         scrolled.add (minefield_view);
@@ -234,6 +236,7 @@ public class Mines : Gtk.Application
         minefield_overlay.add_overlay (paused_box);
 
         main_screen = (Gtk.Widget) ui_builder.get_object ("main_screen");
+        main_screen.show_all ();
 
         /* Initialize New Game Screen */
         startup_new_game_screen (ui_builder);
@@ -323,7 +326,6 @@ public class Mines : Gtk.Application
         button.clicked.connect (custom_size_clicked_cb);
 
         custom_game_screen.show_all ();
-        custom_game_screen.hide ();
     }
 
     private bool window_configure_event_cb (Gdk.EventConfigure event)
@@ -453,10 +455,7 @@ public class Mines : Gtk.Application
 
     private void show_custom_game_screen ()
     {
-        is_new_game_screen = false;
-        custom_game_screen.show ();
-        main_screen.hide ();
-        new_game_screen.hide ();
+        stack.visible_child_name = "custom_game";
     }
 
     private bool can_start_new_game ()
@@ -484,21 +483,17 @@ public class Mines : Gtk.Application
 
     private void show_new_game_screen ()
     {
-        if (is_new_game_screen)
+        if (stack.visible_child_name == "new_game")
             return;
 
         if (minefield != null)
         {
-            minefield.paused = false;
+            minefield.paused = true;
             pause_requested = false;
             SignalHandler.disconnect_by_func (minefield, null, this);
         }
         minefield = null;
 
-        is_new_game_screen = true;
-        custom_game_screen.hide ();
-        main_screen.hide ();
-        new_game_screen.show ();
         window.resize (window_width, window_height);
 
         new_game_button.show ();
@@ -506,22 +501,19 @@ public class Mines : Gtk.Application
         new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
-        main_screen.hide ();
+
+        stack.visible_child_name = "new_game";
     }
 
     private void start_game ()
     {
-        is_new_game_screen = false;
-        custom_game_screen.hide ();
         window_skip_configure = true;
-        main_screen.show ();
         minefield_view.has_focus = true;
-        new_game_screen.hide ();
+
         play_pause_button.hide();
         replay_button.hide ();
         new_game_button.hide ();
         high_scores_button.hide ();
-        main_screen.show ();
 
         tick_cb ();
 
@@ -583,6 +575,8 @@ public class Mines : Gtk.Application
 
         minefield.paused = false;
         pause_requested = false;
+
+        stack.visible_child_name = "game";
     }
 
     private void new_game_cb ()
