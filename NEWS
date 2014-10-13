@@ -1,3 +1,10 @@
+GNOME Mines 3.14.1
+==================
+
+* Updated translations
+* use XDG_CURRENT_DESKTOP to use/avoid headerbar (Michael Catanzaro)
+* fixed sidebar resizing on game start glitch (Robert Roth)
+
 GNOME Mines 3.14.0
 ==================
 
