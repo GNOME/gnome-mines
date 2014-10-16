@@ -284,15 +284,18 @@ public class Mines : Gtk.Application
         var field_width_entry = (Gtk.SpinButton) builder.get_object ("width_spin_btn");
         field_width_entry.set_range (XSIZE_MIN, XSIZE_MAX);
         field_width_entry.value_changed.connect (xsize_spin_cb);
+        field_width_entry.set_increments (1, 1);
         field_width_entry.set_value (settings.get_int (KEY_XSIZE));
 
         var field_height_entry = (Gtk.SpinButton) builder.get_object ("height_spin_btn");
         field_height_entry.set_range (YSIZE_MIN, YSIZE_MAX);
         field_height_entry.value_changed.connect (ysize_spin_cb);
+        field_height_entry.set_increments (1, 1);
         field_height_entry.set_value (settings.get_int (KEY_YSIZE));
 
         mines_spin = (Gtk.SpinButton) builder.get_object ("mines_spin_btn");
         mines_spin.set_range (1, 100);
+        mines_spin.set_increments (1, 1);
         mines_spin.value_changed.connect (mines_spin_cb);
         set_mines_limit ();
 
