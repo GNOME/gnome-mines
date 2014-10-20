@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-07-22 07:00+0000\n"
-"PO-Revision-Date: 2014-07-22 11:24+0200\n"
+"POT-Creation-Date: 2014-10-06 19:04+0000\n"
+"PO-Revision-Date: 2014-10-20 12:39+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -51,8 +51,8 @@ msgstr ""
 "penalización del tiempo, pero eso mejor que pisar una mina."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:712
 msgid "Mines"
 msgstr "Minas"
 
@@ -63,6 +63,20 @@ msgstr "Limpie de minas el campo minado"
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "buscaminas;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+#| msgid "Small"
+msgid "Small board"
+msgstr "Tablero pequeño"
+
+#: ../data/gnome-mines.desktop.in.h:5
+#| msgid "Medium"
+msgid "Medium board"
+msgstr "Tablero mediano"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Tablero grande"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
@@ -128,152 +142,147 @@ msgstr "Altura de la ventana en píxeles"
 msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
-#: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
+#: ../data/interface.ui.h:2 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "_Pausa"
 
-#: ../data/interface.ui.h:5
+#: ../data/interface.ui.h:3
 msgid "_Best Times"
 msgstr "_Mejores tiempos"
 
-#: ../data/interface.ui.h:6
+#: ../data/interface.ui.h:4
 msgid "Change _Difficulty"
 msgstr "Cambiar la _dificultad"
 
-#: ../data/interface.ui.h:7
+#: ../data/interface.ui.h:5
 msgid "_Play Again"
 msgstr "Jugar _otra vez"
 
-#: ../data/interface.ui.h:8
+#: ../data/interface.ui.h:6
 msgid "_Width"
 msgstr "A_nchura"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:7
 msgid "_Height"
 msgstr "Al_tura"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:8
 msgid "Percent _mines"
 msgstr "_Porcentaje de minas"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:9
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:10
 msgid "_Play Game"
 msgstr "_Jugar partida"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Detenido"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:81
+#| msgid "Show release version"
+msgid "Print release version and exit"
+msgstr "Mostrar el número de versión y salir"
+
+#: ../src/gnome-mines.vala:82
+#| msgid "Small"
+msgid "Small game"
+msgstr "Juego pequeño"
+
+#: ../src/gnome-mines.vala:83
+#| msgid "Medium"
+msgid "Medium game"
+msgstr "Juego mediano"
+
+#: ../src/gnome-mines.vala:84
+#| msgid "Main game:"
+msgid "Big game"
+msgstr "Juego grande"
+
+#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
 msgid "_New Game"
 msgstr "Juego _nuevo"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
 msgid "_Scores"
 msgstr "_Puntuación"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
 msgid "_Show Warnings"
 msgstr "Mostrar _advertencias"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
 msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
 msgid "_About"
 msgstr "_Acerca de"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
 msgid "_Quit"
 msgstr "_Salir"
 
-#: ../src/gnome-mines.vala:177
-#| msgid "Mines"
+#: ../src/gnome-mines.vala:198
 msgid "_Mines"
 msgstr "_Minas"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:206
 msgid "_Contents"
 msgstr "Índ_ice"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:293
 msgid "Custom"
 msgstr "Personalizado"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:368
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:469
 msgid "Do you want to start a new game?"
 msgstr "¿Quiere empezar una partida nueva?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:470
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Si inicia una partida nueva, perderá su progreso actual."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:471
 msgid "Keep Current Game"
 msgstr "Mantener el juego actual"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:472
 msgid "Start New Game"
 msgstr "Iniciar un juego nuevo"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:631 ../src/gnome-mines.vala:653
+#| msgid "_Play Again"
+msgid "Play _Again"
+msgstr "Jugar _otra vez"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
-
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:685
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:690
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:693
 msgid "Resizing and SVG support:"
 msgstr "Soporte para redimensionado y SVG:"
 
-#: ../src/gnome-mines.vala:681
+#: ../src/gnome-mines.vala:715
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -283,7 +292,7 @@ msgstr ""
 "\n"
 "Minas es parte de los juegos de GNOME."
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:722
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
@@ -292,7 +301,12 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: ../src/gnome-mines.vala:793
+#: ../src/gnome-mines.vala:822
+#| msgid "_Start Over"
+msgid "St_art Over"
+msgstr "_Empezar de nuevo"
+
+#: ../src/gnome-mines.vala:828
 msgid "_Resume"
 msgstr "_Continuar"
 
@@ -326,6 +340,18 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u mina"
 msgstr[1] "%u × %u, %u minas"
+
+#~ msgid "5/10"
+#~ msgstr "5/10"
+
+#~ msgid "0:00"
+#~ msgstr "0:00"
+
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
+
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Preferencias"
@@ -373,10 +399,6 @@ msgstr[1] "%u × %u, %u minas"
 
 #~ msgid "GNOME Games web site"
 #~ msgstr "Página web de los juegos de GNOME"
-
-#~| msgid "_Start"
-#~ msgid "_Start Over"
-#~ msgstr "_Empezar de nuevo"
 
 #~ msgid "_Hint"
 #~ msgstr "_Sugerencia"
@@ -1019,9 +1041,6 @@ msgstr[1] "%u × %u, %u minas"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "Falló al cargar la partida: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Mostrar el número de versión"
 
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE]: jugar a Ajedrez"
@@ -2223,9 +2242,6 @@ msgstr[1] "%u × %u, %u minas"
 #~ msgid "Easy"
 #~ msgstr "Fácil"
 
-#~ msgid "Medium"
-#~ msgstr "Mediano"
-
 #~ msgid "Hard"
 #~ msgstr "Difícil"
 
@@ -3265,9 +3281,6 @@ msgstr[1] "%u × %u, %u minas"
 #~ msgid_plural "%u points"
 #~ msgstr[0] "%u punto"
 #~ msgstr[1] "%u puntos"
-
-#~ msgid "Small"
-#~ msgstr "Pequeño"
 
 #~ msgid "Normal"
 #~ msgstr "Normal"
