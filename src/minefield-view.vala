@@ -146,7 +146,7 @@ private class Tile : Gtk.Button
         get_style_context ().add_class (style_class);
         if (style_class in IMAGE_CLASSES) {
             scaling_image.set_from_icon_name (style_class, Gtk.IconSize.DND);
-            scaling_image.set_pixel_size (get_allocated_height()/3*2);
+            scaling_image.set_pixel_size (get_allocated_height ()/3*2);
         }
     }
 
@@ -234,13 +234,13 @@ public class MinefieldView : Gtk.Grid
         get_style_context ().add_class ("minefield");
 
         selected = new Position ();
-        selected.set_x.connect ((x) => { return x; });
-        selected.set_y.connect ((y) => { return y; });
+        selected.set_x.connect ( (x) => { return x; });
+        selected.set_y.connect ( (y) => { return y; });
         selected.redraw.connect (redraw_sector_cb);
 
         keyboard_cursor = new Position ();
         keyboard_cursor.redraw.connect (redraw_sector_cb);
-        keyboard_cursor.validate.connect ((x, y) => { return true; });
+        keyboard_cursor.validate.connect ( (x, y) => { return true; });
     }
     
     private Minefield _minefield;
@@ -272,17 +272,17 @@ public class MinefieldView : Gtk.Grid
             }
             selected.is_set = false;
 
-            selected.redraw.connect ((x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
+            selected.redraw.connect ( (x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
             selected.validate.connect (_minefield.is_location);
 
             keyboard_cursor.is_set = false;
             keyboard_cursor.position = {0, 0};
-            keyboard_cursor.set_x.connect ((x) => { return x; }); //(int) (x % _minefield.width); });
-            keyboard_cursor.set_y.connect ((y) => { return y; }); //(int) (y % _minefield.height); });
+            keyboard_cursor.set_x.connect ( (x) => { return x; }); // (int) (x % _minefield.width); });
+            keyboard_cursor.set_y.connect ( (y) => { return y; }); // (int) (y % _minefield.height); });
 
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
-            _minefield.paused_changed.connect (() => { queue_draw (); });
+            _minefield.paused_changed.connect ( () => { queue_draw (); });
             _minefield.cleared.connect (complete_cb);
             queue_resize ();
         }

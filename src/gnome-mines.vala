@@ -513,7 +513,7 @@ public class Mines : Gtk.Application
         window_skip_configure = true;
         minefield_view.has_focus = true;
 
-        play_pause_button.hide();
+        play_pause_button.hide ();
         replay_button.hide ();
         new_game_button.hide ();
         high_scores_button.hide ();
