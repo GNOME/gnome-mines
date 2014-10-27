@@ -1,3 +1,17 @@
+GNOME Mines 3.15.1
+==================
+
+* Updated translations
+* Added --version command line option  (Arnaud Bornatti)
+* Added --small, --medium and --large command line options (Arnaud Bornatti)
+* Added jumplist for starting mines with different sizes (Arnaud Bornatti)
+* Use XDG_CURRENT_DESKTOP to decide whether to use a header bar (Michael Catanzaro)
+* Play again or Start over on replay label (Robert Roth)
+* Removed obsolete shortcuts from documentation (Robert Roth)
+* Added screen transitions (Robert Roth)
+* Fixed custom size entry (Robert Roth)
+* Coding style fixes (Sahil Sareen)
+
 GNOME Mines 3.14.0
 ==================
 
