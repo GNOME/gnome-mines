@@ -1,5 +1,5 @@
 # gnome-games Finnish Translation
-# Suomennos: http://www.gnome.fi/
+# Suomennos: https://l10n.gnome.org/teams/fi/
 # Copyright (C) 2002-2009 Free Software Foundation, Inc.
 #
 #
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-11 07:00+0000\n"
+"POT-Creation-Date: 2014-11-07 07:54+0000\n"
 "PO-Revision-Date: 2014-09-11 14:43+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
@@ -56,8 +56,8 @@ msgstr ""
 "miinaan astuminen!"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:677
+#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:152
+#: ../src/gnome-mines.vala:669
 msgid "Mines"
 msgstr "Miinaharava"
 
@@ -82,7 +82,6 @@ msgid "Warning about too many flags"
 msgstr "Varoitus liian monesta lipusta"
 
 #: ../data/org.gnome.mines.gschema.xml.h:4
-#| msgid "Set to true to enable warning icons when too many flags are placed."
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -95,9 +94,6 @@ msgid "Enable automatic placing of flags"
 msgstr "Ota käyttöön lippujen automaattinen sijoittelu"
 
 #: ../data/org.gnome.mines.gschema.xml.h:6
-#| msgid ""
-#| "Set to true to have gnomine automatically flag squares as mined when "
-#| "enough squares are revealed"
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -137,161 +133,122 @@ msgstr "Ikkunan korkeus kuvapisteinä"
 msgid "true if the window is maximized"
 msgstr "tosi jos ikkuna on suurennettu"
 
-#: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:782
+#: ../data/interface.ui.h:2 ../src/gnome-mines.vala:774
 msgid "_Pause"
 msgstr "_Keskeytä"
 
-#: ../data/interface.ui.h:5
+#: ../data/interface.ui.h:3
 msgid "_Best Times"
 msgstr "_Parhaat ajat"
 
-#: ../data/interface.ui.h:6
-#| msgid "_Difficulty:"
+#: ../data/interface.ui.h:4
 msgid "Change _Difficulty"
 msgstr "_Vaihda vaikeustasoa"
 
-#: ../data/interface.ui.h:7
-#| msgid "Play _Again"
+#: ../data/interface.ui.h:5
 msgid "_Play Again"
 msgstr "Pelaa uu_delleen"
 
-#: ../data/interface.ui.h:8
+#: ../data/interface.ui.h:6
 msgid "_Width"
 msgstr "_Leveys"
 
-#: ../data/interface.ui.h:9
-#| msgid "_Right"
+#: ../data/interface.ui.h:7
 msgid "_Height"
 msgstr "_Korkeus"
 
-#: ../data/interface.ui.h:10
-#| msgid "_Percentage of mines:"
+#: ../data/interface.ui.h:8
 msgid "Percent _mines"
 msgstr "_Miinaprosentti"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:9
 msgid "_Cancel"
 msgstr "_Peru"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:10
 msgid "_Play Game"
 msgstr "_Pelaa"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Keskeytetty"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:182
 msgid "_New Game"
 msgstr "_Uusi peli"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:183
 msgid "_Scores"
 msgstr "_Pisteet"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
-#| msgid "Show a hint"
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
 msgid "_Show Warnings"
 msgstr "Nä_ytä varoitukset"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:185
 msgid "_Use Question Flags"
 msgstr "K_äytä kysymyslippuja"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:172 ../src/gnome-mines.vala:188
 msgid "_Help"
 msgstr "O_hje"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:173 ../src/gnome-mines.vala:190
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:174 ../src/gnome-mines.vala:186
 msgid "_Quit"
 msgstr "_Lopeta"
 
-#: ../src/gnome-mines.vala:177
-#| msgid "Mines"
+#: ../src/gnome-mines.vala:181
 msgid "_Mines"
 msgstr "Mii_naharava"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:189
 msgid "_Contents"
 msgstr "_Sisältö"
 
-#: ../src/gnome-mines.vala:269
+#: ../src/gnome-mines.vala:273
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: ../src/gnome-mines.vala:344
+#: ../src/gnome-mines.vala:351
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> miina"
 msgstr[1] "<b>%d</b> miinaa"
 
-#: ../src/gnome-mines.vala:425
+#: ../src/gnome-mines.vala:432
 msgid "Do you want to start a new game?"
 msgstr "Haluatko aloittaa uuden pelin?"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:433
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Jos aloitat uuden pelin, nykyisen pelisi katoaa."
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:434
 msgid "Keep Current Game"
 msgstr "Pysy nykyisessä pelissä"
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:435
 msgid "Start New Game"
 msgstr "Aloita uusi peli"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:633
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
-
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
 #: ../src/gnome-mines.vala:642
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
-
-#: ../src/gnome-mines.vala:650
 msgid "Main game:"
 msgstr "Pääpeli:"
 
-#: ../src/gnome-mines.vala:655
+#: ../src/gnome-mines.vala:647
 msgid "Score:"
 msgstr "Pisteet:"
 
-#: ../src/gnome-mines.vala:658
+#: ../src/gnome-mines.vala:650
 msgid "Resizing and SVG support:"
 msgstr "Koon muuttaminen ja SVG-tuki:"
 
-#: ../src/gnome-mines.vala:680
-#| msgid ""
-#| "A worm game for GNOME.\n"
-#| "\n"
-#| "Nibbles is a part of GNOME Games."
+#: ../src/gnome-mines.vala:672
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -301,7 +258,7 @@ msgstr ""
 "\n"
 "Miinaharava on osa Gnomen pelejä."
 
-#: ../src/gnome-mines.vala:687
+#: ../src/gnome-mines.vala:679
 msgid "translator-credits"
 msgstr ""
 "Jiri Grönroos, 2012-2014\n"
@@ -309,7 +266,7 @@ msgstr ""
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
 "\n"
-"http://www.gnome.fi/\n"
+"https://l10n.gnome.org/teams/fi/\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Heikki Kulhia https://launchpad.net/~hessuk\n"
@@ -322,8 +279,7 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/gnome-mines.vala:792
-#| msgid "_Reset"
+#: ../src/gnome-mines.vala:783
 msgid "_Resume"
 msgstr "_Jatka"
 
@@ -357,6 +313,18 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u miina"
 msgstr[1] "%u × %u, %u miinaa"
+
+#~ msgid "5/10"
+#~ msgstr "5/10"
+
+#~ msgid "0:00"
+#~ msgstr "0:00"
+
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
+
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Asetukset"
