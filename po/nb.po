@@ -5,10 +5,10 @@
 # Torstein Adolf Winterseth <kvikende@fsfe.org>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-mines 3.13.x\n"
+"Project-Id-Version: gnome-mines 3.15.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-23 14:05+0200\n"
-"PO-Revision-Date: 2014-07-23 14:06+0200\n"
+"POT-Creation-Date: 2014-11-17 17:08+0100\n"
+"PO-Revision-Date: 2014-11-17 17:09+0100\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: nb\n"
@@ -37,8 +37,8 @@ msgid ""
 msgstr ""
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:709
 msgid "Mines"
 msgstr "Miner"
 
@@ -49,6 +49,18 @@ msgstr "Fjern skjulte miner fra et minefelt"
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "minesveiper;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Lite brett"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Middels brett"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Stort brett"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
@@ -115,150 +127,142 @@ msgid "true if the window is maximized"
 msgstr "«true» hvis vinduet er maksimert"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0.00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "_Pause"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "_Beste tider"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Endre _vanskelighet"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "S_pill igjen"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "_Bredde"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "_Høyde"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "_Prosentandel miner"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "A_vbryt"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "S_pill spillet"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:814
+msgid "_Pause"
+msgstr "_Pause"
+
+#: ../data/interface.ui.h:8
+msgid "_Best Times"
+msgstr "_Beste tider"
+
+#: ../data/interface.ui.h:9
+msgid "Change _Difficulty"
+msgstr "Endre _vanskelighet"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "S_pill igjen"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Pause"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:81
+msgid "Print release version and exit"
+msgstr "Skriv ut versjon og avslutt"
+
+#: ../src/gnome-mines.vala:82
+msgid "Small game"
+msgstr "Lite spill"
+
+#: ../src/gnome-mines.vala:83
+msgid "Medium game"
+msgstr "Middels spill"
+
+#: ../src/gnome-mines.vala:84
+msgid "Big game"
+msgstr "Stort spill"
+
+#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
 msgid "_New Game"
 msgstr "_Nytt spill"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
 msgid "_Scores"
 msgstr "_Poeng"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
 msgid "_Show Warnings"
 msgstr "Vi_s advarsler"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
 msgid "_Use Question Flags"
 msgstr "Br_uk spørsmålsflagg"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
 msgid "_Help"
 msgstr "_Hjelp"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
 msgid "_About"
 msgstr "_Om"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
 msgid "_Quit"
 msgstr "A_vslutt"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:198
 msgid "_Mines"
 msgstr "_Miner"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:206
 msgid "_Contents"
 msgstr "_Innhold"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:296
 msgid "Custom"
 msgstr "Egendefinert"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:373
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d mine</b>"
 msgstr[1] "<b>%d miner</b>"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:471
 msgid "Do you want to start a new game?"
 msgstr "Vil du starte et nytt spill?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:472
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Hvis du starter et nytt spill vil dette spillet gå tapt."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:473
 msgid "Keep Current Game"
 msgstr "Behold dette spillet"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:474
 msgid "Start New Game"
 msgstr "Start nytt spill"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d:%02d%02d"
+#: ../src/gnome-mines.vala:628 ../src/gnome-mines.vala:650
+#, fuzzy
+msgid "Play _Again"
+msgstr "S_pill igjen"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d:%02d"
-
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:682
 msgid "Main game:"
 msgstr "Hovedspill:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:687
 msgid "Score:"
 msgstr "Poeng:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:690
 msgid "Resizing and SVG support:"
 msgstr "Endring av størrelse og støtte for SVG:"
 
-#: ../src/gnome-mines.vala:681
+#: ../src/gnome-mines.vala:712
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -268,14 +272,18 @@ msgstr ""
 "\n"
 "Miner er en del av GNOME-spill."
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:719
 msgid "translator-credits"
 msgstr ""
 "Kjartan Maraas <kmaraas@gnome.org>\n"
 "Espen Stefansen <espens@svn.gnome.org>\n"
 "Torstein Adolf Winterseth <kvikende@fsfe.org>"
 
-#: ../src/gnome-mines.vala:793
+#: ../src/gnome-mines.vala:819
+msgid "St_art Over"
+msgstr "St_art på nytt"
+
+#: ../src/gnome-mines.vala:825
 msgid "_Resume"
 msgstr "_Gjenoppta"
 
@@ -309,45 +317,3 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u x %u, %u mine"
 msgstr[1] "%u x %u, %u miner"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Brukervalg"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Få et hint for ditt neste trekk"
-
-#~ msgid "H_orizontal:"
-#~ msgstr "H_orisontal:"
-
-#~ msgid "_Vertical:"
-#~ msgstr "_Vertikal:"
-
-#~ msgid "_Number of mines:"
-#~ msgstr "A_ntall miner:"
-
-#~ msgid "%u/%u"
-#~ msgstr "%u/%u"
-
-#~ msgid "Faces:"
-#~ msgstr "Ansikter:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafikk:"
-
-#~ msgid "Mines Preferences"
-#~ msgstr "Mines instillinger"
-
-#~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "Br_uk «Ikke sikker»-flagg."
-
-#~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Varsle hvis for mange flagg settes ut ved siden av et tall"
-
-#~ msgid "Start a new game"
-#~ msgstr "Start nytt spill"
-
-#~ msgid "Pause the game"
-#~ msgstr "Sett spillet på pause"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Start spillet igjen"
