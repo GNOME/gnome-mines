@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2014-07-25 07:28+0000\n"
-"PO-Revision-Date: 2014-08-02 17:38+0200\n"
+"POT-Creation-Date: 2014-11-16 20:02+0000\n"
+"PO-Revision-Date: 2014-11-16 22:13+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: team@lists.gnome.gr\n"
 "Language: el\n"
@@ -13,14 +13,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.5\n"
+"X-Generator: Poedit 1.6.10\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Για την Ελληνική μεταφραστική ομάδα GNOME <team@gnome.gr>, 2009, 2012, 2013, "
-"2014\n"
+"Ελληνική μεταφραστική ομάδα GNOME <team@gnome.gr>, 2009-2014\n"
 "Μάριος Ζηντίλης <m.zindilis@dmajor.org>, 2009\n"
 "Θάνος Τρυφωνίδης <tomtryf@gmail.com>, 2012\n"
 "Δημήτρης Σπίγγος <dmtrs32@gmail.com>, 2013\n"
@@ -81,24 +80,23 @@ msgstr "Επιλέξτε ένα μέγεθος πλέγματος:"
 #. (itstool) path: item/p
 #: C/board-size.page:35
 msgid "a 8 × 8 board with 10 mines"
-msgstr "ένας πίνακας 8 × 8 με 10 νάρκες"
+msgstr "Πίνακας 8 × 8 με 10 νάρκες"
 
 #. (itstool) path: item/p
 #: C/board-size.page:36
 msgid "a 16 × 16 board with 40 mines"
-msgstr "ένας πίνακας 16 × 16 με 40 νάρκες"
+msgstr "Πίνακας 16 × 16 με 40 νάρκες"
 
 #. (itstool) path: item/p
 #: C/board-size.page:37
 msgid "a 30 × 16 board with 99 mines"
-msgstr "ένας πίνακας 30 × 16 με 99 νάρκες"
+msgstr "Πίνακας 30 × 16 με 99 νάρκες"
 
 #. (itstool) path: item/p
 #: C/board-size.page:38
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr ""
-"ένας προσαρμοσμένος πίνακας, όπου επιλέγετε το μέγεθος και τον αριθμό των "
-"ναρκών"
+"Προσαρμοσμένος πίνακας, όπου επιλέγετε το μέγεθος και τον αριθμό των ναρκών"
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
@@ -273,7 +271,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/flags.page:31
 msgid "How to use flags"
-msgstr "Πως να χρησιμοποιήσετε τις σημαίες"
+msgstr "Πώς να χρησιμοποιήσετε τις σημαίες"
 
 #. (itstool) path: td/p
 #: C/flags.page:38
@@ -290,7 +288,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/flags.page:46
 msgid "How to place a flag on a tile"
-msgstr "Πως να τοποθετήσετε μια σημαία σε ένα πλακίδιο"
+msgstr "Πώς να τοποθετήσετε μια σημαία σε ένα πλακίδιο"
 
 #. (itstool) path: td/p
 #: C/flags.page:50
@@ -712,36 +710,26 @@ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:24
-msgid "Fullscreen"
-msgstr "Πλήρης οθόνη"
+msgid "New game with last used settings"
+msgstr "Νέο παιχνίδι με τις τελευταίες χρησιμοποιούμενες ρυθμίσεις "
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:28
-msgid "Hint"
-msgstr "Υπόδειξη"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:32
 msgid "Pause"
 msgstr "Παύση"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:29
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:30
 msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
@@ -750,22 +738,22 @@ msgstr ""
 "το πλήκτρο <key>Pause</key>."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:33
 msgid "Help"
 msgstr "Βοήθεια"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:34
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:41
+#: C/shortcuts.page:37
 msgid "Quit"
 msgstr "Έξοδος"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:42
+#: C/shortcuts.page:38
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -834,6 +822,18 @@ msgstr ""
 "Εναλλακτικά, μπορείτε να επικοινωνήσετε με την ομάδα διεθνοποίησης "
 "χρησιμοποιώντας την <link href=\"http://mail.gnome.org/mailman/listinfo/"
 "gnome-i18n\">λίστα αλληλογραφίας</link> τους."
+
+#~ msgid "Fullscreen"
+#~ msgstr "Πλήρης οθόνη"
+
+#~ msgid "<key>F11</key>"
+#~ msgstr "<key>F11</key>"
+
+#~ msgid "Hint"
+#~ msgstr "Υπόδειξη"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
 
 #~ msgctxt "_"
 #~ msgid ""
