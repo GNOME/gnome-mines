@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-22 07:00+0000\n"
-"PO-Revision-Date: 2014-08-22 09:58+0200\n"
+"POT-Creation-Date: 2014-11-26 07:56+0000\n"
+"PO-Revision-Date: 2014-11-26 11:44+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -62,8 +62,8 @@ msgstr ""
 "ale je to lepší než odpálit minu."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:709
 msgid "Mines"
 msgstr "Miny"
 
@@ -74,6 +74,18 @@ msgstr "Vyčistěte skryté miny z minového pole"
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "odminování;hledání min;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Malá herní deska"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Střední herní deska"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Velká herní deska"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
@@ -140,94 +152,102 @@ msgid "true if the window is maximized"
 msgstr "Zapnuto, pokud je okno maximalizováno"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "_Pozastavit"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "Nej_lepší časy"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Změnit o_btížnost"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "_Hrát znovu"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "Šířk_a"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "_Výška"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "Procento _min"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "_Zrušit"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Hrát hru"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:814
+msgid "_Pause"
+msgstr "_Pozastavit"
+
+#: ../data/interface.ui.h:8
+msgid "_Best Times"
+msgstr "Nej_lepší časy"
+
+#: ../data/interface.ui.h:9
+msgid "Change _Difficulty"
+msgstr "Změnit o_btížnost"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "_Hrát znovu"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Pozastaveno"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:81
+msgid "Print release version and exit"
+msgstr "Vypsat verzi vydání a skončit"
+
+#: ../src/gnome-mines.vala:82
+msgid "Small game"
+msgstr "Malá hra:"
+
+#: ../src/gnome-mines.vala:83
+msgid "Medium game"
+msgstr "Střední hra:"
+
+#: ../src/gnome-mines.vala:84
+msgid "Big game"
+msgstr "Velká hra:"
+
+#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
 msgid "_New Game"
 msgstr "_Nová hra"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
 msgid "_Show Warnings"
 msgstr "_Zobrazovat varování"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
 msgid "_Use Question Flags"
 msgstr "Po_užívat vlaječky pro nejisté"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
 msgid "_Help"
 msgstr "_Nápověda"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
 msgid "_Quit"
 msgstr "U_končit"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:198
 msgid "_Mines"
 msgstr "_Miny"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:206
 msgid "_Contents"
 msgstr "O_bsah"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:296
 msgid "Custom"
 msgstr "Vlastní"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:373
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -235,56 +255,39 @@ msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> miny"
 msgstr[2] "<b>%d</b> min"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:471
 msgid "Do you want to start a new game?"
 msgstr "Chcete začít novou hru?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:472
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Pokud začnete novou hru, bude váš postup v té stávající ztracen."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:473
 msgid "Keep Current Game"
 msgstr "Zachovat stávající hru"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:474
 msgid "Start New Game"
 msgstr "Začít novou hru"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:628 ../src/gnome-mines.vala:650
+msgid "Play _Again"
+msgstr "_Hrát znovu"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%d∶‎%02d"
-
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:682
 msgid "Main game:"
 msgstr "Hlavní hra:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:687
 msgid "Score:"
 msgstr "Skóre:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:690
 msgid "Resizing and SVG support:"
 msgstr "Změna velikosti a podpora SVG:"
 
-#: ../src/gnome-mines.vala:681
+#: ../src/gnome-mines.vala:712
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -294,7 +297,7 @@ msgstr ""
 "\n"
 "Miny jsou součástí her GNOME."
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:719
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
@@ -311,7 +314,11 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/gnome-mines.vala:793
+#: ../src/gnome-mines.vala:819
+msgid "St_art Over"
+msgstr "Z_ačít znovu"
+
+#: ../src/gnome-mines.vala:825
 msgid "_Resume"
 msgstr "Pok_račovat"
 
