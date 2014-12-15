@@ -1,3 +1,9 @@
+GNOME Mines 3.15.3
+==================
+
+* Updated translations
+* Use appstream-util for appdata validation (Robert Roth)
+
 GNOME Mines 3.15.1
 ==================
 
