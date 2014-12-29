@@ -7,16 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2014-04-01 07:15+0000\n"
-"PO-Revision-Date: 2014-04-01 15:36+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
-"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
+"POT-Creation-Date: 2014-12-28 19:56+0000\n"
+"PO-Revision-Date: 2014-12-29 10:28+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Language-Team: Hungarian <openscope at gmail dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -447,8 +447,6 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:25
-#| msgctxt "link"
-#| msgid "GNOME Mines"
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> GNOME Aknakereső"
 
@@ -703,36 +701,27 @@ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:24
-msgid "Fullscreen"
-msgstr "Teljes képernyő"
+msgid "New game with last used settings"
+msgstr "Új játék a legutóbbi beállításokkal"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
+#| msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:28
-msgid "Hint"
-msgstr "Javaslat"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:32
 msgid "Pause"
 msgstr "Szünet"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:29
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:30
 msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
@@ -741,22 +730,22 @@ msgstr ""
 "<key>Pause</key> gombbal."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:33
 msgid "Help"
 msgstr "Súgó"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:34
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:41
+#: C/shortcuts.page:37
 msgid "Quit"
 msgstr "Kilépés"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:42
+#: C/shortcuts.page:38
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -827,6 +816,18 @@ msgstr ""
 "is. A magyar csapat <link href=\"http://l10n.gnome.org/languages/hu/"
 "\">kezdőoldalán</link> megtalálja a magyar levelezőlista címét és a "
 "fordítások megkezdéséhez szükséges információkat."
+
+#~ msgid "Fullscreen"
+#~ msgstr "Teljes képernyő"
+
+#~ msgid "<key>F11</key>"
+#~ msgstr "<key>F11</key>"
+
+#~ msgid "Hint"
+#~ msgstr "Javaslat"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
 
 #~ msgctxt "_"
 #~ msgid ""
