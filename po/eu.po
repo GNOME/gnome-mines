@@ -3,13 +3,14 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-08-07 12:04+0200\n"
-"PO-Revision-Date: 2014-07-29 19:32+0200\n"
+"POT-Creation-Date: 2014-12-31 17:15+0100\n"
+"PO-Revision-Date: 2014-12-06 16:29+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -17,13 +18,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
 msgstr "GNOME Minak"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr "Zedarritu mina-eremuko minak"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -36,7 +41,7 @@ msgstr ""
 "jokoa. Kontu eduki mina bat ez lehertzearekin, bestela jokoa amaitzen "
 "delako., "
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there's a time penalty, but "
@@ -47,18 +52,26 @@ msgstr ""
 "arren, mina bat zapaltzea baino hobeagoa da."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:709
 msgid "Mines"
 msgstr "Minak"
-
-#: ../data/gnome-mines.desktop.in.h:2
-msgid "Clear hidden mines from a minefield"
-msgstr "Zedarritu mina-eremuko minak"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "dragamina;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Taula txikia"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Taula ertaina"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Taula handia"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
@@ -125,150 +138,141 @@ msgid "true if the window is maximized"
 msgstr "egia leihoa maximizatuta badago"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "_Pausarazi"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "Denbora _onenak"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Aldatu _zailtasuna"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "Jokatu _berriro"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "_Zabalera"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "_Altuera"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "Minen _ehunekoa"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "_Utzi"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Hasi jokoa"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:814
+msgid "_Pause"
+msgstr "_Pausarazi"
+
+#: ../data/interface.ui.h:8
+msgid "_Best Times"
+msgstr "Denbora _onenak"
+
+#: ../data/interface.ui.h:9
+msgid "Change _Difficulty"
+msgstr "Aldatu _zailtasuna"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "Jokatu _berriro"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Pausarazita"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:81
+msgid "Print release version and exit"
+msgstr "Erakutsi bertsioa eta irten"
+
+#: ../src/gnome-mines.vala:82
+msgid "Small game"
+msgstr "Joko txikia"
+
+#: ../src/gnome-mines.vala:83
+msgid "Medium game"
+msgstr "Joko ertaina"
+
+#: ../src/gnome-mines.vala:84
+msgid "Big game"
+msgstr "Joko handia"
+
+#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
 msgid "_New Game"
 msgstr "_Joko berria"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
 msgid "_Scores"
 msgstr "_Puntuazioak"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
 msgid "_Show Warnings"
 msgstr "Erakutsi _abisuak"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
 msgid "_Use Question Flags"
 msgstr "_Erabili galderen banderak"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:198
 msgid "_Mines"
 msgstr "_Minak"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:206
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:296
 msgid "Custom"
 msgstr "Pertsonalizatua"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:373
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "mina <b>%d</b>"
 msgstr[1] "<b>%d</b> mina"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:471
 msgid "Do you want to start a new game?"
 msgstr "Joko berri bat hastea nahi duzu?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:472
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Joko berri bat hasten baduzu, unekoa galduko da."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:473
 msgid "Keep Current Game"
 msgstr "Mantendu uneko jokoa"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:474
 msgid "Start New Game"
 msgstr "Hasi joko berria"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:628 ../src/gnome-mines.vala:650
+msgid "Play _Again"
+msgstr "Jokatu _berriro"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
-
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:682
 msgid "Main game:"
 msgstr "Joko nagusia:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:687
 msgid "Score:"
 msgstr "Puntuazioa:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:690
 msgid "Resizing and SVG support:"
 msgstr "Tamaina-aldatzea eta SVG onartzea:"
 
-#: ../src/gnome-mines.vala:681
+#: ../src/gnome-mines.vala:712
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -278,11 +282,15 @@ msgstr ""
 "\n"
 "GNOME Games-ekoa da GNOME Minak."
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:719
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
 
-#: ../src/gnome-mines.vala:793
+#: ../src/gnome-mines.vala:819
+msgid "St_art Over"
+msgstr "_Hasi hasieratik"
+
+#: ../src/gnome-mines.vala:825
 msgid "_Resume"
 msgstr "_Jarraitu"
 
@@ -316,6 +324,18 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, mina %u"
 msgstr[1] "%u × %u, %u mina"
+
+#~ msgid "5/10"
+#~ msgstr "5/10"
+
+#~ msgid "0:00"
+#~ msgstr "0:00"
+
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
+
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Hobespenak"
@@ -995,9 +1015,6 @@ msgstr[1] "%u × %u, %u mina"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "Huts egin du jokoa irekitzean: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Erakutsi argitaratze-bertsioa"
 
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FITXATEGIA] - Jokatu xakean"
@@ -2002,9 +2019,6 @@ msgstr[1] "%u × %u, %u mina"
 
 #~ msgid "Easy"
 #~ msgstr "Erraza"
-
-#~ msgid "Medium"
-#~ msgstr "Tartekoa"
 
 #~ msgid "Hard"
 #~ msgstr "Zaila"
@@ -3171,9 +3185,6 @@ msgstr[1] "%u × %u, %u mina"
 #~ msgid "Fit falling blocks together"
 #~ msgstr "Kokatu erortzen diren blokeak"
 
-#~ msgid "Game Over"
-#~ msgstr "Jokoa amaitu da"
-
 #~ msgid "Lines:"
 #~ msgstr "Lerroak:"
 
@@ -3300,9 +3311,6 @@ msgstr[1] "%u × %u, %u mina"
 
 #~ msgid "Swell Foop Scores"
 #~ msgstr "Swell Foop-eko puntuazioa"
-
-#~ msgid "Small"
-#~ msgstr "Txikia"
 
 #~ msgid "Normal"
 #~ msgstr "Normala"
