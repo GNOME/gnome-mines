@@ -33,11 +33,27 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     public ThemeSelectorDialog ( )
     {
-        set_default_size (300, 332);
+        set_default_size (360, 300);
         title = _("Select theme");
+
+        var overlay = new Gtk.Overlay ();
         var frame = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
         frame.border_width = 6;
-        get_content_area ().pack_start (frame, true, true, 0);
+        get_content_area ().pack_start (overlay, true, true, 0);
+
+        var previous = new Gtk.Image.from_icon_name ("go-previous", Gtk.IconSize.DND);
+        previous.show ();
+        previous.valign = Gtk.Align.CENTER;
+        previous.halign = Gtk.Align.START;
+        previous.get_style_context ().add_class ("navigation");
+        overlay.add_overlay (previous);
+
+        var next = new Gtk.Image.from_icon_name ("go-next", Gtk.IconSize.DND);
+        next.show ();
+        next.valign = Gtk.Align.CENTER;
+        next.halign = Gtk.Align.END;
+        next.get_style_context ().add_class ("navigation");
+        overlay.add_overlay (next);
 
         var settings = new Settings ("org.gnome.mines");
         settings.delay ();
@@ -45,7 +61,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
         var view = new MinefieldView (settings);
         view.minefield = new PreviewField ();
         frame.add (view);
-        frame.show_all ();
+        overlay.add (frame);
+        overlay.show_all ();
 
         reveal_nonmines (view);
     }
