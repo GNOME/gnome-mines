@@ -7,7 +7,8 @@ gnome_mines_SOURCES =	\
 	minefield.vala \
 	minefield-view.vala \
 	score-dialog.vala \
-	tile.vala
+	tile.vala \
+	theme-selector-dialog.vala
 
 gnome_mines_CFLAGS = \
 	-DVERSION=\"$(VERSION)\" \

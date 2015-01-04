@@ -10,3 +10,5 @@ src/history.vala
 src/minefield.vala
 src/minefield-view.vala
 src/score-dialog.vala
+src/tile.vala
+src/theme-selector-dialog.vala
