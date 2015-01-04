@@ -1,0 +1,11 @@
+.pausedOverlay {
+  background-color:#babdb6;
+  color: white;
+  font-size:32px;
+  border-radius: 3px;
+}
+
+.pausedOverlay:backdrop {
+  background-color: shade(#babdb6,1.1);
+}
+

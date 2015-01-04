@@ -1,26 +1,15 @@
-SUBDIRS = icons
+SUBDIRS = icons themes
 
 gsettings_SCHEMAS = org.gnome.mines.gschema.xml
 @GSETTINGS_RULES@
 
 man_MANS = gnome-mines.6
 
-pixmapdir   = $(pkgdatadir)
-pixmap_DATA = mine.svg exploded.svg overmine.svg \
-            1mines.svg 2mines.svg 3mines.svg 4mines.svg \
-            5mines.svg 6mines.svg 7mines.svg 8mines.svg \
-            flag.svg flag-symbolic.svg maybe.svg
-
-
 icon_symbolicdir=$(datadir)/icons/hicolor/16x16/actions
 icon_symbolic_DATA=flag-symbolic.svg
 
-gnome-mines.css: gnome-mines.css.in Makefile
-	$(AM_V_GEN) sed -e "s|\@pkgdatadir\@|$(pkgdatadir)|" $< > $@
-
 cssdir = $(pkgdatadir)
-css_in_files = gnome-mines.css.in
-css_DATA = $(css_in_files:.css.in=.css)
+css_DATA = gnome-mines.css
 
 uidir = $(pkgdatadir)
 ui_DATA = interface.ui
@@ -40,15 +29,13 @@ EXTRA_DIST = \
              $(gsettings_SCHEMAS) \
              $(desktop_in_files) \
              $(man_MANS) \
-             $(pixmap_DATA) \
              $(icon_symbolic_DATA) \
-             $(css_in_files) \
+             $(css_DATA) \
              $(ui_DATA)
 
 CLEANFILES = \
 	$(appstream_XML) \
-	$(desktop_DATA) \
-	$(css_DATA)
+	$(desktop_DATA)
 
 check-local: $(desktop_DATA) \
 	$(DESKTOP_FILE_VALIDATE) $(desktop_DATA)

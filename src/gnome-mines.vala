@@ -75,6 +75,7 @@ public class Mines : Gtk.Application
     private SimpleAction pause_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
+    private Gtk.CssProvider theme_provider;
 
     private const OptionEntry[] option_entries =
     {
@@ -102,6 +103,39 @@ public class Mines : Gtk.Application
         Object (application_id: "org.gnome.mines", flags: ApplicationFlags.FLAGS_NONE);
 
         add_main_option_entries (option_entries);
+    }
+
+    private void set_game_theme (string theme)
+    {
+        string theme_path = theme;
+        bool is_switch = theme_provider != null;
+
+        if (!Path.is_absolute (theme_path)) {
+            theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
+        }
+        if (!is_switch) {
+            Gtk.IconTheme.get_default ().append_search_path (theme_path);
+        } else {
+            string[] icon_search_path;
+            Gtk.IconTheme.get_default ().get_search_path (out icon_search_path);
+            icon_search_path[icon_search_path.length - 1] = theme_path;
+            Gtk.IconTheme.get_default ().set_search_path (icon_search_path);
+        }
+
+        var theme_css_path = Path.build_filename (theme_path, "theme.css");
+        try
+        {
+            if (is_switch) {
+                Gtk.StyleContext.remove_provider_for_screen (Gdk.Screen.get_default (), theme_provider);
+            }
+            theme_provider = new Gtk.CssProvider ();
+            theme_provider.load_from_path (theme_css_path);
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), theme_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (GLib.Error e)
+        {
+            warning ("Error loading css styles from %s: %s", theme_css_path, e.message);
+        }
     }
 
     protected override void startup ()
@@ -140,7 +174,7 @@ public class Mines : Gtk.Application
             warning ("Could not load game UI: %s", e.message);
         }
 
-        Gtk.IconTheme.get_default ().append_search_path (DATA_DIRECTORY);
+        set_game_theme ("default");
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
