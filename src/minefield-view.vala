@@ -291,10 +291,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-        {
             multi_release (selected.x, selected.y);
-            redraw_adjacent (selected.x, selected.y);
-        }
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 
@@ -408,7 +405,7 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    private void toggle_mark (uint x, uint y)
+    public void toggle_mark (uint x, uint y)
     {
         if (minefield.is_cleared (x, y))
             return;
@@ -462,7 +459,7 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    private void multi_release (uint x, uint y)
+    public void multi_release (uint x, uint y)
     {
         if (!minefield.is_cleared (x, y) || minefield.get_flag (x, y) == FlagType.FLAG)
             return;
@@ -509,6 +506,7 @@ public class MinefieldView : Gtk.Grid
             else
                 m.set_flag (nx, ny, FlagType.FLAG);
         }
+        redraw_adjacent (x, y);
     }
 
     public override bool key_press_event (Gdk.EventKey event)
@@ -608,10 +606,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-        {
             multi_release (selected.x, selected.y);
-            redraw_adjacent (selected.x, selected.y);
-        }
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 

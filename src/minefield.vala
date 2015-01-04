@@ -15,7 +15,7 @@ public enum FlagType
     MAYBE
 }
 
-private class Location : Object
+protected class Location : Object
 {
     /* true if contains a mine */
     public bool has_mine = false;
@@ -55,7 +55,7 @@ public class Minefield : Object
     public uint n_mines = 0;
 
     /* State of each location */
-    private Location[,] locations;
+    protected Location[,] locations;
 
     /* true if have hit a mine */
     public bool exploded = false;
