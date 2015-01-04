@@ -91,6 +91,7 @@ public class Mines : Gtk.Application
         { "repeat-size",        repeat_size_cb                              },
         { "pause",              toggle_pause_cb                             },
         { "scores",             scores_cb                                   },
+        { "preferences",        preferences_cb                              },
         { "quit",               quit_cb                                     },
         { "help",               help_cb                                     },
         { "about",              about_cb                                    }
@@ -180,6 +181,7 @@ public class Mines : Gtk.Application
             menu.append_section (null, app_main_menu);
             app_main_menu.append (_("_New Game"), "app.new-game");
             app_main_menu.append (_("_Scores"), "app.scores");
+            app_main_menu.append (_("_Preferences"), "app.preferences");
             var section = new Menu ();
             menu.append_section (null, section);
             section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
@@ -198,6 +200,7 @@ public class Mines : Gtk.Application
             menu.append_submenu (_("_Mines"), mines_menu);
             mines_menu.append (_("_New Game"), "app.new-game");
             mines_menu.append (_("_Scores"), "app.scores");
+            mines_menu.append (_("_Preferences"), "app.preferences");
             mines_menu.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             mines_menu.append (_("_Quit"), "app.quit");
@@ -439,6 +442,18 @@ public class Mines : Gtk.Application
         flag_label.set_text ("%u/%u".printf (minefield.n_flags, minefield.n_mines));
     }
 
+    private int show_theme_selector ()
+    {
+        var dialog = new ThemeSelectorDialog ();
+        dialog.modal = true;
+        dialog.transient_for = window;
+
+        var result = dialog.run ();
+        dialog.destroy ();
+
+        return result;
+    }
+
     private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
     {
         var dialog = new ScoreDialog (history, selected_entry, show_close);
@@ -454,6 +469,11 @@ public class Mines : Gtk.Application
     private void scores_cb ()
     {
         show_scores ();
+    }
+
+    private void preferences_cb ()
+    {
+        show_theme_selector ();
     }
 
     private void show_custom_game_screen ()
