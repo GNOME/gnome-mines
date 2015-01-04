@@ -55,6 +55,7 @@ data/icons/hicolor/Makefile
 data/icons/HighContrast/Makefile
 data/themes/Makefile
 data/themes/default/Makefile
+data/themes/classic/Makefile
 help/Makefile
 src/Makefile
 ])
