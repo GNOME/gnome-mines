@@ -24,10 +24,11 @@ public class Mines : Gtk.Application
     /* For command-line options */
     private static int game_mode = -1;
 
-    /* Keys shared with MinefieldView */
+    /* Shared Settings keys */
     public static const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public static const string KEY_USE_AUTOFLAG = "use-autoflag";
+    public static const string KEY_THEME = "theme";
 
     private Gtk.Widget main_screen;
     private Gtk.Button play_pause_button;
@@ -174,7 +175,7 @@ public class Mines : Gtk.Application
             warning ("Could not load game UI: %s", e.message);
         }
 
-        set_game_theme ("default");
+        set_game_theme (settings.get_string (KEY_THEME));
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
