@@ -31,9 +31,27 @@ private class PreviewField : Minefield
 public class ThemeSelectorDialog : Gtk.Dialog
 {
 
+    public List<string> list_themes ()
+    {
+        string themes_dir = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes");
+        List<string> themes = new List<string> ();
+        File file = File.new_for_path (themes_dir);
+        FileEnumerator enumerator = file.enumerate_children ("standard::*",
+                                                              FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
+                                                              null);
+
+        FileInfo info = null;
+        while ((info = enumerator.next_file (null)) != null) {
+            if (info.get_file_type () == FileType.DIRECTORY) {
+                stdout.printf ("%s\n", info.get_name ());
+                themes.append (info.get_name ());
+            }
+        }
+        return themes;
+    }
+
     public ThemeSelectorDialog ( )
     {
-        set_default_size (360, 300);
         title = _("Select theme");
 
         var overlay = new Gtk.Overlay ();
@@ -41,14 +59,14 @@ public class ThemeSelectorDialog : Gtk.Dialog
         frame.border_width = 6;
         get_content_area ().pack_start (overlay, true, true, 0);
 
-        var previous = new Gtk.Image.from_icon_name ("go-previous", Gtk.IconSize.DND);
+        var previous = new Gtk.Button.from_icon_name ("go-previous", Gtk.IconSize.LARGE_TOOLBAR);
         previous.show ();
         previous.valign = Gtk.Align.CENTER;
         previous.halign = Gtk.Align.START;
         previous.get_style_context ().add_class ("navigation");
         overlay.add_overlay (previous);
 
-        var next = new Gtk.Image.from_icon_name ("go-next", Gtk.IconSize.DND);
+        var next = new Gtk.Button.from_icon_name ("go-next", Gtk.IconSize.LARGE_TOOLBAR);
         next.show ();
         next.valign = Gtk.Align.CENTER;
         next.halign = Gtk.Align.END;
@@ -65,6 +83,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
         overlay.show_all ();
 
         reveal_nonmines (view);
+        set_size_request (320, 300);
+        resizable = false;
     }
 
     private void reveal_nonmines (MinefieldView view)
