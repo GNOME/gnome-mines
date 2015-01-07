@@ -41,6 +41,7 @@ public class Mines : Gtk.Application
     private Gtk.Box paused_box;
     private Gtk.ScrolledWindow scrolled;
     private Gtk.Stack stack;
+    private ThemeSelectorDialog theme_dialog;
 
     private Gtk.Label clock_label;
 
@@ -137,6 +138,12 @@ public class Mines : Gtk.Application
         {
             warning ("Error loading css styles from %s: %s", theme_css_path, e.message);
         }
+        window.get_window ().invalidate_rect (null, true);
+        window.queue_draw ();
+        Gtk.StyleContext.reset_widgets (Gdk.Screen.get_default ());
+
+        if (theme_dialog != null)
+            theme_dialog.queue_draw ();
     }
 
     protected override void startup ()
@@ -174,7 +181,7 @@ public class Mines : Gtk.Application
         {
             warning ("Could not load game UI: %s", e.message);
         }
-
+        settings.changed[KEY_THEME].connect (() => { set_game_theme (settings.get_string (KEY_THEME)); });
         set_game_theme (settings.get_string (KEY_THEME));
 
         add_action_entries (action_entries, this);
@@ -479,12 +486,12 @@ public class Mines : Gtk.Application
 
     private int show_theme_selector ()
     {
-        var dialog = new ThemeSelectorDialog ();
-        dialog.modal = true;
-        dialog.transient_for = window;
+        theme_dialog = new ThemeSelectorDialog ();
+        //dialog.modal = true;
+        theme_dialog.transient_for = window;
 
-        var result = dialog.run ();
-        dialog.destroy ();
+        var result = theme_dialog.run ();
+        theme_dialog.destroy ();
 
         return result;
     }
