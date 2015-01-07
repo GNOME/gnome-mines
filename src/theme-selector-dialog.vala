@@ -52,8 +52,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
         return themes;
     }
 
-    private Gtk.Widget create_preview_widget () {
-        var view = new MinefieldView (settings);
+    private Gtk.Widget create_preview_widget (out MinefieldView view) {
+        view = new MinefieldView (settings);
         view.minefield = new PreviewField ();
 
         var frame = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
@@ -65,6 +65,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     public ThemeSelectorDialog ( )
     {
+        MinefieldView minefield;
+
         title = _("Select theme");
 
         var overlay = new Gtk.Overlay ();
@@ -99,18 +101,21 @@ public class ThemeSelectorDialog : Gtk.Dialog
             }
         }
 
+        overlay.add (create_preview_widget (out minefield));
+
         next.clicked.connect (() => {
             switch_theme_preview (++current_index, themes);
             update_sensitivities (themes, current_index);
+            minefield.refresh ();
         });
 
         previous.clicked.connect (() => {
             switch_theme_preview (--current_index, themes);
             update_sensitivities (themes, current_index);
+            minefield.refresh ();
         });
 
         update_sensitivities (themes, current_index);
-        overlay.add (create_preview_widget ());
         overlay.show_all ();
 
         set_size_request (320, 300);

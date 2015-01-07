@@ -20,6 +20,16 @@ public class Tile : Gtk.Button
         get { return _column; }
     }
 
+    public void refresh_icon()
+    {
+        string name;
+        Gtk.IconSize size;
+        scaling_image.get_icon_name (out name, out size);
+        scaling_image.clear ();
+        scaling_image.set_from_icon_name (name, size);
+        scaling_image.set_pixel_size (get_allocated_height ()/3*2);
+    }
+
     public Tile (int prow, int pcol)
     {
         _row = prow;

@@ -147,6 +147,8 @@ public class Mines : Gtk.Application
 
         if (theme_dialog != null)
             theme_dialog.queue_draw ();
+        if (minefield_view != null)
+            minefield_view.refresh ();
     }
 
     protected override void startup ()
