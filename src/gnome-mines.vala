@@ -138,8 +138,11 @@ public class Mines : Gtk.Application
         {
             warning ("Error loading css styles from %s: %s", theme_css_path, e.message);
         }
-        window.get_window ().invalidate_rect (null, true);
-        window.queue_draw ();
+        if (window != null)
+        {
+            window.get_window ().invalidate_rect (null, true);
+            window.queue_draw ();
+        }
         Gtk.StyleContext.reset_widgets (Gdk.Screen.get_default ());
 
         if (theme_dialog != null)
