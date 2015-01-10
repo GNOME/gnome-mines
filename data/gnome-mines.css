@@ -10,7 +10,9 @@
 }
 
 .navigation {
-  border-radius:16px;
-  background-color:alpha(#888a85, 0.6);
+  border-radius:32px;
+  background-color:alpha(#888a85, 0.1);
+  border-width:0px;
+  border-color:#BABABA;
   background-image:none;
 }

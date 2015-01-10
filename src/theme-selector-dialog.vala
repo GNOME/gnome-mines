@@ -39,20 +39,30 @@ public class ThemeSelectorDialog : Gtk.Dialog
         string themes_dir = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes");
         List<string> themes = new List<string> ();
         File file = File.new_for_path (themes_dir);
-        FileEnumerator enumerator = file.enumerate_children ("standard::*",
-                                                              FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
-                                                              null);
 
-        FileInfo info = null;
-        while ((info = enumerator.next_file (null)) != null) {
-            if (info.get_file_type () == FileType.DIRECTORY) {
-                themes.append (info.get_name ());
+        try
+        {
+            FileEnumerator enumerator = file.enumerate_children ("standard::*",
+                                                                  FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
+                                                                  null);
+
+            FileInfo info = null;
+
+            while ((info = enumerator.next_file (null)) != null) {
+                if (info.get_file_type () == FileType.DIRECTORY) {
+                    themes.append (info.get_name ());
+                }
             }
+        }
+        catch (Error e)
+        {
+            error ("Error enumerating themes from directory %s : %s\n", themes_dir, e.message);
         }
         return themes;
     }
 
-    private Gtk.Widget create_preview_widget (out MinefieldView view) {
+    private Gtk.Widget create_preview_widget (out MinefieldView view)
+    {
         view = new MinefieldView (settings);
         view.minefield = new PreviewField ();
 
@@ -72,14 +82,14 @@ public class ThemeSelectorDialog : Gtk.Dialog
         var overlay = new Gtk.Overlay ();
         get_content_area ().pack_start (overlay, true, true, 0);
 
-        previous = new Gtk.Button.from_icon_name ("go-previous", Gtk.IconSize.LARGE_TOOLBAR);
+        previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
         previous.show ();
         previous.valign = Gtk.Align.CENTER;
         previous.halign = Gtk.Align.START;
         previous.get_style_context ().add_class ("navigation");
         overlay.add_overlay (previous);
 
-        next = new Gtk.Button.from_icon_name ("go-next", Gtk.IconSize.LARGE_TOOLBAR);
+        next = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
         next.show ();
         next.valign = Gtk.Align.CENTER;
         next.halign = Gtk.Align.END;
@@ -118,8 +128,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
         update_sensitivities (themes, current_index);
         overlay.show_all ();
 
-        set_size_request (320, 300);
-//        resizable = false;
+        set_size_request (350, 300);
+        resizable = false;
     }
 
     private void switch_theme_preview (int to_index, List<string> themes)
