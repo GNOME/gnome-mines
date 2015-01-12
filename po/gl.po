@@ -10,13 +10,13 @@
 # Antón Méixome <meixome@mancomun.org>, 2009.
 # Fran Diéguez <frandieguez@gnome.org>, 2009, 2010, 2011.
 # Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.
-# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014.
+# Fran Dieguez <frandieguez@gnome.org>, 2011, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-25 13:30+0200\n"
-"PO-Revision-Date: 2014-08-25 13:30+0200\n"
+"POT-Creation-Date: 2015-01-12 22:05+0100\n"
+"PO-Revision-Date: 2015-01-12 22:07+0200\n"
 "Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
 "Language-Team: gnome-l10n-gl@gnome.org\n"
 "Language: gl\n"
@@ -31,7 +31,11 @@ msgstr ""
 msgid "GNOME Mines"
 msgstr "Minas de GNOME"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr "Limpar as minas agochadas do campo minado"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -43,7 +47,7 @@ msgstr ""
 "seu taboleiro. Gana o xogo cando marcara cunha bandeira cada mina do "
 "taboleiro. Teña coidado de non estourar unha ou o xogo rematará!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there's a time penalty, but "
@@ -53,18 +57,26 @@ msgstr ""
 "se atascou pode pedir un consello, porén engadirase un tempo de penalización."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
+#: ../src/gnome-mines.vala:709
 msgid "Mines"
 msgstr "Minas"
-
-#: ../data/gnome-mines.desktop.in.h:2
-msgid "Clear hidden mines from a minefield"
-msgstr "Limpar as minas agochadas do campo minado"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "busca minas;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Taboleiro pequeno"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Taboleiro mediano"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Taboleiro grande"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
 msgid "Use the unknown flag"
@@ -132,150 +144,141 @@ msgid "true if the window is maximized"
 msgstr "verdadeiro se a xanela está maximizada"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "_Pausa"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "_Mellores tempos"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Cambiar _dificultade"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "_Xogar de novo"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "_Ancho"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "_Alto"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "_Porcentaxe de minas"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Xogar partida"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:814
+msgid "_Pause"
+msgstr "_Pausa"
+
+#: ../data/interface.ui.h:8
+msgid "_Best Times"
+msgstr "_Mellores tempos"
+
+#: ../data/interface.ui.h:9
+msgid "Change _Difficulty"
+msgstr "Cambiar _dificultade"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "_Xogar de novo"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Detido"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
+#: ../src/gnome-mines.vala:81
+msgid "Print release version and exit"
+msgstr "Mostrar a versión da publicación e saír"
+
+#: ../src/gnome-mines.vala:82
+msgid "Small game"
+msgstr "Xogo pequeno"
+
+#: ../src/gnome-mines.vala:83
+msgid "Medium game"
+msgstr "Xogo mediano"
+
+#: ../src/gnome-mines.vala:84
+msgid "Big game"
+msgstr "Xogo grande"
+
+#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
 msgid "_New Game"
 msgstr "Xogo _novo"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
 msgid "_Scores"
 msgstr "_Puntuacións"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
 msgid "_Show Warnings"
 msgstr "Mostrar _advertencias"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
 msgid "_Use Question Flags"
 msgstr "_Usar bandeiras de interrogación"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
 msgid "_Help"
 msgstr "_Axuda"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
 msgid "_About"
 msgstr "So_bre"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
 msgid "_Quit"
 msgstr "_Saír"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:198
 msgid "_Mines"
 msgstr "_Minas"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:206
 msgid "_Contents"
 msgstr "_Contidos"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:296
 msgid "Custom"
 msgstr "Personalizar"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:373
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> minas"
 msgstr[1] "<b>%d</b> minas"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:471
 msgid "Do you want to start a new game?"
 msgstr "Desexa iniciar un novo xogo?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:472
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se iniciar un xogo novo, o seu progreso actual perderase."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:473
 msgid "Keep Current Game"
 msgstr "Manter o xogo actual"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:474
 msgid "Start New Game"
 msgstr "Iniciar un novo xogo"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:628 ../src/gnome-mines.vala:650
+msgid "Play _Again"
+msgstr "_Xogar de novo"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
-
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:682
 msgid "Main game:"
 msgstr "Xogo principal:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:687
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:690
 msgid "Resizing and SVG support:"
 msgstr "Redimensionamento e soporte SVG:"
 
-#: ../src/gnome-mines.vala:681
+#: ../src/gnome-mines.vala:712
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -285,20 +288,24 @@ msgstr ""
 "\n"
 "Minas é parte de Xogos de GNOME."
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:719
 msgid "translator-credits"
 msgstr ""
-"Fran Diéguez <frandieguez@ubuntu.com>, 2009-2014.\n"
+"Fran Diéguez <frandieguez@ubuntu.com>, 2009-2015.\n"
 "Leandro Regueiro <leandro.regueiro@gmail.com>, 2012.\n"
 "Antón Méixome <meixome@mancomun.org>, 2009.\n"
 "Suso Baleato <suso.baleato@xunta.es>, 2009.\n"
-"Mancomún - Centro de Referencia e Servizos de Software Libre <g11n@mancomun."
-"org>, 2009.\n"
+"Mancomún - Centro de Referencia e Servizos de Software Libre "
+"<g11n@mancomun.org>, 2009.\n"
 "Ignacio Casal Quinteiro <icq@svn.gnome.org>, 2008.\n"
 "Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.\n"
 "Jesús Bravo Álvarez <jba@pobox.com>, 2000."
 
-#: ../src/gnome-mines.vala:793
+#: ../src/gnome-mines.vala:819
+msgid "St_art Over"
+msgstr "Comez_ar de novo"
+
+#: ../src/gnome-mines.vala:825
 msgid "_Resume"
 msgstr "_Retomar"
 
@@ -332,6 +339,18 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u mina"
 msgstr[1] "%u × %u, %u minas"
+
+#~ msgid "5/10"
+#~ msgstr "5/10"
+
+#~ msgid "0:00"
+#~ msgstr "0:00"
+
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
+
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Preferencias"
@@ -1015,9 +1034,6 @@ msgstr[1] "%u × %u, %u minas"
 
 #~ msgid "Failed to open game: %s"
 #~ msgstr "Produciuse un erro ao cargar a partida: %s"
-
-#~ msgid "Show release version"
-#~ msgstr "Mostrar o número de versión"
 
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE]: xogar ao Xadrez"
@@ -2219,9 +2235,6 @@ msgstr[1] "%u × %u, %u minas"
 #~ msgid "Easy"
 #~ msgstr "Fácil"
 
-#~ msgid "Medium"
-#~ msgstr "Medio"
-
 #~ msgid "Hard"
 #~ msgstr "Difícil"
 
@@ -3157,9 +3170,6 @@ msgstr[1] "%u × %u, %u minas"
 #~ msgid "tetris;"
 #~ msgstr "tetris;"
 
-#~ msgid "Game Over"
-#~ msgstr "Fin da partida"
-
 #~ msgid "Lines:"
 #~ msgstr "Liñas:"
 
@@ -3259,9 +3269,6 @@ msgstr[1] "%u × %u, %u minas"
 #~ msgid_plural "%u points"
 #~ msgstr[0] "%u punto"
 #~ msgstr[1] "%u puntos"
-
-#~ msgid "Small"
-#~ msgstr "Pequeno"
 
 #~ msgid "Normal"
 #~ msgstr "Normal"
