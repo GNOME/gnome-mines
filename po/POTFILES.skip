@@ -2,3 +2,4 @@ src/gnome-mines.c
 src/minefield.c
 src/minefield-view.c
 src/score-dialog.c
+src/theme-selector-dialog.c
