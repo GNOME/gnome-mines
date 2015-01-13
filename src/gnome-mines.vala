@@ -24,10 +24,11 @@ public class Mines : Gtk.Application
     /* For command-line options */
     private static int game_mode = -1;
 
-    /* Keys shared with MinefieldView */
+    /* Shared Settings keys */
     public static const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public static const string KEY_USE_AUTOFLAG = "use-autoflag";
+    public static const string KEY_THEME = "theme";
 
     private Gtk.Widget main_screen;
     private Gtk.Button play_pause_button;
@@ -40,6 +41,7 @@ public class Mines : Gtk.Application
     private Gtk.Box paused_box;
     private Gtk.ScrolledWindow scrolled;
     private Gtk.Stack stack;
+    private ThemeSelectorDialog theme_dialog;
 
     private Gtk.Label clock_label;
 
@@ -75,6 +77,7 @@ public class Mines : Gtk.Application
     private SimpleAction pause_action;
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
+    private Gtk.CssProvider theme_provider;
 
     private const OptionEntry[] option_entries =
     {
@@ -91,6 +94,7 @@ public class Mines : Gtk.Application
         { "repeat-size",        repeat_size_cb                              },
         { "pause",              toggle_pause_cb                             },
         { "scores",             scores_cb                                   },
+        { "preferences",        preferences_cb                              },
         { "quit",               quit_cb                                     },
         { "help",               help_cb                                     },
         { "about",              about_cb                                    }
@@ -101,6 +105,50 @@ public class Mines : Gtk.Application
         Object (application_id: "org.gnome.mines", flags: ApplicationFlags.FLAGS_NONE);
 
         add_main_option_entries (option_entries);
+    }
+
+    private void set_game_theme (string theme)
+    {
+        string theme_path = theme;
+        bool is_switch = theme_provider != null;
+
+        if (!Path.is_absolute (theme_path)) {
+            theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
+        }
+        if (!is_switch) {
+            Gtk.IconTheme.get_default ().append_search_path (theme_path);
+        } else {
+            string[] icon_search_path;
+            Gtk.IconTheme.get_default ().get_search_path (out icon_search_path);
+            icon_search_path[icon_search_path.length - 1] = theme_path;
+            Gtk.IconTheme.get_default ().set_search_path (icon_search_path);
+        }
+
+        var theme_css_path = Path.build_filename (theme_path, "theme.css");
+        try
+        {
+            if (is_switch) {
+                Gtk.StyleContext.remove_provider_for_screen (Gdk.Screen.get_default (), theme_provider);
+            }
+            theme_provider = new Gtk.CssProvider ();
+            theme_provider.load_from_path (theme_css_path);
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), theme_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+        catch (GLib.Error e)
+        {
+            warning ("Error loading css styles from %s: %s", theme_css_path, e.message);
+        }
+        if (window != null)
+        {
+            window.get_window ().invalidate_rect (null, true);
+            window.queue_draw ();
+        }
+        Gtk.StyleContext.reset_widgets (Gdk.Screen.get_default ());
+
+        if (theme_dialog != null)
+            theme_dialog.queue_draw ();
+        if (minefield_view != null)
+            minefield_view.refresh ();
     }
 
     protected override void startup ()
@@ -138,8 +186,8 @@ public class Mines : Gtk.Application
         {
             warning ("Could not load game UI: %s", e.message);
         }
-
-        Gtk.IconTheme.get_default ().append_search_path (DATA_DIRECTORY);
+        settings.changed[KEY_THEME].connect (() => { set_game_theme (settings.get_string (KEY_THEME)); });
+        set_game_theme (settings.get_string (KEY_THEME));
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
@@ -180,6 +228,7 @@ public class Mines : Gtk.Application
             menu.append_section (null, app_main_menu);
             app_main_menu.append (_("_New Game"), "app.new-game");
             app_main_menu.append (_("_Scores"), "app.scores");
+            app_main_menu.append (_("_Preferences"), "app.preferences");
             var section = new Menu ();
             menu.append_section (null, section);
             section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
@@ -198,6 +247,7 @@ public class Mines : Gtk.Application
             menu.append_submenu (_("_Mines"), mines_menu);
             mines_menu.append (_("_New Game"), "app.new-game");
             mines_menu.append (_("_Scores"), "app.scores");
+            mines_menu.append (_("_Preferences"), "app.preferences");
             mines_menu.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             mines_menu.append (_("_Quit"), "app.quit");
@@ -361,7 +411,8 @@ public class Mines : Gtk.Application
 
     private bool window_focus_in_event_cb (Gdk.EventFocus event)
     {
-        if (minefield != null && !pause_requested)
+        if (minefield != null && !pause_requested && 
+            (theme_dialog == null || theme_dialog.visible == false))
             minefield.paused = false;
 
         return false;
@@ -439,6 +490,18 @@ public class Mines : Gtk.Application
         flag_label.set_text ("%u/%u".printf (minefield.n_flags, minefield.n_mines));
     }
 
+    private int show_theme_selector ()
+    {
+        theme_dialog = new ThemeSelectorDialog ();
+        theme_dialog.modal = true;
+        theme_dialog.transient_for = window;
+
+        var result = theme_dialog.run ();
+        theme_dialog.destroy ();
+
+        return result;
+    }
+
     private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
     {
         var dialog = new ScoreDialog (history, selected_entry, show_close);
@@ -454,6 +517,11 @@ public class Mines : Gtk.Application
     private void scores_cb ()
     {
         show_scores ();
+    }
+
+    private void preferences_cb ()
+    {
+        show_theme_selector ();
     }
 
     private void show_custom_game_screen ()

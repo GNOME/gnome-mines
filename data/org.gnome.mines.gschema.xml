@@ -1,5 +1,10 @@
 <schemalist>
   <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-mines">
+    <key name="theme" type="s">
+      <default>'default'</default>
+      <summary>The theme to use</summary>
+      <description>The title of the tile theme to use.</description>
+    </key>
     <key name="use-question-marks" type="b">
       <default>true</default>
       <summary>Use the unknown flag</summary>

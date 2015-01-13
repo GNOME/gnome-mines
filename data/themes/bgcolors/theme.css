@@ -1,0 +1,117 @@
+/* Common style for all tiles */
+.tile {
+  background-image:none;
+  background-color:#babdb6;
+  border-color:@theme_bg_color;
+  border-radius:4px; /* border width might be affecting */
+  color:transparent;
+  border-image:none;
+  font-size:16px;
+  font-weight: bold;
+  background-size: 60%;
+  background-position: 50%;
+  padding:0px;
+  background-repeat: no-repeat;
+  box-shadow:none;
+  border-width:0px;
+}
+
+.tile:hover {
+  background-color:#d3d7cf;
+  transition-duration:0.4s;
+}
+
+.tile:active {
+  background-color:#888a85;
+  box-shadow: inset 0 2px 1px rgba(0,0,0,.2);
+}
+
+/* Style for revealed fields showing numbers */
+.count {
+  color:black;
+  font-size:0px;
+  background-image:none;
+  background-color:#dededc;
+  transition-duration:0.4s;
+}
+
+.count:hover {
+  background-color:#dededc;
+}
+
+/* Style for mines */
+.mine {
+  background-color:#729fcf;
+}
+
+/* Style of the keyboard cursor */
+.cursor {
+  background-color:#e9b96e;
+}
+
+/* Style of the unrevealed tiles after game over */
+.explodedField .mine {
+  background-color:#888a85;
+  transition-duration:1s;
+}
+
+.explodedField .exploded {
+  background-color:#d3d7cf;
+  transition-duration:1s;
+}
+
+.explodedField .incorrect {
+  background-color:#cc0000;
+}
+
+.completedField .flag {
+  transition-duration:1s;
+}
+
+
+.1mines {
+  background-color:#DDFAC3;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.2mines {
+  background-color:#ECEDBF;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.3mines {
+  background-color:#EDDAB4;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.4mines {
+  background-color:#EDC38A;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.5mines {
+  background-color:#F7A1A2;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+.6mines {
+  background-color:#FEA785;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.7mines {
+  background-color:#FF7D60;
+  border-color:#CCCCCC;
+  border-width:1px;
+}
+
+.8mines {
+  background-color:#FF323C;
+  border-color:#CCCCCC;
+  border-width:1px;
+}

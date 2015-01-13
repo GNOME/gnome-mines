@@ -90,76 +90,6 @@ private class Position : Object
     }
 }
 
-private class Tile : Gtk.Button
-{
-    private int _row;
-    private int _column;
-    public signal void tile_mouse_over (int x, int y);
-    public signal void tile_pressed (int x, int y, Gdk.EventButton event);
-    public signal void tile_released (int x, int y, Gdk.EventButton event);
-    private static string[] IMAGE_CLASSES = {"mine", "flag", "maybe", "overmine",
-                                             "exploded", "1mines", "2mines",
-                                             "3mines", "4mines", "5mines",
-                                             "6mines", "7mines", "8mines"};
-    private Gtk.Image scaling_image;
-
-    public int row
-    {
-        get { return _row; }
-    }
-    public int column
-    {
-        get { return _column; }
-    }
-
-    public Tile (int prow, int pcol)
-    {
-        _row = prow;
-        _column = pcol;
-        scaling_image = new Gtk.Image ();
-        can_focus = false;
-        add_class ("tile");
-        set_image (scaling_image);
-        enter_notify_event.connect ( (event) =>
-        {
-            tile_mouse_over (prow, pcol);
-            return false;
-        } );
-        size_allocate.connect ( (allocation) =>
-        {
-            scaling_image.set_pixel_size (allocation.height/3*2);
-        } );
-        button_press_event.connect ( (event) =>
-        {
-            tile_pressed (prow, pcol, event);
-            return false;
-        } );
-        button_release_event.connect ( (event) =>
-        {
-            tile_released (prow, pcol, event);
-            return false;
-        } );
-    }
-
-    public void add_class (string style_class)
-    {
-        get_style_context ().add_class (style_class);
-        if (style_class in IMAGE_CLASSES) {
-            scaling_image.set_from_icon_name (style_class, Gtk.IconSize.DND);
-            scaling_image.set_pixel_size (get_allocated_height ()/3*2);
-        }
-    }
-
-    public void remove_class (string style_class)
-    {
-        get_style_context ().remove_class (style_class);
-        if (style_class in IMAGE_CLASSES) {
-            scaling_image = new Gtk.Image ();
-            set_image (scaling_image);
-        }
-    }
-}
-
 public class MinefieldView : Gtk.Grid
 {
     private Settings settings;
@@ -361,10 +291,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-        {
             multi_release (selected.x, selected.y);
-            redraw_adjacent (selected.x, selected.y);
-        }
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 
@@ -478,7 +405,7 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    private void toggle_mark (uint x, uint y)
+    public void toggle_mark (uint x, uint y)
     {
         if (minefield.is_cleared (x, y))
             return;
@@ -532,7 +459,7 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    private void multi_release (uint x, uint y)
+    public void multi_release (uint x, uint y)
     {
         if (!minefield.is_cleared (x, y) || minefield.get_flag (x, y) == FlagType.FLAG)
             return;
@@ -579,6 +506,7 @@ public class MinefieldView : Gtk.Grid
             else
                 m.set_flag (nx, ny, FlagType.FLAG);
         }
+        redraw_adjacent (x, y);
     }
 
     public override bool key_press_event (Gdk.EventKey event)
@@ -662,6 +590,14 @@ public class MinefieldView : Gtk.Grid
         return true;
     }
 
+    public void refresh()
+    {
+        if (_minefield != null)
+            for (int i = 0; i < _minefield.width; i++)
+                for (int j = 0; j < _minefield.height; j++)
+                    mines[i,j].refresh_icon ();
+    }
+
     public override bool key_release_event (Gdk.EventKey event)
     {
         if (event.keyval != Gdk.Key.space)
@@ -678,10 +614,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-        {
             multi_release (selected.x, selected.y);
-            redraw_adjacent (selected.x, selected.y);
-        }
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 

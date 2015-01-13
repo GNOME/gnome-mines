@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160" height="160">
+  <radialGradient id="paint" cx="67" cy="67" r="100" gradientUnits="userSpaceOnUse">
+    <stop offset="0" style="stop-color:#808080"/>
+    <stop offset="0.12" style="stop-color:#606060"/>
+    <stop offset="0.45" style="stop-color:#202020"/>
+    <stop offset="1" style="stop-color:#000000"/>
+  </radialGradient>
+  <path fill="url(#paint)" stroke="#000000" stroke-width="5" d="M155,84.839v-9.678h-21.033c-1.003-11.329-5.486-21.655-12.383-29.901l14.87-14.871l-6.842-6.843L114.74,38.417c-8.246-6.897-18.573-11.38-29.901-12.384V5h-9.678v21.033c-11.33,1.003-21.657,5.486-29.903,12.383l-14.87-14.87l-6.843,6.843l14.87,14.87c-6.896,8.247-11.379,18.574-12.383,29.903H5v9.678h21.033c1.003,11.331,5.485,21.658,12.382,29.903l-14.869,14.87l6.843,6.842l14.869-14.868c8.246,6.896,18.573,11.378,29.904,12.381V155h9.678v-21.033c11.329-1.003,21.656-5.485,29.902-12.382l14.871,14.869l6.842-6.842l-14.869-14.871c6.896-8.245,11.379-18.572,12.382-29.902H155V84z"/>
+  <circle fill="none" stroke="#000000" stroke-width="4" cx="80" cy="80" r="6"/>
+  <circle fill="none" stroke="#000000" stroke-width="5" cx="80" cy="80" r="50"/>
+</svg>

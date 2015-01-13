@@ -1,0 +1,18 @@
+.pausedOverlay {
+  background-color:#babdb6;
+  color: white;
+  font-size:32px;
+  border-radius: 3px;
+}
+
+.pausedOverlay:backdrop {
+  background-color: shade(#babdb6,1.1);
+}
+
+.navigation {
+  border-radius:32px;
+  background-color:alpha(#888a85, 0.1);
+  border-width:0px;
+  border-color:#BABABA;
+  background-image:none;
+}
