@@ -191,7 +191,7 @@ public class Mines : Gtk.Application
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
-        new_game_action.set_enabled (false);
+        new_game_action.set_enabled (true);
         repeat_size_action = lookup_action ("repeat-size") as SimpleAction;
         repeat_size_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
@@ -567,9 +567,6 @@ public class Mines : Gtk.Application
 
         window.resize (window_width, window_height);
 
-        new_game_button.show ();
-
-        new_game_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
 
@@ -581,9 +578,10 @@ public class Mines : Gtk.Application
         window_skip_configure = true;
         minefield_view.has_focus = true;
 
-        play_pause_button.hide ();
-        replay_button.hide ();
-        new_game_button.hide ();
+        repeat_size_action.set_enabled (false);
+        play_pause_label.label = _("_Pause");
+        replay_button.label = _("St_art Over");
+        play_pause_button.show ();
         high_scores_button.hide ();
 
         tick_cb ();
@@ -640,10 +638,6 @@ public class Mines : Gtk.Application
         minefield_aspect.set_size_request (request_x, request_y);
         update_flag_label ();
 
-        new_game_action.set_enabled (true);
-        repeat_size_action.set_enabled (true);
-        pause_action.set_enabled (true);
-
         minefield.paused = false;
         pause_requested = false;
 
@@ -678,9 +672,9 @@ public class Mines : Gtk.Application
     private void paused_changed_cb ()
     {
         if (minefield.paused)
-            display_unpause_button ();
+            play_pause_label.label = _("_Resume");
         else if (minefield.elapsed > 0)
-            display_pause_button ();
+            play_pause_label.label = _("_Pause");
         paused_box.visible = minefield.paused;
     }
 
@@ -691,14 +685,15 @@ public class Mines : Gtk.Application
 
     private void explode_cb (Minefield minefield)
     {
-        new_game_button.show ();
+        game_ended ();
+    }
 
+    private void game_ended ()
+    {
         replay_button.label = _("Play _Again");
-        replay_button.show ();
-
-        high_scores_button.show ();
         pause_action.set_enabled (false);
         play_pause_button.hide ();
+        high_scores_button.show ();
     }
 
     private void cleared_cb (Minefield minefield)
@@ -712,21 +707,15 @@ public class Mines : Gtk.Application
         if (show_scores (entry, true) == Gtk.ResponseType.OK)
             show_new_game_screen ();
         else
-        {
-            new_game_button.show ();
-
-            replay_button.label = _("Play _Again");
-            replay_button.show ();
-
-            high_scores_button.show ();
-            pause_action.set_enabled (false);
-            play_pause_button.hide ();
-        }
+            game_ended ();
     }
 
     private void clock_started_cb ()
     {
-        display_pause_button ();
+        play_pause_label.label = _("_Pause");
+        replay_button.sensitive = true;
+        pause_action.set_enabled (true);
+        repeat_size_action.set_enabled (true);
     }
 
     private void tick_cb ()
@@ -871,26 +860,6 @@ public class Mines : Gtk.Application
         {
             warning ("Failed to show help: %s", e.message);
         }
-    }
-
-    private void display_pause_button ()
-    {
-        replay_button.hide ();
-        new_game_button.hide ();
-
-        play_pause_button.show ();
-        play_pause_label.label = _("_Pause");
-    }
-
-    private void display_unpause_button ()
-    {
-        replay_button.label = _("St_art Over");
-        replay_button.show ();
-
-        new_game_button.show ();
-
-        play_pause_button.show ();
-        play_pause_label.label = _("_Resume");
     }
 
     public static int main (string[] args)
