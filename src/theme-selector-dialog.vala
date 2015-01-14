@@ -76,10 +76,12 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     public ThemeSelectorDialog ( )
     {
-        MinefieldView minefield;
+        Object (use_header_bar: 1);
 
+        MinefieldView minefield;
         title = _("Select theme");
 
+        (get_header_bar () as Gtk.HeaderBar).set_show_close_button (true);
         var overlay = new Gtk.Overlay ();
         get_content_area ().pack_start (overlay, true, true, 0);
 
@@ -129,7 +131,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         update_sensitivities (themes, current_index);
         overlay.show_all ();
 
-        set_size_request (350, 300);
+        set_size_request (400, 400);
         resizable = false;
     }
 
