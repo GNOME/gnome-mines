@@ -79,7 +79,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         Object (use_header_bar: 1);
 
         MinefieldView minefield;
-        title = _("Select theme");
+        title = _("Select Theme");
 
         (get_header_bar () as Gtk.HeaderBar).set_show_close_button (true);
         var overlay = new Gtk.Overlay ();
