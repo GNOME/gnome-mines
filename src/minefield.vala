@@ -60,8 +60,13 @@ public class Minefield : Object
     /* true if have hit a mine */
     public bool exploded = false;
 
+    /* true if have placed the mines onto the map */
+    private bool placed_mines = false;
+
     /* keep track of flags and cleared squares */
     private uint _n_cleared = 0;
+    private uint _n_flags = 0;
+
     public uint n_cleared
     {
         get { return _n_cleared; }
@@ -73,7 +78,6 @@ public class Minefield : Object
         get { return n_cleared == width * height - n_mines; }
     }
 
-    private uint _n_flags = 0;
     public uint n_flags
     {
         get { return _n_flags; }
@@ -136,8 +140,6 @@ public class Minefield : Object
         this.width = width;
         this.height = height;
         this.n_mines = n_mines;
-
-        place_mines (width - 1, height - 1);
     }
 
     public bool is_clock_started ()
@@ -166,6 +168,11 @@ public class Minefield : Object
             start_clock ();
 
         /* Place mines on first attempt to clear */
+        if (!placed_mines)
+        {
+            place_mines (x, y);
+            placed_mines = true;
+        }
 
         if (locations[x, y].cleared || locations[x, y].flag == FlagType.FLAG)
             return;
@@ -289,7 +296,7 @@ public class Minefield : Object
     }
 
     /* Randomly set the mines, but avoid the current and adjacent locations */
-    protected void place_mines (uint x, uint y)
+    private void place_mines (uint x, uint y)
     {
         for (var n = 0; n < n_mines;)
         {
