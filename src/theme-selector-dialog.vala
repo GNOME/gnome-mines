@@ -5,6 +5,7 @@ private class PreviewField : Minefield
         base (7, 7, 20);
 
         place_mines (0, 0);
+        placed_mines = true;
     }
 
     protected new void place_mines (uint x, uint y)

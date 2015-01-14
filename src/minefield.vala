@@ -61,7 +61,7 @@ public class Minefield : Object
     public bool exploded = false;
 
     /* true if have placed the mines onto the map */
-    private bool placed_mines = false;
+    protected bool placed_mines = false;
 
     /* keep track of flags and cleared squares */
     private uint _n_cleared = 0;
