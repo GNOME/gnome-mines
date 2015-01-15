@@ -91,16 +91,20 @@ public class ThemeSelectorDialog : Gtk.Dialog
         next.valign = Gtk.Align.CENTER;
         next.halign = Gtk.Align.END;
 
+        var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
         if (use_headerbar) {
             var headerbar = get_header_bar () as Gtk.HeaderBar;
             headerbar.set_show_close_button (true);
             get_content_area ().pack_start (create_preview_widget (out minefield), true, true, 0);
-            headerbar.pack_start (previous);
-            headerbar.pack_start (next);
+
+            buttons_holder.pack_start (previous);
+            buttons_holder.pack_start (next);
+            buttons_holder.get_style_context ().add_class ("linked");
+            headerbar.pack_start (buttons_holder);
         } else {
             add_button (_("Close"), Gtk.ResponseType.DELETE_EVENT);
             border_width = 12;
-            var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
             buttons_holder.pack_start (previous, false, false, 0);
             buttons_holder.pack_start (create_preview_widget (out minefield), true, true, 0);
             buttons_holder.pack_start (next, false, false, 0);
