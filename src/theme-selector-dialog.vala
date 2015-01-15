@@ -34,7 +34,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     private Gtk.Button previous;
     private Gtk.Button next;
-    private Settings settings;
+    private Settings settings = new Settings ("org.gnome.mines");
     public List<string> list_themes ()
     {
         string themes_dir = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes");
@@ -74,33 +74,38 @@ public class ThemeSelectorDialog : Gtk.Dialog
         return frame;
     }
 
-    public ThemeSelectorDialog ( )
+    public ThemeSelectorDialog ( Gtk.Window parent )
     {
-        Object (use_header_bar: 1);
-
+        var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
+        bool use_headerbar = desktop == null || desktop != "Unity";
         MinefieldView minefield;
-        title = _("Select Theme");
 
-        (get_header_bar () as Gtk.HeaderBar).set_show_close_button (true);
-        var overlay = new Gtk.Overlay ();
-        get_content_area ().pack_start (overlay, true, true, 0);
+        Object (use_header_bar: use_headerbar ? 1 : 0, title:  _("Select Theme"),
+                modal: true, transient_for: parent, resizable: false);
 
-        previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
-        previous.show ();
+        previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
         previous.valign = Gtk.Align.CENTER;
         previous.halign = Gtk.Align.START;
-        previous.get_style_context ().add_class ("navigation");
-        overlay.add_overlay (previous);
 
-        next = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.LARGE_TOOLBAR);
-        next.show ();
+        next = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.BUTTON);
         next.valign = Gtk.Align.CENTER;
         next.halign = Gtk.Align.END;
-        next.get_style_context ().add_class ("navigation");
-        overlay.add_overlay (next);
 
-        settings = new Settings ("org.gnome.mines");
-        settings.delay ();
+        if (use_headerbar) {
+            var headerbar = get_header_bar () as Gtk.HeaderBar;
+            headerbar.set_show_close_button (true);
+            get_content_area ().pack_start (create_preview_widget (out minefield), true, true, 0);
+            headerbar.pack_start (previous);
+            headerbar.pack_start (next);
+        } else {
+            add_button (_("Close"), Gtk.ResponseType.DELETE_EVENT);
+            border_width = 12;
+            var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+            buttons_holder.pack_start (previous, false, false, 0);
+            buttons_holder.pack_start (create_preview_widget (out minefield), true, true, 0);
+            buttons_holder.pack_start (next, false, false, 0);
+            get_content_area ().pack_end (buttons_holder, true, true, 0);
+        }
 
         var themes = list_themes ();
         var current_theme = settings.get_string ("theme");
@@ -114,8 +119,6 @@ public class ThemeSelectorDialog : Gtk.Dialog
             }
         }
 
-        overlay.add (create_preview_widget (out minefield));
-
         next.clicked.connect (() => {
             switch_theme_preview (++current_index, themes);
             update_sensitivities (themes, current_index);
@@ -128,11 +131,9 @@ public class ThemeSelectorDialog : Gtk.Dialog
             minefield.refresh ();
         });
 
+        set_size_request (420, 400);
         update_sensitivities (themes, current_index);
-        overlay.show_all ();
-
-        set_size_request (400, 400);
-        resizable = false;
+        show_all ();
     }
 
     private void switch_theme_preview (int to_index, List<string> themes)

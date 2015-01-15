@@ -491,9 +491,7 @@ public class Mines : Gtk.Application
 
     private int show_theme_selector ()
     {
-        theme_dialog = new ThemeSelectorDialog ();
-        theme_dialog.modal = true;
-        theme_dialog.transient_for = window;
+        theme_dialog = new ThemeSelectorDialog ( window );
 
         var result = theme_dialog.run ();
         theme_dialog.destroy ();
