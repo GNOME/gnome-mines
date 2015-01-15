@@ -269,12 +269,11 @@ public class Mines : Gtk.Application
 
         stack = (Gtk.Stack) ui_builder.get_object ("stack");
 
-        scrolled = new Gtk.ScrolledWindow (null, null);
-        scrolled.show ();
+        scrolled = (Gtk.ScrolledWindow) ui_builder.get_object ("scrolled");
         scrolled.add (minefield_view);
+        scrolled.show ();
 
         minefield_overlay = (Gtk.Overlay) ui_builder.get_object ("minefield_overlay");
-        minefield_overlay.add (scrolled);
         minefield_overlay.show ();
 
         minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");

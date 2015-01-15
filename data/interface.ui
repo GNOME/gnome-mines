@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated with glade 3.18.2 -->
+<!-- Generated with glade 3.18.3 -->
 <interface>
   <requires lib="gtk+" version="3.10"/>
-  <object class="GtkSizeGroup" id="buttons_size_group">
-    <property name="mode">both</property>
-    <widgets>
-      <widget name="play_pause_button"/>
-      <widget name="high_scores_button"/>
-      <widget name="new_game_button"/>
-      <widget name="replay_button"/>
-    </widgets>
-  </object>
   <object class="GtkApplicationWindow" id="main_window">
-    <property name="width_request">580</property>
-    <property name="height_request">475</property>
+    <property name="width_request">560</property>
+    <property name="height_request">380</property>
     <property name="can_focus">False</property>
     <property name="title" translatable="yes">Mines</property>
     <property name="icon_name">gnome-mines</property>
@@ -21,7 +12,7 @@
       <object class="GtkBox" id="main_vbox">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
-        <property name="margin">12</property>
+        <property name="border_width">18</property>
         <property name="spacing">12</property>
         <child>
           <object class="GtkStack" id="stack">
@@ -242,23 +233,9 @@
                 <property name="can_focus">False</property>
                 <property name="spacing">12</property>
                 <child>
-                  <object class="GtkAspectFrame" id="minefield_aspect">
+                  <object class="GtkLabel" id="label1">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="hexpand">True</property>
-                    <property name="vexpand">True</property>
-                    <property name="label_xalign">0</property>
-                    <property name="shadow_type">none</property>
-                    <property name="obey_child">False</property>
-                    <child>
-                      <object class="GtkOverlay" id="minefield_overlay">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <child>
-                          <placeholder/>
-                        </child>
-                      </object>
-                    </child>
                   </object>
                   <packing>
                     <property name="expand">True</property>
@@ -267,20 +244,51 @@
                   </packing>
                 </child>
                 <child>
+                  <object class="GtkAspectFrame" id="minefield_aspect">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="hexpand">True</property>
+                    <property name="vexpand">True</property>
+                    <property name="label_xalign">0</property>
+                    <property name="shadow_type">none</property>
+                    <property name="xalign">1</property>
+                    <property name="obey_child">False</property>
+                    <child>
+                      <object class="GtkOverlay" id="minefield_overlay">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkScrolledWindow" id="scrolled">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <placeholder/>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
                   <object class="GtkBox" id="buttons_box">
                     <property name="width_request">150</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <property name="halign">start</property>
-                    <property name="margin_top">12</property>
                     <property name="orientation">vertical</property>
                     <property name="spacing">4</property>
                     <child>
                       <object class="GtkImage" id="flag_image">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="icon_name">flag-symbolic</property>
                         <property name="pixel_size">32</property>
+                        <property name="icon_name">flag-symbolic</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -293,7 +301,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_bottom">12</property>
-                        <property name="label" translatable="no">5/10</property>
+                        <property name="label">5/10</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -305,8 +313,8 @@
                       <object class="GtkImage" id="clock_image">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
-                        <property name="icon_name">preferences-system-time-symbolic</property>
                         <property name="pixel_size">32</property>
+                        <property name="icon_name">preferences-system-time-symbolic</property>
                       </object>
                       <packing>
                         <property name="expand">False</property>
@@ -319,10 +327,11 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="margin_bottom">12</property>
-                        <property name="label" translatable="no">0:00</property>
+                        <property name="yalign">0</property>
+                        <property name="label">0:00</property>
                       </object>
                       <packing>
-                        <property name="expand">False</property>
+                        <property name="expand">True</property>
                         <property name="fill">True</property>
                         <property name="position">3</property>
                       </packing>
@@ -337,7 +346,6 @@
                           <object class="GtkLabel" id="play_pause_label">
                             <property name="visible">True</property>
                             <property name="can_focus">False</property>
-                            <property name="margin">12</property>
                             <property name="label" translatable="yes">_Pause</property>
                             <property name="use_underline">True</property>
                           </object>
@@ -351,11 +359,11 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="high_scores_button">
-                        <property name="label" translatable="yes">_Best Times</property>
+                      <object class="GtkButton" id="new_game_button">
+                        <property name="label" translatable="yes">Change _Difficulty</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
-                        <property name="action_name">app.scores</property>
+                        <property name="action_name">app.new-game</property>
                         <property name="use_underline">True</property>
                       </object>
                       <packing>
@@ -366,11 +374,11 @@
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkButton" id="new_game_button">
-                        <property name="label" translatable="yes">Change _Difficulty</property>
+                      <object class="GtkButton" id="high_scores_button">
+                        <property name="label" translatable="yes">_Best Times</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">True</property>
-                        <property name="action_name">app.new-game</property>
+                        <property name="action_name">app.scores</property>
                         <property name="use_underline">True</property>
                       </object>
                       <packing>
@@ -399,8 +407,18 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
-                    <property name="pack_type">end</property>
-                    <property name="position">1</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkLabel" id="label2">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                  </object>
+                  <packing>
+                    <property name="expand">True</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
               </object>
@@ -421,6 +439,28 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkSizeGroup" id="buttons_matcher">
+    <property name="mode">vertical</property>
+    <widgets>
+      <widget name="minefield_overlay"/>
+      <widget name="buttons_box"/>
+    </widgets>
+  </object>
+  <object class="GtkSizeGroup" id="buttons_size_group">
+    <property name="mode">both</property>
+    <widgets>
+      <widget name="play_pause_button"/>
+      <widget name="high_scores_button"/>
+      <widget name="new_game_button"/>
+      <widget name="replay_button"/>
+    </widgets>
+  </object>
+  <object class="GtkSizeGroup" id="sides_size_group">
+    <widgets>
+      <widget name="label1"/>
+      <widget name="label2"/>
+    </widgets>
   </object>
   <object class="GtkBox" id="paused_box">
     <property name="visible">True</property>
