@@ -9,7 +9,7 @@
   background-color: shade(#babdb6,1.1);
 }
 
-.count {
+.count, .explodedField .tile {
 -gtk-image-effect: none;
 }
 
