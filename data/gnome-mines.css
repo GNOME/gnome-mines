@@ -9,6 +9,10 @@
   background-color: shade(#babdb6,1.1);
 }
 
+.count {
+-gtk-image-effect: none;
+}
+
 .navigation {
   border-radius:32px;
   background-color:alpha(#888a85, 0.1);
