@@ -625,25 +625,31 @@ public class Mines : Gtk.Application
         minefield.clock_started.connect (clock_started_cb);
 
         minefield_view.minefield = minefield;
-
+        int mine_size = int.max ((int) minefield_view.mine_size, 30);
         int request_x = -1, request_y = -1;
         if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width () < Gdk.Screen.width ()) {
-            request_x = 30 * x + aspect_child.spacing + 150;
+            request_x = x * 30 + aspect_child.spacing + 150;
         } else {
             request_x = Gdk.Screen.width () - window.get_allocated_width () + scrolled.get_allocated_width () + aspect_child.spacing + 150;
         }
         if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < Gdk.Screen.height ()) {
-            request_y = 30 * y;
+            request_y = y * 30;
         } else {
             request_y = Gdk.Screen.height () - window.get_allocated_height () + scrolled.get_allocated_height ();
         }
         minefield_aspect.set_size_request (request_x, request_y);
 
-        uint width = x * 30;
+        uint width = x * mine_size;
         width += aspect_child.spacing;
-        width += 150;
-        minefield_aspect.ratio = (float) (width) / (y * 30);
-
+        width += uint.max (buttons_box.get_allocated_width (), 150);
+        minefield_aspect.ratio = (float) (width) / (y * mine_size);
+        minefield_aspect.size_allocate.connect ((allocation) => {
+             width = minefield_view.mine_size * x;
+             width += aspect_child.spacing;
+             width += buttons_box.get_allocated_width ();
+             minefield_aspect.ratio = (float) width / (y * minefield_view.mine_size);
+             stdout.printf ("Size is %dx%d, factors are %dx%d ratio is %.1f\n", allocation.width, allocation.height, (int)width, (int)(y*minefield_view.mine_size), minefield_aspect.ratio);
+        });
         update_flag_label ();
 
         minefield.paused = false;
