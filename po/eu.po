@@ -2,15 +2,15 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014.
+# Iñaki Larrañaga Murgoitio <dooteo@zundan.com>, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-12-31 17:15+0100\n"
-"PO-Revision-Date: 2014-12-06 16:29+0100\n"
+"POT-Creation-Date: 2015-01-17 14:43+0100\n"
+"PO-Revision-Date: 2015-01-17 14:44+0100\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@zundan.com>\n"
 "Language-Team: Basque <librezale@librezale.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
@@ -52,8 +52,8 @@ msgstr ""
 "arren, mina bat zapaltzea baino hobeagoa da."
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:110 ../src/gnome-mines.vala:169
-#: ../src/gnome-mines.vala:709
+#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:219
+#: ../src/gnome-mines.vala:774
 msgid "Mines"
 msgstr "Minak"
 
@@ -74,18 +74,26 @@ msgid "Big board"
 msgstr "Taula handia"
 
 #: ../data/org.gnome.mines.gschema.xml.h:1
+msgid "The theme to use"
+msgstr "Erabili beharreko gaia"
+
+#: ../data/org.gnome.mines.gschema.xml.h:2
+msgid "The title of the tile theme to use."
+msgstr "Erabili beharreko fitxa-gaiaren izena."
+
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Use the unknown flag"
 msgstr "Erabili bandera ezezaguna"
 
-#: ../data/org.gnome.mines.gschema.xml.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:4
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "Ezarri egia laukiak ezezagun gisa markatu ahal izateko."
 
-#: ../data/org.gnome.mines.gschema.xml.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Warning about too many flags"
 msgstr "Bandera gehiegi badaude abisatzea"
 
-#: ../data/org.gnome.mines.gschema.xml.h:4
+#: ../data/org.gnome.mines.gschema.xml.h:6
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -93,11 +101,11 @@ msgstr ""
 "Ezarri TRUE (egia) gisa zenbatutako gelaxka baten inguruan bandera gehiegi "
 "jarri direnean abisu-ikonoak gaitzeko."
 
-#: ../data/org.gnome.mines.gschema.xml.h:5
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Gaitu banderen kokapen automatikoa"
 
-#: ../data/org.gnome.mines.gschema.xml.h:6
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -105,35 +113,35 @@ msgstr ""
 "Ezarri egia gisa nahikoa lauki bistaratu direnean gnomine-k automatikoki "
 "mina bandera jartzeko"
 
-#: ../data/org.gnome.mines.gschema.xml.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:9
 msgid "Number of columns in a custom game"
 msgstr "Joko pertsonalizatuaren zutabe kopurua"
 
-#: ../data/org.gnome.mines.gschema.xml.h:8
+#: ../data/org.gnome.mines.gschema.xml.h:10
 msgid "Number of rows in a custom game"
 msgstr "Joko pertsonalizatuaren errenkada kopurua"
 
-#: ../data/org.gnome.mines.gschema.xml.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "The number of mines in a custom game"
 msgstr "Joko pertsonalizatuaren mina kopurua"
 
-#: ../data/org.gnome.mines.gschema.xml.h:10
+#: ../data/org.gnome.mines.gschema.xml.h:12
 msgid "Board size"
 msgstr "Taularen tamaina"
 
-#: ../data/org.gnome.mines.gschema.xml.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:13
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Taularen tamaina (0-2 = txikia-handia; 3 = pertsonalizatua)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:12
+#: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "Width of the window in pixels"
 msgstr "Leihoaren zabalera (pixeletan)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:13
+#: ../data/org.gnome.mines.gschema.xml.h:15
 msgid "Height of the window in pixels"
 msgstr "Leihoaren altuera (pixeletan)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:14
+#: ../data/org.gnome.mines.gschema.xml.h:16
 msgid "true if the window is maximized"
 msgstr "egia leihoa maximizatuta badago"
 
@@ -157,17 +165,18 @@ msgstr "_Utzi"
 msgid "_Play Game"
 msgstr "_Hasi jokoa"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:814
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:584
+#: ../src/gnome-mines.vala:685 ../src/gnome-mines.vala:723
 msgid "_Pause"
 msgstr "_Pausarazi"
 
 #: ../data/interface.ui.h:8
-msgid "_Best Times"
-msgstr "Denbora _onenak"
-
-#: ../data/interface.ui.h:9
 msgid "Change _Difficulty"
 msgstr "Aldatu _zailtasuna"
+
+#: ../data/interface.ui.h:9
+msgid "_Best Times"
+msgstr "Denbora _onenak"
 
 #: ../data/interface.ui.h:10
 msgid "_Play Again"
@@ -177,102 +186,114 @@ msgstr "Jokatu _berriro"
 msgid "Paused"
 msgstr "Pausarazita"
 
-#: ../src/gnome-mines.vala:81
+#: ../src/gnome-mines.vala:86
 msgid "Print release version and exit"
 msgstr "Erakutsi bertsioa eta irten"
 
-#: ../src/gnome-mines.vala:82
+#: ../src/gnome-mines.vala:87
 msgid "Small game"
 msgstr "Joko txikia"
 
-#: ../src/gnome-mines.vala:83
+#: ../src/gnome-mines.vala:88
 msgid "Medium game"
 msgstr "Joko ertaina"
 
-#: ../src/gnome-mines.vala:84
+#: ../src/gnome-mines.vala:89
 msgid "Big game"
 msgstr "Joko handia"
 
-#: ../src/gnome-mines.vala:181 ../src/gnome-mines.vala:199
+#: ../src/gnome-mines.vala:231 ../src/gnome-mines.vala:250
 msgid "_New Game"
 msgstr "_Joko berria"
 
-#: ../src/gnome-mines.vala:182 ../src/gnome-mines.vala:200
+#: ../src/gnome-mines.vala:232 ../src/gnome-mines.vala:251
 msgid "_Scores"
 msgstr "_Puntuazioak"
 
-#: ../src/gnome-mines.vala:185 ../src/gnome-mines.vala:201
+#: ../src/gnome-mines.vala:233 ../src/gnome-mines.vala:252
+msgid "A_ppearance"
+msgstr "_Itxura"
+
+#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:253
 msgid "_Show Warnings"
 msgstr "Erakutsi _abisuak"
 
-#: ../src/gnome-mines.vala:186 ../src/gnome-mines.vala:202
+#: ../src/gnome-mines.vala:237 ../src/gnome-mines.vala:254
 msgid "_Use Question Flags"
 msgstr "_Erabili galderen banderak"
 
-#: ../src/gnome-mines.vala:189 ../src/gnome-mines.vala:205
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
 msgid "_Help"
 msgstr "La_guntza"
 
-#: ../src/gnome-mines.vala:190 ../src/gnome-mines.vala:207
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:259
 msgid "_About"
 msgstr "Honi _buruz"
 
-#: ../src/gnome-mines.vala:191 ../src/gnome-mines.vala:203
+#: ../src/gnome-mines.vala:242 ../src/gnome-mines.vala:255
 msgid "_Quit"
 msgstr "_Irten"
 
-#: ../src/gnome-mines.vala:198
+#: ../src/gnome-mines.vala:249
 msgid "_Mines"
 msgstr "_Minak"
 
-#: ../src/gnome-mines.vala:206
+#: ../src/gnome-mines.vala:258
 msgid "_Contents"
 msgstr "_Edukia"
 
-#: ../src/gnome-mines.vala:296
+#: ../src/gnome-mines.vala:350
 msgid "Custom"
 msgstr "Pertsonalizatua"
 
-#: ../src/gnome-mines.vala:373
+#: ../src/gnome-mines.vala:428
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "mina <b>%d</b>"
 msgstr[1] "<b>%d</b> mina"
 
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:541
 msgid "Do you want to start a new game?"
 msgstr "Joko berri bat hastea nahi duzu?"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:542
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Joko berri bat hasten baduzu, unekoa galduko da."
 
-#: ../src/gnome-mines.vala:473
+#: ../src/gnome-mines.vala:543
 msgid "Keep Current Game"
 msgstr "Mantendu uneko jokoa"
 
-#: ../src/gnome-mines.vala:474
+#: ../src/gnome-mines.vala:544
 msgid "Start New Game"
 msgstr "Hasi joko berria"
 
-#: ../src/gnome-mines.vala:628 ../src/gnome-mines.vala:650
+#: ../src/gnome-mines.vala:585
+msgid "St_art Over"
+msgstr "_Hasi hasieratik"
+
+#: ../src/gnome-mines.vala:683
+msgid "_Resume"
+msgstr "_Jarraitu"
+
+#: ../src/gnome-mines.vala:701
 msgid "Play _Again"
 msgstr "Jokatu _berriro"
 
-#: ../src/gnome-mines.vala:682
+#: ../src/gnome-mines.vala:747
 msgid "Main game:"
 msgstr "Joko nagusia:"
 
-#: ../src/gnome-mines.vala:687
+#: ../src/gnome-mines.vala:752
 msgid "Score:"
 msgstr "Puntuazioa:"
 
-#: ../src/gnome-mines.vala:690
+#: ../src/gnome-mines.vala:755
 msgid "Resizing and SVG support:"
 msgstr "Tamaina-aldatzea eta SVG onartzea:"
 
-#: ../src/gnome-mines.vala:712
+#: ../src/gnome-mines.vala:777
 msgid ""
 "Clear explosive mines off the board\n"
 "\n"
@@ -282,17 +303,9 @@ msgstr ""
 "\n"
 "GNOME Games-ekoa da GNOME Minak."
 
-#: ../src/gnome-mines.vala:719
+#: ../src/gnome-mines.vala:784
 msgid "translator-credits"
 msgstr "Hizkuntza Politikarako Sailburuordetza <hizkpol@ej-gv.es>"
-
-#: ../src/gnome-mines.vala:819
-msgid "St_art Over"
-msgstr "_Hasi hasieratik"
-
-#: ../src/gnome-mines.vala:825
-msgid "_Resume"
-msgstr "_Jarraitu"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
@@ -324,6 +337,14 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, mina %u"
 msgstr[1] "%u × %u, %u mina"
+
+#: ../src/theme-selector-dialog.vala:83
+msgid "Select Theme"
+msgstr "Hautatu gaia"
+
+#: ../src/theme-selector-dialog.vala:106
+msgid "Close"
+msgstr "Itxi"
 
 #~ msgid "5/10"
 #~ msgstr "5/10"
@@ -1031,9 +1052,6 @@ msgstr[1] "%u × %u, %u mina"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "'Bost edo gehiago'ren hobespenak"
-
-#~ msgid "Appearance"
-#~ msgstr "Itxura"
 
 #~ msgid "_Image:"
 #~ msgstr "_Irudia:"
@@ -3248,12 +3266,6 @@ msgstr[1] "%u × %u, %u mina"
 #~ "\n"
 #~ "GNOME Games-ekoa da Quadrapassel."
 
-#~ msgid "The theme to use"
-#~ msgstr "Erabili beharreko gaia"
-
-#~ msgid "The title of the tile theme to use."
-#~ msgstr "Erabili beharreko fitxa-gaiaren izena."
-
 #~ msgid "The size of the game board."
 #~ msgstr "Joko-mahaiaren tamaina."
 
@@ -3778,9 +3790,6 @@ msgstr[1] "%u × %u, %u mina"
 
 #~ msgid "Whether or not to show the toolbar"
 #~ msgstr "Tresna-barra erakutsiko den ala ez adierazten du."
-
-#~ msgid "Select Game"
-#~ msgstr "Hautatu jokoa"
 
 #~ msgid "_Select"
 #~ msgstr "_Hautatu"
