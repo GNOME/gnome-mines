@@ -38,6 +38,8 @@ public class Mines : Gtk.Application
     private Gtk.Button new_game_button;
     private Gtk.AspectFrame minefield_aspect;
     private Gtk.Overlay minefield_overlay;
+    private Gtk.Box aspect_child;
+    private Gtk.Box buttons_box;
     private Gtk.Box paused_box;
     private Gtk.ScrolledWindow scrolled;
     private Gtk.Stack stack;
@@ -279,6 +281,9 @@ public class Mines : Gtk.Application
         minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");
         minefield_aspect.show ();
 
+        paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
+        buttons_box = (Gtk.Box) ui_builder.get_object ("buttons_box");
+        aspect_child = (Gtk.Box) ui_builder.get_object ("aspect_child");
         paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
         paused_box.button_press_event.connect (view_button_press_event);
 
@@ -619,13 +624,13 @@ public class Mines : Gtk.Application
         minefield.paused_changed.connect (paused_changed_cb);
         minefield.clock_started.connect (clock_started_cb);
 
-        minefield_aspect.ratio = (float)x / y;
         minefield_view.minefield = minefield;
+
         int request_x = -1, request_y = -1;
-        if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x < Gdk.Screen.width ()) {
-            request_x = 30 * x;
+        if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width () < Gdk.Screen.width ()) {
+            request_x = 30 * x + aspect_child.spacing + 150;
         } else {
-            request_x = Gdk.Screen.width () - window.get_allocated_width () + scrolled.get_allocated_width ();
+            request_x = Gdk.Screen.width () - window.get_allocated_width () + scrolled.get_allocated_width () + aspect_child.spacing + 150;
         }
         if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < Gdk.Screen.height ()) {
             request_y = 30 * y;
@@ -633,6 +638,12 @@ public class Mines : Gtk.Application
             request_y = Gdk.Screen.height () - window.get_allocated_height () + scrolled.get_allocated_height ();
         }
         minefield_aspect.set_size_request (request_x, request_y);
+
+        uint width = x * 30;
+        width += aspect_child.spacing;
+        width += 150;
+        minefield_aspect.ratio = (float) (width) / (y * 30);
+
         update_flag_label ();
 
         minefield.paused = false;

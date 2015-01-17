@@ -127,7 +127,7 @@ public class MinefieldView : Gtk.Grid
 
     private Tile[,] mines;
 
-    private uint mine_size
+    public uint mine_size
     {
         get
         {
