@@ -1,3 +1,12 @@
+GNOME Mines 3.15.4
+==================
+
+* Updated translations
+* Added support for themes and theme selector dialog (Robert Roth)
+* Fixed distance between game area and sidebar buttons (Robert Roth)
+* Removed hover effect from inactive tiles (Robert Roth)
+* Do not hide any buttons (Robert Roth)
+
 GNOME Mines 3.15.3
 ==================
 
