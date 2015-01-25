@@ -228,7 +228,6 @@ public class Mines : Gtk.Application
             var menu = new Menu ();
             app_main_menu = new Menu ();
             menu.append_section (null, app_main_menu);
-            app_main_menu.append (_("_New Game"), "app.new-game");
             app_main_menu.append (_("_Scores"), "app.scores");
             app_main_menu.append (_("A_ppearance"), "app.preferences");
             var section = new Menu ();
