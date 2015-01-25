@@ -780,7 +780,7 @@ public class Mines : Gtk.Application
                                "name", _("Mines"),
                                "version", VERSION,
                                "comments",
-                               _("Clear explosive mines off the board\n\nMines is a part of GNOME Games."),
+                               _("Clear explosive mines off the board"),
                                "copyright",
                                "Copyright © 1997–2008 Free Software Foundation, Inc.",
                                "license-type", Gtk.License.GPL_2_0,
