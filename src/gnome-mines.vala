@@ -647,7 +647,6 @@ public class Mines : Gtk.Application
              width += aspect_child.spacing;
              width += buttons_box.get_allocated_width ();
              minefield_aspect.ratio = (float) width / (y * minefield_view.mine_size);
-             stdout.printf ("Size is %dx%d, factors are %dx%d ratio is %.1f\n", allocation.width, allocation.height, (int)width, (int)(y*minefield_view.mine_size), minefield_aspect.ratio);
         });
         update_flag_label ();
 
