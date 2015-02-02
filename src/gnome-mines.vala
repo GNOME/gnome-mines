@@ -202,7 +202,7 @@ public class Mines : Gtk.Application
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
         window = (Gtk.ApplicationWindow) ui_builder.get_object ("main_window");
-        window.configure_event.connect (window_configure_event_cb);
+        window.size_allocate.connect (size_allocate_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
@@ -384,17 +384,15 @@ public class Mines : Gtk.Application
         custom_game_screen.show_all ();
     }
 
-    private bool window_configure_event_cb (Gdk.EventConfigure event)
+    private void size_allocate_cb (Gtk.Allocation allocation)
     {
         if (!is_maximized && !window_skip_configure)
         {
-            window_width = event.width;
-            window_height = event.height;
+            window_width = allocation.width;
+            window_height = allocation.height;
         }
 
         window_skip_configure = false;
-
-        return false;
     }
 
     private bool window_state_event_cb (Gdk.EventWindowState event)
