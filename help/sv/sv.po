@@ -1,482 +1,1384 @@
+# Erik  Sköldås <erik.skoldas@tele2.se>, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: gnomine doc\n"
-"POT-Creation-Date: 2009-01-10 09:51+0000\n"
-"PO-Revision-Date: 2009-02-20 00:07+0100\n"
-"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Project-Id-Version: Gnome-mines-help.master.po\n"
+"POT-Creation-Date: 2015-02-06 08:01+0000\n"
+"PO-Revision-Date: 2015-02-07 19:36+0100\n"
+"Last-Translator: Erik Sköldås <erik.skoldas@tele2.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Project-Style: gnome\n"
 
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:145(None)
-msgid "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
-msgstr "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:163(None)
-msgid "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-msgstr "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:184(None)
-msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:276(None)
-msgid "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
-msgstr "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:298(None)
-msgid "@@image: 'figures/imnotsureflagscheckbox.png'; md5=58be021ed1cf90add08931282ec19bad"
-msgstr "@@image: 'figures/imnotsureflagscheckbox.png'; md5=58be021ed1cf90add08931282ec19bad"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:319(None)
-msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
-msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:370(None)
-msgid "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
-msgstr "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:431(None)
-msgid "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
-msgstr "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:445(None)
-msgid "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-msgstr "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:458(None)
-msgid "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-msgstr "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:497(None)
-msgid "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-msgstr "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:510(None)
-msgid "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-msgstr "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
-
-#. When image changes, this message will be marked fuzzy or untranslated for you.
-#. It doesn't matter what you translate it to: it's not used at all.
-#: C/gnomine.xml:541(None)
-msgid "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-msgstr "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
-
-#: C/gnomine.xml:27(title)
-msgid "<application>Mines</application> Manual"
-msgstr "Handbok för <application>Minor</application>"
-
-#: C/gnomine.xml:29(para)
-msgid "Mines is GNOME's take on the popular logic puzzle minesweeper, which includes avoiding mines while receiving clues for the location of the mines."
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
 msgstr ""
+"Daniel Nylander <po@danielnylander.se>, 2007, 2009\n"
+"Erik Sköldås <erik.skoldas@tele2.se>, 2015"
 
-#: C/gnomine.xml:36(year)
-msgid "2006"
-msgstr "2006"
+#. (itstool) path: credit/name
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
 
-#: C/gnomine.xml:37(holder)
-msgid "Callum McKenzie"
-msgstr "Callum McKenzie"
+#. (itstool) path: credit/years
+#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/translate.page:12
+msgid "2011"
+msgstr "2011"
 
-#: C/gnomine.xml:52(publishername)
-#: C/gnomine.xml:89(para)
-msgid "GNOME Documentation Project"
-msgstr "Dokumentationsprojekt för GNOME"
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
 
-#: C/gnomine.xml:2(para)
-msgid "This document is dual-licensed. You may either distribute and/or modify it under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink>, which the <link linkend=\"license\">program is licensed</link> under, or you can distribute it under the terms of the GNU Free Documentation License. A copy of this follows."
-msgstr "Det här dokumentet är dubbellicensierat. Du kan antingen distribuera och/eller ändra det under villkoren för <ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink>, som <link linkend=\"license\">programmer är licensierat</link> under, eller du kan distribuera det under villkoren för GNU Free Documentation License. En kopia av dessa följer."
+#. (itstool) path: credit/years
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
+#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
+msgid "2012"
+msgstr "2012"
 
-#: C/gnomine.xml:11(para)
-msgid "Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any later version published by the Free Software Foundation with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
-msgstr "Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges under villkoren i GNU Free Documentation License (GFDL), version 1.1 eller senare, utgivet av Free Software Foundation utan standardavsnitt och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type=\"help\" url=\"help:fdl\">länk</ulink> eller i filen COPYING-DOCS som medföljer denna handbok."
+#. (itstool) path: page/title
+#: C/board-size.page:22
+msgid "How to change the game board size"
+msgstr "Hur man ändrar spelplanens storlek"
 
-#: C/gnomine.xml:21(para)
-msgid "This manual is part of a collection of GNOME manuals distributed under the GFDL. If you want to distribute this manual separately from the collection, you can do so by adding a copy of the license to the manual, as described in section 6 of the license."
-msgstr "Denna handbok utgör en av flera GNOME-handböcker som distribueras under villkoren i GFDL.  Om du vill distribuera denna handbok separat från övriga handböcker kan du göra detta genom att lägga till en kopia av licensavtalet i handboken enligt instruktionerna i avsnitt 6 i licensavtalet."
+#. (itstool) path: page/p
+#: C/board-size.page:24
+msgid "You can select a field size at the start of a new game."
+msgstr ""
+"Du kan välja spelplanens storlek i samband med att du startar ett nytt spel."
 
-#: C/gnomine.xml:28(para)
-msgid "Many of the names used by companies to distinguish their products and services are claimed as trademarks. Where those names appear in any GNOME documentation, and the members of the GNOME Documentation Project are made aware of those trademarks, then the names are in capital letters or initial capital letters."
-msgstr "Flera namn på produkter och tjänster är registrerade varumärken. I de fall dessa namn förekommer i GNOME-dokumentation - och medlemmarna i GNOME-dokumentationsprojektet är medvetna om dessa varumärken - är de skrivna med versaler eller med inledande versal."
+#. (itstool) path: item/p
+#: C/board-size.page:28
+msgid ""
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"Klicka på <gui style=\"button\">Nytt</gui> eller <guiseq><gui style=\"menu"
+"\">Minor</gui> <gui style=\"menuitem\">Nytt spel</gui></guiseq>."
 
-#: C/gnomine.xml:44(para)
-msgid "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr "DOKUMENTET TILLHANDAHÅLLS I \"BEFINTLIGT SKICK\" UTAN NÅGRA SOM HELST GARANTIER, VARE SIG UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, GARANTIER ATT DOKUMENTET ELLER EN MODIFIERAD VERSION AV DOKUMENTET INTE INNEHÅLLER NÅGRA FELAKTIGHETER, ÄR LÄMPLIGT FÖR ETT VISST ÄNDAMÅL ELLER INTE STRIDER MOT LAG. HELA RISKEN VAD GÄLLER KVALITET, EXAKTHET OCH UTFÖRANDE AV DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET LIGGER HELT OCH HÅLLET PÅ ANVÄNDAREN. OM ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT SKULLE VISA SIG INNEHÅLLA FELAKTIGHETER I NÅGOT HÄNSEENDE ÄR DET DU (INTE DEN URSPRUNGLIGA SKRIBENTEN, FÖRFATTAREN ELLER NÅGON ANNAN MEDARBETARE) SOM FÅR STÅ FÖR ALLA EVENTUELLA KOSTNADER FÖR SERVICE, REPARATIONER ELLER KORRIGERINGAR. DENNA GARANTIFRISKRIVNING UTGÖR EN VÄSENTLIG DEL AV DETTA LICENSAVTAL. DETTA INNEBÄR ATT ALL ANVÄNDNING AV ETT DOKUMENT ELLER EN MODIFIERAD VERSION AV ETT DOKUMENT BEVILJAS ENDAST UNDER DENNA ANSVARSFRISKRIVNING;"
+#. (itstool) path: item/p
+#: C/board-size.page:33
+msgid "Select one of the grid sizes:"
+msgstr "Välj en av följande fältstorlekar:"
 
-#: C/gnomine.xml:64(para)
-msgid "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES."
-msgstr "UNDER INGA OMSTÄNDIGHETER ELLER INOM RAMEN FÖR NÅGON LAGSTIFTNING, OAVSETT OM DET GÄLLER KRÄNKNING (INKLUSIVE VÅRDSLÖSHET), KONTRAKT ELLER DYLIKT, SKA FÖRFATTAREN, DEN URSPRUNGLIGA SKRIBENTEN ELLER ANNAN MEDARBETARE ELLER ÅTERFÖRSÄLJARE AV DOKUMENTET ELLER AV EN MODIFIERAD VERSION AV DOKUMENTET ELLER NÅGON LEVERANTÖR TILL NÅGON AV NÄMNDA PARTER STÄLLAS ANSVARIG GENTEMOT NÅGON FÖR NÅGRA DIREKTA, INDIREKTA, SÄRSKILDA ELLER OFÖRUTSEDDA SKADOR ELLER FÖLJDSKADOR AV NÅGOT SLAG, INKLUSIVE, MEN INTE BEGRÄNSAT TILL, SKADOR BETRÄFFANDE FÖRLORAD GOODWILL, HINDER I ARBETET, DATORHAVERI ELLER NÅGRA ANDRA TÄNKBARA SKADOR ELLER FÖRLUSTER SOM KAN UPPKOMMA PÅ GRUND AV ELLER RELATERAT TILL ANVÄNDNINGEN AV DOKUMENTET ELLER MODIFIERADE VERSIONER AV DOKUMENTET, ÄVEN OM PART SKA HA BLIVIT INFORMERAD OM MÖJLIGHETEN TILL SÅDANA SKADOR."
+#. (itstool) path: item/p
+#: C/board-size.page:35
+msgid "a 8 × 8 board with 10 mines"
+msgstr "8 × 8 spelplan med 10 minor"
 
-#: C/gnomine.xml:37(para)
-msgid "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: <placeholder-1/>"
-msgstr "DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS UNDER VILLKOREN I GNU FREE DOCUMENTATION LICENSE ENDAST UNDER FÖLJANDE FÖRUTSÄTTNINGAR: <placeholder-1/>"
+#. (itstool) path: item/p
+#: C/board-size.page:36
+msgid "a 16 × 16 board with 40 mines"
+msgstr "16 × 16 spelplan med 40 minor"
 
-#: C/gnomine.xml:62(firstname)
-msgid "Callum"
-msgstr "Callum"
+#. (itstool) path: item/p
+#: C/board-size.page:37
+msgid "a 30 × 16 board with 99 mines"
+msgstr "30 × 16 spelplan med 99 minor"
 
-#: C/gnomine.xml:63(surname)
-msgid "McKenzie"
-msgstr "McKenzie"
+#. (itstool) path: item/p
+#: C/board-size.page:38
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "en anpassad spelplan, där du väljer storlek och antalet minor"
 
-#: C/gnomine.xml:65(email)
-msgid "callum@spooky-possum.org"
-msgstr "callum@spooky-possum.org"
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
+#: C/flags.page:12 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
 
-#: C/gnomine.xml:83(revnumber)
-msgid "Mines Manual V2.9"
-msgstr "Handbok för Minor v2.9"
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
 
-#: C/gnomine.xml:84(date)
-msgid "January 2006"
-msgstr "Januari 2006"
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "Hjälp till att göra<app>Minor</app> bättre"
 
-#: C/gnomine.xml:86(para)
-msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
-msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Rapportera ett fel eller föreslå en förbättring"
 
-#: C/gnomine.xml:94(releaseinfo)
-msgid "This manual describes version 2.14 of Mines."
-msgstr "Den här handboken beskriver version 2.14 av Minor."
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr ""
+"<app>Minor</app> underhålls av en frivillig gemenskap. Du är välkommen att "
+"delta. Om du upptäcker ett problem kan du skicka in en <em>felrapport</em>. "
+"För att skicka in en felrapport, gå till <link href=\"https://bugzilla.gnome."
+"org/\"/>."
 
-#: C/gnomine.xml:101(title)
-msgid "Feedback"
-msgstr "Återkoppling"
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"Detta är ett felrapporteringssystem där användare och utvecklare kan lämna "
+"information om buggar, krascher och önska förbättringar."
 
-#: C/gnomine.xml:102(para)
-msgid "To report a bug or make a suggestion regarding the <application>Mines</application> application or this manual, follow the directions in the <ulink url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
-msgstr "För att rapportera ett fel eller föreslå någonting angående programmet <application>Minor</application> eller den här handboken, följ anvisningarna i <ulink url=\"http://bugzilla.gnome.org\">GNOME:s felrapporteringsdatabas.</ulink>."
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
+msgstr ""
+"För att delta behöver du ett konto som ger dig möjlighet att få åtkomst, "
+"rapportera fel,kunna lämna synpunkter,och få uppdateringar via e-post för "
+"din felrapport. Om du inte redan har ett konto, klicka bara på länken "
+"<gui>Nytt Konto</gui> för att skapa ett."
 
-#: C/gnomine.xml:111(primary)
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
+msgstr ""
+"När du har ett konto, logga in, klicka på <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Innan du "
+"rapporterar ett fel, läs <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">riktlinjer för felrapporter</link>, och<link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">sök</link> för "
+"att se om felet redan är rapporterat."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:40
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Commit</gui>."
+msgstr ""
+"Om du önskar en ny funktion, välj <gui>enhancement</gui> i menyn "
+"<gui>Severity</gui>. Fyll i sammanfattning och beskrivning och klicka "
+"<gui>Commit</gui>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:44
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"Din rapport kommer att ges ett id-nummer, och dess status kommer att "
+"uppdateras när det behandlas. Tack för att du hjälper till att göra "
+"<app>Minor</app> bättre!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Hjälp till att utveckla"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Spel</app> är utvecklat och underhållet av en frivillig "
+"gemenskap. Du är välkommen att delta."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du komma i "
+"kontakt med utvecklarna genom <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller via vår "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">e-"
+"postlista</link>."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:22
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Hjälp till att skriva dokumentation"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"GNOME spels hjälpsidor underhålls av en frivillig gemenskap. Du är välkommen "
+"att delta."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+msgstr ""
+"Om du vill bidra till dokumentationsprojektet, ta kontakt med oss via <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
+"\">#docs</link> kanal på <link href=\"http://live.gnome.org/GnomeIrcChannels"
+"\">irc.gnome.org</link>eller via vår<link href=\"http://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">e-postlista</link> ."
+
+#. (itstool) path: page/p
+#: C/documentation.page:40
+msgid ""
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Vår <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> innehåller nyttig information."
+
+#. (itstool) path: page/title
+#: C/flags.page:31
+msgid "How to use flags"
+msgstr "Hur du använder flaggorna"
+
+#. (itstool) path: td/p
+#: C/flags.page:38
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"Flaggor används för att markera rutor som du misstänker kan dölja en mina. "
+"Att sätta en flagga på en ruta hindrar dig från att klicka på den och "
+"eventuellt orsaka en explosion, vilket skulle avsluta spelet."
+
+#. (itstool) path: section/title
+#: C/flags.page:46
+msgid "How to place a flag on a tile"
+msgstr "Hur du placerar flaggor på en ruta"
+
+#. (itstool) path: td/p
+#: C/flags.page:50
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr ""
+"Röda flaggor är de som inte kan klickas. För att placera en röd flagga på en "
+"ruta:"
+
+#. (itstool) path: item/p
+#: C/flags.page:53
+msgid "right click on a blank tile."
+msgstr "högerklicka på en täckt ruta."
+
+#. (itstool) path: note/p
+#: C/flags.page:63
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"För att göra antalet tillgängliga flaggor lika med antalet kvarvarande "
+"minor, aktivera alternativen <gui style=\"checkbox\">Varna om för många "
+"flaggor är placerade</gui> och <gui style=\"checkbox\">Använd \"Jag är inte "
+"säker\"-flaggor</gui>, och starta sedan om spelet."
+
+#. (itstool) path: section/title
+#: C/flags.page:73
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr "Att använda <em>Jag är inte säker</em>-flaggan"
+
+#. (itstool) path: section/p
+#: C/flags.page:74
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
+msgstr ""
+"Om du är osäker på om en ruta döljer en mina, kan du använda den blåa "
+"<em>Jag är inte säker</em>-flaggan."
+
+#. (itstool) path: td/p
+#: C/flags.page:79
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Att placera en <em>Jag är inte säker</em>-flagga på en ruta:"
+
+#. (itstool) path: item/p
+#: C/flags.page:81
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr "Högerklicka två gånger på en tom ruta eller en gång på en röd flagga."
+
+#. (itstool) path: note/p
+#: C/flags.page:92
+msgid ""
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
+msgstr ""
+"För att aktivera dessa flaggor, klicka <guiseq><gui style=\"manu\">Minor</"
+"gui><gui style=\"menuitem\">Inställningar</gui></guiseq>, och välj "
+"<gui>Använd \"Jag är inte säker\"-flaggor</gui>."
+
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: page/title
+#: C/get-help.page:27
+msgid "Hints and warnings"
+msgstr "Tips och varningar"
+
+#. (itstool) path: page/p
+#: C/get-help.page:29
+msgid ""
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
+"track of flags."
+msgstr ""
+"Du kan använda tips för att visa säkra rutor, och flaggvarningar för att "
+"hålla koll på antalet flaggor."
+
+#. (itstool) path: page/p
+#: C/get-help.page:32
+msgid ""
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
+msgstr ""
+"Klicka på knappen <gui style=\"button\">Ta emot ett tips för ditt nästa "
+"drag</gui> högst upp till höger för att visa en dold ruta som är säker. En "
+"strafftid på tio sekunder kommer att läggas till din totala tid. Straffet "
+"höjs med tio sekunder successivt på efterföljande tips tills den nionde "
+"ledtråden."
+
+#. (itstool) path: page/p
+#: C/get-help.page:38
+msgid ""
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
+msgstr ""
+"För att aktivera varningar, redigera inställningarna genom att välja "
+"<guiseq><gui>Minor</gui><gui>Inställningar</gui></guiseq> och kryssa i "
+"kryssrutan bredvid <gui>Varna om för många flaggor har placerats bredvid ett "
+"nummer</gui>. Detta kommer att varna dig om du försöker placera för många "
+"flaggor i anslutning till en öppen ruta."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:22
+msgid "High scores"
+msgstr "Poänglistan"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:24
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"Poänglistan visar de tio snabbaste tiderna för varje typ av spelplan som har "
+"röjts."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:27
+msgid ""
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
+msgstr ""
+"För att visa poänglistan, välj <guiseq><gui style=\"menu\">Minor</gui><gui "
+"style=\"menuitem\">Poänglista</gui></guiseq>. Dialogfältet kommer att visa "
+"<gui>Liten</gui> spelplan som standard; för att visa andra storlekar, välj i "
+"rullgardinsmenyn längst upp i dialogrutan."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
 msgid "GNOME Mines"
 msgstr "GNOME Minor"
 
-#: C/gnomine.xml:118(title)
-msgid "Introduction"
-msgstr "Introduktion"
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "GNOME Minor"
 
-#: C/gnomine.xml:120(para)
-msgid "<application><application>Mines</application></application> is a puzzle game where you locate mines floating in an ocean using only your brain and a little bit of luck."
-msgstr "<application><application>Minor</application></application> är ett pusselspel där du lokaliserar minor som flyter runt i en ocean, endast med hjälp av din hjärna och med lite tur."
+#. (itstool) path: credit/name
+#: C/index.page:13 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
 
-#: C/gnomine.xml:126(para)
-msgid "You start the game with a grid of covered squares and no idea what is in them. Clicking on a square reveals what is in it: either empty ocean or a mine. If you find a mine bad things happen and the game is over. If you uncover an empty square, you survive and get to try again. We do give you a bit of help; if you find an empty piece of ocean a number is printed there telling you how many mines are in the adjacent squares (or no number if there are no nearby mines). Once you find a few clear squares you can start to deduce which squares have mines in them and which don't. You win the game once you have revealed all the un-mined squares and marked all the mined squares."
-msgstr "Du startar spelet med ett rutnät fyllt av täckta rutor och har ingen aning vad som döljer sig i dem. Klicka på en ruta för att se vad som finns där: antingen ingenting eller en mina. Om du hittar en mina går det dåligt för dig och spelet är över. Om du avtäcker en tom ruta, överlever du och får försöka igen. Vi ger dig dock lite hjälp; om du hittar en tom ruta kommer en siffra att skrivas ut som berättar för dig hur många minor som finns i de angränsande rutorna (eller ingen siffra om det inte finns några minor i närheten). När du har hittat ett par tomma rutor kan du börja att fundera på vilka rutor som innehåller minor och vilka som inte gör det. Du vinner spelet när du har avtäckt alla rutor som inte innehåller minor och markerat alla rutor som innehåller minor."
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> GNOME Minor"
 
-#: C/gnomine.xml:141(title)
-msgid "The stages of the game: the start, playing, losing, and winning."
-msgstr "Etapperna i spelet: starten, spelandet, förlorandet och vinsten."
-
-#: C/gnomine.xml:149(para)
-msgid "To mark a square as having a mine you right-click on it and a flag is placed there. If you click on a square with a number and you have placed precisely that number of flags on adjacent squares then the remaining squares are revealed. If you didn't mark the mines correctly then an explosion will occur and the game is over. Squares with no adjacent mines (i.e. blank squares) have their adjacent squares automatically cleared."
-msgstr "För att markera en ruta som en mina så högerklickar du på den och en flagga kommer att placeras där. Om du klickar på en ruta med en siffra på dig och du har placerat det antalet flaggor på angränsande rutor kommer resten av rutorna att avtäckas. Om du inte markerade minorna korrekt kommer en explosion att inträffa och spelet är över. Rutor som inte har några angränsande minor (alltså tomma rutor) får sina angränsande rutor avtäckta automatiskt."
-
-#: C/gnomine.xml:160(title)
-msgid "Important information."
-msgstr "Viktig information."
-
-#: C/gnomine.xml:167(para)
-msgid "You are being timed. To be good at this game you have to work both quickly and correctly. Once you have found all the mines and revealed all the un-mined squares the clock is stopped. Your score is the time you took; the shorter the better."
-msgstr "Du spelar på tid. För att vara bra på det här spelet måste du både arbeta snabbt och korrekt. När du har hittat alla minorna och avtäckt alla rutor som inte innehåller minor kommer klockan att stoppas. Din poäng är den tid som du använde; ju kortare, desto bättre."
-
-#: C/gnomine.xml:174(para)
-msgid "The time you have taken is displayed on the bottom right of the window. Beside it, on the left, is a count of the number of mines you have cleared and the total number hidden on the board."
-msgstr "Tiden som du använt visas i högra nederkanten av fönstret. Förutom den, på vänster sida, finns en räknare för antal minor som du har hittat och det totala antalet dolda minor på brädet. "
-
-#: C/gnomine.xml:181(title)
-msgid "The yellow face shows you how well you are going."
-msgstr "Det gula ansiktet visar hur bra det går för dig."
-
-#: C/gnomine.xml:194(title)
-msgid "The Details"
-msgstr "Detaljerna"
-
-#: C/gnomine.xml:196(para)
-msgid "This section provides information on the controls and the important menu items. If you need help figuring where the mines are, see the <link linkend=\"strategy\">strategy section</link>."
-msgstr "Det här avsnittet tillhandahåller information om styrningen och de viktiga menyobjekten. Om du behöver hjälp med att lista ut var minorna finns, se <link linkend=\"strategy\">strategiavsnittet</link>."
-
-#: C/gnomine.xml:203(title)
-msgid "The Goal"
-msgstr "Målet"
-
-#: C/gnomine.xml:205(para)
-msgid "Starting from an ocean of squares with unknown contents you must mark all the squares with mines and reveal all the clear squares. You don't actually have to mark the squares with mines, but it is a lot easier if you do. Once you have cleared all the un-mined squares, any remaining mined squares will be marked for you."
-msgstr "Med början i en ocean av rutor med okänt innehåller måste du markera alla rutor som innehåller minor och avtäcka alla rutor som inte innehåller några minor. Du måste faktiskt inte markera rutorna med minor men det är mycket enklare för dig om du gör det. När du har hittat alla rutor utan minor kommer återstående minerade rutor att markeras åt dig."
-
-#: C/gnomine.xml:214(para)
-msgid "If you left click on a mine, or auto-clear a square with a mine in it you lose. To help prevent accidents, you aren't allowed to auto-clear around a square unless the number of marked mines equals the number given in the square."
-msgstr "Om du vänsterklickar på en mina, eller automatiskt rensar en ruta som innehåller en mina, kommer du att förlora. För att undvika olyckor så tillåts du inte att automatiskt rensa runt en ruta såvida inte antalet markerade minor är samma som siffran som angivits i rutan."
-
-#: C/gnomine.xml:224(title)
-msgid "Using the Mouse"
-msgstr "Användning av musen"
-
-#: C/gnomine.xml:231(entry)
-msgid "Action"
-msgstr "Åtgärd"
-
-#: C/gnomine.xml:231(entry)
-msgid "Result"
-msgstr "Resultat"
-
-#: C/gnomine.xml:236(entry)
-msgid "Left click on an un-revealed square."
-msgstr "Vänsterklicka på en täckt ruta."
-
-#: C/gnomine.xml:237(entry)
-msgid "Reveals the contents of that square. For better or for worse."
-msgstr "Avtäcker innehållet i den rutan. Kan gå bra, kan gå mindre bra."
-
-#: C/gnomine.xml:241(entry)
-msgid "Left click in a revealed square."
-msgstr "Vänsterklicka på en avtäckt ruta."
-
-#: C/gnomine.xml:242(entry)
-msgid "Auto-clear. Reveals the unmarked squares around the clicked square, but only if enough squares have been marked to match the number in the square."
-msgstr "Rensa automatiskt. Avtäcker de omarkerade rutorna runt den klickade rutan, men endast om tillräckligt många rutor har markerats för att matcha antalet i rutan."
-
-#: C/gnomine.xml:248(entry)
-msgid "Right click on an un-revealed square."
-msgstr "Högerklicka på en täckt ruta."
-
-#: C/gnomine.xml:249(entry)
-msgid "Marks the square as a mine. If it is already marked, the mark will be removed."
-msgstr "Markerar rutan som en mina. Om den redan är markerad kommer markeringen att tas bort."
-
-#: C/gnomine.xml:256(para)
-msgid "If you are used to the more traditional mouse controls, don't worry, they still work."
-msgstr "Om du är van vid den mer traditionella musstyrningen, var lugn, de fungerar fortfarande."
-
-#: C/gnomine.xml:261(title)
-msgid "Game Size and Difficulty"
-msgstr "Spelets storlek och svårighetsgrad"
-
-#: C/gnomine.xml:263(para)
-msgid "By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from the menu you can change the size of the games. Larger sizes obviously take longer and require more concentration. Smaller games are more frantic. We provide Small, Medium, Large and Custom sizes."
-msgstr "Genom att välja <menuchoice><guimenu>Inställningar</guimenu><guimenuitem>Inställningar</guimenuitem></menuchoice> från menyn kan du ändra storleken på spelen. Större storlekar tar så klart längre tid och kräver mer koncentration. Mindre spel är mer hektiska. Vi tillhandahåller storlekarna Liten, Mellan, Stor och Egen storlek."
-
-#: C/gnomine.xml:273(title)
-msgid "The preferences dialog."
-msgstr "Inställningsdialogrutan."
-
-#: C/gnomine.xml:280(para)
-msgid "On the right hand side of the dialog there are three parameters for controlling the custom size. Horizontal and Vertical are the width and height of the desired grid in squares. The number of mines is - obviously - the number of mines you need to find. If this number is set too high or too low then the game becomes very easy. The number of mines is limited to slightly less than the total number of squares."
-msgstr "På högra sidan av dialogrutan finns det tre parametrar för att styra den anpassade storleken. Horisontellt och vertikalt är bredden och höjden för det önskade rutnätet. Antalet minor är - så klart - antalet minor som du ska hitta. Om det här antalet är för högt eller för lågt inställt kommer spelet att bli mycket enkelt. Antalet minor är begränsat till ett fåtal mindre än det totala antalet rutor."
-
-#: C/gnomine.xml:293(title)
-msgid "\"I'm not sure\" Flags"
-msgstr "\"Jag är inte säker\"-flaggor"
-
-#: C/gnomine.xml:302(para)
-msgid "There is a check-box in the properties dialog entitled Use \"I'm not sure\" flags. If you enable this then, when right-clicking on a square, it cycles between the normal flags used to mark the square as mined, a flag with a question mark on it and no flag. This new flag is to help you with your reasoning, to mark mines you think might be a mine but aren't sure about. These flags have no effect on the game; you still have to use the appropriate number of red marker flags to be able to clear around a numbered square."
-msgstr "Det finns en kryssruta i egenskapsdialogrutan som heter Använd \"Jag är inte säker\"-flaggor. Om du aktiverar den kommer, vid högerklick på en ruta, den att växla mellan normala flaggor som används för att markera rutan som minerad, en flagga med ett frågetecken samt ingen flagga. Den här nya flaggan finns där för att hjälpa dig att bestämma dig, för att markera minor som du tror kan vara en mina men inte helt säker på det. Dessa flaggor har ingen effekt på spelet, du har fortfarande det lämpliga antalet röda markeringsflaggor för att kunna rensa runt en numrerad ruta."
-
-#: C/gnomine.xml:316(title)
-msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
-msgstr "Sekvensen för flaggor när \"Jag är inte säker\"-flaggor är aktiverat."
-
-#: C/gnomine.xml:326(title)
-msgid "Use \"Too many flags\" warning"
-msgstr "Använd varning för \"många flaggor\""
-
-#: C/gnomine.xml:328(para)
-msgid "The other check-box in the properties dialog is entitled Use \"Too many flags\" warning. This feature will show you a warning when you have placed too many flags. This is disabled by default, as it provides so much hint that it could be considered \"cheating\"."
-msgstr "Den andra kryssrutan i egenskapsdialogrutan heter Använd varning för \"många flaggor\". Den här funktionen kommer att visa en varning när du har placerat ut för många flaggor. Den är inaktiverad som standard eftersom den ger en stor fingervisning och som kan anses vara \"fusk\"."
-
-#: C/gnomine.xml:339(title)
-msgid "Hints"
-msgstr "Tips"
-
-#: C/gnomine.xml:341(para)
-msgid "If you get stuck - it is reasonably common to end up with two options that you can't logically resolve - then you can either guess, or ask for a hint. When you choose <guimenuitem>Hint</guimenuitem> from the <guimenu>Game</guimenu> menu a single square is revealed (plus surrounding squares if it is blank). The choice of square is random, but should be helpful. There is 10 second penalty added to your time whenever you use a hint."
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
 msgstr ""
+"<app>Minor</app> är en klon av spelet Minröj. Målet är att hitta alla minor "
+"som är gömda i rutor på en rektangulär spelplan. Du kommer att behöva "
+"använda en kombination av logik och tur för att hitta alla minor utan att "
+"utlösa en explosion."
 
-#: C/gnomine.xml:355(title)
-msgid "High Scores"
-msgstr "Poänglistan"
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Spelets gång"
 
-#: C/gnomine.xml:357(para)
-msgid "If your score is in the top ten you will be shown the list of top scores and have an opportunity to change the name recorded in the high score table. You can also review the scores later by choosing <guimenuitem>Scores</guimenuitem> from the <guimenu>Game</guimenu> menu. The drop-down menu at the top of the dialog lets you look at the scores for other board sizes."
-msgstr ""
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Useful tips"
+msgstr "Värdefulla tips"
 
-#: C/gnomine.xml:367(title)
-msgid "The high scores dialog."
-msgstr "Poänglistdialogrutan."
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Advanced"
+msgstr "Avancerat"
 
-#: C/gnomine.xml:375(para)
-msgid "The high score for the custom size is usually meaningless. Any other player can make the game size smaller and get a better time. If you only ever play one custom size then it will tell you how well you are doing. This is the only reason it is still recorded."
-msgstr ""
+#. (itstool) path: section/title
+#: C/index.page:43
+msgid "Get Involved"
+msgstr "Engagera dig"
 
-#: C/gnomine.xml:383(title)
-msgid "Window Size"
-msgstr "Fönsterstorlek"
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Juridisk information."
 
-#: C/gnomine.xml:385(para)
-msgid "Resizing the window makes the squares bigger or smaller to suit. If you want to make maximum use of the screen then there is a <guimenuitem>Fullscreen</guimenuitem> option under the <guimenu>Settings</guimenu> menu. You can also use the <keycap>F11</keycap> key to toggle full-screen mode."
-msgstr ""
-
-#: C/gnomine.xml:394(title)
-msgid "Pausing the Game"
-msgstr "Pausa spelet"
-
-#: C/gnomine.xml:396(para)
-msgid "The game can be paused automatically when you start using another window, or paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</guimenu> menu. The playing area is blanked so you can't think ahead while the clock is stopped. To start playing again press the button labelled \"Press to Resume\"."
-msgstr "Spelet kan pausas automatiskt när du börjar använda ett annat fönster, eller pausas genom att välja <guimenuitem>Gör paus</guimenuitem> från menyn <guimenu>Spel</guimenu>. Spelområdet döljs så att du inte kan tänka i förväg under tiden klockan är stoppad. För att börja spela igen så trycker du på knappen \"Tryck för att återuppta\"."
-
-#: C/gnomine.xml:410(title)
-msgid "Strategy"
-msgstr "Strategi"
-
-#: C/gnomine.xml:412(para)
-msgid "The first half of this section explains the very basics of deducing where mines are. If you are familiar with how to play the game skip down to the <link linkend=\"advanced\">Advanced Situations</link> subsection."
-msgstr ""
-
-#: C/gnomine.xml:419(title)
-msgid "The Basics"
-msgstr "Grunderna"
-
-#: C/gnomine.xml:420(para)
-msgid "These are a few basic situations which should be incredibly obvious, but if you're struggling with how to play the game, they should be useful. The first case is where you have an isolated covered square and most of the squares around it read 1. That covered square is a mine."
-msgstr ""
-
-#: C/gnomine.xml:429(title)
-msgid "The simplest case."
-msgstr "Den enklaste situationen."
-
-#: C/gnomine.xml:435(para)
-msgid "The next simplest case is where you have two covered squares adjacent to each other and both squares on one side are marked with a 2. If they have no other uncleared neighbors, then both squares are mines."
-msgstr ""
-
-#: C/gnomine.xml:443(title)
-msgid "The two mine case."
-msgstr ""
-
-#: C/gnomine.xml:449(para)
-msgid "Finally, when there are three uncovered squares in a row and the clear square beside the middle one is a 3 (once again this square should have no other neighbors) then all three are mines."
-msgstr ""
-
-#: C/gnomine.xml:456(title)
-msgid "The three mine case."
-msgstr ""
-
-#: C/gnomine.xml:462(para)
-msgid "These are the simplest cases. Other permutations on these simple situations are possible, for example the three squares in the previous example could be in an L shape."
-msgstr ""
-
-#: C/gnomine.xml:467(para)
-msgid "Simple analysis will solve most of the puzzle, but not all. Before going on to the next sections, where we give you more advanced hints, you should play for a bit and see what you can work out for yourself."
-msgstr ""
-
-#: C/gnomine.xml:476(title)
-msgid "Advanced Situations"
-msgstr "Avancerade situationer"
-
-#: C/gnomine.xml:478(para)
-msgid "These are some more complicated situations. They are a bit of a step up from the last section, so we hope you took our advice and played for a bit first."
-msgstr ""
-
-#: C/gnomine.xml:484(para)
-msgid "In the example below the mines are to the left of the ones. We figure this out by a process of elimination. If the square to the left of the 2 was a mine then the 1s would both have their maximum number of mines leaving no free square for the second mine adjacent to the 2 (since they would also be adjacent to the 1s). Having eliminated the middle square we are left with two squares we require for the 2 so they are both mined."
-msgstr ""
-
-#: C/gnomine.xml:495(title)
-msgid "A not-so-obvious pattern."
-msgstr ""
-
-#: C/gnomine.xml:501(para)
-msgid "This situation can be disguised, for example consider the figure below. It is the same situation, but the extra mined square on the right has increased all the numbers by 1."
-msgstr ""
-
-#: C/gnomine.xml:508(title)
-msgid "The extra mine disguises a copy of the previous example."
-msgstr ""
-
-#: C/gnomine.xml:514(para)
-msgid "Now we're going to try a complicated example. It illustrates two points. The first is that even if you aren't sure which squares are mined, restricting the possibilities is helpful. The second is that knowing which squares aren't mined is nearly as good as knowing which are mined."
-msgstr ""
-
-#: C/gnomine.xml:522(para)
-msgid "Assume that, in the figure below, we start off knowing that the top left square is mined and so the two squares marked 2 on the left only require one more mine. Next observe that the left-most 2 implies that one of the covered squares beneath it is mined, but we don't yet know which one. Since at least one of these squares is mined and they are both neighbors of the second 2 then we know that that 2 is also satisfied by one of these two squares (we still don't know which one). This means that the square beneath the 4 is clear because it is also a neighbor of the second 2 and not one of the two squares we identified previously. This one blank square now leaves the 4 with only four neighbors - all of which must be mines. Not only does it tell us which mines surround the 4, it now tells us which of the squares beside the 2 is mined!"
-msgstr ""
-
-#: C/gnomine.xml:539(title)
-msgid "As tricky as it gets."
-msgstr ""
-
-#: C/gnomine.xml:546(para)
-msgid "This sort of situation is tricky. In all the other examples you can learn to look for patterns and avoid thinking hard. Situations like the one in the figure don't crop up easily or in easily recognisable places. Often it is easier to just ignore them and keep playing elsewhere in the hope that you can start clearing the squares from the other side."
-msgstr ""
-
-#: C/gnomine.xml:558(title)
-msgid "Tips"
-msgstr "Tips"
-
-#: C/gnomine.xml:560(para)
-msgid "Remember, the edge of the board is just the same as a large cleared area (but without the numbers). Often working at the edge of the board is the easiest way forward."
-msgstr ""
-
-#: C/gnomine.xml:566(para)
-msgid "Sometimes you end up in a situation where there is no way to deduce what the configuration is. In these cases you either have to guess or use the hint function (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</guimenuitem></menuchoice>). Sometimes it isn't a 50/50 situation and instead of taking a hint you might like to gamble on the most likely outcome."
-msgstr ""
-
-#: C/gnomine.xml:575(para)
-msgid "One final hint: remember the counter on the bottom left of the window that tells you how many mines you have left? Often, near the end of the game, this number can help you figure out what possible places mines can be. How to do this is up to you to figure out."
-msgstr ""
-
-#: C/gnomine.xml:587(title)
-msgid "Authors"
-msgstr "Upphovsmän"
-
-#: C/gnomine.xml:588(para)
-msgid "<application>GNOME Mines</application> was written by Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from Vincent Povirk and based on an earlier manual by Tim Riehle (<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion regarding this application or this manual, follow the directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
-msgstr "<application>GNOME Minor</application> skrevs av Pista (<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs av Callum McKenzie (<email>callum@spooky-possum.org</email>) med hjälp från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle (<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller föreslå någonting angående det här programmet eller den här handboken, följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">dokumentet</ulink>."
-
-#: C/gnomine.xml:604(title)
+#. (itstool) path: page/title
+#: C/license.page:11
 msgid "License"
 msgstr "Licens"
 
-#: C/gnomine.xml:605(para)
-msgid "This program is free software; you can redistribute it and/or modify it under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> as published by the <ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; either version 2 of the License, or (at your option) any later version."
-msgstr "Det här programmet är fri programvara; du kan distribuera det och/eller ändra det under villkoren för <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> som publicerats av <ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; antingen version 2 av licensen, eller (upp till dig) någon senare version."
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Det här programmet är distribuerat under CreativeCommons Attribution-Share "
+"Alike 3.0 Unported license."
 
-#: C/gnomine.xml:613(para)
-msgid "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> for more details."
-msgstr "Det här programmet distribueras i hopp om att det ska vara användbart, men UTAN NÅGRA GARANTIER; även utan garanti för SÄLJBARHET eller LÄMPLIGHET FÖR ETT SPECIFIKT ÄNDAMÅL. Se <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> för mer information."
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Du har rätt:"
 
-#: C/gnomine.xml:619(para)
-msgid "A copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> is included as an appendix to the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> from the Free Software Foundation by visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by writing to <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
-msgstr "En kopia av <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> finns inkluderad som en bilaga till <citetitle>Användarguide för GNOME</citetitle>. Du kan även få en kopia av <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public License</ulink></citetitle> från Free Software Foundation genom att besöka <ulink type=\"http\" url=\"http://www.fsf.org\">deras webbplats</ulink> eller genom att skriva till <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address>"
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Att dela</em>"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
-#: C/gnomine.xml:0(None)
-msgid "translator-credits"
-msgstr "Daniel Nylander <po@danielnylander.se>, 2007, 2009"
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Att kopiera, distribuera och vidarebefordra."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>Att remixa</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Att anpassa programmet."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Under följande förhållanden:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Godkännande</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Du måste ge erkännande åt arbetet på det sätt som anges av författaren eller "
+"licensgivaren (men inte på ett sätt som antyder att de har godkänt eller "
+"rekommenderar din användning av verket)."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Dela vidare</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Om du ändrar, bearbetar, eller bygger vidare på verket, får du distribuera "
+"resultatet endast under samma, liknande, eller en kompatibel licens."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"För den fullständiga lydelsen av licensen, se <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons webbsida</"
+"link>, eller läs hela <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+
+#. (itstool) path: page/title
+#: C/new-game.page:31
+msgid "Start a new game"
+msgstr "Starta ett nytt spel"
+
+#. (itstool) path: page/p
+#: C/new-game.page:33
+msgid "To start a new game:"
+msgstr "För att starta ett nytt spel:"
+
+#. (itstool) path: item/p
+#: C/new-game.page:36
+msgid ""
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
+msgstr ""
+"Välj <guiseq><gui style=\"menu\">Minor</gui><gui style=\"menuitem\">Nytt "
+"spel</gui></guiseq> från programmenyn."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr "Välj din önskade <link xref=\"board-size\">fältstorlek</link>."
+
+#. (itstool) path: note/p
+#: C/new-game.page:46
+msgid ""
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"former, your current game will be lost."
+msgstr ""
+"Om du redan spelar ett spel, kommer <app>Minor</app> att fråga om du vill "
+"<gui>Starta nytt spel</gui> eller <gui>Behålla aktuellt spel</gui>. Om du "
+"väljer det första, kommer ditt nuvarande spel förloras."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "Spelregler"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"Syftet med <app>Minor</app> är att rensa minfältet utan att detonera någon "
+"av minorna."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by chosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"Börja med att välja en av de tre spelplaner som är standard, eller genom att "
+"välja en anpassad spelplan."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"Spelet börjar med spelplanen täckt av rutor. Klicka på någon ruta för att "
+"röja den. Du kommer att se:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"Ett färgat nummer, vilket står för antal minor i angränsande rutor. Detta "
+"kommer att hjälpa dig att utläsa var minorna är så att du kan markera dem "
+"med <link xref=\"flags\">flaggor</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr ""
+"En tom ruta, vilket innebär att det inte finns några minor under någon av de "
+"intilliggande rutorna."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "En mina, vilken kommer att detonera och avsluta spelet."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr ""
+"Upprepa föregående steg tills du har avtäckt alla rutor som inte har minor "
+"under sig."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
+msgstr ""
+"Om du avslutar spelet tillräckligt snabbt, kommer du att läggas till på "
+"<link xref=\"high-scores\">poänglistan</link>."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Tangentbordsgenvägar"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Nytt spel"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "New game with last used settings"
+msgstr "Nytt spel med senast använda inställningar"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Pause"
+msgstr "Paus"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<key>Pause</key>"
+msgstr "<key>Paus</key>"
+
+#. (itstool) path: note/p
+#: C/shortcuts.page:30
+msgid ""
+"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
+"key."
+msgstr ""
+"Använd verktygsfältets genväg om ditt tangentbord inte har en <key>Paus</"
+"key>tangent."
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:33
+msgid "Help"
+msgstr "Hjälp"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:34
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:37
+msgid "Quit"
+msgstr "Avsluta"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:38
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Hjälp till att översätta"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"<app>GNOME spels</app> användargränssnitt och dokumentation är översatt av "
+"en världsomfattande frivillig gemenskap. Du är välkommen att delta."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Det finns <link href=\"http://l10n.gnome.org/module/gnome-mines/\">många "
+"språk</link> som fortfarande saknar översättningar."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"För att börja översätta måste du <link href=\"http://l10n.gnome.org\">skapa "
+"ett konto</link> och gå med i <link href=\"http://l10n.gnome.org/teams/"
+"\">översättningsgruppen</link> för ditt språk. Det kommer att ge dig "
+"möjlighet att ladda upp nya översättningar."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Du kan chatta med GNOME-översättare genom <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. Översättarna "
+"på kanalen finns över hela världen, så du kommer kanske inte få en omedelbar "
+"respons på grund av skillnader i tidszon."
+
+#. (itstool) path: page/p
+#: C/translate.page:37
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Alternativt, kan du kontakta det internationella teamet genom att använda "
+"deras <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">e-"
+"postlista</link>."
+
+#~ msgid ""
+#~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+#~ msgstr ""
+#~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
+
+#~ msgid ""
+#~ "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+#~ msgstr ""
+#~ "@@image: 'figures/statusbar.png'; md5=8fd07589a7caac8c0c7c42007adb6835"
+
+#~ msgid "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
+#~ msgstr "@@image: 'figures/faces.png'; md5=c4ef2dc5a8fee43f2e00b49d2a3151eb"
+
+#~ msgid ""
+#~ "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+#~ msgstr ""
+#~ "@@image: 'figures/preferences.png'; md5=b0a57c641f5d123f509e71c632294a12"
+
+#~ msgid ""
+#~ "@@image: 'figures/imnotsureflagscheckbox.png'; "
+#~ "md5=58be021ed1cf90add08931282ec19bad"
+#~ msgstr ""
+#~ "@@image: 'figures/imnotsureflagscheckbox.png'; "
+#~ "md5=58be021ed1cf90add08931282ec19bad"
+
+#~ msgid "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
+#~ msgstr "@@image: 'figures/flags.png'; md5=21bb5789d11d2ea40515a4dfcfd597ca"
+
+#~ msgid ""
+#~ "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+#~ msgstr ""
+#~ "@@image: 'figures/highscores.png'; md5=a62a94c773d992dcf399ee09ec35da5a"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-1.png'; md5=4ce524b08d7be427097a63c3cdfec6ee"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-2.png'; md5=e37f8d409337ff13d85f36208fd04008"
+
+#~ msgid ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+#~ msgstr ""
+#~ "@@image: 'figures/easy-hints-3.png'; md5=d444acbdd254318948b8f07c9b390ba6"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-1.png'; md5=38f10c8159ec5526f1bd58ff322b7142"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-2.png'; md5=d5eecaed4e281d9d8db67f039627aa59"
+
+#~ msgid ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+#~ msgstr ""
+#~ "@@image: 'figures/hard-hints-3.png'; md5=12f7ceaa8d7187cb694927ac015c10a8"
+
+#~ msgid "<application>Mines</application> Manual"
+#~ msgstr "Handbok för <application>Minor</application>"
+
+#~ msgid "2006"
+#~ msgstr "2006"
+
+#~ msgid "Callum McKenzie"
+#~ msgstr "Callum McKenzie"
+
+#~ msgid "GNOME Documentation Project"
+#~ msgstr "Dokumentationsprojekt för GNOME"
+
+#~ msgid ""
+#~ "This document is dual-licensed. You may either distribute and/or modify "
+#~ "it under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU "
+#~ "General Public License</ulink>, which the <link linkend=\"license"
+#~ "\">program is licensed</link> under, or you can distribute it under the "
+#~ "terms of the GNU Free Documentation License. A copy of this follows."
+#~ msgstr ""
+#~ "Det här dokumentet är dubbellicensierat. Du kan antingen distribuera och/"
+#~ "eller ändra det under villkoren för <ulink type=\"help\" url=\"help:gpl"
+#~ "\">GNU General Public License</ulink>, som <link linkend=\"license"
+#~ "\">programmer är licensierat</link> under, eller du kan distribuera det "
+#~ "under villkoren för GNU Free Documentation License. En kopia av dessa "
+#~ "följer."
+
+#~ msgid ""
+#~ "Permission is granted to copy, distribute and/or modify this document "
+#~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
+#~ "or any later version published by the Free Software Foundation with no "
+#~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
+#~ "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+#~ msgstr ""
+#~ "Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges "
+#~ "under villkoren i GNU Free Documentation License (GFDL), version 1.1 "
+#~ "eller senare, utgivet av Free Software Foundation utan standardavsnitt "
+#~ "och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type="
+#~ "\"help\" url=\"help:fdl\">länk</ulink> eller i filen COPYING-DOCS som "
+#~ "medföljer denna handbok."
+
+#~ msgid ""
+#~ "This manual is part of a collection of GNOME manuals distributed under "
+#~ "the GFDL. If you want to distribute this manual separately from the "
+#~ "collection, you can do so by adding a copy of the license to the manual, "
+#~ "as described in section 6 of the license."
+#~ msgstr ""
+#~ "Denna handbok utgör en av flera GNOME-handböcker som distribueras under "
+#~ "villkoren i GFDL.  Om du vill distribuera denna handbok separat från "
+#~ "övriga handböcker kan du göra detta genom att lägga till en kopia av "
+#~ "licensavtalet i handboken enligt instruktionerna i avsnitt 6 i "
+#~ "licensavtalet."
+
+#~ msgid ""
+#~ "Many of the names used by companies to distinguish their products and "
+#~ "services are claimed as trademarks. Where those names appear in any GNOME "
+#~ "documentation, and the members of the GNOME Documentation Project are "
+#~ "made aware of those trademarks, then the names are in capital letters or "
+#~ "initial capital letters."
+#~ msgstr ""
+#~ "Flera namn på produkter och tjänster är registrerade varumärken. I de "
+#~ "fall dessa namn förekommer i GNOME-dokumentation - och medlemmarna i "
+#~ "GNOME-dokumentationsprojektet är medvetna om dessa varumärken - är de "
+#~ "skrivna med versaler eller med inledande versal."
+
+#~ msgid ""
+#~ "DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
+#~ "EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES "
+#~ "THAT THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
+#~ "MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
+#~ "RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
+#~ "MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
+#~ "MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
+#~ "WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
+#~ "SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES "
+#~ "AN ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED "
+#~ "VERSION OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS "
+#~ "DISCLAIMER; AND"
+#~ msgstr ""
+#~ "DOKUMENTET TILLHANDAHÅLLS I \"BEFINTLIGT SKICK\" UTAN NÅGRA SOM HELST "
+#~ "GARANTIER, VARE SIG UTTRYCKLIGA ELLER UNDERFÖRSTÅDDA, INKLUSIVE, MEN INTE "
+#~ "BEGRÄNSAT TILL, GARANTIER ATT DOKUMENTET ELLER EN MODIFIERAD VERSION AV "
+#~ "DOKUMENTET INTE INNEHÅLLER NÅGRA FELAKTIGHETER, ÄR LÄMPLIGT FÖR ETT VISST "
+#~ "ÄNDAMÅL ELLER INTE STRIDER MOT LAG. HELA RISKEN VAD GÄLLER KVALITET, "
+#~ "EXAKTHET OCH UTFÖRANDE AV DOKUMENTET OCH MODIFIERADE VERSIONER AV "
+#~ "DOKUMENTET LIGGER HELT OCH HÅLLET PÅ ANVÄNDAREN. OM ETT DOKUMENT ELLER EN "
+#~ "MODIFIERAD VERSION AV ETT DOKUMENT SKULLE VISA SIG INNEHÅLLA "
+#~ "FELAKTIGHETER I NÅGOT HÄNSEENDE ÄR DET DU (INTE DEN URSPRUNGLIGA "
+#~ "SKRIBENTEN, FÖRFATTAREN ELLER NÅGON ANNAN MEDARBETARE) SOM FÅR STÅ FÖR "
+#~ "ALLA EVENTUELLA KOSTNADER FÖR SERVICE, REPARATIONER ELLER KORRIGERINGAR. "
+#~ "DENNA GARANTIFRISKRIVNING UTGÖR EN VÄSENTLIG DEL AV DETTA LICENSAVTAL. "
+#~ "DETTA INNEBÄR ATT ALL ANVÄNDNING AV ETT DOKUMENT ELLER EN MODIFIERAD "
+#~ "VERSION AV ETT DOKUMENT BEVILJAS ENDAST UNDER DENNA ANSVARSFRISKRIVNING;"
+
+#~ msgid ""
+#~ "UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT "
+#~ "(INCLUDING NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL "
+#~ "WRITER, ANY CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED "
+#~ "VERSION OF THE DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE "
+#~ "LIABLE TO ANY PERSON FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR "
+#~ "CONSEQUENTIAL DAMAGES OF ANY CHARACTER INCLUDING, WITHOUT LIMITATION, "
+#~ "DAMAGES FOR LOSS OF GOODWILL, WORK STOPPAGE, COMPUTER FAILURE OR "
+#~ "MALFUNCTION, OR ANY AND ALL OTHER DAMAGES OR LOSSES ARISING OUT OF OR "
+#~ "RELATING TO USE OF THE DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT, "
+#~ "EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH "
+#~ "DAMAGES."
+#~ msgstr ""
+#~ "UNDER INGA OMSTÄNDIGHETER ELLER INOM RAMEN FÖR NÅGON LAGSTIFTNING, "
+#~ "OAVSETT OM DET GÄLLER KRÄNKNING (INKLUSIVE VÅRDSLÖSHET), KONTRAKT ELLER "
+#~ "DYLIKT, SKA FÖRFATTAREN, DEN URSPRUNGLIGA SKRIBENTEN ELLER ANNAN "
+#~ "MEDARBETARE ELLER ÅTERFÖRSÄLJARE AV DOKUMENTET ELLER AV EN MODIFIERAD "
+#~ "VERSION AV DOKUMENTET ELLER NÅGON LEVERANTÖR TILL NÅGON AV NÄMNDA PARTER "
+#~ "STÄLLAS ANSVARIG GENTEMOT NÅGON FÖR NÅGRA DIREKTA, INDIREKTA, SÄRSKILDA "
+#~ "ELLER OFÖRUTSEDDA SKADOR ELLER FÖLJDSKADOR AV NÅGOT SLAG, INKLUSIVE, MEN "
+#~ "INTE BEGRÄNSAT TILL, SKADOR BETRÄFFANDE FÖRLORAD GOODWILL, HINDER I "
+#~ "ARBETET, DATORHAVERI ELLER NÅGRA ANDRA TÄNKBARA SKADOR ELLER FÖRLUSTER "
+#~ "SOM KAN UPPKOMMA PÅ GRUND AV ELLER RELATERAT TILL ANVÄNDNINGEN AV "
+#~ "DOKUMENTET ELLER MODIFIERADE VERSIONER AV DOKUMENTET, ÄVEN OM PART SKA HA "
+#~ "BLIVIT INFORMERAD OM MÖJLIGHETEN TILL SÅDANA SKADOR."
+
+#~ msgid ""
+#~ "DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE "
+#~ "TERMS OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER "
+#~ "UNDERSTANDING THAT: <placeholder-1/>"
+#~ msgstr ""
+#~ "DOKUMENTET OCH MODIFIERADE VERSIONER AV DOKUMENTET TILLHANDAHÅLLS UNDER "
+#~ "VILLKOREN I GNU FREE DOCUMENTATION LICENSE ENDAST UNDER FÖLJANDE "
+#~ "FÖRUTSÄTTNINGAR: <placeholder-1/>"
+
+#~ msgid "Callum"
+#~ msgstr "Callum"
+
+#~ msgid "McKenzie"
+#~ msgstr "McKenzie"
+
+#~ msgid "callum@spooky-possum.org"
+#~ msgstr "callum@spooky-possum.org"
+
+#~ msgid "Mines Manual V2.9"
+#~ msgstr "Handbok för Minor v2.9"
+
+#~ msgid "January 2006"
+#~ msgstr "Januari 2006"
+
+#~ msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
+#~ msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
+
+#~ msgid "This manual describes version 2.14 of Mines."
+#~ msgstr "Den här handboken beskriver version 2.14 av Minor."
+
+#~ msgid "Feedback"
+#~ msgstr "Återkoppling"
+
+#~ msgid ""
+#~ "To report a bug or make a suggestion regarding the <application>Mines</"
+#~ "application> application or this manual, follow the directions in the "
+#~ "<ulink url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</"
+#~ "ulink>."
+#~ msgstr ""
+#~ "För att rapportera ett fel eller föreslå någonting angående programmet "
+#~ "<application>Minor</application> eller den här handboken, följ "
+#~ "anvisningarna i <ulink url=\"http://bugzilla.gnome.org\">GNOME:s "
+#~ "felrapporteringsdatabas.</ulink>."
+
+#~ msgid "Introduction"
+#~ msgstr "Introduktion"
+
+#~ msgid ""
+#~ "<application><application>Mines</application></application> is a puzzle "
+#~ "game where you locate mines floating in an ocean using only your brain "
+#~ "and a little bit of luck."
+#~ msgstr ""
+#~ "<application><application>Minor</application></application> är ett "
+#~ "pusselspel där du lokaliserar minor som flyter runt i en ocean, endast "
+#~ "med hjälp av din hjärna och med lite tur."
+
+#~ msgid ""
+#~ "You start the game with a grid of covered squares and no idea what is in "
+#~ "them. Clicking on a square reveals what is in it: either empty ocean or a "
+#~ "mine. If you find a mine bad things happen and the game is over. If you "
+#~ "uncover an empty square, you survive and get to try again. We do give you "
+#~ "a bit of help; if you find an empty piece of ocean a number is printed "
+#~ "there telling you how many mines are in the adjacent squares (or no "
+#~ "number if there are no nearby mines). Once you find a few clear squares "
+#~ "you can start to deduce which squares have mines in them and which don't. "
+#~ "You win the game once you have revealed all the un-mined squares and "
+#~ "marked all the mined squares."
+#~ msgstr ""
+#~ "Du startar spelet med ett rutnät fyllt av täckta rutor och har ingen "
+#~ "aning vad som döljer sig i dem. Klicka på en ruta för att se vad som "
+#~ "finns där: antingen ingenting eller en mina. Om du hittar en mina går det "
+#~ "dåligt för dig och spelet är över. Om du avtäcker en tom ruta, överlever "
+#~ "du och får försöka igen. Vi ger dig dock lite hjälp; om du hittar en tom "
+#~ "ruta kommer en siffra att skrivas ut som berättar för dig hur många minor "
+#~ "som finns i de angränsande rutorna (eller ingen siffra om det inte finns "
+#~ "några minor i närheten). När du har hittat ett par tomma rutor kan du "
+#~ "börja att fundera på vilka rutor som innehåller minor och vilka som inte "
+#~ "gör det. Du vinner spelet när du har avtäckt alla rutor som inte "
+#~ "innehåller minor och markerat alla rutor som innehåller minor."
+
+#~ msgid "The stages of the game: the start, playing, losing, and winning."
+#~ msgstr "Etapperna i spelet: starten, spelandet, förlorandet och vinsten."
+
+#~ msgid ""
+#~ "To mark a square as having a mine you right-click on it and a flag is "
+#~ "placed there. If you click on a square with a number and you have placed "
+#~ "precisely that number of flags on adjacent squares then the remaining "
+#~ "squares are revealed. If you didn't mark the mines correctly then an "
+#~ "explosion will occur and the game is over. Squares with no adjacent mines "
+#~ "(i.e. blank squares) have their adjacent squares automatically cleared."
+#~ msgstr ""
+#~ "För att markera en ruta som en mina så högerklickar du på den och en "
+#~ "flagga kommer att placeras där. Om du klickar på en ruta med en siffra på "
+#~ "dig och du har placerat det antalet flaggor på angränsande rutor kommer "
+#~ "resten av rutorna att avtäckas. Om du inte markerade minorna korrekt "
+#~ "kommer en explosion att inträffa och spelet är över. Rutor som inte har "
+#~ "några angränsande minor (alltså tomma rutor) får sina angränsande rutor "
+#~ "avtäckta automatiskt."
+
+#~ msgid ""
+#~ "You are being timed. To be good at this game you have to work both "
+#~ "quickly and correctly. Once you have found all the mines and revealed all "
+#~ "the un-mined squares the clock is stopped. Your score is the time you "
+#~ "took; the shorter the better."
+#~ msgstr ""
+#~ "Du spelar på tid. För att vara bra på det här spelet måste du både arbeta "
+#~ "snabbt och korrekt. När du har hittat alla minorna och avtäckt alla rutor "
+#~ "som inte innehåller minor kommer klockan att stoppas. Din poäng är den "
+#~ "tid som du använde; ju kortare, desto bättre."
+
+#~ msgid ""
+#~ "The time you have taken is displayed on the bottom right of the window. "
+#~ "Beside it, on the left, is a count of the number of mines you have "
+#~ "cleared and the total number hidden on the board."
+#~ msgstr ""
+#~ "Tiden som du använt visas i högra nederkanten av fönstret. Förutom den, "
+#~ "på vänster sida, finns en räknare för antal minor som du har hittat och "
+#~ "det totala antalet dolda minor på brädet. "
+
+#~ msgid "The yellow face shows you how well you are going."
+#~ msgstr "Det gula ansiktet visar hur bra det går för dig."
+
+#~ msgid "The Details"
+#~ msgstr "Detaljerna"
+
+#~ msgid ""
+#~ "This section provides information on the controls and the important menu "
+#~ "items. If you need help figuring where the mines are, see the <link "
+#~ "linkend=\"strategy\">strategy section</link>."
+#~ msgstr ""
+#~ "Det här avsnittet tillhandahåller information om styrningen och de "
+#~ "viktiga menyobjekten. Om du behöver hjälp med att lista ut var minorna "
+#~ "finns, se <link linkend=\"strategy\">strategiavsnittet</link>."
+
+#~ msgid "The Goal"
+#~ msgstr "Målet"
+
+#~ msgid ""
+#~ "Starting from an ocean of squares with unknown contents you must mark all "
+#~ "the squares with mines and reveal all the clear squares. You don't "
+#~ "actually have to mark the squares with mines, but it is a lot easier if "
+#~ "you do. Once you have cleared all the un-mined squares, any remaining "
+#~ "mined squares will be marked for you."
+#~ msgstr ""
+#~ "Med början i en ocean av rutor med okänt innehåller måste du markera alla "
+#~ "rutor som innehåller minor och avtäcka alla rutor som inte innehåller "
+#~ "några minor. Du måste faktiskt inte markera rutorna med minor men det är "
+#~ "mycket enklare för dig om du gör det. När du har hittat alla rutor utan "
+#~ "minor kommer återstående minerade rutor att markeras åt dig."
+
+#~ msgid ""
+#~ "If you left click on a mine, or auto-clear a square with a mine in it you "
+#~ "lose. To help prevent accidents, you aren't allowed to auto-clear around "
+#~ "a square unless the number of marked mines equals the number given in the "
+#~ "square."
+#~ msgstr ""
+#~ "Om du vänsterklickar på en mina, eller automatiskt rensar en ruta som "
+#~ "innehåller en mina, kommer du att förlora. För att undvika olyckor så "
+#~ "tillåts du inte att automatiskt rensa runt en ruta såvida inte antalet "
+#~ "markerade minor är samma som siffran som angivits i rutan."
+
+#~ msgid "Using the Mouse"
+#~ msgstr "Användning av musen"
+
+#~ msgid "Action"
+#~ msgstr "Åtgärd"
+
+#~ msgid "Result"
+#~ msgstr "Resultat"
+
+#~ msgid "Left click on an un-revealed square."
+#~ msgstr "Vänsterklicka på en täckt ruta."
+
+#~ msgid "Reveals the contents of that square. For better or for worse."
+#~ msgstr "Avtäcker innehållet i den rutan. Kan gå bra, kan gå mindre bra."
+
+#~ msgid "Left click in a revealed square."
+#~ msgstr "Vänsterklicka på en avtäckt ruta."
+
+#~ msgid ""
+#~ "Auto-clear. Reveals the unmarked squares around the clicked square, but "
+#~ "only if enough squares have been marked to match the number in the square."
+#~ msgstr ""
+#~ "Rensa automatiskt. Avtäcker de omarkerade rutorna runt den klickade "
+#~ "rutan, men endast om tillräckligt många rutor har markerats för att "
+#~ "matcha antalet i rutan."
+
+#~ msgid ""
+#~ "Marks the square as a mine. If it is already marked, the mark will be "
+#~ "removed."
+#~ msgstr ""
+#~ "Markerar rutan som en mina. Om den redan är markerad kommer markeringen "
+#~ "att tas bort."
+
+#~ msgid ""
+#~ "If you are used to the more traditional mouse controls, don't worry, they "
+#~ "still work."
+#~ msgstr ""
+#~ "Om du är van vid den mer traditionella musstyrningen, var lugn, de "
+#~ "fungerar fortfarande."
+
+#~ msgid "Game Size and Difficulty"
+#~ msgstr "Spelets storlek och svårighetsgrad"
+
+#~ msgid ""
+#~ "By choosing <menuchoice><guimenu>Settings</"
+#~ "guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from the menu "
+#~ "you can change the size of the games. Larger sizes obviously take longer "
+#~ "and require more concentration. Smaller games are more frantic. We "
+#~ "provide Small, Medium, Large and Custom sizes."
+#~ msgstr ""
+#~ "Genom att välja <menuchoice><guimenu>Inställningar</"
+#~ "guimenu><guimenuitem>Inställningar</guimenuitem></menuchoice> från menyn "
+#~ "kan du ändra storleken på spelen. Större storlekar tar så klart längre "
+#~ "tid och kräver mer koncentration. Mindre spel är mer hektiska. Vi "
+#~ "tillhandahåller storlekarna Liten, Mellan, Stor och Egen storlek."
+
+#~ msgid "The preferences dialog."
+#~ msgstr "Inställningsdialogrutan."
+
+#~ msgid ""
+#~ "On the right hand side of the dialog there are three parameters for "
+#~ "controlling the custom size. Horizontal and Vertical are the width and "
+#~ "height of the desired grid in squares. The number of mines is - obviously "
+#~ "- the number of mines you need to find. If this number is set too high or "
+#~ "too low then the game becomes very easy. The number of mines is limited "
+#~ "to slightly less than the total number of squares."
+#~ msgstr ""
+#~ "På högra sidan av dialogrutan finns det tre parametrar för att styra den "
+#~ "anpassade storleken. Horisontellt och vertikalt är bredden och höjden för "
+#~ "det önskade rutnätet. Antalet minor är - så klart - antalet minor som du "
+#~ "ska hitta. Om det här antalet är för högt eller för lågt inställt kommer "
+#~ "spelet att bli mycket enkelt. Antalet minor är begränsat till ett fåtal "
+#~ "mindre än det totala antalet rutor."
+
+#~ msgid "\"I'm not sure\" Flags"
+#~ msgstr "\"Jag är inte säker\"-flaggor"
+
+#~ msgid ""
+#~ "There is a check-box in the properties dialog entitled Use \"I'm not sure"
+#~ "\" flags. If you enable this then, when right-clicking on a square, it "
+#~ "cycles between the normal flags used to mark the square as mined, a flag "
+#~ "with a question mark on it and no flag. This new flag is to help you with "
+#~ "your reasoning, to mark mines you think might be a mine but aren't sure "
+#~ "about. These flags have no effect on the game; you still have to use the "
+#~ "appropriate number of red marker flags to be able to clear around a "
+#~ "numbered square."
+#~ msgstr ""
+#~ "Det finns en kryssruta i egenskapsdialogrutan som heter Använd \"Jag är "
+#~ "inte säker\"-flaggor. Om du aktiverar den kommer, vid högerklick på en "
+#~ "ruta, den att växla mellan normala flaggor som används för att markera "
+#~ "rutan som minerad, en flagga med ett frågetecken samt ingen flagga. Den "
+#~ "här nya flaggan finns där för att hjälpa dig att bestämma dig, för att "
+#~ "markera minor som du tror kan vara en mina men inte helt säker på det. "
+#~ "Dessa flaggor har ingen effekt på spelet, du har fortfarande det lämpliga "
+#~ "antalet röda markeringsflaggor för att kunna rensa runt en numrerad ruta."
+
+#~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
+#~ msgstr ""
+#~ "Sekvensen för flaggor när \"Jag är inte säker\"-flaggor är aktiverat."
+
+#~ msgid "Use \"Too many flags\" warning"
+#~ msgstr "Använd varning för \"många flaggor\""
+
+#~ msgid ""
+#~ "The other check-box in the properties dialog is entitled Use \"Too many "
+#~ "flags\" warning. This feature will show you a warning when you have "
+#~ "placed too many flags. This is disabled by default, as it provides so "
+#~ "much hint that it could be considered \"cheating\"."
+#~ msgstr ""
+#~ "Den andra kryssrutan i egenskapsdialogrutan heter Använd varning för "
+#~ "\"många flaggor\". Den här funktionen kommer att visa en varning när du "
+#~ "har placerat ut för många flaggor. Den är inaktiverad som standard "
+#~ "eftersom den ger en stor fingervisning och som kan anses vara \"fusk\"."
+
+#~ msgid "Hints"
+#~ msgstr "Tips"
+
+#~ msgid "The high scores dialog."
+#~ msgstr "Poänglistdialogrutan."
+
+#~ msgid "Window Size"
+#~ msgstr "Fönsterstorlek"
+
+#~ msgid "Pausing the Game"
+#~ msgstr "Pausa spelet"
+
+#~ msgid ""
+#~ "The game can be paused automatically when you start using another window, "
+#~ "or paused by choosing <guimenuitem>Pause</guimenuitem> from the "
+#~ "<guimenu>Game</guimenu> menu. The playing area is blanked so you can't "
+#~ "think ahead while the clock is stopped. To start playing again press the "
+#~ "button labelled \"Press to Resume\"."
+#~ msgstr ""
+#~ "Spelet kan pausas automatiskt när du börjar använda ett annat fönster, "
+#~ "eller pausas genom att välja <guimenuitem>Gör paus</guimenuitem> från "
+#~ "menyn <guimenu>Spel</guimenu>. Spelområdet döljs så att du inte kan tänka "
+#~ "i förväg under tiden klockan är stoppad. För att börja spela igen så "
+#~ "trycker du på knappen \"Tryck för att återuppta\"."
+
+#~ msgid "Strategy"
+#~ msgstr "Strategi"
+
+#~ msgid "The Basics"
+#~ msgstr "Grunderna"
+
+#~ msgid "The simplest case."
+#~ msgstr "Den enklaste situationen."
+
+#~ msgid "Advanced Situations"
+#~ msgstr "Avancerade situationer"
+
+#~ msgid "Tips"
+#~ msgstr "Tips"
+
+#~ msgid "Authors"
+#~ msgstr "Upphovsmän"
+
+#~ msgid ""
+#~ "<application>GNOME Mines</application> was written by Pista "
+#~ "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written "
+#~ "by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help "
+#~ "from Vincent Povirk and based on an earlier manual by Tim Riehle "
+#~ "(<email>tkriehle@citilink.com</email>). To report a bug or make a "
+#~ "suggestion regarding this application or this manual, follow the "
+#~ "directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
+#~ "\"help\">document</ulink>."
+#~ msgstr ""
+#~ "<application>GNOME Minor</application> skrevs av Pista "
+#~ "(<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs "
+#~ "av Callum McKenzie (<email>callum@spooky-possum.org</email>) med hjälp "
+#~ "från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle "
+#~ "(<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller "
+#~ "föreslå någonting angående det här programmet eller den här handboken, "
+#~ "följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs"
+#~ "\" type=\"help\">dokumentet</ulink>."
+
+#~ msgid ""
+#~ "This program is free software; you can redistribute it and/or modify it "
+#~ "under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl"
+#~ "\">GNU General Public License</ulink></citetitle> as published by the "
+#~ "<ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</"
+#~ "ulink>; either version 2 of the License, or (at your option) any later "
+#~ "version."
+#~ msgstr ""
+#~ "Det här programmet är fri programvara; du kan distribuera det och/eller "
+#~ "ändra det under villkoren för <citetitle><ulink type=\"help\" url=\"help:"
+#~ "gpl\">GNU General Public License</ulink></citetitle> som publicerats av "
+#~ "<ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</"
+#~ "ulink>; antingen version 2 av licensen, eller (upp till dig) någon senare "
+#~ "version."
+
+#~ msgid ""
+#~ "This program is distributed in the hope that it will be useful, but "
+#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
+#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the "
+#~ "<citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public "
+#~ "License</ulink></citetitle> for more details."
+#~ msgstr ""
+#~ "Det här programmet distribueras i hopp om att det ska vara användbart, "
+#~ "men UTAN NÅGRA GARANTIER; även utan garanti för SÄLJBARHET eller "
+#~ "LÄMPLIGHET FÖR ETT SPECIFIKT ÄNDAMÅL. Se <citetitle><ulink type=\"help\" "
+#~ "url=\"help:gpl\">GNU General Public License</ulink></citetitle> för mer "
+#~ "information."
+
+#~ msgid ""
+#~ "A copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU "
+#~ "General Public License</ulink></citetitle> is included as an appendix to "
+#~ "the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy "
+#~ "of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General "
+#~ "Public License</ulink></citetitle> from the Free Software Foundation by "
+#~ "visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</"
+#~ "ulink> or by writing to <address> Free Software Foundation, Inc. "
+#~ "<street>59 Temple Place</street> - Suite 330 <city>Boston</city>, "
+#~ "<state>MA</state><postcode>02111-1307</postcode><country>USA</country></"
+#~ "address>"
+#~ msgstr ""
+#~ "En kopia av <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General "
+#~ "Public License</ulink></citetitle> finns inkluderad som en bilaga till "
+#~ "<citetitle>Användarguide för GNOME</citetitle>. Du kan även få en kopia "
+#~ "av <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public "
+#~ "License</ulink></citetitle> från Free Software Foundation genom att "
+#~ "besöka <ulink type=\"http\" url=\"http://www.fsf.org\">deras webbplats</"
+#~ "ulink> eller genom att skriva till <address> Free Software Foundation, "
+#~ "Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, "
+#~ "<state>MA</state><postcode>02111-1307</postcode><country>USA</country></"
+#~ "address>"
 
 #~ msgid "GNOME Mines is a variation of the popular logic puzzle minesweeper."
 #~ msgstr "GNOME Minor är en variant av det populära logiska pusslet Minröj."
-
