@@ -24,7 +24,7 @@ gnome_mines_VALAFLAGS = \
 	--pkg librsvg-2.0 \
 	--pkg pango \
 	--pkg pangocairo \
-	--target-glib 2.36
+	--target-glib $(GLIB_REQUIRED)
 
 gnome_mines_LDADD = \
 	$(GNOME_MINES_LIBS)

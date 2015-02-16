@@ -27,6 +27,8 @@ PKG_CHECK_MODULES(GNOME_MINES, [
   librsvg-2.0 >= $RSVG_REQUIRED
 ])
 
+AC_SUBST([GLIB_REQUIRED])
+
 AC_PATH_PROG([DESKTOP_FILE_VALIDATE], [desktop-file-validate], [/bin/true])
 
 dnl ###########################################################################
