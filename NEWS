@@ -1,3 +1,14 @@
+GNOME Mines 3.15.90
+==================
+
+* Updated translations
+* Readded screen transitions (Robert Roth)
+* Code cleanup (Robert Roth)
+* Removed New Game from app menu (Michael Catanzaro)
+* Updated About dialog (Michael Catanzaro)
+* Connect to size_allocate (Arnaud Bonatti)
+* Do not save size when tiled (Arnaud Bonatti)
+
 GNOME Mines 3.15.4
 ==================
 
