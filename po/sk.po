@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2015-02-21 08:12+0000\n"
-"PO-Revision-Date: 2015-02-21 18:03+0100\n"
+"PO-Revision-Date: 2015-02-21 18:04+0100\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
@@ -328,7 +328,7 @@ msgstr "Výber témy"
 
 #: ../src/theme-selector-dialog.vala:106
 msgid "Close"
-msgstr "Zavrie"
+msgstr "Zavrieť"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Nastavenia"
