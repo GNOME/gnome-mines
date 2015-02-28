@@ -19,7 +19,7 @@ protected class Location : Object
 {
     /* true if contains a mine */
     public bool has_mine = false;
-    
+
     /* true if cleared */
     public bool cleared = false;
 
@@ -50,7 +50,7 @@ public class Minefield : Object
     /* Size of map */
     public uint width = 0;
     public uint height = 0;
-    
+
     /* Number of mines in map */
     public uint n_mines = 0;
 
@@ -146,7 +146,7 @@ public class Minefield : Object
     {
         return elapsed > 0;
     }
-   
+
     public bool has_mine (uint x, uint y)
     {
         return locations[x, y].has_mine;
@@ -255,7 +255,7 @@ public class Minefield : Object
 
         marks_changed ();
     }
-    
+
     public FlagType get_flag (uint x, uint y)
     {
         return locations[x, y].flag;
@@ -302,7 +302,7 @@ public class Minefield : Object
         {
             var rx = Random.int_range (0, (int32) width);
             var ry = Random.int_range (0, (int32) height);
-            
+
             if (rx == x && ry == y)
                 continue;
 

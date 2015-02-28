@@ -74,7 +74,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         return frame;
     }
 
-    public ThemeSelectorDialog ( Gtk.Window parent )
+    public ThemeSelectorDialog (Gtk.Window parent)
     {
         var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
         bool use_headerbar = desktop == null || desktop != "Unity";

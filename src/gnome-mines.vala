@@ -416,7 +416,7 @@ public class Mines : Gtk.Application
 
     private bool window_focus_in_event_cb (Gdk.EventFocus event)
     {
-        if (minefield != null && !pause_requested && 
+        if (minefield != null && !pause_requested &&
             (theme_dialog == null || theme_dialog.visible == false))
             minefield.paused = false;
 
@@ -497,7 +497,7 @@ public class Mines : Gtk.Application
 
     private int show_theme_selector ()
     {
-        theme_dialog = new ThemeSelectorDialog ( window );
+        theme_dialog = new ThemeSelectorDialog (window);
 
         var result = theme_dialog.run ();
         theme_dialog.destroy ();

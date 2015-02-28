@@ -20,7 +20,7 @@ public class Tile : Gtk.Button
         get { return _column; }
     }
 
-    public void refresh_icon()
+    public void refresh_icon ()
     {
         string name;
         Gtk.IconSize size;
@@ -38,25 +38,25 @@ public class Tile : Gtk.Button
         can_focus = false;
         add_class ("tile");
         set_image (scaling_image);
-        enter_notify_event.connect ( (event) =>
+        enter_notify_event.connect ((event) =>
         {
             tile_mouse_over (prow, pcol);
             return false;
-        } );
-        size_allocate.connect ( (allocation) =>
+        });
+        size_allocate.connect ((allocation) =>
         {
             scaling_image.set_pixel_size (allocation.height/3*2);
-        } );
-        button_press_event.connect ( (event) =>
+        });
+        button_press_event.connect ((event) =>
         {
             tile_pressed (prow, pcol, event);
             return false;
-        } );
-        button_release_event.connect ( (event) =>
+        });
+        button_release_event.connect ((event) =>
         {
             tile_released (prow, pcol, event);
             return false;
-        } );
+        });
     }
 
     public void add_class (string style_class)

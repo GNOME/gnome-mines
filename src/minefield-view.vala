@@ -134,7 +134,7 @@ public class MinefieldView : Gtk.Grid
             return int.min (get_allocated_width () / (int) minefield.width, get_allocated_height () / (int) minefield.height);
         }
     }
-    
+
     private uint minimum_size
     {
         get
@@ -164,15 +164,15 @@ public class MinefieldView : Gtk.Grid
         get_style_context ().add_class ("minefield");
 
         selected = new Position ();
-        selected.set_x.connect ( (x) => { return x; });
-        selected.set_y.connect ( (y) => { return y; });
+        selected.set_x.connect ((x) => { return x; });
+        selected.set_y.connect ((y) => { return y; });
         selected.redraw.connect (redraw_sector_cb);
 
         keyboard_cursor = new Position ();
         keyboard_cursor.redraw.connect (redraw_sector_cb);
-        keyboard_cursor.validate.connect ( (x, y) => { return true; });
+        keyboard_cursor.validate.connect ((x, y) => { return true; });
     }
-    
+
     private Minefield _minefield;
     public Minefield minefield
     {
@@ -187,32 +187,32 @@ public class MinefieldView : Gtk.Grid
             get_style_context ().remove_class ("explodedField");
             get_style_context ().remove_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
-            forall ( (child) => { remove (child);});
+            forall ((child) => { remove (child); });
             for (int i = 0; i < _minefield.width; i++)
             {
                 for (int j = 0; j < _minefield.height; j++)
                 {
                     mines[i,j] = new Tile (i, j);
                     mines[i,j].show ();
-                    mines[i,j].tile_mouse_over.connect ( (x, y) => { tile_mouse_over_cb (x, y); });
-                    mines[i,j].tile_pressed.connect ( (x, y, event) => { tile_pressed_cb (x, y, event); });
-                    mines[i,j].tile_released.connect ( (x, y, event) => { tile_released_cb (x, y, event); });
+                    mines[i,j].tile_mouse_over.connect ((x, y) => { tile_mouse_over_cb (x, y); });
+                    mines[i,j].tile_pressed.connect ((x, y, event) => { tile_pressed_cb (x, y, event); });
+                    mines[i,j].tile_released.connect ((x, y, event) => { tile_released_cb (x, y, event); });
                     add (mines[i,j], i, j);
                 }
             }
             selected.is_set = false;
 
-            selected.redraw.connect ( (x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
+            selected.redraw.connect ((x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
             selected.validate.connect (_minefield.is_location);
 
             keyboard_cursor.is_set = false;
             keyboard_cursor.position = {0, 0};
-            keyboard_cursor.set_x.connect ( (x) => { return x; }); // (int) (x % _minefield.width); });
-            keyboard_cursor.set_y.connect ( (y) => { return y; }); // (int) (y % _minefield.height); });
+            keyboard_cursor.set_x.connect ((x) => { return x; }); // (int) (x % _minefield.width); });
+            keyboard_cursor.set_y.connect ((y) => { return y; }); // (int) (y % _minefield.height); });
 
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
-            _minefield.paused_changed.connect ( () => { queue_draw (); });
+            _minefield.paused_changed.connect (() => { queue_draw (); });
             _minefield.cleared.connect (complete_cb);
             queue_resize ();
         }
@@ -401,7 +401,7 @@ public class MinefieldView : Gtk.Grid
             {
                 mines[x,y].add_class ("mine");
             }
-            
+
         }
     }
 
@@ -487,7 +487,7 @@ public class MinefieldView : Gtk.Grid
         if (n_mines == n_flags)
             do_clear = true;
         else if (use_autoflag && n_unknown == n_mines)
-            do_clear = false;        
+            do_clear = false;
         else
             return;
 
@@ -500,7 +500,7 @@ public class MinefieldView : Gtk.Grid
             var ny = (int) y + neighbour.y;
             if (!m.is_location (nx, ny))
                 continue;
-            
+
             if (do_clear && m.get_flag (nx, ny) != FlagType.FLAG)
                 m.clear_mine (nx, ny);
             else
@@ -590,7 +590,7 @@ public class MinefieldView : Gtk.Grid
         return true;
     }
 
-    public void refresh()
+    public void refresh ()
     {
         if (_minefield != null)
             for (int i = 0; i < _minefield.width; i++)
