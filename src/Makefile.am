@@ -3,10 +3,8 @@ bin_PROGRAMS = gnome-mines
 gnome_mines_SOURCES =	\
 	config.vapi	\
 	gnome-mines.vala \
-	history.vala \
 	minefield.vala \
 	minefield-view.vala \
-	score-dialog.vala \
 	tile.vala \
 	theme-selector-dialog.vala
 
@@ -24,6 +22,7 @@ gnome_mines_VALAFLAGS = \
 	--pkg librsvg-2.0 \
 	--pkg pango \
 	--pkg pangocairo \
+	--pkg games-support \
 	--target-glib $(GLIB_REQUIRED)
 
 gnome_mines_LDADD = \

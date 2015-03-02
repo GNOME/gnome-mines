@@ -63,8 +63,8 @@ public class Mines : Gtk.Application
     /* true when the next configure event should be ignored. */
     private bool window_skip_configure;
 
-    /* Game history */
-    private History history;
+    /* Game scores */
+    private Games.Scores.Context context;
 
     /* Minefield being played */
     private Minefield minefield;
@@ -311,8 +311,8 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
-        history.load ();
+        context = new Games.Scores.Context ("gnome-mines", "Mines", window, Games.Scores.Style.TIME_ASCENDING);
+        context.category_request.connect  (create_category_from_key);
 
         flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
         clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
@@ -326,6 +326,16 @@ public class Mines : Gtk.Application
 
         if (game_mode != -1)
             start_game ();
+    }
+
+    private Games.Scores.Category? create_category_from_key (string key)
+    {
+        var tokens = key.split ("-");
+
+        if (tokens.length != 3)
+            return null;
+
+        return new Games.Scores.Category (key, tokens[0] + " × " + tokens[1] + ", " + tokens[2] + " mines");
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
@@ -518,16 +528,16 @@ public class Mines : Gtk.Application
         return result;
     }
 
-    private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
+    private void show_scores ()
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_close);
-        dialog.modal = true;
-        dialog.transient_for = window;
-
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        return result;
+        try
+        {
+            context.run_dialog ();
+        }
+        catch (Error e)
+        {
+            warning ("%s", e.message);
+        }
     }
 
     private void scores_cb ()
@@ -736,16 +746,19 @@ public class Mines : Gtk.Application
 
     private void cleared_cb (Minefield minefield)
     {
-        var date = new DateTime.now_local ();
         var duration = (uint) (minefield.elapsed + 0.5);
-        var entry = new HistoryEntry (date, minefield.width, minefield.height, minefield.n_mines, duration);
-        history.add (entry);
-        history.save ();
+        string key = minefield.width.to_string () + "-" + minefield.height.to_string () + "-" + minefield.n_mines.to_string ();
 
-        if (show_scores (entry, true) == Gtk.ResponseType.OK)
-            show_new_game_screen ();
-        else
-            game_ended ();
+        try
+        {
+            context.add_score (duration, create_category_from_key (key)) ;
+        }
+        catch (Error e)
+        {
+            warning ("%s", e.message);
+        }
+
+       show_new_game_screen ();
     }
 
     private void clock_started_cb ()

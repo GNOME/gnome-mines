@@ -26,6 +26,7 @@ PKG_CHECK_MODULES(GNOME_MINES, [
   glib-2.0 >= $GLIB_REQUIRED
   gtk+-3.0 >= $GTK_REQUIRED
   librsvg-2.0 >= $RSVG_REQUIRED
+  libgames-support
 ])
 
 AC_SUBST([GLIB_REQUIRED])
