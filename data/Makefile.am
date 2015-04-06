@@ -50,8 +50,9 @@ CLEANFILES = \
 	$(desktop_DATA) \
 	$(css_DATA)
 
-check-local: $(appdata_DATA) $(desktop_DATA)
-	$(APPDATA_VALIDATE) $(appdata_DATA)
+check-local: $(desktop_DATA)
+# $(appdata_DATA)
+#	$(APPDATA_VALIDATE) $(appdata_DATA)
 	$(DESKTOP_FILE_VALIDATE) $(desktop_DATA)
 
 -include $(top_srcdir)/git.mk
