@@ -138,6 +138,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         set_size_request (420, 400);
         update_sensitivities (themes, current_index);
         show_all ();
+        minefield.refresh ();
     }
 
     private void switch_theme_preview (int to_index, List<string> themes)
