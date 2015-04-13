@@ -1,3 +1,10 @@
+GNOME Mines 3.16.1
+==================
+
+* Updated translations
+* Provide a symbolic icon (Jakub Steiner)
+* Fixed theme selector initialization glitch (Yanko Kaneti)
+
 GNOME Mines 3.16.0
 ==================
 
