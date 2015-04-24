@@ -1,13 +1,13 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2014-11-26 19:50+0000\n"
-"PO-Revision-Date: 2014-11-27 08:38+0100\n"
+"POT-Creation-Date: 2015-04-24 19:20+0000\n"
+"PO-Revision-Date: 2015-04-24 22:08+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -627,7 +627,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:31
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Hru začněte výběrem jedné ze tří velikostí hrací desky nebo výběrem vlastní "
