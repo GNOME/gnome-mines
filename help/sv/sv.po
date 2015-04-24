@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help.master.po\n"
-"POT-Creation-Date: 2015-02-06 08:01+0000\n"
-"PO-Revision-Date: 2015-02-07 19:36+0100\n"
+"POT-Creation-Date: 2015-04-24 19:20+0000\n"
+"PO-Revision-Date: 2015-04-25 00:18+0100\n"
 "Last-Translator: Erik Sköldås <erik.skoldas@tele2.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.7.3\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -622,7 +622,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:31
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Börja med att välja en av de tre spelplaner som är standard, eller genom att "
