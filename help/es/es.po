@@ -1,13 +1,13 @@
 # translation of gnomine.HEAD.po to Español
 # translation of gnomine manual to Spanish
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2011.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014.
 #
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2014-11-13 07:53+0000\n"
-"PO-Revision-Date: 2014-11-13 13:32+0100\n"
+"POT-Creation-Date: 2015-05-28 19:16+0000\n"
+"PO-Revision-Date: 2015-05-29 \n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -21,7 +21,7 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2014\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2015\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
@@ -244,8 +244,8 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%"
+"2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
 msgstr ""
@@ -626,8 +626,11 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/rules.page:31
+#| msgid ""
+#| "Start by chosing one of the three default board sizes, or by selecting a "
+#| "custom board."
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Empiece eligiendo uno de estos tres tamaños de tablero, o seleccionando un "
@@ -706,7 +709,6 @@ msgstr "Juego nuevo con la última configuración usada"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
-#| msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
@@ -1550,14 +1552,14 @@ msgstr ""
 #~ "numbered square."
 #~ msgstr ""
 #~ "Hay una casilla de verificación en el diálogo de preferencias llamada "
-#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse "
-#~ "con el botón derecho sobre una casilla, rotará entre las banderas "
-#~ "normales usadas para marcar una casilla como minada, una bandera con n "
-#~ "signo de interrogación en ella y una ausencia de bandera. Esta nueva "
-#~ "bandera es para ayudarle con sus razonamientos, para marcar casillas que "
-#~ "cree que pueden ser minas pero no está seguro. Estas banderas no tienen "
-#~ "efecto en el juego; aún debe usar el número apropiado de marcadores rojos "
-#~ "de bandera para poder limpiar alrededor de la casilla numerada."
+#~ "Usar banderas «No estoy seguro». Si activa esto, entonces cuando pulse con "
+#~ "el botón derecho sobre una casilla, rotará entre las banderas normales "
+#~ "usadas para marcar una casilla como minada, una bandera con n signo de "
+#~ "interrogación en ella y una ausencia de bandera. Esta nueva bandera es "
+#~ "para ayudarle con sus razonamientos, para marcar casillas que cree que "
+#~ "pueden ser minas pero no está seguro. Estas banderas no tienen efecto en "
+#~ "el juego; aún debe usar el número apropiado de marcadores rojos de "
+#~ "bandera para poder limpiar alrededor de la casilla numerada."
 
 #~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
 #~ msgstr ""
