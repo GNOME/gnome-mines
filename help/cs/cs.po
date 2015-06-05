@@ -589,7 +589,7 @@ msgid ""
 "Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
 "Game</gui></guiseq> from the application menu."
 msgstr ""
-"V aplikační nabídce vyberte <guiseq><gui style=\"menu\">Miny</gui><gui style="
+"V nabídce aplikace vyberte <guiseq><gui style=\"menu\">Miny</gui><gui style="
 "\"menuitem\">Nová Hra</gui></guiseq>"
 
 #. (itstool) path: item/p
