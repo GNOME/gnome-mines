@@ -29,6 +29,7 @@ public class Mines : Gtk.Application
     public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public static const string KEY_USE_AUTOFLAG = "use-autoflag";
     public static const string KEY_THEME = "theme";
+    public static const string KEY_USE_ANIMATIONS = "use-animations";
 
     private Gtk.Widget main_screen;
     private Gtk.Button play_pause_button;
@@ -208,6 +209,8 @@ public class Mines : Gtk.Application
         window.focus_out_event.connect (window_focus_out_event_cb);
         window.focus_in_event.connect (window_focus_in_event_cb);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
+        Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
+
         if (settings.get_boolean ("window-is-maximized"))
             window.maximize ();
         add_window (window);
@@ -443,6 +446,7 @@ public class Mines : Gtk.Application
         /* Save window state */
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
+        settings.set_boolean (KEY_USE_ANIMATIONS, Gtk.Settings.get_default ().gtk_enable_animations);
         settings.set_boolean ("window-is-maximized", is_maximized);
         settings.apply ();
     }

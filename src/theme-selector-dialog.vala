@@ -67,11 +67,21 @@ public class ThemeSelectorDialog : Gtk.Dialog
         view = new MinefieldView (settings);
         view.minefield = new PreviewField ();
 
+        var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         var frame = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
         frame.border_width = 6;
         frame.add (view);
         reveal_nonmines (view);
-        return frame;
+        box.pack_start (frame, true, true, 0);
+
+        var animations_check = new Gtk.CheckButton.with_mnemonic (_("Use _animations"));
+        animations_check.set_property("halign", Gtk.Align.CENTER);
+        box.pack_start (animations_check, false, false, 0);
+
+        Gtk.Settings.get_default().bind_property ("gtk-enable-animations",
+          animations_check, "active",BindingFlags.BIDIRECTIONAL|BindingFlags.SYNC_CREATE);
+
+        return box;
     }
 
     public ThemeSelectorDialog (Gtk.Window parent)
@@ -81,7 +91,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         MinefieldView minefield;
 
         Object (use_header_bar: use_headerbar ? 1 : 0, title:  _("Select Theme"),
-                modal: true, transient_for: parent, resizable: false);
+                modal: true, transient_for: parent, resizable: false, border_width: 12);
 
         previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
         previous.valign = Gtk.Align.CENTER;
