@@ -202,7 +202,6 @@ public class MinefieldView : Gtk.Grid
             }
             selected.is_set = false;
 
-            selected.redraw.connect ((x, y) => { if (_minefield.is_cleared (x, y)) redraw_adjacent (x, y); });
             selected.validate.connect (_minefield.is_location);
 
             keyboard_cursor.is_set = false;
@@ -214,6 +213,7 @@ public class MinefieldView : Gtk.Grid
             _minefield.explode.connect (explode_cb);
             _minefield.paused_changed.connect (() => { queue_draw (); });
             _minefield.cleared.connect (complete_cb);
+            _minefield.use_autoflag = use_autoflag;
             queue_resize ();
         }
     }
@@ -291,7 +291,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-            multi_release (selected.x, selected.y);
+            minefield.multi_release (selected.x, selected.y);
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 
@@ -448,67 +448,6 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    private void redraw_adjacent (uint x, uint y)
-    {
-        foreach (var neighbour in neighbour_map)
-        {
-            var nx = (int) x + neighbour.x;
-            var ny = (int) y + neighbour.y;
-            if (minefield.is_location (nx, ny))
-                redraw_sector_cb (nx, ny);
-        }
-    }
-
-    public void multi_release (uint x, uint y)
-    {
-        if (!minefield.is_cleared (x, y) || minefield.get_flag (x, y) == FlagType.FLAG)
-            return;
-
-        /* Work out how many flags / unknown squares surround this one */
-        var n_mines = minefield.get_n_adjacent_mines (x, y);
-        uint n_flags = 0;
-        uint n_unknown = 0;
-        foreach (var neighbour in neighbour_map)
-        {
-            var nx = (int) x + neighbour.x;
-            var ny = (int) y + neighbour.y;
-            if (!minefield.is_location (nx, ny))
-                continue;
-            if (minefield.get_flag (nx, ny) == FlagType.FLAG)
-                n_flags++;
-            if (!minefield.is_cleared (nx, ny))
-                n_unknown++;
-        }
-
-        /* If have correct number of flags to mines then clear the other
-         * locations, otherwise if the number of unknown squares is the
-         * same as the number of mines flag them all */
-        var do_clear = false;
-        if (n_mines == n_flags)
-            do_clear = true;
-        else if (use_autoflag && n_unknown == n_mines)
-            do_clear = false;
-        else
-            return;
-
-        /* Use the same minefield for the whole time (it may complete as we do it) */
-        var m = minefield;
-
-        foreach (var neighbour in neighbour_map)
-        {
-            var nx = (int) x + neighbour.x;
-            var ny = (int) y + neighbour.y;
-            if (!m.is_location (nx, ny))
-                continue;
-
-            if (do_clear && m.get_flag (nx, ny) != FlagType.FLAG)
-                m.clear_mine (nx, ny);
-            else
-                m.set_flag (nx, ny, FlagType.FLAG);
-        }
-        redraw_adjacent (x, y);
-    }
-
     public override bool key_press_event (Gdk.EventKey event)
     {
         /* Check for end cases and paused game */
@@ -614,7 +553,7 @@ public class MinefieldView : Gtk.Grid
         unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
-            multi_release (selected.x, selected.y);
+            minefield.multi_release (selected.x, selected.y);
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 

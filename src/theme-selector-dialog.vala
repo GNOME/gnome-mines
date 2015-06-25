@@ -174,7 +174,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
             {
                 if (!view.minefield.has_mine (i, j)) {
                     view.minefield.clear_mine (i, j);
-                    view.multi_release (i, j);
+                    view.minefield.multi_release (i, j);
                 } else {
                     view.toggle_mark (i, j);
                 }
