@@ -220,7 +220,7 @@ public class Minefield : Object
 
     public void clear_mine (uint x, uint y)
     {
-        if (!exploded)
+        if (!exploded && clock == null)
             start_clock ();
 
         /* Place mines on first attempt to clear */
@@ -374,12 +374,21 @@ public class Minefield : Object
         }
     }
 
+    private void start_timer ()
+    {
+        if (clock_timeout != 0)
+            Source.remove (clock_timeout);
+        clock_timeout = 0;
+        clock_timeout = Timeout.add_seconds (1, timeout_cb);
+    }
+
     private void start_clock ()
     {
         if (clock == null)
             clock = new Timer ();
         clock_started ();
-        timeout_cb ();
+        tick ();
+        start_timer ();
     }
 
     private void stop_clock ()
@@ -390,6 +399,7 @@ public class Minefield : Object
             Source.remove (clock_timeout);
         clock_timeout = 0;
         clock.stop ();
+        clock = null;
         tick ();
     }
 
@@ -399,19 +409,13 @@ public class Minefield : Object
             clock = new Timer ();
         else
             clock.continue ();
-        timeout_cb ();
+        tick ();
+        start_timer ();
     }
 
     private bool timeout_cb ()
     {
-        /* Notify on the next tick */
-        var elapsed = clock.elapsed ();
-        var next = (int) (elapsed + 1.0);
-        var wait = next - elapsed;
-        clock_timeout = Timeout.add ((int) (wait * 1000), timeout_cb);
-
         tick ();
-
-        return false;
+        return true;
     }
 }
