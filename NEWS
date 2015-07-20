@@ -1,3 +1,11 @@
+GNOME Mines 3.17.4
+==================
+
+* Updated translations
+* Performance improvements (Robert Roth)
+* Reduced high CPU usage after consecutive games (Robert Roth)
+
+
 GNOME Mines 3.17.3
 ==================
 
