@@ -2,13 +2,13 @@
 # Copyright (C) 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mines help.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2014-12-28 19:56+0000\n"
-"PO-Revision-Date: 2014-12-29 10:28+0100\n"
+"POT-Creation-Date: 2015-08-18 07:23+0000\n"
+"PO-Revision-Date: 2015-08-19 08:44+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <openscope at gmail dot com>\n"
 "Language: hu\n"
@@ -627,8 +627,11 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/rules.page:31
+#| msgid ""
+#| "Start by chosing one of the three default board sizes, or by selecting a "
+#| "custom board."
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Kezdésként válasszon egyet az alapértelmezett három táblaméretből, vagy "
@@ -706,7 +709,6 @@ msgstr "Új játék a legutóbbi beállításokkal"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
-#| msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
