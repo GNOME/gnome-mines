@@ -10,8 +10,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine doc fr\n"
-"POT-Creation-Date: 2015-02-19 08:14+0000\n"
-"PO-Revision-Date: 2013-10-15 16:20+0200\n"
+"POT-Creation-Date: 2015-09-20 07:34+0000\n"
+"PO-Revision-Date: 2015-09-20 16:43+0200\n"
 "Last-Translator: Julien Hardelin <jhardlin@orange.fr>\n"
 "Language-Team: French <GNOME French Team <gnomefr@traduc.org>\">\n"
 "Language: fr\n"
@@ -52,8 +52,8 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
-#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -107,8 +107,8 @@ msgstr ""
 "nombre de mines"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:12 C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -648,7 +648,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:31
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Commencez par choisir une des trois tailles de plateau proposées, ou "
