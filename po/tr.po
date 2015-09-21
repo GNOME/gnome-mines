@@ -17,8 +17,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-19 07:34+0000\n"
-"PO-Revision-Date: 2015-09-19 10:57+0300\n"
+"POT-Creation-Date: 2015-09-21 07:32+0000\n"
+"PO-Revision-Date: 2015-09-21 21:08+0300\n"
 "Last-Translator: Muhammet Kara <muhammetk@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -101,21 +101,19 @@ msgid "Warning about too many flags"
 msgstr "Çok fazla bayrak hakkında uyarı"
 
 #: ../data/org.gnome.mines.gschema.xml.h:6
-#, fuzzy
 #| msgid "Set to true to enable warning icons when too many flags are placed."
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"Çok fazla bayrak yerleştirildiğinde uyarı simgeleri etkinleştirmek için "
-"doğru olarak belirt."
+"Numaralı bir karenin yanına çok fazla bayrak yerleştirildiğinde uyarı "
+"simgeleri etkinleştirmek için doğru olarak belirtin."
 
 #: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Bayrakların otomatik yerleşimini etkinleştir"
 
 #: ../data/org.gnome.mines.gschema.xml.h:8
-#, fuzzy
 #| msgid ""
 #| "Set to true to have gnomine automatically flag squares as mined when "
 #| "enough squares are revealed"
@@ -123,17 +121,18 @@ msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"Yeterince kare açığa çıkarılınca gnomine'nın kareleri otomatik olarak "
-"mayınlı işaretlemesi için doğru yapın"
+"Yeterince kare açığa çıkarılınca karelerin otomatik olarak mayınlı "
+"işaretlenmesi için doğru olarak ayarlayın."
 
 #: ../data/org.gnome.mines.gschema.xml.h:9
-#| msgid "Enable _animation"
 msgid "Enable animations"
 msgstr "Animasyonları etkinleştir"
 
 #: ../data/org.gnome.mines.gschema.xml.h:10
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
+"Tema tarafından tanımlanan geçiş animasyonlarını devre dışı bırakmak için "
+"yanlış olarak ayarlayın"
 
 #: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
@@ -184,7 +183,6 @@ msgid "_Cancel"
 msgstr "İptal _et"
 
 #: ../data/interface.ui.h:6
-#| msgid "Player Names"
 msgid "_Play Game"
 msgstr "_Oyun Oyna"
 
@@ -194,7 +192,6 @@ msgid "_Pause"
 msgstr "_Duraklat"
 
 #: ../data/interface.ui.h:8
-#| msgid "_Difficulty:"
 msgid "Change _Difficulty"
 msgstr "_Zorluk Değiştir"
 
@@ -285,17 +282,15 @@ msgid "If you start a new game, your current progress will be lost."
 msgstr "Eğer yeni bir oyun başlatırsanız, mevcut ilerlemeniz kaybolacak."
 
 #: ../src/gnome-mines.vala:548
-#, fuzzy
 #| msgid "Save the current game"
 msgid "Keep Current Game"
-msgstr "Yürürlükteki oyunu kaydet"
+msgstr "Mevcut Oyunu Sakla"
 
 #: ../src/gnome-mines.vala:549
 msgid "Start New Game"
 msgstr "Yeni Oyun Başlat"
 
 #: ../src/gnome-mines.vala:590
-#| msgid "Game Over"
 msgid "St_art Over"
 msgstr "Yeniden B_aşla"
 
@@ -320,16 +315,12 @@ msgid "Resizing and SVG support:"
 msgstr "Yeniden boyutlandırma ve SVG desteği:"
 
 #: ../src/gnome-mines.vala:787
-#, fuzzy
 #| msgid ""
 #| "A worm game for GNOME.\n"
 #| "\n"
 #| "Nibbles is a part of GNOME Games."
 msgid "Clear explosive mines off the board"
-msgstr ""
-"GNOME için bir solucan oyunu.\n"
-"\n"
-"Nibbles GNOME Oyunları'nın bir parçasıdır."
+msgstr "Patlayıcı mayınları tahtadan temizle"
 
 #: ../src/gnome-mines.vala:794
 msgid "translator-credits"
@@ -368,10 +359,9 @@ msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u mayın"
 
 #: ../src/theme-selector-dialog.vala:77
-#, fuzzy
 #| msgid "Use fast animation"
 msgid "Use _animations"
-msgstr "Hızlı canlandırmayı kullan"
+msgstr "_Animasyonları kullan"
 
 #: ../src/theme-selector-dialog.vala:93
 msgid "Select Theme"
