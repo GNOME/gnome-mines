@@ -591,8 +591,6 @@ public class Mines : Gtk.Application
         play_pause_button.show ();
         high_scores_button.hide ();
 
-        tick_cb ();
-
         int x, y, n;
         switch (settings.get_int (KEY_MODE))
         {
@@ -630,6 +628,7 @@ public class Mines : Gtk.Application
         minefield.clock_started.connect (clock_started_cb);
 
         minefield_view.minefield = minefield;
+
         int mine_size = int.max ((int) minefield_view.mine_size, 30);
         int request_x = -1, request_y = -1;
         if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width () < Gdk.Screen.width ()) {
@@ -660,6 +659,9 @@ public class Mines : Gtk.Application
         pause_requested = false;
 
         stack.visible_child_name = "game";
+        pause_action.set_enabled (false);
+
+        tick_cb ();
     }
 
     private void new_game_cb ()

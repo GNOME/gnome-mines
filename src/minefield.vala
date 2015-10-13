@@ -101,9 +101,7 @@ public class Minefield : Object
     {
         get
         {
-            if (clock == null)
-                return 0.0;
-            return clock_elapsed + clock.elapsed ();
+            return clock_elapsed + (clock == null ? 0.0 : clock.elapsed ());
         }
     }
 
@@ -115,13 +113,10 @@ public class Minefield : Object
             if (is_complete || exploded)
                 return;
 
-            if (clock != null)
-            {
-                if (value && !_paused)
-                    stop_clock ();
-                else if (!value && _paused)
-                    continue_clock ();
-            }
+            if (value && !_paused)
+                stop_clock ();
+            else if (!value && _paused)
+                continue_clock ();
 
             _paused = value;
             paused_changed ();
@@ -395,6 +390,7 @@ public class Minefield : Object
     {
         if (clock == null)
             return;
+        clock_elapsed += clock.elapsed ();
         if (clock_timeout != 0)
             Source.remove (clock_timeout);
         clock_timeout = 0;
