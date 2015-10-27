@@ -374,7 +374,7 @@ public class Minefield : Object
         if (clock_timeout != 0)
             Source.remove (clock_timeout);
         clock_timeout = 0;
-        clock_timeout = Timeout.add_seconds (1, timeout_cb);
+        clock_timeout = Timeout.add (200, timeout_cb);
     }
 
     private void start_clock ()
