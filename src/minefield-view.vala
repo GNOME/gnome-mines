@@ -194,7 +194,6 @@ public class MinefieldView : Gtk.Grid
                 {
                     mines[i,j] = new Tile (i, j);
                     mines[i,j].show ();
-                    mines[i,j].tile_mouse_over.connect ((x, y) => { tile_mouse_over_cb (x, y); });
                     mines[i,j].tile_pressed.connect ((x, y, event) => { tile_pressed_cb (x, y, event); });
                     mines[i,j].tile_released.connect ((x, y, event) => { tile_released_cb (x, y, event); });
                     add (mines[i,j], i, j);
@@ -216,19 +215,6 @@ public class MinefieldView : Gtk.Grid
             _minefield.use_autoflag = use_autoflag;
             queue_resize ();
         }
-    }
-
-    public void tile_mouse_over_cb (int x, int y)
-    {
-        /* Check for end cases and paused game */
-        if (minefield.exploded || minefield.is_complete || minefield.paused)
-            return;
-
-        /* Check that the user isn't currently navigating with keyboard */
-        if (!selected.is_set || keyboard_cursor.is_set)
-            return;
-
-        selected.position = {x, y};
     }
 
     public void tile_pressed_cb (int x, int y, Gdk.EventButton event)
@@ -282,6 +268,10 @@ public class MinefieldView : Gtk.Grid
 
         /* Check that the user isn't currently using the mouse */
         if (!selected.is_set || keyboard_cursor.is_set)
+            return;
+
+        /* Check if the square released is the sames as the square pressed. */
+        if (selected.x != x || selected.y != y)
             return;
 
         /* Check if the user released button outside the minefield */
