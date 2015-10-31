@@ -95,7 +95,12 @@ public class Mines : Gtk.Application
     private const GLib.ActionEntry[] action_entries =
     {
         { "new-game",           new_game_cb                                 },
+        { "silent-new-game",    silent_new_game_cb                          },
         { "repeat-size",        repeat_size_cb                              },
+        { "small-size",         small_size_clicked_cb                       },
+        { "medium-size",        medium_size_clicked_cb                      },
+        { "large-size",         large_size_clicked_cb                       },
+        { "custom-size",        show_custom_game_screen                     },
         { "pause",              toggle_pause_cb                             },
         { "scores",             scores_cb                                   },
         { "preferences",        preferences_cb                              },
@@ -264,7 +269,12 @@ public class Mines : Gtk.Application
         }
 
         set_accels_for_action ("app.new-game", {"<Primary>n"});
+        set_accels_for_action ("app.silent-new-game", {"Escape"});
         set_accels_for_action ("app.repeat-size", {"<Primary>r"});
+        set_accels_for_action ("app.small-size", {"1"});
+        set_accels_for_action ("app.medium-size", {"2"});
+        set_accels_for_action ("app.large-size", {"3"});
+        set_accels_for_action ("app.custom-size", {"4"});
         set_accels_for_action ("app.pause", {"Pause"});
         set_accels_for_action ("app.help", {"F1"});
         set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
@@ -533,6 +543,9 @@ public class Mines : Gtk.Application
 
     private void show_custom_game_screen ()
     {
+        if (minefield != null)
+            return;
+
         stack.visible_child_name = "custom_game";
     }
 
@@ -667,6 +680,12 @@ public class Mines : Gtk.Application
     private void new_game_cb ()
     {
         if (can_start_new_game ())
+            show_new_game_screen ();
+    }
+
+    private void silent_new_game_cb ()
+    {
+        if (minefield == null || minefield.n_cleared == 0)
             show_new_game_screen ();
     }
 
@@ -844,6 +863,9 @@ public class Mines : Gtk.Application
 
     private void set_mode (int mode)
     {
+        if (minefield != null)
+            return;
+
         if (mode != settings.get_int (KEY_MODE))
             settings.set_int (KEY_MODE, mode);
 
