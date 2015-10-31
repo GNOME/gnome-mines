@@ -39,17 +39,16 @@ public class Tile : Gtk.Button
         can_focus = false;
         add_class ("tile");
         set_image (scaling_image);
-        enter_notify_event.connect ((event) =>
-        {
-            tile_mouse_over (prow, pcol);
-            return false;
-        });
         size_allocate.connect ((allocation) =>
         {
             scaling_image.set_pixel_size (allocation.height/3*2);
         });
         button_press_event.connect ((event) =>
         {
+            /* By default windows with both button press and button release
+             * grab Gdk events, ungrab events here for other tiles. */
+            event.device.ungrab (event.time);
+
             tile_pressed (prow, pcol, event);
             return false;
         });
