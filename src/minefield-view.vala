@@ -503,8 +503,16 @@ public class MinefieldView : Gtk.Grid
             }
             break;
 
-        default:
+        /* Unset the keyboard cursor. */
+        case Gdk.Key.Escape:
             return false;
+
+        /* Ignore other keyboard keys but don't unset the cursor. */
+        default:
+            if (keyboard_cursor.is_set)
+                break;
+            else
+                return false;
         }
 
         if (x == keyboard_cursor.x && y == keyboard_cursor.y)

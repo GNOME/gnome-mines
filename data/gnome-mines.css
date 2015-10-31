@@ -41,7 +41,7 @@
   border-width:2px;
 }
 
-.tile:hover {
+.tile:not(.cursor):hover {
   background-color:#d3d7cf;
   transition-duration:0.4s;
 }
@@ -60,7 +60,7 @@
   transition-duration:0.4s;
 }
 
-.count:hover {
+.count:not(.cursor):hover {
   background-color:#dededc;
 }
 
