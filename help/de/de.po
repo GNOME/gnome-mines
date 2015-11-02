@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-26 17:18+0000\n"
-"PO-Revision-Date: 2014-12-25 22:06+0100\n"
-"Last-Translator: Bernd Homuth <dev@hmt.im>\n"
+"POT-Creation-Date: 2015-11-02 21:20+0000\n"
+"PO-Revision-Date: 2015-11-02 23:08+0100\n"
+"Last-Translator: Christian Kirbach <christian.kirbach@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Poedit 1.8.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -24,7 +24,7 @@ msgid "translator-credits"
 msgstr ""
 "Florian Purucker <florian@purucker.net>, 2007.\n"
 "Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2013.\n"
-"Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013, 2014.\n"
+"Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013, 2014,2015.\n"
 "Bernd Homuth <dev@hmt.im>, 2014"
 
 #. (itstool) path: credit/name
@@ -48,8 +48,8 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
-#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -102,8 +102,8 @@ msgstr ""
 "Minen selbst wählen können"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:12 C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -647,7 +647,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:31
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
 "Beginnen Sie mit der Auswahl aus einer der drei vorgegebenen Spielfeldgrößen "
@@ -722,36 +722,26 @@ msgstr "<keyseq><key>Strg</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:24
-msgid "Fullscreen"
-msgstr "Vollbild"
+msgid "New game with last used settings"
+msgstr "Neues Spiel mit den zuletzt verwendeten Einstellungen"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:25
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Strg</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
 #: C/shortcuts.page:28
-msgid "Hint"
-msgstr "Hinweis"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-msgstr "<keyseq><key>Strg</key><key>H</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:32
 msgid "Pause"
 msgstr "Pause"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:29
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:30
 msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
@@ -760,22 +750,22 @@ msgstr ""
 "Tastatur nicht über eine <key>Pause</key>-Taste verfügt."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:33
 msgid "Help"
 msgstr "Hilfe"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:34
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:41
+#: C/shortcuts.page:37
 msgid "Quit"
 msgstr "Beenden"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:42
+#: C/shortcuts.page:38
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Strg</key><key>Q</key></keyseq>"
 
@@ -846,6 +836,18 @@ msgstr ""
 "Alternativ können Sie das Internationaliserungsteam über dessen <link href="
 "\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
+
+#~ msgid "Fullscreen"
+#~ msgstr "Vollbild"
+
+#~ msgid "<key>F11</key>"
+#~ msgstr "<key>F11</key>"
+
+#~ msgid "Hint"
+#~ msgstr "Hinweis"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
+#~ msgstr "<keyseq><key>Strg</key><key>H</key></keyseq>"
 
 #~ msgctxt "_"
 #~ msgid ""
