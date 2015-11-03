@@ -7,3 +7,7 @@
 .explodedField .exploded {
   background-color:#d3d7cf;
 }
+
+.explodedField .incorrect {
+  background-color:#cc0000;
+}

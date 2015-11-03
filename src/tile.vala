@@ -5,7 +5,8 @@ public class Tile : Gtk.Button
     public signal void tile_mouse_over (int x, int y);
     public signal void tile_pressed (int x, int y, Gdk.EventButton event);
     public signal void tile_released (int x, int y, Gdk.EventButton event);
-    private static string[] IMAGE_CLASSES = {"mine", "flag", "maybe", "overmine",
+    private static string[] IMAGE_CLASSES = {"mine", "flag", "incorrect",
+                                             "maybe", "overmine",
                                              "exploded", "1mines", "2mines",
                                              "3mines", "4mines", "5mines",
                                              "6mines", "7mines", "8mines"};
