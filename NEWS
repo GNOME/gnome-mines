@@ -1,3 +1,13 @@
+GNOME Mines 3.18.2
+==================
+
+* Updated translations
+* Improved keyboard cursor display (Isaac Lenton)
+* Added keyboard shortcuts to start/stop game (Isaac Lenton)
+* Changed tile click to reveal on click release (Isaac Lenton)
+* Fixed timer reset on game won (Robert Roth)
+* Show incorrectly flagged fields (Robert Roth)
+
 GNOME Mines 3.18.1
 ==================
 
