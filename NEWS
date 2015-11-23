@@ -1,3 +1,13 @@
+GNOME Mines 3.19.2
+==================
+
+* Updated translations
+* Improved keyboard cursor display and behaviour (Isaac Lenton)
+* Added extra keyboard shortcuts for starting/stopping games (Isaac Lenton)
+* Change tile click behaviour to reveal tile on click release (Isaac Lenton)
+* Fixed jumping clock issue in timer (Robert Roth)
+* Show incorrectly flagged fields (Robert Roth)
+
 GNOME Mines 3.19.1
 ==================
 
