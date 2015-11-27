@@ -11,10 +11,10 @@ msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-07-04 07:22+0000\n"
-"PO-Revision-Date: 2015-07-04 08:27+0100\n"
-"Last-Translator: Pedro Albuquerque <palbuquerque73@openmailbox.com>\n"
-"Language-Team: Português <palbuquerque73@openmailbox.com>\n"
+"POT-Creation-Date: 2015-07-25 19:24+0000\n"
+"PO-Revision-Date: 2015-07-28 05:59+0100\n"
+"Last-Translator: Pedro Albuquerque <palbuquerque73@gmail.com>\n"
+"Language-Team: Português <palbuquerque73@gmail.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,7 +37,7 @@ msgid ""
 "You win the game when you've flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"O Minas GNOME é um quebra-cabeças onde procura minas escondidas. Marque os "
+"O Minas GNOME é um quebra cabeças onde procura minas escondidas. Marque os "
 "espaços onde as minas estão o mais rapidamente possível para tornar o "
 "tabuleiro mais seguro. Ganha o jogo quando tiver marcado todas as minas no "
 "tabuleiro. Seja cuidadoso e não ative nenhuma mina ou o jogo termina!"
@@ -54,7 +54,7 @@ msgstr ""
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
 #: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:786
 msgid "Mines"
 msgstr "Minas"
 
@@ -67,9 +67,8 @@ msgid "Small board"
 msgstr "Pequeno"
 
 #: ../data/gnome-mines.desktop.in.h:5
-#| msgid "Medium"
 msgid "Medium board"
-msgstr "Tabuleiro médio"
+msgstr "Médio"
 
 #: ../data/gnome-mines.desktop.in.h:6
 msgid "Big board"
@@ -118,7 +117,6 @@ msgstr ""
 "bandeiras de mina assim que estejam reveladas quadrículas suficientes"
 
 #: ../data/org.gnome.mines.gschema.xml.h:9
-#| msgid "Enable _animation"
 msgid "Enable animations"
 msgstr "Ativar animações"
 
@@ -180,7 +178,7 @@ msgid "_Play Game"
 msgstr "_Jogar"
 
 #: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../src/gnome-mines.vala:697 ../src/gnome-mines.vala:735
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -202,7 +200,7 @@ msgstr "Em pausa"
 
 #: ../src/gnome-mines.vala:88
 msgid "Print release version and exit"
-msgstr "Mostrar a versão de lançamento"
+msgstr "Mostrar a versão de lançamento e sair"
 
 #: ../src/gnome-mines.vala:89
 msgid "Small game"
@@ -287,36 +285,34 @@ msgstr "Iniciar um novo jogo"
 msgid "St_art Over"
 msgstr "_Recomeçar"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:695
 msgid "_Resume"
 msgstr "_Continuar"
 
-#: ../src/gnome-mines.vala:711
-#| msgid "_Play Again"
+#: ../src/gnome-mines.vala:713
 msgid "Play _Again"
 msgstr "_Jogar novamente"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:759
 msgid "Main game:"
 msgstr "Jogo principal:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:764
 msgid "Score:"
 msgstr "Pontuação:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:767
 msgid "Resizing and SVG support:"
 msgstr "Redimensionamento e suporte SVG:"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:789
 msgid "Clear explosive mines off the board"
 msgstr "Limpe as minas do tabuleiro"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:796
 msgid "translator-credits"
-msgstr ""
-"Duarte Loreto <happyguy_pt@hotmail.com>Pedro Albuquerque "
-"<palbuquerque73@gmail.com>"
+msgstr "Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
@@ -350,9 +346,8 @@ msgstr[0] "%u × %u, %u mina"
 msgstr[1] "%u × %u, %u minas"
 
 #: ../src/theme-selector-dialog.vala:77
-#| msgid "Use fast animation"
 msgid "Use _animations"
-msgstr "Utilizar _Animações"
+msgstr "Usar _Animações"
 
 #: ../src/theme-selector-dialog.vala:93
 msgid "Select Theme"
