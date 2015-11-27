@@ -37,7 +37,7 @@ msgid ""
 "You win the game when you've flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"O Minas GNOME é um quebra-cabeças onde procura minas escondidas. Marque os "
+"O Minas GNOME é um quebra cabeças onde procura minas escondidas. Marque os "
 "espaços onde as minas estão o mais rapidamente possível para tornar o "
 "tabuleiro mais seguro. Ganha o jogo quando tiver marcado todas as minas no "
 "tabuleiro. Seja cuidadoso e não ative nenhuma mina ou o jogo termina!"
@@ -70,7 +70,7 @@ msgstr "Pequeno"
 #: ../data/gnome-mines.desktop.in.h:5
 #| msgid "Medium"
 msgid "Medium board"
-msgstr "Tabuleiro médio"
+msgstr "Médio"
 
 #: ../data/gnome-mines.desktop.in.h:6
 msgid "Big board"
@@ -315,9 +315,8 @@ msgstr "Limpe as minas do tabuleiro"
 
 #: ../src/gnome-mines.vala:790
 msgid "translator-credits"
-msgstr ""
-"Duarte Loreto <happyguy_pt@hotmail.com>Pedro Albuquerque "
-"<palbuquerque73@gmail.com>"
+msgstr "Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
