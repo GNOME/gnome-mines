@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-01-08 21:52+0200\n"
-"PO-Revision-Date: 2013-01-08 21:52+0200\n"
+"POT-Creation-Date: 2016-01-18 06:43+0200\n"
+"PO-Revision-Date: 2016-01-18 06:43+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -22,44 +22,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:79
-#: ../src/gnome-mines.vala:123 ../src/gnome-mines.vala:688
+#: ../data/gnome-mines.appdata.xml.in.h:1
+msgid "GNOME Mines"
+msgstr "Мини"
+
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr "Изчистете скритите мини от дъската"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
+msgid ""
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you've flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
+msgstr ""
+"„Мини“ е игра, в която търсите скрити бомби. Отбележете местата, където "
+"смятате, че те са и така направете дъската едно по-безопасно място. Или ще "
+"откриете всички мини и ще победите, или при злощастен случай ще гръмнете."
+
+#: ../data/gnome-mines.appdata.xml.in.h:4
+msgid ""
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
+"that's better than hitting a mine!"
+msgstr ""
+"Може да задавате размера на игралното поле. Ако не може да продължите, "
+"поискайте подсказка. Това води до наказателно време, но поне няма да се "
+"взривите."
+
+#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
+#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
+#: ../src/gnome-mines.vala:805
 msgid "Mines"
 msgstr "Мини"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
-msgid "Clear hidden mines from a minefield"
-msgstr "Изчистване на скритите мини от дъската"
-
-#: ../data/gnome-mines.desktop.in.in.h:3
+#: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
-msgstr "мини;бомби;"
+msgstr "мини;бомби;minesweeper"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:1
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Малка дъска"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Средна дъска"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Голяма дъска"
+
+#: ../data/org.gnome.mines.gschema.xml.h:1
+msgid "The theme to use"
+msgstr "Тема"
+
+#: ../data/org.gnome.mines.gschema.xml.h:2
+msgid "The title of the tile theme to use."
+msgstr "Име на темата, която да се използва."
+
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Use the unknown flag"
 msgstr "Използване на флагчета за непознато"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:4
 msgid "Set to true to be able to mark squares as unknown."
 msgstr ""
 "Трябва да е „Истина“, за да е разрешено маркирането на квадратчета като "
 "неизвестни."
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Warning about too many flags"
-msgstr "Предупреждения за прекалено много флагчета"
+msgstr "Предупреждения при прекалено много флагчета"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:4
-msgid "Set to true to enable warning icons when too many flags are placed."
+#: ../data/org.gnome.mines.gschema.xml.h:6
+msgid ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
 msgstr ""
-"Трябва да е „Истина“, за да се включи предупреждение при слагането на "
+"Трябва да е „Истина“, за да се появява предупреждение при слагането на "
 "прекалено много флагчета."
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:5
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Включване на автоматичното поставяне на флагчета"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:6
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -67,188 +115,202 @@ msgstr ""
 "Задайте да е „Истина“, за да се поставят автоматично флагчета върху мините, "
 "когато са отрити достатъчно квадратчета"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:9
+msgid "Enable animations"
+msgstr "Включване на анимациите"
+
+#: ../data/org.gnome.mines.gschema.xml.h:10
+msgid "Set to false to disable theme-defined transition animations"
+msgstr ""
+"Темите понякога използват анимации, които може да изключите, като зададете "
+"този ключ да е лъжа"
+
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
 msgstr "Брой колони в произволна игра"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:8
+#: ../data/org.gnome.mines.gschema.xml.h:12
 msgid "Number of rows in a custom game"
 msgstr "Брой редове в произволната игра"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:13
 msgid "The number of mines in a custom game"
 msgstr "Броят мини в произволна игра"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:10
+#: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "Board size"
 msgstr "Размер на дъската"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:15
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr ""
 "Размер на дъската „0“ (малка), „1“ (средна), „2“ (голяма), „3“ (произволна)"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:12
+#: ../data/org.gnome.mines.gschema.xml.h:16
 msgid "Width of the window in pixels"
 msgstr "Широчината на прозореца в пиксели"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:13
+#: ../data/org.gnome.mines.gschema.xml.h:17
 msgid "Height of the window in pixels"
 msgstr "Височината на прозореца в пиксели"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:14
+#: ../data/org.gnome.mines.gschema.xml.h:18
 msgid "true if the window is maximized"
 msgstr "истина, ако прозорецът е максимизиран"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:15
-msgid "true if the window is fullscren"
-msgstr "истина, ако прозорецът е на цял екран"
+#: ../data/interface.ui.h:2
+msgid "_Width"
+msgstr "_Широчина"
 
-#: ../src/gnome-mines.vala:98
-msgid "_New Game"
-msgstr "_Нова игра"
+#: ../data/interface.ui.h:3
+msgid "_Height"
+msgstr "_Височина"
 
-#: ../src/gnome-mines.vala:99
-msgid "_Replay Size"
-msgstr "_Размер при преиграване"
+#: ../data/interface.ui.h:4
+msgid "Percent _mines"
+msgstr "Процент _мини"
 
-#: ../src/gnome-mines.vala:100
-msgid "_Hint"
-msgstr "_Съвет"
+#: ../data/interface.ui.h:5
+msgid "_Cancel"
+msgstr "_Отказ"
 
-#: ../src/gnome-mines.vala:101 ../src/gnome-mines.vala:181
-#: ../src/gnome-mines.vala:597
-msgid "_Pause"
-msgstr "_Пауза"
-
-#: ../src/gnome-mines.vala:102 ../src/gnome-mines.vala:188
-#: ../src/gnome-mines.vala:356
-msgid "_Fullscreen"
-msgstr "На цял _екран"
-
-#: ../src/gnome-mines.vala:103
-msgid "_Scores"
-msgstr "_Резултати"
-
-#: ../src/gnome-mines.vala:104
-msgid "_Preferences"
-msgstr "_Настройки"
-
-#: ../src/gnome-mines.vala:107
-msgid "_Help"
-msgstr "Помо_щ"
-
-#: ../src/gnome-mines.vala:108
-msgid "_About"
-msgstr "_Относно"
-
-#: ../src/gnome-mines.vala:111
-msgid "_Quit"
-msgstr "_Спиране на програмата"
-
-#: ../src/gnome-mines.vala:164
-msgid "_New"
-msgstr "_Нова игра"
-
-#: ../src/gnome-mines.vala:173
-msgid "Hint"
-msgstr "Съвет"
-
-#. New game screen
-#: ../src/gnome-mines.vala:222
-msgid "Field Size"
-msgstr "Размер на дъската"
-
-#: ../src/gnome-mines.vala:277
-msgid "H_orizontal:"
-msgstr "_Хоризонтално:"
-
-#: ../src/gnome-mines.vala:287
-msgid "_Vertical:"
-msgstr "В_ертикално:"
-
-#: ../src/gnome-mines.vala:297
-msgid "_Number of mines:"
-msgstr "_Брой мини:"
-
-#: ../src/gnome-mines.vala:316
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Нова игра"
 
-#: ../src/gnome-mines.vala:351
-msgid "_Leave Fullscreen"
-msgstr "_Изход от цял екран"
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:602
+#: ../src/gnome-mines.vala:716 ../src/gnome-mines.vala:754
+msgid "_Pause"
+msgstr "_Пауза"
 
-#: ../src/gnome-mines.vala:366
+#: ../data/interface.ui.h:8
+msgid "Change _Difficulty"
+msgstr "Друга _трудност"
+
+#: ../data/interface.ui.h:9
+msgid "_Best Times"
+msgstr "_Най-кратки времена"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "_Нова игра"
+
+#: ../data/interface.ui.h:11
+msgid "Paused"
+msgstr "На пауза"
+
+#: ../src/gnome-mines.vala:88
+msgid "Print release version and exit"
+msgstr "Извеждане на версията и спиране на програмата"
+
+#: ../src/gnome-mines.vala:89
+msgid "Small game"
+msgstr "Малка дъска"
+
+#: ../src/gnome-mines.vala:90
+msgid "Medium game"
+msgstr "Средна дъска"
+
+#: ../src/gnome-mines.vala:91
+msgid "Big game"
+msgstr "Голяма дъска"
+
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
+msgid "_Scores"
+msgstr "_Резултати"
+
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
+msgid "A_ppearance"
+msgstr "_Външен вид"
+
+#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
+msgid "_Show Warnings"
+msgstr "_Предупреждения"
+
+#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
+msgid "_Use Question Flags"
+msgstr "_Въпросителни флагчета"
+
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
+msgid "_Help"
+msgstr "Помо_щ"
+
+#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
+msgid "_About"
+msgstr "_Относно"
+
+#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
+msgid "_Quit"
+msgstr "_Спиране на програмата"
+
+#: ../src/gnome-mines.vala:257
+msgid "_Mines"
+msgstr "_Мини"
+
+#: ../src/gnome-mines.vala:258
+msgid "_New Game"
+msgstr "_Нова игра"
+
+#: ../src/gnome-mines.vala:266
+msgid "_Contents"
+msgstr "_Ръководство"
+
+#: ../src/gnome-mines.vala:363
+msgid "Custom"
+msgstr "Друго"
+
+#: ../src/gnome-mines.vala:442
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
-msgstr[0] "%d мина"
-msgstr[1] "%d мини"
+msgstr[0] "<b>%d</b> мина"
+msgstr[1] "<b>%d</b> мини"
 
-#: ../src/gnome-mines.vala:430
-#, c-format
-msgid "Flags: %u/%u"
-msgstr "Флагчета: %u/%u"
-
-#: ../src/gnome-mines.vala:471
+#: ../src/gnome-mines.vala:559
 msgid "Do you want to start a new game?"
 msgstr "Искате ли да започнете нова игра?"
 
-#: ../src/gnome-mines.vala:472
+#: ../src/gnome-mines.vala:560
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ако започнете нова игра, ще загубите текущото постижение."
 
-#: ../src/gnome-mines.vala:473
+#: ../src/gnome-mines.vala:561
 msgid "Keep Current Game"
 msgstr "Продължаване на текущата игра"
 
-#: ../src/gnome-mines.vala:474
+#: ../src/gnome-mines.vala:562
 msgid "Start New Game"
 msgstr "Започване на нова игра"
 
-#: ../src/gnome-mines.vala:590
-msgid "Res_ume"
-msgstr "Про_дължаване"
+#: ../src/gnome-mines.vala:603
+msgid "St_art Over"
+msgstr "_Начало"
 
-#: ../src/gnome-mines.vala:637 ../src/gnome-mines.vala:942
-#, c-format
-msgid "Time"
-msgstr "Време"
+#: ../src/gnome-mines.vala:714
+msgid "_Resume"
+msgstr "_Продължаване"
 
-#: ../src/gnome-mines.vala:654
+#: ../src/gnome-mines.vala:732
+msgid "Play _Again"
+msgstr "_Нова игра"
+
+#: ../src/gnome-mines.vala:778
 msgid "Main game:"
 msgstr "Основната игра:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:783
 msgid "Score:"
 msgstr "Резултат:"
 
-#: ../src/gnome-mines.vala:662
+#: ../src/gnome-mines.vala:786
 msgid "Resizing and SVG support:"
 msgstr "Оразмеряване и поддръжка на SVG:"
 
-#: ../src/gnome-mines.vala:670
-msgid "Faces:"
-msgstr "Тема:"
+#: ../src/gnome-mines.vala:808
+msgid "Clear explosive mines off the board"
+msgstr "Отбележете къде са мините по дъската"
 
-#: ../src/gnome-mines.vala:674
-msgid "Graphics:"
-msgstr "Графика:"
-
-#: ../src/gnome-mines.vala:691
-msgid ""
-"The popular logic puzzle minesweeper. Clear mines from a board using hints "
-"from squares you have already uncovered.\n"
-"\n"
-"Mines is a part of GNOME Games."
-msgstr ""
-"Популярната главоблъсканица с мини. Изчистете мините от дъската, като се "
-"съобразявате с квадратите, които вече сте разкрили.\n"
-"\n"
-"Мините са част от игрите на GNOME."
-
-#: ../src/gnome-mines.vala:698
+#: ../src/gnome-mines.vala:815
 msgid "translator-credits"
 msgstr ""
 "Ростислав „zbrox“ Райков <zbrox@i-space.org>\n"
@@ -262,41 +324,45 @@ msgstr ""
 "Докладвайте за грешки на <a href=\"http://gnome.cult.bg/bugs\">http://gnome."
 "cult.bg/bugs</a>"
 
-#: ../src/gnome-mines.vala:701
-msgid "GNOME Games web site"
-msgstr "Уеб сайт на игрите на GNOME"
+#: ../src/score-dialog.vala:18
+msgid "_Close"
+msgstr "_Спиране на програмата"
 
-#: ../src/gnome-mines.vala:765
-msgid "Mines Preferences"
-msgstr "Настройки на Мините"
-
-#: ../src/gnome-mines.vala:783
-msgid "_Use \"I'm not sure\" flags"
-msgstr "Използване на _флагчета, когато не сте сигурни"
-
-#: ../src/gnome-mines.vala:789
-msgid "_Warn if too many flags have been placed"
-msgstr "_Предупреждения за прекалено много флагчета"
-
-#: ../src/gnome-mines.vala:899
+#: ../src/score-dialog.vala:20
 msgid "New Game"
 msgstr "Нова игра"
 
-#: ../src/gnome-mines.vala:914
+#: ../src/score-dialog.vala:24
+msgid "_OK"
+msgstr "_Добре"
+
+#: ../src/score-dialog.vala:36
 msgid "Size:"
 msgstr "Размер:"
 
-#: ../src/gnome-mines.vala:939
+#: ../src/score-dialog.vala:61
 msgid "Date"
 msgstr "Дата"
 
-#: ../src/gnome-mines.vala:1024
+#: ../src/score-dialog.vala:64
+msgid "Time"
+msgstr "Време"
+
+#: ../src/score-dialog.vala:160
 #, c-format
 msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u мина"
 msgstr[1] "%u × %u, %u мини"
 
-#: ../src/minefield-view.vala:398
-msgid "Paused"
-msgstr "На пауза"
+#: ../src/theme-selector-dialog.vala:77
+msgid "Use _animations"
+msgstr "_Анимации"
+
+#: ../src/theme-selector-dialog.vala:93
+msgid "Select Theme"
+msgstr "Избор на тема"
+
+#: ../src/theme-selector-dialog.vala:116
+msgid "Close"
+msgstr "Спиране на програмата"
