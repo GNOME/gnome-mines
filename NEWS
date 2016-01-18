@@ -1,3 +1,10 @@
+GNOME Mines 3.19.4
+==================
+
+* Updated translations
+* Stop using deprecated gnome-common (Sahil Sareen)
+* Add pre-commit and pre-applypatch hooks (Sahil Sareen)
+
 GNOME Mines 3.19.3
 ==================
 
