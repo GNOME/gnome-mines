@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-18 06:43+0200\n"
-"PO-Revision-Date: 2016-01-18 06:43+0200\n"
+"POT-Creation-Date: 2016-01-19 19:40+0200\n"
+"PO-Revision-Date: 2016-01-19 19:40+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -59,7 +59,7 @@ msgstr "Мини"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
-msgstr "мини;бомби;minesweeper"
+msgstr "мини;бомби;minesweeper;"
 
 #: ../data/gnome-mines.desktop.in.h:4
 msgid "Small board"
