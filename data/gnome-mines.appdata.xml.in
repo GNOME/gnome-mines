@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2013 Michael Catanzaro -->
-<application>
- <id type="desktop">gnome-mines.desktop</id>
- <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
- <_name>GNOME Mines</_name>
- <_summary>Clear hidden mines from a minefield</_summary>
- <description>
-  <_p>
-   GNOME Mines is a puzzle game where you search for hidden mines. Flag the
-   spaces with mines as quickly as possible to make the board a safer place. You
-   win the game when you've flagged every mine on the board. Be careful not to
-   trigger one, or the game is over!
-  </_p>
-  <_p>
-   You can select the size of the field you want to play on at the start of the
-   game. If you get stuck, you can ask for a hint: there's a time penalty, but
-   that's better than hitting a mine!
-  </_p>
- </description>
- <screenshots>
-  <screenshot type="default" width="748" height="563">https://people.gnome.org/~mcatanzaro/gnome-mines.png</screenshot>
- </screenshots>
- <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
- <updatecontact>mcatanzaro_at_gnome.org</updatecontact>
- <project_group>GNOME</project_group>
- <kudos>
-  <kudo>AppMenu</kudo>
-  <kudo>HiDpiIcon</kudo>
-  <kudo>ModernToolkit</kudo>
-  <kudo>UserDocs</kudo>
- </kudos>
-</application>
+<component type="desktop">
+  <id>gnome-mines.desktop</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-2.0+ and CC-BY-SA-3.0</project_license>
+  <_name>GNOME Mines</_name>
+  <_summary>Clear hidden mines from a minefield</_summary>
+  <description>
+    <_p>
+      GNOME Mines is a puzzle game where you search for hidden mines. Flag the
+      spaces with mines as quickly as possible to make the board a safer place. You
+      win the game when you've flagged every mine on the board. Be careful not to
+      trigger one, or the game is over!
+    </_p>
+    <_p>
+      You can select the size of the field you want to play on at the start of the
+      game. If you get stuck, you can ask for a hint: there's a time penalty, but
+      that's better than hitting a mine!
+    </_p>
+  </description>
+  <screenshots>
+    <screenshot type="default" width="748" height="563">
+      <image>https://people.gnome.org/~mcatanzaro/gnome-mines.png</image>
+    </screenshot>
+  </screenshots>
+  <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
+  <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines</url>
+  <url type="donation">http://www.gnome.org/friends/</url>
+  <url type="help">https://help.gnome.org/users/gnome-mines/stable/</url>
+  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <project_group>GNOME</project_group>
+  <kudos>
+    <kudo>AppMenu</kudo>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>ModernToolkit</kudo>
+    <kudo>UserDocs</kudo>
+  </kudos>
+  <translation type="gettext">gnome-mines</translation>
+</component>
