@@ -121,7 +121,7 @@ msgstr "Activar animacions"
 #, fuzzy
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
-"Establir a falso ta desactivar as animacions de transicions definidas por o "
+"Establir a falso pa desactivar as animacions de transicions definidas por o "
 "tema"
 
 #: ../data/org.gnome.mines.gschema.xml.h:11
