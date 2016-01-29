@@ -59,7 +59,7 @@ msgstr "Minoj"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
-msgstr "minoforiga"
+msgstr "minoforiga;"
 
 #: ../data/gnome-mines.desktop.in.h:4
 msgid "Small board"
