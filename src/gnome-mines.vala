@@ -402,8 +402,7 @@ public class Mines : Gtk.Application
     {
         if (!is_maximized && !is_tiled && !window_skip_configure)
         {
-            window_width = allocation.width;
-            window_height = allocation.height;
+            window.get_size (out window_width, out window_height);
         }
 
         window_skip_configure = false;
