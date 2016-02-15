@@ -311,12 +311,13 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        context = new Games.Scores.Context ("gnome-mines",
-                                            /* Label on the scores dialog */
-                                            _("Minefield:"),
-                                            window,
-                                            create_category_from_key,
-                                            Games.Scores.Style.TIME_LESS_IS_BETTER);
+        context = new Games.Scores.Context.with_importer ("gnome-mines",
+                                                          /* Label on the scores dialog */
+                                                          _("Minefield:"),
+                                                          window,
+                                                          create_category_from_key,
+                                                          Games.Scores.Style.TIME_LESS_IS_BETTER,
+                                                          new Games.Scores.HistoryFileImporter (parse_old_score));
 
         flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
         clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
@@ -349,6 +350,28 @@ public class Mines : Gtk.Application
         return new Games.Scores.Category (key, ngettext ("%d × %d, %d mine",
                                                          "%d × %d, %d mines",
                                                          num_mines).printf (width, height, num_mines));
+    }
+
+    private void parse_old_score (string line, out Games.Scores.Score score, out Games.Scores.Category category)
+    {
+        score = null;
+        category = null;
+
+        var tokens = line.split (" ");
+        if (tokens.length != 5)
+            return;
+
+        var date = Games.Scores.HistoryFileImporter.parse_date (tokens[0]);
+        var width = int.parse (tokens[1]);
+        var height = int.parse (tokens[2]);
+        var num_mines = int.parse (tokens[3]);
+        var seconds = int.parse (tokens[4]);
+
+        if (date <= 0 || width <= 0 || height <= 0 || num_mines <= 0 || seconds < 0)
+            return;
+
+        score = new Games.Scores.Score (seconds, date);
+        category = create_category_from_key (@"$width-$height-$num_mines");
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
