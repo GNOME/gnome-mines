@@ -566,14 +566,7 @@ public class Mines : Gtk.Application
 
     private void show_scores ()
     {
-        try
-        {
-            context.run_dialog ();
-        }
-        catch (Error e)
-        {
-            warning ("%s", e.message);
-        }
+        context.run_dialog ();
     }
 
     private void scores_cb ()
