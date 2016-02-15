@@ -22,7 +22,8 @@ gnome_mines_VALAFLAGS = \
 	--pkg librsvg-2.0 \
 	--pkg pango \
 	--pkg pangocairo \
-	--pkg games-support \
+	--pkg libgames-support-1.0 \
+	--pkg gee-0.8 \
 	--target-glib $(GLIB_REQUIRED)
 
 gnome_mines_LDADD = \

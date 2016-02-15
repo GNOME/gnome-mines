@@ -311,8 +311,12 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        context = new Games.Scores.Context ("gnome-mines", "Mines", window, Games.Scores.Style.TIME_ASCENDING);
-        context.category_request.connect  (create_category_from_key);
+        context = new Games.Scores.Context ("gnome-mines",
+                                            /* Label on the scores dialog */
+                                            _("Minefield:"),
+                                            window,
+                                            create_category_from_key,
+                                            Games.Scores.Style.TIME_LESS_IS_BETTER);
 
         flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
         clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
@@ -749,16 +753,22 @@ public class Mines : Gtk.Application
         var duration = (uint) (minefield.elapsed + 0.5);
         string key = minefield.width.to_string () + "-" + minefield.height.to_string () + "-" + minefield.n_mines.to_string ();
 
-        try
-        {
-            context.add_score (duration, create_category_from_key (key)) ;
-        }
-        catch (Error e)
-        {
-            warning ("%s", e.message);
-        }
+        new_game_action.set_enabled (false);
+        pause_action.set_enabled (false);
+        repeat_size_action.set_enabled (false);
 
-       show_new_game_screen ();
+        context.add_score.begin (duration, create_category_from_key (key), null, (object, result) => {
+            try
+            {
+                context.add_score.end (result);
+            }
+            catch (Error e)
+            {
+                warning ("%s", e.message);
+            }
+            new_game_action.set_enabled (true);
+            show_new_game_screen ();
+        });
     }
 
     private void clock_started_cb ()
