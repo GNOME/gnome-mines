@@ -335,11 +335,20 @@ public class Mines : Gtk.Application
     private Games.Scores.Category? create_category_from_key (string key)
     {
         var tokens = key.split ("-");
-
         if (tokens.length != 3)
             return null;
 
-        return new Games.Scores.Category (key, tokens[0] + " × " + tokens[1] + ", " + tokens[2] + " mines");
+        var width = int.parse (tokens[0]);
+        var height = int.parse (tokens[1]);
+        var num_mines = int.parse (tokens[2]);
+
+        if (width <= 0 || height <= 0 || num_mines <= 0)
+            return null;
+
+        /* For the scores dialog. First width, then height, then number of mines. */
+        return new Games.Scores.Category (key, ngettext ("%d × %d, %d mine",
+                                                         "%d × %d, %d mines",
+                                                         num_mines).printf (width, height, num_mines));
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
