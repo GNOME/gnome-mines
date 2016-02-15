@@ -3,7 +3,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -807,7 +807,7 @@ public class Mines : Gtk.Application
                                _("Clear explosive mines off the board"),
                                "copyright",
                                "Copyright © 1997–2008 Free Software Foundation, Inc.",
-                               "license-type", Gtk.License.GPL_2_0,
+                               "license-type", Gtk.License.GPL_3_0,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
