@@ -2,7 +2,7 @@
 # Copyright © 2002-2008 Free Software Foundation, Inc.
 # Jordi Vila <gnome@softcatala.net>, 2002.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2005.
-# Jordi Mas i Hernàndez <jmas@softcatala.org> 2003.
+# Jordi Mas i Hernàndez <jmas@softcatala.org> 2003, 2016
 # Xavier Conde Rueda <xavi.conde@gmail.com>, 2004.
 # Jesús Corrius <jesus@softcatala.org>, 2005.
 # Josep Puigdemont i Casamajó <josep.puigdemont@gmail.com>, 2007.
@@ -13,9 +13,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-04 19:00+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-19 22:42+0100\n"
 "PO-Revision-Date: 2014-09-05 00:44+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -29,7 +28,11 @@ msgstr ""
 msgid "GNOME Mines"
 msgstr "GNOME Mines"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr "Netegeu les mines ocultes del camp de mines"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -42,7 +45,7 @@ msgstr ""
 "mines del tauler. Aneu amb compte de no activar-ne cap o s'acabarà la "
 "partida!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there's a time penalty, but "
@@ -53,32 +56,48 @@ msgstr ""
 "temps, però és millor això que no pas activar una mina!"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
+#: ../src/gnome-mines.vala:804
 msgid "Mines"
 msgstr "Mines"
-
-#: ../data/gnome-mines.desktop.in.h:2
-msgid "Clear hidden mines from a minefield"
-msgstr "Netegeu les mines ocultes del camp de mines"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "pescamines;"
 
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Tauler petit"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Tauler mitjà"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Tauler gran"
+
 #: ../data/org.gnome.mines.gschema.xml.h:1
+msgid "The theme to use"
+msgstr "El tema a usar"
+
+#: ../data/org.gnome.mines.gschema.xml.h:2
+msgid "The title of the tile theme to use."
+msgstr "El títol del tema de caselles que s'usarà."
+
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Use the unknown flag"
 msgstr "Utilitza la bandera de desconegut"
 
-#: ../data/org.gnome.mines.gschema.xml.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:4
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "Establiu-ho a cert per poder marcar quadres com a desconeguts."
 
-#: ../data/org.gnome.mines.gschema.xml.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Warning about too many flags"
 msgstr "Avís de massa banderes"
 
-#: ../data/org.gnome.mines.gschema.xml.h:4
+#: ../data/org.gnome.mines.gschema.xml.h:6
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -86,11 +105,11 @@ msgstr ""
 "Establiu-ho a «true» (cert) per habilitar les icones d'avís quan s'han posat "
 "massa banderes prop d'una casella numerada."
 
-#: ../data/org.gnome.mines.gschema.xml.h:5
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Habilita el posicionament automàtic de banderes"
 
-#: ../data/org.gnome.mines.gschema.xml.h:6
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -98,193 +117,199 @@ msgstr ""
 "Establiu-ho a «true» (cert) perquè es posin automàticament banderes sobre "
 "les mines quan s'hagin descobert prou caselles"
 
-#: ../data/org.gnome.mines.gschema.xml.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:9
+msgid "Enable animations"
+msgstr "Habilita animacions"
+
+#: ../data/org.gnome.mines.gschema.xml.h:10
+msgid "Set to false to disable theme-defined transition animations"
+msgstr "Estableix a fals per inhabilitar les animacions de transicions definides pel tema"
+
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
 msgstr "Nombre de columnes d'una partida personalitzada"
 
-#: ../data/org.gnome.mines.gschema.xml.h:8
+#: ../data/org.gnome.mines.gschema.xml.h:12
 msgid "Number of rows in a custom game"
 msgstr "Nombre de files d'una partida personalitzada"
 
-#: ../data/org.gnome.mines.gschema.xml.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:13
 msgid "The number of mines in a custom game"
 msgstr "El nombre de mines en una partida personalitzada"
 
-#: ../data/org.gnome.mines.gschema.xml.h:10
+#: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "Board size"
 msgstr "Mida del tauler"
 
-#: ../data/org.gnome.mines.gschema.xml.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:15
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Mida del tauler (0-2 = petit-gran, 3=personalitzat)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:12
+#: ../data/org.gnome.mines.gschema.xml.h:16
 msgid "Width of the window in pixels"
 msgstr "L'amplada, en píxels, de la finestra"
 
-#: ../data/org.gnome.mines.gschema.xml.h:13
+#: ../data/org.gnome.mines.gschema.xml.h:17
 msgid "Height of the window in pixels"
 msgstr "L'alçada, en píxels, de la finestra"
 
-#: ../data/org.gnome.mines.gschema.xml.h:14
+#: ../data/org.gnome.mines.gschema.xml.h:18
 msgid "true if the window is maximized"
 msgstr "«true» (cert) si la finestra està maximitzada"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "Fes una _pausa"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "_Millors temps"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Canvia la _dificultat"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "Jug_a de nou"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "_Amplada"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "A_lçada"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "_Percentatge de mines"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Juga al joc"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:601
+#: ../src/gnome-mines.vala:715 ../src/gnome-mines.vala:753
+msgid "_Pause"
+msgstr "Fes una _pausa"
+
+#: ../data/interface.ui.h:8
+msgid "Change _Difficulty"
+msgstr "Canvia la _dificultat"
+
+#: ../data/interface.ui.h:9
+msgid "_Best Times"
+msgstr "_Millors temps"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "Jug_a de nou"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Aturat"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
-msgid "_New Game"
-msgstr "Partida _nova"
+#: ../src/gnome-mines.vala:88
+msgid "Print release version and exit"
+msgstr "Mostra la versió del llançament i surt"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:89
+msgid "Small game"
+msgstr "Partida petita"
+
+#: ../src/gnome-mines.vala:90
+msgid "Medium game"
+msgstr "Partida mitjana"
+
+#: ../src/gnome-mines.vala:91
+msgid "Big game"
+msgstr "Partida gran"
+
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
 msgid "_Scores"
 msgstr "Puntuacion_s"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
+msgid "A_ppearance"
+msgstr "A_parença"
+
+#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
 msgid "_Show Warnings"
 msgstr "_Mostra els avisos"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
 msgid "_Use Question Flags"
 msgstr "_Utilitza banderes de pregunta"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
 msgid "_Quit"
 msgstr "S_urt"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:257
 msgid "_Mines"
 msgstr "_Mines"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:258
+msgid "_New Game"
+msgstr "Partida _nova"
+
+#: ../src/gnome-mines.vala:266
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../src/gnome-mines.vala:270
+#: ../src/gnome-mines.vala:363
 msgid "Custom"
 msgstr "Personalitzada"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:441
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> mines"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:558
 msgid "Do you want to start a new game?"
 msgstr "Voleu iniciar un joc nou?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:559
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Perdreu el progrés aconseguit en el joc actual si inicieu un joc nou."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:560
 msgid "Keep Current Game"
 msgstr "Mantén la partida actual"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:561
 msgid "Start New Game"
 msgstr "Comença una partida nova"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:602
+msgid "St_art Over"
+msgstr "_Comença de nou"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
+#: ../src/gnome-mines.vala:713
+msgid "_Resume"
+msgstr "_Continua"
 
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:731
+msgid "Play _Again"
+msgstr "Jug_a de nou"
+
+#: ../src/gnome-mines.vala:777
 msgid "Main game:"
 msgstr "Partida principal:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:782
 msgid "Score:"
 msgstr "Marcador:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:785
 msgid "Resizing and SVG support:"
 msgstr "Canvi de mida i suport SVG:"
 
-#: ../src/gnome-mines.vala:681
-msgid ""
-"Clear explosive mines off the board\n"
-"\n"
-"Mines is a part of GNOME Games."
-msgstr ""
-"Netegeu el tauler de mines explosives\n"
-"\n"
-"El Mines és part dels jocs GNOME."
+#: ../src/gnome-mines.vala:807
+msgid "Clear explosive mines off the board"
+msgstr "Netegeu el tauler de mines explosives"
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:814
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -292,11 +317,8 @@ msgstr ""
 "Xavier Conde <xaviconde@eresmas.com>\n"
 "Jesús Corrius <jesus@softcatala.org>\n"
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
-"David Planella <david.planella@gmail.com>"
-
-#: ../src/gnome-mines.vala:793
-msgid "_Resume"
-msgstr "_Continua"
+"David Planella <david.planella@gmail.com>\n"
+"Jordi Mas <jmas@softcatala.org>"
 
 #: ../src/score-dialog.vala:18
 msgid "_Close"
@@ -328,3 +350,27 @@ msgid "%u × %u, %u mine"
 msgid_plural "%u × %u, %u mines"
 msgstr[0] "%u × %u, %u mina"
 msgstr[1] "%u × %u, %u mines"
+
+#: ../src/theme-selector-dialog.vala:77
+msgid "Use _animations"
+msgstr "_Usa animacions"
+
+#: ../src/theme-selector-dialog.vala:93
+msgid "Select Theme"
+msgstr "Seleccioneu el tema"
+
+#: ../src/theme-selector-dialog.vala:116
+msgid "Close"
+msgstr "Tanca"
+
+#~ msgid "5/10"
+#~ msgstr "5/10"
+
+#~ msgid "0:00"
+#~ msgstr "0:00"
+
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
+
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
