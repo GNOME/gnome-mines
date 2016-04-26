@@ -3,7 +3,7 @@
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
- * Foundation, either version 2 of the License, or (at your option) any later
+ * Foundation, either version 3 of the License, or (at your option) any later
  * version. See http://www.gnu.org/copyleft/gpl.html the full text of the
  * license.
  */
@@ -63,8 +63,8 @@ public class Mines : Gtk.Application
     /* true when the next configure event should be ignored. */
     private bool window_skip_configure;
 
-    /* Game history */
-    private History history;
+    /* Game scores */
+    private Games.Scores.Context context;
 
     /* Minefield being played */
     private Minefield minefield;
@@ -311,8 +311,13 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        history = new History (Path.build_filename (Environment.get_user_data_dir (), "gnome-mines", "history"));
-        history.load ();
+        context = new Games.Scores.Context.with_importer ("gnome-mines",
+                                                          /* Label on the scores dialog */
+                                                          _("Minefield:"),
+                                                          window,
+                                                          create_category_from_key,
+                                                          Games.Scores.Style.TIME_LESS_IS_BETTER,
+                                                          new Games.Scores.HistoryFileImporter (parse_old_score));
 
         flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
         clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
@@ -326,6 +331,47 @@ public class Mines : Gtk.Application
 
         if (game_mode != -1)
             start_game ();
+    }
+
+    private Games.Scores.Category? create_category_from_key (string key)
+    {
+        var tokens = key.split ("-");
+        if (tokens.length != 3)
+            return null;
+
+        var width = int.parse (tokens[0]);
+        var height = int.parse (tokens[1]);
+        var num_mines = int.parse (tokens[2]);
+
+        if (width <= 0 || height <= 0 || num_mines <= 0)
+            return null;
+
+        /* For the scores dialog. First width, then height, then number of mines. */
+        return new Games.Scores.Category (key, ngettext ("%d × %d, %d mine",
+                                                         "%d × %d, %d mines",
+                                                         num_mines).printf (width, height, num_mines));
+    }
+
+    private void parse_old_score (string line, out Games.Scores.Score score, out Games.Scores.Category category)
+    {
+        score = null;
+        category = null;
+
+        var tokens = line.split (" ");
+        if (tokens.length != 5)
+            return;
+
+        var date = Games.Scores.HistoryFileImporter.parse_date (tokens[0]);
+        var width = int.parse (tokens[1]);
+        var height = int.parse (tokens[2]);
+        var num_mines = int.parse (tokens[3]);
+        var seconds = int.parse (tokens[4]);
+
+        if (date <= 0 || width <= 0 || height <= 0 || num_mines <= 0 || seconds < 0)
+            return;
+
+        score = new Games.Scores.Score (seconds, date);
+        category = create_category_from_key (@"$width-$height-$num_mines");
     }
 
     private void startup_new_game_screen (Gtk.Builder builder)
@@ -518,16 +564,9 @@ public class Mines : Gtk.Application
         return result;
     }
 
-    private int show_scores (HistoryEntry? selected_entry = null, bool show_close = false)
+    private void show_scores ()
     {
-        var dialog = new ScoreDialog (history, selected_entry, show_close);
-        dialog.modal = true;
-        dialog.transient_for = window;
-
-        var result = dialog.run ();
-        dialog.destroy ();
-
-        return result;
+        context.run_dialog ();
     }
 
     private void scores_cb ()
@@ -736,16 +775,25 @@ public class Mines : Gtk.Application
 
     private void cleared_cb (Minefield minefield)
     {
-        var date = new DateTime.now_local ();
         var duration = (uint) (minefield.elapsed + 0.5);
-        var entry = new HistoryEntry (date, minefield.width, minefield.height, minefield.n_mines, duration);
-        history.add (entry);
-        history.save ();
+        string key = minefield.width.to_string () + "-" + minefield.height.to_string () + "-" + minefield.n_mines.to_string ();
 
-        if (show_scores (entry, true) == Gtk.ResponseType.OK)
+        new_game_action.set_enabled (false);
+        pause_action.set_enabled (false);
+        repeat_size_action.set_enabled (false);
+
+        context.add_score.begin (duration, create_category_from_key (key), null, (object, result) => {
+            try
+            {
+                context.add_score.end (result);
+            }
+            catch (Error e)
+            {
+                warning ("%s", e.message);
+            }
+            new_game_action.set_enabled (true);
             show_new_game_screen ();
-        else
-            game_ended ();
+        });
     }
 
     private void clock_started_cb ()
@@ -807,7 +855,7 @@ public class Mines : Gtk.Application
                                _("Clear explosive mines off the board"),
                                "copyright",
                                "Copyright © 1997–2008 Free Software Foundation, Inc.",
-                               "license-type", Gtk.License.GPL_2_0,
+                               "license-type", Gtk.License.GPL_3_0,
                                "authors", authors,
                                "artists", artists,
                                "documenters", documenters,
