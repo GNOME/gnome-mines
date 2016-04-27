@@ -15,16 +15,16 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-23 07:22+0000\n"
-"PO-Revision-Date: 2015-06-23 14:13+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-04-27 08:48+0000\n"
+"PO-Revision-Date: 2016-04-27 11:59+0200\n"
+"Last-Translator: Meskó Balázs <meskobalazs@gmail.com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
@@ -58,8 +58,8 @@ msgstr ""
 "hozzáérni egy aknához!"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
+#: ../src/gnome-mines.vala:852
 msgid "Mines"
 msgstr "Aknakereső"
 
@@ -182,8 +182,8 @@ msgstr "_Mégse"
 msgid "_Play Game"
 msgstr "_Játék indítása"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:640
+#: ../src/gnome-mines.vala:754 ../src/gnome-mines.vala:801
 msgid "_Pause"
 msgstr "_Szünet"
 
@@ -219,102 +219,115 @@ msgstr "Közepes játék"
 msgid "Big game"
 msgstr "Nagy játék"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
 msgid "_Scores"
 msgstr "_Pontszámok"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
 msgid "A_ppearance"
 msgstr "_Megjelenés"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
 msgid "_Show Warnings"
 msgstr "_Figyelmeztetések megjelenítése"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
 msgid "_Use Question Flags"
 msgstr "_Kérdés zászlók használata"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
 msgid "_Quit"
 msgstr "_Kilépés"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:257
 msgid "_Mines"
 msgstr "_Aknakereső"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:258
 msgid "_New Game"
 msgstr "Ú_j játék"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:266
 msgid "_Contents"
 msgstr "_Tartalom"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:316
+msgid "Minefield:"
+msgstr "Aknamező:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:350
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d akna"
+msgstr[1] "%d × %d, %d akna"
+
+#: ../src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "Egyéni"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:487
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> akna"
 msgstr[1] "<b>%d</b> akna"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:597
 msgid "Do you want to start a new game?"
 msgstr "Szeretne új játékot indítani?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:598
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ha új játékot indít, akkor a jelenlegi állás elvész."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:599
 msgid "Keep Current Game"
 msgstr "A jelenlegi játék folytatása"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:600
 msgid "Start New Game"
 msgstr "Új játék indítása"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:641
 msgid "St_art Over"
 msgstr "Újra_kezdés"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:752
 msgid "_Resume"
 msgstr "_Folytatás"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:770
 msgid "Play _Again"
 msgstr "Újra_játszás"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "Fő játék:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "Pont:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "Átméretezés és SVG-támogatás:"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:855
 msgid "Clear explosive mines off the board"
 msgstr "Távolítsa el a robbanó aknákat a tábláról"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:862
 msgid "translator-credits"
 msgstr ""
 "Bán Szabolcs <shooby at gnome dot hu>\n"
@@ -325,37 +338,6 @@ msgstr ""
 "Tímár András <timar at gnome dot hu>\n"
 "Varga Szabolcs <shirokuma at shirokuma dot hu>\n"
 "Úr Balázs <urbalazs at gmail dot com>"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Bezárás"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Új játék"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_OK"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Méret:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Dátum"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Idő"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u akna"
-msgstr[1] "%u × %u, %u akna"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -368,6 +350,24 @@ msgstr "Téma kiválasztása"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "Bezárás"
+
+#~ msgid "_Close"
+#~ msgstr "_Bezárás"
+
+#~ msgid "New Game"
+#~ msgstr "Új játék"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Méret:"
+
+#~ msgid "Date"
+#~ msgstr "Dátum"
+
+#~ msgid "Time"
+#~ msgstr "Idő"
 
 #~ msgid "5/10"
 #~ msgstr "5/10"
