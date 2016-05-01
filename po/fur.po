@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-27 21:19+0000\n"
-"PO-Revision-Date: 2015-10-28 15:18+0100\n"
+"POT-Creation-Date: 2016-05-01 08:49+0000\n"
+"PO-Revision-Date: 2016-05-01 16:51+0200\n"
+"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "X-Generator: Poedit 1.8.5\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
@@ -50,8 +50,8 @@ msgstr ""
 "penalitât sul timp, ma simpri miôr che fa saltâ pal aiar une mine!"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:786
+#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
+#: ../src/gnome-mines.vala:852
 msgid "Mines"
 msgstr "Minis"
 
@@ -172,8 +172,8 @@ msgstr "_Anule"
 msgid "_Play Game"
 msgstr "_Zuie"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:697 ../src/gnome-mines.vala:735
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:640
+#: ../src/gnome-mines.vala:754 ../src/gnome-mines.vala:801
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -209,135 +209,117 @@ msgstr "Cjamp medi"
 msgid "Big game"
 msgstr "Cjamp grant"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
 msgid "_Scores"
 msgstr "_Risultâts"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
 msgid "A_ppearance"
 msgstr "A_spiet"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
 msgid "_Show Warnings"
 msgstr "_Mostre avîs"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
 msgid "_Use Question Flags"
 msgstr "_Dopre pont interogatîf"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
 msgid "_Help"
 msgstr "_Jutori"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
 msgid "_About"
 msgstr "_Informazions"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
 msgid "_Quit"
 msgstr "_Jes"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:257
 msgid "_Mines"
 msgstr "_Minis"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:258
 msgid "_New Game"
 msgstr "_Gnove partide"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:266
 msgid "_Contents"
 msgstr "_Contignûts"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:316
+msgid "Minefield:"
+msgstr "Cjamp minât:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:350
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d mine"
+msgstr[1] "%d × %d, %d minis"
+
+#: ../src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "Personalizât"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:487
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mine"
 msgstr[1] "<b>%d</b> minis"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:597
 msgid "Do you want to start a new game?"
 msgstr "Vûstu tacâ une gnove partide?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:598
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se tu tachis une gnove partide, i tiei progrès atuâi a saran pierdûts."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:599
 msgid "Keep Current Game"
 msgstr "Continue cheste partide"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:600
 msgid "Start New Game"
 msgstr "Tache une gnove partide"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:641
 msgid "St_art Over"
 msgstr "_Torne partî"
 
-#: ../src/gnome-mines.vala:695
+#: ../src/gnome-mines.vala:752
 msgid "_Resume"
 msgstr "_Ripie"
 
-#: ../src/gnome-mines.vala:713
+#: ../src/gnome-mines.vala:770
 msgid "Play _Again"
 msgstr "Torne zu_ie"
 
-#: ../src/gnome-mines.vala:759
+#: ../src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "Zûc principâl:"
 
-#: ../src/gnome-mines.vala:764
+#: ../src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "Ponts:"
 
-#: ../src/gnome-mines.vala:767
+#: ../src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "Cambiament dimension e supuart SVG:"
 
-#: ../src/gnome-mines.vala:789
+#: ../src/gnome-mines.vala:855
 msgid "Clear explosive mines off the board"
 msgstr "Cjate dutis lis minis platadis cence falis saltâ pal aiar"
 
-#: ../src/gnome-mines.vala:796
+#: ../src/gnome-mines.vala:862
 msgid "translator-credits"
 msgstr "Fabio Tomat <f.t.public@gmail.com>"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Siere"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Gnove partide"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_OK"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Dimension:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Date"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Timp"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mine"
-msgstr[1] "%u × %u, %u minis"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -350,3 +332,21 @@ msgstr "Selezione teme"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "Siere"
+
+#~ msgid "_Close"
+#~ msgstr "_Siere"
+
+#~ msgid "New Game"
+#~ msgstr "Gnove partide"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Dimension:"
+
+#~ msgid "Date"
+#~ msgstr "Date"
+
+#~ msgid "Time"
+#~ msgstr "Timp"
