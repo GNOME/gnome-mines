@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-06-20 01:30+0000\n"
-"PO-Revision-Date: 2016-03-05 17:24+0200\n"
+"POT-Creation-Date: 2016-04-26 04:38+0000\n"
+"PO-Revision-Date: 2016-05-09 19:05+0200\n"
 "Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -26,7 +26,7 @@ msgstr "Desminaire GNOME"
 
 #: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
 msgid "Clear hidden mines from a minefield"
-msgstr "Netejar un champ de minas de sas minas amagadas"
+msgstr "Netejar un camp de minas de sas minas amagadas"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
@@ -51,8 +51,8 @@ msgstr ""
 "mas aquò val melhor que de sautar sus una mina !"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
+#: ../src/gnome-mines.vala:852
 msgid "Mines"
 msgstr "Minas"
 
@@ -173,8 +173,8 @@ msgstr "A_nullar"
 msgid "_Play Game"
 msgstr "_Aviar lo jòc"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:640
+#: ../src/gnome-mines.vala:754 ../src/gnome-mines.vala:801
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -210,135 +210,119 @@ msgstr "Grasilha mejana"
 msgid "Big game"
 msgstr "Granda grasilha"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
 msgid "_Scores"
 msgstr "_Marcas"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
 msgid "A_ppearance"
 msgstr "A_paréncia"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
 msgid "_Show Warnings"
 msgstr "Afichar los a_vertiments"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
 msgid "_Use Question Flags"
 msgstr "_Utilizar de bandièras punts d'interrogacion"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
 msgid "_Help"
 msgstr "Aju_da"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
 msgid "_About"
 msgstr "A _prepaus"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
 msgid "_Quit"
 msgstr "_Quitar"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:257
 msgid "_Mines"
 msgstr "_Minas"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:258
 msgid "_New Game"
 msgstr "_Novèla partida"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:266
 msgid "_Contents"
 msgstr "_Ensenhador"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:316
+msgid "Minefield:"
+msgstr "Camp de minas :"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:350
+#, c-format
+#| msgid "%u × %u, %u mine"
+#| msgid_plural "%u × %u, %u mines"
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d mina"
+msgstr[1] "%d × %d, %d minas"
+
+#: ../src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "Personalizada"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:487
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:597
 msgid "Do you want to start a new game?"
 msgstr "Volètz començar una novèla partida ?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:598
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se començatz una novèla partida, vòstra avançada actuala serà perduda."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:599
 msgid "Keep Current Game"
 msgstr "Contunhar la partida en cors"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:600
 msgid "Start New Game"
 msgstr "Començar una novèla partida"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:641
 msgid "St_art Over"
 msgstr "Re_començar"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:752
 msgid "_Resume"
 msgstr "_Repréner"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:770
 msgid "Play _Again"
 msgstr "Re_far una partida"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "Jòc principal :"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "Marca :"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "Redimensionament e presa en carga de SVG :"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:855
 msgid "Clear explosive mines off the board"
 msgstr "Neutralizar las minas explosivas d'un platèu"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:862
 msgid "translator-credits"
 msgstr "Cédric Valmary <cvalmary@yahoo.fr>"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Tampar"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Novèla partida"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_D'acòrdi"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Talha :"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Data"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Durada"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mina"
-msgstr[1] "%u × %u, %u minas"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -352,41 +336,59 @@ msgstr "Causir un tèma"
 msgid "Close"
 msgstr "Tampar"
 
+#~ msgid "_Close"
+#~ msgstr "_Tampar"
+
+#~ msgid "New Game"
+#~ msgstr "Novèla partida"
+
+#~ msgid "_OK"
+#~ msgstr "_D'acòrdi"
+
+#~ msgid "Size:"
+#~ msgstr "Talha :"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Time"
+#~ msgstr "Durada"
+
 #~ msgid "_Preferences"
-#~ msgstr "_Préférences"
+#~ msgstr "_Preferéncias"
 
 #~ msgid "Receive a hint for your next move"
-#~ msgstr "Recebre una astuce pour votre prochain coup"
+#~ msgstr "Recebre una astúcia per vòstre còp que ven"
 
 #~ msgid "H_orizontal:"
-#~ msgstr "H_orizontale :"
+#~ msgstr "_Orizontala :"
 
 #~ msgid "_Vertical:"
-#~ msgstr "_Verticale :"
+#~ msgstr "_Verticala :"
 
 #~ msgid "_Number of mines:"
-#~ msgstr "_Nombre de mines :"
+#~ msgstr "_Nombre de minas :"
 
 #~ msgid "Faces:"
-#~ msgstr "Figures :"
+#~ msgstr "Figuras :"
 
 #~ msgid "Graphics:"
-#~ msgstr "Graphismes :"
+#~ msgstr "Grafismes :"
 
 #~ msgid "Mines Preferences"
-#~ msgstr "Préférences del démineur GNOME"
+#~ msgstr "Preferéncias del desminaire GNOME"
 
 #~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "_Utiliser le drapeau « Je ne suis pas sûr »"
+#~ msgstr "_Utilizar la bandièra « Soi pas segur »"
 
 #~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Avertir lorsque trop de drapeaux son à côté d'un nombre"
+#~ msgstr "_Avertir quand tròp de bandièras son al costat d'un nombre"
 
 #~ msgid "Start a new game"
-#~ msgstr "Commence una nouvelle partie"
+#~ msgstr "Comença una novèla partie"
 
 #~ msgid "Pause the game"
-#~ msgstr "Suspend la partie"
+#~ msgstr "Suspend la partida"
 
 #~ msgid "Unpause the game"
-#~ msgstr "Reprend la partie"
+#~ msgstr "Repren la partida"
