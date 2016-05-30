@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-04-26 04:38+0000\n"
+"POT-Creation-Date: 2016-05-09 17:06+0000\n"
 "PO-Revision-Date: 2016-05-09 19:05+0200\n"
 "Last-Translator: Cédric Valmary (totenoc.eu) <cvalmary@yahoo.fr>\n"
 "Language-Team: Tot En Òc\n"
@@ -258,8 +258,6 @@ msgstr "Camp de minas :"
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:350
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
