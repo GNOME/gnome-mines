@@ -79,6 +79,7 @@ public class Mines : Gtk.Application
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
+    private SimpleAction[] size_actions = new SimpleAction[4];
     private Gtk.AspectFrame new_game_screen;
     private Gtk.AspectFrame custom_game_screen;
     private Gtk.CssProvider theme_provider;
@@ -205,6 +206,12 @@ public class Mines : Gtk.Application
         repeat_size_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
         pause_action.set_enabled (false);
+
+        size_actions[0] = lookup_action ("small-size") as SimpleAction;
+        size_actions[1] = lookup_action ("medium-size") as SimpleAction;
+        size_actions[2] = lookup_action ("large-size") as SimpleAction;
+        size_actions[3] = lookup_action ("custom-size") as SimpleAction;
+
         add_action (settings.create_action (KEY_USE_OVERMINE_WARNING));
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
@@ -544,7 +551,7 @@ public class Mines : Gtk.Application
     {
         if (minefield != null)
             return;
-
+        size_actions_toggle (false);
         stack.visible_child_name = "custom_game";
     }
 
@@ -589,7 +596,16 @@ public class Mines : Gtk.Application
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
 
+        size_actions_toggle (true);
         stack.visible_child_name = "new_game";
+    }
+
+    private void size_actions_toggle (bool enabled)
+    {
+        for (int i=0; i < size_actions.length; i++)
+        {
+            size_actions[i].set_enabled (enabled);
+        }
     }
 
     private void start_game ()
@@ -868,6 +884,7 @@ public class Mines : Gtk.Application
         if (mode != settings.get_int (KEY_MODE))
             settings.set_int (KEY_MODE, mode);
 
+        size_actions_toggle (false);
         start_game ();
     }
 
