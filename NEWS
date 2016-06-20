@@ -1,3 +1,11 @@
+GNOME Mines 3.21.3
+==================
+
+* Smaller minimum tile size to fit larger boards on fullHD (Robert Roth)
+* Disable accels on the custom game screen (Robert Roth)
+* Use libgames-support for score tracking (Michael Catanzaro, Nikhar Agrawal)
+* Updated translations
+
 GNOME Mines 3.20.0
 ==================
 
