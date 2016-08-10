@@ -29,6 +29,7 @@
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-mines/stable/</url>
+  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
   <update_contact>robert.roth.off_at_gmail.com</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
@@ -38,8 +39,5 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <translation type="gettext">gnome-mines</translation>
-
   <_developer_name>The GNOME Project</_developer_name>
-
-  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
 </component>
