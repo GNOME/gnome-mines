@@ -3,6 +3,7 @@
 <component type="desktop">
   <id>gnome-mines.desktop</id>
   <metadata_license>CC0-1.0</metadata_license>
+
   <project_license>GPL-3.0+ and CC-BY-SA-3.0</project_license>
   <_name>GNOME Mines</_name>
   <_summary>Clear hidden mines from a minefield</_summary>
@@ -20,7 +21,7 @@
     </_p>
   </description>
   <screenshots>
-    <screenshot type="default" width="748" height="563">
+    <screenshot type="default" height="563" width="748">
       <image>https://people.gnome.org/~mcatanzaro/gnome-mines.png</image>
     </screenshot>
   </screenshots>
@@ -28,7 +29,7 @@
   <url type="bugtracker">https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines</url>
   <url type="donation">http://www.gnome.org/friends/</url>
   <url type="help">https://help.gnome.org/users/gnome-mines/stable/</url>
-  <update_contact>mcatanzaro_at_gnome.org</update_contact>
+  <update_contact>robert.roth.off_at_gmail.com</update_contact>
   <project_group>GNOME</project_group>
   <kudos>
     <kudo>AppMenu</kudo>
@@ -37,4 +38,8 @@
     <kudo>UserDocs</kudo>
   </kudos>
   <translation type="gettext">gnome-mines</translation>
+
+  <_developer_name>The GNOME Project</_developer_name>
+
+  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
 </component>
