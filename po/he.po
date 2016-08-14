@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.he\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-19 12:32+0300\n"
-"PO-Revision-Date: 2015-07-19 12:32+0300\n"
+"POT-Creation-Date: 2016-08-14 16:21+0300\n"
+"PO-Revision-Date: 2016-08-14 16:24+0300\n"
 "Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
 "Language-Team: עברית <>\n"
 "Language: he\n"
@@ -52,9 +52,13 @@ msgstr ""
 "ניתן לבחור את גודל השדה הרצוי למשחק בתחילת המשחק. אם נתקעת ניתן לבקש רמז: "
 "מתלווה אליו ענישת זמן אך זה עדיף על פגיעה במוקש!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "מיזם GNOME"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "מוקשים"
 
@@ -174,8 +178,8 @@ msgstr "_ביטול"
 msgid "_Play Game"
 msgstr "ל_שחק במשחק"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "ה_שהייה"
 
@@ -195,118 +199,131 @@ msgstr "ל_שחק שוב"
 msgid "Paused"
 msgstr "הושהה"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Small game"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Medium game"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Big game"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "_תוצאות"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "_מראה"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "ה_צגת אזהרות"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "_שימוש בדגלי סימן שאלה"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "ע_זרה"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "על _אודות"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "י_ציאה"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_מוקשים"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "_משחק חדש"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_תכנים"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "שדה מוקשים:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, מוקש אחד"
+msgstr[1] "%d × %d, %d מוקשים"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "מותאם אישית"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "מוקש <b>אחד</b>"
 msgstr[1] "<b>%d</b> מוקשים"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "האם ברצונך להתחיל משחק חדש?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "אם בחירתך תהיה להתחיל משחק חדש אז התהליך הנוכחי שלך יאבד."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "שמירת המשחק הנוכחי"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "הֹתחלת משחק חדש"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "ה_תחלה מחדש"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_המשך"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "ל_שחק שוב"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "משחק ראשי:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "תוצאה:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "תמיכה באפשרות שינוי גודל ובגרפיקה וקטורית (SVG):"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "ניקוי מוקשי נפץ מהלוח"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "גיל אשר <dolfin@rpg.org.il>\n"
@@ -321,37 +338,6 @@ msgstr ""
 "פרויקט תרגום GNOME לעברית:\n"
 "‏http://gnome-il.berlios.de"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_סגירה"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "משחק חדש"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_אישור"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "גודל:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "תאריך"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "זמן"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, מוקש אחד"
-msgstr[1] "%u × %u, %u מוקשים"
-
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
 msgstr "שימוש בה_נפשות"
@@ -363,6 +349,24 @@ msgstr "בחירת ערכת נושא"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "סגירה"
+
+#~ msgid "_Close"
+#~ msgstr "_סגירה"
+
+#~ msgid "New Game"
+#~ msgstr "משחק חדש"
+
+#~ msgid "_OK"
+#~ msgstr "_אישור"
+
+#~ msgid "Size:"
+#~ msgstr "גודל:"
+
+#~ msgid "Date"
+#~ msgstr "תאריך"
+
+#~ msgid "Time"
+#~ msgstr "זמן"
 
 #~ msgid "_Preferences"
 #~ msgstr "ה_עדפות"
@@ -4078,9 +4082,6 @@ msgstr "סגירה"
 
 #~ msgid "Pileon"
 #~ msgstr "פילאון"
-
-#~ msgid "Canfield"
-#~ msgstr "קאנפילד"
 
 #~ msgid "Thirteen"
 #~ msgstr "שלושה־עשר"
