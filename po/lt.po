@@ -8,15 +8,15 @@
 # Vytautas Povilaitis <punktyras@nkm.lt>, 2007.
 # Gintautas Miliauskas <gintas@akl.lt>, 2006, 2007, 2008, 2010.
 # Algimantas Margevičius <gymka@mail.ru>, 2011.
-# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014, 2015.
+# Aurimas Černius <aurisc4@gmail.com>, 2010, 2013, 2014, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-07 07:28+0000\n"
-"PO-Revision-Date: 2015-09-07 14:50+0300\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-08-14 21:18+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -57,9 +57,13 @@ msgstr ""
 "užstrigsite, galite prašyti patarimo: būsite nubaustas laiko bauda, bet tai "
 "geriau, nei užlipti ant minos!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME projektas"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Minos"
 
@@ -180,8 +184,8 @@ msgstr "_Atsisakyti"
 msgid "_Play Game"
 msgstr "_Žaisti žaidimą"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "Pristabdyti"
 
@@ -201,67 +205,83 @@ msgstr "_Žaisti dar kartą"
 msgid "Paused"
 msgstr "Pauzė"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Atspausdinti leidimo versiją ir išeiti"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Mažas žaidimas"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Vidutinis žaidimas"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Didelis žaidimas"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "_Taškai"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "Iš_vaizda"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "_Rodyti įspėjimus"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "Na_udoti klaustukų vėliavėles"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "_Apie"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "_Išeiti"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Minos"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "_Naujas žaidimas"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Minų laukas:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+#| msgid "%u × %u, %u mine"
+#| msgid_plural "%u × %u, %u mines"
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d mina"
+msgstr[1] "%d × %d, %d minos"
+msgstr[2] "%d × %d, %d minų"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Pasirinktinis"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -269,51 +289,51 @@ msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minos"
 msgstr[2] "<b>%d</b> minų"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Ar norite pradėti naują žaidimą?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Jei pradėsite naują žaidimą, jūsų dabartinis progresas bus prarastas."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Likti esamame žaidime"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Pradėti naują žaidimą"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "Žaisti iš _naujo"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_Tęsti"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "_Žaisti dar kartą"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Pagrindinis žaidimas:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Taškai:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Dydžio keitimas ir SVG palaikymas:"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Išvalykite sprogstančias minas iš lentos"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Paskutinis vertėjas:\n"
@@ -324,38 +344,6 @@ msgstr ""
 "Justina Klingaitė <justina.klingaite@gmail.com>\n"
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Užverti"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Naujas žaidimas"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_Gerai"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Dydis:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Data"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Laikas"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mina"
-msgstr[1] "%u × %u, %u minos"
-msgstr[2] "%u × %u, %u minų"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -368,6 +356,24 @@ msgstr "Pasirinkite temą"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "Užverti"
+
+#~ msgid "_Close"
+#~ msgstr "_Užverti"
+
+#~ msgid "New Game"
+#~ msgstr "Naujas žaidimas"
+
+#~ msgid "_OK"
+#~ msgstr "_Gerai"
+
+#~ msgid "Size:"
+#~ msgstr "Dydis:"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Time"
+#~ msgstr "Laikas"
 
 #~ msgid "5/10"
 #~ msgstr "5/10"
