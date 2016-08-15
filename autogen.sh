@@ -15,10 +15,10 @@ cd $srcdir
 # Use the style-checker as pre-commit and pre-applypatch hooks
 if [ -d $srcdir/.git ]; then
         if [ ! -L $srcdir/.git/hooks/pre-commit ]; then
-            ln -s ../../../libgames-support/style-checker $srcdir/.git/hooks/pre-commit && echo "Enabled pre-commit style checker." || :
+            ln -s ../../../libgnome-games-support/style-checker $srcdir/.git/hooks/pre-commit && echo "Enabled pre-commit style checker." || :
         fi
         if [ ! -L $srcdir/.git/hooks/pre-applypatch ]; then
-            ln -s ../../../libgames-support/style-checker $srcdir/.git/hooks/pre-applypatch && echo "Enabled pre-applypatch style checker." || :
+            ln -s ../../../libgnome-games-support/style-checker $srcdir/.git/hooks/pre-applypatch && echo "Enabled pre-applypatch style checker." || :
         fi
 fi
 
