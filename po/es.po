@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-06-14 20:08+0000\n"
-"PO-Revision-Date: 2016-04-26 10:06+0200\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-08-16 12:15+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -54,6 +54,10 @@ msgstr ""
 "Puede seleccionar el tamaño del tablero en el que quiere jugar al principio "
 "de la partida. Si tiene problema, puede pedir una pista: hay una "
 "penalización del tiempo, pero eso mejor que pisar una mina."
+
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El proyecto GNOME"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
 #: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
@@ -327,7 +331,7 @@ msgstr "Eliminar las minas explosivas del tablero"
 #: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2012\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2016\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2008\n"
 "Lucas Vieites <lucas@asixinformatica.com>, 2002-2008\n"
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
