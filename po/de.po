@@ -14,7 +14,7 @@
 # Philipp Kerling <k.philipp@gmail.com>, 2007-2008.
 # Björn Deiseroth <service@dual-creators.de>, 2007.
 # Andre Klapper <ak-47@gmx.net>, 2008-2009.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2013.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2013, 2016.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2015.
@@ -25,16 +25,16 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-05-05 08:57+0000\n"
-"PO-Revision-Date: 2016-05-22 20:26+0100\n"
-"Last-Translator: Friedrich Herbst <fherbst@opmbx.org>\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-08-21 11:57+0200\n"
+"Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
@@ -68,9 +68,13 @@ msgstr ""
 "Zeitstrafe dafür, aber das ist immer noch besser, als auf eine Mine zu "
 "treffen!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Das GNOME-Projekt"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
-#: ../src/gnome-mines.vala:852
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Minen"
 
@@ -192,8 +196,8 @@ msgstr "_Abbrechen"
 msgid "_Play Game"
 msgstr "Spiel _starten"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:640
-#: ../src/gnome-mines.vala:754 ../src/gnome-mines.vala:801
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -213,132 +217,132 @@ msgstr "_Weiterers Spiel"
 msgid "Paused"
 msgstr "Pausiert"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Versionsnummer ausgeben und beenden"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Kleines Spiel"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Mittelgroßes Spiel"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Großes Spiel"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "Er_gebnisse"
 
-#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "_Erscheinungsbild"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "_Zeige Warnungen"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "_Fragen-Fahne zeigen"
 
-#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Minen"
 
-#: ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "_Neues Spiel"
 
-#: ../src/gnome-mines.vala:266
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "Inha_lt"
 
 #. Label on the scores dialog
-#: ../src/gnome-mines.vala:316
+#: ../src/gnome-mines.vala:323
 msgid "Minefield:"
 msgstr "Minenfeld:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: ../src/gnome-mines.vala:350
+#: ../src/gnome-mines.vala:357
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d Mine"
 msgstr[1] "%d × %d, %d Minen"
 
-#: ../src/gnome-mines.vala:409
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: ../src/gnome-mines.vala:487
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> Mine"
 msgstr[1] "<b>%d</b> Minen"
 
-#: ../src/gnome-mines.vala:597
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Möchten Sie ein neues Spiel starten?"
 
-#: ../src/gnome-mines.vala:598
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr ""
 "Wenn Sie ein neues Spiel starten, geht Ihr aktueller Fortschritt verloren."
 
-#: ../src/gnome-mines.vala:599
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Das aktuelle Spiel behalten"
 
-#: ../src/gnome-mines.vala:600
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Ein neues Spiel starten"
 
-#: ../src/gnome-mines.vala:641
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "_Von neuem beginnen"
 
-#: ../src/gnome-mines.vala:752
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_Fortsetzen"
 
-#: ../src/gnome-mines.vala:770
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "Nochmal _spielen"
 
-#: ../src/gnome-mines.vala:825
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Hauptspiel:"
 
-#: ../src/gnome-mines.vala:830
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Punkte:"
 
-#: ../src/gnome-mines.vala:833
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Größenänderungs-/SVG-Unterstützung:"
 
-#: ../src/gnome-mines.vala:855
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Explosive Minen vom Feld räumen"
 
-#: ../src/gnome-mines.vala:862
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
