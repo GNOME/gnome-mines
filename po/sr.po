@@ -1,29 +1,27 @@
 # Serbian translation of gnome-mines
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2015.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2016.
 # This file is distributed under the same license as the gnome-mines package.
 # Душан Марјановић <madafaka@bsd.org.yu>
 # Игор Несторовић <igor@prevod.org> 2005.
 # Милош Поповић <gpopac@gmail.com>, 2010.
 # Бранко Кокановић <branko.kokanovic@gmail.com> 2010.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2015.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-22 07:49+0000\n"
-"PO-Revision-Date: 2015-09-22 16:27+0200\n"
-"Last-Translator: Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail."
-"com>\n"
-"Language-Team: Serbian <gnom@prevod.org>\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-08-28 08:56+0200\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
-"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 1.8.4\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
@@ -56,9 +54,13 @@ msgstr ""
 "савет: али то се кажњава временом, мада је и то боље него ли летети небу под "
 "облаке нагазивши на мину!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Гномов пројекат"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Мине"
 
@@ -178,8 +180,8 @@ msgstr "_Откажи"
 msgid "_Play Game"
 msgstr "_Играј игру"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "_Застани"
 
@@ -199,67 +201,84 @@ msgstr "_Играј опет"
 msgid "Paused"
 msgstr "Паузирано"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Исписује издање и излази"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Мала игра"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Средња игра"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Велика игра"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "_Резултати"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "_Изглед"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "Прикажи _упозорења"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "_Користи ознаке питања"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "По_моћ"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "_О програму"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "_Изађи"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Мине"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "_Нова игра"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Садржај"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Минско поље:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+#| msgid "%u × %u, %u mine"
+#| msgid_plural "%u × %u, %u mines"
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d мина"
+msgstr[1] "%d × %d, %d мине"
+msgstr[2] "%d × %d, %d мина"
+msgstr[3] "%d × %d, једна мина"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Произвољно"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -268,51 +287,51 @@ msgstr[1] "<b>%d</b> мине"
 msgstr[2] "<b>%d</b> мина"
 msgstr[3] "<b>Једна</b> мина"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Да ли желите да започнете нову игру?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ако започнете нову игру, ваш тренутни напредак ће бити изгубљен."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Задржи тренутну игру"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Започни нову игру"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "_Почни"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_Настави"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "_Играј опет"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Главна игра:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Разултат:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Подршка промене величине и СВГ:"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Уклоните експлозивне мине са табле"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
@@ -322,39 +341,6 @@ msgstr ""
 "Марко М. Костић (Marko M. Kostić) <marko.m.kostic@gmail.com>\n"
 "\n"
 "http://prevod.org — превод на српски језик"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Затвори"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Нова игра"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "У _реду"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Величина:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Датум"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Време"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u мина"
-msgstr[1] "%u × %u, %u мине"
-msgstr[2] "%u × %u, %u мина"
-msgstr[3] "%u × %u, једна мина"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -367,6 +353,24 @@ msgstr "Изаберите тему"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "Затвори"
+
+#~ msgid "_Close"
+#~ msgstr "_Затвори"
+
+#~ msgid "New Game"
+#~ msgstr "Нова игра"
+
+#~ msgid "_OK"
+#~ msgstr "У _реду"
+
+#~ msgid "Size:"
+#~ msgstr "Величина:"
+
+#~ msgid "Date"
+#~ msgstr "Датум"
+
+#~ msgid "Time"
+#~ msgstr "Време"
 
 #~ msgid "_Preferences"
 #~ msgstr "_Поставке"
