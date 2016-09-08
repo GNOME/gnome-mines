@@ -11,16 +11,16 @@ msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mi"
 "nes&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-02-04 09:26+0000\n"
-"PO-Revision-Date: 2016-02-06 18:34+0200\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-09-08 18:48+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
-"2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2);\n"
 "X-Generator: Lokalize 2.0\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
@@ -54,9 +54,13 @@ msgstr ""
 "Katras spēles sākumā vari izvēlēties laukuma izmēru. Ja iestrēgsti, vari "
 "prasīt padomu, būs laika sods, bet tas ir labāk, kā uzkāpt uz mīnas!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "GNOME projekts"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
-#: ../src/gnome-mines.vala:805
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Mīnas"
 
@@ -65,12 +69,10 @@ msgid "minesweeper;"
 msgstr "minesweeper;mīnu lauks;mīnas;"
 
 #: ../data/gnome-mines.desktop.in.h:4
-#| msgid "Small"
 msgid "Small board"
 msgstr "Mazs galdiņš"
 
 #: ../data/gnome-mines.desktop.in.h:5
-#| msgid "Medium"
 msgid "Medium board"
 msgstr "Vidējs galdiņš"
 
@@ -120,7 +122,6 @@ msgstr ""
 "daudzi lauciņi"
 
 #: ../data/org.gnome.mines.gschema.xml.h:9
-#| msgid "Enable _animation"
 msgid "Enable animations"
 msgstr "Ieslēgt animāciju"
 
@@ -180,8 +181,8 @@ msgstr "At_celt"
 msgid "_Play Game"
 msgstr "S_pēlēt spēli"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:602
-#: ../src/gnome-mines.vala:716 ../src/gnome-mines.vala:754
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "_Pauzēt"
 
@@ -201,72 +202,83 @@ msgstr "S_pēlēt vēlreiz"
 msgid "Paused"
 msgstr "Apturēts"
 
-#: ../src/gnome-mines.vala:88
-#| msgid "Show release version"
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Parādīt informāciju par laidienu un iziet"
 
-#: ../src/gnome-mines.vala:89
-#| msgid "Small"
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Maza spēle"
 
-#: ../src/gnome-mines.vala:90
-#| msgid "Medium"
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Vidēja spēle"
 
-#: ../src/gnome-mines.vala:91
-#| msgid "Main game:"
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Liela spēle"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "Re_zultāti"
 
-#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
-#| msgid "Appearance"
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "_Izskats"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "Rādīt brīdinājumu_s"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "Izmantot jautājum_u karogus"
 
-#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "_Palīdzība"
 
-#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "P_ar"
 
-#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "_Iziet"
 
-#: ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Mīnas"
 
-#: ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "Jau_na spēle"
 
-#: ../src/gnome-mines.vala:266
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Saturs"
 
-#: ../src/gnome-mines.vala:363
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Mīnu lauks:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+#| msgid "%u × %u, %u mine"
+#| msgid_plural "%u × %u, %u mines"
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d mīna"
+msgstr[1] "%d × %d, %d mīnas"
+msgstr[2] "%d × %d, %d mīnu"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Pielāgots"
 
-#: ../src/gnome-mines.vala:442
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -274,106 +286,83 @@ msgstr[0] "<b>%d</b> mīna"
 msgstr[1] "<b>%d</b> mīnas"
 msgstr[2] "<b>%d</b> mīnu"
 
-#: ../src/gnome-mines.vala:559
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Vai vēlies sākt jaunu spēli?"
 
-#: ../src/gnome-mines.vala:560
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ja sāksi jaunu spēli, pašreizējais progress tiks pazaudēts."
 
-#: ../src/gnome-mines.vala:561
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Turpināt šo spēli"
 
-#: ../src/gnome-mines.vala:562
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Sākt jaunu spēli"
 
-#: ../src/gnome-mines.vala:603
-#| msgid "Game Over"
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "Sākt no j_auna"
 
-#: ../src/gnome-mines.vala:714
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "Tu_rpināt"
 
-#: ../src/gnome-mines.vala:732
-#| msgid "_Play Again"
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "S_pēlēt vēlreiz"
 
-#: ../src/gnome-mines.vala:778
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Galvenā spēle:"
 
-#: ../src/gnome-mines.vala:783
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Rezultāts:"
 
-#: ../src/gnome-mines.vala:786
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Izmēru mainīšana un SVG atbalsts:"
 
-#: ../src/gnome-mines.vala:808
-#| msgid ""
-#| "Clear explosive mines off the board\n"
-#| "\n"
-#| "Mines is a part of GNOME Games."
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Attīri galdiņu no sprāgstošām mīnām"
 
-#: ../src/gnome-mines.vala:815
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
 "Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Aizvērt"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Jauna spēle"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_Labi"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Izmērs:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Datums"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Laiks"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mīna"
-msgstr[1] "%u × %u, %u mīnas"
-msgstr[2] "%u × %u, %u mīnu"
-
 #: ../src/theme-selector-dialog.vala:77
-#| msgid "_Animations"
 msgid "Use _animations"
 msgstr "Lietot _animācijas"
 
 #: ../src/theme-selector-dialog.vala:93
-#| msgid "Select Game"
 msgid "Select Theme"
 msgstr "Izvēlieties motīvu"
 
 #: ../src/theme-selector-dialog.vala:116
-#| msgid "_Close"
 msgid "Close"
 msgstr "Aizvērt"
+
+#~ msgid "_Close"
+#~ msgstr "_Aizvērt"
+
+#~ msgid "New Game"
+#~ msgstr "Jauna spēle"
+
+#~ msgid "_OK"
+#~ msgstr "_Labi"
+
+#~ msgid "Size:"
+#~ msgstr "Izmērs:"
+
+#~ msgid "Date"
+#~ msgstr "Datums"
+
+#~ msgid "Time"
+#~ msgstr "Laiks"
