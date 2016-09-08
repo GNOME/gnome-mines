@@ -1,18 +1,18 @@
 # Vietnamese translation for Gnome mines.
 # Bản dịch tiếng Việt dành cho Gnome mines.
-# Copyright © 2015 GNOME I18N Project for Vietnamese.
+# Copyright © 2016 GNOME I18N Project for Vietnamese.
 # T.M.Thanh <tmthanh@yahoo.com>, 2002.
 # Nguyễn Thái Ngọc Duy <pclouds@gmail.com>, 2007, 2012.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
-# Trần Ngọc Quân <vnwildman@gmail.com>, 2015.
+# Trần Ngọc Quân <vnwildman@gmail.com>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-10-02 19:50+0000\n"
-"PO-Revision-Date: 2015-10-03 14:40+0700\n"
+"POT-Creation-Date: 2016-09-06 18:24+0000\n"
+"PO-Revision-Date: 2016-09-08 08:20+0700\n"
 "Last-Translator: Trần Ngọc Quân <vnwildman@gmail.com>\n"
 "Language-Team: Vietnamese <gnome-vi-list@gnome.org>\n"
 "Language: vi\n"
@@ -52,9 +52,13 @@ msgstr ""
 "Nếu bạn ở thế bí, bạn có thể hỏi gợi ý: ở đây có hình phạt thời gian, nhưng "
 "dù sao thì vẫn tốt hơn là dẫm phải mìn!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Dự án GNOME"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Dò mìn"
 
@@ -99,8 +103,8 @@ msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"Đặt là Đúng (true) để bật hiển thị biểu tượng cảnh báo khi có quá nhiều cờ "
-"được đặt kế đến số lượng ô."
+"Chọn để bật hiển thị biểu tượng cảnh báo khi có quá nhiều cờ được đặt kế đến "
+"số lượng ô."
 
 #: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
@@ -110,8 +114,7 @@ msgstr "Bật tự động để cờ"
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
-msgstr ""
-"Đặt thành đúng (true) để tự động đặt cờ là có mìn khi đủ vuông liên quan"
+msgstr "Chọn để tự động đặt cờ là có mìn khi đủ vuông liên quan"
 
 #: ../data/org.gnome.mines.gschema.xml.h:9
 msgid "Enable animations"
@@ -173,8 +176,8 @@ msgstr "_Thôi"
 msgid "_Play Game"
 msgstr "_Chơi"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "Tạm _dừng"
 
@@ -194,149 +197,131 @@ msgstr "_Chơi lại"
 msgid "Paused"
 msgstr "Đã tạm dừng"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Hiển thị phiên bản phát hành rồi thoát"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Ván chơi nhỏ"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Ván chơi vừa"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Ván chơi lớn"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "Đ_iểm"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "_Diện mạo"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "_Hiển thị cảnh báo"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "_Dùng cờ câu hỏi"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "Trợ _giúp"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "_Giới thiệu"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "T_hoát"
 
-#: ../src/gnome-mines.vala:252
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Mìn"
 
-#: ../src/gnome-mines.vala:253
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "Lượt chơi _mới"
 
-#: ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Nội dung"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Bãi mìn:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d quả mìn"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Tự chọn"
 
-#: ../src/gnome-mines.vala:432
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> quả mìn"
 
-#: ../src/gnome-mines.vala:546
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Bạn có muốn bắt đầu một lượt chơi mới không?"
 
-#: ../src/gnome-mines.vala:547
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Nếu bạn bắt đầu một ván chơi mới, tiến trình hiện tại của bạn sẽ mất."
 
-#: ../src/gnome-mines.vala:548
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Giữ lượt chơi hiện tại"
 
-#: ../src/gnome-mines.vala:549
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Bắt đầu lượt chơi mới"
 
-#: ../src/gnome-mines.vala:590
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "_Lại lần nữa"
 
-#: ../src/gnome-mines.vala:693
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_Tiếp tục lại"
 
-#: ../src/gnome-mines.vala:711
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "Chơi _lại"
 
-#: ../src/gnome-mines.vala:757
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Trò chơi chính:"
 
-#: ../src/gnome-mines.vala:762
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Điểm:"
 
-#: ../src/gnome-mines.vala:765
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Hỗ trợ đổi cỡ và SVG:"
 
-#: ../src/gnome-mines.vala:787
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Dọn sạch mìn nổ ra khỏi bảng"
 
-#: ../src/gnome-mines.vala:794
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr "Nhóm Việt hóa GNOME <gnome-vi-list@gnome.org>"
-
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "Đón_g"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Lượt chơi mới"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_OK"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Cỡ:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Ngày"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Thời gian"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u quả mìn"
 
 #: ../src/theme-selector-dialog.vala:77
 msgid "Use _animations"
@@ -349,3 +334,21 @@ msgstr "Chọn sắc thái"
 #: ../src/theme-selector-dialog.vala:116
 msgid "Close"
 msgstr "Đóng"
+
+#~ msgid "_Close"
+#~ msgstr "Đón_g"
+
+#~ msgid "New Game"
+#~ msgstr "Lượt chơi mới"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Cỡ:"
+
+#~ msgid "Date"
+#~ msgstr "Ngày"
+
+#~ msgid "Time"
+#~ msgstr "Thời gian"
