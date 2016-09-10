@@ -276,8 +276,8 @@ msgstr "Campo de minas:"
 #| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] "%u × %u, %u mina"
-msgstr[1] "%u × %u, %u minas"
+msgstr[0] "%d × %d, %d mina"
+msgstr[1] "%d × %d, %d minas"
 
 #: ../src/gnome-mines.vala:416
 msgid "Custom"
