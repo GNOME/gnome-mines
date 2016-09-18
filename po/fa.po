@@ -6,15 +6,15 @@
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
 # Danial Behzadi <dani.behzi@gmail.com>, 2012.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2013-02-15 08:01+0000\n"
-"PO-Revision-Date: 2013-03-23 11:31+0330\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-09-18 13:37+0430\n"
 "Last-Translator: Arash Mousavi <mousavi.arash@gmail.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -23,289 +23,418 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.9\n"
 
-#: ../data/gnome-mines.desktop.in.in.h:1 ../src/gnome-mines.vala:92
-#: ../src/gnome-mines.vala:136 ../src/gnome-mines.vala:735
-msgid "Mines"
-msgstr "مین‌ها"
+#: ../data/gnome-mines.appdata.xml.in.h:1
+msgid "GNOME Mines"
+msgstr "مین‌های گنوم"
 
-#: ../data/gnome-mines.desktop.in.in.h:2
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
 msgid "Clear hidden mines from a minefield"
 msgstr "پاک‌سازی مین‌ها از میدان مین"
 
-#: ../data/gnome-mines.desktop.in.in.h:3
-msgid "minesweeper;"
-msgstr "مین‌یاب;"
+#: ../data/gnome-mines.appdata.xml.in.h:3
+msgid ""
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win the "
+"game when you've flagged every mine on the board. Be careful not to trigger one, "
+"or the game is over!"
+msgstr ""
+"«مین‌های گنوم» یک پازل است که شما به دنبال مین‌های مخفی شده می‌گردید. به سرعت "
+"خانه‌های جدول را به عنوان مین مشخص کنید تا تخته بازی را امن‌تر کنید. شما بازی را "
+"زمانی که تمام مین‌های تخته را مشخص کرده باشید برنده می‌شوید. مواضب باشید که یکی از "
+"آنها را منفجر نکنید، وگرنه بازی تمام می‌شود!"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:1
+#: ../data/gnome-mines.appdata.xml.in.h:4
+msgid ""
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
+"that's better than hitting a mine!"
+msgstr ""
+"شما می‌توانید در شروع بازی اندازه بازی را مشخص کنید. اگر گیر کردید، می‌توانید "
+"راهنمایی بگیرید: البته اینکار جریمهٔ زمانی دارد، اما از منفجر کردن یک مین بهتر "
+"است!"
+
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "پروژه گنوم"
+
+#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
+msgid "Mines"
+msgstr "مین‌ها"
+
+#: ../data/gnome-mines.desktop.in.h:3
+msgid "minesweeper;"
+msgstr "minesweeper;مین‌یاب;"
+
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "تخته کوچک"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "تخته متوسط"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "تخته بزرگ"
+
+#: ../data/org.gnome.mines.gschema.xml.h:1
+msgid "The theme to use"
+msgstr "تم مورد استفاده"
+
+#: ../data/org.gnome.mines.gschema.xml.h:2
+msgid "The title of the tile theme to use."
+msgstr "عنوان تم کاشی مورد استفاده."
+
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Use the unknown flag"
 msgstr "استفاده از پرچم نامعلوم"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:4
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "برای توانایی علامت‌گذاری مربع‌ها به عنوان نامعلوم روی درست تنظیم شود."
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Warning about too many flags"
 msgstr "اخطار درباره‌ی پرچم‌های خیلی زیاد"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:4
-msgid "Set to true to enable warning icons when too many flags are placed."
+#: ../data/org.gnome.mines.gschema.xml.h:6
+msgid ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
 msgstr ""
-"برای فعال کردن اخطار هنگامی که پرچم‌های خیلی زیادی قرار داده شده است روی درست "
-"تنظیم شود."
+"بر روی درست تنظیم شود تا هنگامی که پرچم‌های سوال زیادی در کنار یک خانه عددی قرار "
+"داده شده، هشدار داده شود."
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:5
-msgid "Display border around numbers"
-msgstr "نمایش حاشیه کنار عددها"
-
-#: ../data/org.gnome.mines.gschema.xml.in.h:6
-msgid "Set to true to display a border around mine indication numbers."
-msgstr "برای نمایش حاشیه دور عددهای نشانگر مین بر روی درست تنظیم کنید."
-
-#: ../data/org.gnome.mines.gschema.xml.in.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "قعال سازی جا گذاری خودکار پرچم‌ها"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:8
-#| msgid ""
-#| "Set to true to have gnomine automatically flag squares as mined when "
-#| "enough squares are revealed"
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع فاش "
-"شد، روی درست تنظیم شود"
+"برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع فاش شد، "
+"روی درست تنظیم شود"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:9
+msgid "Enable animations"
+msgstr "فعال‌سازی پویانمایی"
+
+#: ../data/org.gnome.mines.gschema.xml.h:10
+msgid "Set to false to disable theme-defined transition animations"
+msgstr "اگر روی نادرست تنظیم شود، پویانمایی‌های تعریف شده توسط تم غیرفعال می‌شود"
+
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
 msgstr "تعداد ستون‌ها در یک بازی سفارشی"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:10
+#: ../data/org.gnome.mines.gschema.xml.h:12
 msgid "Number of rows in a custom game"
 msgstr "تعداد ردیف‌ها در یک بازی سفارشی"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:13
 msgid "The number of mines in a custom game"
 msgstr "تعداد مین‌ها در یک بازی سفارشی"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:12
+#: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "Board size"
 msgstr "اندازه‌ی صفحه"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:13
+#: ../data/org.gnome.mines.gschema.xml.h:15
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "اندازه‌ی صفحه (۰-۲ = کوچک-بزرگ، ۳=سفارشی)"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:14
+#: ../data/org.gnome.mines.gschema.xml.h:16
 msgid "Width of the window in pixels"
 msgstr "عرض پنجره به پیکسل"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:15
+#: ../data/org.gnome.mines.gschema.xml.h:17
 msgid "Height of the window in pixels"
 msgstr "ارتفاع پنجره به پیکسل"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:16
+#: ../data/org.gnome.mines.gschema.xml.h:18
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
-#: ../data/org.gnome.mines.gschema.xml.in.h:17
-msgid "true if the window is fullscren"
-msgstr "درست اگر پنجره تمام‌صفحه باشد"
+#: ../data/interface.ui.h:2
+msgid "_Width"
+msgstr "_عرض"
 
-#: ../src/gnome-mines.vala:111
-msgid "_New Game"
-msgstr "بازی _جدید"
+#: ../data/interface.ui.h:3
+msgid "_Height"
+msgstr "_ارتفاع"
 
-#: ../src/gnome-mines.vala:112
-msgid "_Replay Size"
-msgstr "اندازه‌ی بازی _مجدد"
+#: ../data/interface.ui.h:4
+msgid "Percent _mines"
+msgstr "درصد _مین‌ها"
 
-#: ../src/gnome-mines.vala:113
-msgid "_Hint"
-msgstr "_راهنمایی"
+#: ../data/interface.ui.h:5
+msgid "_Cancel"
+msgstr "_لغو"
 
-#: ../src/gnome-mines.vala:114 ../src/gnome-mines.vala:194
-#: ../src/gnome-mines.vala:643 ../src/gnome-mines.vala:644
-msgid "_Pause"
-msgstr "_مکث"
-
-#: ../src/gnome-mines.vala:115 ../src/gnome-mines.vala:201
-#: ../src/gnome-mines.vala:388
-msgid "_Fullscreen"
-msgstr "تمام _صفحه"
-
-#: ../src/gnome-mines.vala:116
-msgid "_Scores"
-msgstr "امتیا_زها"
-
-#: ../src/gnome-mines.vala:117
-msgid "_Preferences"
-msgstr "_ترجیحات"
-
-#: ../src/gnome-mines.vala:120
-msgid "_Help"
-msgstr "_راهنما"
-
-#: ../src/gnome-mines.vala:121
-msgid "_About"
-msgstr "_درباره"
-
-#: ../src/gnome-mines.vala:124
-msgid "_Quit"
-msgstr "_خروج"
-
-#: ../src/gnome-mines.vala:177
-msgid "_New"
-msgstr "_جدید"
-
-#: ../src/gnome-mines.vala:186
-msgid "Hint"
-msgstr "راهنمایی"
-
-#: ../src/gnome-mines.vala:251
-msgid "Field Size"
-msgstr "اندازه‌ی زمین"
-
-#: ../src/gnome-mines.vala:312
-msgid "H_orizontal:"
-msgstr "_افقی:"
-
-#: ../src/gnome-mines.vala:322
-msgid "_Vertical:"
-msgstr "_عمودی:"
-
-#: ../src/gnome-mines.vala:332
-msgid "_Number of mines:"
-msgstr "_تعداد مین‌ها:"
-
-#: ../src/gnome-mines.vala:353
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_بازی کردن"
 
-#: ../src/gnome-mines.vala:383
-msgid "_Leave Fullscreen"
-msgstr "تر_ک حالت تمام‌صفحه"
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656 ../src/gnome-mines.vala:770
+#: ../src/gnome-mines.vala:817
+msgid "_Pause"
+msgstr "_مکث"
 
-#: ../src/gnome-mines.vala:398
+#: ../data/interface.ui.h:8
+msgid "Change _Difficulty"
+msgstr "تغییر س_ختی:"
+
+#: ../data/interface.ui.h:9
+msgid "_Best Times"
+msgstr "زمان‌های _برتر"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "_بازی دوباره"
+
+#: ../data/interface.ui.h:11
+msgid "Paused"
+msgstr "مکث شده"
+
+#: ../src/gnome-mines.vala:89
+msgid "Print release version and exit"
+msgstr "نمایش نسخه‌ی انتشار و خروج"
+
+#: ../src/gnome-mines.vala:90
+msgid "Small game"
+msgstr "بازی کوچک"
+
+#: ../src/gnome-mines.vala:91
+msgid "Medium game"
+msgstr "بازی متوسط"
+
+#: ../src/gnome-mines.vala:92
+msgid "Big game"
+msgstr "بازی بزرگ"
+
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
+msgid "_Scores"
+msgstr "امتیا_زها"
+
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
+msgid "A_ppearance"
+msgstr "_ظاهر"
+
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
+msgid "_Show Warnings"
+msgstr "_نمایش هشدارها"
+
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
+msgid "_Use Question Flags"
+msgstr "ا_ستفاده از پرچ‌های سوال"
+
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
+msgid "_Help"
+msgstr "_راهنما"
+
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
+msgid "_About"
+msgstr "_درباره"
+
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
+msgid "_Quit"
+msgstr "_خروج"
+
+#: ../src/gnome-mines.vala:264
+msgid "_Mines"
+msgstr "_مین‌ها"
+
+#: ../src/gnome-mines.vala:265
+msgid "_New Game"
+msgstr "بازی _جدید"
+
+#: ../src/gnome-mines.vala:273
+msgid "_Contents"
+msgstr "م_حتویات"
+
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "زمین مین:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%Id × %Id، %Id مین"
+msgstr[1] "%Id × %Id، %Id مین"
+
+#: ../src/gnome-mines.vala:416
+msgid "Custom"
+msgstr "سفارشی"
+
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%Id</b> مین"
 msgstr[1] "<b>%Id</b> مین"
 
-#: ../src/gnome-mines.vala:462
-#, c-format
-msgid "Flags: %u/%u"
-msgstr "پرچم‌ها: %Iu/%Iu"
-
-#: ../src/gnome-mines.vala:505
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "آیا می‌خواهید بازی جدیدی آغاز کنید؟"
 
-#: ../src/gnome-mines.vala:506
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "اگر بازی جدید شروع کنید، پیشرفت فعلی شما از دست خواهد رفت."
 
-#: ../src/gnome-mines.vala:507
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "ادامه‌ی بازی فعلی"
 
-#: ../src/gnome-mines.vala:508
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "شروع بازی جدید"
 
-#: ../src/gnome-mines.vala:636 ../src/gnome-mines.vala:637
-msgid "Res_ume"
-msgstr "_از سر گیری"
+#: ../src/gnome-mines.vala:657
+msgid "St_art Over"
+msgstr "_شروع دوباره"
 
-#: ../src/gnome-mines.vala:684 ../src/gnome-mines.vala:1004
-#, c-format
-msgid "Time"
-msgstr "زمان"
+#: ../src/gnome-mines.vala:768
+msgid "_Resume"
+msgstr "ا_ز سر گیری"
 
-#: ../src/gnome-mines.vala:701
+#: ../src/gnome-mines.vala:786
+msgid "Play _Again"
+msgstr "بازی _دوباره"
+
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "بازی اصلی:"
 
-#: ../src/gnome-mines.vala:706
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "امتیاز:"
 
-#: ../src/gnome-mines.vala:709
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "پشتیبانی SVG و تغییر اندازه:"
 
-#: ../src/gnome-mines.vala:717
-msgid "Faces:"
-msgstr "صورت‌ها:"
+#: ../src/gnome-mines.vala:871
+msgid "Clear explosive mines off the board"
+msgstr "مین‌های انفجاری از صفحه پاک شوند"
 
-#: ../src/gnome-mines.vala:721
-msgid "Graphics:"
-msgstr "گرافیک‌ها:"
-
-#: ../src/gnome-mines.vala:738
-msgid ""
-"The popular logic puzzle minesweeper. Clear mines from a board using hints "
-"from squares you have already uncovered.\n"
-"\n"
-"Mines is a part of GNOME Games."
-msgstr ""
-"پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که "
-"پیش‌تر کشف کردید، پاک‌سازی کنید.\n"
-"\n"
-"مین‌ها جزیی از بازی‌ها گنوم است."
-
-#: ../src/gnome-mines.vala:745
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
-"دانیال بهزادی <dani.behzi@gmail.com>\n"
-"آرش موسوی <mousavi.arash@gmail.com>"
+"آرش موسوی <mousavi.arash@gmail.com>\n"
+"دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: ../src/gnome-mines.vala:748
-msgid "GNOME Games web site"
-msgstr "وب‌سایت بازی‌های گنوم"
+#: ../src/theme-selector-dialog.vala:77
+msgid "Use _animations"
+msgstr "استفاده از _پویانمایی"
 
-#: ../src/gnome-mines.vala:819
-msgid "Mines Preferences"
-msgstr "ترجیحات مین‌ها"
+#: ../src/theme-selector-dialog.vala:93
+msgid "Select Theme"
+msgstr "انتخاب تم"
 
-#: ../src/gnome-mines.vala:837
-msgid "_Use \"I'm not sure\" flags"
-msgstr "ا_ستفاده از پرچم «مطمئن نیستم»"
+#: ../src/theme-selector-dialog.vala:116
+msgid "Close"
+msgstr "خروج"
 
-#: ../src/gnome-mines.vala:843
-msgid "_Warn if too many flags have been placed"
-msgstr "ه_شدار اگر پرچم‌های خیلی زیادی کاشته شد"
+#~ msgid "Display border around numbers"
+#~ msgstr "نمایش حاشیه کنار عددها"
 
-#: ../src/gnome-mines.vala:849
-msgid "_Display numbers with border"
-msgstr "_نمایش عددها با حاشیه"
+#~ msgid "Set to true to display a border around mine indication numbers."
+#~ msgstr "برای نمایش حاشیه دور عددهای نشانگر مین بر روی درست تنظیم کنید."
 
-#: ../src/gnome-mines.vala:960
-msgid "New Game"
-msgstr "بازی جدید"
+#~ msgid "true if the window is fullscren"
+#~ msgstr "درست اگر پنجره تمام‌صفحه باشد"
 
-#: ../src/gnome-mines.vala:976
-msgid "Size:"
-msgstr "اندازه:"
+#~ msgid "_Replay Size"
+#~ msgstr "اندازه‌ی بازی _مجدد"
 
-#: ../src/gnome-mines.vala:1001
-msgid "Date"
-msgstr "تاریخ"
+#~ msgid "_Hint"
+#~ msgstr "_راهنمایی"
 
-#: ../src/gnome-mines.vala:1086
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%Iu × %Iu، %Iu مین"
-msgstr[1] "%Iu × %Iu، %Iu مین"
+#~ msgid "_Fullscreen"
+#~ msgstr "تمام _صفحه"
 
-#: ../src/minefield-view.vala:578
-msgid "Paused"
-msgstr "مکث شده"
+#~ msgid "_Preferences"
+#~ msgstr "_ترجیحات"
+
+#~ msgid "_New"
+#~ msgstr "_جدید"
+
+#~ msgid "Hint"
+#~ msgstr "راهنمایی"
+
+#~ msgid "Field Size"
+#~ msgstr "اندازه‌ی زمین"
+
+#~ msgid "H_orizontal:"
+#~ msgstr "_افقی:"
+
+#~ msgid "_Vertical:"
+#~ msgstr "_عمودی:"
+
+#~ msgid "_Number of mines:"
+#~ msgstr "_تعداد مین‌ها:"
+
+#~ msgid "_Leave Fullscreen"
+#~ msgstr "تر_ک حالت تمام‌صفحه"
+
+#~ msgid "Flags: %u/%u"
+#~ msgstr "پرچم‌ها: %Iu/%Iu"
+
+#~ msgid "Res_ume"
+#~ msgstr "_از سر گیری"
+
+#~ msgid "Time"
+#~ msgstr "زمان"
+
+#~ msgid "Faces:"
+#~ msgstr "صورت‌ها:"
+
+#~ msgid "Graphics:"
+#~ msgstr "گرافیک‌ها:"
+
+#~ msgid ""
+#~ "The popular logic puzzle minesweeper. Clear mines from a board using hints "
+#~ "from squares you have already uncovered.\n"
+#~ "\n"
+#~ "Mines is a part of GNOME Games."
+#~ msgstr ""
+#~ "پازل منطقی محبوب مین‌یاب. مین‌ها را به وسیله‌ی راهنمایی‌هایی از مربع‌هایی که پیش‌تر "
+#~ "کشف کردید، پاک‌سازی کنید.\n"
+#~ "\n"
+#~ "مین‌ها جزیی از بازی‌ها گنوم است."
+
+#~ msgid "GNOME Games web site"
+#~ msgstr "وب‌سایت بازی‌های گنوم"
+
+#~ msgid "Mines Preferences"
+#~ msgstr "ترجیحات مین‌ها"
+
+#~ msgid "_Use \"I'm not sure\" flags"
+#~ msgstr "ا_ستفاده از پرچم «مطمئن نیستم»"
+
+#~ msgid "_Warn if too many flags have been placed"
+#~ msgstr "ه_شدار اگر پرچم‌های خیلی زیادی کاشته شد"
+
+#~ msgid "_Display numbers with border"
+#~ msgstr "_نمایش عددها با حاشیه"
+
+#~ msgid "New Game"
+#~ msgstr "بازی جدید"
+
+#~ msgid "Size:"
+#~ msgstr "اندازه:"
+
+#~ msgid "Date"
+#~ msgstr "تاریخ"
 
 #~ msgid "Chess"
 #~ msgstr "شطرنج"
@@ -327,9 +456,6 @@ msgstr "مکث شده"
 
 #~ msgid "_Settings"
 #~ msgstr "_تنظیمات"
-
-#~ msgid "_Contents"
-#~ msgstr "م_حتویات"
 
 #~ msgid "Start a new game"
 #~ msgstr "شروع بازی جدید"
@@ -373,11 +499,9 @@ msgstr "مکث شده"
 #~ msgid "The piece to promote pawns to"
 #~ msgstr "ارتقای سربازان به مهره"
 
-#~ msgid ""
-#~ "The piece to promote to when a human player moves a pawn to the far rank"
+#~ msgid "The piece to promote to when a human player moves a pawn to the far rank"
 #~ msgstr ""
-#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا "
-#~ "می‌کند"
+#~ "مهره‌ای که سربازان بازیکن انسان هنگام رسیدن به ردیف آخر بدان ارتقا پیدا می‌کند"
 
 #~ msgid "A flag to enable 3D mode"
 #~ msgstr "پرچمی برای فعال کردن حالت سه‌بعدی"
@@ -523,9 +647,6 @@ msgstr "مکث شده"
 
 #~ msgid "One hour"
 #~ msgstr "یک ساعت"
-
-#~ msgid "Custom"
-#~ msgstr "سفارشی"
 
 #~ msgid "Simple"
 #~ msgstr "ساده"
@@ -828,8 +949,7 @@ msgstr "مکث شده"
 #~ msgid "Opponent has run out of time"
 #~ msgstr "زمان رقیب تمام شد"
 
-#~ msgid ""
-#~ "The same board state has occurred three times (three fold repetition)"
+#~ msgid "The same board state has occurred three times (three fold repetition)"
 #~ msgstr "وضعیت مشابه صفحه سه بار اتفاق افتاد"
 
 #~ msgid "Neither player can cause checkmate (insufficient material)"
@@ -898,16 +1018,11 @@ msgstr "مکث شده"
 #~ msgid "Failed to open game: %s"
 #~ msgstr "باز کردن بازی شکست خورد: %s"
 
-#~ msgid "Show release version"
-#~ msgstr "نمایش نسخه‌ی انتشار"
-
 #~ msgid "[FILE] - Play Chess"
 #~ msgstr "[FILE] - بازی شطرنج"
 
-#~ msgid ""
-#~ "Run '%s --help' to see a full list of available command line options."
-#~ msgstr ""
-#~ "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
+#~ msgid "Run '%s --help' to see a full list of available command line options."
+#~ msgstr "برای دیدن لیست کامل انتخاب‌های خط فرمان موجود «%s --help» را اجرا کنید."
 
 #~ msgid "Five or More"
 #~ msgstr "پنج یا بیش‌تر"
@@ -917,9 +1032,6 @@ msgstr "مکث شده"
 
 #~ msgid "Five or More Preferences"
 #~ msgstr "ترجیحات پنج یا بیش‌تر"
-
-#~ msgid "Appearance"
-#~ msgstr "ظاهر"
 
 #~ msgid "_Image:"
 #~ msgstr "_تصویر:"
@@ -961,10 +1073,8 @@ msgstr "مکث شده"
 #~ msgstr "اندازه زمین بازی"
 
 #~ msgid ""
-#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is "
-#~ "invalid."
-#~ msgstr ""
-#~ "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
+#~ "Playing field size. 1=Small, 2=Medium, 3=Large. Any other value is invalid."
+#~ msgstr "اندازه‌ی زمین بازی. ۱=کوچک، ۲=متوسط، ۳=بزرگ. هر مقدار دیگری نامعتبر است."
 
 #~ msgid "Ball style"
 #~ msgstr "طرح توپ"
@@ -1059,9 +1169,6 @@ msgstr "مکث شده"
 #~ msgid "_Redo Move"
 #~ msgstr "ا_نجام مجدد حرکت"
 
-#~ msgid "_Reset"
-#~ msgstr "_راه‌اندازی مجدد"
-
 #~ msgid "_Restart"
 #~ msgstr "_شروع مجدد"
 
@@ -1081,42 +1188,40 @@ msgstr "مکث شده"
 #~ msgstr "_تمام کردن بازی"
 
 #~ msgid ""
-#~ "%s is free software; you can redistribute it and/or modify it under the "
-#~ "terms of the GNU General Public License as published by the Free Software "
-#~ "Foundation; either version %d of the License, or (at your option) any "
-#~ "later version."
+#~ "%s is free software; you can redistribute it and/or modify it under the terms "
+#~ "of the GNU General Public License as published by the Free Software "
+#~ "Foundation; either version %d of the License, or (at your option) any later "
+#~ "version."
 #~ msgstr ""
-#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت "
-#~ "شرایط اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده "
-#~ "تغییر دهید؛ چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
+#~ "%s نرم‌افزار آزاد است؛ شما می‌تونید این را بازتوزیع کنید و/یا این را تحت شرایط "
+#~ "اجازه‌نامه‌ی عمومی همگانی گنو که توسط بنیاد نرم‌افزار آزادمنتشر شده تغییر دهید؛ "
+#~ "چه نسخه‌ی %d اجازه‌نامه، و چه (با نظر خودتان) هر نسخه‌ی متأخرتری."
 
 #~ msgid ""
 #~ "%s is distributed in the hope that it will be useful, but WITHOUT ANY "
-#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS "
-#~ "FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more "
-#~ "details."
+#~ "WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR "
+#~ "A PARTICULAR PURPOSE.  See the GNU General Public License for more details."
 #~ msgstr ""
-#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون "
-#~ "ضمانت ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه "
-#~ "عمومی همگانی گنو را ببینید."
+#~ "%s منتشر شده به این امید که مفید باشد، ولی بدون هیچ ضمانتی؛ حتا بدون ضمانت "
+#~ "ضمنی تجاری یا تناسب برای یک منظور خاص. برای جزئیات بیش‌تر اجازه‌نامه عمومی "
+#~ "همگانی گنو را ببینید."
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with %s; if not, write to the Free Software Foundation, Inc., 51 Franklin "
-#~ "Street, Fifth Floor, Boston, MA  02110-1301  USA"
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "%s; if not, write to the Free Software Foundation, Inc., 51 Franklin Street, "
+#~ "Fifth Floor, Boston, MA  02110-1301  USA"
 #~ msgstr ""
 #~ "شما باید به همراه %s رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
 #~ "می‌کردید، اگر این‌گونه نیست، به بنیاد نرم‌افزار آزاد به آدرس Free Software "
-#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  "
-#~ "02110-1301  USA نامه بفرستید "
+#~ "Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  "
+#~ "USA نامه بفرستید "
 
 #~ msgid ""
-#~ "You should have received a copy of the GNU General Public License along "
-#~ "with this program.  If not, see <http://www.gnu.org/licenses/>."
+#~ "You should have received a copy of the GNU General Public License along with "
+#~ "this program.  If not, see <http://www.gnu.org/licenses/>."
 #~ msgstr ""
-#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را "
-#~ "دریافت می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را "
-#~ "ببینید."
+#~ "شما باید به همراه این برنامه رونوشتی از اجازه‌نامه‌ی عمومی همگانی گنو را دریافت "
+#~ "می‌کردید، اگر این‌گونه نیست، <http://www.gnu.org/licenses/> را ببینید."
 
 #~ msgctxt "board size"
 #~ msgid "Small"
@@ -1321,9 +1426,6 @@ msgstr "مکث شده"
 
 #~ msgid "_Theme:"
 #~ msgstr "_تم:"
-
-#~ msgid "Enable _animation"
-#~ msgstr "به کار انداختن _پویانمایی"
 
 #~ msgid "E_nable sounds"
 #~ msgstr "ب_ه کار انداختن صداها"
@@ -1641,32 +1743,30 @@ msgstr "مکث شده"
 #~ msgstr "استفاده از حرکت‌های امن"
 
 #~ msgid ""
-#~ "Use safe moves. The safe moves option will help you to avoid being killed "
-#~ "due to a mistake. If you try to make a move that would lead to your death "
-#~ "when there is a safe move available you will not be allowed to proceed."
+#~ "Use safe moves. The safe moves option will help you to avoid being killed due "
+#~ "to a mistake. If you try to make a move that would lead to your death when "
+#~ "there is a safe move available you will not be allowed to proceed."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته "
-#~ "شدن به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی "
-#~ "کنید جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به "
-#~ "شما داده نخواهد شد."
+#~ "استفاده از حرکت‌های امن. گزینه‌ی حرکت‌های امن به شما کمک خواهد کرد از کشته شدن "
+#~ "به خاطر اشتباه جلوگیری کنید. اگر زمانی که جابه‌جایی امنی وجود دارد سعی کنید "
+#~ "جابه‌جایی‌ای انجام دهید که به مرگ شما منجر شود، اجازه‌ی ادامه دادن به شما داده "
+#~ "نخواهد شد."
 
 #~ msgid "Use super safe moves"
 #~ msgstr "استفاده از حرکت‌های کاملاً امن"
 
 #~ msgid ""
-#~ "Use super safe moves. The player is alerted when there is no safe move "
-#~ "and the only option is to teleport out."
+#~ "Use super safe moves. The player is alerted when there is no safe move and "
+#~ "the only option is to teleport out."
 #~ msgstr ""
-#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و "
-#~ "تنها گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
+#~ "استفاده از حرکت‌های کاملاً امن. زمانی که هیچ جابه‌جایی امنی وجود ندارد و تنها "
+#~ "گزینه دوربری به بیرون است به بازیکن اخطار داده می‌شود."
 
 #~ msgid "Enable game sounds"
 #~ msgstr "به کار انداختن صداهای بازی"
 
-#~ msgid ""
-#~ "Enable game sounds. Play sounds for various events throughout the game."
-#~ msgstr ""
-#~ "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
+#~ msgid "Enable game sounds. Play sounds for various events throughout the game."
+#~ msgstr "به کار انداختن صداهای بازی. پخش صدا برای رویدادهای مختلف در طول بازی"
 
 #~ msgid "Key to move NW"
 #~ msgstr "کلید جابه‌جایی به شمال غربی"
@@ -1835,8 +1935,8 @@ msgstr "مکث شده"
 #~ "The program Robots was unable to find any valid game configuration files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً "
-#~ "بررسی کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست پرونده‌ی پیکربندی معتبریبرای بازی  پیدا کند. لطفاً بررسی "
+#~ "کنید که برنامه درست نصب شده باشد."
 
 #~ msgid "Some graphics files are missing or corrupt."
 #~ msgstr "بعضی از پرونده‌های گرافیکی گم‌شده‌اند یا مخدوشند."
@@ -1845,8 +1945,8 @@ msgstr "مکث شده"
 #~ "The program Robots was unable to load all the necessary graphics files. "
 #~ "Please check that the program is installed correctly."
 #~ msgstr ""
-#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی "
-#~ "کنید که برنامه درست نصب شده باشد."
+#~ "برنامه‌ روبات‌ها نتوانست همه‌ی پرونده‌های گرافیکی لازم را بارکند. لطفاً بررسی کنید "
+#~ "که برنامه درست نصب شده باشد."
 
 #~ msgid "Could not find '%s' pixmap file\n"
 #~ msgstr "پرونده‌ی pixmap «%s» پیدا نشد\n"
@@ -2005,13 +2105,12 @@ msgstr "مکث شده"
 #~ msgstr "دیگر نمی‌شود حرکتی کرد."
 
 #~ msgid ""
-#~ "Each puzzle has at least one solution.  You can undo your moves and try "
-#~ "and find the solution for a time penalty, restart this game or start an "
-#~ "new one."
+#~ "Each puzzle has at least one solution.  You can undo your moves and try and "
+#~ "find the solution for a time penalty, restart this game or start an new one."
 #~ msgstr ""
 #~ "هر پازل حداقل یک راه‌حل دارد. شما می‌توانید حرکاتتان را برگردانی کنید و سعی "
-#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده "
-#~ "یا یک بازی جدید را آغاز کنید."
+#~ "کنید راه‌حل را بیابید. برای یک خطای زمانی، این بازی را راه‌انداری مجدد کرده یا "
+#~ "یک بازی جدید را آغاز کنید."
 
 #~ msgid "_New game"
 #~ msgstr "_بازی جدید"
@@ -2101,21 +2200,18 @@ msgstr "مکث شده"
 #~ msgstr "سودوکوی گنوم"
 
 #~ msgid ""
-#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a "
-#~ "Japanese logic puzzle.\n"
+#~ "GNOME Sudoku is a simple Sudoku generator and player. Sudoku is a Japanese "
+#~ "logic puzzle.\n"
 #~ "\n"
 #~ "GNOME Sudoku is a part of GNOME Games."
 #~ msgstr ""
-#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی "
-#~ "ژاپنی است.\n"
+#~ "سودوکوی گنوم یک سازنده و بازیکن ساده‌ی سودوکو است. سودوکو یک پازل منطقی ژاپنی "
+#~ "است.\n"
 #~ "\n"
 #~ "سودوکوی گنوم جزیی از بازی‌های گنوم است."
 
 #~ msgid "Easy"
 #~ msgstr "آسان"
-
-#~ msgid "Medium"
-#~ msgstr "متوسط"
 
 #~ msgid "Hard"
 #~ msgstr "سخت"
@@ -2229,10 +2325,8 @@ msgstr "مکث شده"
 #~ msgid "_Track Additions"
 #~ msgstr "ردگیری ا_ضافات"
 
-#~ msgid ""
-#~ "Mark new additions in a separate color so you can keep track of them."
-#~ msgstr ""
-#~ "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
+#~ msgid "Mark new additions in a separate color so you can keep track of them."
+#~ msgstr "علامت‌گذاری اضافات جدید به رنگ دیگری که بتوانید رد آن‌ها را داشته باشید."
 
 #~ msgid "_Highlighter"
 #~ msgstr "بر_جسته‌ساز"
@@ -2412,8 +2506,7 @@ msgstr "مکث شده"
 #~ msgid "The size of the playing grid"
 #~ msgstr "اندازه‌ی شبکه‌ی بازی"
 
-#~ msgid ""
-#~ "The value of this key is used to decide the size of the playing grid."
+#~ msgid "The value of this key is used to decide the size of the playing grid."
 #~ msgstr "مقدار این کلید برای تعیین اندازه‌ی شبکه‌ی بازی به کار می‌رود."
 
 #~ msgid "2×2"
@@ -2438,13 +2531,13 @@ msgstr "مکث شده"
 #~ msgstr "امتیازات تِتراوِکس"
 
 #~ msgid ""
-#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that "
-#~ "the same numbers are touching each other.\n"
+#~ "GNOME Tetravex is a simple puzzle where pieces must be positioned so that the "
+#~ "same numbers are touching each other.\n"
 #~ "\n"
 #~ "Tetravex is a part of GNOME Games."
 #~ msgstr ""
-#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند "
-#~ "که اعداد یکسان هم‌دیگر را لمس کنند.\n"
+#~ "تتراوکس گنوم یک پازل ساده است که در آن قطعات باید به گونه‌ای قرار بگیرند که "
+#~ "اعداد یکسان هم‌دیگر را لمس کنند.\n"
 #~ "\n"
 #~ "تتراوکس جزیی از بازی‌های گنوم است."
 
@@ -2628,21 +2721,20 @@ msgstr "مکث شده"
 #~ msgstr "تأخیر بین تاس ریختن‌ها"
 
 #~ msgid ""
-#~ "Choose whether or not to insert a delay between the computer's dice rolls "
-#~ "so the player can follow what it is doing."
+#~ "Choose whether or not to insert a delay between the computer's dice rolls so "
+#~ "the player can follow what it is doing."
 #~ msgstr ""
-#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن "
-#~ "بتواند کار آن را دنبال کند."
+#~ "انتخاب این که تأخیری بین تاس ریختن‌های کامپیوتر باشد یا نه تا بازیکن بتواند "
+#~ "کار آن را دنبال کند."
 
 #~ msgid "Display the computer's thoughts"
 #~ msgstr "نشان دادن افکار کامپیوتر"
 
 #~ msgid ""
-#~ "If set to true, a dump of the AI's working will be done to standard "
-#~ "output."
+#~ "If set to true, a dump of the AI's working will be done to standard output."
 #~ msgstr ""
-#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد "
-#~ "قرار می‌گیرد."
+#~ "اگر به درست تنظیم شده باشد، رونوشتی از کار هوش مصنوعی در خروجی استاندارد قرار "
+#~ "می‌گیرد."
 
 #~ msgid "Already used! Where do you want to put that?"
 #~ msgstr "قبلاً استفاده شده! کجا می‌خواهید قرار بگیرد؟"
@@ -2712,8 +2804,7 @@ msgstr "مکث شده"
 #~ msgstr "‏%s! -- شما جلویید."
 
 #~ msgid "Select dice to roll or choose a score slot."
-#~ msgstr ""
-#~ "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
+#~ msgstr "تاس را برای دوباره ریختن انتخاب کنید، یا خانه‌ی امتیاز را انتخاب کنید."
 
 #~ msgid "Roll"
 #~ msgstr "ریختن"
@@ -2759,9 +2850,6 @@ msgstr "مکث شده"
 
 #~ msgid "N_umber of opponents:"
 #~ msgstr "تعداد _حریف‌ها:"
-
-#~ msgid "_Difficulty:"
-#~ msgstr "س_ختی:"
 
 #~ msgctxt "difficulty"
 #~ msgid "Medium"
@@ -2955,8 +3043,7 @@ msgstr "مکث شده"
 #~ msgid "The theme used for rendering the blocks"
 #~ msgstr "تم مورد استفاده برای ترسیم بلوک‌ها"
 
-#~ msgid ""
-#~ "The name of the theme used for rendering the blocks and the background."
+#~ msgid "The name of the theme used for rendering the blocks and the background."
 #~ msgstr "نام تم مورد استفاده برای ترسیم بلوک‌ها و پس‌زمینه"
 
 #~ msgid "Level to start with"
@@ -3001,11 +3088,11 @@ msgstr "مکث شده"
 #~ msgstr "فشردگی سطر‌های پر شده"
 
 #~ msgid ""
-#~ "The density of blocks in rows filled at the start of the game. The value "
-#~ "is between 0 (for no blocks) and 10 (for a completely filled row)."
+#~ "The density of blocks in rows filled at the start of the game. The value is "
+#~ "between 0 (for no blocks) and 10 (for a completely filled row)."
 #~ msgstr ""
-#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون "
-#~ "بلوک) و ۱۰ (برای سطرهای کاملاً پر شده) است."
+#~ "فشردگی بلوک‌ها در سطرهای پرشده در ابتدای بازی. مقدار بین ۰ (برای بدون بلوک) و "
+#~ "۱۰ (برای سطرهای کاملاً پر شده) است."
 
 #~ msgid "Whether to play sounds"
 #~ msgstr "این که صداها پخش شوند یا نه"
@@ -3049,9 +3136,6 @@ msgstr "مکث شده"
 #~| msgid "Gnometris"
 #~ msgid "tetris;"
 #~ msgstr "تتریس;"
-
-#~ msgid "Game Over"
-#~ msgstr "بازی تمام شد"
 
 #~ msgid "Lines:"
 #~ msgstr "سطرها:"
@@ -3107,12 +3191,6 @@ msgstr "مکث شده"
 #~ "\n"
 #~ "کوادراپاسل جزیی از بازی‌های گنوم است."
 
-#~ msgid "The theme to use"
-#~ msgstr "تم مورد استفاده"
-
-#~ msgid "The title of the tile theme to use."
-#~ msgstr "عنوان تم کاشی مورد استفاده."
-
 #~ msgid "The size of the game board."
 #~ msgstr "اندازه‌ی صفحه‌ی بازی."
 
@@ -3154,9 +3232,6 @@ msgstr "مکث شده"
 #~ msgstr[0] "%Iu امتیازات"
 #~ msgstr[1] "%Iu امتیازات"
 
-#~ msgid "Small"
-#~ msgstr "کوچک"
-
 #~ msgid "Normal"
 #~ msgstr "معمولی"
 
@@ -3176,13 +3251,13 @@ msgstr "مکث شده"
 #~ msgstr "امتیازات سوئل‌فوپ"
 
 #~ msgid ""
-#~ "I want to play that game! You know, they all light-up and you click on "
-#~ "them and they vanish!\n"
+#~ "I want to play that game! You know, they all light-up and you click on them "
+#~ "and they vanish!\n"
 #~ "\n"
 #~ "Swell Foop is a part of GNOME Games."
 #~ msgstr ""
-#~ "من می‌خوام آن بازی را انجام دهم! می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان "
-#~ "کلیک می‌کنی و آن‌ها ناپدید می‌شوند!\n"
+#~ "من می‌خوام آن بازی را انجام دهم! می‌دانی، آن‌ها همه روشن می‌شوند و تو رویشان کلیک "
+#~ "می‌کنی و آن‌ها ناپدید می‌شوند!\n"
 #~ "\n"
 #~ "سوئل‌فوپ جزیی از بازی‌های گنوم است."
 
@@ -3234,9 +3309,6 @@ msgstr "مکث شده"
 #~ msgid "Custom Size"
 #~ msgstr "اندازه‌ی سفارشی"
 
-#~ msgid "Show a hint"
-#~ msgstr "نشان دادن یک راهنمایی"
-
 #~ msgid "Cancel current game?"
 #~ msgstr "رد کردن بازی فعلی؟"
 
@@ -3285,8 +3357,8 @@ msgstr "مکث شده"
 #~ "Unplayed games do not need to be represented."
 #~ msgstr ""
 #~ "فهرستی از رشته‌ها که به شکل پنج‌تایی هستند: نام، بردها، ‌مجموع بازی‌های انجام "
-#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی "
-#~ "نشده نمایش داده نمی‌شوند."
+#~ "شده، بهترین زمان (به ثانیه) و بدترین زمان (آن هم به ثانیه). باز‌‌ی‌های بازی نشده "
+#~ "نمایش داده نمی‌شوند."
 
 #, fuzzy
 #~ msgid "Recently Played Games"
@@ -3299,8 +3371,8 @@ msgstr "مکث شده"
 #~ "Select whether to drag the cards or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
 #~ msgid "Statistics of games played"
 #~ msgstr "آمار بازی‌های انجام شده"
@@ -3341,9 +3413,6 @@ msgstr "مکث شده"
 #~ msgid "You have won."
 #~ msgstr "شما بردید."
 
-#~ msgid "Select Game"
-#~ msgstr "انتخاب بازی"
-
 #~ msgid ""
 #~ "The game is over.\n"
 #~ "No hints are available"
@@ -3362,14 +3431,13 @@ msgstr "مکث شده"
 
 #~ msgid ""
 #~ "This game uses a deprecated hint method (case 3).\n"
-#~ "Please file a bug at http://bugzilla.gnome.org including this message "
-#~ "and\n"
+#~ "Please file a bug at http://bugzilla.gnome.org including this message and\n"
 #~ "the name of the game you where playing (look in the title bar if you \n"
 #~ "aren't sure)."
 #~ msgstr ""
 #~ "این بازی از روش راهنمایی منسوخ شده‌ای استفاده می‌کند (حالت ۳).\n"
-#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و "
-#~ "نام بازی‌ای \n"
+#~ "لطفاً یک اشکال در http://bugzilla.gnome.org ثبت کنید که شامل این پیغام و نام "
+#~ "بازی‌ای \n"
 #~ "که در حال انجامش بودید باشد. (اگر مطمئن نیستید به نوار عنوان نگاه کنید)."
 
 #~ msgid "You are searching for a %s."
@@ -3399,8 +3467,8 @@ msgstr "مکث شده"
 #~ "card engine that allows many different\n"
 #~ "games to be played."
 #~ msgstr ""
-#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام "
-#~ "بازی‌های متفاوتی را ممکن می‌سازد."
+#~ "اِیل‌رایِت یک موتور قانونی برای کارت بازی یک نفره ارائه می‌کند که انجام بازی‌های "
+#~ "متفاوتی را ممکن می‌سازد."
 
 #~ msgid "_Control"
 #~ msgstr "_کنترل"
@@ -3612,9 +3680,6 @@ msgstr "مکث شده"
 #~ msgid "Consider moving something into an empty slot"
 #~ msgstr "انتقال چیزی به یک خانه‌ی خالی را در نظر بگیرید"
 
-#~ msgid "Move ~a off the board"
-#~ msgstr "انت~قال a به بیرون صفحه"
-
 #, fuzzy
 #~ msgid "The game has no solution. Undo or start again."
 #~ msgstr "بازی راه حلی ندارد"
@@ -3672,8 +3737,7 @@ msgstr "مکث شده"
 #~ msgid ""
 #~ "Aim to place the suits in the order which fits the current layout most "
 #~ "naturally."
-#~ msgstr ""
-#~ "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
+#~ msgstr "سعی کنیدخال‌ها را به طبیعی‌ترین ترتیب هماهنگ با چیدمان فعلی قرار دهید."
 
 #~ msgid "Deal new cards from the deck"
 #~ msgstr "گرفتن کارت‌های جدید از دسته‌ی ورق"
@@ -3790,9 +3854,6 @@ msgstr "مکث شده"
 
 #~ msgid "diamonds"
 #~ msgstr "خشت"
-
-#~ msgid "eight"
-#~ msgstr "هشت"
 
 #~ msgid "five"
 #~ msgstr "پنج"
@@ -4038,9 +4099,6 @@ msgstr "مکث شده"
 #~ msgid "Camelot"
 #~ msgstr "کَمِلات"
 
-#~ msgid "Canfield"
-#~ msgstr "کَنفیلد"
-
 #~ msgid "Carpet"
 #~ msgstr "فرش"
 
@@ -4241,8 +4299,8 @@ msgstr "مکث شده"
 #~ msgstr "نمایش احتمالات"
 
 #~ msgid ""
-#~ "Display the probabilities of each dealer hand outcome and the expected "
-#~ "value of your hand."
+#~ "Display the probabilities of each dealer hand outcome and the expected value "
+#~ "of your hand."
 #~ msgstr "نمایش احتمالات هر دست داده شده و مقدار مورد انتظار از دست شما."
 
 #~ msgid "The amount of money in your bank"
@@ -4307,12 +4365,10 @@ msgstr "مکث شده"
 #~ msgstr "دوست دارید بیمه شوید؟"
 
 #~ msgid "Set your wager and click in the white outline to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
+#~ msgstr "شرط‌تان را تعیین کنید و برای گرفتن یک دست جدید روی خطوط سفید کلیک کنید."
 
 #~ msgid "Set your wager or click on the cards to deal a new hand."
-#~ msgstr ""
-#~ "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
+#~ msgstr "شرط‌تان را تعیین کنید با برای گرفتن یک دست جدید روی کارت‌ها کلید کنید."
 
 #~ msgid "Blackjack Preferences"
 #~ msgstr "ترجیحات بازی بلک‌جک"
@@ -4357,8 +4413,7 @@ msgstr "مکث شده"
 #~ msgstr "دوبار کلیک برای کاهش شرط به %I.2f"
 
 #~ msgid "Click to deal another card; drag card to split pair"
-#~ msgstr ""
-#~ "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
+#~ msgstr "برای گرفتن یک کارت دیگر کلیک کنید؛برای جدا کردن جفت یک کارت را بکشید"
 
 #~ msgid "Click to deal another card"
 #~ msgstr "کلیک برای گرفتن یک کارت دیگر"
@@ -4379,8 +4434,8 @@ msgstr "مکث شده"
 #~ msgstr "بهترین گزینه ایستادن است"
 
 #~ msgid ""
-#~ "To stand means to stop adding cards to your hand.  Do this by clicking on "
-#~ "the dealer's cards or by selecting the option from the Control menu."
+#~ "To stand means to stop adding cards to your hand.  Do this by clicking on the "
+#~ "dealer's cards or by selecting the option from the Control menu."
 #~ msgstr ""
 #~ "ایستادن به معنای توقف اضافه کردن کارت‌ها به دست‌تان است. برای این کار رو "
 #~ "کارت‌های توزیع‌کننده کلیک کنید با گزینه را از منوی کنترل انتخاب کنید."
@@ -4389,11 +4444,11 @@ msgstr "مکث شده"
 #~ msgstr "بهترین گزینه تسلیم است"
 
 #~ msgid ""
-#~ "To surrender means to give up half your wager and not complete the hand.  "
-#~ "Do this by selecting the option from the Control menu."
+#~ "To surrender means to give up half your wager and not complete the hand.  Do "
+#~ "this by selecting the option from the Control menu."
 #~ msgstr ""
-#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش "
-#~ "را از منوی کنترل انتخاب کنید."
+#~ "تسلیم به معنای دادن نصف شرط‌تان و کامل نکردن دست است. برای این کار گزینه‌اش را "
+#~ "از منوی کنترل انتخاب کنید."
 
 #, fuzzy
 #~ msgid "Blackjack is a casino-style card game."
@@ -4462,10 +4517,6 @@ msgstr "مکث شده"
 #, fuzzy
 #~ msgid "Reconnecting"
 #~ msgstr "_اتصال"
-
-#, fuzzy
-#~ msgid "Playing"
-#~ msgstr "ساده"
 
 #, fuzzy
 #~ msgid "Server:"
@@ -4943,8 +4994,7 @@ msgstr "مکث شده"
 #~ "Height of the GNibbles window, used to restore the window size between "
 #~ "sessions."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می "
-#~ "شود."
+#~ "ارتفاع پنجره‌ی جی‌نیبلر، برای بازیابی اندازه‌ی پنجره بین نشست‌ها استفاده می شود."
 
 #~ msgid "Width of the GNibbles window"
 #~ msgstr "عرض پنجره‌ی جی‌نیبلز"
@@ -4988,64 +5038,59 @@ msgstr "مکث شده"
 
 #~ msgid ""
 #~ "The name of the key used to hold still. The name is a standard X key name."
-#~ msgstr ""
-#~ "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
+#~ msgstr "نام کلید مورد استفاده برای ثابت ماندن. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move east. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شرق. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move north. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به شمال. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-east. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب شرقی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south-west. The name is a standard X key "
 #~ "name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X "
-#~ "استاندارد است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب غربی. نام یک نام کلید X استاندارد "
+#~ "است."
 
 #~ msgid ""
 #~ "The name of the key used to move south. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به جنوب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
 #~ "The name of the key used to move west. The name is a standard X key name."
 #~ msgstr ""
-#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد "
-#~ "است."
+#~ "نام کلید مورد استفاده برای جابه‌جایی به غرب. نام یک نام کلید X استاندارد است."
 
 #~ msgid ""
-#~ "The name of the key used to teleport randomly. The name is a standard X "
-#~ "key name."
+#~ "The name of the key used to teleport randomly. The name is a standard X key "
+#~ "name."
 #~ msgstr ""
 #~ "نام کلید مورد استفاده برای دوربری تصادفی. نام یک نام کلید X استاندارد است."
 
@@ -5102,8 +5147,8 @@ msgstr "مکث شده"
 #~ msgstr "رنگ پس‌زمینه، در قالبی که gdk_color_parse می‌فهمد."
 
 #~ msgid ""
-#~ "This selects whether or not to draw the background image over the "
-#~ "background color."
+#~ "This selects whether or not to draw the background image over the background "
+#~ "color."
 #~ msgstr "این انتخاب می‌کند که تصویر پس‌زمینه روی رنگ پس‌زمینه ترسیم شود یا نه."
 
 #, fuzzy
@@ -5402,15 +5447,13 @@ msgstr "مکث شده"
 #~ "Select whether to drag the tiles or to click on the source then the "
 #~ "destination."
 #~ msgstr ""
-#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد "
-#~ "کلیک شود"
+#~ "انتخاب این که کارت‌ها کشیده شوند یا این که اول روی مبداء و بعد روی مقصد کلیک "
+#~ "شود"
 
-#~ msgid ""
-#~ "The height of the playing window in pixels. At minimum it should be 240."
+#~ msgid "The height of the playing window in pixels. At minimum it should be 240."
 #~ msgstr "ارتفاع پنجره‌ی بازی برحسب نقطه. حداقل باید ۲۴۰ باشد."
 
-#~ msgid ""
-#~ "The width of the playing window in pixels. At minimum it should be 320."
+#~ msgid "The width of the playing window in pixels. At minimum it should be 320."
 #~ msgstr "عرض پنجره‌ی بازی بر حسب نقطه. حداقل باید ۳۲۰ باشد."
 
 #~ msgid "Block 10"
@@ -5447,15 +5490,15 @@ msgstr "مکث شده"
 #~ msgstr "جورچین‌های بلوک لغزنده"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested height of the main window in pixels. If this isn't big enough "
+#~ "it will be ignored."
 #~ msgstr ""
-#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در "
-#~ "نظر گرفته نخواهد شد."
+#~ "ارتفاع پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
+#~ "گرفته نخواهد شد."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. If this isn't big "
-#~ "enough it will be ignored."
+#~ "The requested width of the main window in pixels. If this isn't big enough it "
+#~ "will be ignored."
 #~ msgstr ""
 #~ "عرض پنجره‌ی درخواست شده بر حسب نقطه. اگر به اندازه‌ی کافی بزرگ نباشد در نظر "
 #~ "گرفته نخواهد شد."
@@ -5563,8 +5606,7 @@ msgstr "مکث شده"
 #~ msgid ""
 #~ "Please check your GConf configuration, specifically that the schemas have "
 #~ "been installed correctly."
-#~ msgstr ""
-#~ "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
+#~ msgstr "لطفاً پیکربندی GConf بررسی کنید، خصوصاً این که شِماها درست نصب شده باشند. "
 
 #~ msgid "X Padding"
 #~ msgstr "لایی‌گذاری X"
@@ -5602,8 +5644,8 @@ msgstr "مکث شده"
 #~ msgstr "لقب بازیکن."
 
 #~ msgid ""
-#~ "This string identifies the default game to connect to or create "
-#~ "(depending on mode)."
+#~ "This string identifies the default game to connect to or create (depending on "
+#~ "mode)."
 #~ msgstr ""
 #~ "این رشته بازی پیش‌فرض برای اتصال یا ایجاد (بسته به حالت) را شناسایی می‌کند."
 
@@ -5657,8 +5699,7 @@ msgstr "مکث شده"
 #~ msgid ""
 #~ "Do you want to finish the current game or start playing with the new map "
 #~ "immediately?"
-#~ msgstr ""
-#~ "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
+#~ msgstr "می‌خواهید بازی فعلی را تمام کنید یا بلافاصله نقشه‌ی جدید را بازی کنید؟"
 
 #~ msgid "_Finish"
 #~ msgstr "_پایان"
@@ -5679,18 +5720,18 @@ msgstr "مکث شده"
 #~ msgstr "حذف جفت کاشی‌های جور شده"
 
 #~ msgid ""
-#~ "The requested height of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 200 pixels high."
+#~ "The requested height of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 200 pixels high."
 #~ msgstr ""
-#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
+#~ "ارتفاع درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۲۰۰ نقطه ارتفاع دارند."
 
 #~ msgid ""
-#~ "The requested width of the main window in pixels. Note that the widgets "
-#~ "the window contains are at least 320 pixels wide."
+#~ "The requested width of the main window in pixels. Note that the widgets the "
+#~ "window contains are at least 320 pixels wide."
 #~ msgstr ""
-#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های "
-#~ "داخل این پنجره حداقل ۳۲۰ نقطه عرض دارند."
+#~ "عرض درخواست شده‌ی پنجره‌ی اصلی بر حسب نقطه. توجه داشته باشید که ویجت‌های داخل "
+#~ "این پنجره حداقل ۳۲۰ نقطه عرض دارند."
 
 #~ msgid "mahjongg|Easy"
 #~ msgstr "ماهجونگ|آسان"
@@ -5714,11 +5755,11 @@ msgstr "مکث شده"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی"
 
 #~ msgid ""
-#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A "
-#~ "setting of TRUE causes the pieces to fall quickly and jerkily."
+#~ "Setting this to FALSE means the pieces fall slowly, but gracefully. A setting "
+#~ "of TRUE causes the pieces to fall quickly and jerkily."
 #~ msgstr ""
-#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم "
-#~ "درست باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
+#~ "تنظیم این روی نادرست به معنای آهسته اما با وقار افتادن قطعه‌هاست. تنظیم درست "
+#~ "باعث می‌شود قطعه‌ها به تندی و شلنگ‌اندازان بیافتند."
 
 #~ msgid "The board size"
 #~ msgstr "اندازه‌ی صفحه"
@@ -5727,10 +5768,8 @@ msgstr "مکث شده"
 #~ msgstr "ارتفاع صفحه‌ی سفارشی، ۳ &gt; ارتفاع &gt;."
 
 #~ msgid ""
-#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = "
-#~ "Large."
-#~ msgstr ""
-#~ "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
+#~ "The size of the board to use. 1 = Custom, 2 = Small, 3 = Medium, 4 = Large."
+#~ msgstr "اندازه‌ی صفحه‌ی مورد استفاده. ۱ = سفارشی، ۲ = کوچک، ۳ = متوسط، ۴ = بزرگ."
 
 #~ msgid "The window height"
 #~ msgstr "ارتفاع پنجره"
@@ -5833,11 +5872,11 @@ msgstr "مکث شده"
 #~ msgstr "این که از حرکت‌های سریع استفاده شود یا نه."
 
 #~ msgid ""
-#~ "Zero corresponds to no animations, one is partial animations, two is "
-#~ "complete animations."
+#~ "Zero corresponds to no animations, one is partial animations, two is complete "
+#~ "animations."
 #~ msgstr ""
-#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی "
-#~ "کامل است."
+#~ "صفر متناظر است با بدون پویانمایی، یک پویانمایی جرئی است، دو پویانمایی کامل "
+#~ "است."
 
 #~ msgid "Ataxx Preferences"
 #~ msgstr "ترجیحات اتکس"
@@ -5964,11 +6003,11 @@ msgstr "مکث شده"
 #~ msgstr "این که نتایج نهایی چرخانده شود یا نه"
 
 #~ msgid ""
-#~ "Put all the white pieces at the bottom and all the black pieces on the "
-#~ "top of the board when a game is over"
+#~ "Put all the white pieces at the bottom and all the black pieces on the top of "
+#~ "the board when a game is over"
 #~ msgstr ""
-#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه "
-#~ "وقتی بازی تمام می‌شود."
+#~ "قرار دادن تمام قطعه‌های سفید در پایید و تمام قطعه‌های سیاه در بالای صفحه وقتی "
+#~ "بازی تمام می‌شود."
 
 #~ msgid "Collect all diamonds and find exit"
 #~ msgstr "همه‌ی الماس‌ها را جمع کنید و خروج را پیدا کنید"
@@ -6077,8 +6116,7 @@ msgstr "مکث شده"
 #~ msgid "Please make sure that GNOME Stones is correctly installed."
 #~ msgstr "لطفاً مطمئن شوید که سنگ‌های گنوم درست نصب شده است."
 
-#~ msgid ""
-#~ "You may be able to select a different game from the preferences dialog."
+#~ msgid "You may be able to select a different game from the preferences dialog."
 #~ msgstr "شاید بتوانید بازی دیگری از محاوره‌ی ترجیحات انتخاب کنید."
 
 #~ msgid "GNOME Stones Preferences"
