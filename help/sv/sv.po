@@ -2,16 +2,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help.master.po\n"
-"POT-Creation-Date: 2016-05-05 08:57+0000\n"
-"PO-Revision-Date: 2016-05-07 15:58+0200\n"
-"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"POT-Creation-Date: 2016-08-13 20:31+0000\n"
+"PO-Revision-Date: 2016-09-20 20:49+0200\n"
+"Last-Translator: Erik Sköldås <erik.skoldas@tele2.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -42,8 +42,8 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
+#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -95,8 +95,8 @@ msgid "a custom board, where you chose the size and the number of mines"
 msgstr "en anpassad spelplan, där du väljer storlek och antalet minor"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
-#: C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
+#: C/flags.page:12 C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -109,7 +109,7 @@ msgstr "Creative Commons DelaLika 3.0"
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
 msgid "Help make <app>Mines</app> better"
-msgstr "Hjälp till att göra<app>Minor</app> bättre"
+msgstr "Hjälp till att göra <app>Minor</app> bättre"
 
 #. (itstool) path: section/title
 #: C/bug-filing.page:21
@@ -146,7 +146,7 @@ msgid ""
 "<gui>New Account</gui> link to create one."
 msgstr ""
 "För att delta behöver du ett konto som ger dig möjlighet att få åtkomst, "
-"rapportera fel,kunna lämna synpunkter,och få uppdateringar via e-post för "
+"rapportera fel, kunna lämna synpunkter, och få uppdateringar via e-post för "
 "din felrapport. Om du inte redan har ett konto, klicka bara på länken "
 "<gui>Nytt Konto</gui> för att skapa ett."
 
@@ -163,7 +163,7 @@ msgstr ""
 "När du har ett konto, logga in, klicka på <guiseq><gui>File a Bug</"
 "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Innan du "
 "rapporterar ett fel, läs <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">riktlinjer för felrapporter</link>, och<link href="
+"id=bug-writing.html\">riktlinjer för felrapporter</link>, och <link href="
 "\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">sök</link> för "
 "att se om felet redan är rapporterat."
 
