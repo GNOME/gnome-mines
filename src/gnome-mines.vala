@@ -25,11 +25,11 @@ public class Mines : Gtk.Application
     private static int game_mode = -1;
 
     /* Shared Settings keys */
-    public static const string KEY_USE_QUESTION_MARKS = "use-question-marks";
-    public static const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
-    public static const string KEY_USE_AUTOFLAG = "use-autoflag";
-    public static const string KEY_THEME = "theme";
-    public static const string KEY_USE_ANIMATIONS = "use-animations";
+    public const string KEY_USE_QUESTION_MARKS = "use-question-marks";
+    public const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
+    public const string KEY_USE_AUTOFLAG = "use-autoflag";
+    public const string KEY_THEME = "theme";
+    public const string KEY_USE_ANIMATIONS = "use-animations";
 
     private Gtk.Widget main_screen;
     private Gtk.Button play_pause_button;

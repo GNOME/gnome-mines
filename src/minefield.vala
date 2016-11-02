@@ -36,7 +36,7 @@ private struct Neighbour
     public int x;
     public int y;
 }
-private static const Neighbour neighbour_map[] =
+private const Neighbour neighbour_map[] =
 {
     {-1, 1},
     {0, 1},

@@ -1,6 +1,6 @@
 private class PreviewField : Minefield
 {
-    private static const Neighbour neighbour_map[] =
+    private const Neighbour neighbour_map[] =
     {
         {-1, 1},
         {0, 1},
