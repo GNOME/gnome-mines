@@ -1,8 +1,21 @@
 private class PreviewField : Minefield
 {
+    private static const Neighbour neighbour_map[] =
+    {
+        {-1, 1},
+        {0, 1},
+        {1, 1},
+        {1, 0},
+        {1, -1},
+        {0, -1},
+        {-1, -1},
+        {-1, 0}
+    };
+
+    private const int SIZE = 7;
     public PreviewField ()
     {
-        base (7, 7, 20);
+        base (SIZE, SIZE, 3*SIZE);
 
         place_mines (0, 0);
         placed_mines = true;
@@ -10,21 +23,30 @@ private class PreviewField : Minefield
 
     protected new void place_mines (uint x, uint y)
     {
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 0].has_mine = i >= 5;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 1].has_mine = false;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 2].has_mine = i == 0 || i == 3;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 3].has_mine = i == 0 || i == 2;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 4].has_mine = i == 0 || i == 2 || i > 3;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 5].has_mine = i % 2 == 0;
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < SIZE; i++)
             locations[i, 6].has_mine = i != 1;
-
+        for (int i = 0; i < SIZE; i++)
+            for (int j = 0; j < SIZE; j++)
+                foreach (var neighbour in neighbour_map)
+                    {
+                        var nx = i + neighbour.x;
+                        var ny = j + neighbour.y;
+                        if (is_location(nx, ny) && locations[nx, ny].has_mine)
+                            locations[i, j].adjacent_mines++;
+                    }
+               
     }
 
 }
