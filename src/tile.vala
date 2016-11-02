@@ -47,7 +47,8 @@ public class Tile : Gtk.Button
         {
             /* By default windows with both button press and button release
              * grab Gdk events, ungrab events here for other tiles. */
-            event.device.ungrab (event.time);
+            event.get_seat().ungrab ();
+//            event.device.ungrab (event.time);
 
             tile_pressed (prow, pcol, event);
             return false;
