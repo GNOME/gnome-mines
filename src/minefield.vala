@@ -218,15 +218,15 @@ public class Minefield : Object
 
     public void clear_mine (uint x, uint y)
     {
-        if (!exploded && clock == null)
-            start_clock ();
-
         /* Place mines on first attempt to clear */
         if (!placed_mines)
         {
             place_mines (x, y);
             placed_mines = true;
         }
+
+        if (!exploded && clock == null)
+            start_clock ();
 
         if (locations[x, y].cleared || locations[x, y].flag == FlagType.FLAG)
             return;
