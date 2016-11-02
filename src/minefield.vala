@@ -25,6 +25,9 @@ protected class Location : Object
 
     /* Flag */
     public FlagType flag = FlagType.NONE;
+
+    /* Number of mines in the neighbourhood */
+    public int adjacent_mines = 0;
 }
 
 /* Table of offsets to adjacent squares */
@@ -304,15 +307,7 @@ public class Minefield : Object
 
     public uint get_n_adjacent_mines (uint x, uint y)
     {
-        uint n = 0;
-        foreach (var neighbour in neighbour_map)
-        {
-            var nx = (int) x + neighbour.x;
-            var ny = (int) y + neighbour.y;
-            if (is_location (nx, ny) && has_mine (nx, ny))
-                n++;
-        }
-        return n;
+        return locations[x, y].adjacent_mines;
     }
 
     public bool has_flag_warning (uint x, uint y)
@@ -364,6 +359,13 @@ public class Minefield : Object
                 {
                     locations[rx, ry].has_mine = true;
                     n++;
+                    foreach (var neighbour in neighbour_map)
+                    {
+                        var nx = rx + neighbour.x;
+                        var ny = ry + neighbour.y;
+                        if (is_location (nx, ny))
+                            locations[nx, ny].adjacent_mines++;
+                    }
                 }
             }
         }
