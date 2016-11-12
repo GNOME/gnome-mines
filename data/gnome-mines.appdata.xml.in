@@ -11,13 +11,13 @@
     <_p>
       GNOME Mines is a puzzle game where you search for hidden mines. Flag the
       spaces with mines as quickly as possible to make the board a safer place. You
-      win the game when you've flagged every mine on the board. Be careful not to
+      win the game when you’ve flagged every mine on the board. Be careful not to
       trigger one, or the game is over!
     </_p>
     <_p>
       You can select the size of the field you want to play on at the start of the
-      game. If you get stuck, you can ask for a hint: there's a time penalty, but
-      that's better than hitting a mine!
+      game. If you get stuck, you can ask for a hint: there’s a time penalty, but
+      that’s better than hitting a mine!
     </_p>
   </description>
   <screenshots>
