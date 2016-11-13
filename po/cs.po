@@ -23,8 +23,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-12 06:28+0000\n"
-"PO-Revision-Date: 2016-08-12 17:20+0200\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2016-11-13 15:08+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>>\n"
 "Language: cs\n"
@@ -47,7 +47,7 @@ msgstr "Vyčistěte skryté miny z minového pole"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "Miny GNOME jsou logická hra, ve které hledáte skryté miny. Označte co "
@@ -58,8 +58,8 @@ msgstr ""
 #: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Na začátku hry si můžete zvolit velikost pole, na kterém chcete hrát. Když "
 "jste v nesnázích, můžete požádat o radu – to vás bude sice stát trestný čas, "
@@ -278,8 +278,6 @@ msgstr "Minové pole:"
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:357
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
@@ -359,32 +357,15 @@ msgstr ""
 "Petr Pulc <petrpulc@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Použít _animace"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Výběr motivu"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Zavřít"
 
-#~ msgid "_Close"
-#~ msgstr "_Zavřít"
-
-#~ msgid "New Game"
-#~ msgstr "Nová hra"
-
-#~ msgid "_OK"
-#~ msgstr "_Budiž"
-
-#~ msgid "Size:"
-#~ msgstr "Velikost:"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Time"
-#~ msgstr "Čas"
