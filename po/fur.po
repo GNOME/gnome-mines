@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:31+0000\n"
-"PO-Revision-Date: 2016-08-22 22:49+0200\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2016-11-13 21:38+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -31,22 +31,22 @@ msgstr "Smine un cjamp di minis"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "Minis di GNOME al è un zûc dulà che tu âs di cirî lis minis platadis. Segne "
-"i spazis cun lis minis doprant une bandiere tal minôr timp pussibil par "
-"rindi il puest sigûr. Tu vincis cuant che tu âs cjatât dutis lis minis. Sta "
-"atent a no fâlis esplodi se no il zûc al finis!"
+"i spazis des minis doprant une bandiere tal minôr timp pussibil par rindi il "
+"puest sigûr. Tu vincis cuant che tu âs cjatât dutis lis minis. Sta atent a "
+"no fâlis esplodi se no il zûc al finis!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Al è pussibil selezionâ la dimension dal cjamp dulà zuiâ, tal inizi de "
-"partide. Se tu ti cjatis in dificoltât tu puedis domandâ un aiût: a je une "
+"partide. Se tu ti cjatis in dificoltât tu puedis domandâ un aiût: e je une "
 "penalitât sul timp, ma simpri miôr che fa saltâ pal aiar une mine!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:5
@@ -325,15 +325,15 @@ msgstr "Cjate dutis lis minis platadis cence falis saltâ pal aiar"
 msgid "translator-credits"
 msgstr "Fabio Tomat <f.t.public@gmail.com>"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Dopre _animazions"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Selezione teme"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Siere"
 
