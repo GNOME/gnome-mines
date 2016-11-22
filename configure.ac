@@ -1,5 +1,5 @@
 AC_PREREQ([2.63])
-AC_INIT([GNOME Mines], [3.22.1], [https://bugzilla.gnome.org/],
+AC_INIT([GNOME Mines], [3.23.2], [https://bugzilla.gnome.org/],
         [gnome-mines], [https://wiki.gnome.org/Apps/Mines])
 AC_CONFIG_MACRO_DIR([m4])
 
