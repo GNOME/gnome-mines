@@ -8,23 +8,23 @@
 # Andras Timar <timar at gnome dot hu>, 2002, 2003.
 # Laszlo Dvornik <dvornik at gnome dot hu>, 2004.
 # Szabolcs Varga <shirokuma at shirokuma dot hu>, 2005.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2016.
 # Balázs Úr <urbalazs at gmail dot com>, 2013, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:31+0000\n"
-"PO-Revision-Date: 2016-08-19 23:15+0200\n"
-"Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2016-12-08 22:49+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
@@ -35,10 +35,15 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Elrejtett aknák eltávolítása az aknamezőről"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "A GNOME Aknakereső egy logikai játék, ahol rejtett aknákat kereshet. Jelölje "
@@ -48,10 +53,14 @@ msgstr ""
 "játéknak vége!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "A játék elején kiválaszthatja, hogy mekkora méretű mezőn szeretne játszani. "
 "Ha elakad, kérhet segítséget: ez időbüntetéssel jár, de még mindig jobb mint "
@@ -343,15 +352,15 @@ msgstr ""
 "Varga Szabolcs <shirokuma at shirokuma dot hu>\n"
 "Úr Balázs <urbalazs at gmail dot com>"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "_Animációk használata"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Téma kiválasztása"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Bezárás"
 
