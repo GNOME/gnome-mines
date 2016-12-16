@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-12 06:28+0000\n"
-"PO-Revision-Date: 2016-08-12 15:50+0300\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2016-12-16 22:01+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -37,23 +37,32 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Puhdista piilotetut miinat miinakentältä"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "Miinaharava on peli, jossa etsitään piilotettuja miinoja. Liputa miinoin "
 "varustetut alueet mahdollisimman nopeasti tehdäksesi pelilaudasta "
 "turvallisemman alueen. Läpäiset pelin, kun olet liputtanut pelilaudan "
 "jokaisen miinan. Varo kuitenkin, ettet vahingossakaan astu yhteenkään "
-"miinaan!"
+"miinaan, tai peli päättyy!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Voit valita pelilaudan koon pelin alussa. Jos jäät jumiin, voit pyytää "
 "vihjettä - siitä seuraa aikasakko, mutta se on parempi vaihtoehto kuin "
@@ -266,15 +275,12 @@ msgstr "_Sisältö"
 
 #. Label on the scores dialog
 #: ../src/gnome-mines.vala:323
-#| msgid "Game field"
 msgid "Minefield:"
 msgstr "Miinakenttä:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:357
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d miina"
@@ -356,15 +362,15 @@ msgstr ""
 "  Timo Jyrinki https://launchpad.net/~timo-jyrinki\n"
 "  eGetin https://launchpad.net/~egetin"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Käytä _animaatioita"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Valitse teema"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Sulje"
 
