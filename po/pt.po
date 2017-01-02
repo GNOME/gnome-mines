@@ -12,9 +12,9 @@ msgstr ""
 "Project-Id-Version: 3.12\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:31+0000\n"
-"PO-Revision-Date: 2016-08-14 21:23+0100\n"
-"Last-Translator: Tiago Santos <iagofsantos81@sapo.pt>\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2017-01-02 09:56+0000\n"
+"Last-Translator: Tiago Santos <tiagofsantos81@sapo.pt>\n"
 "Language-Team: Português <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -35,19 +35,19 @@ msgstr "Limpar as minas escondidas num campo minado"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "O Minas GNOME é um quebra cabeças onde procura minas escondidas. Marque os "
-"espaços onde as minas estão o mais rapidamente possível para tornar o "
+"espaços onde as minas estão, o mais rapidamente possível, para tornar o "
 "tabuleiro mais seguro. Ganha o jogo quando tiver marcado todas as minas no "
 "tabuleiro. Seja cuidadoso e não ative nenhuma mina ou o jogo termina!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "No início do jogo, pode selecionar o tamanho do campo onde pretende jogar. "
 "Se ficar bloqueado, pode pedir uma dica: há uma penalização de tempo mas é "
@@ -334,15 +334,15 @@ msgstr ""
 "Pedro Albuquerque <palbuquerque73@gmail.com>\n"
 "Tiago Santos <iagofsantos81@sapo.pt>"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Usar _Animações"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Selecionar jogo"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Fechar"
 
