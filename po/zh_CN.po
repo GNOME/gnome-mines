@@ -1,16 +1,23 @@
 # Chinese simplified translation for Gnome-games.
 # Copyright 2011 Free Software Foundation, Inc.
+#
+# Yang Zhang <zyangmath@gmail.com>, 2007.
+# Ping Z <zpsigma@gmail.com>, 2007.
+# Xhacker Liu <liu.dongyuan@gmail.com>, 2010.
 # Aron Xu <aronxu@gnome.org>, 2011.
 # YunQiang Su <wzssyqa@gmail.com>, 2011, 2012.
+# 甘露(Gan Lu) <rhythm.gan@gmail.com>, 2013.
+# Tong Hui <tonghuix@gmail.com>, 2014.
+# Jeff Bai <jeffbai@aosc.xyz>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-11-10 21:20+0000\n"
-"PO-Revision-Date: 2016-04-14 16:50+0800\n"
-"Last-Translator: liushuyu <liushuyu_011@126.com>\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2017-02-10 17:51+0800\n"
+"Last-Translator: Jeff Bai <jeffbai@aosc.xyz>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -28,10 +35,16 @@ msgid "Clear hidden mines from a minefield"
 msgstr "扫除雷区里的隐藏的地雷"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#, fuzzy
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "GNOME 扫雷是一款寻找隐藏地雷的解谜游戏。以最快的速度给棋盘上有雷的地方插上"
@@ -39,23 +52,32 @@ msgstr ""
 "结束了！"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#, fuzzy
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "您可以在游戏启动时选择棋盘大小。陷入僵局时，您可以寻求提示：使用提示会有惩"
 "罚，但总比踩到雷好嘛！"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr ""
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
-#: ../src/gnome-mines.vala:805
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "扫雷"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
-msgstr "minesweeper;挖雷;扫雷;"
+msgstr "minesweeper;扫雷;"
 
 #: ../data/gnome-mines.desktop.in.h:4
 msgid "Small board"
@@ -165,8 +187,8 @@ msgstr "取消(_C)"
 msgid "_Play Game"
 msgstr "玩游戏(_P)"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:602
-#: ../src/gnome-mines.vala:716 ../src/gnome-mines.vala:754
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "暂停(_P)"
 
@@ -186,117 +208,129 @@ msgstr "再玩一遍(_P)"
 msgid "Paused"
 msgstr "已暂停"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "显示发行版本并推出"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "小型游戏"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "中等游戏"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "大型游戏"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "得分(_S)"
 
-#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "外观(_P)"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "显示警告(_S)"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "使用问号旗标(_U)"
 
-#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "关于(_A)"
 
-#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "退出(_Q)"
 
-#: ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "扫雷(_M)"
 
-#: ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "新建游戏(_N)"
 
-#: ../src/gnome-mines.vala:266
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "目录(_C)"
 
-#: ../src/gnome-mines.vala:363
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "雷区："
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d 颗雷"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "自定义"
 
-#: ../src/gnome-mines.vala:442
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 个雷"
 
-#: ../src/gnome-mines.vala:559
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "您想要启动新游戏吗？"
 
-#: ../src/gnome-mines.vala:560
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "如果开始新游戏，您当前进度将丢失。"
 
-#: ../src/gnome-mines.vala:561
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "保存当前游戏"
 
-#: ../src/gnome-mines.vala:562
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "开始新游戏"
 
-#: ../src/gnome-mines.vala:603
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "重开一局(_A)"
 
-#: ../src/gnome-mines.vala:714
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "继续(_R)"
 
-#: ../src/gnome-mines.vala:732
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "再玩一遍(_A)"
 
-#: ../src/gnome-mines.vala:778
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "主游戏："
 
-#: ../src/gnome-mines.vala:783
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "得分:"
 
-#: ../src/gnome-mines.vala:786
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "缩放和 SVG 支持："
 
-#: ../src/gnome-mines.vala:808
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "从板上清除爆炸的地雷"
 
-#: ../src/gnome-mines.vala:815
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
@@ -305,49 +339,38 @@ msgstr ""
 "Aron Xu <aronxu@gnome.org>, 2011\n"
 "YunQiang Su <wzssyqa@gmail.com>, 2011, 2012\n"
 "甘露(Gan Lu) <rhythm.gan@gmail.com>, 2013\n"
-"Tong Hui (tonghuix@gmail.com), 2014"
+"Tong Hui <tonghuix@gmail.com>, 2014\n"
+"Jeff Bai <jeffbai@aosc.xyz>, 2016"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "关闭(_C)"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "新游戏"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "确认(_O)"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "大小："
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "日期"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "时间"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u 颗雷"
-
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "使用动画(_A)"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "选择主题"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "关闭"
+
+#~ msgid "_Close"
+#~ msgstr "关闭(_C)"
+
+#~ msgid "New Game"
+#~ msgstr "新游戏"
+
+#~ msgid "_OK"
+#~ msgstr "确认(_O)"
+
+#~ msgid "Size:"
+#~ msgstr "大小："
+
+#~ msgid "Date"
+#~ msgstr "日期"
+
+#~ msgid "Time"
+#~ msgstr "时间"
 
 #~ msgid "5/10"
 #~ msgstr "5/10"
@@ -3893,9 +3916,6 @@ msgstr "关闭"
 
 #~ msgid "Pileon"
 #~ msgstr "根冠"
-
-#~ msgid "Canfield"
-#~ msgstr "甘菲德"
 
 #~ msgid "Thirteen"
 #~ msgstr "十三"
