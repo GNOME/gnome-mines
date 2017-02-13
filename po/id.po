@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2014-09-02 07:01+0000\n"
-"PO-Revision-Date: 2014-09-05 10:51+0700\n"
-"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2017-01-20 15:23+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
@@ -20,17 +20,21 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 1.6.9\n"
+"X-Generator: Poedit 1.8.11\n"
 
 #: ../data/gnome-mines.appdata.xml.in.h:1
 msgid "GNOME Mines"
 msgstr "GNOME Ranjau"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2
+#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+msgid "Clear hidden mines from a minefield"
+msgstr "Kosongkan ranjau tersembunyi dari medan ranjau"
+
+#: ../data/gnome-mines.appdata.xml.in.h:3
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "GNOME Ranjau adalah permainan teka-teki dimana Anda mencari ranjau "
@@ -39,43 +43,63 @@ msgstr ""
 "menandai setiap ranjau pada papan. Berhati-hatilah untuk tidak memicu salah "
 "satu, atau permainan berakhir!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
-"Anda dapat memilih ukuran lapangan yang ingin Anda mainkan pada awal "
-"permainan. Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk: ada "
-"penalti waktu, tapi itu lebih baik daripada mengenai sebuah ranjau!"
+"Anda dapat memilih ukuran papan yang ingin Anda mainkan pada awal permainan. "
+"Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk: ada penalti "
+"waktu, tapi itu lebih baik daripada mengenai sebuah ranjau!"
+
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "Proyek GNOME"
 
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:96 ../src/gnome-mines.vala:153
-#: ../src/gnome-mines.vala:678
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Ranjau"
-
-#: ../data/gnome-mines.desktop.in.h:2
-msgid "Clear hidden mines from a minefield"
-msgstr "Kosongkan ranjau tersembunyi dari medan ranjau"
 
 #: ../data/gnome-mines.desktop.in.h:3
 msgid "minesweeper;"
 msgstr "penyapu ranjau;"
 
+#: ../data/gnome-mines.desktop.in.h:4
+msgid "Small board"
+msgstr "Papan kecil"
+
+#: ../data/gnome-mines.desktop.in.h:5
+msgid "Medium board"
+msgstr "Papan sedang"
+
+#: ../data/gnome-mines.desktop.in.h:6
+msgid "Big board"
+msgstr "Papan besar"
+
 #: ../data/org.gnome.mines.gschema.xml.h:1
+msgid "The theme to use"
+msgstr "Tema untuk digunakan"
+
+#: ../data/org.gnome.mines.gschema.xml.h:2
+msgid "The title of the tile theme to use."
+msgstr "Judul tema kotak untuk digunakan."
+
+#: ../data/org.gnome.mines.gschema.xml.h:3
 msgid "Use the unknown flag"
 msgstr "Gunakan bendera tidak diketahui"
 
-#: ../data/org.gnome.mines.gschema.xml.h:2
+#: ../data/org.gnome.mines.gschema.xml.h:4
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "Atur ke true untuk dapat menandakan kotak sebagai tidak diketahui."
 
-#: ../data/org.gnome.mines.gschema.xml.h:3
+#: ../data/org.gnome.mines.gschema.xml.h:5
 msgid "Warning about too many flags"
 msgstr "Peringatan akan terlalu banyak bendera"
 
-#: ../data/org.gnome.mines.gschema.xml.h:4
+#: ../data/org.gnome.mines.gschema.xml.h:6
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -83,11 +107,11 @@ msgstr ""
 "Atur ke true untuk memunculkan ikon peringatan saat terlalu banyak bendera "
 "yang ditempatkan di sebelah ubin bernomor."
 
-#: ../data/org.gnome.mines.gschema.xml.h:5
+#: ../data/org.gnome.mines.gschema.xml.h:7
 msgid "Enable automatic placing of flags"
 msgstr "Aktifkan penempatan bendera otomatis"
 
-#: ../data/org.gnome.mines.gschema.xml.h:6
+#: ../data/org.gnome.mines.gschema.xml.h:8
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -95,230 +119,254 @@ msgstr ""
 "Isi dengan true agar secara otomatis menandai kotak sebagai beranjau saat "
 "cukup kotak telah dibuka"
 
-#: ../data/org.gnome.mines.gschema.xml.h:7
+#: ../data/org.gnome.mines.gschema.xml.h:9
+msgid "Enable animations"
+msgstr "Aktifkan animasi"
+
+#: ../data/org.gnome.mines.gschema.xml.h:10
+msgid "Set to false to disable theme-defined transition animations"
+msgstr "Atur ke false untuk menonaktifkan transisi animasi tema-didefinisikan"
+
+#: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
 msgstr "Jumlah kolom dalam permainan gubahan"
 
-#: ../data/org.gnome.mines.gschema.xml.h:8
+#: ../data/org.gnome.mines.gschema.xml.h:12
 msgid "Number of rows in a custom game"
 msgstr "Jumlah baris dalam permainan gubahan"
 
-#: ../data/org.gnome.mines.gschema.xml.h:9
+#: ../data/org.gnome.mines.gschema.xml.h:13
 msgid "The number of mines in a custom game"
 msgstr "Jumlah ranjau dalam permainan gubahan"
 
-#: ../data/org.gnome.mines.gschema.xml.h:10
+#: ../data/org.gnome.mines.gschema.xml.h:14
 msgid "Board size"
 msgstr "Ukuran papan"
 
-#: ../data/org.gnome.mines.gschema.xml.h:11
+#: ../data/org.gnome.mines.gschema.xml.h:15
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Ukuran papan (0-2 = kecil-besar, 3=gubahan)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:12
+#: ../data/org.gnome.mines.gschema.xml.h:16
 msgid "Width of the window in pixels"
 msgstr "Lebar jendela dalam piksel"
 
-#: ../data/org.gnome.mines.gschema.xml.h:13
+#: ../data/org.gnome.mines.gschema.xml.h:17
 msgid "Height of the window in pixels"
 msgstr "Tinggi jendela dalam piksel"
 
-#: ../data/org.gnome.mines.gschema.xml.h:14
+#: ../data/org.gnome.mines.gschema.xml.h:18
 msgid "true if the window is maximized"
 msgstr "bernilai \"true\" bila jendela dimaksimalkan"
 
 #: ../data/interface.ui.h:2
-msgid "5/10"
-msgstr "5/10"
-
-#: ../data/interface.ui.h:3
-msgid "0:00"
-msgstr "0:00"
-
-#: ../data/interface.ui.h:4 ../src/gnome-mines.vala:783
-msgid "_Pause"
-msgstr "_Jeda"
-
-#: ../data/interface.ui.h:5
-msgid "_Best Times"
-msgstr "Waktu Ter_baik"
-
-#: ../data/interface.ui.h:6
-msgid "Change _Difficulty"
-msgstr "Ubah _Kesulitan"
-
-#: ../data/interface.ui.h:7
-msgid "_Play Again"
-msgstr "M_ain Lagi"
-
-#: ../data/interface.ui.h:8
 msgid "_Width"
 msgstr "_Lebar"
 
-#: ../data/interface.ui.h:9
+#: ../data/interface.ui.h:3
 msgid "_Height"
 msgstr "_Tinggi"
 
-#: ../data/interface.ui.h:10
+#: ../data/interface.ui.h:4
 msgid "Percent _mines"
 msgstr "Persen _ranjau"
 
-#: ../data/interface.ui.h:11
+#: ../data/interface.ui.h:5
 msgid "_Cancel"
 msgstr "_Batal"
 
-#: ../data/interface.ui.h:12
+#: ../data/interface.ui.h:6
 msgid "_Play Game"
 msgstr "_Mainkan"
 
-#: ../data/interface.ui.h:13
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
+msgid "_Pause"
+msgstr "_Jeda"
+
+#: ../data/interface.ui.h:8
+msgid "Change _Difficulty"
+msgstr "Ubah _Kesulitan"
+
+#: ../data/interface.ui.h:9
+msgid "_Best Times"
+msgstr "Waktu Ter_baik"
+
+#: ../data/interface.ui.h:10
+msgid "_Play Again"
+msgstr "M_ain Lagi"
+
+#: ../data/interface.ui.h:11
 msgid "Paused"
 msgstr "Jeda"
 
-#: ../src/gnome-mines.vala:160 ../src/gnome-mines.vala:178
-msgid "_New Game"
-msgstr "Mai_nkan Permainan Baru"
+#: ../src/gnome-mines.vala:89
+msgid "Print release version and exit"
+msgstr "Cetak versi rilis dan keluar"
 
-#: ../src/gnome-mines.vala:161 ../src/gnome-mines.vala:179
+#: ../src/gnome-mines.vala:90
+msgid "Small game"
+msgstr "Permainan kecil"
+
+#: ../src/gnome-mines.vala:91
+msgid "Medium game"
+msgstr "Permainan sedang"
+
+#: ../src/gnome-mines.vala:92
+msgid "Big game"
+msgstr "Permainan besar"
+
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "_Nilai"
 
-#: ../src/gnome-mines.vala:164 ../src/gnome-mines.vala:180
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
+msgid "A_ppearance"
+msgstr "Pen_ampilan"
+
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "Tampilkan _Peringatan"
 
-#: ../src/gnome-mines.vala:165 ../src/gnome-mines.vala:181
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "Pakai _Bendera Tanda Tanya"
 
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:184
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "_Bantuan"
 
-#: ../src/gnome-mines.vala:169 ../src/gnome-mines.vala:186
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "Tent_ang"
 
-#: ../src/gnome-mines.vala:170 ../src/gnome-mines.vala:182
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "_Keluar"
 
-#: ../src/gnome-mines.vala:177
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Ranjau"
 
-#: ../src/gnome-mines.vala:185
+#: ../src/gnome-mines.vala:265
+msgid "_New Game"
+msgstr "Mai_nkan Permainan Baru"
+
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Isi"
 
-#: ../src/gnome-mines.vala:270
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Medan ranjau:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d ranjau"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Gubahan"
 
-#: ../src/gnome-mines.vala:345
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> ranjau"
 
-#: ../src/gnome-mines.vala:426
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Apakah Anda ingin memulai permainan baru?"
 
-#: ../src/gnome-mines.vala:427
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Bila Anda memulai permainan baru, kemajuan Anda kini akan hilang."
 
-#: ../src/gnome-mines.vala:428
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Pertahankan Permainan Saat Ini"
 
-#: ../src/gnome-mines.vala:429
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Mulai permainan baru"
 
-#. Translators: sorry. This is the clock label when the game has exceeded
-#. * one hour in length. The first %02d is hours, the middle %02d is minutes,
-#. * and the last is seconds. In between are ratio characters and LTR order
-#. * marks, so that nothing gets reversed in RTL languages. You probably do not
-#. * need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:634
-#, c-format
-msgid "%02d∶‎%02d∶‎%02d"
-msgstr "%02d∶‎%02d∶‎%02d"
+#: ../src/gnome-mines.vala:657
+msgid "St_art Over"
+msgstr "Mul_ai Lagi"
 
-#. Translators: sorry. This is the clock label when the game is less than
-#. * one hour in length. The first %02d is minutes and the last is seconds.
-#. * In between is a ratio character and LTR order mark, so that nothing gets
-#. * reversed in RTL languages. You probably do not need to change this. Probably.
-#.
-#: ../src/gnome-mines.vala:643
-#, c-format
-msgid "%02d∶‎%02d"
-msgstr "%02d∶‎%02d"
+#: ../src/gnome-mines.vala:768
+msgid "_Resume"
+msgstr "_Lanjutkan"
 
-#: ../src/gnome-mines.vala:651
+#: ../src/gnome-mines.vala:786
+msgid "Play _Again"
+msgstr "M_ain Lagi"
+
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Permainan utama:"
 
-#: ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Nilai:"
 
-#: ../src/gnome-mines.vala:659
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Pengubahan ukuran dan dukungan SVG:"
 
-#: ../src/gnome-mines.vala:681
-msgid ""
-"Clear explosive mines off the board\n"
-"\n"
-"Mines is a part of GNOME Games."
-msgstr ""
-"Bersihkan ranjau eksplosif dari papan\n"
-"\n"
-"Mines adalah bagian dari GNOME Permainan."
+#: ../src/gnome-mines.vala:871
+msgid "Clear explosive mines off the board"
+msgstr "Bersihkan ranjau eksplosif dari papan"
 
-#: ../src/gnome-mines.vala:688
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Mohammad DAMT <mdamt@bisnisweb.com>\n"
 "Ahmad Riza H Nst  <rizahnst@gnome.org>\n"
 "Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
-"Dirgita <dirgitadevina@yahoo.co.id>, 2012."
+"Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
+"Kukuh Syafaat <syafaatkukuh@gmail.com>, 2017."
 
-#: ../src/gnome-mines.vala:793
-msgid "_Resume"
-msgstr "_Lanjutkan"
+#: ../src/theme-selector-dialog.vala:99
+msgid "Use _animations"
+msgstr "Gunakan _animasi"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Tutup"
+#: ../src/theme-selector-dialog.vala:115
+msgid "Select Theme"
+msgstr "Pilih Tema"
 
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Permainan Baru"
+#: ../src/theme-selector-dialog.vala:138
+msgid "Close"
+msgstr "Tutup"
 
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "_OK"
+#~ msgid "5/10"
+#~ msgstr "5/10"
 
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Ukuran:"
+#~ msgid "0:00"
+#~ msgstr "0:00"
 
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Tanggal"
+#~ msgid "%02d∶‎%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d∶‎%02d"
 
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Waktu"
+#~ msgid "%02d∶‎%02d"
+#~ msgstr "%02d∶‎%02d"
 
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u ranjau"
+#~ msgid "New Game"
+#~ msgstr "Permainan Baru"
+
+#~ msgid "_OK"
+#~ msgstr "_OK"
+
+#~ msgid "Size:"
+#~ msgstr "Ukuran:"
+
+#~ msgid "Date"
+#~ msgstr "Tanggal"
+
+#~ msgid "Time"
+#~ msgstr "Waktu"
