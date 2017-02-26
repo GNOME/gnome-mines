@@ -1,20 +1,20 @@
 # Serbian translation of gnome-mines
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2016.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2003—2017.
 # This file is distributed under the same license as the gnome-mines package.
 # Dušan Marjanović <madafaka@bsd.org.yu>
 # Igor Nestorović <igor@prevod.org> 2005.
 # Miloš Popović <gpopac@gmail.com>, 2010.
 # Branko Kokanović <branko.kokanovic@gmail.com> 2010.
-# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2016.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011—2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:31+0000\n"
-"PO-Revision-Date: 2016-08-28 08:56+0200\n"
+"POT-Creation-Date: 2016-11-12 12:41+0000\n"
+"PO-Revision-Date: 2017-02-21 06:49+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
-"Language-Team: srpski <gnome-sr@googlegroups.org>\n"
+"Language-Team: Serbian <(nothing)>\n"
 "Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,10 +32,15 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Očistite skrivene mine sa minskog polja"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "Gnomove mine je igra slagalica u kojoj tražite skrivene mine. Otkrijte polja "
@@ -44,10 +49,14 @@ msgstr ""
 "nagazite na neku, jer u tom slučaju igra se završava!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Na početku igre možete da izaberete veličinu polja za igru. Ako se nađete u "
 "bezizlaznoj situaciji (a u pitanju je vaš goli život), možete da zatražite "
@@ -265,8 +274,6 @@ msgstr "Minsko polje:"
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:357
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
@@ -342,15 +349,15 @@ msgstr ""
 "\n"
 "http://prevod.org — prevod na srpski jezik"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Koristi _animacije"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Izaberite temu"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Zatvori"
 
