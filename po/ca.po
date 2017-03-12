@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-19 22:42+0100\n"
+"POT-Creation-Date: 2017-03-12 08:27+0100\n"
 "PO-Revision-Date: 2014-09-05 00:44+0200\n"
 "Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
@@ -36,10 +36,10 @@ msgstr "Netegeu les mines ocultes del camp de mines"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"El GNOME Mines és un joc de trencaclosques on cerqueu mines amagades. "
+"El GNOME Mines és un trencaclosques on cerqueu mines amagades. "
 "Marqueu amb banderes els espais amb mines tan ràpid com sigui possible per "
 "fer del tauler un lloc segur. Guanyeu la partida quan marqueu totes les "
 "mines del tauler. Aneu amb compte de no activar-ne cap o s'acabarà la "
@@ -48,16 +48,20 @@ msgstr ""
 #: ../data/gnome-mines.appdata.xml.in.h:4
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Podeu seleccionar la mida del camp que voleu jugar a l'inici de la partida. "
 "Si esteu perdut, podeu demanar una pista, però tindreu una penalització de "
 "temps, però és millor això que no pas activar una mina!"
 
+#: ../data/gnome-mines.appdata.xml.in.h:5
+msgid "The GNOME Project"
+msgstr "El projecte GNOME"
+
 #: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:167 ../src/gnome-mines.vala:228
-#: ../src/gnome-mines.vala:804
+#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
+#: ../src/gnome-mines.vala:868
 msgid "Mines"
 msgstr "Mines"
 
@@ -123,7 +127,9 @@ msgstr "Habilita animacions"
 
 #: ../data/org.gnome.mines.gschema.xml.h:10
 msgid "Set to false to disable theme-defined transition animations"
-msgstr "Estableix a fals per inhabilitar les animacions de transicions definides pel tema"
+msgstr ""
+"Estableix a fals per inhabilitar les animacions de transicions definides pel "
+"tema"
 
 #: ../data/org.gnome.mines.gschema.xml.h:11
 msgid "Number of columns in a custom game"
@@ -177,8 +183,8 @@ msgstr "_Cancel·la"
 msgid "_Play Game"
 msgstr "_Juga al joc"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:601
-#: ../src/gnome-mines.vala:715 ../src/gnome-mines.vala:753
+#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
+#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
 msgid "_Pause"
 msgstr "Fes una _pausa"
 
@@ -198,118 +204,131 @@ msgstr "Jug_a de nou"
 msgid "Paused"
 msgstr "Aturat"
 
-#: ../src/gnome-mines.vala:88
+#: ../src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Mostra la versió del llançament i surt"
 
-#: ../src/gnome-mines.vala:89
+#: ../src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Partida petita"
 
-#: ../src/gnome-mines.vala:90
+#: ../src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Partida mitjana"
 
-#: ../src/gnome-mines.vala:91
+#: ../src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Partida gran"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:259
+#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
 msgid "_Scores"
 msgstr "Puntuacion_s"
 
-#: ../src/gnome-mines.vala:241 ../src/gnome-mines.vala:260
+#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
 msgid "A_ppearance"
 msgstr "A_parença"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:261
+#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
 msgid "_Show Warnings"
 msgstr "_Mostra els avisos"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:262
+#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
 msgid "_Use Question Flags"
 msgstr "_Utilitza banderes de pregunta"
 
-#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:265
+#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
 msgid "_Help"
 msgstr "A_juda"
 
-#: ../src/gnome-mines.vala:249 ../src/gnome-mines.vala:267
+#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
 msgid "_About"
 msgstr "_Quant a"
 
-#: ../src/gnome-mines.vala:250 ../src/gnome-mines.vala:263
+#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
 msgid "_Quit"
 msgstr "S_urt"
 
-#: ../src/gnome-mines.vala:257
+#: ../src/gnome-mines.vala:264
 msgid "_Mines"
 msgstr "_Mines"
 
-#: ../src/gnome-mines.vala:258
+#: ../src/gnome-mines.vala:265
 msgid "_New Game"
 msgstr "Partida _nova"
 
-#: ../src/gnome-mines.vala:266
+#: ../src/gnome-mines.vala:273
 msgid "_Contents"
 msgstr "_Continguts"
 
-#: ../src/gnome-mines.vala:363
+#. Label on the scores dialog
+#: ../src/gnome-mines.vala:323
+msgid "Minefield:"
+msgstr "Camp de mines:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: ../src/gnome-mines.vala:357
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d mina"
+msgstr[1] "%d × %d, %d mines"
+
+#: ../src/gnome-mines.vala:416
 msgid "Custom"
 msgstr "Personalitzada"
 
-#: ../src/gnome-mines.vala:441
+#: ../src/gnome-mines.vala:494
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> mines"
 
-#: ../src/gnome-mines.vala:558
+#: ../src/gnome-mines.vala:604
 msgid "Do you want to start a new game?"
 msgstr "Voleu iniciar un joc nou?"
 
-#: ../src/gnome-mines.vala:559
+#: ../src/gnome-mines.vala:605
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Perdreu el progrés aconseguit en el joc actual si inicieu un joc nou."
 
-#: ../src/gnome-mines.vala:560
+#: ../src/gnome-mines.vala:606
 msgid "Keep Current Game"
 msgstr "Mantén la partida actual"
 
-#: ../src/gnome-mines.vala:561
+#: ../src/gnome-mines.vala:607
 msgid "Start New Game"
 msgstr "Comença una partida nova"
 
-#: ../src/gnome-mines.vala:602
+#: ../src/gnome-mines.vala:657
 msgid "St_art Over"
 msgstr "_Comença de nou"
 
-#: ../src/gnome-mines.vala:713
+#: ../src/gnome-mines.vala:768
 msgid "_Resume"
 msgstr "_Continua"
 
-#: ../src/gnome-mines.vala:731
+#: ../src/gnome-mines.vala:786
 msgid "Play _Again"
 msgstr "Jug_a de nou"
 
-#: ../src/gnome-mines.vala:777
+#: ../src/gnome-mines.vala:841
 msgid "Main game:"
 msgstr "Partida principal:"
 
-#: ../src/gnome-mines.vala:782
+#: ../src/gnome-mines.vala:846
 msgid "Score:"
 msgstr "Marcador:"
 
-#: ../src/gnome-mines.vala:785
+#: ../src/gnome-mines.vala:849
 msgid "Resizing and SVG support:"
 msgstr "Canvi de mida i suport SVG:"
 
-#: ../src/gnome-mines.vala:807
+#: ../src/gnome-mines.vala:871
 msgid "Clear explosive mines off the board"
 msgstr "Netegeu el tauler de mines explosives"
 
-#: ../src/gnome-mines.vala:814
+#: ../src/gnome-mines.vala:878
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -320,48 +339,35 @@ msgstr ""
 "David Planella <david.planella@gmail.com>\n"
 "Jordi Mas <jmas@softcatala.org>"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "_Tanca"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "Partida nova"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "D'_acord"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "Mida:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "Data"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "Temps"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, %u mina"
-msgstr[1] "%u × %u, %u mines"
-
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "_Usa animacions"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Seleccioneu el tema"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Tanca"
+
+#~ msgid "_Close"
+#~ msgstr "_Tanca"
+
+#~ msgid "New Game"
+#~ msgstr "Partida nova"
+
+#~ msgid "_OK"
+#~ msgstr "D'_acord"
+
+#~ msgid "Size:"
+#~ msgstr "Mida:"
+
+#~ msgid "Date"
+#~ msgstr "Data"
+
+#~ msgid "Time"
+#~ msgstr "Temps"
 
 #~ msgid "5/10"
 #~ msgstr "5/10"
