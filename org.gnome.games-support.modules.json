@@ -1,0 +1,24 @@
+{
+    "name": "org.gnome.games-support.modules",
+    "modules": [
+        {
+            "name": "libgee",
+            "config-opts": ["--enable-introspection=no"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgee"
+                }
+            ]
+        },
+        {
+            "name": "libgnome-games-support",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "git://git.gnome.org/libgnome-games-support"
+                }
+            ]
+        }
+    ]
+}
