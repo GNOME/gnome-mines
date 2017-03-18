@@ -5,14 +5,14 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mi"
-"nes&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-08-13 20:31+0000\n"
-"PO-Revision-Date: 2016-09-08 18:48+0200\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-m"
+"ines&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-24 17:03+0000\n"
+"PO-Revision-Date: 2017-03-18 14:51+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -34,10 +34,15 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Notīrīt apslēptas mīnas no laukuma"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "GNOME Mīnas ir spēle, kurā jāmeklē slēptas mīnas. Pēc iespējas ātrāk uzliec "
@@ -46,10 +51,14 @@ msgstr ""
 "lai kāda mīna neuzsprāgst, tad spēlei ir beigas!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Katras spēles sākumā vari izvēlēties laukuma izmēru. Ja iestrēgsti, vari "
 "prasīt padomu, būs laika sods, bet tas ir labāk, kā uzkāpt uz mīnas!"
@@ -266,8 +275,6 @@ msgstr "Mīnu lauks:"
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:357
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mīna"
@@ -337,15 +344,15 @@ msgstr ""
 "Sandra Zabarovska <sandra.zabarovska@gmail.com>\n"
 "Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Lietot _animācijas"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Izvēlieties motīvu"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Aizvērt"
 
