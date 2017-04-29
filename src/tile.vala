@@ -29,6 +29,7 @@ public class Tile : Gtk.Button
         scaling_image.clear ();
         scaling_image.set_from_icon_name (name, size);
         scaling_image.set_pixel_size (get_allocated_height ()/3*2);
+        set_image (scaling_image);
     }
 
     public Tile (int prow, int pcol)
@@ -66,6 +67,7 @@ public class Tile : Gtk.Button
         if (style_class in IMAGE_CLASSES) {
             scaling_image.set_from_icon_name (style_class, Gtk.IconSize.DND);
             scaling_image.set_pixel_size (get_allocated_height ()/3*2);
+            set_image (scaling_image);
         }
     }
 
