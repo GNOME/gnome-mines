@@ -176,21 +176,13 @@ public class Mines : Gtk.Application
         Gtk.Window.set_default_icon_name ("gnome-mines");
 
         var css_provider = new Gtk.CssProvider ();
-        var css_path = Path.build_filename (DATA_DIRECTORY, "gnome-mines.css");
-        try
-        {
-            css_provider.load_from_path (css_path);
-        }
-        catch (GLib.Error e)
-        {
-            warning ("Error loading css styles from %s: %s", css_path, e.message);
-        }
+        css_provider.load_from_resource ("/org/gnome/Mines/gnome-mines.css");
 
         Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
         var ui_builder = new Gtk.Builder ();
         try
         {
-            ui_builder.add_from_file (Path.build_filename (DATA_DIRECTORY, "interface.ui", null));
+            ui_builder.add_from_resource ("/org/gnome/Mines/interface.ui");
         }
         catch (Error e)
         {

@@ -1,12 +1,16 @@
 bin_PROGRAMS = gnome-mines
 
+resources.c: gnome-mines.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies $(srcdir)/gnome-mines.gresource.xml)
+	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --generate-source $<
+
 gnome_mines_SOURCES =	\
 	config.vapi	\
 	gnome-mines.vala \
 	minefield.vala \
 	minefield-view.vala \
 	tile.vala \
-	theme-selector-dialog.vala
+	theme-selector-dialog.vala \
+	resources.c
 
 gnome_mines_CFLAGS = \
 	-DVERSION=\"$(VERSION)\" \
@@ -24,6 +28,7 @@ gnome_mines_VALAFLAGS = \
 	--pkg pangocairo \
 	--pkg libgnome-games-support-1 \
 	--pkg gee-0.8 \
+	--gresources=gnome-mines.gresource.xml \
 	--target-glib $(GLIB_REQUIRED)
 
 gnome_mines_LDADD = \
@@ -32,5 +37,9 @@ gnome_mines_LDADD = \
 CLEANFILES = \
 	$(patsubst %.vala,%.c,$(filter %.vala, $(SOURCES))) \
 	*_vala.stamp
+
+EXTRA_DIST = interface.ui \
+             gnome-mines.css \
+             gnome-mines.gresource.xml
 
 -include $(top_srcdir)/git.mk

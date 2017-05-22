@@ -1,10 +1,14 @@
+resources = gnome.compile_resources ('resources', 'gnome-mines.gresource.xml',
+                                     source_dir: '.',
+                                     c_name: 'resources')
+
 gnome_mines = executable ('gnome-mines',
                           [ 'config.vapi',
                             'gnome-mines.vala',
                             'minefield.vala',
                             'minefield-view.vala',
                             'tile.vala',
-                            'theme-selector-dialog.vala'],
+                            'theme-selector-dialog.vala'] + resources,
                           dependencies: [ glib_dep,
                                           gee_dep,
                                           gtk_dep,

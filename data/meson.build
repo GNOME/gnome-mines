@@ -11,11 +11,6 @@ install_data ('org.gnome.mines.gschema.xml',
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
 meson.add_install_script ('meson_compile_gschema.py')
 
-install_data ('gnome-mines.css',
-              install_dir: pkgdatadir)
-install_data ('interface.ui',
-              install_dir: pkgdatadir)
-
 foreach theme: [ 'default', 'bgcolors', 'classic' ]
     foreach file: [ 'theme.css',
                     '1mines.svg', '2mines.svg', '3mines.svg', '4mines.svg', '5mines.svg', '6mines.svg', '7mines.svg', '8mines.svg',

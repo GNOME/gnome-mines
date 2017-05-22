@@ -8,12 +8,6 @@ man_MANS = gnome-mines.6
 icon_symbolicdir=$(datadir)/icons/hicolor/16x16/actions
 icon_symbolic_DATA=flag-symbolic.svg
 
-cssdir = $(pkgdatadir)
-css_DATA = gnome-mines.css
-
-uidir = $(pkgdatadir)
-ui_DATA = interface.ui
-
 desktopdir = $(datadir)/applications
 desktop_in_files = gnome-mines.desktop.in
 desktop_DATA = $(desktop_in_files:.desktop.in=.desktop)
