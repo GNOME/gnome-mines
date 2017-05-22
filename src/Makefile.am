@@ -1,6 +1,6 @@
 bin_PROGRAMS = gnome-mines
 
-resources.c: gnome-mines.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies $(srcdir)/gnome-mines.gresource.xml)
+resources.c: gnome-mines.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-dependencies --sourcedir=$(srcdir) $(srcdir)/gnome-mines.gresource.xml)
 	$(AM_V_GEN) $(GLIB_COMPILE_RESOURCES) --target=$@ --generate-source $<
 
 gnome_mines_SOURCES =	\
