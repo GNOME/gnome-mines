@@ -1,3 +1,10 @@
+GNOME Mines 3.25.2
+=====================
+
+* Updated translations
+* Added flatpak manifest (Florian Müllner)
+* Added meson build rules (Robert Ancell)
+
 GNOME Mines 3.24.0
 =====================
 
