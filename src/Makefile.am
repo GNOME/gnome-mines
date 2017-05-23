@@ -28,7 +28,6 @@ gnome_mines_VALAFLAGS = \
 	--pkg pangocairo \
 	--pkg libgnome-games-support-1 \
 	--pkg gee-0.8 \
-	--gresources=gnome-mines.gresource.xml \
 	--target-glib $(GLIB_REQUIRED)
 
 gnome_mines_LDADD = \
