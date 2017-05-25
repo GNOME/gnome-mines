@@ -22,7 +22,6 @@ gee_dep = dependency ('gee-0.8')
 gtk_dep = dependency ('gtk+-3.0', version: '>= 3.12')
 librsvg_dep = dependency ('librsvg-2.0', version: '>=2.32.0')
 libgnome_games_support_dep = dependency ('libgnome-games-support-1')
-msgfmt = find_program  ('msgfmt')
 
 subdir ('po')
 subdir ('data')

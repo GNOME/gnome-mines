@@ -1,23 +1,24 @@
 [Desktop Entry]
-_Name=Mines
-_Comment=Clear hidden mines from a minefield
+Name=Mines
+Comment=Clear hidden mines from a minefield
 Exec=gnome-mines
+# Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 Icon=gnome-mines
 Terminal=false
 Type=Application
 Categories=GNOME;GTK;Game;LogicGame;
-_Keywords=minesweeper;
+Keywords=minesweeper;
 StartupNotify=true
 Actions=Small;Medium;Big;
 
 [Desktop Action Small]
-_Name=Small board
+Name=Small board
 Exec=gnome-mines --small
 
 [Desktop Action Medium]
-_Name=Medium board
+Name=Medium board
 Exec=gnome-mines --medium
 
 [Desktop Action Big]
-_Name=Big board
+Name=Big board
 Exec=gnome-mines --big

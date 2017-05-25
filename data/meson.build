@@ -19,20 +19,19 @@ foreach theme: [ 'default', 'bgcolors', 'classic' ]
     endforeach
 endforeach
 
-# Note the keywords explicitly listed to stop the icon field being translated
-# https://bugs.launchpad.net/bugs/1624662
-custom_target ('gnome-mines.desktop',
-               output: 'gnome-mines.desktop',
-               input: 'gnome-mines.desktop.in',
-               command: [ msgfmt, '--desktop', '--keyword=Name', '--keyword=GenericName', '--keyword=Comment', '--keyword=Keywords', '--template', '@INPUT@', '-d', podir, '-o', '@OUTPUT@' ],
-               install: true,
-               install_dir: join_paths (datadir, 'applications'))
+i18n.merge_file ('desktop-file',
+                 input: 'gnome-mines.desktop.in',
+                 output: 'gnome-mines.desktop',
+                 install: true,
+                 install_dir: join_paths (datadir, 'applications'),
+                 po_dir: '../po',
+                 type: 'desktop')
 
-custom_target ('gnome-mines.appdata.xml',
-               output: 'gnome-mines.appdata.xml',
-               input: 'gnome-mines.appdata.xml.in',
-               command: [ msgfmt, '--xml', '--template', '@INPUT@', '-d', podir, '-o', '@OUTPUT@' ],
-               install: true,
-               install_dir: join_paths (datadir, 'appdata'))
+i18n.merge_file ('appdata-file',
+                 input: 'gnome-mines.appdata.xml.in',
+                 output: 'gnome-mines.appdata.xml',
+                 install: true,
+                 install_dir: join_paths (datadir, 'appdata'),
+                 po_dir: '../po')
 
 install_man ('gnome-mines.6')

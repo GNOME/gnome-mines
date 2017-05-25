@@ -1,10 +1,9 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-[encoding: UTF-8]
 data/gnome-mines.appdata.xml.in
 data/gnome-mines.desktop.in
 data/org.gnome.mines.gschema.xml
-[type: gettext/glade]src/interface.ui
+src/interface.ui
 src/gnome-mines.vala
 src/minefield.vala
 src/minefield-view.vala
