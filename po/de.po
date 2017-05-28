@@ -14,7 +14,7 @@
 # Philipp Kerling <k.philipp@gmail.com>, 2007-2008.
 # Björn Deiseroth <service@dual-creators.de>, 2007.
 # Andre Klapper <ak-47@gmx.net>, 2008-2009.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2013, 2016.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2010-2013, 2016-2017.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009-2012.
 # Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2015.
@@ -23,10 +23,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-12 12:41+0000\n"
-"PO-Revision-Date: 2016-11-14 09:57+0100\n"
+"POT-Creation-Date: 2017-05-25 14:00+0000\n"
+"PO-Revision-Date: 2017-05-28 13:21+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -34,17 +34,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 2.0.2\n"
 
-#: ../data/gnome-mines.appdata.xml.in.h:1
+#: data/gnome-mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "Minen"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "Versteckte Minen aus einem Minenfeld räumen"
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: data/gnome-mines.appdata.xml.in:11
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -57,7 +57,7 @@ msgstr ""
 "auf dem Feld markiert haben. Geben Sie Acht, keine der Minen auszulösen, "
 "sonst ist das Spiel vorbei!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:4
+#: data/gnome-mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -68,55 +68,60 @@ msgstr ""
 "Zeitstrafe dafür, aber das ist immer noch besser, als auf eine Mine zu "
 "treffen!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:5
+#: data/gnome-mines.appdata.xml.in:42
 msgid "The GNOME Project"
 msgstr "Das GNOME-Projekt"
 
-#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:168 ../src/gnome-mines.vala:235
-#: ../src/gnome-mines.vala:868
+#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
 msgid "Mines"
 msgstr "Minen"
 
-#: ../data/gnome-mines.desktop.in.h:3
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/gnome-mines.desktop.in:7
+msgid "gnome-mines"
+msgstr "gnome-mines"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/gnome-mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "Minesweeper;Mine;Spiel;Puzzle;"
 
-#: ../data/gnome-mines.desktop.in.h:4
+#: data/gnome-mines.desktop.in:17
 msgid "Small board"
 msgstr "Kleines Spielfeld"
 
-#: ../data/gnome-mines.desktop.in.h:5
+#: data/gnome-mines.desktop.in:21
 msgid "Medium board"
 msgstr "Mittelgroßes Spielfeld"
 
-#: ../data/gnome-mines.desktop.in.h:6
+#: data/gnome-mines.desktop.in:25
 msgid "Big board"
 msgstr "Großes Spielfeld"
 
-#: ../data/org.gnome.mines.gschema.xml.h:1
+#: data/org.gnome.mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "Zu verwendendes Thema"
 
-#: ../data/org.gnome.mines.gschema.xml.h:2
+#: data/org.gnome.mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "Der Titel des zu verwendenden Spielsteinthemas."
 
-#: ../data/org.gnome.mines.gschema.xml.h:3
+#: data/org.gnome.mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "Die Unbekannt-Fahne verwenden"
 
-#: ../data/org.gnome.mines.gschema.xml.h:4
+#: data/org.gnome.mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr ""
 "Falls dieser Schlüssel wahr ist, ist es Ihnen gestattet, Quadrate als "
 "unbekannt zu markieren."
 
-#: ../data/org.gnome.mines.gschema.xml.h:5
+#: data/org.gnome.mines.gschema.xml:15
 msgid "Warning about too many flags"
 msgstr "Warnen bei zu vielen Fahnen"
 
-#: ../data/org.gnome.mines.gschema.xml.h:6
+#: data/org.gnome.mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -124,11 +129,11 @@ msgstr ""
 "Legt fest, ob Sie gewarnt werden, wenn zu viele Fahnen neben einer Zahl "
 "platziert wurden."
 
-#: ../data/org.gnome.mines.gschema.xml.h:7
+#: data/org.gnome.mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "Automatische Fahnen-Platzierung aktivieren"
 
-#: ../data/org.gnome.mines.gschema.xml.h:8
+#: data/org.gnome.mines.gschema.xml:21
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -136,213 +141,213 @@ msgstr ""
 "Legt fest, ob Kästchen automatisch als vermint markiert werden sollen, wenn "
 "genügend Kästchen aufgedeckt wurden"
 
-#: ../data/org.gnome.mines.gschema.xml.h:9
+#: data/org.gnome.mines.gschema.xml:25
 msgid "Enable animations"
 msgstr "Animationen einschalten"
 
-#: ../data/org.gnome.mines.gschema.xml.h:10
+#: data/org.gnome.mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "Legt fest, ob themenbasierte Übergangsanimationen abgeschaltet werden"
 
-#: ../data/org.gnome.mines.gschema.xml.h:11
+#: data/org.gnome.mines.gschema.xml:31
 msgid "Number of columns in a custom game"
 msgstr "Anzahl der Spalten des benutzerdefinierten Spielfeldes"
 
-#: ../data/org.gnome.mines.gschema.xml.h:12
+#: data/org.gnome.mines.gschema.xml:36
 msgid "Number of rows in a custom game"
 msgstr "Anzahl der Reihen des benutzerdefinierten Spielfeldes"
 
-#: ../data/org.gnome.mines.gschema.xml.h:13
+#: data/org.gnome.mines.gschema.xml:40
 msgid "The number of mines in a custom game"
 msgstr "Die Anzahl der Minen in einem benutzerdefinierten Spiel"
 
-#: ../data/org.gnome.mines.gschema.xml.h:14
+#: data/org.gnome.mines.gschema.xml:45
 msgid "Board size"
 msgstr "Spielfeldgröße"
 
-#: ../data/org.gnome.mines.gschema.xml.h:15
+#: data/org.gnome.mines.gschema.xml:46
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Brettgröße (0-2: klein-groß, 3: Benutzerdefiniert)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:16
+#: data/org.gnome.mines.gschema.xml:50
 msgid "Width of the window in pixels"
 msgstr "Fensterbreite in Pixeln"
 
-#: ../data/org.gnome.mines.gschema.xml.h:17
+#: data/org.gnome.mines.gschema.xml:54
 msgid "Height of the window in pixels"
 msgstr "Fensterhöhe in Pixeln"
 
-#: ../data/org.gnome.mines.gschema.xml.h:18
+#: data/org.gnome.mines.gschema.xml:58
 msgid "true if the window is maximized"
 msgstr "Wahr, falls das Fenster maximiert ist"
 
-#: ../data/interface.ui.h:2
+#: src/interface.ui:118
 msgid "_Width"
 msgstr "Brei_te"
 
-#: ../data/interface.ui.h:3
+#: src/interface.ui:142
 msgid "_Height"
 msgstr "_Höhe"
 
-#: ../data/interface.ui.h:4
+#: src/interface.ui:166
 msgid "Percent _mines"
 msgstr "_Anteil der Minen"
 
-#: ../data/interface.ui.h:5
+#: src/interface.ui:192
 msgid "_Cancel"
 msgstr "_Abbrechen"
 
-#: ../data/interface.ui.h:6
+#: src/interface.ui:208
 msgid "_Play Game"
 msgstr "Spiel _starten"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:656
-#: ../src/gnome-mines.vala:770 ../src/gnome-mines.vala:817
+#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
+#: src/gnome-mines.vala:809
 msgid "_Pause"
 msgstr "_Pause"
 
-#: ../data/interface.ui.h:8
+#: src/interface.ui:366
 msgid "Change _Difficulty"
 msgstr "_Schwierigkeit verändern"
 
-#: ../data/interface.ui.h:9
+#: src/interface.ui:383
 msgid "_Best Times"
 msgstr "_Bestzeiten"
 
-#: ../data/interface.ui.h:10
+#: src/interface.ui:400
 msgid "_Play Again"
 msgstr "_Weiterers Spiel"
 
-#: ../data/interface.ui.h:11
+#: src/interface.ui:464
 msgid "Paused"
 msgstr "Pausiert"
 
-#: ../src/gnome-mines.vala:89
+#: src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "Versionsnummer ausgeben und beenden"
 
-#: ../src/gnome-mines.vala:90
+#: src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "Kleines Spiel"
 
-#: ../src/gnome-mines.vala:91
+#: src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "Mittelgroßes Spiel"
 
-#: ../src/gnome-mines.vala:92
+#: src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "Großes Spiel"
 
-#: ../src/gnome-mines.vala:247 ../src/gnome-mines.vala:266
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
 msgid "_Scores"
 msgstr "Er_gebnisse"
 
-#: ../src/gnome-mines.vala:248 ../src/gnome-mines.vala:267
+#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
 msgid "A_ppearance"
 msgstr "_Erscheinungsbild"
 
-#: ../src/gnome-mines.vala:251 ../src/gnome-mines.vala:268
+#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
 msgid "_Show Warnings"
 msgstr "_Zeige Warnungen"
 
-#: ../src/gnome-mines.vala:252 ../src/gnome-mines.vala:269
+#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
 msgid "_Use Question Flags"
 msgstr "_Fragen-Fahne zeigen"
 
-#: ../src/gnome-mines.vala:255 ../src/gnome-mines.vala:272
+#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
 msgid "_Help"
 msgstr "_Hilfe"
 
-#: ../src/gnome-mines.vala:256 ../src/gnome-mines.vala:274
+#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
 msgid "_About"
 msgstr "_Info"
 
-#: ../src/gnome-mines.vala:257 ../src/gnome-mines.vala:270
+#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
 msgid "_Quit"
 msgstr "_Beenden"
 
-#: ../src/gnome-mines.vala:264
+#: src/gnome-mines.vala:256
 msgid "_Mines"
 msgstr "_Minen"
 
-#: ../src/gnome-mines.vala:265
+#: src/gnome-mines.vala:257
 msgid "_New Game"
 msgstr "_Neues Spiel"
 
-#: ../src/gnome-mines.vala:273
+#: src/gnome-mines.vala:265
 msgid "_Contents"
 msgstr "Inha_lt"
 
 #. Label on the scores dialog
-#: ../src/gnome-mines.vala:323
+#: src/gnome-mines.vala:315
 msgid "Minefield:"
 msgstr "Minenfeld:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: ../src/gnome-mines.vala:357
+#: src/gnome-mines.vala:349
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d Mine"
 msgstr[1] "%d × %d, %d Minen"
 
-#: ../src/gnome-mines.vala:416
+#: src/gnome-mines.vala:408
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: ../src/gnome-mines.vala:494
+#: src/gnome-mines.vala:486
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> Mine"
 msgstr[1] "<b>%d</b> Minen"
 
-#: ../src/gnome-mines.vala:604
+#: src/gnome-mines.vala:596
 msgid "Do you want to start a new game?"
 msgstr "Möchten Sie ein neues Spiel starten?"
 
-#: ../src/gnome-mines.vala:605
+#: src/gnome-mines.vala:597
 msgid "If you start a new game, your current progress will be lost."
 msgstr ""
 "Wenn Sie ein neues Spiel starten, geht Ihr aktueller Fortschritt verloren."
 
-#: ../src/gnome-mines.vala:606
+#: src/gnome-mines.vala:598
 msgid "Keep Current Game"
 msgstr "Das aktuelle Spiel behalten"
 
-#: ../src/gnome-mines.vala:607
+#: src/gnome-mines.vala:599
 msgid "Start New Game"
 msgstr "Ein neues Spiel starten"
 
-#: ../src/gnome-mines.vala:657
+#: src/gnome-mines.vala:649
 msgid "St_art Over"
 msgstr "_Von neuem beginnen"
 
-#: ../src/gnome-mines.vala:768
+#: src/gnome-mines.vala:760
 msgid "_Resume"
 msgstr "_Fortsetzen"
 
-#: ../src/gnome-mines.vala:786
+#: src/gnome-mines.vala:778
 msgid "Play _Again"
 msgstr "Nochmal _spielen"
 
-#: ../src/gnome-mines.vala:841
+#: src/gnome-mines.vala:833
 msgid "Main game:"
 msgstr "Hauptspiel:"
 
-#: ../src/gnome-mines.vala:846
+#: src/gnome-mines.vala:838
 msgid "Score:"
 msgstr "Punkte:"
 
-#: ../src/gnome-mines.vala:849
+#: src/gnome-mines.vala:841
 msgid "Resizing and SVG support:"
 msgstr "Größenänderungs-/SVG-Unterstützung:"
 
-#: ../src/gnome-mines.vala:871
+#: src/gnome-mines.vala:863
 msgid "Clear explosive mines off the board"
 msgstr "Explosive Minen vom Feld räumen"
 
-#: ../src/gnome-mines.vala:878
+#: src/gnome-mines.vala:870
 msgid "translator-credits"
 msgstr ""
 "Karl Eichwalder <ke@suse.de>\n"
@@ -362,117 +367,14 @@ msgstr ""
 "Tobias Endrigkeit <tobiasendrigkeit@googlemail.com>\n"
 "Jonatan Zeidler <jonatan_zeidler@gmx.de>"
 
-#: ../src/theme-selector-dialog.vala:99
+#: src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "_Animationen verwenden"
 
-#: ../src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Thema auswählen"
 
-#: ../src/theme-selector-dialog.vala:138
+#: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Schließen"
-
-#~ msgid "_Close"
-#~ msgstr "_Schließen"
-
-#~ msgid "New Game"
-#~ msgstr "Neues Spiel"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Size:"
-#~ msgstr "Größe:"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Time"
-#~ msgstr "Zeit"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Einstellungen"
-
-#~ msgid "H_orizontal:"
-#~ msgstr "H_orizontal:"
-
-#~ msgid "_Vertical:"
-#~ msgstr "_Vertikal:"
-
-#~ msgid "_Number of mines:"
-#~ msgstr "An_zahl der Minen:"
-
-#~ msgid "%u/%u"
-#~ msgstr "%u/%u"
-
-#~ msgid "Faces:"
-#~ msgstr "Gesichter:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafische Gestaltung:"
-
-#~ msgid "Mines Preferences"
-#~ msgstr "Minen-Einstellungen"
-
-#~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "»Ich bin mir nicht sicher«-Fahnen ver_wenden"
-
-#~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Warnen, falls zu viele Fahnen neben einer Zahl platziert wurden"
-
-#~ msgid "Display border around numbers"
-#~ msgstr "Rahmen um Ziffern anzeigen"
-
-#~ msgid "Set to true to display a border around mine indication numbers."
-#~ msgstr ""
-#~ "Auf »wahr« setzen, um einen Rahmen um die Ziffern zu zeichnen, welche die "
-#~ "Anzahl der Minen anzeigen."
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "Wahr, falls das Fenster im Vollbildmodus ist"
-
-#~ msgid "_Replay Size"
-#~ msgstr "Mit gleicher Feldgröße _wiederholen"
-
-#~ msgid "_Hint"
-#~ msgstr "_Tipp"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Vollbild"
-
-#~ msgid "_New"
-#~ msgstr "_Neu"
-
-#~ msgid "Hint"
-#~ msgstr "Tipp"
-
-#~ msgid "Field Size"
-#~ msgstr "Feldgröße"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "Vollbild _verlassen"
-
-#~ msgid "Flags: %u/%u"
-#~ msgstr "Fahnen: %u/%u"
-
-#~ msgid "Res_ume"
-#~ msgstr "_Fortsetzen"
-
-#~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
-#~ "\n"
-#~ "Mines is a part of GNOME Games."
-#~ msgstr ""
-#~ "Das beliebte Logikpuzzle »Minesweeper«. Ein Minenfeld mittels Hinweisen "
-#~ "von bereits betretenen Feldern säubern.\n"
-#~ "\n"
-#~ "Minen ist ein Teil von GNOME Games."
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "GNOME Games-Website"
-
-#~ msgid "_Display numbers with border"
-#~ msgstr "Ziffern _umrahmen"
