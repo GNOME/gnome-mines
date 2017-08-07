@@ -1,3 +1,11 @@
+GNOME Mines 3.25.90
+=====================
+
+* Updated translations
+* Fixed Bugzilla submit bug button text (Anders Jonsson)
+* Use glib preset for i18n (Piotr Drąg)
+* Build changes (Robert Ancell)
+
 GNOME Mines 3.25.2
 =====================
 
