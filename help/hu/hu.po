@@ -2,15 +2,15 @@
 # Copyright (C) 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mines help.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015, 2017.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2015-08-18 07:23+0000\n"
-"PO-Revision-Date: 2015-08-19 08:44+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
-"Language-Team: Hungarian <openscope at gmail dot com>\n"
+"POT-Creation-Date: 2017-07-31 12:04+0000\n"
+"PO-Revision-Date: 2017-08-18 10:38+0200\n"
+"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,8 +44,8 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
-#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -97,8 +97,8 @@ msgid "a custom board, where you chose the size and the number of mines"
 msgstr "egyéni tábla, amelyen kiválaszthatja a méretet és az aknák számát is"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:12 C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -172,14 +172,18 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:40
+#| msgid ""
+#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
+#| "and click <gui>Commit</gui>."
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
+"click <gui>Submit Bug</gui>."
 msgstr ""
 "Ha új szolgáltatást kér, válassza az <gui>enhancement</gui> lehetőséget a "
 "<gui>Severity</gui> menüben. Töltse ki a Summary és Description szakaszokat, "
-"és kattintson a <gui>Commit</gui> gombra."
+"és kattintson a <gui>Submit Bug</gui> gombra."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:44
@@ -627,9 +631,6 @@ msgstr ""
 
 #. (itstool) path: item/p
 #: C/rules.page:31
-#| msgid ""
-#| "Start by chosing one of the three default board sizes, or by selecting a "
-#| "custom board."
 msgid ""
 "Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
