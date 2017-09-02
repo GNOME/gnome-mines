@@ -8,7 +8,8 @@
 #
 # Updated for gnome-mines:
 #
-# Changwoo Ryu <cwryu@debian.org>, 2013-2015.
+# ChiHyeon Kim <pipi910327@gmail.com>, 2017.
+# Changwoo Ryu <cwryu@debian.org>, 2013-2015, 2017.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -16,10 +17,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2015-09-11 19:34+0000\n"
-"PO-Revision-Date: 2015-09-12 13:31+0900\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-22 20:28+0000\n"
+"PO-Revision-Date: 2017-09-01 19:24+0900\n"
 "Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -27,328 +27,323 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 
-#: ../data/gnome-mines.appdata.xml.in.h:1
+#: data/gnome-mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "그놈 지뢰찾기"
 
-#: ../data/gnome-mines.appdata.xml.in.h:2 ../data/gnome-mines.desktop.in.h:2
+#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "지뢰밭에서 숨겨진 지뢰를 제거합니다"
 
-#: ../data/gnome-mines.appdata.xml.in.h:3
+#: data/gnome-mines.appdata.xml.in:11
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"그놈 지뢰찾기는 지뢰밭에서 숨겨진 지뢰를 탐색하는 퍼즐 게임입니다. 가능한 빠"
-"르게 지뢰가 있는 곳을 표시하십시오. 보드의 모든 지뢰를 표시하면 승리합니다. "
-"지뢰를 터뜨리지 않도록 하십시오. 터뜨리면 게임이 끝납니다!"
+"그놈 지뢰찾기는 숨겨진 지뢰를 탐색하는 퍼즐 게임입니다. 지뢰가 있는 곳을 가능"
+"한 빠르게 표시하세요. 보드의 모든 지뢰를 표시하면 승리합니다. 지뢰를 터뜨리"
+"지 않도록 하세요. 지뢰를 터뜨리면 게임이 끝납니다!"
 
-#: ../data/gnome-mines.appdata.xml.in.h:4
+#: data/gnome-mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
-"게임 시작할 때 플레이할 게임판의 크기를 지정합니다. 막히면 힌트를 얻을 수도 "
-"있지만, 시간이 늘어납니다. 그래도 지뢰를 밟는 것보다는 낫습니다!"
+"게임을 시작할 때 플레이할 게임판의 크기를 지정합니다. 중간에 어려움이 생기면 "
+"힌트를 얻을 수도 있지만, 시간이 늘어납니다. 하지만 지뢰를 밟는 것보다는 낫습"
+"니다!"
 
-#: ../data/gnome-mines.desktop.in.h:1 ../data/interface.ui.h:1
-#: ../src/gnome-mines.vala:162 ../src/gnome-mines.vala:223
-#: ../src/gnome-mines.vala:784
+#: data/gnome-mines.appdata.xml.in:42
+msgid "The GNOME Project"
+msgstr "그놈 프로젝트"
+
+#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
 msgid "Mines"
 msgstr "지뢰찾기"
 
-#: ../data/gnome-mines.desktop.in.h:3
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/gnome-mines.desktop.in:7
+msgid "gnome-mines"
+msgstr "gnome-mines"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/gnome-mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "minesweeper;지뢰찾기;"
 
-#: ../data/gnome-mines.desktop.in.h:4
+#: data/gnome-mines.desktop.in:17
 msgid "Small board"
 msgstr "작은 게임판"
 
-#: ../data/gnome-mines.desktop.in.h:5
+#: data/gnome-mines.desktop.in:21
 msgid "Medium board"
 msgstr "중간 게임판"
 
-#: ../data/gnome-mines.desktop.in.h:6
+#: data/gnome-mines.desktop.in:25
 msgid "Big board"
 msgstr "큰 게임판"
 
-#: ../data/org.gnome.mines.gschema.xml.h:1
+#: data/org.gnome.mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "사용할 테마"
 
-#: ../data/org.gnome.mines.gschema.xml.h:2
+#: data/org.gnome.mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "사용할 타일 테마의 이름."
 
-#: ../data/org.gnome.mines.gschema.xml.h:3
+#: data/org.gnome.mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "알 수 없음 깃발 사용"
 
-#: ../data/org.gnome.mines.gschema.xml.h:4
+#: data/org.gnome.mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "참으로 설정하면, 지뢰인지 아닌지 알 수 없는 칸을 표시할 수 있습니다."
 
-#: ../data/org.gnome.mines.gschema.xml.h:5
+#: data/org.gnome.mines.gschema.xml:15
 msgid "Warning about too many flags"
 msgstr "너무 깃발이 많을 때 경고"
 
-#: ../data/org.gnome.mines.gschema.xml.h:6
+#: data/org.gnome.mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
 "참이면 숫자 옆에 너무 깃발을 많이 만들었을 때 경고 아이콘을 표시합니다."
 
-#: ../data/org.gnome.mines.gschema.xml.h:7
+#: data/org.gnome.mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "자동으로 깃발 놓기 사용"
 
-#: ../data/org.gnome.mines.gschema.xml.h:8
+#: data/org.gnome.mines.gschema.xml:21
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
 "참이면 주위 칸이 충분히 알려졌을 때 자동으로 해당 칸을 지뢰로 표시합니다"
 
-#: ../data/org.gnome.mines.gschema.xml.h:9
+#: data/org.gnome.mines.gschema.xml:25
 msgid "Enable animations"
 msgstr "애니메이션 사용"
 
-#: ../data/org.gnome.mines.gschema.xml.h:10
+#: data/org.gnome.mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
-msgstr "거짓으로 설정하면 테마에서 정의한 변화 애니메이션을 사용하지 않습니다."
+msgstr "거짓으로 설정하면 테마에서 정의한 변화 애니메이션을 사용하지 않습니다"
 
-#: ../data/org.gnome.mines.gschema.xml.h:11
+#: data/org.gnome.mines.gschema.xml:31
 msgid "Number of columns in a custom game"
 msgstr "사용자 설정의 가로 크기"
 
-#: ../data/org.gnome.mines.gschema.xml.h:12
+#: data/org.gnome.mines.gschema.xml:36
 msgid "Number of rows in a custom game"
 msgstr "사용자 설정의 세로 크기"
 
-#: ../data/org.gnome.mines.gschema.xml.h:13
+#: data/org.gnome.mines.gschema.xml:40
 msgid "The number of mines in a custom game"
 msgstr "사용자 설정 게임에서 지뢰 개수"
 
-#: ../data/org.gnome.mines.gschema.xml.h:14
+#: data/org.gnome.mines.gschema.xml:45
 msgid "Board size"
 msgstr "보드 크기"
 
-#: ../data/org.gnome.mines.gschema.xml.h:15
+#: data/org.gnome.mines.gschema.xml:46
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "보드의 크기(0-2 = 작게-크게, 3=사용자 설정)"
 
-#: ../data/org.gnome.mines.gschema.xml.h:16
+#: data/org.gnome.mines.gschema.xml:50
 msgid "Width of the window in pixels"
-msgstr "창의 너비, 픽셀 단위."
+msgstr "창의 너비, 픽셀 단위"
 
-#: ../data/org.gnome.mines.gschema.xml.h:17
+#: data/org.gnome.mines.gschema.xml:54
 msgid "Height of the window in pixels"
-msgstr "창의 높이, 픽셀 단위."
+msgstr "창의 높이, 픽셀 단위"
 
-#: ../data/org.gnome.mines.gschema.xml.h:18
+#: data/org.gnome.mines.gschema.xml:58
 msgid "true if the window is maximized"
 msgstr "참이면 창을 최대화"
 
-#: ../data/interface.ui.h:2
+#: src/interface.ui:118
 msgid "_Width"
 msgstr "너비(_W)"
 
-#: ../data/interface.ui.h:3
+#: src/interface.ui:142
 msgid "_Height"
 msgstr "높이(_H)"
 
-#: ../data/interface.ui.h:4
+#: src/interface.ui:166
 msgid "Percent _mines"
 msgstr "지뢰 퍼센트(_M)"
 
-#: ../data/interface.ui.h:5
+#: src/interface.ui:192
 msgid "_Cancel"
 msgstr "취소(_C)"
 
-#: ../data/interface.ui.h:6
+#: src/interface.ui:208
 msgid "_Play Game"
 msgstr "게임 플레이(_P)"
 
-#: ../data/interface.ui.h:7 ../src/gnome-mines.vala:589
-#: ../src/gnome-mines.vala:695 ../src/gnome-mines.vala:733
+#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
+#: src/gnome-mines.vala:809
 msgid "_Pause"
 msgstr "일시 중지(_P)"
 
-#: ../data/interface.ui.h:8
+#: src/interface.ui:366
 msgid "Change _Difficulty"
 msgstr "난이도 바꾸기(_D)"
 
-#: ../data/interface.ui.h:9
+#: src/interface.ui:383
 msgid "_Best Times"
 msgstr "최고 기록(_B)"
 
-#: ../data/interface.ui.h:10
+#: src/interface.ui:400
 msgid "_Play Again"
 msgstr "다시 플레이(_P)"
 
-#: ../data/interface.ui.h:11
+#: src/interface.ui:464
 msgid "Paused"
 msgstr "일시 중지"
 
-#: ../src/gnome-mines.vala:88
+#: src/gnome-mines.vala:89
 msgid "Print release version and exit"
 msgstr "릴리스 버전을 표시하고 끝납니다"
 
-#: ../src/gnome-mines.vala:89
+#: src/gnome-mines.vala:90
 msgid "Small game"
 msgstr "작은 게임"
 
-#: ../src/gnome-mines.vala:90
+#: src/gnome-mines.vala:91
 msgid "Medium game"
 msgstr "중간 게임"
 
-#: ../src/gnome-mines.vala:91
+#: src/gnome-mines.vala:92
 msgid "Big game"
 msgstr "큰 게임"
 
-#: ../src/gnome-mines.vala:235 ../src/gnome-mines.vala:254
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
 msgid "_Scores"
 msgstr "점수(_S)"
 
-#: ../src/gnome-mines.vala:236 ../src/gnome-mines.vala:255
+#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
 msgid "A_ppearance"
 msgstr "모양(_P)"
 
-#: ../src/gnome-mines.vala:239 ../src/gnome-mines.vala:256
+#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
 msgid "_Show Warnings"
 msgstr "경고 표시(_S)"
 
-#: ../src/gnome-mines.vala:240 ../src/gnome-mines.vala:257
+#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
 msgid "_Use Question Flags"
 msgstr "물음표 깃발 사용(_U)"
 
-#: ../src/gnome-mines.vala:243 ../src/gnome-mines.vala:260
+#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: ../src/gnome-mines.vala:244 ../src/gnome-mines.vala:262
+#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
 msgid "_About"
 msgstr "정보(_A)"
 
-#: ../src/gnome-mines.vala:245 ../src/gnome-mines.vala:258
+#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
 msgid "_Quit"
 msgstr "끝내기(_Q)"
 
-#: ../src/gnome-mines.vala:252
+#: src/gnome-mines.vala:256
 msgid "_Mines"
 msgstr "지뢰(_M)"
 
-#: ../src/gnome-mines.vala:253
+#: src/gnome-mines.vala:257
 msgid "_New Game"
 msgstr "새 게임(_N)"
 
-#: ../src/gnome-mines.vala:261
+#: src/gnome-mines.vala:265
 msgid "_Contents"
 msgstr "차례(_C)"
 
-#: ../src/gnome-mines.vala:353
+#. Label on the scores dialog
+#: src/gnome-mines.vala:315
+msgid "Minefield:"
+msgstr "지뢰밭:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: src/gnome-mines.vala:349
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, 지뢰 %d개"
+
+#: src/gnome-mines.vala:408
 msgid "Custom"
 msgstr "사용자 설정"
 
-#: ../src/gnome-mines.vala:432
+#: src/gnome-mines.vala:486
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "지뢰 <b>%d</b>개"
 
-#: ../src/gnome-mines.vala:546
+#: src/gnome-mines.vala:596
 msgid "Do you want to start a new game?"
 msgstr "새 게임을 시작하시겠습니까?"
 
-#: ../src/gnome-mines.vala:547
+#: src/gnome-mines.vala:597
 msgid "If you start a new game, your current progress will be lost."
 msgstr "새 게임을 시작하면 현재 진행 상황을 잃어버립니다."
 
-#: ../src/gnome-mines.vala:548
+#: src/gnome-mines.vala:598
 msgid "Keep Current Game"
 msgstr "현재 게임 유지"
 
-#: ../src/gnome-mines.vala:549
+#: src/gnome-mines.vala:599
 msgid "Start New Game"
 msgstr "새 게임 시작"
 
-#: ../src/gnome-mines.vala:590
+#: src/gnome-mines.vala:649
 msgid "St_art Over"
 msgstr "처음부터 시작(_A)"
 
-#: ../src/gnome-mines.vala:693
+#: src/gnome-mines.vala:760
 msgid "_Resume"
 msgstr "다시 계속(_R)"
 
-#: ../src/gnome-mines.vala:711
+#: src/gnome-mines.vala:778
 msgid "Play _Again"
 msgstr "다시 플레이(_A)"
 
-#: ../src/gnome-mines.vala:757
+#: src/gnome-mines.vala:833
 msgid "Main game:"
 msgstr "주 게임:"
 
-#: ../src/gnome-mines.vala:762
+#: src/gnome-mines.vala:838
 msgid "Score:"
 msgstr "점수:"
 
-#: ../src/gnome-mines.vala:765
+#: src/gnome-mines.vala:841
 msgid "Resizing and SVG support:"
 msgstr "크기 바꾸기 및 SVG 지원:"
 
-#: ../src/gnome-mines.vala:787
+#: src/gnome-mines.vala:863
 msgid "Clear explosive mines off the board"
-msgstr "게임판에서 폭발물을 제거합니다."
+msgstr "게임판에서 폭발물을 제거합니다"
 
-#: ../src/gnome-mines.vala:794
+#: src/gnome-mines.vala:870
 msgid "translator-credits"
-msgstr "류창우 <cwryu@debian.org>"
+msgstr ""
+"류창우 <cwryu@debian.org>\n"
+"김치현 <pipi910327@gmail.com>"
 
-#: ../src/score-dialog.vala:18
-msgid "_Close"
-msgstr "닫기(_C)"
-
-#: ../src/score-dialog.vala:20
-msgid "New Game"
-msgstr "새 게임"
-
-#: ../src/score-dialog.vala:24
-msgid "_OK"
-msgstr "확인(_O)"
-
-#: ../src/score-dialog.vala:36
-msgid "Size:"
-msgstr "크기:"
-
-#: ../src/score-dialog.vala:61
-msgid "Date"
-msgstr "시각"
-
-#: ../src/score-dialog.vala:64
-msgid "Time"
-msgstr "시간"
-
-#: ../src/score-dialog.vala:160
-#, c-format
-msgid "%u × %u, %u mine"
-msgid_plural "%u × %u, %u mines"
-msgstr[0] "%u × %u, 지뢰 %u개"
-
-#: ../src/theme-selector-dialog.vala:77
+#: src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "애니메이션 사용(_A)"
 
-#: ../src/theme-selector-dialog.vala:93
+#: src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "테마 선택"
 
-#: ../src/theme-selector-dialog.vala:116
+#: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "닫기"
