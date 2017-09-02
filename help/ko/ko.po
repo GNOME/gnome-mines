@@ -1,0 +1,792 @@
+# Korean translation for gnome-mines.
+# Copyright (C) 2017 gnome-mines's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mines package.
+# Junyoul Lim <purum@postech.ac.kr>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines master\n"
+"POT-Creation-Date: 2017-09-02 07:14+0000\n"
+"PO-Revision-Date: 2017-09-02 16:51+0900\n"
+"Last-Translator: Junyoul Lim <purum@postech.ac.kr>\n"
+"Language-Team: Korean <gnome-kr@googlegroups.com>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Bookmarks: -1,5,-1,-1,-1,-1,-1,-1,-1,-1\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "임준열 <purum@postech.ac.kr>"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:22
+msgid "How to change the game board size"
+msgstr "게임 판의 크기 바꾸기"
+
+#. (itstool) path: page/p
+#: C/board-size.page:24
+msgid "You can select a field size at the start of a new game."
+msgstr "새 게임을 시작할 때 필드 크기를 선택할 수 있습니다."
+
+#. (itstool) path: item/p
+#: C/board-size.page:28
+msgid ""
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"클릭 <gui style=\"button\"> 새로운 </gui> 또는 <guiseq><gui style=\"menu\"> "
+"지뢰 </gui><gui style=\"menuitem\"> 새 게임 </gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/board-size.page:33
+msgid "Select one of the grid sizes:"
+msgstr "격자 크기 중에서 하나를 선택하기:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:35
+msgid "a 8 × 8 board with 10 mines"
+msgstr "10 개 지뢰가 숨겨진 8 x 8 크기의 게임판"
+
+#. (itstool) path: item/p
+#: C/board-size.page:36
+msgid "a 16 × 16 board with 40 mines"
+msgstr "40 개 지뢰가 숨겨진 16 x 16 크기의 게임판"
+
+#. (itstool) path: item/p
+#: C/board-size.page:37
+msgid "a 30 × 16 board with 99 mines"
+msgstr "99 개의 지뢰가 숨겨진 30 x 16 크기의 게임판"
+
+#. (itstool) path: item/p
+#: C/board-size.page:38
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "사용자가 게임판의 크기와 지뢰 개수를 지정하는 게임판"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "크리에이티브 커먼즈 동일조건변경허락 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "<app>지뢰</app>를 더 좋게 만들는데 도움주기"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "버그 신고 또는 개선 사항 제안"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr ""
+"<app>지뢰</app>는 자원 봉사 단체가 유지 보수하고 있습니다. 당신의 참여를 환영"
+"합니다. 만약 문제점을 발견한다면 <em>버그 신고</em>에 올려주세요. 버그 신고 "
+"사이트는 <link href=\"https://bugzilla.gnome.org/\"/>입니다."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"이것은 버그 추적 시스템이며 사용자와 개발자가 버그와 크래시 등에 대한 자세한 "
+"내용을 보고할 수 있으며 또한 개선 사항들도 요청할 수 있습니다."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
+msgstr ""
+"참여하려면 계정이 필요하며, 계정이 있으면 접근 권한을 가지게 되며 버그를 신고"
+"할 수 있고 의견을 제시할 수 있으며 보고한 버그에 대해 전자메일로 업데이트를 "
+"받을 수 있습니다. 만약 계정이 없다면 <gui>새 계정</gui>을 클릭하면 계정을 만"
+"들 수 있습니다."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
+msgstr ""
+"계정을 얻게 되면 <guiseq><gui>버그 보내기</gui><gui>프로그램</gui><gui>그놈-"
+"지뢰</gui></guiseq>를 클릭하세요. 버그를 신고하기 전에 <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">버그 작성 안내문</link>을 "
+"읽어주세요. 이미 신고된 버그인지 확인하려면 <link href=\"https://bugzilla."
+"gnome.org/browse.cgi?product=gnome-mines\">둘러보기</link>를 눌러주세요."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:40
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Submit Bug</gui>."
+msgstr ""
+"새로운 기능을 요청하려면 <gui>Severity</gui> 메뉴에 있는 <gui>개선</gui>을 선"
+"택하세요. 요약 및 설명 부분을 채운 다음 <gui>버그 제출</gui>을 클릭하세요."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:44
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"여러분이 보내주신 보고는 ID 번호가 부여되며 처리가 되는 대로 상태가 업데이트"
+"됩니다. <app>지뢰</app>를 더 좋게 만드는데 도움을 주셔서 감사합니다!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "개발 도움 주기"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>그놈 게임</app>은 자원 봉사 단체가 개발 및 유지보수하고 있습니다. 당신"
+"의 참여를 환영합니다."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"여러분이 <link href=\"https://wiki.gnome.org/Apps/Games/Contributing\">개발 "
+"도움 <app>그놈 게임들</app></link> 하려면 <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> 또는  "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">매일링 리스"
+"트</link>를 사용해서 개발자와 연락할 수 있습니다."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:22
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "문석 작성 도움 주기"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"그놈 게임 사용자 도움주기는 자원 봉사 단체에 의해 유지되고 있습니다. 여러분"
+"의 참여를 환영합니다."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+msgstr ""
+"문서 프로젝트에 기여를 하려면 <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link>에 있는 <link href=\"https://client01."
+"chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link> 채널 또"
+"는 <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">매일"
+"링 리스트</link>를 통해 저희에게 연락해주세요."
+
+#. (itstool) path: page/p
+#: C/documentation.page:40
+msgid ""
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"저희 <link href=\"https://live.gnome.org/DocumentationProject/Contributing\">"
+"위키</link> 페이지에는 유용한 정보가 있습니다."
+
+#. (itstool) path: page/title
+#: C/flags.page:31
+msgid "How to use flags"
+msgstr "깃발 사용 방법"
+
+#. (itstool) path: td/p
+#: C/flags.page:38
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"지뢰가 숨어 있을 것 같다고 생각되는 타일을 표시하려면 깃발을 사용합니다. 깃발"
+"을 표시하면 실수로 지뢰를 클릭하여 지뢰가 터져서 게임이 끝나는 것을 방지할 "
+"수 있습니다."
+
+#. (itstool) path: section/title
+#: C/flags.page:46
+msgid "How to place a flag on a tile"
+msgstr "타일에 깃발 표식 방법"
+
+#. (itstool) path: td/p
+#: C/flags.page:50
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr "빨간색 깃발은 클릭을 할 수 없습니다. 타일에 빨간색 깃발을 표식하기:"
+
+#. (itstool) path: item/p
+#: C/flags.page:53
+msgid "right click on a blank tile."
+msgstr "비어있는 타일에서 오른쪽 마우스 클릭하세요."
+
+#. (itstool) path: note/p
+#: C/flags.page:63
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"사용 가능한 깃발의 개수를 남아있는 지뢰의 개수와 같아지도록 하려면 설정"
+"(preference)에서 <gui style=\"checkbox\">깃발 개수가 많을 경우 경고하기</gui>"
+"와 <gui style=\"checkbox\">\"잘 모르겠음\" 깃발 사용하기</gui> 옵션을 선택한 "
+"후 프로그램을 다시 시작하세요."
+
+#. (itstool) path: section/title
+#: C/flags.page:73
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr "<em>잘 모르겠음</em> 깃발 사용"
+
+#. (itstool) path: section/p
+#: C/flags.page:74
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
+msgstr ""
+"타일에 지뢰가 있는지 확실하지 않으면 파란색 <em>I'm not sure</em> 깃발을 사용"
+"할 수 있습니다."
+
+#. (itstool) path: td/p
+#: C/flags.page:79
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "타일에 <em>잘 모르겠음</em> 깃발 놓기:"
+
+#. (itstool) path: item/p
+#: C/flags.page:81
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr ""
+"비어있는 타일에는 오른쪽 마우스 두 번 클릭, 빨간색 깃발에는 오른쪽 마우스 한 "
+"번 클릭하세요."
+
+#. (itstool) path: note/p
+#: C/flags.page:92
+msgid ""
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
+msgstr ""
+"이 깃발을 활성화하려면 <guiseq><gui style=\"manu\">지뢰</gui><gui style="
+"\"menuitem\">설정(Preferences)</gui></guiseq>를 클릭 후 <gui>\"잘 모르겠음\" "
+"깃발 사용하기</gui>를 선택하세요."
+
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: page/title
+#: C/get-help.page:27
+msgid "Hints and warnings"
+msgstr "힌트와 경고"
+
+#. (itstool) path: page/p
+#: C/get-help.page:29
+msgid ""
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
+"track of flags."
+msgstr ""
+"힌트를 사용하면 안전한 타일을 알 수 있으며 깃발 경고를 사용하여 깃발을 계속 "
+"파악할 수 있습니다."
+
+#. (itstool) path: page/p
+#: C/get-help.page:32
+msgid ""
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
+msgstr ""
+"<gui style=\"button\">다음 번 힌트 받기</gui> 단추를 클릭하면 안전한 타일을 "
+"알 수 있습니다. 힌트를 받을 경우 벌칙으로 총 걸린 시간에 10초가 추가됩니다. "
+"연속으로 힌트를 사용할 경우 아홉번째 힌트까지 벌칙 시간은 10 초씩 누진되어 증"
+"가합니다."
+
+#. (itstool) path: page/p
+#: C/get-help.page:38
+msgid ""
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
+msgstr ""
+"경고를 활성화하려면 <guiseq><gui>지뢰</gui><gui>설정(preference)</gui></"
+"guiseq>를 선택하고 <gui>숫자 주변에 너무 많은 깃발이 있을 경우 경고</gui> 옆"
+"에 있는 체크박스를 선택하세요."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:22
+msgid "High scores"
+msgstr "고득점"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:24
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"고득점 순위는 각 지뢰 필드의 종류 별로 10 개의 가장 빠른 시간을 기록합니다."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:27
+msgid ""
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
+msgstr ""
+"고 득점을 볼려면, <guiseq><gui style=\"menu\">지뢰</gui><gui style=\"menuitem"
+"\">득점</gui></guiseq>을 선택하세요. <gui>작은</gui> 필드 크기의 점수를 기본"
+"으로 나타납니다. 다른 크기의 점수를 보려면 드롭다운 메뉴에서 크기를 선택하면 "
+"됩니다."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "GNOME Mines"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "그놈 지뢰"
+
+#. (itstool) path: credit/name
+#: C/index.page:13 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> 그놈 지뢰"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"<app>지뢰</app>는 마인스위퍼 게임을 복제한 것입니다. 이 게임의 목적은 사각형 "
+"판에 있는 타일 밑에 숨겨진 지뢰를 모두 찾아내는 것입니다. 여러분이 지뢰를 폭"
+"발시키지 않고 모든 지뢰들을 찾아내려면 논리적인 사고와 운이 따라야 할 것입니"
+"다."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "게임 시작"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Useful tips"
+msgstr "유용한 팁들"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Advanced"
+msgstr "고급"
+
+#. (itstool) path: section/title
+#: C/index.page:43
+msgid "Get Involved"
+msgstr ""
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "법적 정보."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "라이선스"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"이 문서는 크리에이티브 커먼즈 저작자표시-동일조건변경허락 3.0 Unported 라이선"
+"스로 배포됩니다."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "무료로 가능한 것:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>공유</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "복사하기, 배포하기, 전달하기."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>변경</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "저작물 개조하기."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "아래 조건들 하에서:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>저작자 표시</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"여러분은 반드시 저자나 라이선스 소유자가 명시한 방식에 따라 저작물의 출처를 "
+"밝혀야 합니다."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>동일 조건</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"만약 여러분이 이 프로그램을 변경하거나 변형하거나 이 프로그램을 기반으로 만든"
+"다면 여러분이 만든 결과물도 같거나 비슷하거나 호환되는 라이선스하에서 배포될 "
+"수 있습니다."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"라이선스 전문을 보려는 <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/legalcode\">CreativeCommons website</link> 또는 <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>를 참조하세요."
+
+#. (itstool) path: page/title
+#: C/new-game.page:31
+msgid "Start a new game"
+msgstr "새 게임 시작하기"
+
+#. (itstool) path: page/p
+#: C/new-game.page:33
+msgid "To start a new game:"
+msgstr "새 게임 시작하려면:"
+
+#. (itstool) path: item/p
+#: C/new-game.page:36
+msgid ""
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
+msgstr ""
+"프로그램 메뉴에서 <guiseq><gui style=\"menu\">지뢰</gui><gui style=\"menuitem"
+"\">새 게임</gui></guiseq>을 선택하세요."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr ""
+"<link xref=\"board-size\">보드 크기</link>에서 원하는 크기를 선택하세요."
+
+#. (itstool) path: note/p
+#: C/new-game.page:46
+msgid ""
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"former, your current game will be lost."
+msgstr ""
+"여러분이 이미 게임을 하는 중이라면 <app>지뢰</app> 게임은 여러분에게 <gui>새 "
+"게임 시작하기</gui> 또는 <gui>현재 게임 계속하기</gui>를 물어볼 것 입니다."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "게임 규칙들"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"<app>지뢰</app>의 목표는 지뢰를 폭발시키지 않고 지뢰 필드를 클리어하는 것입니"
+"다."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by choosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"크기가 정해진 세가지의 판 크기 또는 사용자 지정 판 크기 중 하나를 골라서 시작"
+"합니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"게임을 시작하면 게임판은 타일로 덮혀져 있습니다. 타일을 클릭하면 타일을 없어"
+"집니다. 타일이 없어지면서 나타나는 사항들:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"색칠된 숫자, 주변 타일에 있는 지뢰의 개수를 나타냅니다. 이 숫자로 여러분은 지"
+"뢰가 있는 곳을 알아낼 수 있으며 지뢰가 있는 곳에 깃발을 표시하면 됩니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr "비어있는 타일, 이 것은 주변 타일에 지뢰가 없다는 것을 나타냅니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "지뢰, 지뢰가 폭발하고 게임이 종료됩니다."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr "지뢰가 없는 타일을 모두 알아내서 없애 때까지 반복하세요."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
+msgstr ""
+"여러분이 게임을 아주 빨리 끝낸다면 <link xref=\"high-scores\">고 득점</link> "
+"리스트에 추가될 수 있습니다."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "키보드 바로 가기"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "새 게임"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "New game with last used settings"
+msgstr "마지막 설정으로 새 게임"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Pause"
+msgstr "잠시 멈춤"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<key>Pause</key>"
+msgstr "<key>Pause</key>"
+
+#. (itstool) path: note/p
+#: C/shortcuts.page:30
+msgid ""
+"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
+"key."
+msgstr "키보드에 <key>Pause</key> 키가 없다면 툴바에 바로 가기를 사용하세요."
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:33
+msgid "Help"
+msgstr "도움"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:34
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:37
+msgid "Quit"
+msgstr "끝내기"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:38
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "번역 도움"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"<app>그놈 게임</app> 사용자 인터페이스와 문서는 전 세계 자원 봉사 단체에서 번"
+"역하고 있습니다. 여러분의 참여를 환영합니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"번역이 필요한 <link href=\"http://l10n.gnome.org/module/gnome-mines/\">많은 "
+"언어</link>가 있습니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"번역을 시작하려면 <link href=\"http://l10n.gnome.org\">계정 만들기</link>가 "
+"필요하며 여러분 언어에 맞는 <link href=\"http://l10n.gnome.org/teams/\">번역"
+"팀</link>에 참여해야 합니다. 이렇게 하면 번역물을 업로드할 수 있습니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fi18n\">irc</link>를 사용해서 그놈 번역자들과 이야기를 나눌 수 있습니다. 채"
+"널에 있는 사람은 전 세계에 살고 있기 때문에 시차 등으로 인해 빠른 답변을 받"
+"지 못할 수도 있습니다."
+
+#. (itstool) path: page/p
+#: C/translate.page:37
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"다른 방법으로 <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
+"\">매일링 리스트</link>를 사용하여 국제화 팀에 연락할 수도 있습니다."
