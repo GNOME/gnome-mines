@@ -30,8 +30,8 @@ msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-13 22:16+0000\n"
-"PO-Revision-Date: 2017-08-19 17:37+0200\n"
+"POT-Creation-Date: 2017-08-19 15:37+0000\n"
+"PO-Revision-Date: 2017-09-08 17:37+0200\n"
 "Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
 "Language-Team: français <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -43,7 +43,7 @@ msgstr ""
 
 #: data/gnome-mines.appdata.xml.in:8
 msgid "GNOME Mines"
-msgstr "Démineur GNOME"
+msgstr "Démineur de GNOME"
 
 #: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -56,11 +56,7 @@ msgid ""
 "You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"Le démineur GNOME est un casse-tête où vous cherchez des mines cachées. "
-"Signalez les cases contenant une mine aussi vite que possible pour faire du "
-"plateau un lieu sûr. Vous gagnez lorsque vous avez signalé toutes les mines "
-"du plateau. Faites attention à ne pas en déclencher une, au risque de perdre "
-"la partie !"
+"Démineur de GNOME est un casse-tête où vous cherchez des mines cachées. Signalez les cases contenant une mine aussi vite que possible pour faire du plateau un lieu sûr. Vous gagnez lorsque vous avez signalé toutes les mines du plateau. Faites attention à ne pas en déclencher une, au risque de perdre la partie !"
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
@@ -121,15 +117,15 @@ msgstr "Définir à vrai pour être capable de marquer les carrés comme inconnu
 
 #: data/org.gnome.mines.gschema.xml:15
 msgid "Warning about too many flags"
-msgstr "Avertissement lorsqu'il y a trop de drapeaux"
+msgstr "Avertissement lorsqu’il y a trop de drapeaux"
 
 #: data/org.gnome.mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"Définir à vrai pour activer l'icône d'avertissement lorsque trop de drapeaux "
-"sont placés à côté d'une case numérotée."
+"Définir à vrai pour activer l’icône d’avertissement lorsque trop de drapeaux "
+"sont placés à côté d’une case numérotée."
 
 #: data/org.gnome.mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
@@ -141,7 +137,7 @@ msgid ""
 "revealed"
 msgstr ""
 "Définir à vrai pour poser automatiquement des drapeaux sur les cases "
-"lorsqu'assez de cases sont révélées."
+"lorsqu’assez de cases sont révélées."
 
 #: data/org.gnome.mines.gschema.xml:25
 msgid "Enable animations"
@@ -256,7 +252,7 @@ msgstr "Afficher les a_vertissements"
 
 #: src/gnome-mines.vala:244 src/gnome-mines.vala:261
 msgid "_Use Question Flags"
-msgstr "_Utiliser des drapeaux points d'interrogation"
+msgstr "_Utiliser des drapeaux points d’interrogation"
 
 #: src/gnome-mines.vala:247 src/gnome-mines.vala:264
 msgid "_Help"
@@ -349,7 +345,7 @@ msgstr "Redimensionnement et prise en charge de SVG :"
 
 #: src/gnome-mines.vala:863
 msgid "Clear explosive mines off the board"
-msgstr "Neutraliser les mines explosives d'un plateau"
+msgstr "Neutraliser les mines explosives d’un plateau"
 
 #: src/gnome-mines.vala:870
 msgid "translator-credits"
