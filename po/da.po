@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2016 Free Software Foundation, Inc.
+# Copyright (C) 1998-2017 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 #
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
@@ -8,7 +8,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2016.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2017.
 # scootergrisen, 2015.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
@@ -16,10 +16,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: "
-"https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-13 22:16+0000\n"
-"PO-Revision-Date: 2016-09-08 03:09+0200\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-08-27 20:31+0000\n"
+"PO-Revision-Date: 2017-09-07 03:36+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -72,7 +71,7 @@ msgstr "Minestryger"
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/gnome-mines.desktop.in:7
 msgid "gnome-mines"
-msgstr ""
+msgstr "gnome-mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/gnome-mines.desktop.in:12
@@ -137,8 +136,7 @@ msgstr "Aktivér animationer"
 
 #: data/org.gnome.mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
-msgstr ""
-"Sæt til “false” for at deaktivere tema-definerede overgangsanimationer"
+msgstr "Sæt til “false” for at deaktivere tema-definerede overgangsanimationer"
 
 #: data/org.gnome.mines.gschema.xml:31
 msgid "Number of columns in a custom game"
@@ -381,5 +379,3 @@ msgstr "Luk"
 
 #~ msgid "Time"
 #~ msgstr "Tid"
-
-
