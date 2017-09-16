@@ -12,7 +12,6 @@ HELP_MEDIA = \
 	figures/hard-hints-1.png \
 	figures/hard-hints-2.png \
 	figures/hard-hints-3.png \
-	figures/highscores.png \
 	figures/logo32.png \
 	figures/logo.png \
 	figures/main-window.png \
