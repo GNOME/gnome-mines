@@ -33,6 +33,6 @@ HELP_FILES = \
 	shortcuts.page \
 	translate.page
 
-HELP_LINGUAS = ca cs da de el en_GB es eu fr gl hu it ja ko oc pt_BR sl sr sr@latin sv zh_CN
+HELP_LINGUAS = ca cs da de el en_GB es eu fr gl hu it ja ko oc pl pt_BR sl sr sr@latin sv zh_CN
 
 -include $(top_srcdir)/git.mk

@@ -7,7 +7,7 @@ languages = [ 'ca', 'cs',
               'it',
               'ja',
               'oc',
-              'pt_BR',
+              'pl', 'pt_BR',
               'sl', 'sr', 'sr@latin', 'sv',
               'zh_CN' ]
 
