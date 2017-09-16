@@ -1,0 +1,806 @@
+# Polish translation for gnome-mines help.
+# Copyright © 2017 the gnome-mines authors.
+# This file is distributed under the same license as the gnome-mines package.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017.
+# Aviary.pl <community-poland@mozilla.org>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines-help\n"
+"POT-Creation-Date: 2017-09-16 21:14+0000\n"
+"PO-Revision-Date: 2017-09-16 23:49+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Piotr Drąg <piotrdrag@gmail.com>, 2017\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:22
+msgid "How to change the game board size"
+msgstr "Jak zmienić rozmiar planszy"
+
+#. (itstool) path: page/p
+#: C/board-size.page:24
+msgid "You can select a field size at the start of a new game."
+msgstr "Można wybrać rozmiar planszy na początku nowej gry."
+
+#. (itstool) path: item/p
+#: C/board-size.page:28
+msgid ""
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"Kliknij <gui style=\"button\">Nowa</gui> lub <guiseq><gui style=\"menu"
+"\">Miny</gui> <gui style=\"menuitem\">Nowa gra</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/board-size.page:33
+msgid "Select one of the grid sizes:"
+msgstr "Wybierz jeden z rozmiarów:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:35
+msgid "a 8 × 8 board with 10 mines"
+msgstr "8×8 z 10 minami"
+
+#. (itstool) path: item/p
+#: C/board-size.page:36
+msgid "a 16 × 16 board with 40 mines"
+msgstr "16×16 z 40 minami"
+
+#. (itstool) path: item/p
+#: C/board-size.page:37
+msgid "a 30 × 16 board with 99 mines"
+msgstr "30×16 z 99 minami"
+
+#. (itstool) path: item/p
+#: C/board-size.page:38
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "niestandardowa plansza, gdzie można wybrać rozmiar i liczbę min"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "Pomoc w ulepszaniu gry <app>Miny</app>"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Zgłaszanie błędów i sugerowanie ulepszeń"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr ""
+"Gra <app>Miny</app> jest tworzona przez społeczność ochotników. Zapraszamy "
+"do współpracy. Jeśli wystąpił jakiś błąd, to można go zgłosić na stronie "
+"<link href=\"https://bugzilla.gnome.org/\"/> (w języku angielskim)."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"To system śledzenia błędów, w którym użytkownicy i programiści mogą zgłaszać "
+"informacje o błędach, awariach i prośby o ulepszenia."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
+msgstr ""
+"Do wzięcia udziału potrzebne jest konto, dające dostęp, możliwość zgłaszania "
+"błędów i pisania komentarzy. Rejestracja umożliwia także otrzymywanie "
+"powiadomień pocztą e-mail o stanie błędu. Jeśli nie masz jeszcze konta, to "
+"kliknij odnośnik <gui>New Account</gui> (Nowe konto)."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
+msgstr ""
+"Po utworzeniu konta zaloguj się i kliknij <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq> "
+"(<guiseq><gui>Zgłoś błąd</gui><gui>Programy</gui><gui>gnome-mines</gui></"
+"guiseq>). Przed zgłoszeniem błędu prosimy przeczytać <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">wytyczne opisywania "
+"błędów</link> i <link href=\"https://bugzilla.gnome.org/browse.cgi?"
+"product=gnome-mines\">poszukać</link>, czy błąd został już zgłoszony."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:40
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Submit Bug</gui>."
+msgstr ""
+"W przypadku prośby o nową funkcję wybierz <gui>enhancement</gui> "
+"(ulepszenie) w menu <gui>Severity</gui> (Ciężkość). Wypełnij sekcje "
+"„Summary” (Podsumowanie) i „Description” (Opis) w języku angielskim "
+"i kliknij przycisk <gui>Submit Bug</gui> (Wyślij)."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:44
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"Zgłoszenie otrzyma numer identyfikujący, a jego stan będzie zmieniany razem "
+"z postępem jego rozwiązywania. Dziękujemy za pomoc w ulepszaniu gry "
+"<app>Miny</app>!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Pomoc w programowaniu"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>Gry GNOME</app> są tworzone przez społeczność ochotników. Zapraszamy do "
+"współpracy."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz skontaktować się "
+"z programistami za pomocą sieci <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> lub przez <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
+"link> (w języku angielskim)."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:22
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Pomoc w pisaniu dokumentacji"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"Pomoc użytkownika gier GNOME jest tworzona przez społeczność ochotników. "
+"Zapraszamy do współpracy."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+msgstr ""
+"Jeśli chcesz wziąć udział w projekcie dokumentacji, to skontaktuj się z nami "
+"w kanale <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">#docs</link> w sieci <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> lub przez <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">listę pocztową</link> (w języku "
+"angielskim)."
+
+#. (itstool) path: page/p
+#: C/documentation.page:40
+msgid ""
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"Nasza <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
+
+#. (itstool) path: page/title
+#: C/flags.page:31
+msgid "How to use flags"
+msgstr "Jak używać flag"
+
+#. (itstool) path: td/p
+#: C/flags.page:38
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"Flagi są używane do oznaczania pól podejrzewanych o posiadanie miny. "
+"Umieszczenie flagi na polu uniemożliwia przypadkowe kliknięcie i możliwy "
+"wybuch, co zakończyłoby grę."
+
+#. (itstool) path: section/title
+#: C/flags.page:46
+msgid "How to place a flag on a tile"
+msgstr "Jak umieścić flagę na polu"
+
+#. (itstool) path: td/p
+#: C/flags.page:50
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr ""
+"Czerwonych flag nie można kliknąć. Aby umieścić czerwoną flagę na polu:"
+
+#. (itstool) path: item/p
+#: C/flags.page:53
+msgid "right click on a blank tile."
+msgstr "kliknij puste pole prawym przyciskiem myszy."
+
+#. (itstool) path: note/p
+#: C/flags.page:63
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"Aby liczba dostępnych flag równała się liczbie pozostałych min, włącz opcje "
+"<gui style=\"checkbox\">Ostrzeganie o zbyt dużej liczbie flag</gui> i <gui "
+"style=\"checkbox\">Flagi niepewności</gui>, a następnie ponownie uruchom "
+"program."
+
+#. (itstool) path: section/title
+#: C/flags.page:73
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr "Korzystanie z flagi niepewności"
+
+#. (itstool) path: section/p
+#: C/flags.page:74
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
+msgstr ""
+"W przypadku braku pewności, czy pole skrywa minę, można użyć niebieskiej "
+"flagi niepewności."
+
+#. (itstool) path: td/p
+#: C/flags.page:79
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Aby umieścić flagę niepewności na polu:"
+
+#. (itstool) path: item/p
+#: C/flags.page:81
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr ""
+"Podwójnie kliknij puste pole prawym przyciskiem myszy lub raz w przypadku "
+"pola z czerwoną flagą."
+
+#. (itstool) path: note/p
+#: C/flags.page:92
+msgid ""
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
+msgstr ""
+"Aby włączyć te flagi, kliknij <guiseq><gui style=\"manu\">Miny</gui><gui "
+"style=\"menuitem\">Preferencje</gui></guiseq> i zaznacz opcję <gui>Flagi "
+"niepewności</gui>."
+
+#. (itstool) path: credit/name
+#: C/get-help.page:20 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:22
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: page/title
+#: C/get-help.page:27
+msgid "Hints and warnings"
+msgstr "Wskazówki i ostrzeżenia"
+
+#. (itstool) path: page/p
+#: C/get-help.page:29
+msgid ""
+"You can use hints to reveal safe tiles, and flag warnings to help you keep "
+"track of flags."
+msgstr ""
+"Można korzystać ze wskazówek do odkrywania bezpiecznych pól i ostrzeżeń "
+"o flagach."
+
+#. (itstool) path: page/p
+#: C/get-help.page:32
+msgid ""
+"Click on the button <gui style=\"button\">Receive a hint for your next move</"
+"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
+"seconds will be added to your total time. The penalty will be increased by "
+"ten seconds progressively on subsequent hints till the ninth hint."
+msgstr ""
+"Kliknij przycisk <gui style=\"button\">Wskazówka dla następnego ruchu</gui> "
+"na górze po prawej, aby odkryć pole, które jest bezpieczne. Do czasu gry "
+"zostanie dodana kara dziesięciu sekund. Kara za każdą następną wskazówkę "
+"jest dłuższa o dziesięć sekund, aż do dziewiątej wskazówki."
+
+#. (itstool) path: page/p
+#: C/get-help.page:38
+msgid ""
+"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+"<gui>Warn if too many flags are placed next to a number</gui>. This will "
+"warn you when you try to place too many flags next to an open tile."
+msgstr ""
+"Aby włączyć ostrzeżenia, zmień preferencje wybierając <guiseq><gui>Miny</"
+"gui><gui>Preferencje</gui></guiseq> i zaznaczając pole wyboru obok opcji "
+"<gui>Ostrzeganie, jeśli obok liczby jest za dużo flag</gui>. Spowoduje to "
+"wyświetlanie ostrzeżenia, jeśli obok otwartego pola umieszczono za dużo flag."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:22
+msgid "High scores"
+msgstr "Najlepsze wyniki"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:24
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"Lista najlepszych wyników zawiera dziesięć najkrótszych czasów, w jakich "
+"wyczyszczono każdy typ planszy."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:27
+msgid ""
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
+msgstr ""
+"Aby wyświetlić najlepsze wyniki, wybierz <guiseq><gui style=\"menu\">Miny</"
+"gui><gui style=\"menuitem\">Wyniki</gui></guiseq>. Domyślnie wyświetlana "
+"jest <gui>Mała</gui> plansza. Z rozwijanego menu na górze okna można wybrać "
+"pozostałe typy plansz."
+
+#. (itstool) path: info/title
+#: C/index.page:9
+msgctxt "link"
+msgid "GNOME Mines"
+msgstr "Miny GNOME"
+
+#. (itstool) path: info/title
+#: C/index.page:10
+msgctxt "text"
+msgid "GNOME Mines"
+msgstr "Miny GNOME"
+
+#. (itstool) path: credit/name
+#: C/index.page:13 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> Miny GNOME"
+
+#. (itstool) path: page/p
+#: C/index.page:27
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"<app>Miny</app> to klon gry Saper. Celem jest odnalezienie wszystkich min "
+"ukrytych pod polami na prostokątnej planszy. Aby to zrobić bez wybuchu, "
+"potrzebne są umiejętności logicznego myślenia i łut szczęścia."
+
+#. (itstool) path: section/title
+#: C/index.page:34
+msgid "Game Play"
+msgstr "Rozgrywka"
+
+#. (itstool) path: section/title
+#: C/index.page:37
+msgid "Useful tips"
+msgstr "Wskazówki"
+
+#. (itstool) path: section/title
+#: C/index.page:40
+msgid "Advanced"
+msgstr "Zaawansowane"
+
+#. (itstool) path: section/title
+#: C/index.page:43
+msgid "Get Involved"
+msgstr "Dołącz do nas"
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Informacje prawne."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Licencja"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Na warunkach licencji Creative Commons Attribution-Share Alike 3.0 Unported."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Można:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>dzielić się</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr ", czyli kopiować, rozpowszechniać, odtwarzać i wykonywać utwór."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>remiksować</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr ", czyli tworzyć utwory zależne."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Na następujących warunkach:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Uznanie autorstwa</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Utwór należy oznaczyć w sposób określony przez Twórcę lub Licencjodawcę."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Na tych samych warunkach</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Zmieniając utwór, przekształcając go lub tworząc na jego podstawie, wolno "
+"rozpowszechniać powstały utwór zależny jedynie na tej samej, podobnej lub "
+"zgodnej licencji."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Pełny tekst licencji dostępny jest na stronie <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">Creative Commons</link>; "
+"można również przeczytać <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">podsumowanie</link>."
+
+#. (itstool) path: page/title
+#: C/new-game.page:31
+msgid "Start a new game"
+msgstr "Rozpoczynanie nowej gry"
+
+#. (itstool) path: page/p
+#: C/new-game.page:33
+msgid "To start a new game:"
+msgstr "Aby rozpocząć nową grę:"
+
+#. (itstool) path: item/p
+#: C/new-game.page:36
+msgid ""
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
+msgstr ""
+"Wybierz <guiseq><gui style=\"menu\">Miny</gui><gui style=\"menuitem\">Nowa "
+"gra</gui></guiseq> z menu programu."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr "Wybierz preferowany <link xref=\"board-size\">rozmiar planszy</link>."
+
+#. (itstool) path: note/p
+#: C/new-game.page:46
+msgid ""
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"former, your current game will be lost."
+msgstr ""
+"Jeśli gra już trwa, to użytkownik zostanie zapytany, czy rozpocząć nową grę, "
+"czy kontynuować obecną. Wybranie nowej gry spowoduje utratę obecnej."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "Zasady gry"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"Celem gry <app>Miny</app> jest wyczyszczenie pola minowego bez detonacji "
+"żadnej miny."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by choosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"Zacznij wybierając jeden z trzech rozmiarów planszy (lub planszę "
+"niestandardową)."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"Na początku gry plansza jest pokryta polami. Kliknij dowolne pole, aby je "
+"odkryć. Pod polem może być:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"Kolorowa cyfra, która wskazuje liczbę min w sąsiednich polach. Pomaga to "
+"wydedukować, gdzie są miny, które należy oznaczyć odpowiednimi <link xref="
+"\"flags\">flagami</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr "Puste pole, co oznacza, że pod sąsiednimi polami nie ma żadnych min."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "Mina, która wybuchnie i zakończy grę."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr "Powtarzaj poprzedni krok, aż odkryjesz wszystkie pola bez min."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
+msgstr ""
+"Jeśli dostatecznie szybko skończysz grę, to znajdziesz się na liście <link "
+"xref=\"high-scores\">najlepszych wyników</link>."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Skróty klawiszowe"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Nowa gra"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "New game with last used settings"
+msgstr "Nowa gra z ostatnio używanymi ustawieniami"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Pause"
+msgstr "Wstrzymanie gry"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<key>Pause</key>"
+msgstr "<key>Pause</key>"
+
+#. (itstool) path: note/p
+#: C/shortcuts.page:30
+msgid ""
+"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
+"key."
+msgstr ""
+"Jeśli klawiatura nie ma klawisza <key>Pause</key>, to użyj skrótu na pasku "
+"narzędziowym."
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:33
+msgid "Help"
+msgstr "Pomoc"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:34
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:37
+msgid "Quit"
+msgstr "Zakończenie gry"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:38
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Pomoc w tłumaczeniu"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"Interfejs i dokumentacja <app>Gier GNOME</app> jest tłumaczona przez "
+"ogólnoświatową społeczność ochotników. Zapraszamy do współpracy."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"<link href=\"http://l10n.gnome.org/module/gnome-mines/\">Wiele języków</"
+"link> nadal potrzebuje tłumaczeń."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"http://l10n.gnome.org"
+"\">utworzenie konta</link> i dołączenie do <link href=\"http://l10n.gnome."
+"org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
+"wysyłanie nowych tłumaczeń."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Można skontaktować się z tłumaczami GNOME za pomocą sieci <link href="
+"\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
+"\">IRC</link> (w języku angielskim). Z powodu różnic stref czasowych "
+"odpowiedź może nie przyjść od razu."
+
+#. (itstool) path: page/p
+#: C/translate.page:37
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"Można także skontaktować się z zespołem tłumaczeń za pomocą <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</link> "
+"(w języku angielskim)."
