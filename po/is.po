@@ -9,10 +9,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 2.6\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-10-10 19:07+0000\n"
-"PO-Revision-Date: 2017-03-01 11:54+0000\n"
+"POT-Creation-Date: 2017-04-07 11:45+0000\n"
+"PO-Revision-Date: 2017-09-24 11:51+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -31,10 +31,15 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Hreinsa faldar sprengjur af sprengjusvæði"
 
 #: ../data/gnome-mines.appdata.xml.in.h:3
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you've flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you've flagged every mine on the board. Be careful not "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
 "GNOME sprengjuleit er ráðgátuleikur þar sem þú leitar að földum sprengjum. "
@@ -44,10 +49,14 @@ msgstr ""
 "setja neina sprengju í gang, því þá er leiknum lokið!"
 
 #: ../data/gnome-mines.appdata.xml.in.h:4
+#| msgid ""
+#| "You can select the size of the field you want to play on at the start of "
+#| "the game. If you get stuck, you can ask for a hint: there's a time "
+#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
-"game. If you get stuck, you can ask for a hint: there's a time penalty, but "
-"that's better than hitting a mine!"
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 "Þú getur valið stærð vígvallarins í upphafi leiks. Ef þú veist ekki hvað þú "
 "ættir að gera geturðu fengið vísbendingar; vissulega kemur þá til "
@@ -260,15 +269,12 @@ msgstr "_Innihald"
 
 #. Label on the scores dialog
 #: ../src/gnome-mines.vala:323
-#| msgid "Canfield"
 msgid "Minefield:"
 msgstr "Sprengjusvæði:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: ../src/gnome-mines.vala:357
 #, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d sprengja"
@@ -333,15 +339,15 @@ msgstr "Hreinsa virkar sprengjur af borðinu"
 msgid "translator-credits"
 msgstr "Sveinn í Felli, sv1@fellsnet.is"
 
-#: ../src/theme-selector-dialog.vala:77
+#: ../src/theme-selector-dialog.vala:99
 msgid "Use _animations"
 msgstr "Nota _hreyfingar"
 
-#: ../src/theme-selector-dialog.vala:93
+#: ../src/theme-selector-dialog.vala:115
 msgid "Select Theme"
 msgstr "Veldu þema"
 
-#: ../src/theme-selector-dialog.vala:116
+#: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Loka"
 
