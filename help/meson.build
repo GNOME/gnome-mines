@@ -38,7 +38,6 @@ gnome.yelp ('gnome-mines',
                      'figures/logo32.png',
                      'figures/logo.png',
                      'figures/main-window.png',
-                     'figures/preferences.png',
                      'figures/statusbar.png' ],
             languages: languages,
             symlink_media: true)

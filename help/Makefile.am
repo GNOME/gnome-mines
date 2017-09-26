@@ -15,7 +15,6 @@ HELP_MEDIA = \
 	figures/logo32.png \
 	figures/logo.png \
 	figures/main-window.png \
-	figures/preferences.png \
 	figures/statusbar.png
 
 HELP_FILES = \
