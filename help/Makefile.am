@@ -2,19 +2,11 @@
 HELP_ID = gnome-mines
 
 HELP_MEDIA = \
-	figures/easy-hints-1.png \
-	figures/easy-hints-2.png \
-	figures/easy-hints-3.png \
 	figures/flag-question.svg \
 	figures/flags.png \
 	figures/flag.svg \
-	figures/gnome-mines.png \
-	figures/hard-hints-1.png \
-	figures/hard-hints-2.png \
-	figures/hard-hints-3.png \
 	figures/logo32.png \
-	figures/logo.png \
-	figures/statusbar.png
+	figures/logo.png
 
 HELP_FILES = \
 	board-size.page \
