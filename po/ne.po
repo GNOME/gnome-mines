@@ -52,12 +52,12 @@ msgstr "खानी"
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/gnome-mines.desktop.in:7
 msgid "gnome-mines"
-msgstr "जिनोम खानी"
+msgstr "gnome-mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/gnome-mines.desktop.in:12
 msgid "minesweeper;"
-msgstr "माइनस्विपर"
+msgstr "माइनस्विपर;"
 
 #: data/gnome-mines.desktop.in:17
 msgid "Small board"
