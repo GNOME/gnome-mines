@@ -1,0 +1,77 @@
+name: gnome-mines
+version: git
+summary: Clear hidden mines from a minefield
+description: |
+  GNOME Mines is a puzzle game where you search for hidden mines. Flag the
+  spaces with mines as quickly as possible to make the board a safer place. You
+  win the game when you’ve flagged every mine on the board. Be careful not to
+  trigger one, or the game is over!
+
+  You can select the size of the field you want to play on at the start of the
+  game. If you get stuck, you can ask for a hint: there’s a time penalty, but
+  that’s better than hitting a mine!
+
+grade: devel # must be 'stable' to release into candidate/stable channels
+confinement: strict
+
+plugs:
+    gnome-3-26-1604:
+      interface: content
+      target: $SNAP/gnome-platform
+      default-provider: gnome-3-26-1604:gnome-3-26-1604
+
+slots:
+  # for GtkApplication registration
+  gnome-mines:
+    interface: dbus
+    bus: session
+    name: org.gnome.mines
+
+apps:
+  gnome-mines:
+    command: desktop-launch gnome-mines
+    plugs:
+      - desktop
+      - desktop-legacy
+      - gsettings
+      - pulseaudio
+      - unity7
+      - wayland
+    desktop: usr/share/applications/gnome-mines.desktop
+    environment:
+      PATH: $SNAP/usr/games:$PATH
+
+parts:
+  gnome-mines:
+    build-attributes: [no-system-libraries]
+    after: [desktop-gnome-platform]
+    source: .
+    source-type: git
+    prepare:
+      sed -i.bak -e 's|=gnome-mines$|=${SNAP}/meta/gui/gnome-mines.png|g' data/gnome-mines.desktop.in
+    install: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp ../src/data/icons/hicolor/256x256/gnome-mines.png $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp data/gnome-mines.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
+    plugin: autotools
+    configflags: [--prefix=/snap/gnome-mines/current/usr, --bindir=/snap/gnome-mines/current/usr/games]
+    organize:
+      snap/gnome-mines/current/usr: usr
+    build-packages:
+      - appstream-util
+      - gnome-pkg-tools
+      - intltool
+      - libglib2.0-dev
+      - libgnome-games-support-1-dev
+      - libgtk-3-dev
+      - librsvg2-dev
+      - valac
+      - yelp-tools
+  libraries:
+    plugin: nil
+    stage-packages:
+      - libgnome-games-support-1-2
+      - libgee-0.8-2
+    prime:
+      - "usr/lib/*/libgnome-games-support-1.so.*"
+      - "usr/lib/x86_64-linux-gnu/libgee-0.8.so.*"
