@@ -5,6 +5,7 @@
     <link type="guide" xref="index#tips"/>
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.12" date="2014-03-09" status="review"/>
+    <revision pkgversion="3.26" date="2017-12-30" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -24,21 +25,12 @@
 
   </info>
 
-  <title>Hints and warnings</title>
+  <title>Warnings</title>
 
-  <p>You can use hints to reveal safe tiles, and flag warnings to help you keep
-  track of flags.</p>
+  <p>You can flag warnings to help you keep track of flags.</p>
 
-  <p>Click on the button <gui style="button">Receive a hint for your next
-  move</gui> on the top right to reveal a hidden tile that is safe. A penalty
-  of ten seconds will be added to your total time. The penalty will be
-  increased by ten seconds progressively on subsequent hints till the ninth
-  hint.</p>
-
-  <p>To enable warnings, edit the preferences by selecting
-  <guiseq><gui>Mines</gui><gui>Preferences</gui></guiseq> and checking the
-  checkbox next to <gui>Warn if too many flags are placed next to a
-  number</gui>. This will warn you when you try to place too many flags next to
-  an open tile.</p>
+  <p>To enable warnings, click <gui>Mines</gui> in the top bar and then select
+  <gui>Show Warnings</gui>. This will warn you when you try to place too many
+  flags next to an open tile.</p>
 
 </page>
