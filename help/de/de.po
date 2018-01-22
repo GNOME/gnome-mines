@@ -1,5 +1,5 @@
 # Florian Purucker <florian@purucker.net>, 2007.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2017.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2017-2018.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2014.
 #
@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-07-31 12:04+0000\n"
-"PO-Revision-Date: 2017-08-01 22:25+0200\n"
+"POT-Creation-Date: 2018-01-08 16:01+0000\n"
+"PO-Revision-Date: 2018-01-22 10:57+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.0.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -23,33 +23,33 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Florian Purucker <florian@purucker.net>, 2007.\n"
-"Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012, 2013.\n"
-"Christian Kirbach <christian.kirbach@gmail.com>, 2012, 2013, 2014, 2015.\n"
-"Bernd Homuth <dev@hmt.im>, 2014"
+"Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2018.\n"
+"Christian Kirbach <christian.kirbach@gmail.com>, 2012-2015.\n"
+"Bernd Homuth <dev@hmt.im>, 2014."
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -326,7 +326,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/flags.page:73
 msgid "Use of the <em>I'm not sure</em> flag"
-msgstr "Verwendung der Fahne »Ich bin mir nicht sicher«"
+msgstr "Verwendung der Fahne <em>Ich bin mir nicht sicher</em>"
 
 #. (itstool) path: section/p
 #: C/flags.page:74
@@ -359,59 +359,41 @@ msgid ""
 msgstr ""
 "Um diese Fahnen freizuschalten, klicken Sie auf <guiseq><gui style=\"manu"
 "\">Minen</gui><gui style=\"menuitem\">Einstellungen</gui></guiseq> und "
-"wählen Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>.  "
+"wählen Sie <gui>»Ich bin mir nicht sicher«-Fahnen verwenden</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Hinweise und Warnungen"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Warnungen"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"Sie können Tipps verwenden, um sichere Felder und Fahnen-Warnungen "
-"aufzudecken, was Ihnen dabei hilft, die Fahnen im Auge zu behalten."
+"Sie können Warnungen auslösen, was Ihnen dabei hilft, die Fahnen im Auge zu "
+"behalten."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Klicken Sie auf den Knopf <gui style=\"button\">Einen Tipp für den nächsten "
-"Zug erhalten</gui> oben rechts, um ein sicheres verborgenes Feld "
-"freizulegen. Sie bekommen eine Strafzeit von zehn Sekunden. Die Strafzeit "
-"erhöht sich jeweils um weitere zehn Sekunden für weitere Tipps, bis zum "
-"neunten Tipp."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Um Warnungen zu aktivieren, bearbeiten Sie die Einstellungen unter "
-"<guiseq><gui>Minen</gui><gui>Einstellungen</gui></guiseq> und aktivieren Sie "
-"das Ankreuzfeld neben <gui>Warnen, falls zu viele Fahnen neben einer Zahl "
-"platziert wurden</gui>. Dadurch werden Sie gewarnt, wenn Sie versuchen, zu "
-"viele Fahnen neben einem bereits geöffneten Feld zu platzieren."
+"Um Warnungen zu aktivieren, klicken Sie auf <gui>Minen</gui> in der oberen "
+"Leiste und wählen <gui>Warnungen anzeigen</gui>. Dadurch werden Sie gewarnt, "
+"wenn Sie versuchen, zu viele Fahnen neben einem bereits geöffneten Feld zu "
+"platzieren."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -601,7 +583,7 @@ msgstr "Ein neues Spiel starten"
 #. (itstool) path: page/p
 #: C/new-game.page:33
 msgid "To start a new game:"
-msgstr "Ein neues Spiel starten"
+msgstr "So starten Sie ein neues Spiel:"
 
 #. (itstool) path: item/p
 #: C/new-game.page:36
