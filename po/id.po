@@ -348,30 +348,3 @@ msgstr "Pilih Tema"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Tutup"
-
-#~ msgid "5/10"
-#~ msgstr "5/10"
-
-#~ msgid "0:00"
-#~ msgstr "0:00"
-
-#~ msgid "%02d∶‎%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d∶‎%02d"
-
-#~ msgid "%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d"
-
-#~ msgid "New Game"
-#~ msgstr "Permainan Baru"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Size:"
-#~ msgstr "Ukuran:"
-
-#~ msgid "Date"
-#~ msgstr "Tanggal"
-
-#~ msgid "Time"
-#~ msgstr "Waktu"

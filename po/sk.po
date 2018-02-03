@@ -355,27 +355,3 @@ msgstr "Výber témy"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Zavrieť"
-
-#~ msgid "_Close"
-#~ msgstr "_Zavrieť"
-
-#~ msgid "New Game"
-#~ msgstr "Nová hra"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Size:"
-#~ msgstr "Veľkosť:"
-
-#~ msgid "Date"
-#~ msgstr "Dátum"
-
-#~ msgid "Time"
-#~ msgstr "Čas"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Nastavenia"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Zobrazí radu pre ďalší ťah"

@@ -359,4 +359,3 @@ msgstr "Téma kiválasztása"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Bezárás"
-

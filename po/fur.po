@@ -341,21 +341,3 @@ msgstr "Selezione teme"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Siere"
-
-#~ msgid "_Close"
-#~ msgstr "_Siere"
-
-#~ msgid "New Game"
-#~ msgstr "Gnove partide"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Size:"
-#~ msgstr "Dimension:"
-
-#~ msgid "Date"
-#~ msgstr "Date"
-
-#~ msgid "Time"
-#~ msgstr "Timp"

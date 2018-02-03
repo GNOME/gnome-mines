@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master.ml\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-mines&keywords=I18N"
-"+L10N&component=general\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
+"mines&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2017-06-27 21:22+0000\n"
 "PO-Revision-Date: 2017-08-21 02:58+0530\n"
 "Last-Translator: Anish Sheela <aneesh.nl@gmail.com>\n"
@@ -37,23 +37,25 @@ msgstr "യുദ്ധഭൂമിയില്‍നിന്ന് കുഴ�
 
 #: data/gnome-mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the spaces with mines as quickly as "
-"possible to make the board a safer place. You win the game when you’ve flagged every mine on the board. "
-"Be careful not to trigger one, or the game is over!"
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
 msgstr ""
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
-"You can select the size of the field you want to play on at the start of the game. If you get stuck, you "
-"can ask for a hint: there’s a time penalty, but that’s better than hitting a mine!"
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
 msgstr ""
 
 #: data/gnome-mines.appdata.xml.in:42
 msgid "The GNOME Project"
 msgstr "ഗ്നോം പദ്ധതി"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168 src/gnome-mines.vala:227
-#: src/gnome-mines.vala:860
+#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
 msgid "Mines"
 msgstr "കുഴിബോംബുകള്‍"
 
@@ -93,14 +95,17 @@ msgstr "അജ്ഞാതമായ ഫ്ളാഗ് ഉപയോഗിക്�
 
 #: data/org.gnome.mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "ചതുരങ്ങളെ \"അറിയാത്തവ\" എന്ന് അടയാളെപ്പെടുത്താന്‍ സാധിക്കണമെങ്കില്‍ ശരി അടയാളപ്പെടുത്തുക."
+msgstr ""
+"ചതുരങ്ങളെ \"അറിയാത്തവ\" എന്ന് അടയാളെപ്പെടുത്താന്‍ സാധിക്കണമെങ്കില്‍ ശരി അടയാളപ്പെടുത്തുക."
 
 #: data/org.gnome.mines.gschema.xml:15
 msgid "Warning about too many flags"
 msgstr "അനവധി ഫ്ളാഗുകള്‍ എന്ന മുന്നറിയിപ്പ്"
 
 #: data/org.gnome.mines.gschema.xml:16
-msgid "Set to true to enable warning icons when too many flags are placed next to a numbered tile."
+msgid ""
+"Set to true to enable warning icons when too many flags are placed next to a "
+"numbered tile."
 msgstr "അമിതമായി കൊടികള്‍ സ്ഥാപിക്കുമ്പോള്‍ മുന്നറിയിപ്പ് ലഭിക്കണമെങ്കില്‍ ശരി അടയാളപ്പെടുത്തുക."
 
 #: data/org.gnome.mines.gschema.xml:20
@@ -108,8 +113,12 @@ msgid "Enable automatic placing of flags"
 msgstr "കൊടികള്‍ യാന്ത്രികമായി സ്ഥാപിക്കുക"
 
 #: data/org.gnome.mines.gschema.xml:21
-msgid "Set to true to automatically flag squares as mined when enough squares are revealed"
-msgstr "ആവശ്യത്തിന് ചതുരങ്ങൾ വെളിപ്പെട്ടു കഴിഞ്ഞാൽ ചതുരങ്ങളെ കുഴിബോംബുകൾ ഉള്ളത് എന്ന് അടയാളപ്പെടുത്താൻ ശരി എന്ന് ആക്കുക"
+msgid ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr ""
+"ആവശ്യത്തിന് ചതുരങ്ങൾ വെളിപ്പെട്ടു കഴിഞ്ഞാൽ ചതുരങ്ങളെ കുഴിബോംബുകൾ ഉള്ളത് എന്ന് അടയാളപ്പെടുത്താൻ "
+"ശരി എന്ന് ആക്കുക"
 
 #: data/org.gnome.mines.gschema.xml:25
 msgid "Enable animations"
@@ -171,7 +180,8 @@ msgstr "റദ്ദാക്കുക (_C)"
 msgid "_Play Game"
 msgstr "_കളി കളിക്കുക"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762 src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
+#: src/gnome-mines.vala:809
 msgid "_Pause"
 msgstr "ചെറിയ _ഇടവേള"
 

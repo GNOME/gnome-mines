@@ -355,33 +355,3 @@ msgstr "Seleccioneu el tema"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Tanca"
-
-#~ msgid "_Close"
-#~ msgstr "_Tanca"
-
-#~ msgid "New Game"
-#~ msgstr "Partida nova"
-
-#~ msgid "_OK"
-#~ msgstr "D'_acord"
-
-#~ msgid "Size:"
-#~ msgstr "Mida:"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Time"
-#~ msgstr "Temps"
-
-#~ msgid "5/10"
-#~ msgstr "5/10"
-
-#~ msgid "0:00"
-#~ msgstr "0:00"
-
-#~ msgid "%02d∶‎%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d∶‎%02d"
-
-#~ msgid "%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d"

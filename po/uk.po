@@ -346,21 +346,3 @@ msgstr "Вибрати тему"
 #: ../src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Закрити"
-
-#~ msgid "_Close"
-#~ msgstr "_Закрити"
-
-#~ msgid "New Game"
-#~ msgstr "Нова гра"
-
-#~ msgid "_OK"
-#~ msgstr "_Гаразд"
-
-#~ msgid "Size:"
-#~ msgstr "Розміри:"
-
-#~ msgid "Date"
-#~ msgstr "Дата"
-
-#~ msgid "Time"
-#~ msgstr "Час"

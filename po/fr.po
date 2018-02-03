@@ -56,7 +56,11 @@ msgid ""
 "You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"Démineur de GNOME est un casse-tête où vous cherchez des mines cachées. Signalez les cases contenant une mine aussi vite que possible pour faire du plateau un lieu sûr. Vous gagnez lorsque vous avez signalé toutes les mines du plateau. Faites attention à ne pas en déclencher une, au risque de perdre la partie !"
+"Démineur de GNOME est un casse-tête où vous cherchez des mines cachées. "
+"Signalez les cases contenant une mine aussi vite que possible pour faire du "
+"plateau un lieu sûr. Vous gagnez lorsque vous avez signalé toutes les mines "
+"du plateau. Faites attention à ne pas en déclencher une, au risque de perdre "
+"la partie !"
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
@@ -374,60 +378,3 @@ msgstr "Choisir un thème"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Fermer"
-
-#~ msgid "_Close"
-#~ msgstr "_Fermer"
-
-#~ msgid "New Game"
-#~ msgstr "Nouvelle partie"
-
-#~ msgid "_OK"
-#~ msgstr "_Valider"
-
-#~ msgid "Size:"
-#~ msgstr "Taille :"
-
-#~ msgid "Date"
-#~ msgstr "Date"
-
-#~ msgid "Time"
-#~ msgstr "Durée"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Préférences"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Recevoir une astuce pour votre prochain coup"
-
-#~ msgid "H_orizontal:"
-#~ msgstr "H_orizontale :"
-
-#~ msgid "_Vertical:"
-#~ msgstr "_Verticale :"
-
-#~ msgid "_Number of mines:"
-#~ msgstr "_Nombre de mines :"
-
-#~ msgid "Faces:"
-#~ msgstr "Figures :"
-
-#~ msgid "Graphics:"
-#~ msgstr "Graphismes :"
-
-#~ msgid "Mines Preferences"
-#~ msgstr "Préférences du démineur GNOME"
-
-#~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "_Utiliser le drapeau « Je ne suis pas sûr »"
-
-#~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Avertir lorsque trop de drapeaux sont à côté d'un nombre"
-
-#~ msgid "Start a new game"
-#~ msgstr "Commence une nouvelle partie"
-
-#~ msgid "Pause the game"
-#~ msgstr "Suspend la partie"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Reprend la partie"

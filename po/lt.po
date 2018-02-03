@@ -359,33 +359,3 @@ msgstr "Pasirinkite temą"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Užverti"
-
-#~ msgid "_Close"
-#~ msgstr "_Užverti"
-
-#~ msgid "New Game"
-#~ msgstr "Naujas žaidimas"
-
-#~ msgid "_OK"
-#~ msgstr "_Gerai"
-
-#~ msgid "Size:"
-#~ msgstr "Dydis:"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Time"
-#~ msgstr "Laikas"
-
-#~ msgid "5/10"
-#~ msgstr "5/10"
-
-#~ msgid "0:00"
-#~ msgstr "0:00"
-
-#~ msgid "%02d∶‎%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d∶‎%02d"
-
-#~ msgid "%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d"

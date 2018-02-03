@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-mines.appdata.xml.in:8
@@ -356,118 +356,3 @@ msgstr "Изаберите тему"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Затвори"
-
-#~ msgid "_Close"
-#~ msgstr "_Затвори"
-
-#~ msgid "New Game"
-#~ msgstr "Нова игра"
-
-#~ msgid "_OK"
-#~ msgstr "У _реду"
-
-#~ msgid "Size:"
-#~ msgstr "Величина:"
-
-#~ msgid "Date"
-#~ msgstr "Датум"
-
-#~ msgid "Time"
-#~ msgstr "Време"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Поставке"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Примите савет за ваш следећи потез"
-
-#~ msgid "H_orizontal:"
-#~ msgstr "_Водоравно:"
-
-#~ msgid "_Vertical:"
-#~ msgstr "_Усправно:"
-
-#~ msgid "_Number of mines:"
-#~ msgstr "_Број мина:"
-
-#~ msgid "%u/%u"
-#~ msgstr "%u/%u"
-
-#~ msgid "Faces:"
-#~ msgstr "Лица:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Графике:"
-
-#~ msgid "Mines Preferences"
-#~ msgstr "Поставке мина"
-
-#~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "_Користи ознаке „Нисам сигуран“"
-
-#~| msgid "_Warn if too many flags have been placed"
-#~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Упозори ако је постављено превише заставица поред броја"
-
-#~| msgid "Start New Game"
-#~ msgid "Start a new game"
-#~ msgstr "Започните нову игру"
-
-#~ msgid "Pause the game"
-#~ msgstr "Зауставите игру"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Отпаузирајте игру"
-
-#~ msgid "Display border around numbers"
-#~ msgstr "Приказује ивицу око бројева"
-
-#~ msgid "Set to true to display a border around mine indication numbers."
-#~ msgstr "Изаберите ово да прикажете ивицу око бројева показатеља мина."
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "изабрано ако је прозор преко целог екрана"
-
-#~ msgid "_Replay Size"
-#~ msgstr "Величина _понављања"
-
-#~ msgid "_Hint"
-#~ msgstr "_Савет"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Цео екран"
-
-#~ msgid "_New"
-#~ msgstr "_Нова"
-
-#~ msgid "Hint"
-#~ msgstr "Савет"
-
-#~ msgid "Field Size"
-#~ msgstr "Величина поља"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Напусти цео екран"
-
-#~ msgid "Flags: %u/%u"
-#~ msgstr "Опције: %u/%u"
-
-#~ msgid "Res_ume"
-#~ msgstr "На_стави"
-
-#~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
-#~ "\n"
-#~ "Mines is a part of GNOME Games."
-#~ msgstr ""
-#~ "Популарна логичка слагалица миноловца. Очистите мине са табле помоћу "
-#~ "савета из поља које сте већ открили.\n"
-#~ "\n"
-#~ "Мине су део Гномових игара."
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Веб сајт Гномових игара"
-
-#~ msgid "_Display numbers with border"
-#~ msgstr "_Прикажи бројеве са ивицама"

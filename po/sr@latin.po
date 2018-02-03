@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-mines.appdata.xml.in:8
@@ -51,8 +51,8 @@ msgid ""
 msgstr ""
 "Na početku igre možete da izaberete veličinu polja za igru. Ako se nađete u "
 "bezizlaznoj situaciji (a u pitanju je vaš goli život), možete da zatražite "
-"savet: ali to se kažnjava vremenom, mada je i to bolje nego li leteti nebu pod "
-"oblake nagazivši na minu!"
+"savet: ali to se kažnjava vremenom, mada je i to bolje nego li leteti nebu "
+"pod oblake nagazivši na minu!"
 
 #: data/gnome-mines.appdata.xml.in:42
 msgid "The GNOME Project"
@@ -356,118 +356,3 @@ msgstr "Izaberite temu"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Zatvori"
-
-#~ msgid "_Close"
-#~ msgstr "_Zatvori"
-
-#~ msgid "New Game"
-#~ msgstr "Nova igra"
-
-#~ msgid "_OK"
-#~ msgstr "U _redu"
-
-#~ msgid "Size:"
-#~ msgstr "Veličina:"
-
-#~ msgid "Date"
-#~ msgstr "Datum"
-
-#~ msgid "Time"
-#~ msgstr "Vreme"
-
-#~ msgid "_Preferences"
-#~ msgstr "_Postavke"
-
-#~ msgid "Receive a hint for your next move"
-#~ msgstr "Primite savet za vaš sledeći potez"
-
-#~ msgid "H_orizontal:"
-#~ msgstr "_Vodoravno:"
-
-#~ msgid "_Vertical:"
-#~ msgstr "_Uspravno:"
-
-#~ msgid "_Number of mines:"
-#~ msgstr "_Broj mina:"
-
-#~ msgid "%u/%u"
-#~ msgstr "%u/%u"
-
-#~ msgid "Faces:"
-#~ msgstr "Lica:"
-
-#~ msgid "Graphics:"
-#~ msgstr "Grafike:"
-
-#~ msgid "Mines Preferences"
-#~ msgstr "Postavke mina"
-
-#~ msgid "_Use \"I'm not sure\" flags"
-#~ msgstr "_Koristi oznake „Nisam siguran“"
-
-#~| msgid "_Warn if too many flags have been placed"
-#~ msgid "_Warn if too many flags are placed next to a number"
-#~ msgstr "_Upozori ako je postavljeno previše zastavica pored broja"
-
-#~| msgid "Start New Game"
-#~ msgid "Start a new game"
-#~ msgstr "Započnite novu igru"
-
-#~ msgid "Pause the game"
-#~ msgstr "Zaustavite igru"
-
-#~ msgid "Unpause the game"
-#~ msgstr "Otpauzirajte igru"
-
-#~ msgid "Display border around numbers"
-#~ msgstr "Prikazuje ivicu oko brojeva"
-
-#~ msgid "Set to true to display a border around mine indication numbers."
-#~ msgstr "Izaberite ovo da prikažete ivicu oko brojeva pokazatelja mina."
-
-#~ msgid "true if the window is fullscren"
-#~ msgstr "izabrano ako je prozor preko celog ekrana"
-
-#~ msgid "_Replay Size"
-#~ msgstr "Veličina _ponavljanja"
-
-#~ msgid "_Hint"
-#~ msgstr "_Savet"
-
-#~ msgid "_Fullscreen"
-#~ msgstr "_Ceo ekran"
-
-#~ msgid "_New"
-#~ msgstr "_Nova"
-
-#~ msgid "Hint"
-#~ msgstr "Savet"
-
-#~ msgid "Field Size"
-#~ msgstr "Veličina polja"
-
-#~ msgid "_Leave Fullscreen"
-#~ msgstr "_Napusti ceo ekran"
-
-#~ msgid "Flags: %u/%u"
-#~ msgstr "Opcije: %u/%u"
-
-#~ msgid "Res_ume"
-#~ msgstr "Na_stavi"
-
-#~ msgid ""
-#~ "The popular logic puzzle minesweeper. Clear mines from a board using "
-#~ "hints from squares you have already uncovered.\n"
-#~ "\n"
-#~ "Mines is a part of GNOME Games."
-#~ msgstr ""
-#~ "Popularna logička slagalica minolovca. Očistite mine sa table pomoću "
-#~ "saveta iz polja koje ste već otkrili.\n"
-#~ "\n"
-#~ "Mine su deo Gnomovih igara."
-
-#~ msgid "GNOME Games web site"
-#~ msgstr "Veb sajt Gnomovih igara"
-
-#~ msgid "_Display numbers with border"
-#~ msgstr "_Prikaži brojeve sa ivicama"

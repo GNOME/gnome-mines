@@ -360,33 +360,3 @@ msgstr "Выбрать тему"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Закрыть"
-
-#~ msgid "_Close"
-#~ msgstr "_Закрыть"
-
-#~ msgid "New Game"
-#~ msgstr "Новая игра"
-
-#~ msgid "_OK"
-#~ msgstr "_ОК"
-
-#~ msgid "Size:"
-#~ msgstr "Размер:"
-
-#~ msgid "Date"
-#~ msgstr "Дата"
-
-#~ msgid "Time"
-#~ msgstr "Время"
-
-#~ msgid "5/10"
-#~ msgstr "5/10"
-
-#~ msgid "0:00"
-#~ msgstr "0:00"
-
-#~ msgid "%02d∶‎%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d∶‎%02d"
-
-#~ msgid "%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d"

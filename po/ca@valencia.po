@@ -41,9 +41,9 @@ msgid ""
 "to trigger one, or the game is over!"
 msgstr ""
 "El GNOME Mines és un trencaclosques on cerqueu mines amagades. Marqueu amb "
-"banderes els espais amb mines tan ràpid com siga possible per fer del "
-"tauler un lloc segur. Guanyeu la partida quan marqueu totes les mines del "
-"tauler. Aneu amb compte de no activar-ne cap o s'acabarà la partida!"
+"banderes els espais amb mines tan ràpid com siga possible per fer del tauler "
+"un lloc segur. Guanyeu la partida quan marqueu totes les mines del tauler. "
+"Aneu amb compte de no activar-ne cap o s'acabarà la partida!"
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
@@ -355,33 +355,3 @@ msgstr "Seleccioneu el tema"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Tanca"
-
-#~ msgid "_Close"
-#~ msgstr "_Tanca"
-
-#~ msgid "New Game"
-#~ msgstr "Partida nova"
-
-#~ msgid "_OK"
-#~ msgstr "D'_acord"
-
-#~ msgid "Size:"
-#~ msgstr "Mida:"
-
-#~ msgid "Date"
-#~ msgstr "Data"
-
-#~ msgid "Time"
-#~ msgstr "Temps"
-
-#~ msgid "5/10"
-#~ msgstr "5/10"
-
-#~ msgid "0:00"
-#~ msgstr "0:00"
-
-#~ msgid "%02d∶‎%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d∶‎%02d"
-
-#~ msgid "%02d∶‎%02d"
-#~ msgstr "%02d∶‎%02d"

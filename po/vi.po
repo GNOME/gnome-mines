@@ -339,21 +339,3 @@ msgstr "Chọn sắc thái"
 #: src/theme-selector-dialog.vala:138
 msgid "Close"
 msgstr "Đóng"
-
-#~ msgid "_Close"
-#~ msgstr "Đón_g"
-
-#~ msgid "New Game"
-#~ msgstr "Lượt chơi mới"
-
-#~ msgid "_OK"
-#~ msgstr "_OK"
-
-#~ msgid "Size:"
-#~ msgstr "Cỡ:"
-
-#~ msgid "Date"
-#~ msgstr "Ngày"
-
-#~ msgid "Time"
-#~ msgstr "Thời gian"
