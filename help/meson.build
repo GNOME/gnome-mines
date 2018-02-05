@@ -1,16 +1,3 @@
-languages = [ 'ca', 'cs',
-              'da', 'de',
-              'el', 'en_GB', 'es', 'eu',
-              'fr',
-              'gl',
-              'hu',
-              'it',
-              'ja',
-              'oc',
-              'pl', 'pt_BR',
-              'sl', 'sr', 'sr@latin', 'sv',
-              'zh_CN' ]
-
 gnome.yelp ('gnome-mines',
             sources: [ 'board-size.page',
                        'bug-filing.page',
@@ -30,5 +17,4 @@ gnome.yelp ('gnome-mines',
                      'figures/flag.svg',
                      'figures/logo32.png',
                      'figures/logo.png' ],
-            languages: languages,
             symlink_media: true)
