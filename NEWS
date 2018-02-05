@@ -1,3 +1,10 @@
+GNOME Mines 3.27.90
+=====================
+* Translations cleanup (Piotr Drąg)
+* Fixed icon redraw issues (Daiki Matsunaga)
+* Added snap packaging (Ken VanDine)
+* Updated translations
+
 GNOME Mines 3.27.2
 =====================
 
