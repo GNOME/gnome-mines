@@ -31,7 +31,7 @@ i18n.merge_file ('appdata-file',
                  input: 'gnome-mines.appdata.xml.in',
                  output: 'gnome-mines.appdata.xml',
                  install: true,
-                 install_dir: join_paths (datadir, 'appdata'),
+                 install_dir: join_paths (datadir, 'metainfo'),
                  po_dir: '../po')
 
 install_man ('gnome-mines.6')
