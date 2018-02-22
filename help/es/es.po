@@ -2,13 +2,13 @@
 # translation of gnomine manual to Spanish
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2011.
 # 
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014, 2015., 2017.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014, 2015., 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2017-07-31 12:04+0000\n"
-"PO-Revision-Date: 2017-08-03 12:38+0200\n"
+"POT-Creation-Date: 2018-01-08 16:01+0000\n"
+"PO-Revision-Date: 2018-02-22 12:42+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -22,32 +22,32 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2017\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2018\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
-#: C/flags.page:20 C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:20 C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -173,10 +173,6 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:40
-#| msgid ""
-#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
-#| "and click <gui>Commit</gui>."
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -352,56 +348,45 @@ msgstr ""
 "banderas «no estoy seguro»</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Pistas y advertencias"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Advertencias"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+#| msgid ""
+#| "You can use hints to reveal safe tiles, and flag warnings to help you "
+#| "keep track of flags."
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"Puede usar las pistas para revelar las casillas seguras y las banderas de "
-"advertencia para ayudarle a llevar un control de las banderas."
+"Puede usar las banderas de advertencia para ayudarle a llevar un control de "
+"las banderas."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
+#| msgid ""
+#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+#| "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+#| "<gui>Warn if too many flags are placed next to a number</gui>. This will "
+#| "warn you when you try to place too many flags next to an open tile."
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Pulse el botón <gui style=\"button\">Obtener una pista para el siguiente "
-"movimiento</gui> en la parte superior derecha para descubrir una casilla "
-"segura oculta. Se añadirá una penalización de 10 segundos al tiempo total. "
-"Esta penalización se incrementará progresivamente en 10 segundos en las "
-"siguientes pistas, hasta la novena pista."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Para activar las advertencias, edite las preferencias seleccionando "
-"<guiseq><gui>Minas</gui><gui>Preferencias</gui></guiseq> y marque la casilla "
-"junto a <gui>Advertir si se han colocado demasiadas banderas junto a un "
-"número</gui>. Esto le advertirá cuando intente colocar demasiadas banderas "
-"junto a una casilla abierta."
+"Para activar las advertencias, pulse en <gui>Minas</gui> en la barra "
+"superior y elija <gui>Mostrar advertencias</gui>. Esto le advertirá cuando "
+"intente colocar demasiadas banderas junto a una casilla abierta."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -820,6 +805,22 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Hints and warnings"
+#~ msgstr "Pistas y advertencias"
+
+#~ msgid ""
+#~ "Click on the button <gui style=\"button\">Receive a hint for your next "
+#~ "move</gui> on the top right to reveal a hidden tile that is safe. A "
+#~ "penalty of ten seconds will be added to your total time. The penalty will "
+#~ "be increased by ten seconds progressively on subsequent hints till the "
+#~ "ninth hint."
+#~ msgstr ""
+#~ "Pulse el botón <gui style=\"button\">Obtener una pista para el siguiente "
+#~ "movimiento</gui> en la parte superior derecha para descubrir una casilla "
+#~ "segura oculta. Se añadirá una penalización de 10 segundos al tiempo "
+#~ "total. Esta penalización se incrementará progresivamente en 10 segundos "
+#~ "en las siguientes pistas, hasta la novena pista."
 
 #~ msgid "Fullscreen"
 #~ msgstr "Pantalla completa"
