@@ -2,7 +2,7 @@
 # translation of gnomine manual to Spanish
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2011.
 # 
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012, 2013, 2014, 2015., 2017, 2018.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012-2015, 2017, 2018.
 #
 msgid ""
 msgstr ""
