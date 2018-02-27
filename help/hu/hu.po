@@ -2,13 +2,13 @@
 # Copyright (C) 2013. Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mines help.
 #
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015, 2017.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015, 2017, 2018.
 # Balázs Úr <urbalazs@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2017-07-31 12:04+0000\n"
-"PO-Revision-Date: 2017-08-18 10:38+0200\n"
+"POT-Creation-Date: 2018-01-08 16:01+0000\n"
+"PO-Revision-Date: 2018-02-28 00:20+0100\n"
 "Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
 "Language-Team: Hungarian <openscope at googlegroups dot com>\n"
 "Language: hu\n"
@@ -21,31 +21,31 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2013, 2014."
+msgstr "Kelemen Gábor <kelemeng at gnome dot hu>, 2013, 2014, 2018."
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -172,10 +172,6 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:40
-#| msgid ""
-#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
-#| "and click <gui>Commit</gui>."
 msgid ""
 "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 "<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
@@ -354,55 +350,45 @@ msgstr ""
 "használata</gui> négyzetet."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Javaslatok és figyelmeztetések"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Figyelmeztetések"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+#| msgid ""
+#| "You can use hints to reveal safe tiles, and flag warnings to help you "
+#| "keep track of flags."
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"A javaslatok használatával megjeleníthet biztonságos mezőket, a "
-"zászlófigyelmeztetések használata pedig segíthet az aknák számon tartásában."
+"A zászlófigyelmeztetések használata segíthet az aknák számon tartásában."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
+#| msgid ""
+#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+#| "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+#| "<gui>Warn if too many flags are placed next to a number</gui>. This will "
+#| "warn you when you try to place too many flags next to an open tile."
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Kattintson a <gui style=\"button\">Javaslat a következő lépéshez</gui> "
-"gombra a jobb felső sarokban egy biztonságos mező felfedéséhez. A teljes "
-"ideje egy tíz másodperces büntetéssel nő. A büntetés minden további javaslat "
-"után tíz másodperccel nő a kilencedik javaslatig."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"A figyelmeztetések bekapcsolásához válassza az <guiseq><gui>Aknakereső</"
-"gui><gui>Beállítások</gui></guiseq> menüpontot, és jelölje be a "
-"<gui>Figyelmeztessen, ha túl sok zászló lett elhelyezve egy szám mellett</"
-"gui> négyzetet. Ekkor figyelmeztetést fog kapni, ha túl sok zászlót próbál "
-"egy szabad mező mellé elhelyezni."
+"A figyelmeztetések bekapcsolásához válassza az <gui>Aknakereső</gui> elemet a "
+"felső sávon, és jelölje be a <gui>Figyelmeztetések megjelenítése</gui> "
+"négyzetet. Ekkor figyelmeztetést fog kapni, ha túl sok zászlót próbál egy "
+"szabad mező mellé elhelyezni."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -819,6 +805,21 @@ msgstr ""
 "is. A magyar csapat <link href=\"http://l10n.gnome.org/languages/hu/"
 "\">kezdőoldalán</link> megtalálja a magyar levelezőlista címét és a "
 "fordítások megkezdéséhez szükséges információkat."
+
+#~ msgid "Hints and warnings"
+#~ msgstr "Javaslatok és figyelmeztetések"
+
+#~ msgid ""
+#~ "Click on the button <gui style=\"button\">Receive a hint for your next "
+#~ "move</gui> on the top right to reveal a hidden tile that is safe. A "
+#~ "penalty of ten seconds will be added to your total time. The penalty will "
+#~ "be increased by ten seconds progressively on subsequent hints till the "
+#~ "ninth hint."
+#~ msgstr ""
+#~ "Kattintson a <gui style=\"button\">Javaslat a következő lépéshez</gui> "
+#~ "gombra a jobb felső sarokban egy biztonságos mező felfedéséhez. A teljes "
+#~ "ideje egy tíz másodperces büntetéssel nő. A büntetés minden további "
+#~ "javaslat után tíz másodperccel nő a kilencedik javaslatig."
 
 #~ msgid "Fullscreen"
 #~ msgstr "Teljes képernyő"
