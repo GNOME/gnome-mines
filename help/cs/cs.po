@@ -1,13 +1,13 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2017-07-31 12:04+0000\n"
-"PO-Revision-Date: 2017-08-07 13:19+0200\n"
+"POT-Creation-Date: 2018-01-08 16:01+0000\n"
+"PO-Revision-Date: 2018-02-28 10:29+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,28 +26,28 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -349,56 +349,37 @@ msgstr ""
 "zaškrtněte <gui>Používat vlaječky „Nejsem si jist(á)“</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Rady a varování"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Varování"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"Můžete používat rady pro odhalení bezpečných dlaždic a varování k vlaječkám "
-"pro hlídání jejich počtu."
+"Můžete nechat vlaječky, aby vám pomocí varování pomohli udrožovat si přehled "
+"o jejich okolí."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Klikněte na tlačítko <gui style=\"button\">Získat radu pro váš další tah</"
-"gui> vpravo nahoře, aby se vám odhalila dlaždice, která je bezpečná. Za "
-"každé použití rady jste penalizováni – k celkovému času je přičteno deset "
-"sekund. Penalizace se bude postupně zvyšovat o deset sekund až do deváté "
-"rady."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Jestli chcete zapnout varování, upravte předvolby tím, že vyberete "
-"<guiseq><gui>Miny</gui> <gui>Předvolby</gui></guiseq> a zaškrtnete políčko "
-"vedle <gui>Varovat, když máte příliš mnoho vlaječek</gui>. Díky tomu budete "
-"varováni, když se pokusíte vedle odkryté dlaždice umístit příliš mnoho "
-"vlaječek."
+"Jestli chcete zapnout varování, klikněte na <gui>Miny</gui> v horní liště a "
+"zaškrtnete <gui>Zobrazovat varování</gui>. Díky tomu budete varováni, když se "
+"pokusíte vedle odkryté dlaždice umístit příliš mnoho vlaječek."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
