@@ -1,3 +1,9 @@
+GNOME Mines 3.27.92
+=====================
+* Fixed icon install dir (Robert Ancell)
+* Install appdata to non-deprecated location (Jeremy Bicha)
+* Updated translations
+
 GNOME Mines 3.27.90
 =====================
 * Translations cleanup (Piotr Drąg)
