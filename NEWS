@@ -1,3 +1,7 @@
+GNOME Mines 3.27.92.1
+=====================
+* Include meson build files in the tarball
+
 GNOME Mines 3.27.92
 =====================
 * Fixed icon install dir (Robert Ancell)
