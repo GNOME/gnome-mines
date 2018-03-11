@@ -1,12 +1,12 @@
 # Daniel Nylander <po@danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2017-07-31 12:04+0000\n"
-"PO-Revision-Date: 2017-08-01 01:44+0200\n"
+"POT-Creation-Date: 2018-01-08 16:01+0000\n"
+"PO-Revision-Date: 2018-03-11 17:00+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.2\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -25,28 +25,28 @@ msgstr ""
 "Erik Sköldås <erik.skoldas@tele2.se>, 2015"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -348,56 +348,36 @@ msgstr ""
 "<gui>Använd \"Jag är inte säker\"-flaggor</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Tips och varningar"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Varningar"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"Du kan använda tips för att visa säkra rutor, och flaggvarningar för att "
-"hålla koll på antalet flaggor."
+"Du kan flagga varningar för att hjälpa dig hålla koll på antalet flaggor."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Klicka på knappen <gui style=\"button\">Ta emot ett tips för ditt nästa "
-"drag</gui> högst upp till höger för att visa en dold ruta som är säker. En "
-"strafftid på tio sekunder kommer att läggas till din totala tid. Straffet "
-"höjs med tio sekunder successivt på efterföljande tips tills den nionde "
-"ledtråden."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"För att aktivera varningar, redigera inställningarna genom att välja "
-"<guiseq><gui>Minor</gui><gui>Inställningar</gui></guiseq> och kryssa i "
-"kryssrutan bredvid <gui>Varna om för många flaggor har placerats bredvid ett "
-"nummer</gui>. Detta kommer att varna dig om du försöker placera för många "
-"flaggor i anslutning till en öppen ruta."
+"För att aktivera varningar, klicka <gui>Minor</gui> i systemraden och välj "
+"sedan <gui>Visa varningar</gui>. Detta kommer att varna dig om du försöker "
+"placera för många flaggor i anslutning till en öppen ruta."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -811,6 +791,22 @@ msgstr ""
 "Alternativt, kan du kontakta det internationella teamet genom att använda "
 "deras <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">e-"
 "postlista</link>."
+
+#~ msgid "Hints and warnings"
+#~ msgstr "Tips och varningar"
+
+#~ msgid ""
+#~ "Click on the button <gui style=\"button\">Receive a hint for your next "
+#~ "move</gui> on the top right to reveal a hidden tile that is safe. A "
+#~ "penalty of ten seconds will be added to your total time. The penalty will "
+#~ "be increased by ten seconds progressively on subsequent hints till the "
+#~ "ninth hint."
+#~ msgstr ""
+#~ "Klicka på knappen <gui style=\"button\">Ta emot ett tips för ditt nästa "
+#~ "drag</gui> högst upp till höger för att visa en dold ruta som är säker. "
+#~ "En strafftid på tio sekunder kommer att läggas till din totala tid. "
+#~ "Straffet höjs med tio sekunder successivt på efterföljande tips tills den "
+#~ "nionde ledtråden."
 
 #~ msgid ""
 #~ "@@image: 'figures/main-window.png'; md5=0f49e2af3381111f4d13575fefd52d87"
