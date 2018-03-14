@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
 "POT-Creation-Date: 2018-03-13 20:50+0000\n"
-"PO-Revision-Date: 2018-03-13 21:52+0100\n"
+"PO-Revision-Date: 2018-03-14 13:23+0100\n"
 "Last-Translator: gogo <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <lokalizacija@linux.hr>\n"
 "Language: hr\n"
@@ -94,7 +94,7 @@ msgstr "Koristi oznaku za nepoznato"
 
 #: data/org.gnome.mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "Odaberi za označavanje polja kao nepoznata."
+msgstr "Odaberi za označavanje polja kao nepoznatog."
 
 #: data/org.gnome.mines.gschema.xml:15
 msgid "Warning about too many flags"
@@ -170,7 +170,7 @@ msgstr "_Visina"
 
 #: src/interface.ui:166
 msgid "Percent _mines"
-msgstr "Postozak _mina"
+msgstr "Postotak _mina"
 
 #: src/interface.ui:192
 msgid "_Cancel"
@@ -279,7 +279,7 @@ msgstr "Prilagođeno"
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
-msgstr[0] "<b>%d</b> mine"
+msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> mine"
 msgstr[2] "<b>%d</b> mina"
 
@@ -330,22 +330,7 @@ msgstr "Ukloni eksplozivne mine s ploče"
 #: src/gnome-mines.vala:870
 msgid "translator-credits"
 msgstr ""
-"lokalizacija@linux.hr\n"
-"  Antun Krasic <butch@gawab.com>\n"
-"  Automatski Prijevod <>\n"
-"  Danijel Studen <dstuden@vuka.hr>\n"
-"  Davorin Vlahovic <aburn@fly.srk.fer.hr>\n"
-"  Denis Lackovic <delacko@linux.hr>\n"
-"  Ivan Knežević <kn3z@lycos.com>\n"
-"  Mato Kutlić <mate@iskraemeco.hr>\n"
-"  Nikola Planinac <>\n"
-"  Robert Sedak <robert.sedak@sk.t-com.hr>\n"
-"  Sasa Poznanovic <sasa.poznanovic@vuka.hr>\n"
-"  Tomislav Cavrag <tcavrag@vuka.hr>\n"
-"  Vedran Vyroubal <vedran.vyroubal@inet.hr>\n"
-"\n"
 "Launchpad Contributions:\n"
-"  Launchpad Translations Administrators https://launchpad.net/~rosetta\n"
 "  gogo https://launchpad.net/~trebelnik-stefina"
 
 #: src/theme-selector-dialog.vala:99
