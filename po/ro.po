@@ -12,23 +12,22 @@ msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-09-26 14:14+0000\n"
-"PO-Revision-Date: 2011-03-16 17:36+0200\n"
-"Last-Translator: Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"POT-Creation-Date: 2018-03-26 22:44+0000\n"
+"PO-Revision-Date: 2018-04-03 16:28+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
-"20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.6.1\n"
+"20)) ? 1 : 2);\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 
 #: data/gnome-mines.appdata.xml.in:8
-#, fuzzy
 msgid "GNOME Mines"
-msgstr "Mine"
+msgstr "Mine GNOME"
 
 #: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -41,6 +40,10 @@ msgid ""
 "You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
+"Mine GNOME este un joc puzzle în care se caută mine ascunse. Marcați "
+"spațiile minate cât de repede posibil pentru a transforma tabla într-un loc "
+"mai sigur. Câștigați jocul atunci când ați marcat fiecare mină de pe tablă. "
+"Aveți grijă să nu declanșați una, altfel jocul se încheie!"
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
@@ -48,10 +51,13 @@ msgid ""
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
 "that’s better than hitting a mine!"
 msgstr ""
+"Puteți selecta dimensiunea câmpului pe care doriți să jucați la începutul "
+"jocului. Dacă rămâneți blocat, puteți solicita un indiciu: există o "
+"sancțiune de timp, dar este mai bine decât să loviți o mină!"
 
 #: data/gnome-mines.appdata.xml.in:42
 msgid "The GNOME Project"
-msgstr ""
+msgstr "Proiectul GNOME"
 
 #: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
 #: src/gnome-mines.vala:227 src/gnome-mines.vala:860
@@ -60,28 +66,25 @@ msgstr "Mine"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/gnome-mines.desktop.in:7
-#, fuzzy
 msgid "gnome-mines"
-msgstr "gnomi"
+msgstr "gnome-mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/gnome-mines.desktop.in:12
 msgid "minesweeper;"
-msgstr ""
+msgstr "minesweeper;mine;"
 
 #: data/gnome-mines.desktop.in:17
-#, fuzzy
 msgid "Small board"
-msgstr "Mic"
+msgstr "Tablă mică"
 
 #: data/gnome-mines.desktop.in:21
-#, fuzzy
 msgid "Medium board"
-msgstr "Mediu"
+msgstr "Tablă medie"
 
 #: data/gnome-mines.desktop.in:25
 msgid "Big board"
-msgstr ""
+msgstr "Tablă mare"
 
 #: data/org.gnome.mines.gschema.xml:5
 msgid "The theme to use"
@@ -104,35 +107,33 @@ msgid "Warning about too many flags"
 msgstr "Atenționare în cazul prea multor steaguri"
 
 #: data/org.gnome.mines.gschema.xml:16
-#, fuzzy
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"Definiți ca adevărat pentru a activa iconițele de avertizare când sunt "
-"plasate prea multe steaguri."
+"Stabiliți la adevărat pentru a activa pictogramele de avertisment când sunt "
+"plasate prea multe fanioane lângă o dală numerotată."
 
 #: data/org.gnome.mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "Activează plasarea automată a steagurilor"
 
 #: data/org.gnome.mines.gschema.xml:21
-#, fuzzy
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"Definiți ca adevărat pentru ca gnomine să marcheze automat pătrățele ca "
-"minate când destule pătrățele au fost descoperite"
+"Stabiliți la adevărat pentru a marca automat pătrate ca fiind minate atunci "
+"când s-au descoperit destule pătrate"
 
 #: data/org.gnome.mines.gschema.xml:25
-#, fuzzy
 msgid "Enable animations"
-msgstr "Activează _animația"
+msgstr "Activează animațiile"
 
 #: data/org.gnome.mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
+"Stabiliți la fals pentru a dezactiva animațiile de tranziție definite de temă"
 
 #: data/org.gnome.mines.gschema.xml:31
 msgid "Number of columns in a custom game"
@@ -155,41 +156,36 @@ msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Dimensiunea tablei (0-2 = mică-mare, 3=personalizată)"
 
 #: data/org.gnome.mines.gschema.xml:50
-#, fuzzy
 msgid "Width of the window in pixels"
-msgstr "Mărimea în pixeli a ferestrei principale."
+msgstr "Lățimea ferestrei în pixeli"
 
 #: data/org.gnome.mines.gschema.xml:54
-#, fuzzy
 msgid "Height of the window in pixels"
-msgstr "Înălțimea în pixeli a ferestrei principale."
+msgstr "Înălțimea ferestrei în pixeli"
 
 #: data/org.gnome.mines.gschema.xml:58
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "adevărat dacă fereastra este maximizată"
 
 #: src/interface.ui:118
 msgid "_Width"
-msgstr ""
+msgstr "_Lățime"
 
 #: src/interface.ui:142
-#, fuzzy
 msgid "_Height"
-msgstr "opt"
+msgstr "Î_nălțime"
 
 #: src/interface.ui:166
-#, fuzzy
 msgid "Percent _mines"
-msgstr "Procentaj:"
+msgstr "Procentaj _mine"
 
 #: src/interface.ui:192
 msgid "_Cancel"
 msgstr "A_nulare"
 
 #: src/interface.ui:208
-#, fuzzy
 msgid "_Play Game"
-msgstr "Numele jucătorilor"
+msgstr "_Joacă"
 
 #: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
 #: src/gnome-mines.vala:809
@@ -197,18 +193,16 @@ msgid "_Pause"
 msgstr "_Pauză"
 
 #: src/interface.ui:366
-#, fuzzy
 msgid "Change _Difficulty"
-msgstr "_Dificultate:"
+msgstr "Modifică _dificultatea"
 
 #: src/interface.ui:383
 msgid "_Best Times"
-msgstr ""
+msgstr "Cei mai _buni timpi"
 
 #: src/interface.ui:400
-#, fuzzy
 msgid "_Play Again"
-msgstr "Desfășurarea jocului"
+msgstr "_Joacă din nou"
 
 #: src/interface.ui:464
 msgid "Paused"
@@ -216,40 +210,35 @@ msgstr "Pauză"
 
 #: src/gnome-mines.vala:89
 msgid "Print release version and exit"
-msgstr ""
+msgstr "Tipărește versiunea de lansare și ieși"
 
 #: src/gnome-mines.vala:90
-#, fuzzy
 msgid "Small game"
-msgstr "Mic"
+msgstr "Joc mic"
 
 #: src/gnome-mines.vala:91
-#, fuzzy
 msgid "Medium game"
-msgstr "Mediu"
+msgstr "Joc mediu"
 
 #: src/gnome-mines.vala:92
-#, fuzzy
 msgid "Big game"
-msgstr "Jocul principal:"
+msgstr "Joc mare"
 
 #: src/gnome-mines.vala:239 src/gnome-mines.vala:258
 msgid "_Scores"
 msgstr "_Scoruri"
 
 #: src/gnome-mines.vala:240 src/gnome-mines.vala:259
-#, fuzzy
 msgid "A_ppearance"
-msgstr "Aspect"
+msgstr "As_pect"
 
 #: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-#, fuzzy
 msgid "_Show Warnings"
-msgstr "Avertismente"
+msgstr "Afișează averti_smentele"
 
 #: src/gnome-mines.vala:244 src/gnome-mines.vala:261
 msgid "_Use Question Flags"
-msgstr ""
+msgstr "_Folosește fanioane întrebare"
 
 #: src/gnome-mines.vala:247 src/gnome-mines.vala:264
 msgid "_Help"
@@ -260,14 +249,12 @@ msgid "_About"
 msgstr "_Despre"
 
 #: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-#, fuzzy
 msgid "_Quit"
-msgstr "Ieșire"
+msgstr "_Ieșire"
 
 #: src/gnome-mines.vala:256
-#, fuzzy
 msgid "_Mines"
-msgstr "Mine"
+msgstr "_Mine"
 
 #: src/gnome-mines.vala:257
 msgid "_New Game"
@@ -279,64 +266,57 @@ msgstr "_Conținut"
 
 #. Label on the scores dialog
 #: src/gnome-mines.vala:315
-#, fuzzy
 msgid "Minefield:"
-msgstr "Canfield"
+msgstr "Câmp minat:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: src/gnome-mines.vala:349
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%d × %d, %d mină"
+msgstr[1] "%d × %d, %d mine"
+msgstr[2] "%d × %d, %d de mine"
 
 #: src/gnome-mines.vala:408
 msgid "Custom"
 msgstr "Definită de utilizator"
 
 #: src/gnome-mines.vala:486
-#, fuzzy, c-format
+#, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
-msgstr[0] "%d minut"
-msgstr[1] "%d minute"
-msgstr[2] "%d de minute"
+msgstr[0] "<b>%d</b> mină"
+msgstr[1] "<b>%d</b> mine"
+msgstr[2] "<b>%d</b> de mine"
 
 #: src/gnome-mines.vala:596
-#, fuzzy
 msgid "Do you want to start a new game?"
-msgstr "Doriți să începeți un joc nou cu această hartă?"
+msgstr "Doriți să începeți un joc nou?"
 
 #: src/gnome-mines.vala:597
 msgid "If you start a new game, your current progress will be lost."
-msgstr ""
+msgstr "Dacă începeți un joc nou, progresul curent va fi pierdut."
 
 #: src/gnome-mines.vala:598
-#, fuzzy
 msgid "Keep Current Game"
-msgstr "Salvare partidă curentă"
+msgstr "Păstrează jocul curent"
 
 #: src/gnome-mines.vala:599
-#, fuzzy
 msgid "Start New Game"
-msgstr "Pornește un joc nou"
+msgstr "Începe joc nou"
 
 #: src/gnome-mines.vala:649
-#, fuzzy
 msgid "St_art Over"
-msgstr "Jocul s-a terminat"
+msgstr "Î_ncepe din nou"
 
 #: src/gnome-mines.vala:760
-#, fuzzy
 msgid "_Resume"
-msgstr "_Re-începe"
+msgstr "_Reia"
 
 #: src/gnome-mines.vala:778
-#, fuzzy
 msgid "Play _Again"
-msgstr "Desfășurarea jocului"
+msgstr "Jo_acă din nou"
 
 #: src/gnome-mines.vala:833
 msgid "Main game:"
@@ -351,15 +331,15 @@ msgid "Resizing and SVG support:"
 msgstr "Redimensionare și suport SVG:"
 
 #: src/gnome-mines.vala:863
-#, fuzzy
 msgid "Clear explosive mines off the board"
-msgstr "Mută ~a de pe tablă"
+msgstr "Eliberează minele explozive de pe tablă"
 
 #: src/gnome-mines.vala:870
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
+"Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "\n"
 "Launchpad Contributions:\n"
 "  Adi Roiban https://launchpad.net/~adiroiban\n"
@@ -378,16 +358,13 @@ msgstr ""
 "  leandrud https://launchpad.net/~leandrud"
 
 #: src/theme-selector-dialog.vala:99
-#, fuzzy
 msgid "Use _animations"
-msgstr "Folosește animație rapidă"
+msgstr "Folosește _animații"
 
 #: src/theme-selector-dialog.vala:115
-#, fuzzy
 msgid "Select Theme"
-msgstr "Selectare Joc"
+msgstr "Selectează tema"
 
 #: src/theme-selector-dialog.vala:138
-#, fuzzy
 msgid "Close"
 msgstr "În_chide"
