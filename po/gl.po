@@ -16,16 +16,16 @@ msgstr ""
 "Project-Id-Version: gnome-games-master-po-gl-54590\n"
 "Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
 "mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-06-27 21:22+0000\n"
-"PO-Revision-Date: 2017-08-14 00:15+0200\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"POT-Creation-Date: 2018-03-26 22:44+0000\n"
+"PO-Revision-Date: 2018-05-15 02:09+0200\n"
+"Last-Translator: marcos <marcoslansgarza@gmail.com>\n"
 "Language-Team: Galician\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-mines.appdata.xml.in:8
@@ -43,10 +43,10 @@ msgid ""
 "You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
-"Minas de GNOME é un xogo de quebracabezas onde debe buscar por minas "
-"agochadas. Marque os espazos con minas tan pronto como poida para asegurar o "
-"seu taboleiro. Gana o xogo cando marcara cunha bandeira cada mina do "
-"taboleiro. Teña coidado de non estourar unha ou o xogo rematará!"
+"Minas de GNOME é un xogo de quebracabezas onde debe buscar minas agochadas. "
+"Marque os espazos con minas tan pronto como poida para asegurar o seu "
+"taboleiro. Gana o xogo cando marque cunha bandeira cada mina do taboleiro. "
+"Teña coidado de non estourar unha ou o xogo rematará!"
 
 #: data/gnome-mines.appdata.xml.in:17
 msgid ""
@@ -136,7 +136,7 @@ msgstr "Activar animacións"
 #: data/org.gnome.mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
-"Estabelecer a falsopara desactivar as animacións de transición definidas "
+"Estabelecer a falso para desactivar as animacións de transición definidas "
 "polo tema"
 
 #: data/org.gnome.mines.gschema.xml:31
@@ -298,7 +298,7 @@ msgstr "Desexa iniciar un novo xogo?"
 
 #: src/gnome-mines.vala:597
 msgid "If you start a new game, your current progress will be lost."
-msgstr "Se iniciar un xogo novo, o seu progreso actual perderase."
+msgstr "Se inicia un xogo novo, o seu progreso actual perderase."
 
 #: src/gnome-mines.vala:598
 msgid "Keep Current Game"
