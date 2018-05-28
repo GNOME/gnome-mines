@@ -1,36 +1,45 @@
 {
-    "app-id": "org.gnome.mines",
-    "runtime": "org.gnome.Platform",
-    "runtime-version": "master",
-    "sdk": "org.gnome.Sdk",
-    "command": "gnome-mines",
-    "tags": ["nightly"],
-    "copy-icon": true,
-    "rename-icon": "gnome-mines",
-    "rename-desktop-file": "gnome-mines.desktop",
-    "desktop-file-name-prefix": "(Nightly) ",
-    "finish-args": [
-        /* X11 + XShm access */
-        "--share=ipc", "--socket=x11",
-        /* Wayland access */
-        "--socket=wayland",
-        /* dconf */
-        "--filesystem=xdg-run/dconf", "--filesystem=~/.config/dconf:ro",
-        "--talk-name=ca.desrt.dconf", "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    "app-id" : "org.gnome.mines",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "master",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "gnome-mines",
+    "tags" : [
+        "nightly"
     ],
-    "build-options": {
-        "cflags": "-O2 -g"
+    "copy-icon" : true,
+    "rename-icon" : "gnome-mines",
+    "rename-desktop-file" : "gnome-mines.desktop",
+    "desktop-file-name-prefix" : "(Nightly) ",
+    "finish-args" : [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "build-options" : {
+        "cflags" : "-O2 -g",
+        "env" : {
+        }
     },
-    "cleanup": ["/include", "/lib/*.la", "/lib/pkgconfig",
-                "/share/man", "/share/vala"],
-    "modules": [
+    "cleanup" : [
+        "/include",
+        "/lib/*.la",
+        "/lib/pkgconfig",
+        "/share/man",
+        "/share/vala"
+    ],
+    "modules" : [
         "org.gnome.games-support.modules.json",
         {
-            "name": "gnome-mines",
-            "sources": [
+            "name" : "gnome-mines",
+            "sources" : [
                 {
-                    "type": "git",
-                    "url": "git://git.gnome.org/gnome-mines"
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gnome-mines.git"
                 }
             ]
         }
