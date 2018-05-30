@@ -20,7 +20,7 @@
 <section id="bug-report">
 <title>Report a bug or suggest an improvement</title>
 <p>
-   <app>Mines</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href = "https://gitlab.gnome.org/GNOME/gnome-mines/issues"/>.
+   <app>Mines</app> is maintained by a volunteer community. You are welcome to participate.  If you notice a problem you can file a <em>bug report</em>. To file a bug, go to <link href="https://gitlab.gnome.org/GNOME/gnome-mines/issues"/>.
    </p>
    <p>
    This is a bug tracking system where users and developers can file details about bugs and crashes, or request enhancements.
@@ -29,7 +29,7 @@
    To participate you need an account, which will give you the ability to gain access, file bugs, make comments, and receive updates by e-mail about the status of your bug. If you don't already have an account, just click on the <gui>Sign in/Register</gui> link to create one.
    </p>
 
-  <p>Once you have an account, log in, click on <guiseq><gui>New Issue</gui>. Before
+  <p>Once you have an account, log in, click on <gui>New Issue</gui>. Before
   reporting a bug, please read the
   <link href="https://bugzilla.gnome.org/page.cgi?id=bug-writing.html">bug
   writing guidelines</link>, and please
