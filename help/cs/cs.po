@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2018-06-01 10:04+0000\n"
+"POT-Creation-Date: 2018-06-18 08:39+0000\n"
 "PO-Revision-Date: 2018-06-18 10:30+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
@@ -128,8 +128,9 @@ msgid ""
 "issues\"/>."
 msgstr ""
 "O hru <app>Miny</app> se stará komunita dobrovolníků. Vaše případná účast "
-"bude vítána. Pokud si povšimnete nějakého problému, můžete <em>nahlásit chybu"
-"</em> na <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
+"bude vítána. Pokud si povšimnete nějakého problému, můžete <em>nahlásit "
+"chybu</em> na <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
+"\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -152,8 +153,8 @@ msgstr ""
 "Abyste se mohli zapojit, musíte si vytvořit účet, díky kterému získáte "
 "přistup, můžete hlásit chyby a psát komentáře. Registraci potřebujete také k "
 "tomu, aby vám přicházely na e-mail informace o stavu vaší chyby. Jestli účet "
-"zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Sign in/Register"
-"</gui>."
+"zatím nemáte, stačí pro vytvoření kliknout na odkaz <gui>Sign in/Register</"
+"gui>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
@@ -164,12 +165,11 @@ msgid ""
 "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
 "link> for the bug to see if it already exists."
 msgstr ""
-"Když už účet máte, přihlaste se, klikněte na <guiseq><gui>New Issue</gui>"
-"<gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Před nahlášením "
-"chyby si prosím přečtěte <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">přiručku k hlášení chyb</link> a <link href=\"https://"
-"gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte</link> se prosím, "
-"jestli stejnou chybu nenahlásil už někdo jiný."
+"Když už účet máte, přihlaste se, klikněte na <guiseq><gui>New Issue</"
+"gui>. Před nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla."
+"gnome.org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> a "
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte"
+"</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
