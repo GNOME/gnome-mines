@@ -7,15 +7,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2018-01-08 16:01+0000\n"
-"PO-Revision-Date: 2018-02-22 12:42+0100\n"
+"POT-Creation-Date: 2018-06-01 10:04+0000\n"
+"PO-Revision-Date: 2018-07-31 11:55+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -46,8 +46,8 @@ msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14
-#: C/flags.page:20 C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -98,8 +98,8 @@ msgid "a custom board, where you chose the size and the number of mines"
 msgstr "un tablero personalizado, donde elije el tamaño y el número de minas"
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
-#: C/flags.page:12 C/translate.page:10
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
 
@@ -121,15 +121,20 @@ msgstr "Informar de un error o sugerir una mejora"
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:22
+#| msgid ""
+#| "<app>Mines</app> is maintained by a volunteer community. You are welcome "
+#| "to participate. If you notice a problem you can file a <em>bug report</"
+#| "em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgid ""
 "<app>Mines</app> is maintained by a volunteer community. You are welcome to "
 "participate. If you notice a problem you can file a <em>bug report</em>. To "
-"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+"file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
 msgstr ""
 "<app>Minas</app> lo mantiene la comunidad de manera voluntaria. Si quiere "
 "participar, es bienvenido. Si encuentra un error, puede rellenar un "
 "<em>informe de error</em>. Para informar de un error, vaya a <link href="
-"\"https://bugzilla.gnome.org/\"/>."
+"\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -143,47 +148,61 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:28
+#| msgid ""
+#| "To participate you need an account, which will give you the ability to "
+#| "gain access, file bugs, make comments, and receive updates by e-mail "
+#| "about the status of your bug. If you don't already have an account, just "
+#| "click on the <gui>New Account</gui> link to create one."
 msgid ""
 "To participate you need an account, which will give you the ability to gain "
 "access, file bugs, make comments, and receive updates by e-mail about the "
 "status of your bug. If you don't already have an account, just click on the "
-"<gui>New Account</gui> link to create one."
+"<gui>Sign in/Register</gui> link to create one."
 msgstr ""
 "Para participar necesita una cuenta, que le permitirá obtener acceso, "
 "informar de errores, hacer comentarios y recibir actualizaciones por correo-"
 "e sobre el estado de su informe de error. Si todavía no tiene una cuenta, "
-"simplemente pulse en el enlace <gui>New Account</gui> para crear una."
+"simplemente pulse en el enlace <gui>Sign in/Register</gui> para crear una."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
-"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
-"for the bug to see if it already exists."
+"Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
-"Una vez que tenga su cuenta, inicie sesión y pulse en <guiseq><gui>Informar "
-"de un error</gui><gui>Aplicaciones</gui><gui>gnome-mines</gui></guiseq>. "
-"Antes de informar de un error, lea las <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">guías para informar de un error</link> y "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+"Una vez que tenga su cuenta, inicie sesión y pulse en <guiseq><gui>New "
+"Issue</gui>. Antes de informar de un error, lea las <link href=\"https://"
+"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">guías para informar de un "
+"error</link> y <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
 "\">busque</link> el error para ver si ya existe."
 
 #. (itstool) path: section/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:39
+#| msgid ""
+#| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+#| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
+#| "and click <gui>Submit Bug</gui>."
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Submit Bug</gui>."
+"If you are requesting a new feature, choose <gui>Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit issue</gui>."
 msgstr ""
-"Si está solicitando una característica nueva, elija <gui>enhancement</gui> "
-"en el menú <gui>Severity</gui>. Rellene las secciones «Summary» y "
-"«Description» y pulse en <gui>Submit Bug</gui>."
+"Si está solicitando una característica nueva, elija <gui>Feature</gui> en el "
+"menú <gui>Labels</gui>. Rellene las secciones «Title» y «Description» y "
+"pulse en <gui>Submit issue</gui>."
 
 #. (itstool) path: section/p
-#: C/bug-filing.page:44
+#: C/bug-filing.page:43
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
@@ -364,9 +383,6 @@ msgstr "Advertencias"
 
 #. (itstool) path: page/p
 #: C/get-help.page:30
-#| msgid ""
-#| "You can use hints to reveal safe tiles, and flag warnings to help you "
-#| "keep track of flags."
 msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
 "Puede usar las banderas de advertencia para ayudarle a llevar un control de "
@@ -374,11 +390,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
-#| msgid ""
-#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-#| "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-#| "<gui>Warn if too many flags are placed next to a number</gui>. This will "
-#| "warn you when you try to place too many flags next to an open tile."
 msgid ""
 "To enable warnings, click <gui>Mines</gui> in the top bar and then select "
 "<gui>Show Warnings</gui>. This will warn you when you try to place too many "
