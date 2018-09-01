@@ -7,1097 +7,1625 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
-"POT-Creation-Date: 2012-02-28 05:46+0000\n"
-"PO-Revision-Date: 2012-02-28 14:36+0100\n"
-"Last-Translator: Fran Dieguez <frandieguez@gnome.org>\n"
+"POT-Creation-Date: 2018-03-26 22:45+0000\n"
+"PO-Revision-Date: 2018-06-02 02:46+0200\n"
+"Last-Translator: marcos <marcoslansgarza@gmail.com>\n"
 "Language-Team: Galician <gnome-l10n-gl@gnome.org>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Poedit 2.0.6\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Fran Dieguez <frandieguez@gnome.org>, 2012."
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4(media)
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:17(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+"Fran Dieguez <frandieguez@gnome.org>, 2012.\n"
+"Marcos Lans <marcoslansgarza@gmail.com>, 2018."
 
-#: C/index.page:6(info/title)
+#. (itstool) path: credit/name
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
+#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
+#: C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
+#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
+#: C/shortcuts.page:11
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:22
+msgid "How to change the game board size"
+msgstr "Como cambiar o tamaño do taboleiro"
+
+#. (itstool) path: page/p
+#: C/board-size.page:24
+msgid "You can select a field size at the start of a new game."
+msgstr "Pode selecciónar o tamaño do campo no inicio do xogo."
+
+#. (itstool) path: item/p
+#: C/board-size.page:28
+msgid ""
+"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
+"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+msgstr ""
+"Prema <gui style=\"button\">Novo</gui> or <guiseq><gui style=\"menu\">Minas</"
+"gui> <gui style=\"menuitem\">Xogo novo</gui></guiseq>."
+
+#. (itstool) path: item/p
+#: C/board-size.page:33
+msgid "Select one of the grid sizes:"
+msgstr "Seleccione un tamaño de grella:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:35
+msgid "a 8 × 8 board with 10 mines"
+msgstr "un taboleiro de 8 x 8 con 10 minas"
+
+#. (itstool) path: item/p
+#: C/board-size.page:36
+msgid "a 16 × 16 board with 40 mines"
+msgstr "un taboleiro de 16 x 16 con 40 minas"
+
+#. (itstool) path: item/p
+#: C/board-size.page:37
+msgid "a 30 × 16 board with 99 mines"
+msgstr "un taboleiro de 30 x 16 con 99 minas"
+
+#. (itstool) path: item/p
+#: C/board-size.page:38
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr ""
+"un taboleiro personalizdo onde pode seleccioar o tamaño e o número de minas"
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Compartir Igual 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "Axúdenos a facer <app>Minas</app> mellor"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Informe dun erro ou propoña unha mellora"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+msgstr ""
+"<app>Minas</app> é mantido por unha comunidade de voluntarios. Vostede é "
+"benvido a participar. Se se decata dun problmea pode encher un  <em>informe "
+"de fallo</em>. Para facelo, vaia a <link href=\"https://bugzilla.gnome.org/"
+"\"/>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"Este é un sistema de seguimento de fallos onde usuarios e desenvolvedores "
+"poden proporcionar información sobre fallos un solicitar melloras."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>New Account</gui> link to create one."
+msgstr ""
+"Para participar necesita unha conta para acceder, informar de fallos, facer "
+"comentarios e recibir actualizacións por correo electrónico sobre o estado "
+"do seu informe. Se non ten unha conta, prema na ligazón <gui>Nova conta</"
+"gui> para crear unha."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
+"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
+"for the bug to see if it already exists."
+msgstr ""
+"Unha vez que teña unha conta, inicie sesión e prema en <guiseq><gui>File a "
+"bug</gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Antes de "
+"informar dun fallo, lea a <link href=\"https://bugzilla.gnome.org/page.cgi?"
+"id=bug-writing.html\">guía para informar de fallos</link> e <link href="
+"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">explore</link> "
+"para ver se este fallo xa foi comunicado."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:40
+msgid ""
+"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
+"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
+"click <gui>Submit Bug</gui>."
+msgstr ""
+"Se vai solicitar unha nova característica, escolla <gui>enhancement</gui> no "
+"menú <gui>Severity</gui>. Encha as seccións Summary e Description e prema "
+"<gui>Submit Bug</gui>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:44
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"O informe obterá un número identificativo e o seu estado actualizarase a "
+"medida que se avance con el. Grazas por axudar a mellorar <app>Minas</app>!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Axuda para o desenvolvemento"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Os <app>Xogos de GNOME</app> son mantidos pola comunidade de maneira "
+"voluntaria. Se quere participar é benvido."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
+msgstr ""
+"Se lle gustaría <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"\">axudar no desenvolvemento dos <app>Xogos de GNOME</app></link>, pode "
+"contactar cos desenvolvedores usando o <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> ou por "
+"medio da <link href=\"http://mail.gnome.org/mailman/listinfo/games-list"
+"\">lista de correos</link>."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:22
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Axude a escribir a documentación"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"Os Xogos de GNOME son mantidos pola comunidade de maneira voluntaria. Se "
+"quere participar, é benvido."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+msgstr ""
+"Para contribuír ao proxecto de documentación, póñase en contacto connosco na "
+"canle <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
+"gnome.org%2Fdocs\">#docs</link> en <link href=\"http://live.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> ou mediante a nosa <link href="
+"\"http://mail.gnome.org/mailman/listinfo/gnome-doc-list\">lista de correos</"
+"link> ."
+
+#. (itstool) path: page/p
+#: C/documentation.page:40
+msgid ""
+"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
+msgstr ""
+"A nosa páxina da <link href=\"https://live.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> contén información útil."
+
+#. (itstool) path: page/title
+#: C/flags.page:31
+msgid "How to use flags"
+msgstr "Como usar bandeiras"
+
+#. (itstool) path: td/p
+#: C/flags.page:38
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"As bandeiras úsanse para marcar teselas das que sospeite que ocultan unha "
+"mina. Poñer unha bandeira nunha tesela evitará que prema nela e poida causar "
+"un estourido que remate coa partida."
+
+#. (itstool) path: section/title
+#: C/flags.page:46
+msgid "How to place a flag on a tile"
+msgstr "Como colocar unha bandeira nunha tesela"
+
+#. (itstool) path: td/p
+#: C/flags.page:50
+msgid ""
+"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+msgstr ""
+"As bandeiras vermellas son aquelas que non se poden premer. Para colocar "
+"unha bandeira nunha tesela:"
+
+#. (itstool) path: item/p
+#: C/flags.page:53
+msgid "right click on a blank tile."
+msgstr "clic dereito sobre un cadro baleiro."
+
+#. (itstool) path: note/p
+#: C/flags.page:63
+msgid ""
+"To make the number of available flags equal to the number of remaining "
+"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
+"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
+"options, then restart the application."
+msgstr ""
+"Para que estean dispoñíbeis igual número de bandeiras que de restantes "
+"minas, active nas preferencias as opcións <gui style=\"checkbox\">Avisar se "
+"hai colocadas bandeiras de máis</gui> e <gui style=\"checkbox\">Usar "
+"bandeiras de interrogación</gui> despois reinicie o aplicativo."
+
+#. (itstool) path: section/title
+#: C/flags.page:73
+msgid "Use of the <em>I'm not sure</em> flag"
+msgstr "Uso da bandeira de <em>Interrogación</em>"
+
+#. (itstool) path: section/p
+#: C/flags.page:74
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the blue "
+"<em>I'm not sure</em> flag."
+msgstr ""
+"Se non está seguro de que unha tesela estea agochando unha mina, pode usar a "
+"bandeira azul de <em>Interrogación</em>."
+
+#. (itstool) path: td/p
+#: C/flags.page:79
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Uso da bandeira de <em>Interrogación</em>:"
+
+#. (itstool) path: item/p
+#: C/flags.page:81
+msgid "Right-click twice on a blank tile or once on a red flag."
+msgstr ""
+"Clic dereito dúas veces nunha tesela baleira ou unha vez nunha bandeira "
+"vermella."
+
+#. (itstool) path: note/p
+#: C/flags.page:92
+msgid ""
+"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
+"sure\" flags</gui>."
+msgstr ""
+"Para activar estas bandeiras, prema <guiseq><gui style=\"manu\">Minas</"
+"gui><gui style=\"menuitem\">Preferencias</gui></guiseq> e seleccione "
+"<gui>Usar bandeiras de interrogación</gui>."
+
+#. (itstool) path: credit/name
+#: C/get-help.page:21 C/new-game.page:26
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: credit/years
+#: C/get-help.page:23
+msgid "2014"
+msgstr "2014"
+
+#. (itstool) path: page/title
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Advertencias"
+
+#. (itstool) path: page/p
+#: C/get-help.page:30
+msgid "You can flag warnings to help you keep track of flags."
+msgstr "Pode estabelecer advertencias para facer un control das bandeiras."
+
+#. (itstool) path: page/p
+#: C/get-help.page:32
+msgid ""
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
+msgstr ""
+"Para activar as advertencias, prema <gui>Minas</gui> na barra superior e "
+"seleccione <gui>Mostrar advertencias</gui>.  Desta forma será avisado cando "
+"tente colocar bandeiras de máis próximas a unha tesela aberta."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:22
+msgid "High scores"
+msgstr "Puntuacións altas"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:24
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"As puntuacións altas lista os dez tempos máis rápidos en que foron limpados "
+"os campos de minas."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:27
+msgid ""
+"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
+"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"<gui>Small</gui> field size by default; to view other sizes, select them in "
+"the drop down menu at the top of the dialog."
+msgstr ""
+"Para ver as mellores puntuacións, prema <guiseq><gui style=\"menu\">Minas</"
+"gui><gui style=\"menuitem\">Puntuacións</gui></guiseq>. O diálogo mostrará o "
+"tamaño de campo <gui>Pequeno</gui> de forma predeterminada. Para ver outros "
+"tamaños, seleccióneos no menú despregábel na parte superior do diálogo."
+
+#. (itstool) path: info/title
+#: C/index.page:9
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Minas"
 
-#: C/index.page:7(info/title)
+#. (itstool) path: info/title
+#: C/index.page:10
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Minas"
 
-#: C/index.page:13(license/p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Compartir Igual 3.0"
+#. (itstool) path: credit/name
+#: C/index.page:13 C/shortcuts.page:9
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
 
-#: C/index.page:17(page/title)
+#. (itstool) path: page/title
+#: C/index.page:25
+#| msgctxt "link"
+#| msgid "GNOME Mines"
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> GNOME Mines"
+
+#. (itstool) path: page/p
+#: C/index.page:27
 msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
-"media>GNOME Mines"
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
 msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</media>Minas"
+"<app>Minas</app> é un clon do Buscaminas. O obxectivo do xogo é atopar todas "
+"as minas ocultas no taboleiro. Precisará usar unha combinación de lóxica cun "
+"pouco de sorte para atopalas todas sen provocar unha explosión."
 
-#: C/index.page:18(page/p)
-msgid ""
-"<app>Gnomine</app> is a Mine Sweeper clone game. The aim of the game is to "
-"locate all the mines hidden under tiles on a square board. You'll need some "
-"reflection and some luck to find all of them without causing an explosion."
-msgstr ""
-"<app>Gnomine</app> é un clon do Buscaminas. O obxectivo do xogo é atopar "
-"toas as minas ocultas no taboleiro. Precisaba pensar e un pouco de sorte "
-"para atopalas todas sen provocar unha explosión."
-
-#: C/index.page:24(section/title)
+#. (itstool) path: section/title
+#: C/index.page:34
 msgid "Game Play"
 msgstr "Xogo"
 
-#: C/index.page:27(section/title)
+#. (itstool) path: section/title
+#: C/index.page:37
 msgid "Useful tips"
 msgstr "Consellos útiles"
 
-#: C/index.page:30(section/title)
+#. (itstool) path: section/title
+#: C/index.page:40
 msgid "Advanced"
 msgstr "Avanzado"
 
-#: C/index.page:33(section/title)
+#. (itstool) path: section/title
+#: C/index.page:43
 msgid "Get Involved"
-msgstr "Incolucrarse"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:148(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/main-window.png' md5='5dfbe2739a705720dfa65c57f8733c73'"
-msgstr ""
-"external ref='figures/main-window.png' md5='5dfbe2739a705720dfa65c57f8733c73'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:166(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
-msgstr ""
-"external ref='figures/statusbar.png' md5='56058dd84675ab2929aeaf7120c17769'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:187(imagedata)
-msgctxt "_"
-msgid "external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
-msgstr ""
-"external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:279(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/preferences.png' md5='5ade6be994bf6c770d1ccf8b7174fb12'"
-msgstr ""
-"external ref='figures/preferences.png' md5='5ade6be994bf6c770d1ccf8b7174fb12'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:301(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/imnotsureflagscheckbox.png' "
-"md5='db506a024f14ef930ca39e3396654ebb'"
-msgstr ""
-"external ref='figures/imnotsureflagscheckbox.png' "
-"md5='db506a024f14ef930ca39e3396654ebb'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:322(imagedata)
-msgctxt "_"
-msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-msgstr ""
-"external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:373(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
-msgstr ""
-"external ref='figures/highscores.png' md5='aebe3a869b53c4064d85028cf575196a'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:434(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/easy-hints-1.png' "
-"md5='7a143c1e5b747aa7f767bbca7d27641d'"
-msgstr ""
-"external ref='figures/easy-hints-1.png' "
-"md5='7a143c1e5b747aa7f767bbca7d27641d'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:448(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/easy-hints-2.png' "
-"md5='cb8a832723a98e136ec1a9d75279dec6'"
-msgstr ""
-"external ref='figures/easy-hints-2.png' "
-"md5='cb8a832723a98e136ec1a9d75279dec6'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:461(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/easy-hints-3.png' "
-"md5='7320c5e278121ccc3d0e3fb4cf612719'"
-msgstr ""
-"external ref='figures/easy-hints-3.png' "
-"md5='7320c5e278121ccc3d0e3fb4cf612719'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:500(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/hard-hints-1.png' "
-"md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
-msgstr ""
-"external ref='figures/hard-hints-1.png' "
-"md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:513(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/hard-hints-2.png' "
-"md5='30c8a1dc6c9b07de9e9b1309340f436f'"
-msgstr ""
-"external ref='figures/hard-hints-2.png' "
-"md5='30c8a1dc6c9b07de9e9b1309340f436f'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/gnomine.xml:544(imagedata)
-msgctxt "_"
-msgid ""
-"external ref='figures/hard-hints-3.png' "
-"md5='9565ae7c8e01868ecaddb1e75b223f2f'"
-msgstr ""
-"external ref='figures/hard-hints-3.png' "
-"md5='9565ae7c8e01868ecaddb1e75b223f2f'"
-
-#: C/gnomine.xml:27(articleinfo/title)
-msgid "<application>Mines</application> Manual"
-msgstr "Manual de <application>Minas</application>"
-
-#: C/gnomine.xml:29(abstract/para)
-msgid ""
-"Mines is GNOME's take on the popular logic puzzle minesweeper, which "
-"includes avoiding mines while receiving clues for the location of the mines."
-msgstr ""
-"Minas é a aposta d eGNOME para o popular xogo de lóxica Buscaminas, que "
-"implica evitar as minas mentres se reciben pistas sobre a localización das "
-"minas."
-
-#: C/gnomine.xml:35(articleinfo/copyright)
-msgid "<year>2006</year> <holder>Callum McKenzie</holder>"
-msgstr "<year>2006</year> <holder>Callum McKenzie</holder>"
-
-#: C/gnomine.xml:52(publisher/publishername)
-#: C/gnomine.xml:92(revdescription/para)
-msgid "GNOME Documentation Project"
-msgstr "Proxecto de Documentación de GNOME"
-
-#: C/gnomine.xml:2(legalnotice/para)
-msgid ""
-"This document is dual-licensed. You may either distribute and/or modify it "
-"under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU "
-"General Public License</ulink>, which the <link linkend=\"license\">program "
-"is licensed</link> under, or you can distribute it under the terms of the "
-"GNU Free Documentation License. A copy of this follows."
-msgstr ""
-"Este documento ten unha licenza dobre. Pode distribuilo e/ou modificalo "
-"baixo os termos da <ulink type=\"help\" url=\"help:gpl\">Licenza "
-"Pública Xeral de GNU</ulink>, coa que o <link linkend=\"license\">programa "
-"está licenciado</link>, ou pode distribuílo baixo os termos da Licenza de "
-"Documentación Libre de GNU. Sigue a copia da seguinte."
-
-#: C/gnomine.xml:11(legalnotice/para)
-msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <ulink type=\"help\" url=\"help:fdl\">link</ulink> or "
-"in the file COPYING-DOCS distributed with this manual."
-msgstr ""
-"Pode copiar, distribuír e modificar este documento baixo os termos da "
-"Licenza de Documentación Libre GNU (GFDL) na súa versión 1.1 ou posterior, "
-"publicada pola Free Software Foundation, sen seccións invariantes e sen "
-"textos de portada ou de contraportada. Pode atopar unha copia da GFDL en "
-"<ulink type=\"help\" url=\"help:fdl\">link</ulink> ou no ficheiro COPYING-"
-"DOCS distribuído xunto con este manual."
-
-#: C/gnomine.xml:21(legalnotice/para) C/legal.xml:21(legalnotice/para)
-msgid ""
-"This manual is part of a collection of GNOME manuals distributed under the "
-"GFDL. If you want to distribute this manual separately from the collection, "
-"you can do so by adding a copy of the license to the manual, as described in "
-"section 6 of the license."
-msgstr ""
-"Este manual é parte dunha colección de manuais de GNOME distribuido baixo a "
-"GFDL. Se quere distribuír este manual por separado da colección, pode facelo "
-"engadindo unha copia da licenza ao manual, tal como se describe na sección 6 "
-"da licenza."
-
-#: C/gnomine.xml:28(legalnotice/para) C/legal.xml:28(legalnotice/para)
-msgid ""
-"Many of the names used by companies to distinguish their products and "
-"services are claimed as trademarks. Where those names appear in any GNOME "
-"documentation, and the members of the GNOME Documentation Project are made "
-"aware of those trademarks, then the names are in capital letters or initial "
-"capital letters."
-msgstr ""
-
-#: C/gnomine.xml:44(listitem/para) C/legal.xml:44(listitem/para)
-msgid ""
-"DOCUMENT IS PROVIDED ON AN \"AS IS\" BASIS, WITHOUT WARRANTY OF ANY KIND, "
-"EITHER EXPRESSED OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES THAT "
-"THE DOCUMENT OR MODIFIED VERSION OF THE DOCUMENT IS FREE OF DEFECTS "
-"MERCHANTABLE, FIT FOR A PARTICULAR PURPOSE OR NON-INFRINGING. THE ENTIRE "
-"RISK AS TO THE QUALITY, ACCURACY, AND PERFORMANCE OF THE DOCUMENT OR "
-"MODIFIED VERSION OF THE DOCUMENT IS WITH YOU. SHOULD ANY DOCUMENT OR "
-"MODIFIED VERSION PROVE DEFECTIVE IN ANY RESPECT, YOU (NOT THE INITIAL "
-"WRITER, AUTHOR OR ANY CONTRIBUTOR) ASSUME THE COST OF ANY NECESSARY "
-"SERVICING, REPAIR OR CORRECTION. THIS DISCLAIMER OF WARRANTY CONSTITUTES AN "
-"ESSENTIAL PART OF THIS LICENSE. NO USE OF ANY DOCUMENT OR MODIFIED VERSION "
-"OF THE DOCUMENT IS AUTHORIZED HEREUNDER EXCEPT UNDER THIS DISCLAIMER; AND"
-msgstr ""
-
-#: C/gnomine.xml:64(listitem/para) C/legal.xml:64(listitem/para)
-msgid ""
-"UNDER NO CIRCUMSTANCES AND UNDER NO LEGAL THEORY, WHETHER IN TORT (INCLUDING "
-"NEGLIGENCE), CONTRACT, OR OTHERWISE, SHALL THE AUTHOR, INITIAL WRITER, ANY "
-"CONTRIBUTOR, OR ANY DISTRIBUTOR OF THE DOCUMENT OR MODIFIED VERSION OF THE "
-"DOCUMENT, OR ANY SUPPLIER OF ANY OF SUCH PARTIES, BE LIABLE TO ANY PERSON "
-"FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF "
-"ANY CHARACTER INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF GOODWILL, "
-"WORK STOPPAGE, COMPUTER FAILURE OR MALFUNCTION, OR ANY AND ALL OTHER DAMAGES "
-"OR LOSSES ARISING OUT OF OR RELATING TO USE OF THE DOCUMENT AND MODIFIED "
-"VERSIONS OF THE DOCUMENT, EVEN IF SUCH PARTY SHALL HAVE BEEN INFORMED OF THE "
-"POSSIBILITY OF SUCH DAMAGES."
-msgstr ""
-
-#: C/gnomine.xml:37(legalnotice/para) C/legal.xml:37(legalnotice/para)
-msgid ""
-"DOCUMENT AND MODIFIED VERSIONS OF THE DOCUMENT ARE PROVIDED UNDER THE TERMS "
-"OF THE GNU FREE DOCUMENTATION LICENSE WITH THE FURTHER UNDERSTANDING THAT: "
-"<_:orderedlist-1/>"
-msgstr ""
-
-#: C/gnomine.xml:61(authorgroup/author)
-msgid ""
-"<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
-"<address> <email>callum@spooky-possum.org</email> </address> </affiliation>"
-msgstr ""
-"<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
-"<address> <email>callum@spooky-possum.org</email> </address> </affiliation>"
-
-#: C/gnomine.xml:89(revdescription/para)
-msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
-msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
-
-#: C/gnomine.xml:85(revhistory/revision)
-msgid ""
-"<revnumber>Mines Manual V2.9</revnumber> <date>January 2006</date> <_:"
-"revdescription-1/>"
-msgstr ""
-"<revnumber>Manual de Minas V2.9</revnumber> <date>Xaneiro 2006</date> <_:"
-"revdescription-1/>"
-
-#: C/gnomine.xml:97(articleinfo/releaseinfo)
-msgid "This manual describes version 2.14 of Mines."
-msgstr "Este manual describe a versión 2.14 de Minas."
-
-#: C/gnomine.xml:104(legalnotice/title)
-msgid "Feedback"
-msgstr "Comentarios"
-
-#: C/gnomine.xml:105(legalnotice/para)
-msgid ""
-"To report a bug or make a suggestion regarding the <application>Mines</"
-"application> application or this manual, follow the directions in the <ulink "
-"url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</ulink>."
-msgstr ""
-"Para informar dun fallo, ou facer algunha suxestión sobre o aplicativo "
-"<application>Minas</application> ou este manual, siga as indicacións na "
-"<ulink url=\"http://bugzilla.gnome.org\">base de datos de erros de GNOME</"
-"ulink>."
-
-#: C/gnomine.xml:113(article/indexterm)
-msgid "<primary>GNOME Mines</primary>"
-msgstr "<primary>Minas</primary>"
-
-#: C/gnomine.xml:121(sect1/title)
-msgid "Introduction"
-msgstr "Introdución"
-
-#: C/gnomine.xml:123(sect1/para)
-msgid ""
-"<application><application>Mines</application></application> is a puzzle game "
-"where you locate mines floating in an ocean using only your brain and a "
-"little bit of luck."
-msgstr ""
-"<application><application>Minas</application></application> é un xogo tipo "
-"puzle onde localiza minas flotando nun océano usando só o seu cerebro e un "
-"pouquiño de sorte."
-
-#: C/gnomine.xml:129(sect1/para)
-msgid ""
-"You start the game with a grid of covered squares and no idea what is in "
-"them. Clicking on a square reveals what is in it: either empty ocean or a "
-"mine. If you find a mine bad things happen and the game is over. If you "
-"uncover an empty square, you survive and get to try again. We do give you a "
-"bit of help; if you find an empty piece of ocean a number is printed there "
-"telling you how many mines are in the adjacent squares (or no number if "
-"there are no nearby mines). Once you find a few clear squares you can start "
-"to deduce which squares have mines in them and which don't. You win the game "
-"once you have revealed all the un-mined squares and marked all the mined "
-"squares."
-msgstr ""
-"O xogo comeza cunha reixa de celas cubertas sen idea do que hai nelas. Ao "
-"premer sobre unha cela descóbrese o qeu hai: océano baleiro ou unha mina. Se "
-"atopa unha mina «cousa mala» e acábase a partida. Se descobre unha cela "
-"baleira, sobrevive e pode probar de novo. Se quere axuda; se atopa unha "
-"porción de océano fará un número que lle indica cantas minas hai nas celas "
-"adxacentes (ou non fará número se non hai minas ao redor). Unha vez que "
-"atope unhas poucas celas baleiras poderá comezar a deducir que celas teñen "
-"minas e cales non. Ganará a partida cando descubra toda as casillas e "
-"marcado todas as celas con minas."
-
-#: C/gnomine.xml:144(figure/title)
-msgid "The stages of the game: the start, playing, losing, and winning."
-msgstr "As fases da partida: o comezo, o xogo, perder e gañar."
-
-#: C/gnomine.xml:152(sect1/para)
-msgid ""
-"To mark a square as having a mine you right-click on it and a flag is placed "
-"there. If you click on a square with a number and you have placed precisely "
-"that number of flags on adjacent squares then the remaining squares are "
-"revealed. If you didn't mark the mines correctly then an explosion will "
-"occur and the game is over. Squares with no adjacent mines (i.e. blank "
-"squares) have their adjacent squares automatically cleared."
-msgstr ""
-"Para marcar unha cela como que ten unha mina prema co botón dereito do rato "
-"e engadiráse unha bandeira na cela. Se preme nunha cela cun número e xa puxo "
-"ese mesmo número de bandeiras nas celas adxacentes, entón escubriranse as "
-"celas restantes. Se non marcou correctamente as minas entón fará unha "
-"explosión e acabarase a partida. As celas xunto a celas sen minas adxacentes "
-"(ex. celas baleiras) descubriranse automaticamente."
-
-#: C/gnomine.xml:163(figure/title)
-msgid "Important information."
-msgstr "Información importante."
-
-#: C/gnomine.xml:170(sect1/para)
-msgid ""
-"You are being timed. To be good at this game you have to work both quickly "
-"and correctly. Once you have found all the mines and revealed all the un-"
-"mined squares the clock is stopped. Your score is the time you took; the "
-"shorter the better."
-msgstr ""
-"A partida está sendo controlada por reloxo. Para ser bo neste xogo ten que "
-"ser rápido e correcto á vez. O reloxo párase en canto atope todas as minas e "
-"descubra todas as celas non minadas. A súa puntuación é o tempo que lle "
-"levou, canto antes mellor."
-
-#: C/gnomine.xml:177(sect1/para)
-msgid ""
-"The time you have taken is displayed on the bottom right of the window. "
-"Beside it, on the left, is a count of the number of mines you have cleared "
-"and the total number hidden on the board."
-msgstr ""
-"O tempo que lle levou móstrase na parte inferior dereita da xanela. Xunto a "
-"ilo, á esquerda, está a contía do minas que limpou e o número total de minas "
-"ocultas no taboleiro."
-
-#: C/gnomine.xml:184(figure/title)
-msgid "The yellow face shows you how well you are going."
-msgstr "A cara amarela móstralle como de ben está facéndoo."
-
-#: C/gnomine.xml:197(sect1/title)
-msgid "The Details"
-msgstr "Os detalles"
-
-#: C/gnomine.xml:199(sect1/para)
-msgid ""
-"This section provides information on the controls and the important menu "
-"items. If you need help figuring where the mines are, see the <link linkend="
-"\"strategy\">strategy section</link>."
-msgstr ""
-"Esta sección fornece información sobre os controis e os elementos "
-"importantes do menú. Se precisa axuda para saber onde están as minas, vexa a "
-"<link linkend=\"strategy\">sección de estratexia</link>."
-
-#: C/gnomine.xml:206(sect2/title)
-msgid "The Goal"
-msgstr "O obxectivo"
-
-#: C/gnomine.xml:208(sect2/para)
-msgid ""
-"Starting from an ocean of squares with unknown contents you must mark all "
-"the squares with mines and reveal all the clear squares. You don't actually "
-"have to mark the squares with mines, but it is a lot easier if you do. Once "
-"you have cleared all the un-mined squares, any remaining mined squares will "
-"be marked for you."
-msgstr ""
-"Comeza cun océano de celas cuxo contido é descoñecido, debe marcar todas as "
-"celas con minas e describir as celas baleiras. Realmente non ten que marcar "
-"as celas con minas, pero é moitisimo máis doado se o fai. En canto limpe "
-"todas as celas sen minas, calquera cela cunha mina marcarase automaticamente."
-
-#: C/gnomine.xml:217(sect2/para)
-msgid ""
-"If you left click on a mine, or auto-clear a square with a mine in it you "
-"lose. To help prevent accidents, you aren't allowed to auto-clear around a "
-"square unless the number of marked mines equals the number given in the "
-"square."
-msgstr ""
-"Se preme o botón esquerdo sobre unha mina, ou autodescubre unha cela cunha "
-"mina perde a partida. Para axudar a previr accidentes, non se lle permite "
-"autodescubrir ao redor dunha cela a menos que o número de minas marcadas "
-"sexa igual ao número fornecido pola cela."
-
-#: C/gnomine.xml:227(sect2/title)
-msgid "Using the Mouse"
-msgstr "Uso do rato"
-
-#: C/gnomine.xml:234(row/entry)
-msgid "Action"
-msgstr "Acción"
-
-#: C/gnomine.xml:234(row/entry)
-msgid "Result"
-msgstr "Resultado"
-
-#: C/gnomine.xml:239(row/entry)
-msgid "Left click on an un-revealed square."
-msgstr "Premer co botón esquerdo sobre unha cela non descuberta."
-
-#: C/gnomine.xml:240(row/entry)
-msgid "Reveals the contents of that square. For better or for worse."
-msgstr "Descubre o contido desa cela. Para ben ou para mal."
-
-#: C/gnomine.xml:244(row/entry)
-msgid "Left click in a revealed square."
-msgstr "Premer co botón esquerdo sobre unha cela descuberta."
-
-#: C/gnomine.xml:245(row/entry)
-msgid ""
-"Auto-clear. Reveals the unmarked squares around the clicked square, but only "
-"if enough squares have been marked to match the number in the square."
-msgstr ""
-"Autolimpar. Descubre as celas sen marcar ao redor da cela premida, pero só "
-"se han marcado suficientes celas para coincidir co número desa cela."
-
-#: C/gnomine.xml:251(row/entry)
-msgid "Right click on an un-revealed square."
-msgstr "Prema co botón dereito sobre unha casilla non descuberta."
-
-#: C/gnomine.xml:252(row/entry)
-msgid ""
-"Marks the square as a mine. If it is already marked, the mark will be "
-"removed."
-msgstr "Marca a casilla cunha mina. Se xa está marcada quitarase o marcador."
-
-#: C/gnomine.xml:259(tip/para)
-msgid ""
-"If you are used to the more traditional mouse controls, don't worry, they "
-"still work."
-msgstr ""
-"Se está acostumado aos controis máis tradicionais do rato, non se precoupe, "
-"aínda funcionan."
-
-#: C/gnomine.xml:264(sect2/title)
-msgid "Game Size and Difficulty"
-msgstr "Tamaño do xogo e dificultade"
-
-#: C/gnomine.xml:266(sect2/para)
-msgid ""
-"By choosing <menuchoice><guimenu>Settings</guimenu><guimenuitem>Preferences</"
-"guimenuitem></menuchoice> from the menu you can change the size of the "
-"games. Larger sizes obviously take longer and require more concentration. "
-"Smaller games are more frantic. We provide Small, Medium, Large and Custom "
-"sizes."
-msgstr ""
-"Ao seleccionar <menuchoice><guimenu>Preferencias</guimenu><"
-"guimenuitem>Preferencias</guimenuitem></menuchoice> do menú, pode cambiar o "
-"tamaño das partidas. Tamaños grandes levan máis tempo e concentración "
-"obviamente. Os xogos pequenos son máis frenéticos. Fornécense tamaños "
-"pequenos, medio, grande e personalizado."
-
-#: C/gnomine.xml:276(figure/title)
-msgid "The preferences dialog."
-msgstr "O diálogo de preferencias."
-
-#: C/gnomine.xml:283(sect2/para)
-msgid ""
-"On the right hand side of the dialog there are three parameters for "
-"controlling the custom size. Horizontal and Vertical are the width and "
-"height of the desired grid in squares. The number of mines is - obviously - "
-"the number of mines you need to find. If this number is set too high or too "
-"low then the game becomes very easy. The number of mines is limited to "
-"slightly less than the total number of squares."
-msgstr ""
-"Na parte dereita do diálogo hai tres parámetros para controlar o tamaño "
-"personalizado. Horizontal e Vertical son a altura e anchura da grella de "
-"celas desexada. O número de minas é -obviamente- o número de minas que debe "
-"atopar. Se o número estabelecido é moi alto ou moi pequeno entón a partida "
-"resulta ser moi difícil ou moi doado. O número de minas está limitado a un "
-"pouco menos que o número total de celas."
-
-#: C/gnomine.xml:296(sect2/title)
-msgid "\"I'm not sure\" Flags"
-msgstr "Bandeiras «Non estou seguro»"
-
-#: C/gnomine.xml:305(sect2/para)
-msgid ""
-"There is a check-box in the properties dialog entitled Use \"I'm not sure\" "
-"flags. If you enable this then, when right-clicking on a square, it cycles "
-"between the normal flags used to mark the square as mined, a flag with a "
-"question mark on it and no flag. This new flag is to help you with your "
-"reasoning, to mark mines you think might be a mine but aren't sure about. "
-"These flags have no effect on the game; you still have to use the "
-"appropriate number of red marker flags to be able to clear around a numbered "
-"square."
-msgstr ""
-"Hai unha caixa de verificación no diálogo de preferencias chamada Usar "
-"bandeiras «Non estou seguro». Se activa isto, entón cando prema co botón "
-"dereito sobre unha cela, rotará entre as bandeiras usadas para marcar unha "
-"cela como con mina, unha bandeira con un signo de interrogación en ela e "
-"unha ausencia de bandeira. Esta nova bandeira é para axudarlle cos seus "
-"razonamentos, para marcar casillas que cree que poden ser minas que non "
-"estea seguro. Estas bandeiras non teñen efecto no xogo; aínda que debe usar "
-"o número axeitado de marcadores vermellos de bandeira para poder limpar ao "
-"redor da cela numerada."
-
-#: C/gnomine.xml:319(figure/title)
-msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
-msgstr ""
-"A secuencia das bandeiras cando as bandeiras «Non estou seguro» están "
-"activadas."
-
-#: C/gnomine.xml:329(sect2/title)
-msgid "Use \"Too many flags\" warning"
-msgstr "Usar a advertencia «Demasiadas bandeiras»"
-
-#: C/gnomine.xml:331(sect2/para)
-msgid ""
-"The other check-box in the properties dialog is entitled Use \"Too many flags"
-"\" warning. This feature will show you a warning when you have placed too "
-"many flags. This is disabled by default, as it provides so much hint that it "
-"could be considered \"cheating\"."
-msgstr ""
-"A outra caixa de verificación no diálogo de propiedades é cahmada Usar a "
-"advertencia «demasiadas bandeiras». Esta característica mostraralle unha "
-"advertencia cando teña estabelecido demasiadas bandeiras. Isto está "
-"desactivado de forma predeterminada, xa que fornece unha suxestión que "
-"podería ser considerada como «facer trampas»."
-
-#: C/gnomine.xml:342(sect2/title)
-msgid "Hints"
-msgstr "Pistas"
-
-#: C/gnomine.xml:344(sect2/para)
-msgid ""
-"If you get stuck - it is reasonably common to end up with two options that "
-"you can't logically resolve - then you can either guess, or ask for a hint. "
-"When you choose <guimenuitem>Hint</guimenuitem> from the <guimenu>Game</"
-"guimenu> menu a single square is revealed (plus surrounding squares if it is "
-"blank). The choice of square is random, but should be helpful. There is 10 "
-"second penalty added to your time whenever you use a hint."
-msgstr ""
-"Se se queda atascado, é razoabelmente común acabar con duas opcións que non "
-"pode resolver loxicamente; entón pode ou adiviñar ou pedir unha suxestión. "
-"Cando seleccione <guimenuitem>Suxestión</guimenuitem> do menú <guimenu>Xogo</"
-"guimenu> só se revelará unha cela (máis as do redor se está baleira). A "
-"elección da cela é aleatoria pero pode ser de axuda. Hai unha penalización "
-"de 10 segundos que se engaden a seu tempo sempre que pida unha suxestión."
-
-#: C/gnomine.xml:358(sect2/title)
-msgid "High Scores"
-msgstr "Puntuacións máis altas"
-
-#: C/gnomine.xml:360(sect2/para)
-msgid ""
-"If your score is in the top ten you will be shown the list of top scores and "
-"have an opportunity to change the name recorded in the high score table. You "
-"can also review the scores later by choosing <guimenuitem>Scores</"
-"guimenuitem> from the <guimenu>Game</guimenu> menu. The drop-down menu at "
-"the top of the dialog lets you look at the scores for other board sizes."
-msgstr ""
-"Se a súa puntuación está entre as dez mellores, mostrarase na lista de "
-"mellores puntuacións e terá unha oportunidade de cambiar o nome gravado na "
-"táboa de mellores puntuacións. Tamén pode revisar as puntuacións máis tarde "
-"elixindo <guimenuitem>Puntuación</guimenuitem> do menú <guimenu>Xogo</"
-"guimenu>. O menú despregábel na parte superior do diálogo permítelle ver as "
-"puntuacións de outros tamaños de taboleiro."
-
-#: C/gnomine.xml:370(figure/title)
-msgid "The high scores dialog."
-msgstr "O diálogo de puntuacións."
-
-#: C/gnomine.xml:378(tip/para)
-msgid ""
-"The high score for the custom size is usually meaningless. Any other player "
-"can make the game size smaller and get a better time. If you only ever play "
-"one custom size then it will tell you how well you are doing. This is the "
-"only reason it is still recorded."
-msgstr ""
-"As máximas puntuacións para o taboleiro personalizado non ten interese. "
-"Calquera outro xogador pode facer o taboleiro de xogo máis pequeno e obter "
-"un mellor tempo. Se sempre xoga ao mesmo taboleiro personalizado entón "
-"diralle como de ben o está facendo. É a única razón pola que se graban estes "
-"resultados."
-
-#: C/gnomine.xml:386(sect2/title)
-msgid "Window Size"
-msgstr "Tamaño da xanela"
-
-#: C/gnomine.xml:388(sect2/para)
-msgid ""
-"Resizing the window makes the squares bigger or smaller to suit. If you want "
-"to make maximum use of the screen then there is a <guimenuitem>Fullscreen</"
-"guimenuitem> option under the <guimenu>Settings</guimenu> menu. You can also "
-"use the <keycap>F11</keycap> key to toggle full-screen mode."
-msgstr ""
-"Redimensionar o tamaño da xanela aumenta ou disminúe as celas para "
-"axustalas. Se quere facer o maior uso posíbel da pantalla entón existe a "
-"opción <guimenuitem>Pantalla completa</guimenuitem> baixo o menú "
-"<guimenu>Configuración</guimenu>. Tamén pode usar a tecla <keycap>F11</"
-"keycap> para torcar o modo a pantalla completa."
-
-#: C/gnomine.xml:397(sect2/title)
-msgid "Pausing the Game"
-msgstr "Pausar o xogo"
-
-#: C/gnomine.xml:399(sect2/para)
-msgid ""
-"The game can be paused automatically when you start using another window, or "
-"paused by choosing <guimenuitem>Pause</guimenuitem> from the <guimenu>Game</"
-"guimenu> menu. The playing area is blanked so you can't think ahead while "
-"the clock is stopped. To start playing again press the button labelled "
-"\"Press to Resume\"."
-msgstr ""
-"Pódese pausar automaticamente cando comeza a usar calquera outra xanela, ou "
-"ben elixinado <guimenuitem>Pausa</guimenuitem> do menú <guimenu>Xogo</"
-"guimenu>. O área de xogo desaparece para que non poida pensar movemento "
-"mentres o reloxo está pausado. Para comezar a xogar de novo prema o botón "
-"etiquetado «Prema para continuar»."
-
-#: C/gnomine.xml:413(sect1/title)
-msgid "Strategy"
-msgstr "Estratexia"
-
-#: C/gnomine.xml:415(sect1/para)
-msgid ""
-"The first half of this section explains the very basics of deducing where "
-"mines are. If you are familiar with how to play the game skip down to the "
-"<link linkend=\"advanced\">Advanced Situations</link> subsection."
-msgstr ""
-"A primeira metade desta sección explica as bases para dedudir onde están as "
-"minas. Se xa está familiarizado con como se xoga, salte á subsección <link "
-"linkend=\"advanced\">Situacións avanzadas</link>."
-
-#: C/gnomine.xml:422(sect2/title)
-msgid "The Basics"
-msgstr "As bases"
-
-#: C/gnomine.xml:423(sect2/para)
-msgid ""
-"These are a few basic situations which should be incredibly obvious, but if "
-"you're struggling with how to play the game, they should be useful. The "
-"first case is where you have an isolated covered square and most of the "
-"squares around it read 1. That covered square is a mine."
-msgstr ""
-"Estas son unhas poucas situacións básicas que poden parecer incribelmente "
-"obvias, pero se está descubrindo como xogar ao xogo deberían ser útiles. O "
-"primeiro caso é cando ten unha caixa cuberta illada e pode ler un 1 nas "
-"celas do redor. Esa cela cuberta é unha mina."
-
-#: C/gnomine.xml:432(figure/title)
-msgid "The simplest case."
-msgstr "O caso máis simple."
-
-#: C/gnomine.xml:438(sect2/para)
-msgid ""
-"The next simplest case is where you have two covered squares adjacent to "
-"each other and both squares on one side are marked with a 2. If they have no "
-"other uncleared neighbors, then both squares are mines."
-msgstr ""
-"O seguinte caso máis doado é cando ten dúas celas cubertas adxacentes entre "
-"elas e ambas celas ao carón están marcadas con un 2. Se non ten outras celas "
-"viciñsa cubertas, entón ambas celas son minas."
-
-#: C/gnomine.xml:446(figure/title)
-msgid "The two mine case."
-msgstr "O caso das dúas minas."
-
-#: C/gnomine.xml:452(sect2/para)
-msgid ""
-"Finally, when there are three uncovered squares in a row and the clear "
-"square beside the middle one is a 3 (once again this square should have no "
-"other neighbors) then all three are mines."
-msgstr ""
-"Finalmente, cando hai tres celas cubertas nunha fila e a cela descuberta "
-"xunto á cela do medio é un 3 (unha vez máis esta cela non debería ter outras "
-"celas viciñs) entón as tres son minas."
-
-#: C/gnomine.xml:459(figure/title)
-msgid "The three mine case."
-msgstr "O caso das tres minas."
-
-#: C/gnomine.xml:465(sect2/para)
-msgid ""
-"These are the simplest cases. Other permutations on these simple situations "
-"are possible, for example the three squares in the previous example could be "
-"in an L shape."
-msgstr ""
-"Estes son os casos máis simples. Poden darse outras permutacións destas "
-"situracións doadas, por exemplo as tres celas do exemplo anterior poden "
-"aparecer na forma dunha L."
-
-#: C/gnomine.xml:470(sect2/para)
-msgid ""
-"Simple analysis will solve most of the puzzle, but not all. Before going on "
-"to the next sections, where we give you more advanced hints, you should play "
-"for a bit and see what you can work out for yourself."
-msgstr ""
-"Un análise simple resolverá a maior parte do quebracabezas, pero non todo. "
-"Antes de seguir adiante coas seguintes seccións, onde lle damos consellos "
-"máis avanzados, debería xogar durante un rato e ver qeu pode facer por si "
-"mesmo."
-
-#: C/gnomine.xml:479(sect2/title)
-msgid "Advanced Situations"
-msgstr "Situacións avanzadas"
-
-#: C/gnomine.xml:481(sect2/para)
-msgid ""
-"These are some more complicated situations. They are a bit of a step up from "
-"the last section, so we hope you took our advice and played for a bit first."
-msgstr ""
-"Esas son unhas situacións algo máis complicadas. Son algo máis que un paso "
-"adiante da situación anterior, así que agardamos que siguera o consello e "
-"xogará un anaco antes."
-
-#: C/gnomine.xml:487(sect2/para)
-msgid ""
-"In the example below the mines are to the left of the ones. We figure this "
-"out by a process of elimination. If the square to the left of the 2 was a "
-"mine then the 1s would both have their maximum number of mines leaving no "
-"free square for the second mine adjacent to the 2 (since they would also be "
-"adjacent to the 1s). Having eliminated the middle square we are left with "
-"two squares we require for the 2 so they are both mined."
-msgstr ""
-"No seguinte exemplo, as minas están á esquerda dos uns. Deducimos isto por "
-"un proceso de eliminación. Se a cela á esquerda do 2 foi unha mina entón os "
-"uns terían o seu máximo número de minas, sen deixar celas libres para a "
-"seguinda mina adxacente ao 2 (xa que tamén estarían adxacentes aos uns). "
-"Tendo eliminado a cela do medio, isto deixa dúas celas que requiren o 2 así "
-"que ambas teñen minas."
-
-#: C/gnomine.xml:498(figure/title)
-msgid "A not-so-obvious pattern."
-msgstr "Un patrón non moi obvio."
-
-#: C/gnomine.xml:504(sect2/para)
-msgid ""
-"This situation can be disguised, for example consider the figure below. It "
-"is the same situation, but the extra mined square on the right has increased "
-"all the numbers by 1."
-msgstr ""
-"Esta situación pódese difrazar, considere, por exemplo, a seguinte figura. É "
-"a mesma situación pero a cela minada adicional á dereita incrementou todos "
-"os números en 1."
-
-#: C/gnomine.xml:511(figure/title)
-msgid "The extra mine disguises a copy of the previous example."
-msgstr "A mina adicional disfraza unha copia do exemplo anterior."
-
-#: C/gnomine.xml:517(sect2/para)
-msgid ""
-"Now we're going to try a complicated example. It illustrates two points. The "
-"first is that even if you aren't sure which squares are mined, restricting "
-"the possibilities is helpful. The second is that knowing which squares "
-"aren't mined is nearly as good as knowing which are mined."
-msgstr ""
-"Agora vamos a probar un exemplo complicado. Mostra dous puntos. No primeiro, "
-"aínda que non estea seguro de que celas están minadas, restrinxir as "
-"posibilidades resulta útil. No segundo, sabendo que celas non están minadas "
-"é incluso igual de bo que saber cales si o están."
-
-#: C/gnomine.xml:525(sect2/para)
-msgid ""
-"Assume that, in the figure below, we start off knowing that the top left "
-"square is mined and so the two squares marked 2 on the left only require one "
-"more mine. Next observe that the left-most 2 implies that one of the covered "
-"squares beneath it is mined, but we don't yet know which one. Since at least "
-"one of these squares is mined and they are both neighbors of the second 2 "
-"then we know that that 2 is also satisfied by one of these two squares (we "
-"still don't know which one). This means that the square beneath the 4 is "
-"clear because it is also a neighbor of the second 2 and not one of the two "
-"squares we identified previously. This one blank square now leaves the 4 "
-"with only four neighbors - all of which must be mines. Not only does it tell "
-"us which mines surround the 4, it now tells us which of the squares beside "
-"the 2 is mined!"
-msgstr ""
-"Asuma que, na figura de embaixo, comezamos sabendo que a cela superior "
-"esquerda ten unha mina e que as dúas celas marcadas cun 2 na parte superior "
-"esquerda só requiren unha mina máis. A continuación observe que o 2 que está "
-"á esquerda do todo implica que unha das celas cubertas ten unha mina, pero "
-"aínda non sabemos cal. Xa que cando menos, unha das celas ten unha mina e "
-"ambas son veciñas do segundo 2, entón sabemos que o 2 tamén se satisfai "
-"cunha destas dúas celas (aínda non sabemos cal). Isto significa que cela "
-"embaixo do 4 está limpa porque tamén é veciña do segundo 2 e non é unha das "
-"celas que identificamos previamente. Esta cela limpa aogra deixa o 4 con só "
-"catro veciñas; todas elas deben ser minas. Non só di que minas rodean ao 4, "
-"agora fornece que casilla xunto ao 2 ten unha mina."
-
-#: C/gnomine.xml:542(figure/title)
-msgid "As tricky as it gets."
-msgstr "Tan difícil como parece."
-
-#: C/gnomine.xml:549(sect2/para)
-msgid ""
-"This sort of situation is tricky. In all the other examples you can learn to "
-"look for patterns and avoid thinking hard. Situations like the one in the "
-"figure don't crop up easily or in easily recognisable places. Often it is "
-"easier to just ignore them and keep playing elsewhere in the hope that you "
-"can start clearing the squares from the other side."
-msgstr ""
-"Este tipo de situación é difícil, No resto de exemplos podía aprender a "
-"mirar os patróns e evitar pensar moito. Situacións como a da figura non "
-"acaban facilmente nun patrón recoñecíbel. A miúdo é máis doado ignoralas e "
-"seguir xogando en calquera outra parte coa esperanza de que poderá comezar a "
-"limpar as celas desde o outro sitio."
-
-#: C/gnomine.xml:561(sect2/title)
-msgid "Tips"
-msgstr "Consellos"
-
-#: C/gnomine.xml:563(sect2/para)
-msgid ""
-"Remember, the edge of the board is just the same as a large cleared area "
-"(but without the numbers). Often working at the edge of the board is the "
-"easiest way forward."
-msgstr ""
-"Lembre, o borde do taboleiro é igual que unha área limpa (pero sen os "
-"números). Xeralmente traballar no borde da pantalla é a forma máis fácil de "
-"avanzar."
-
-#: C/gnomine.xml:569(sect2/para)
-msgid ""
-"Sometimes you end up in a situation where there is no way to deduce what the "
-"configuration is. In these cases you either have to guess or use the hint "
-"function (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</"
-"guimenuitem></menuchoice>). Sometimes it isn't a 50/50 situation and instead "
-"of taking a hint you might like to gamble on the most likely outcome."
-msgstr ""
-"A veces acaba nunha situación onde hai forma de deducir cal é a "
-"configuración. Nestes casos ten que adiviñar ou pedir unha suxestión "
-"(<menuchoice><guimenu>Xogo</guimenu><guimenuitem>Suxestión</guimenuitem></"
-"menuchoice>). A veces non é situación ao 50% e no lugar de pedir unha "
-"suxestión pode correr o risco sobre o resultado máis probábel."
-
-#: C/gnomine.xml:578(sect2/para)
-msgid ""
-"One final hint: remember the counter on the bottom left of the window that "
-"tells you how many mines you have left? Often, near the end of the game, "
-"this number can help you figure out what possible places mines can be. How "
-"to do this is up to you to figure out."
-msgstr ""
-"Un último consello: ¿recorda que o contador na parte inferior esquerda da "
-"xanela dílle cantas minas lle faltan? A miúdo, ao final da partida, este "
-"número pode axudarlle a adiviñar cales son os posíbeis lugares onde poden "
-"estar as minas. Como facelo é cosa súa."
-
-#: C/gnomine.xml:590(sect1/title)
-msgid "Authors"
-msgstr "Autores"
-
-#: C/gnomine.xml:591(sect1/para)
-msgid ""
-"<application>GNOME Mines</application> was written by Pista "
-"(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written by "
-"Callum McKenzie (<email>callum@spooky-possum.org</email>) with help from "
-"Vincent Povirk and based on an earlier manual by Tim Riehle "
-"(<email>tkriehle@citilink.com</email>). To report a bug or make a suggestion "
-"regarding this application or this manual, follow the directions in this "
-"<ulink url=\"ghelp:user-guide?feedback-bugs\" type=\"help\">document</ulink>."
-msgstr ""
-"Pista (<email>szekeres@cyberspace.mht.bme.hu</email>) escribiu "
-"<application>Minas</application>. Callum McKenzie (<email>callum@spooky-"
-"possum.org</email>) coa axuda de Vincent Povirk escribiu este manual "
-"baseándose nun anterior de Tim Riehle (<email>tkriehle@citilink.com</"
-"email>). Para informar dun fallo, ou facer algunha suxestión sobre este "
-"aplicativo ou este manual, siga as indicacións neste <ulink url=\"http://"
-"bugzilla.gnome.org\">documento</ulink>."
-
-#: C/gnomine.xml:607(sect1/title)
+msgstr "Involucrarse"
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Información legal."
+
+#. (itstool) path: page/title
+#: C/license.page:11
 msgid "License"
 msgstr "Licenza"
 
-#: C/gnomine.xml:608(sect1/para)
+#. (itstool) path: page/p
+#: C/license.page:12
 msgid ""
-"This program is free software; you can redistribute it and/or modify it "
-"under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl"
-"\">GNU General Public License</ulink></citetitle> as published by the <ulink "
-"type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; "
-"either version 2 of the License, or (at your option) any later version."
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
 msgstr ""
-"Este programa é software libre; pode redistribuílo e/ou modificalo baixo os "
-"termos da <citetitle>Lincenza Pública Xeral GNU<ulink type=\"help\" url="
-"\"help:gpl\"></ulink></citetitle> tal como se publica pola <ulink type="
-"\"http\" url=\"http://www.fsf.org\">Free Software Foundation</ulink>; xa "
-"sexa a versión 2 da Licenza, ou (á súa elección) calquera versión posterior."
+"Este traballo distribúese baixo a licenza Creative Commons Atribución-"
+"Compartir Igual 3.0 non portada."
 
-#: C/gnomine.xml:616(sect1/para)
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "É libre de:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Compartir</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Copiar, distribuír e transmitir a obra."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr ""
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Adaptar o seu traballo."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Baixo as seguintes condicións:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Atribución</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
 msgid ""
-"This program is distributed in the hope that it will be useful, but WITHOUT "
-"ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or "
-"FITNESS FOR A PARTICULAR PURPOSE. See the <citetitle><ulink type=\"help\" "
-"url=\"help:gpl\">GNU General Public License</ulink></citetitle> for "
-"more details."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
-"Este programa distribúese coa esperanza de que lle sexa útil, pero SEN "
-"NINGUNHA GARANTÍA; sen incluso a garantía implícita de MERCANTIBILIDADE ou "
-"IDONEIDADE PARA UN PROPÓSITO PARTICULAR. Vexa a <citetitle>Licenza Pública "
-"Xeral GNU<ulink type=\"help\" url=\"help:gpl\"></ulink></citetitle> para máis "
-"detalles."
+"Debe atribuír o traballo da maneira especificada polo autor ou licenciatario "
+"(pero non dunha forma que suxira que eles o avalan a vostede ou o seu uso do "
+"traballo)."
 
-#: C/gnomine.xml:629(para/address)
-#, no-wrap
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Compartir igual</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
 msgid ""
-"\n"
-"    Free Software Foundation, Inc.\n"
-"    <street>59 Temple Place</street> - Suite 330\n"
-"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
-"    <country>USA</country>\n"
-"   "
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
 msgstr ""
-"\n"
-"    Free Software Foundation, Inc.\n"
-"    <street>59 Temple Place</street> - Suite 330\n"
-"    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</postcode>\n"
-"    <country>USA</country>\n"
-"   "
+"Se altera, transforma ou constrúe sobre este traballo, debe redistribuír o "
+"traballo resultante baixo unha licenza igual, similar ou compatíbel."
 
-#: C/gnomine.xml:622(sect1/para)
+#. (itstool) path: page/p
+#: C/license.page:53
 msgid ""
-"A copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU "
-"General Public License</ulink></citetitle> is included as an appendix to the "
-"<citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy of the "
-"<citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public "
-"License</ulink></citetitle> from the Free Software Foundation by visiting "
-"<ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</ulink> or by "
-"writing to <_:address-1/>"
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Inclúese unha copia da <citetitle><ulink type=\"help\" url=\"help:gpl"
-"\">Licenza Pública Xeral GNU</ulink></citetitle> no apéndice da "
-"<citetitle>Guía de Usuario de GNOME</citetitle>. Tamén pode obter unha copia "
-"da <citetitle>Licenza Pública Xeral GNU<ulink type=\"help\" url=\"gnome-help:"
-"gpl\"></ulink> da Free Software Foundation visitando </citetitle>a súa "
-"páxina web<ulink type=\"http\" url=\"http://www.fsf.org\"> ou escribindo a </"
-"ulink>"
+"Para ler a licenza completa vexa <link href=\"http://creativecommons.org/"
+"licenses/by-sa/3.0/legalcode\">o sitio web de Creative Commons</link> ou lea "
+"o <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
+"Deed</link> completo."
 
-#: C/legal.xml:5(para/ulink)
-msgid "GNU General Public License"
-msgstr "Licenza Pública Xeral de GNU"
+#. (itstool) path: page/title
+#: C/new-game.page:31
+msgid "Start a new game"
+msgstr "Comezar un xogo novo"
 
-#: C/legal.xml:6(para/link)
-msgid "program is licensed"
-msgstr "programa está licenciado"
+#. (itstool) path: page/p
+#: C/new-game.page:33
+msgid "To start a new game:"
+msgstr "Para comezar un xogo novo:"
 
-#: C/legal.xml:2(legalnotice/para)
+#: C/new-game.page:36
 msgid ""
-"This document is dual-licensed. You may either distribute and/or modify it "
-"under the terms of the <_:ulink-1/>, which the <_:link-2/> under, or you can "
-"distribute it under the terms of the GNU Free Documentation License. A copy "
-"of this follows."
+"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+"Game</gui></guiseq> from the application menu."
 msgstr ""
-"Este documento ten unha licenza dobre. Pode distribuílo e/ou modificalo "
-"baixo os termos da <_:ulink-1/>, coa que o <_:link-2/>, ou pode distribuilo "
-"baixo os termos da Licenza de Documentación Libre de GNU. Sigue unha copia "
-"da seguinte."
+"Selecionar <guiseq><gui style=\"menu\">Minas</gui><gui style=\"menuitem"
+"\">Xogar de novo</gui></guiseq> no menú do aplicativo."
 
-#: C/legal.xml:18(para/ulink)
-msgid "link"
-msgstr "ligazón"
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgstr ""
+"Seleccione o <link xref=\"board-size\">tamaño de taboleiro</link> preferido."
 
-#: C/legal.xml:11(legalnotice/para)
+#. (itstool) path: note/p
+#: C/new-game.page:46
 msgid ""
-"Permission is granted to copy, distribute and/or modify this document under "
-"the terms of the GNU Free Documentation License (GFDL), Version 1.1 or any "
-"later version published by the Free Software Foundation with no Invariant "
-"Sections, no Front-Cover Texts, and no Back-Cover Texts. You can find a copy "
-"of the GFDL at this <_:ulink-1/> or in the file COPYING-DOCS distributed "
-"with this manual."
+"If you are already playing a game, <app>Mines</app> will ask if you want to "
+"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
+"former, your current game will be lost."
 msgstr ""
+"Se xa está xogando unha partida, <app>Minas</app> preguntaralle se desexa "
+"<gui>Iniciar un xogo novo</gui> ou <gui>Continuar co xogo actual</gui>. Se "
+"escolle o primeiro, perderá o xogo actual."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "Regras do xogo"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"O obxectivo en <app>Minas</app> é limpar o campo de minas sen que estoupe "
+"ningún dos artefactos."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by choosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"Comece seleccionando un dos tres taboleiros predeterminados ou seleccione un "
+"personalizado."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"O xogo comeza co taboleiro cuberto de teselas. Prema nunha para descubrila. "
+"Mostrarase:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"Un número de cor que representa o número de minas nas teselas adxacentes. "
+"Isto axuda a deducir onde están as minas para poder marcalas con <link xref="
+"\"flags\">bandeiras</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr ""
+"Unha tesela en branco que significa que non hai minas debaixo de ningunha "
+"das teselas adxacentes."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "Unha mina que estoupará e rematará o xogo."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr ""
+"Repita os pasos anteriores ata que descubra todas as teselas que non teñen "
+"minas debaixo delas."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
+msgstr ""
+"Se completa o xogo con rapidez dabondo, será engadido á lista de <link xref="
+"\"high-scores\">puntuacións altas</link>."
+
+#. (itstool) path: page/title
+#: C/shortcuts.page:17
+msgid "Keyboard shortcuts"
+msgstr "Atallos do teclado"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:20
+msgid "New game"
+msgstr "Novo xogo"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:21
+msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:24
+msgid "New game with last used settings"
+msgstr "Novo xogo cos axustes do último"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:25
+msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:28
+msgid "Pause"
+msgstr "Pausa"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:29
+msgid "<key>Pause</key>"
+msgstr "<key>Pausa</key>"
+
+#. (itstool) path: note/p
+#: C/shortcuts.page:30
+msgid ""
+"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
+"key."
+msgstr ""
+"Use o atallo da barra de ferramentas se o seu teclado non ten a tecla "
+"<key>Pausa</key> ."
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:33
+msgid "Help"
+msgstr "Axuda"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:34
+msgid "<key>F1</key>"
+msgstr "<key>F1</key>"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:37
+msgid "Quit"
+msgstr "Saír"
+
+#. (itstool) path: td/p
+#: C/shortcuts.page:38
+msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Axudar na tradución"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"A interface de usuario dos <app>xogos de GNOME</app> e a documentación "
+"tradúceas unha comunidade de voluntarios de todo o mundo. Se quere "
+"participar é benvido."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Hai <link href=\"http://l10n.gnome.org/module/gnome-mines/\">varios idiomas</"
+"link> con traducións que precisan axuda."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"http://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
+msgstr ""
+"Para comezar a traducir, precisará <link href=\"http://l10n.gnome.org"
+"\">crear unha conta</link> e unirse ao <link href=\"http://l10n.gnome.org/"
+"teams/\">equipo de tradución</link> do seu idioma. Deste xeito poderá "
+"enviarnos novas traducións."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
+"channel are located worldwide, so you may not get an immediate response as a "
+"result of timezone differences."
+msgstr ""
+"Pode conversar cos tradutores de GNOME usando o <link href=\"https://cbe003."
+"chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. A xente "
+"desta canle pode estar localizada en calquera parte do mundo, así é posíbel "
+"que non reciba respostas inmediatas como resultado das diferenzas horarias."
+
+#. (itstool) path: page/p
+#: C/translate.page:37
+msgid ""
+"Alternatively, you can contact the Internationalization Team using their "
+"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"list</link>."
+msgstr ""
+"De forma alternativa, pode contactar co equipo de internacionalización "
+"empregando a súa <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">rolda de correo</link>."
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+#~ msgstr ""
+#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+#~ msgstr ""
+#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+
+#~ msgid ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</"
+#~ "media>GNOME Mines"
+#~ msgstr ""
+#~ "<media type=\"image\" src=\"figures/logo32.png\">Logo de Minas</"
+#~ "media>Minas"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/main-window.png' "
+#~ "md5='5dfbe2739a705720dfa65c57f8733c73'"
+#~ msgstr ""
+#~ "external ref='figures/main-window.png' "
+#~ "md5='5dfbe2739a705720dfa65c57f8733c73'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/statusbar.png' "
+#~ "md5='56058dd84675ab2929aeaf7120c17769'"
+#~ msgstr ""
+#~ "external ref='figures/statusbar.png' "
+#~ "md5='56058dd84675ab2929aeaf7120c17769'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
+#~ msgstr ""
+#~ "external ref='figures/faces.png' md5='c6e6788830c32260e635ecfdd058589b'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/preferences.png' "
+#~ "md5='5ade6be994bf6c770d1ccf8b7174fb12'"
+#~ msgstr ""
+#~ "external ref='figures/preferences.png' "
+#~ "md5='5ade6be994bf6c770d1ccf8b7174fb12'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/imnotsureflagscheckbox.png' "
+#~ "md5='db506a024f14ef930ca39e3396654ebb'"
+#~ msgstr ""
+#~ "external ref='figures/imnotsureflagscheckbox.png' "
+#~ "md5='db506a024f14ef930ca39e3396654ebb'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+#~ msgstr ""
+#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/highscores.png' "
+#~ "md5='aebe3a869b53c4064d85028cf575196a'"
+#~ msgstr ""
+#~ "external ref='figures/highscores.png' "
+#~ "md5='aebe3a869b53c4064d85028cf575196a'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/easy-hints-1.png' "
+#~ "md5='7a143c1e5b747aa7f767bbca7d27641d'"
+#~ msgstr ""
+#~ "external ref='figures/easy-hints-1.png' "
+#~ "md5='7a143c1e5b747aa7f767bbca7d27641d'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/easy-hints-2.png' "
+#~ "md5='cb8a832723a98e136ec1a9d75279dec6'"
+#~ msgstr ""
+#~ "external ref='figures/easy-hints-2.png' "
+#~ "md5='cb8a832723a98e136ec1a9d75279dec6'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/easy-hints-3.png' "
+#~ "md5='7320c5e278121ccc3d0e3fb4cf612719'"
+#~ msgstr ""
+#~ "external ref='figures/easy-hints-3.png' "
+#~ "md5='7320c5e278121ccc3d0e3fb4cf612719'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/hard-hints-1.png' "
+#~ "md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
+#~ msgstr ""
+#~ "external ref='figures/hard-hints-1.png' "
+#~ "md5='dca8a8e9ff99fedcb66f5b37f0206ad6'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/hard-hints-2.png' "
+#~ "md5='30c8a1dc6c9b07de9e9b1309340f436f'"
+#~ msgstr ""
+#~ "external ref='figures/hard-hints-2.png' "
+#~ "md5='30c8a1dc6c9b07de9e9b1309340f436f'"
+
+#~ msgctxt "_"
+#~ msgid ""
+#~ "external ref='figures/hard-hints-3.png' "
+#~ "md5='9565ae7c8e01868ecaddb1e75b223f2f'"
+#~ msgstr ""
+#~ "external ref='figures/hard-hints-3.png' "
+#~ "md5='9565ae7c8e01868ecaddb1e75b223f2f'"
+
+#~ msgid "<application>Mines</application> Manual"
+#~ msgstr "Manual de <application>Minas</application>"
+
+#~ msgid ""
+#~ "Mines is GNOME's take on the popular logic puzzle minesweeper, which "
+#~ "includes avoiding mines while receiving clues for the location of the "
+#~ "mines."
+#~ msgstr ""
+#~ "Minas é a aposta d eGNOME para o popular xogo de lóxica Buscaminas, que "
+#~ "implica evitar as minas mentres se reciben pistas sobre a localización "
+#~ "das minas."
+
+#~ msgid "<year>2006</year> <holder>Callum McKenzie</holder>"
+#~ msgstr "<year>2006</year> <holder>Callum McKenzie</holder>"
+
+#~ msgid "GNOME Documentation Project"
+#~ msgstr "Proxecto de Documentación de GNOME"
+
+#~ msgid ""
+#~ "This document is dual-licensed. You may either distribute and/or modify "
+#~ "it under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU "
+#~ "General Public License</ulink>, which the <link linkend=\"license"
+#~ "\">program is licensed</link> under, or you can distribute it under the "
+#~ "terms of the GNU Free Documentation License. A copy of this follows."
+#~ msgstr ""
+#~ "Este documento ten unha licenza dobre. Pode distribuilo e/ou modificalo "
+#~ "baixo os termos da <ulink type=\"help\" url=\"help:gpl\">Licenza Pública "
+#~ "Xeral de GNU</ulink>, coa que o <link linkend=\"license\">programa está "
+#~ "licenciado</link>, ou pode distribuílo baixo os termos da Licenza de "
+#~ "Documentación Libre de GNU. Sigue a copia da seguinte."
+
+#~ msgid ""
+#~ "Permission is granted to copy, distribute and/or modify this document "
+#~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
+#~ "or any later version published by the Free Software Foundation with no "
+#~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
+#~ "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+#~ msgstr ""
+#~ "Pode copiar, distribuír e modificar este documento baixo os termos da "
+#~ "Licenza de Documentación Libre GNU (GFDL) na súa versión 1.1 ou "
+#~ "posterior, publicada pola Free Software Foundation, sen seccións "
+#~ "invariantes e sen textos de portada ou de contraportada. Pode atopar unha "
+#~ "copia da GFDL en <ulink type=\"help\" url=\"help:fdl\">link</ulink> ou no "
+#~ "ficheiro COPYING-DOCS distribuído xunto con este manual."
+
+#~ msgid ""
+#~ "This manual is part of a collection of GNOME manuals distributed under "
+#~ "the GFDL. If you want to distribute this manual separately from the "
+#~ "collection, you can do so by adding a copy of the license to the manual, "
+#~ "as described in section 6 of the license."
+#~ msgstr ""
+#~ "Este manual é parte dunha colección de manuais de GNOME distribuido baixo "
+#~ "a GFDL. Se quere distribuír este manual por separado da colección, pode "
+#~ "facelo engadindo unha copia da licenza ao manual, tal como se describe na "
+#~ "sección 6 da licenza."
+
+#~ msgid ""
+#~ "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
+#~ "<address> <email>callum@spooky-possum.org</email> </address> </"
+#~ "affiliation>"
+#~ msgstr ""
+#~ "<firstname>Callum</firstname> <surname>McKenzie</surname> <affiliation> "
+#~ "<address> <email>callum@spooky-possum.org</email> </address> </"
+#~ "affiliation>"
+
+#~ msgid "Callum McKenzie <email>callum@spooky-possum.org</email>"
+#~ msgstr "Callum McKenzie <email>callum@spooky-possum.org</email>"
+
+#~ msgid ""
+#~ "<revnumber>Mines Manual V2.9</revnumber> <date>January 2006</date> <_:"
+#~ "revdescription-1/>"
+#~ msgstr ""
+#~ "<revnumber>Manual de Minas V2.9</revnumber> <date>Xaneiro 2006</date> <_:"
+#~ "revdescription-1/>"
+
+#~ msgid "This manual describes version 2.14 of Mines."
+#~ msgstr "Este manual describe a versión 2.14 de Minas."
+
+#~ msgid "Feedback"
+#~ msgstr "Comentarios"
+
+#~ msgid ""
+#~ "To report a bug or make a suggestion regarding the <application>Mines</"
+#~ "application> application or this manual, follow the directions in the "
+#~ "<ulink url=\"http://bugzilla.gnome.org\">GNOME bug reporting database.</"
+#~ "ulink>."
+#~ msgstr ""
+#~ "Para informar dun fallo, ou facer algunha suxestión sobre o aplicativo "
+#~ "<application>Minas</application> ou este manual, siga as indicacións na "
+#~ "<ulink url=\"http://bugzilla.gnome.org\">base de datos de erros de GNOME</"
+#~ "ulink>."
+
+#~ msgid "<primary>GNOME Mines</primary>"
+#~ msgstr "<primary>Minas</primary>"
+
+#~ msgid "Introduction"
+#~ msgstr "Introdución"
+
+#~ msgid ""
+#~ "<application><application>Mines</application></application> is a puzzle "
+#~ "game where you locate mines floating in an ocean using only your brain "
+#~ "and a little bit of luck."
+#~ msgstr ""
+#~ "<application><application>Minas</application></application> é un xogo "
+#~ "tipo puzle onde localiza minas flotando nun océano usando só o seu "
+#~ "cerebro e un pouquiño de sorte."
+
+#~ msgid ""
+#~ "You start the game with a grid of covered squares and no idea what is in "
+#~ "them. Clicking on a square reveals what is in it: either empty ocean or a "
+#~ "mine. If you find a mine bad things happen and the game is over. If you "
+#~ "uncover an empty square, you survive and get to try again. We do give you "
+#~ "a bit of help; if you find an empty piece of ocean a number is printed "
+#~ "there telling you how many mines are in the adjacent squares (or no "
+#~ "number if there are no nearby mines). Once you find a few clear squares "
+#~ "you can start to deduce which squares have mines in them and which don't. "
+#~ "You win the game once you have revealed all the un-mined squares and "
+#~ "marked all the mined squares."
+#~ msgstr ""
+#~ "O xogo comeza cunha reixa de celas cubertas sen idea do que hai nelas. Ao "
+#~ "premer sobre unha cela descóbrese o qeu hai: océano baleiro ou unha mina. "
+#~ "Se atopa unha mina «cousa mala» e acábase a partida. Se descobre unha "
+#~ "cela baleira, sobrevive e pode probar de novo. Se quere axuda; se atopa "
+#~ "unha porción de océano fará un número que lle indica cantas minas hai nas "
+#~ "celas adxacentes (ou non fará número se non hai minas ao redor). Unha vez "
+#~ "que atope unhas poucas celas baleiras poderá comezar a deducir que celas "
+#~ "teñen minas e cales non. Ganará a partida cando descubra toda as casillas "
+#~ "e marcado todas as celas con minas."
+
+#~ msgid "The stages of the game: the start, playing, losing, and winning."
+#~ msgstr "As fases da partida: o comezo, o xogo, perder e gañar."
+
+#~ msgid ""
+#~ "To mark a square as having a mine you right-click on it and a flag is "
+#~ "placed there. If you click on a square with a number and you have placed "
+#~ "precisely that number of flags on adjacent squares then the remaining "
+#~ "squares are revealed. If you didn't mark the mines correctly then an "
+#~ "explosion will occur and the game is over. Squares with no adjacent mines "
+#~ "(i.e. blank squares) have their adjacent squares automatically cleared."
+#~ msgstr ""
+#~ "Para marcar unha cela como que ten unha mina prema co botón dereito do "
+#~ "rato e engadiráse unha bandeira na cela. Se preme nunha cela cun número e "
+#~ "xa puxo ese mesmo número de bandeiras nas celas adxacentes, entón "
+#~ "escubriranse as celas restantes. Se non marcou correctamente as minas "
+#~ "entón fará unha explosión e acabarase a partida. As celas xunto a celas "
+#~ "sen minas adxacentes (ex. celas baleiras) descubriranse automaticamente."
+
+#~ msgid ""
+#~ "You are being timed. To be good at this game you have to work both "
+#~ "quickly and correctly. Once you have found all the mines and revealed all "
+#~ "the un-mined squares the clock is stopped. Your score is the time you "
+#~ "took; the shorter the better."
+#~ msgstr ""
+#~ "A partida está sendo controlada por reloxo. Para ser bo neste xogo ten "
+#~ "que ser rápido e correcto á vez. O reloxo párase en canto atope todas as "
+#~ "minas e descubra todas as celas non minadas. A súa puntuación é o tempo "
+#~ "que lle levou, canto antes mellor."
+
+#~ msgid ""
+#~ "The time you have taken is displayed on the bottom right of the window. "
+#~ "Beside it, on the left, is a count of the number of mines you have "
+#~ "cleared and the total number hidden on the board."
+#~ msgstr ""
+#~ "O tempo que lle levou móstrase na parte inferior dereita da xanela. Xunto "
+#~ "a ilo, á esquerda, está a contía do minas que limpou e o número total de "
+#~ "minas ocultas no taboleiro."
+
+#~ msgid "The yellow face shows you how well you are going."
+#~ msgstr "A cara amarela móstralle como de ben está facéndoo."
+
+#~ msgid "The Details"
+#~ msgstr "Os detalles"
+
+#~ msgid ""
+#~ "This section provides information on the controls and the important menu "
+#~ "items. If you need help figuring where the mines are, see the <link "
+#~ "linkend=\"strategy\">strategy section</link>."
+#~ msgstr ""
+#~ "Esta sección fornece información sobre os controis e os elementos "
+#~ "importantes do menú. Se precisa axuda para saber onde están as minas, "
+#~ "vexa a <link linkend=\"strategy\">sección de estratexia</link>."
+
+#~ msgid "The Goal"
+#~ msgstr "O obxectivo"
+
+#~ msgid ""
+#~ "Starting from an ocean of squares with unknown contents you must mark all "
+#~ "the squares with mines and reveal all the clear squares. You don't "
+#~ "actually have to mark the squares with mines, but it is a lot easier if "
+#~ "you do. Once you have cleared all the un-mined squares, any remaining "
+#~ "mined squares will be marked for you."
+#~ msgstr ""
+#~ "Comeza cun océano de celas cuxo contido é descoñecido, debe marcar todas "
+#~ "as celas con minas e describir as celas baleiras. Realmente non ten que "
+#~ "marcar as celas con minas, pero é moitisimo máis doado se o fai. En canto "
+#~ "limpe todas as celas sen minas, calquera cela cunha mina marcarase "
+#~ "automaticamente."
+
+#~ msgid ""
+#~ "If you left click on a mine, or auto-clear a square with a mine in it you "
+#~ "lose. To help prevent accidents, you aren't allowed to auto-clear around "
+#~ "a square unless the number of marked mines equals the number given in the "
+#~ "square."
+#~ msgstr ""
+#~ "Se preme o botón esquerdo sobre unha mina, ou autodescubre unha cela "
+#~ "cunha mina perde a partida. Para axudar a previr accidentes, non se lle "
+#~ "permite autodescubrir ao redor dunha cela a menos que o número de minas "
+#~ "marcadas sexa igual ao número fornecido pola cela."
+
+#~ msgid "Using the Mouse"
+#~ msgstr "Uso do rato"
+
+#~ msgid "Action"
+#~ msgstr "Acción"
+
+#~ msgid "Result"
+#~ msgstr "Resultado"
+
+#~ msgid "Left click on an un-revealed square."
+#~ msgstr "Premer co botón esquerdo sobre unha cela non descuberta."
+
+#~ msgid "Reveals the contents of that square. For better or for worse."
+#~ msgstr "Descubre o contido desa cela. Para ben ou para mal."
+
+#~ msgid "Left click in a revealed square."
+#~ msgstr "Premer co botón esquerdo sobre unha cela descuberta."
+
+#~ msgid ""
+#~ "Auto-clear. Reveals the unmarked squares around the clicked square, but "
+#~ "only if enough squares have been marked to match the number in the square."
+#~ msgstr ""
+#~ "Autolimpar. Descubre as celas sen marcar ao redor da cela premida, pero "
+#~ "só se han marcado suficientes celas para coincidir co número desa cela."
+
+#~ msgid ""
+#~ "Marks the square as a mine. If it is already marked, the mark will be "
+#~ "removed."
+#~ msgstr ""
+#~ "Marca a casilla cunha mina. Se xa está marcada quitarase o marcador."
+
+#~ msgid ""
+#~ "If you are used to the more traditional mouse controls, don't worry, they "
+#~ "still work."
+#~ msgstr ""
+#~ "Se está acostumado aos controis máis tradicionais do rato, non se "
+#~ "precoupe, aínda funcionan."
+
+#~ msgid "Game Size and Difficulty"
+#~ msgstr "Tamaño do xogo e dificultade"
+
+#~ msgid ""
+#~ "By choosing <menuchoice><guimenu>Settings</"
+#~ "guimenu><guimenuitem>Preferences</guimenuitem></menuchoice> from the menu "
+#~ "you can change the size of the games. Larger sizes obviously take longer "
+#~ "and require more concentration. Smaller games are more frantic. We "
+#~ "provide Small, Medium, Large and Custom sizes."
+#~ msgstr ""
+#~ "Ao seleccionar <menuchoice><guimenu>Preferencias</"
+#~ "guimenu><guimenuitem>Preferencias</guimenuitem></menuchoice> do menú, "
+#~ "pode cambiar o tamaño das partidas. Tamaños grandes levan máis tempo e "
+#~ "concentración obviamente. Os xogos pequenos son máis frenéticos. "
+#~ "Fornécense tamaños pequenos, medio, grande e personalizado."
+
+#~ msgid "The preferences dialog."
+#~ msgstr "O diálogo de preferencias."
+
+#~ msgid ""
+#~ "On the right hand side of the dialog there are three parameters for "
+#~ "controlling the custom size. Horizontal and Vertical are the width and "
+#~ "height of the desired grid in squares. The number of mines is - obviously "
+#~ "- the number of mines you need to find. If this number is set too high or "
+#~ "too low then the game becomes very easy. The number of mines is limited "
+#~ "to slightly less than the total number of squares."
+#~ msgstr ""
+#~ "Na parte dereita do diálogo hai tres parámetros para controlar o tamaño "
+#~ "personalizado. Horizontal e Vertical son a altura e anchura da grella de "
+#~ "celas desexada. O número de minas é -obviamente- o número de minas que "
+#~ "debe atopar. Se o número estabelecido é moi alto ou moi pequeno entón a "
+#~ "partida resulta ser moi difícil ou moi doado. O número de minas está "
+#~ "limitado a un pouco menos que o número total de celas."
+
+#~ msgid "\"I'm not sure\" Flags"
+#~ msgstr "Bandeiras «Non estou seguro»"
+
+#~ msgid ""
+#~ "There is a check-box in the properties dialog entitled Use \"I'm not sure"
+#~ "\" flags. If you enable this then, when right-clicking on a square, it "
+#~ "cycles between the normal flags used to mark the square as mined, a flag "
+#~ "with a question mark on it and no flag. This new flag is to help you with "
+#~ "your reasoning, to mark mines you think might be a mine but aren't sure "
+#~ "about. These flags have no effect on the game; you still have to use the "
+#~ "appropriate number of red marker flags to be able to clear around a "
+#~ "numbered square."
+#~ msgstr ""
+#~ "Hai unha caixa de verificación no diálogo de preferencias chamada Usar "
+#~ "bandeiras «Non estou seguro». Se activa isto, entón cando prema co botón "
+#~ "dereito sobre unha cela, rotará entre as bandeiras usadas para marcar "
+#~ "unha cela como con mina, unha bandeira con un signo de interrogación en "
+#~ "ela e unha ausencia de bandeira. Esta nova bandeira é para axudarlle cos "
+#~ "seus razonamentos, para marcar casillas que cree que poden ser minas que "
+#~ "non estea seguro. Estas bandeiras non teñen efecto no xogo; aínda que "
+#~ "debe usar o número axeitado de marcadores vermellos de bandeira para "
+#~ "poder limpar ao redor da cela numerada."
+
+#~ msgid "The sequence of flags when \"I'm not sure\" flags are enabled."
+#~ msgstr ""
+#~ "A secuencia das bandeiras cando as bandeiras «Non estou seguro» están "
+#~ "activadas."
+
+#~ msgid "Use \"Too many flags\" warning"
+#~ msgstr "Usar a advertencia «Demasiadas bandeiras»"
+
+#~ msgid ""
+#~ "The other check-box in the properties dialog is entitled Use \"Too many "
+#~ "flags\" warning. This feature will show you a warning when you have "
+#~ "placed too many flags. This is disabled by default, as it provides so "
+#~ "much hint that it could be considered \"cheating\"."
+#~ msgstr ""
+#~ "A outra caixa de verificación no diálogo de propiedades é cahmada Usar a "
+#~ "advertencia «demasiadas bandeiras». Esta característica mostraralle unha "
+#~ "advertencia cando teña estabelecido demasiadas bandeiras. Isto está "
+#~ "desactivado de forma predeterminada, xa que fornece unha suxestión que "
+#~ "podería ser considerada como «facer trampas»."
+
+#~ msgid "Hints"
+#~ msgstr "Pistas"
+
+#~ msgid ""
+#~ "If you get stuck - it is reasonably common to end up with two options "
+#~ "that you can't logically resolve - then you can either guess, or ask for "
+#~ "a hint. When you choose <guimenuitem>Hint</guimenuitem> from the "
+#~ "<guimenu>Game</guimenu> menu a single square is revealed (plus "
+#~ "surrounding squares if it is blank). The choice of square is random, but "
+#~ "should be helpful. There is 10 second penalty added to your time whenever "
+#~ "you use a hint."
+#~ msgstr ""
+#~ "Se se queda atascado, é razoabelmente común acabar con duas opcións que "
+#~ "non pode resolver loxicamente; entón pode ou adiviñar ou pedir unha "
+#~ "suxestión. Cando seleccione <guimenuitem>Suxestión</guimenuitem> do menú "
+#~ "<guimenu>Xogo</guimenu> só se revelará unha cela (máis as do redor se "
+#~ "está baleira). A elección da cela é aleatoria pero pode ser de axuda. Hai "
+#~ "unha penalización de 10 segundos que se engaden a seu tempo sempre que "
+#~ "pida unha suxestión."
+
+#~ msgid ""
+#~ "If your score is in the top ten you will be shown the list of top scores "
+#~ "and have an opportunity to change the name recorded in the high score "
+#~ "table. You can also review the scores later by choosing "
+#~ "<guimenuitem>Scores</guimenuitem> from the <guimenu>Game</guimenu> menu. "
+#~ "The drop-down menu at the top of the dialog lets you look at the scores "
+#~ "for other board sizes."
+#~ msgstr ""
+#~ "Se a súa puntuación está entre as dez mellores, mostrarase na lista de "
+#~ "mellores puntuacións e terá unha oportunidade de cambiar o nome gravado "
+#~ "na táboa de mellores puntuacións. Tamén pode revisar as puntuacións máis "
+#~ "tarde elixindo <guimenuitem>Puntuación</guimenuitem> do menú "
+#~ "<guimenu>Xogo</guimenu>. O menú despregábel na parte superior do diálogo "
+#~ "permítelle ver as puntuacións de outros tamaños de taboleiro."
+
+#~ msgid "The high scores dialog."
+#~ msgstr "O diálogo de puntuacións."
+
+#~ msgid ""
+#~ "The high score for the custom size is usually meaningless. Any other "
+#~ "player can make the game size smaller and get a better time. If you only "
+#~ "ever play one custom size then it will tell you how well you are doing. "
+#~ "This is the only reason it is still recorded."
+#~ msgstr ""
+#~ "As máximas puntuacións para o taboleiro personalizado non ten interese. "
+#~ "Calquera outro xogador pode facer o taboleiro de xogo máis pequeno e "
+#~ "obter un mellor tempo. Se sempre xoga ao mesmo taboleiro personalizado "
+#~ "entón diralle como de ben o está facendo. É a única razón pola que se "
+#~ "graban estes resultados."
+
+#~ msgid "Window Size"
+#~ msgstr "Tamaño da xanela"
+
+#~ msgid ""
+#~ "Resizing the window makes the squares bigger or smaller to suit. If you "
+#~ "want to make maximum use of the screen then there is a "
+#~ "<guimenuitem>Fullscreen</guimenuitem> option under the <guimenu>Settings</"
+#~ "guimenu> menu. You can also use the <keycap>F11</keycap> key to toggle "
+#~ "full-screen mode."
+#~ msgstr ""
+#~ "Redimensionar o tamaño da xanela aumenta ou disminúe as celas para "
+#~ "axustalas. Se quere facer o maior uso posíbel da pantalla entón existe a "
+#~ "opción <guimenuitem>Pantalla completa</guimenuitem> baixo o menú "
+#~ "<guimenu>Configuración</guimenu>. Tamén pode usar a tecla <keycap>F11</"
+#~ "keycap> para torcar o modo a pantalla completa."
+
+#~ msgid "Pausing the Game"
+#~ msgstr "Pausar o xogo"
+
+#~ msgid ""
+#~ "The game can be paused automatically when you start using another window, "
+#~ "or paused by choosing <guimenuitem>Pause</guimenuitem> from the "
+#~ "<guimenu>Game</guimenu> menu. The playing area is blanked so you can't "
+#~ "think ahead while the clock is stopped. To start playing again press the "
+#~ "button labelled \"Press to Resume\"."
+#~ msgstr ""
+#~ "Pódese pausar automaticamente cando comeza a usar calquera outra xanela, "
+#~ "ou ben elixinado <guimenuitem>Pausa</guimenuitem> do menú <guimenu>Xogo</"
+#~ "guimenu>. O área de xogo desaparece para que non poida pensar movemento "
+#~ "mentres o reloxo está pausado. Para comezar a xogar de novo prema o botón "
+#~ "etiquetado «Prema para continuar»."
+
+#~ msgid "Strategy"
+#~ msgstr "Estratexia"
+
+#~ msgid ""
+#~ "The first half of this section explains the very basics of deducing where "
+#~ "mines are. If you are familiar with how to play the game skip down to the "
+#~ "<link linkend=\"advanced\">Advanced Situations</link> subsection."
+#~ msgstr ""
+#~ "A primeira metade desta sección explica as bases para dedudir onde están "
+#~ "as minas. Se xa está familiarizado con como se xoga, salte á subsección "
+#~ "<link linkend=\"advanced\">Situacións avanzadas</link>."
+
+#~ msgid "The Basics"
+#~ msgstr "As bases"
+
+#~ msgid ""
+#~ "These are a few basic situations which should be incredibly obvious, but "
+#~ "if you're struggling with how to play the game, they should be useful. "
+#~ "The first case is where you have an isolated covered square and most of "
+#~ "the squares around it read 1. That covered square is a mine."
+#~ msgstr ""
+#~ "Estas son unhas poucas situacións básicas que poden parecer incribelmente "
+#~ "obvias, pero se está descubrindo como xogar ao xogo deberían ser útiles. "
+#~ "O primeiro caso é cando ten unha caixa cuberta illada e pode ler un 1 nas "
+#~ "celas do redor. Esa cela cuberta é unha mina."
+
+#~ msgid "The simplest case."
+#~ msgstr "O caso máis simple."
+
+#~ msgid ""
+#~ "The next simplest case is where you have two covered squares adjacent to "
+#~ "each other and both squares on one side are marked with a 2. If they have "
+#~ "no other uncleared neighbors, then both squares are mines."
+#~ msgstr ""
+#~ "O seguinte caso máis doado é cando ten dúas celas cubertas adxacentes "
+#~ "entre elas e ambas celas ao carón están marcadas con un 2. Se non ten "
+#~ "outras celas viciñsa cubertas, entón ambas celas son minas."
+
+#~ msgid "The two mine case."
+#~ msgstr "O caso das dúas minas."
+
+#~ msgid ""
+#~ "Finally, when there are three uncovered squares in a row and the clear "
+#~ "square beside the middle one is a 3 (once again this square should have "
+#~ "no other neighbors) then all three are mines."
+#~ msgstr ""
+#~ "Finalmente, cando hai tres celas cubertas nunha fila e a cela descuberta "
+#~ "xunto á cela do medio é un 3 (unha vez máis esta cela non debería ter "
+#~ "outras celas viciñs) entón as tres son minas."
+
+#~ msgid "The three mine case."
+#~ msgstr "O caso das tres minas."
+
+#~ msgid ""
+#~ "These are the simplest cases. Other permutations on these simple "
+#~ "situations are possible, for example the three squares in the previous "
+#~ "example could be in an L shape."
+#~ msgstr ""
+#~ "Estes son os casos máis simples. Poden darse outras permutacións destas "
+#~ "situracións doadas, por exemplo as tres celas do exemplo anterior poden "
+#~ "aparecer na forma dunha L."
+
+#~ msgid ""
+#~ "Simple analysis will solve most of the puzzle, but not all. Before going "
+#~ "on to the next sections, where we give you more advanced hints, you "
+#~ "should play for a bit and see what you can work out for yourself."
+#~ msgstr ""
+#~ "Un análise simple resolverá a maior parte do quebracabezas, pero non "
+#~ "todo. Antes de seguir adiante coas seguintes seccións, onde lle damos "
+#~ "consellos máis avanzados, debería xogar durante un rato e ver qeu pode "
+#~ "facer por si mesmo."
+
+#~ msgid "Advanced Situations"
+#~ msgstr "Situacións avanzadas"
+
+#~ msgid ""
+#~ "These are some more complicated situations. They are a bit of a step up "
+#~ "from the last section, so we hope you took our advice and played for a "
+#~ "bit first."
+#~ msgstr ""
+#~ "Esas son unhas situacións algo máis complicadas. Son algo máis que un "
+#~ "paso adiante da situación anterior, así que agardamos que siguera o "
+#~ "consello e xogará un anaco antes."
+
+#~ msgid ""
+#~ "In the example below the mines are to the left of the ones. We figure "
+#~ "this out by a process of elimination. If the square to the left of the 2 "
+#~ "was a mine then the 1s would both have their maximum number of mines "
+#~ "leaving no free square for the second mine adjacent to the 2 (since they "
+#~ "would also be adjacent to the 1s). Having eliminated the middle square we "
+#~ "are left with two squares we require for the 2 so they are both mined."
+#~ msgstr ""
+#~ "No seguinte exemplo, as minas están á esquerda dos uns. Deducimos isto "
+#~ "por un proceso de eliminación. Se a cela á esquerda do 2 foi unha mina "
+#~ "entón os uns terían o seu máximo número de minas, sen deixar celas libres "
+#~ "para a seguinda mina adxacente ao 2 (xa que tamén estarían adxacentes aos "
+#~ "uns). Tendo eliminado a cela do medio, isto deixa dúas celas que requiren "
+#~ "o 2 así que ambas teñen minas."
+
+#~ msgid "A not-so-obvious pattern."
+#~ msgstr "Un patrón non moi obvio."
+
+#~ msgid ""
+#~ "This situation can be disguised, for example consider the figure below. "
+#~ "It is the same situation, but the extra mined square on the right has "
+#~ "increased all the numbers by 1."
+#~ msgstr ""
+#~ "Esta situación pódese difrazar, considere, por exemplo, a seguinte "
+#~ "figura. É a mesma situación pero a cela minada adicional á dereita "
+#~ "incrementou todos os números en 1."
+
+#~ msgid "The extra mine disguises a copy of the previous example."
+#~ msgstr "A mina adicional disfraza unha copia do exemplo anterior."
+
+#~ msgid ""
+#~ "Now we're going to try a complicated example. It illustrates two points. "
+#~ "The first is that even if you aren't sure which squares are mined, "
+#~ "restricting the possibilities is helpful. The second is that knowing "
+#~ "which squares aren't mined is nearly as good as knowing which are mined."
+#~ msgstr ""
+#~ "Agora vamos a probar un exemplo complicado. Mostra dous puntos. No "
+#~ "primeiro, aínda que non estea seguro de que celas están minadas, "
+#~ "restrinxir as posibilidades resulta útil. No segundo, sabendo que celas "
+#~ "non están minadas é incluso igual de bo que saber cales si o están."
+
+#~ msgid ""
+#~ "Assume that, in the figure below, we start off knowing that the top left "
+#~ "square is mined and so the two squares marked 2 on the left only require "
+#~ "one more mine. Next observe that the left-most 2 implies that one of the "
+#~ "covered squares beneath it is mined, but we don't yet know which one. "
+#~ "Since at least one of these squares is mined and they are both neighbors "
+#~ "of the second 2 then we know that that 2 is also satisfied by one of "
+#~ "these two squares (we still don't know which one). This means that the "
+#~ "square beneath the 4 is clear because it is also a neighbor of the second "
+#~ "2 and not one of the two squares we identified previously. This one blank "
+#~ "square now leaves the 4 with only four neighbors - all of which must be "
+#~ "mines. Not only does it tell us which mines surround the 4, it now tells "
+#~ "us which of the squares beside the 2 is mined!"
+#~ msgstr ""
+#~ "Asuma que, na figura de embaixo, comezamos sabendo que a cela superior "
+#~ "esquerda ten unha mina e que as dúas celas marcadas cun 2 na parte "
+#~ "superior esquerda só requiren unha mina máis. A continuación observe que "
+#~ "o 2 que está á esquerda do todo implica que unha das celas cubertas ten "
+#~ "unha mina, pero aínda non sabemos cal. Xa que cando menos, unha das celas "
+#~ "ten unha mina e ambas son veciñas do segundo 2, entón sabemos que o 2 "
+#~ "tamén se satisfai cunha destas dúas celas (aínda non sabemos cal). Isto "
+#~ "significa que cela embaixo do 4 está limpa porque tamén é veciña do "
+#~ "segundo 2 e non é unha das celas que identificamos previamente. Esta cela "
+#~ "limpa aogra deixa o 4 con só catro veciñas; todas elas deben ser minas. "
+#~ "Non só di que minas rodean ao 4, agora fornece que casilla xunto ao 2 ten "
+#~ "unha mina."
+
+#~ msgid "As tricky as it gets."
+#~ msgstr "Tan difícil como parece."
+
+#~ msgid ""
+#~ "This sort of situation is tricky. In all the other examples you can learn "
+#~ "to look for patterns and avoid thinking hard. Situations like the one in "
+#~ "the figure don't crop up easily or in easily recognisable places. Often "
+#~ "it is easier to just ignore them and keep playing elsewhere in the hope "
+#~ "that you can start clearing the squares from the other side."
+#~ msgstr ""
+#~ "Este tipo de situación é difícil, No resto de exemplos podía aprender a "
+#~ "mirar os patróns e evitar pensar moito. Situacións como a da figura non "
+#~ "acaban facilmente nun patrón recoñecíbel. A miúdo é máis doado ignoralas "
+#~ "e seguir xogando en calquera outra parte coa esperanza de que poderá "
+#~ "comezar a limpar as celas desde o outro sitio."
+
+#~ msgid "Tips"
+#~ msgstr "Consellos"
+
+#~ msgid ""
+#~ "Remember, the edge of the board is just the same as a large cleared area "
+#~ "(but without the numbers). Often working at the edge of the board is the "
+#~ "easiest way forward."
+#~ msgstr ""
+#~ "Lembre, o borde do taboleiro é igual que unha área limpa (pero sen os "
+#~ "números). Xeralmente traballar no borde da pantalla é a forma máis fácil "
+#~ "de avanzar."
+
+#~ msgid ""
+#~ "Sometimes you end up in a situation where there is no way to deduce what "
+#~ "the configuration is. In these cases you either have to guess or use the "
+#~ "hint function (<menuchoice><guimenu>Game</guimenu><guimenuitem>Hint</"
+#~ "guimenuitem></menuchoice>). Sometimes it isn't a 50/50 situation and "
+#~ "instead of taking a hint you might like to gamble on the most likely "
+#~ "outcome."
+#~ msgstr ""
+#~ "A veces acaba nunha situación onde hai forma de deducir cal é a "
+#~ "configuración. Nestes casos ten que adiviñar ou pedir unha suxestión "
+#~ "(<menuchoice><guimenu>Xogo</guimenu><guimenuitem>Suxestión</guimenuitem></"
+#~ "menuchoice>). A veces non é situación ao 50% e no lugar de pedir unha "
+#~ "suxestión pode correr o risco sobre o resultado máis probábel."
+
+#~ msgid ""
+#~ "One final hint: remember the counter on the bottom left of the window "
+#~ "that tells you how many mines you have left? Often, near the end of the "
+#~ "game, this number can help you figure out what possible places mines can "
+#~ "be. How to do this is up to you to figure out."
+#~ msgstr ""
+#~ "Un último consello: ¿recorda que o contador na parte inferior esquerda da "
+#~ "xanela dílle cantas minas lle faltan? A miúdo, ao final da partida, este "
+#~ "número pode axudarlle a adiviñar cales son os posíbeis lugares onde poden "
+#~ "estar as minas. Como facelo é cosa súa."
+
+#~ msgid "Authors"
+#~ msgstr "Autores"
+
+#~ msgid ""
+#~ "<application>GNOME Mines</application> was written by Pista "
+#~ "(<email>szekeres@cyberspace.mht.bme.hu</email>). This manual was written "
+#~ "by Callum McKenzie (<email>callum@spooky-possum.org</email>) with help "
+#~ "from Vincent Povirk and based on an earlier manual by Tim Riehle "
+#~ "(<email>tkriehle@citilink.com</email>). To report a bug or make a "
+#~ "suggestion regarding this application or this manual, follow the "
+#~ "directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
+#~ "\"help\">document</ulink>."
+#~ msgstr ""
+#~ "Pista (<email>szekeres@cyberspace.mht.bme.hu</email>) escribiu "
+#~ "<application>Minas</application>. Callum McKenzie (<email>callum@spooky-"
+#~ "possum.org</email>) coa axuda de Vincent Povirk escribiu este manual "
+#~ "baseándose nun anterior de Tim Riehle (<email>tkriehle@citilink.com</"
+#~ "email>). Para informar dun fallo, ou facer algunha suxestión sobre este "
+#~ "aplicativo ou este manual, siga as indicacións neste <ulink url=\"http://"
+#~ "bugzilla.gnome.org\">documento</ulink>."
+
+#~ msgid ""
+#~ "This program is free software; you can redistribute it and/or modify it "
+#~ "under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl"
+#~ "\">GNU General Public License</ulink></citetitle> as published by the "
+#~ "<ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</"
+#~ "ulink>; either version 2 of the License, or (at your option) any later "
+#~ "version."
+#~ msgstr ""
+#~ "Este programa é software libre; pode redistribuílo e/ou modificalo baixo "
+#~ "os termos da <citetitle>Lincenza Pública Xeral GNU<ulink type=\"help\" "
+#~ "url=\"help:gpl\"></ulink></citetitle> tal como se publica pola <ulink "
+#~ "type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</"
+#~ "ulink>; xa sexa a versión 2 da Licenza, ou (á súa elección) calquera "
+#~ "versión posterior."
+
+#~ msgid ""
+#~ "This program is distributed in the hope that it will be useful, but "
+#~ "WITHOUT ANY WARRANTY; without even the implied warranty of "
+#~ "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the "
+#~ "<citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General Public "
+#~ "License</ulink></citetitle> for more details."
+#~ msgstr ""
+#~ "Este programa distribúese coa esperanza de que lle sexa útil, pero SEN "
+#~ "NINGUNHA GARANTÍA; sen incluso a garantía implícita de MERCANTIBILIDADE "
+#~ "ou IDONEIDADE PARA UN PROPÓSITO PARTICULAR. Vexa a <citetitle>Licenza "
+#~ "Pública Xeral GNU<ulink type=\"help\" url=\"help:gpl\"></ulink></"
+#~ "citetitle> para máis detalles."
+
+#~ msgid ""
+#~ "\n"
+#~ "    Free Software Foundation, Inc.\n"
+#~ "    <street>59 Temple Place</street> - Suite 330\n"
+#~ "    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</"
+#~ "postcode>\n"
+#~ "    <country>USA</country>\n"
+#~ "   "
+#~ msgstr ""
+#~ "\n"
+#~ "    Free Software Foundation, Inc.\n"
+#~ "    <street>59 Temple Place</street> - Suite 330\n"
+#~ "    <city>Boston</city>, <state>MA</state> <postcode>02111-1307</"
+#~ "postcode>\n"
+#~ "    <country>USA</country>\n"
+#~ "   "
+
+#~ msgid ""
+#~ "A copy of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU "
+#~ "General Public License</ulink></citetitle> is included as an appendix to "
+#~ "the <citetitle>GNOME Users Guide</citetitle>. You may also obtain a copy "
+#~ "of the <citetitle><ulink type=\"help\" url=\"help:gpl\">GNU General "
+#~ "Public License</ulink></citetitle> from the Free Software Foundation by "
+#~ "visiting <ulink type=\"http\" url=\"http://www.fsf.org\">their Web site</"
+#~ "ulink> or by writing to <_:address-1/>"
+#~ msgstr ""
+#~ "Inclúese unha copia da <citetitle><ulink type=\"help\" url=\"help:gpl"
+#~ "\">Licenza Pública Xeral GNU</ulink></citetitle> no apéndice da "
+#~ "<citetitle>Guía de Usuario de GNOME</citetitle>. Tamén pode obter unha "
+#~ "copia da <citetitle>Licenza Pública Xeral GNU<ulink type=\"help\" url="
+#~ "\"gnome-help:gpl\"></ulink> da Free Software Foundation visitando </"
+#~ "citetitle>a súa páxina web<ulink type=\"http\" url=\"http://www.fsf.org"
+#~ "\"> ou escribindo a </ulink>"
+
+#~ msgid "GNU General Public License"
+#~ msgstr "Licenza Pública Xeral de GNU"
+
+#~ msgid "program is licensed"
+#~ msgstr "programa está licenciado"
+
+#~ msgid ""
+#~ "This document is dual-licensed. You may either distribute and/or modify "
+#~ "it under the terms of the <_:ulink-1/>, which the <_:link-2/> under, or "
+#~ "you can distribute it under the terms of the GNU Free Documentation "
+#~ "License. A copy of this follows."
+#~ msgstr ""
+#~ "Este documento ten unha licenza dobre. Pode distribuílo e/ou modificalo "
+#~ "baixo os termos da <_:ulink-1/>, coa que o <_:link-2/>, ou pode "
+#~ "distribuilo baixo os termos da Licenza de Documentación Libre de GNU. "
+#~ "Sigue unha copia da seguinte."
+
+#~ msgid "link"
+#~ msgstr "ligazón"
