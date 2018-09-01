@@ -5,6 +5,7 @@
   <info>
     <link type="guide" xref="index#tips"/>
     <revision version="0.1" date="2012-08-12" status="review"/>
+    <revision pkgversion="3.28.0" version="0.3" date="2018-09-01" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -21,24 +22,18 @@
 
   <title>How to change the game board size</title>
 
-  <p>You can select a field size at the start of a new game.</p>
+  <p>You can select a field size at the start of the application.</p>
 
-  <steps>
-    <item>
-      <p>Click <gui style="button">New</gui> or
-      <guiseq><gui style="menu">Mines</gui>
-      <gui style="menuitem">New Game</gui></guiseq>.</p>
-    </item>
-    <item>
-      <p>Select one of the grid sizes:</p>
-      <list>
-        <item><p>a 8 × 8 board with 10 mines</p></item>
-        <item><p>a 16 × 16 board with 40 mines</p></item>
-        <item><p>a 30 × 16 board with 99 mines</p></item>
-	<item><p>a custom board, where you chose the size and the number of
-	mines</p></item>
-      </list>
-    </item>
-  </steps>
+  <p>Select one of the grid sizes:</p>
+  <list>
+    <item><p>a 8 × 8 board with 10 mines</p></item>
+    <item><p>a 16 × 16 board with 40 mines</p></item>
+    <item><p>a 30 × 16 board with 99 mines</p></item>
+    <item><p>a custom board, where you chose the size and the number of
+    mines</p></item>
+  </list>
+
+  <p>To change the <link xref="board-size">board size</link> later, press the
+  <gui style="button">Change Difficulty</gui> button on the right.</p>
 
 </page>
