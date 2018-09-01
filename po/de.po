@@ -23,10 +23,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-14 09:13+0000\n"
-"PO-Revision-Date: 2018-01-22 11:00+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2018-06-01 10:04+0000\n"
+"PO-Revision-Date: 2018-09-01 23:10+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: Deutsch <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -34,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.5\n"
+"X-Generator: Poedit 2.1.1\n"
 
 #: data/gnome-mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -216,7 +215,7 @@ msgstr "_Bestzeiten"
 
 #: src/interface.ui:400
 msgid "_Play Again"
-msgstr "_Weiterers Spiel"
+msgstr "_Weiteres Spiel"
 
 #: src/interface.ui:464
 msgid "Paused"
