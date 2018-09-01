@@ -7,6 +7,7 @@
     <link type="guide" xref="index#play"/>
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.5.5" date="2012-08-12" status="review"/>
+    <revision pkgversion="3.28.0" version="0.3" date="2018-09-01" status="review"/>
 
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
@@ -47,8 +48,7 @@
     <table>
       <tr>
         <td>
-	  <p>Red flags are those that cannot be clicked. To place a red flag on
-	  a tile:</p>
+	  <p>Flags cannot be clicked. To place a flag on a tile:</p>
           <list>
             <item><p>right click on a blank tile.</p></item>
           </list>
@@ -61,24 +61,24 @@
 
       <note style="tip">
 	<p>To make the number of available flags equal to the number of
-	remaining mines, enable <gui style="checkbox">Warn if too many flags
-	placed</gui> and <gui style="checkbox">Use "I'm not sure" flags</gui>
-	preference options, then restart the application.<!-- This is a bug!
-	The warnings do not work properly at the moment.--></p>
+	remaining mines, open the application menu in the top bar and
+	enable the <gui style="checkbox">Show Warnings</gui>
+	and <gui style="checkbox">Use Question Flags</gui>
+	preferences.</p>
      </note>
 
   </section>
 
   <section id="flags-blue">
-    <title>Use of the <em>I'm not sure</em> flag</title>
-    <p>If you are not sure whether a tile hides a mine, you can use the blue
-    <em>I'm not sure</em> flag.</p>
+    <title>Use of the <em>question</em> flag</title>
+    <p>If you are not sure whether a tile hides a mine, you can use the
+    <em>question</em> flag.</p>
     <table>
       <tr>
         <td>
           <p>To put an <em>I'm not sure</em> flag on a tile:</p>
           <list>
-	    <item><p>Right-click twice on a blank tile or once on a red
+	    <item><p>Right-click twice on a blank tile or once on a 
 	    flag.</p></item>
           </list>
         </td>
@@ -89,9 +89,8 @@
     </table>
 
   <note>
-    <p>To enable these flags, click <guiseq><gui style="manu">Mines</gui><gui
-    style="menuitem">Preferences</gui></guiseq>, and select <gui>Use "I'm not
-    sure" flags</gui>.</p>
+    <p>To enable these flags, open the application menu in the top bar and
+        enable the <gui style="checkbox">Use Question Flags</gui> preference.</p>
   </note>
 
   </section>
