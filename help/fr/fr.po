@@ -3,25 +3,26 @@
 # This file is distributed under the same license as the gnomine documentation package.
 #
 #
+#
 # Bruno Brouard <annoa.b@gmail.com>, 2007, 2012.
 # Claude Paroz <claude@2xlibre.net>, 2007-2008.
 # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
 # Julien Hardelin <jhardlin@orange.fr>, 2013.
 # Charles Monzat <superboa@hotmail.fr>, 2017.
-#
+# jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine doc fr\n"
-"POT-Creation-Date: 2017-09-26 14:14+0000\n"
-"PO-Revision-Date: 2017-10-21 21:03+0200\n"
-"Last-Translator: Charles Monzat <superboa@hotmail.fr>\n"
-"Language-Team: français <gnomefr@traduc.org>\n"
+"POT-Creation-Date: 2018-06-01 10:04+0000\n"
+"PO-Revision-Date: 2018-08-31 23:17+0100\n"
+"Last-Translator: jean-baptiste <jean-baptiste@holcroft.fr>\n"
+"Language-Team: French <kde-i18n-doc@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Lokalize 2.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -31,31 +32,32 @@ msgstr ""
 "Claude Paroz <claude@2xlibre.net>, 2007-2008\n"
 "Alain Lojewski <allomervan@gmail.com>, 2012-2013\n"
 "Yoann Fievez <yoann.fievez@gmail.com>, 2013\n"
-"Julien Hardelin <jhardlin@orange.fr>, 2013."
+"Julien Hardelin <jhardlin@orange.fr>, 2013\n"
+"Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:10
+#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
 #: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:12 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:15 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:17 C/high-scores.page:12
+#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
 #: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
 #: C/shortcuts.page:11
 msgid "2012"
@@ -70,7 +72,7 @@ msgstr "Modification de la taille du plateau"
 #: C/board-size.page:24
 msgid "You can select a field size at the start of a new game."
 msgstr ""
-"Vous pouvez choisir une taille de plateau au début d'une nouvelle partie."
+"Vous pouvez choisir une taille de plateau au début d’une nouvelle partie."
 
 #. (itstool) path: item/p
 #: C/board-size.page:28
@@ -119,7 +121,7 @@ msgstr "Tiffany Antopolski"
 #: C/index.page:21 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l'Identique 3.0"
+"Creative Commons Paternité-Partage des Conditions Initiales à l’Identique 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
@@ -129,19 +131,25 @@ msgstr "Contribution pour améliorer <app>Mines</app> "
 #. (itstool) path: section/title
 #: C/bug-filing.page:21
 msgid "Report a bug or suggest an improvement"
-msgstr "Rapport d'anomalie ou suggestion d'amélioration"
+msgstr "Rapport d’anomalie ou suggestion d’amélioration"
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:22
+#| msgid ""
+#| "<app>Mines</app> is maintained by a volunteer community. You are welcome "
+#| "to participate. If you notice a problem you can file a <em>bug report</"
+#| "em>. To file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
 msgid ""
 "<app>Mines</app> is maintained by a volunteer community. You are welcome to "
 "participate. If you notice a problem you can file a <em>bug report</em>. To "
-"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
+"file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
 msgstr ""
 "<app>Mines</app> est maintenu par une communauté de volontaires. Votre "
 "contribution est la bienvenue. Si vous remarquez un problème, vous pouvez "
-"remplir un <em>rapport d'anomalie</em> en allant sur <link href=\"https://"
-"bugzilla.gnome.org/\"/>."
+"remplir un <em>rapport d’anomalie</em> en allant sur <link href=\"https:// "
+"gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -149,66 +157,76 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs and crashes, or request enhancements."
 msgstr ""
-"Il s'agit d'un système de suivi de bogues où les utilisateurs et les "
+"Il s’agit d’un système de suivi de bogues où les utilisateurs et les "
 "développeurs peuvent déposer des informations sur les bogues et les "
 "plantages, ou demander des améliorations."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:28
+#| msgid ""
+#| "To participate you need an account, which will give you the ability to "
+#| "gain access, file bugs, make comments, and receive updates by e-mail "
+#| "about the status of your bug. If you don't already have an account, just "
+#| "click on the <gui>New Account</gui> link to create one."
 msgid ""
 "To participate you need an account, which will give you the ability to gain "
 "access, file bugs, make comments, and receive updates by e-mail about the "
 "status of your bug. If you don't already have an account, just click on the "
-"<gui>New Account</gui> link to create one."
+"<gui>Sign in/Register</gui> link to create one."
 msgstr ""
 "Pour participer vous devez avoir un compte, ce qui vous donnera la "
-"possibilité d'obtenir les fichiers de bogues, de faire des commentaires, et "
-"de recevoir des mises à jour par e-mail sur l'état de votre bogue. Si vous "
-"n'avez pas déjà un compte, il suffit de cliquer sur le lien <gui>Nouveau "
-"compte</gui> pour en créer un."
+"possibilité d’obtenir les fichiers de bogues, de faire des commentaires, et "
+"de recevoir des mises à jour par e-mail sur l’état de votre bogue. Si vous "
+"n’avez pas déjà un compte, il suffit de cliquer sur le lien <gui>Sign in/ "
+"Register</gui> pour en créer un."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
+#| msgid ""
+#| "Once you have an account, log in, click on <guiseq><gui>File a Bug</"
+#| "gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+#| "\">browse</link> for the bug to see if it already exists."
 msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
-"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
-"for the bug to see if it already exists."
+"Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
+"link> for the bug to see if it already exists."
 msgstr ""
-"Une fois que vous avez un compte, connectez-vous. Il s'agit d'un site en "
-"anglais. Cliquez sur <guiseq><gui>File a Bug (Déposer un bogue)</gui><gui> "
-"Applications</gui><gui>gnome-mines</gui></guiseq>. Avant de rapporter un "
+"Une fois que vous avez un compte, connectez-vous. Il s’agit d’un site en "
+"anglais. Cliquez sur <gui>New Issue</gui>. Avant de rapporter un "
 "bogue, lisez les <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-"
 "writing.html\">bug writing guidelines (en anglais)</link>, et cliquez sur "
-"<link href=\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines"
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
 "\">Browse (Parcourir)</link> pour voir si le bogue existe déjà."
 
 #. (itstool) path: section/p
-#: C/bug-filing.page:40
+#: C/bug-filing.page:39
 #| msgid ""
 #| "If you are requesting a new feature, choose <gui>enhancement</gui> in the "
 #| "<gui>Severity</gui> menu. Fill in the Summary and Description sections "
-#| "and click <gui>Commit</gui>."
+#| "and click <gui>Submit Bug</gui>."
 msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Submit Bug</gui>."
+"If you are requesting a new feature, choose <gui>Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit issue</gui>."
 msgstr ""
-"Si vous demandez une nouvelle fonctionnalité, choisissez <gui>enhancement</"
-"gui> (amélioration) dans le menu <gui>Severity</gui> (sévérité). Remplissez "
-"les rubriques « Summary » (résumé) et « Description » puis cliquez sur "
-"<gui>Submit Bug</gui> (signaler un bogue)."
+"Si vous demandez une nouvelle fonctionnalité, choisissez <gui>Feature</"
+"gui> (fonctionnalité) dans le menu <gui>Labels</gui> (libellés). Remplissez "
+"les rubriques « Title » (titre) et « Description » puis cliquez sur "
+"<gui>Submit issue</gui> (signaler un problème)."
 
 #. (itstool) path: section/p
-#: C/bug-filing.page:44
+#: C/bug-filing.page:43
 msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
 msgstr ""
-"Votre signalement recevra un numéro d'identification, et son statut sera mis "
-"à jour quand il sera traité. Merci de participer à l'amélioration de "
+"Votre signalement recevra un numéro d’identification, et son statut sera mis "
+"à jour quand il sera traité. Merci de participer à l’amélioration de "
 "<app>Mines</app> !"
 
 #. (itstool) path: page/title
@@ -250,7 +268,7 @@ msgstr "Aruna Sankaranarayanan"
 #. (itstool) path: page/title
 #: C/documentation.page:27
 msgid "Help write documentation"
-msgstr "Contribution à la rédaction du manuel d'aide"
+msgstr "Contribution à la rédaction du manuel d’aide"
 
 #. (itstool) path: page/p
 #: C/documentation.page:29
@@ -329,9 +347,9 @@ msgid ""
 msgstr ""
 "Pour que le nombre de drapeaux disponibles soit égal au nombre de mines "
 "restantes, allez dans les préférences, cochez les cases <gui style=\"checkbox"
-"\">Avertir s'il y a trop de drapeaux</gui> et <gui style=\"checkbox"
+"\">Avertir s’il y a trop de drapeaux</gui> et <gui style=\"checkbox"
 "\">Utiliser le drapeau « Je ne suis pas sûr »</gui>, puis redémarrez "
-"l'application."
+"l’application."
 
 #. (itstool) path: section/title
 #: C/flags.page:73
@@ -372,55 +390,46 @@ msgstr ""
 "drapeau <em>« Je ne suis pas sûr »</em></gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:20 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:26
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:22
+#: C/get-help.page:23
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:27
-msgid "Hints and warnings"
-msgstr "Astuces et avertissements"
+#: C/get-help.page:28
+msgid "Warnings"
+msgstr "Avertissements"
 
 #. (itstool) path: page/p
-#: C/get-help.page:29
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
+#: C/get-help.page:30
+#| msgid ""
+#| "You can use hints to reveal safe tiles, and flag warnings to help you "
+#| "keep track of flags."
+msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
-"Vous pouvez utiliser des astuces pour révéler les tuiles sécurisées et "
-"drapeaux d'avertissement pour vous aider à garder une trace des drapeaux."
+"Vous pouvez utiliser les drapeaux d’avertissement pour "
+"vous aider à garder une trace des drapeaux."
 
 #. (itstool) path: page/p
 #: C/get-help.page:32
+#| msgid ""
+#| "To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
+#| "gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
+#| "<gui>Warn if too many flags are placed next to a number</gui>. This will "
+#| "warn you when you try to place too many flags next to an open tile."
 msgid ""
-"Click on the button <gui style=\"button\">Receive a hint for your next move</"
-"gui> on the top right to reveal a hidden tile that is safe. A penalty of ten "
-"seconds will be added to your total time. The penalty will be increased by "
-"ten seconds progressively on subsequent hints till the ninth hint."
+"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
+"flags next to an open tile."
 msgstr ""
-"Cliquez sur le bouton <gui style=\"button\">Recevoir une astuce pour votre "
-"prochain coup</gui> en haut à droite pour révéler une tuile cachée "
-"sécurisée. Une pénalité de dix secondes sera ajoutée à votre temps total. La "
-"pénalité augmente progressivement de dix secondes aux astuces suivantes "
-"jusqu'à la neuvième."
-
-#. (itstool) path: page/p
-#: C/get-help.page:38
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and checking the checkbox next to "
-"<gui>Warn if too many flags are placed next to a number</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Pour activer les avertissements, cliquez sur <guiseq><gui>Mines</"
-"gui><gui>Préférences</gui></guiseq> et cochez la case <gui>Avertir s'il y a "
-"trop de drapeaux</gui>. Vous serez averti si vous tentez de planter trop de "
-"drapeaux à proximité d'une tuile retournée."
+"Pour activer les avertissements, cliquez sur <gui>Mines</gui> dans la "
+"barre du haut et sélectionnez <gui>Montrer les avertissements</gui>. "
+"Vous serez averti si vous tentez de planter trop de drapeaux à "
+"proximité d’une tuile retournée."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:22
@@ -481,9 +490,9 @@ msgid ""
 "triggering an explosion."
 msgstr ""
 "<app>Mines</app> est un clone du jeu Démineur. Le but du jeu est de repérer "
-"toutes les mines cachées sous les tuiles d'une grille carrée. Vous aurez "
-"besoin de réflexion et d'un peu de chance pour les trouver toutes sans "
-"provoquer d'explosion."
+"toutes les mines cachées sous les tuiles d’une grille carrée. Vous aurez "
+"besoin de réflexion et d’un peu de chance pour les trouver toutes sans "
+"provoquer d’explosion."
 
 #. (itstool) path: section/title
 #: C/index.page:34
@@ -503,7 +512,7 @@ msgstr "Avancée"
 #. (itstool) path: section/title
 #: C/index.page:43
 msgid "Get Involved"
-msgstr "Comment s'impliquer"
+msgstr "Comment s’impliquer"
 
 #. (itstool) path: info/desc
 #: C/license.page:8
@@ -522,7 +531,7 @@ msgid ""
 "Unported license."
 msgstr ""
 "Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l'Identique 3.0 Unported."
+"des Conditions Initiales à l’Identique 3.0 Unported."
 
 #. (itstool) path: page/p
 #: C/license.page:20
@@ -547,7 +556,7 @@ msgstr "<em>de modifier</em>"
 #. (itstool) path: item/p
 #: C/license.page:30
 msgid "To adapt the work."
-msgstr "d'adapter cette création,"
+msgstr "d’adapter cette création,"
 
 #. (itstool) path: page/p
 #: C/license.page:33
@@ -566,15 +575,15 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"Vous devez citer le nom de l'auteur original de la manière indiquée par "
-"l'auteur de l'œuvre ou le titulaire des droits qui vous confère cette "
-"autorisation (mais pas d'une manière qui suggèrerait qu'ils vous soutiennent "
-"ou approuvent votre utilisation de l'œuvre)."
+"Vous devez citer le nom de l’auteur original de la manière indiquée par "
+"l’auteur de l’œuvre ou le titulaire des droits qui vous confère cette "
+"autorisation (mais pas d’une manière qui suggèrerait qu’ils vous soutiennent "
+"ou approuvent votre utilisation de l’œuvre)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
 msgid "<em>Share Alike</em>"
-msgstr "<em>Partage des conditions initiales à l'identique</em>"
+msgstr "<em>Partage des conditions initiales à l’identique</em>"
 
 #. (itstool) path: item/p
 #: C/license.page:47
@@ -582,7 +591,7 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
-"Si vous modifiez, transformez ou adaptez cette création, vous n'avez le "
+"Si vous modifiez, transformez ou adaptez cette création, vous n’avez le "
 "droit de distribuer la création qui en résulte que sous un contrat identique "
 "à celui-ci."
 
@@ -616,7 +625,7 @@ msgid ""
 "Game</gui></guiseq> from the application menu."
 msgstr ""
 "Cliquez sur <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem"
-"\">Nouvelle partie</gui></guiseq> à partir du menu d'application."
+"\">Nouvelle partie</gui></guiseq> à partir du menu d’application."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
@@ -666,7 +675,7 @@ msgid ""
 "The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
 msgstr ""
-"Le jeu commence avec le tableau couvert de tuiles. Cliquez sur n'importe "
+"Le jeu commence avec le tableau couvert de tuiles. Cliquez sur n’importe "
 "quelle tuile pour la découvrir. Vous allez découvrir :"
 
 #. (itstool) path: item/p
@@ -685,7 +694,7 @@ msgstr ""
 msgid ""
 "A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
-"Une tuile vide, ce qui signifie qu'il n'y a de mine sous aucune des tuiles "
+"Une tuile vide, ce qui signifie qu’il n’y a de mine sous aucune des tuiles "
 "adjacentes."
 
 #. (itstool) path: item/p
@@ -699,7 +708,7 @@ msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
 msgstr ""
-"Recommencez les étapes précédentes jusqu'à avoir retourné toutes les tuiles "
+"Recommencez les étapes précédentes jusqu’à avoir retourné toutes les tuiles "
 "du plateau qui ne cachent pas de mine."
 
 #. (itstool) path: page/p
@@ -752,7 +761,7 @@ msgid ""
 "Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
 "key."
 msgstr ""
-"Utilisez le raccourci de la barre d'outils si votre clavier ne possède pas "
+"Utilisez le raccourci de la barre d’outils si votre clavier ne possède pas "
 "de touche <key>Pause</key>."
 
 #. (itstool) path: td/p
@@ -792,7 +801,7 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"L'interface utilisateur et la documentation des <app>jeux GNOME</app> est "
+"L’interface utilisateur et la documentation des <app>jeux GNOME</app> est "
 "actuellement traduite par une communauté de volontaires dans le monde "
 "entier. Votre contribution est la bienvenue."
 
@@ -816,7 +825,7 @@ msgid ""
 msgstr ""
 "Pour commencer à traduire, vous devez <link href=\"http://l10n.gnome.org"
 "\">créer un compte</link> et rejoindre <link href=\"http://l10n.gnome.org/"
-"teams/\">l'équipe de traduction</link> de votre langue. Ce compte va vous "
+"teams/\">l’équipe de traduction</link> de votre langue. Ce compte va vous "
 "permettre de téléverser de nouvelles traductions."
 
 #. (itstool) path: page/p
@@ -827,10 +836,10 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Vous pouvez discuter avec d'autres traducteurs de GNOME par le canal <link "
+"Vous pouvez discuter avec d’autres traducteurs de GNOME par le canal <link "
 "href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
 "\">irc</link>. Les personnes abonnées à ce canal sont disséminées dans le "
-"monde entier, vous n'aurez donc probablement pas de réponse rapide à cause "
+"monde entier, vous n’aurez donc probablement pas de réponse rapide à cause "
 "des décalages horaires."
 
 #. (itstool) path: page/p
@@ -840,9 +849,25 @@ msgid ""
 "<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Vous pouvez aussi joindre par courriel l'équipe d'internationalisation en "
+"Vous pouvez aussi joindre par courriel l’équipe d’internationalisation en "
 "utilisant leur <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">liste de diffusion</link>."
+
+#~ msgid "Hints and warnings"
+#~ msgstr "Astuces et avertissements"
+
+#~ msgid ""
+#~ "Click on the button <gui style=\"button\">Receive a hint for your next "
+#~ "move</gui> on the top right to reveal a hidden tile that is safe. A "
+#~ "penalty of ten seconds will be added to your total time. The penalty will "
+#~ "be increased by ten seconds progressively on subsequent hints till the "
+#~ "ninth hint."
+#~ msgstr ""
+#~ "Cliquez sur le bouton <gui style=\"button\">Recevoir une astuce pour "
+#~ "votre prochain coup</gui> en haut à droite pour révéler une tuile cachée "
+#~ "sécurisée. Une pénalité de dix secondes sera ajoutée à votre temps total. "
+#~ "La pénalité augmente progressivement de dix secondes aux astuces "
+#~ "suivantes jusqu'à la neuvième."
 
 #~ msgid "Fullscreen"
 #~ msgstr "Plein écran"
