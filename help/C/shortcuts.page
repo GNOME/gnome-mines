@@ -28,7 +28,7 @@
        <tr>
           <td><p>Pause</p></td>
           <td><p><key>Pause</key></p>
-              <note><p>Use the <gui style="button">Pause</button> on the right if
+              <note><p>Use the <gui style="button">Pause</gui> on the right if
               your keyboard does not have a <key>Pause</key> key.</p></note></td>
        </tr>
        <tr>
