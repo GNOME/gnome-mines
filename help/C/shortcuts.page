@@ -4,6 +4,7 @@
   <info>
     <link type="guide" xref="index#advanced" />
     <revision version="0.1" date="2012-08-12" status="review"/>
+    <revision pkgversion="3.28.0" version="0.2" date="2018-09-01" status="review"/>
 
     <credit type="author copyright">
       <name>Brian Grohe</name>
@@ -27,7 +28,8 @@
        <tr>
           <td><p>Pause</p></td>
           <td><p><key>Pause</key></p>
-              <note><p>Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> key.</p></note></td>
+              <note><p>Use the <gui style="button">Pause</button> on the right if
+              your keyboard does not have a <key>Pause</key> key.</p></note></td>
        </tr>
        <tr>
           <td><p>Help</p></td>
