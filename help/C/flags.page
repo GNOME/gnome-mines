@@ -39,6 +39,9 @@
      <p>Flags are used to mark tiles which you suspect may hide a mine. Putting
      a flag on a tile prevents you from clicking on it and possibly causing an
      explosion, which would end the game.</p>
+     <p>The exact look of the flags depends on the theme. You can change the
+     theme by clicking <gui>Mines</gui> in the top bar and then selecting
+     <gui>Appearance</gui>.
     </td>
    </tr>
   </table>
