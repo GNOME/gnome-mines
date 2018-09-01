@@ -7,8 +7,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines-help\n"
-"POT-Creation-Date: 2018-06-01 10:04+0000\n"
-"PO-Revision-Date: 2018-08-12 00:47+0200\n"
+"POT-Creation-Date: 2018-09-01 18:03+0000\n"
+"PO-Revision-Date: 2018-09-01 21:49+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -26,79 +26,80 @@ msgstr ""
 "Aviary.pl <community-poland@mozilla.org>, 2017-2018"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
-#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:19 C/get-help.page:11
+#: C/high-scores.page:11 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
 #: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:25
+#: C/get-help.page:16 C/high-scores.page:16 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:15 C/flags.page:21
+#: C/flags.page:27 C/get-help.page:18 C/high-scores.page:13
+#: C/high-scores.page:18 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/shortcuts.page:12
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/board-size.page:22
+#: C/board-size.page:23
 msgid "How to change the game board size"
 msgstr "Jak zmienić rozmiar planszy"
 
 #. (itstool) path: page/p
-#: C/board-size.page:24
-msgid "You can select a field size at the start of a new game."
-msgstr "Można wybrać rozmiar planszy na początku nowej gry."
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
+msgstr "Można wybrać rozmiar planszy po uruchomieniu gry."
 
-#. (itstool) path: item/p
-#: C/board-size.page:28
-msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
-msgstr ""
-"Kliknij <gui style=\"button\">Nowa</gui> lub <guiseq><gui style=\"menu"
-"\">Miny</gui> <gui style=\"menuitem\">Nowa gra</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/board-size.page:33
+#. (itstool) path: page/p
+#: C/board-size.page:27
 msgid "Select one of the grid sizes:"
 msgstr "Wybierz jeden z rozmiarów:"
 
 #. (itstool) path: item/p
-#: C/board-size.page:35
+#: C/board-size.page:29
 msgid "a 8 × 8 board with 10 mines"
 msgstr "8×8 z 10 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:36
+#: C/board-size.page:30
 msgid "a 16 × 16 board with 40 mines"
 msgstr "16×16 z 40 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:37
+#: C/board-size.page:31
 msgid "a 30 × 16 board with 99 mines"
 msgstr "30×16 z 99 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:38
+#: C/board-size.page:32
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr "niestandardowa plansza, gdzie można wybrać rozmiar i liczbę min"
 
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"Aby zmienić <link xref=\"board-size\">rozmiar planszy</link> później, "
+"kliknij przycisk <gui style=\"button\">Zmień poziom trudności</gui> po "
+"prawej stronie."
+
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:13
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -209,21 +210,21 @@ msgstr ""
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
 "\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz skontaktować się "
 "z programistami za pomocą sieci <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> lub przez <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
 "link> (w języku angielskim)."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/new-game.page:22
+#: C/documentation.page:19 C/new-game.page:23
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -246,33 +247,33 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Jeśli chcesz wziąć udział w projekcie dokumentacji, to skontaktuj się z nami "
 "w kanale <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">#docs</link> w sieci <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> lub przez <link href=\"http://mail."
+"gnome.org%2Fdocs\">#docs</link> w sieci <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> lub przez <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">listę pocztową</link> (w języku "
 "angielskim)."
 
 #. (itstool) path: page/p
 #: C/documentation.page:40
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Nasza <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
 
 #. (itstool) path: page/title
-#: C/flags.page:31
+#: C/flags.page:32
 msgid "How to use flags"
 msgstr "Jak używać flag"
 
 #. (itstool) path: td/p
-#: C/flags.page:38
+#: C/flags.page:39
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -282,75 +283,80 @@ msgstr ""
 "Umieszczenie flagi na polu uniemożliwia przypadkowe kliknięcie i możliwy "
 "wybuch, co zakończyłoby grę."
 
+#. (itstool) path: td/p
+#: C/flags.page:42
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by clicking <gui>Mines</gui> in the top bar and then selecting "
+"<gui>Appearance</gui>."
+msgstr ""
+"Wygląd flag zależy od motywu. Można go zmienić klikając <gui>Miny</gui> na "
+"górnym pasku, a następnie wybierając <gui>Wygląd</gui>."
+
 #. (itstool) path: section/title
-#: C/flags.page:46
+#: C/flags.page:50
 msgid "How to place a flag on a tile"
 msgstr "Jak umieścić flagę na polu"
 
 #. (itstool) path: td/p
-#: C/flags.page:50
-msgid ""
-"Red flags are those that cannot be clicked. To place a red flag on a tile:"
-msgstr ""
-"Czerwonych flag nie można kliknąć. Aby umieścić czerwoną flagę na polu:"
+#: C/flags.page:54
+msgid "Flags cannot be clicked. To place a flag on a tile:"
+msgstr "Flag nie można kliknąć. Aby umieścić flagę na polu:"
 
 #. (itstool) path: item/p
-#: C/flags.page:53
+#: C/flags.page:56
 msgid "right click on a blank tile."
 msgstr "kliknij puste pole prawym przyciskiem myszy."
 
 #. (itstool) path: note/p
-#: C/flags.page:63
+#: C/flags.page:66
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
-"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
-"options, then restart the application."
+"mines, open the application menu in the top bar and enable the <gui style="
+"\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
+"Flags</gui> preferences."
 msgstr ""
-"Aby liczba dostępnych flag równała się liczbie pozostałych min, włącz opcje "
-"<gui style=\"checkbox\">Ostrzeganie o zbyt dużej liczbie flag</gui> i <gui "
-"style=\"checkbox\">Flagi niepewności</gui>, a następnie ponownie uruchom "
-"program."
+"Aby liczba dostępnych flag równała się liczbie pozostałych min, otwórz menu "
+"programu na górnym pasku i włącz preferencje <gui style=\"checkbox"
+"\">Ostrzeżenia</gui> i <gui style=\"checkbox\">Flagi niepewności</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:73
-msgid "Use of the <em>I'm not sure</em> flag"
+#: C/flags.page:76
+msgid "Use of the <em>question</em> flag"
 msgstr "Korzystanie z flagi niepewności"
 
 #. (itstool) path: section/p
-#: C/flags.page:74
+#: C/flags.page:77
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue "
-"<em>I'm not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
 msgstr ""
-"W przypadku braku pewności, czy pole skrywa minę, można użyć niebieskiej "
-"flagi niepewności."
+"W przypadku braku pewności, czy pole skrywa minę, można użyć flagi "
+"niepewności."
 
 #. (itstool) path: td/p
-#: C/flags.page:79
+#: C/flags.page:82
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Aby umieścić flagę niepewności na polu:"
 
 #. (itstool) path: item/p
-#: C/flags.page:81
-msgid "Right-click twice on a blank tile or once on a red flag."
+#: C/flags.page:84
+msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Podwójnie kliknij puste pole prawym przyciskiem myszy lub raz w przypadku "
-"pola z czerwoną flagą."
+"pola z flagą."
 
 #. (itstool) path: note/p
-#: C/flags.page:92
+#: C/flags.page:95
 msgid ""
-"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
-"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
-"sure\" flags</gui>."
+"To enable these flags, open the application menu in the top bar and enable "
+"the <gui style=\"checkbox\">Use Question Flags</gui> preference."
 msgstr ""
-"Aby włączyć te flagi, kliknij <guiseq><gui style=\"manu\">Miny</gui><gui "
-"style=\"menuitem\">Preferencje</gui></guiseq> i zaznacz opcję <gui>Flagi "
-"niepewności</gui>."
+"Aby włączyć te flagi, otwórz menu programu na górnym pasku i włącz "
+"preferencję <gui style=\"checkbox\">Flagi niepewności</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
@@ -381,12 +387,12 @@ msgstr ""
 "ostrzeżenia, jeśli obok otwartego pola umieszczono za dużo flag."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:22
+#: C/high-scores.page:23
 msgid "High scores"
 msgstr "Najlepsze wyniki"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:24
+#: C/high-scores.page:25
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -395,16 +401,16 @@ msgstr ""
 "wyczyszczono każdy typ planszy."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:27
+#: C/high-scores.page:28
 msgid ""
-"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"To view the high scores, open the application menu in the top bar and select "
+"<gui style=\"menuitem\">Scores</gui>. The dialog will display the "
 "<gui>Small</gui> field size by default; to view other sizes, select them in "
 "the drop down menu at the top of the dialog."
 msgstr ""
-"Aby wyświetlić najlepsze wyniki, wybierz <guiseq><gui style=\"menu\">Miny</"
-"gui><gui style=\"menuitem\">Wyniki</gui></guiseq>. Domyślnie wyświetlana "
-"jest <gui>Mała</gui> plansza. Z rozwijanego menu na górze okna można wybrać "
+"Aby wyświetlić najlepsze wyniki, otwórz menu programu na górnym pasku "
+"i wybierz <gui style=\"menuitem\">Wyniki</gui>. Domyślnie wyświetlana jest "
+"<gui>Mała</gui> plansza. Z rozwijanego menu na górze okna można wybrać "
 "pozostałe typy plansz."
 
 #. (itstool) path: info/title
@@ -420,7 +426,7 @@ msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:9
+#: C/index.page:13 C/shortcuts.page:10
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -552,38 +558,43 @@ msgstr ""
 "sa/3.0/\">podsumowanie</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:31
+#: C/new-game.page:32
 msgid "Start a new game"
 msgstr "Rozpoczynanie nowej gry"
 
 #. (itstool) path: page/p
-#: C/new-game.page:33
+#: C/new-game.page:34
 msgid "To start a new game:"
 msgstr "Aby rozpocząć nową grę:"
 
 #. (itstool) path: item/p
-#: C/new-game.page:36
-msgid ""
-"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
-"Game</gui></guiseq> from the application menu."
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
 msgstr ""
-"Wybierz <guiseq><gui style=\"menu\">Miny</gui><gui style=\"menuitem\">Nowa "
-"gra</gui></guiseq> z menu programu."
+"Kliknij przycisk <gui style=\"button\">Zagraj jeszcze raz</gui> po prawej "
+"stronie."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
-msgid "Select your preferred <link xref=\"board-size\">board size</link>."
-msgstr "Wybierz preferowany <link xref=\"board-size\">rozmiar planszy</link>."
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"Aby zmienić <link xref=\"board-size\">rozmiar planszy</link>, kliknij "
+"przycisk <gui style=\"button\">Zmień poziom trudności</gui> po prawej "
+"stronie."
 
 #. (itstool) path: note/p
-#: C/new-game.page:46
+#: C/new-game.page:47
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to "
-"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
-"former, your current game will be lost."
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
-"Jeśli gra już trwa, to użytkownik zostanie zapytany, czy rozpocząć nową grę, "
-"czy kontynuować obecną. Wybranie nowej gry spowoduje utratę obecnej."
+"Jeśli gra już trwa i klikniesz przycisk <gui style=\"button\">Zacznij od "
+"początku</gui>, to użytkownik zostanie zapytany, czy kontynuować obecną grę, "
+"czy rozpocząć nową. Wybranie nowej gry spowoduje utratę obecnej."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -656,66 +667,66 @@ msgstr ""
 "xref=\"high-scores\">najlepszych wyników</link>."
 
 #. (itstool) path: page/title
-#: C/shortcuts.page:17
+#: C/shortcuts.page:18
 msgid "Keyboard shortcuts"
 msgstr "Skróty klawiszowe"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:20
+#: C/shortcuts.page:21
 msgid "New game"
 msgstr "Nowa gra"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:21
+#: C/shortcuts.page:22
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:24
+#: C/shortcuts.page:25
 msgid "New game with last used settings"
 msgstr "Nowa gra z ostatnio używanymi ustawieniami"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:25
+#: C/shortcuts.page:26
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:28
+#: C/shortcuts.page:29
 msgid "Pause"
 msgstr "Wstrzymanie gry"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:29
+#: C/shortcuts.page:30
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:30
+#: C/shortcuts.page:31
 msgid ""
-"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
-"key."
+"Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
+"not have a <key>Pause</key> key."
 msgstr ""
-"Jeśli klawiatura nie ma klawisza <key>Pause</key>, to użyj skrótu na pasku "
-"narzędziowym."
+"Jeśli klawiatura nie ma klawisza <key>Pause</key>, to użyj przycisku <gui "
+"style=\"button\">Wstrzymaj</gui> po prawej stronie."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:35
 msgid "Help"
 msgstr "Pomoc"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:36
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:39
 msgid "Quit"
 msgstr "Zakończenie gry"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:40
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -742,22 +753,22 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"<link href=\"http://l10n.gnome.org/module/gnome-mines/\">Wiele języków</"
+"<link href=\"https://l10n.gnome.org/module/gnome-mines/\">Wiele języków</"
 "link> nadal potrzebuje tłumaczeń."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"http://l10n.gnome.org"
-"\">utworzenie konta</link> i dołączenie do <link href=\"http://l10n.gnome."
+"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"https://l10n.gnome.org"
+"\">utworzenie konta</link> i dołączenie do <link href=\"https://l10n.gnome."
 "org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
 "wysyłanie nowych tłumaczeń."
 
@@ -778,9 +789,9 @@ msgstr ""
 #: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
 "Można także skontaktować się z zespołem tłumaczeń za pomocą <link href="
-"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</link> "
-"(w języku angielskim)."
+"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</"
+"link> (w języku angielskim)."
