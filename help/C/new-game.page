@@ -7,6 +7,7 @@
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.5.5" date="2012-08-12" status="review"/>
     <revision pkgversion="3.12" date="2014-03-08" status="review"/>
+    <revision pkgversion="3.28.0" version="0.2" date="2018-09-01" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -33,18 +34,19 @@
   <p>To start a new game:</p>
   <steps>
     <item>
-      <p>Select
-      <guiseq><gui style="menu">Mines</gui><gui style="menuitem">New
-      Game</gui></guiseq> from the application menu.</p>
+      <p>Press the
+      <gui style="button">Play again</gui> button on the right.</p>
     </item>
     <item>
-      <p>Select your preferred <link xref="board-size">board size</link>.</p>
+      <p>To change the <link xref="board-size">board size</link>, press the
+      <gui style="button">Change Difficulty</gui> button on the right.</p>
     </item>
   </steps>
 
   <note>
-  <p>If you are already playing a game, <app>Mines</app> will ask if you want
-  to <gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose
-  the former, your current game will be lost.</p>
+  <p>If you are already playing a game and press the <gui style="button">Start
+  over</gui> button, <app>Mines</app> will ask if you want
+  to <gui>Keep Current Game</gui> or <gui>Start New Game</gui>. If you choose
+  the latter, your current game will be lost.</p>
   </note>
 </page>
