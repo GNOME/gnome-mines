@@ -4,6 +4,7 @@
   <info>
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.5.5" version="0.1" date="2012-08-12" status="review"/>
+    <revision pkgversion="3.28.0" version="0.2" date="2018-09-01" status="review"/>
     <link type="guide" xref="index#tips"/>
 
     <credit type="author copyright">
@@ -24,8 +25,8 @@
   <p>The high scores list the ten fastest times in which each type of mine
   field has been cleared.</p>
 
-  <p>To view the high scores, select <guiseq><gui style="menu">Mines</gui><gui
-  style="menuitem">Scores</gui></guiseq>. The dialog will display the
+  <p>To view the high scores, open the application menu in the top bar and
+  select <gui style="menuitem">Scores</gui>. The dialog will display the
   <gui>Small</gui> field size by default; to view other sizes, select them in
   the drop down menu at the top of the dialog.</p>
 
