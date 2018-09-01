@@ -7,7 +7,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/libgee"
+                    "url": "https://gitlab.gnome.org/GNOME/libgee.git"
                 }
             ]
         },
@@ -16,7 +16,7 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://git.gnome.org/libgnome-games-support"
+                    "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
                 }
             ]
         }
