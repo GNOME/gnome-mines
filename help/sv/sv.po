@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2018-05-30 10:58+0000\n"
-"PO-Revision-Date: 2018-06-01 11:39+0200\n"
+"POT-Creation-Date: 2018-09-01 19:54+0000\n"
+"PO-Revision-Date: 2018-09-02 15:30+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 2.1.1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -22,83 +22,84 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>, 2007, 2009\n"
-"Erik Sköldås <erik.skoldas@tele2.se>, 2015"
+"Erik Sköldås <erik.skoldas@tele2.se>, 2015\n"
+"Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
-#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:19 C/get-help.page:11
+#: C/high-scores.page:11 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
 #: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:25
+#: C/get-help.page:16 C/high-scores.page:16 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:15 C/flags.page:21
+#: C/flags.page:27 C/get-help.page:18 C/high-scores.page:13
+#: C/high-scores.page:18 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/shortcuts.page:12
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/board-size.page:22
+#: C/board-size.page:23
 msgid "How to change the game board size"
 msgstr "Hur man ändrar spelplanens storlek"
 
 #. (itstool) path: page/p
-#: C/board-size.page:24
-msgid "You can select a field size at the start of a new game."
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
 msgstr ""
-"Du kan välja spelplanens storlek i samband med att du startar ett nytt spel."
+"Du kan välja spelplanens storlek i samband med att du startar programmet."
 
-#. (itstool) path: item/p
-#: C/board-size.page:28
-msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
-msgstr ""
-"Klicka på <gui style=\"button\">Nytt</gui> eller <guiseq><gui style=\"menu"
-"\">Minor</gui> <gui style=\"menuitem\">Nytt spel</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/board-size.page:33
+#. (itstool) path: page/p
+#: C/board-size.page:27
 msgid "Select one of the grid sizes:"
 msgstr "Välj en av följande fältstorlekar:"
 
 #. (itstool) path: item/p
-#: C/board-size.page:35
+#: C/board-size.page:29
 msgid "a 8 × 8 board with 10 mines"
 msgstr "8 × 8 spelplan med 10 minor"
 
 #. (itstool) path: item/p
-#: C/board-size.page:36
+#: C/board-size.page:30
 msgid "a 16 × 16 board with 40 mines"
 msgstr "16 × 16 spelplan med 40 minor"
 
 #. (itstool) path: item/p
-#: C/board-size.page:37
+#: C/board-size.page:31
 msgid "a 30 × 16 board with 99 mines"
 msgstr "30 × 16 spelplan med 99 minor"
 
 #. (itstool) path: item/p
-#: C/board-size.page:38
+#: C/board-size.page:32
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr "en anpassad spelplan, där du väljer storlek och antalet minor"
 
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"För att ändra <link xref=\"board-size\">brädstorleken</link> senare, tryck "
+"på knappen <gui style=\"button\">Ändra svårighetsgrad</gui> till höger."
+
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:13
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -207,21 +208,21 @@ msgstr ""
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
+"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
 "\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du komma i "
 "kontakt med utvecklarna genom <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller via vår "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/games-list\">e-"
-"postlista</link>."
+"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">sändlista</"
+"link>."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/new-game.page:22
+#: C/documentation.page:19 C/new-game.page:23
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -244,32 +245,32 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Om du vill bidra till dokumentationsprojektet, ta kontakt med oss via <link "
 "href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> kanal på <link href=\"http://live.gnome.org/GnomeIrcChannels"
-"\">irc.gnome.org</link>eller via vår<link href=\"http://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">e-postlista</link> ."
+"\">#docs</link> kanal på <link href=\"https://wiki.gnome.org/GnomeIrcChannels"
+"\">irc.gnome.org</link> eller via vår <link href=\"https://mail.gnome.org/"
+"mailman/listinfo/gnome-doc-list\">sändlista</link>."
 
 #. (itstool) path: page/p
-#: C/documentation.page:40
+#: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Vår <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> innehåller nyttig information."
+"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki-sida</link> innehåller nyttig information."
 
 #. (itstool) path: page/title
-#: C/flags.page:31
+#: C/flags.page:32
 msgid "How to use flags"
 msgstr "Hur du använder flaggorna"
 
 #. (itstool) path: td/p
-#: C/flags.page:38
+#: C/flags.page:39
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -279,74 +280,81 @@ msgstr ""
 "Att sätta en flagga på en ruta hindrar dig från att klicka på den och "
 "eventuellt orsaka en explosion, vilket skulle avsluta spelet."
 
+#. (itstool) path: td/p
+#: C/flags.page:42
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by clicking <gui>Mines</gui> in the top bar and then selecting "
+"<gui>Appearance</gui>."
+msgstr ""
+"Flaggornas exakta utseende beror på temat. Du kan ändra temat genom att "
+"klicka på <gui>Minor</gui> i systemraden och sedan välja <gui>Utseende</gui>."
+
 #. (itstool) path: section/title
-#: C/flags.page:46
+#: C/flags.page:50
 msgid "How to place a flag on a tile"
 msgstr "Hur du placerar flaggor på en ruta"
 
 #. (itstool) path: td/p
-#: C/flags.page:50
-msgid ""
-"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+#: C/flags.page:54
+msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr ""
-"Röda flaggor är de som inte kan klickas. För att placera en röd flagga på en "
-"ruta:"
+"Det går inte att klicka på flaggor. För att placera en flagga på en ruta:"
 
 #. (itstool) path: item/p
-#: C/flags.page:53
+#: C/flags.page:56
 msgid "right click on a blank tile."
 msgstr "högerklicka på en täckt ruta."
 
 #. (itstool) path: note/p
-#: C/flags.page:63
+#: C/flags.page:66
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
-"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
-"options, then restart the application."
+"mines, open the application menu in the top bar and enable the <gui style="
+"\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
+"Flags</gui> preferences."
 msgstr ""
 "För att göra antalet tillgängliga flaggor lika med antalet kvarvarande "
-"minor, aktivera alternativen <gui style=\"checkbox\">Varna om för många "
-"flaggor är placerade</gui> och <gui style=\"checkbox\">Använd \"Jag är inte "
-"säker\"-flaggor</gui>, och starta sedan om spelet."
+"minor, öppna programmenyn i systemraden och aktivera alternativen <gui style="
+"\"checkbox\">Visa varningar</gui> och <gui style=\"checkbox\">Använd "
+"frågetecken-flaggor</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:73
-msgid "Use of the <em>I'm not sure</em> flag"
-msgstr "Att använda <em>Jag är inte säker</em>-flaggan"
+#: C/flags.page:76
+msgid "Use of the <em>question</em> flag"
+msgstr "Att använda <em>frågetecken</em>-flaggan"
 
 #. (itstool) path: section/p
-#: C/flags.page:74
+#: C/flags.page:77
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue "
-"<em>I'm not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
 msgstr ""
-"Om du är osäker på om en ruta döljer en mina, kan du använda den blåa "
-"<em>Jag är inte säker</em>-flaggan."
+"Om du är osäker på om en ruta döljer en mina, kan du använda "
+"<em>frågetecken</em>-flaggan."
 
 #. (itstool) path: td/p
-#: C/flags.page:79
+#: C/flags.page:82
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Att placera en <em>Jag är inte säker</em>-flagga på en ruta:"
 
 #. (itstool) path: item/p
-#: C/flags.page:81
-msgid "Right-click twice on a blank tile or once on a red flag."
-msgstr "Högerklicka två gånger på en tom ruta eller en gång på en röd flagga."
+#: C/flags.page:84
+msgid "Right-click twice on a blank tile or once on a flag."
+msgstr "Högerklicka två gånger på en tom ruta eller en gång på en flagga."
 
 #. (itstool) path: note/p
-#: C/flags.page:92
+#: C/flags.page:95
 msgid ""
-"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
-"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
-"sure\" flags</gui>."
+"To enable these flags, open the application menu in the top bar and enable "
+"the <gui style=\"checkbox\">Use Question Flags</gui> preference."
 msgstr ""
-"För att aktivera dessa flaggor, klicka <guiseq><gui style=\"manu\">Minor</"
-"gui><gui style=\"menuitem\">Inställningar</gui></guiseq>, och välj "
-"<gui>Använd \"Jag är inte säker\"-flaggor</gui>."
+"För att aktivera dessa flaggor, öppna programmenyn i systemraden och "
+"aktivera inställningen <gui style=\"checkbox\">Använd frågetecken-flaggor</"
+"gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
@@ -378,12 +386,12 @@ msgstr ""
 "placera för många flaggor i anslutning till en öppen ruta."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:22
+#: C/high-scores.page:23
 msgid "High scores"
 msgstr "Poänglistan"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:24
+#: C/high-scores.page:25
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -392,17 +400,17 @@ msgstr ""
 "röjts."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:27
+#: C/high-scores.page:28
 msgid ""
-"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"To view the high scores, open the application menu in the top bar and select "
+"<gui style=\"menuitem\">Scores</gui>. The dialog will display the "
 "<gui>Small</gui> field size by default; to view other sizes, select them in "
 "the drop down menu at the top of the dialog."
 msgstr ""
-"För att visa poänglistan, välj <guiseq><gui style=\"menu\">Minor</gui><gui "
-"style=\"menuitem\">Poänglista</gui></guiseq>. Dialogfältet kommer att visa "
-"<gui>Liten</gui> spelplan som standard; för att visa andra storlekar, välj i "
-"rullgardinsmenyn längst upp i dialogrutan."
+"För att visa poänglistan, öppna programmenyn i systemraden och välj <gui "
+"style=\"menuitem\">Poänglista</gui>. Dialogfältet kommer att visa "
+"<gui>Liten</gui> spelplan som standard; för att visa andra storlekar, välj "
+"dem i rullgardinsmenyn längst upp i dialogrutan."
 
 #. (itstool) path: info/title
 #: C/index.page:9
@@ -417,7 +425,7 @@ msgid "GNOME Mines"
 msgstr "GNOME Minor"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:9
+#: C/index.page:13 C/shortcuts.page:10
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -552,39 +560,41 @@ msgstr ""
 "sa/3.0/\">Commons Deed</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:31
+#: C/new-game.page:32
 msgid "Start a new game"
 msgstr "Starta ett nytt spel"
 
 #. (itstool) path: page/p
-#: C/new-game.page:33
+#: C/new-game.page:34
 msgid "To start a new game:"
 msgstr "För att starta ett nytt spel:"
 
 #. (itstool) path: item/p
-#: C/new-game.page:36
-msgid ""
-"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
-"Game</gui></guiseq> from the application menu."
-msgstr ""
-"Välj <guiseq><gui style=\"menu\">Minor</gui><gui style=\"menuitem\">Nytt "
-"spel</gui></guiseq> från programmenyn."
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
+msgstr "Tryck på knappen <gui style=\"button\">Spela igen</gui> till höger."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
-msgid "Select your preferred <link xref=\"board-size\">board size</link>."
-msgstr "Välj din önskade <link xref=\"board-size\">fältstorlek</link>."
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"För att ändra <link xref=\"board-size\">brädstorleken</link>, tryck på "
+"knappen <gui style=\"button\">Ändra svårighetsgrad</gui> till höger."
 
 #. (itstool) path: note/p
-#: C/new-game.page:46
+#: C/new-game.page:47
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to "
-"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
-"former, your current game will be lost."
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
-"Om du redan spelar ett spel, kommer <app>Minor</app> att fråga om du vill "
-"<gui>Starta nytt spel</gui> eller <gui>Behålla aktuellt spel</gui>. Om du "
-"väljer det första, kommer ditt nuvarande spel förloras."
+"Om du redan spelar ett spel och trycker på knappen <gui style=\"button"
+"\">Börja om</gui>, kommer <app>Minor</app> att fråga om du vill <gui>Behålla "
+"aktuellt spel</gui> eller <gui>Starta nytt spel</gui>. Om du väljer det "
+"senare, kommer ditt nuvarande spel att gå förlorat."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -661,66 +671,66 @@ msgstr ""
 "<link xref=\"high-scores\">poänglistan</link>."
 
 #. (itstool) path: page/title
-#: C/shortcuts.page:17
+#: C/shortcuts.page:18
 msgid "Keyboard shortcuts"
 msgstr "Tangentbordsgenvägar"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:20
+#: C/shortcuts.page:21
 msgid "New game"
 msgstr "Nytt spel"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:21
+#: C/shortcuts.page:22
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:24
+#: C/shortcuts.page:25
 msgid "New game with last used settings"
 msgstr "Nytt spel med senast använda inställningar"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:25
+#: C/shortcuts.page:26
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:28
+#: C/shortcuts.page:29
 msgid "Pause"
 msgstr "Paus"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:29
+#: C/shortcuts.page:30
 msgid "<key>Pause</key>"
 msgstr "<key>Paus</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:30
+#: C/shortcuts.page:31
 msgid ""
-"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
-"key."
+"Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
+"not have a <key>Pause</key> key."
 msgstr ""
-"Använd verktygsfältets genväg om ditt tangentbord inte har en <key>Paus</"
-"key>tangent."
+"Använd <gui style=\"button\">Paus</gui> till höger om ditt tangentbord inte "
+"har en <key>Paus</key>tangent."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:35
 msgid "Help"
 msgstr "Hjälp"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:36
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:39
 msgid "Quit"
 msgstr "Avsluta"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:40
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -747,24 +757,24 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Det finns <link href=\"http://l10n.gnome.org/module/gnome-mines/\">många "
+"Det finns <link href=\"https://l10n.gnome.org/module/gnome-mines/\">många "
 "språk</link> som fortfarande saknar översättningar."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"För att börja översätta måste du <link href=\"http://l10n.gnome.org\">skapa "
-"ett konto</link> och gå med i <link href=\"http://l10n.gnome.org/teams/"
+"För att börja översätta måste du <link href=\"https://l10n.gnome.org\">skapa "
+"ett konto</link> och gå med i <link href=\"https://l10n.gnome.org/teams/"
 "\">översättningsgruppen</link> för ditt språk. Det kommer att ge dig "
-"möjlighet att ladda upp nya översättningar."
+"möjlighet att skicka upp nya översättningar."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
@@ -783,12 +793,38 @@ msgstr ""
 #: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
 "Alternativt, kan du kontakta det internationella teamet genom att använda "
-"deras <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">e-"
-"postlista</link>."
+"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
+"\">sändlista</link>."
+
+#~ msgid ""
+#~ "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
+#~ "\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+#~ msgstr ""
+#~ "Klicka på <gui style=\"button\">Nytt</gui> eller <guiseq><gui style=\"menu"
+#~ "\">Minor</gui> <gui style=\"menuitem\">Nytt spel</gui></guiseq>."
+
+#~ msgid ""
+#~ "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
+#~ "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm "
+#~ "not sure\" flags</gui>."
+#~ msgstr ""
+#~ "För att aktivera dessa flaggor, klicka <guiseq><gui style=\"manu\">Minor</"
+#~ "gui><gui style=\"menuitem\">Inställningar</gui></guiseq>, och välj "
+#~ "<gui>Använd \"Jag är inte säker\"-flaggor</gui>."
+
+#~ msgid ""
+#~ "Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
+#~ "Game</gui></guiseq> from the application menu."
+#~ msgstr ""
+#~ "Välj <guiseq><gui style=\"menu\">Minor</gui><gui style=\"menuitem\">Nytt "
+#~ "spel</gui></guiseq> från programmenyn."
+
+#~ msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+#~ msgstr "Välj din önskade <link xref=\"board-size\">fältstorlek</link>."
 
 #~ msgid "Hints and warnings"
 #~ msgstr "Tips och varningar"
