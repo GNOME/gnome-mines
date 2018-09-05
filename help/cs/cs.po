@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2018-06-18 08:39+0000\n"
-"PO-Revision-Date: 2018-06-18 10:30+0200\n"
+"POT-Creation-Date: 2018-09-01 19:54+0000\n"
+"PO-Revision-Date: 2018-09-05 10:55+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: Czech <gnome-cs-list@gnome.org>\n"
+"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -26,79 +26,80 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
-#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:19 C/get-help.page:11
+#: C/high-scores.page:11 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
 #: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:25
+#: C/get-help.page:16 C/high-scores.page:16 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:15 C/flags.page:21
+#: C/flags.page:27 C/get-help.page:18 C/high-scores.page:13
+#: C/high-scores.page:18 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/shortcuts.page:12
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/board-size.page:22
+#: C/board-size.page:23
 msgid "How to change the game board size"
 msgstr "Jak změnit velikost hrací desky"
 
 #. (itstool) path: page/p
-#: C/board-size.page:24
-msgid "You can select a field size at the start of a new game."
-msgstr "Velikost hrací desky si můžete vybrat na začátku nové hry."
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
+msgstr "Velikost hrací desky si můžete vybrat po spuštění aplikace."
 
-#. (itstool) path: item/p
-#: C/board-size.page:28
-msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
-msgstr ""
-"Klikněte na <gui style=\"button\">Nová</gui> nebo <guiseq><gui style=\"menu"
-"\">Miny</gui> <gui style=\"menuitem\">Nová hra</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/board-size.page:33
+#. (itstool) path: page/p
+#: C/board-size.page:27
 msgid "Select one of the grid sizes:"
 msgstr "Vyberte jednu z velikostí mřížky:"
 
 #. (itstool) path: item/p
-#: C/board-size.page:35
+#: C/board-size.page:29
 msgid "a 8 × 8 board with 10 mines"
 msgstr "deska 8 × 8 s 10 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:36
+#: C/board-size.page:30
 msgid "a 16 × 16 board with 40 mines"
 msgstr "deska 16 × 16 se 40 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:37
+#: C/board-size.page:31
 msgid "a 30 × 16 board with 99 mines"
 msgstr "deska 30 × 16 s 99 minami"
 
 #. (itstool) path: item/p
-#: C/board-size.page:38
+#: C/board-size.page:32
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr "vlastní deska, kdy si můžete zvolit velikost desky a počet min"
 
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"Když chcete dodatečně změnit <link xref=\"board-size\">velikost herní desky</"
+"link>, zmáčkněte napravo tlačítko <gui style=\"button\">Změnit obtížnost</"
+"gui>."
+
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:13
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -165,11 +166,11 @@ msgid ""
 "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
 "link> for the bug to see if it already exists."
 msgstr ""
-"Když už účet máte, přihlaste se, klikněte na <gui>New Issue</"
-"gui>. Před nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla."
-"gnome.org/page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> a "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte"
-"</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
+"Když už účet máte, přihlaste se, klikněte na <gui>New Issue</gui>. Před "
+"nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla.gnome.org/"
+"page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> a <link href="
+"\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte</link> se "
+"prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -179,8 +180,8 @@ msgid ""
 "<gui>Submit issue</gui>."
 msgstr ""
 "V případě, že žádáte o novou funkčnost, zvolte v nabídce <gui>Labels</gui> "
-"položku <gui>Feature</gui>. Vyplňte pole <gui>Title</gui> a <gui>Description"
-"</gui> a klikněte na <gui>Submit issue</gui>."
+"položku <gui>Feature</gui>. Vyplňte pole <gui>Title</gui> a "
+"<gui>Description</gui> a klikněte na <gui>Submit issue</gui>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:43
@@ -209,21 +210,21 @@ msgstr ""
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">"
+"pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
 "kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"http://"
+"%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"https://"
 "mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
 "komunikaci se používá angličtina."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/new-game.page:22
+#: C/documentation.page:19 C/new-game.page:23
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -246,32 +247,33 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Jestli chcete přispívat do Dokumentačního projektu, nebojte se nás "
-"kontaktovat na <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fdocs\">IRC</link> nebo přes <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">poštovní konferenci</link>. Ke "
-"komunikaci se používá angličtina."
+"kontaktovat na kanále <link href=\"https://client01.chat.mibbit.com/?url="
+"irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link> na <link href=\"https://wiki."
+"gnome.org/GnomeIrcChannels\">irc.gnome.org</link> nebo přes <link href="
+"\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">poštovní "
+"konferenci</link>. Ke komunikaci se používá angličtina."
 
 #. (itstool) path: page/p
-#: C/documentation.page:40
+#: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Užitečné informace obsahuje naše <link href=\"https://live.gnome.org/"
+"Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
 
 #. (itstool) path: page/title
-#: C/flags.page:31
+#: C/flags.page:32
 msgid "How to use flags"
 msgstr "Jak používat vlaječky"
 
 #. (itstool) path: td/p
-#: C/flags.page:38
+#: C/flags.page:39
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -281,76 +283,84 @@ msgstr ""
 "skrývají minu. Umístěním vlaječky zabráníte kliknutí na dlaždici a "
 "následnému způsobení výbuchu, který znamená konec hry."
 
+#. (itstool) path: td/p
+#: C/flags.page:42
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by clicking <gui>Mines</gui> in the top bar and then selecting "
+"<gui>Appearance</gui>."
+msgstr ""
+"Přesný vzhled vlaječek závisí na vybraném motivu. Ten můžete změnit "
+"kliknutím na <gui>Miny</gui> na horní liště a výběrem položky <gui>Vzhled</"
+"gui>."
+
 #. (itstool) path: section/title
-#: C/flags.page:46
+#: C/flags.page:50
 msgid "How to place a flag on a tile"
 msgstr "Jak na dlaždici umístit vlaječku"
 
 #. (itstool) path: td/p
-#: C/flags.page:50
-msgid ""
-"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+#: C/flags.page:54
+msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr ""
-"Červené vlaječky jsou takové, na které nelze kliknout. Když chcete na "
-"dlaždici umístit červenou vlaječku:"
+"Vlaječky nereagují na kliknutí. Když chcete na dlaždici umístit vlaječku:"
 
 #. (itstool) path: item/p
-#: C/flags.page:53
+#: C/flags.page:56
 msgid "right click on a blank tile."
 msgstr "Klikněte pravým tlačítkem na neodkryté dlaždici."
 
 #. (itstool) path: note/p
-#: C/flags.page:63
+#: C/flags.page:66
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
-"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
-"options, then restart the application."
+"mines, open the application menu in the top bar and enable the <gui style="
+"\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
+"Flags</gui> preferences."
 msgstr ""
 "Abyste měli jistotu, že počet vlaječek nepřekročí počet zbývajících min "
-"okolo odkryté dlaždice, zapněte si v předvolbách <gui style=\"checkbox"
-"\">Varovat, když máte příliš mnoho vlaječek</gui> a <gui style=\"checkbox"
-"\">Používat vlaječky „Nejsem si jist(á)“</gui>."
+"okolo odkryté dlaždice, otevřete nabídku aplikace na horní liště a zapněte "
+"předvolby <gui style=\"checkbox\">Zobrazovat varování</gui> a <gui style="
+"\"checkbox\">Používat nejisté vlaječky</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:73
-msgid "Use of the <em>I'm not sure</em> flag"
-msgstr "Používání vlaječek <em>Nejsem si jist(á)</em>"
+#: C/flags.page:76
+msgid "Use of the <em>question</em> flag"
+msgstr "Používání vlaječek <em>nejistých</em> vlaječek"
 
 #. (itstool) path: section/p
-#: C/flags.page:74
+#: C/flags.page:77
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue "
-"<em>I'm not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
 msgstr ""
 "Pro případ, že si nejste jisti, zda dlaždice minu skrývá či ne, můžete "
-"použít modrou vlaječku <em>Nejsem si jist(á)</em>."
+"použít <em>nejistou</em> vlaječku."
 
 #. (itstool) path: td/p
-#: C/flags.page:79
+#: C/flags.page:82
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
-msgstr "Když chcete na dlaždici umístit vlaječku <em>Nejsem si jist(á)</em>:"
+msgstr "Když chcete na dlaždici umístit <em>nejistou</em> vlaječku:"
 
 #. (itstool) path: item/p
-#: C/flags.page:81
-msgid "Right-click twice on a blank tile or once on a red flag."
+#: C/flags.page:84
+msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
-"Klikněte dvojitě pravým tlačítkem na prázdnou dlaždici nebo jednoduše na "
-"červenou vlaječku."
+"Klikněte pravým tlačítkem dvojitě na prázdnou dlaždici nebo jednou na "
+"vlaječku."
 
 #. (itstool) path: note/p
-#: C/flags.page:92
+#: C/flags.page:95
 msgid ""
-"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
-"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
-"sure\" flags</gui>."
+"To enable these flags, open the application menu in the top bar and enable "
+"the <gui style=\"checkbox\">Use Question Flags</gui> preference."
 msgstr ""
-"Abyste mohli používat tento typ vlaječek, klikněte na <guiseq><gui style="
-"\"manu\">Miny</gui> <gui style=\"menuitem\">Předvolby</gui></guiseq> a "
-"zaškrtněte <gui>Používat vlaječky „Nejsem si jist(á)“</gui>."
+"Abyste tyto vlaječky povolili, otevřete nabídku aplikace na horní liště a "
+"zapněte předvolbu <gui style=\"checkbox\">Používat nejisté vlaječky</"
+"gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:26
+#: C/get-help.page:21 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
@@ -383,12 +393,12 @@ msgstr ""
 "se pokusíte vedle odkryté dlaždice umístit příliš mnoho vlaječek."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:22
+#: C/high-scores.page:23
 msgid "High scores"
 msgstr "Nejvyšší skóre"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:24
+#: C/high-scores.page:25
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -397,15 +407,15 @@ msgstr ""
 "který typ herní desky vyčištěn od min."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:27
+#: C/high-scores.page:28
 msgid ""
-"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
+"To view the high scores, open the application menu in the top bar and select "
+"<gui style=\"menuitem\">Scores</gui>. The dialog will display the "
 "<gui>Small</gui> field size by default; to view other sizes, select them in "
 "the drop down menu at the top of the dialog."
 msgstr ""
-"Jestli se chcete podívat na nejvyšší skóre, vyberte <guiseq><gui style=\"menu"
-"\">Miny</gui> <gui style=\"menuitem\">Skóre</gui></guiseq>. Dialogové okno "
+"Jestli se chcete podívat na nejvyšší skóre, otevřete nabídku aplikace na "
+"horní liště a vyberte <gui style=\"menuitem\">Skóre</gui>. Dialogové okno "
 "zobrazí jako výchozí výsledky pro nejmenší hrací desku <gui>8 × 8, 10 min</"
 "gui>. Pro jinou velikost si výsledky zobrazíte výběrem z rozbalovací nabídky."
 
@@ -422,7 +432,7 @@ msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:9
+#: C/index.page:13 C/shortcuts.page:10
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -556,41 +566,41 @@ msgstr ""
 "\">výtah dokumentu pro neprávníky</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:31
+#: C/new-game.page:32
 msgid "Start a new game"
 msgstr "Jak spustit novou hru"
 
 #. (itstool) path: page/p
-#: C/new-game.page:33
+#: C/new-game.page:34
 msgid "To start a new game:"
 msgstr "Když chcete spustit novou hru:"
 
 #. (itstool) path: item/p
-#: C/new-game.page:36
-msgid ""
-"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
-"Game</gui></guiseq> from the application menu."
-msgstr ""
-"V nabídce aplikace vyberte <guiseq><gui style=\"menu\">Miny</gui><gui style="
-"\"menuitem\">Nová Hra</gui></guiseq>"
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
+msgstr "Zmáčkněte napravo tlačítko <gui style=\"button\">Začít novou</gui>."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
-msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
-"Vyberte si <link xref=\"board-size\">velikost hrací desky</link>, která vám "
-"vyhovuje."
+"Když chcete změnit <link xref=\"board-size\">velikost herní desky</link>, "
+"zmáčkněte napravo tlačítko <gui style=\"button\">Změnit obtížnost</gui>."
 
 #. (itstool) path: note/p
-#: C/new-game.page:46
+#: C/new-game.page:47
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to "
-"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
-"former, your current game will be lost."
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
-"V situaci, kdy máte nějakou hru rozehranou, dotáží se vás <app>Miny</app>, "
-"jestli chcete <gui>Začít novou hru</gui> nebo <gui>Zachovat stávající hru</"
-"gui>. Pokud zvolíte první jmenované, o právě rozehranou hru příjdete."
+"V situaci, kdy máte nějakou hru rozehranou a zmáčknete tlačítko <gui style="
+"\"button\">Začít novou</gui>, dotáží se vás <app>Miny</app>, jestli chcete "
+"<gui>Zachovat stávající hru</gui> nebo <gui>Začít novou hru</gui>. Pokud "
+"zvolíte druhé jmenované, o právě rozehranou hru příjdete."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -667,66 +677,66 @@ msgstr ""
 "<link xref=\"high-scores\">nejvyšších skóre</link>."
 
 #. (itstool) path: page/title
-#: C/shortcuts.page:17
+#: C/shortcuts.page:18
 msgid "Keyboard shortcuts"
 msgstr "Klávesové zkratky"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:20
+#: C/shortcuts.page:21
 msgid "New game"
 msgstr "Nová hra"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:21
+#: C/shortcuts.page:22
 msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:24
+#: C/shortcuts.page:25
 msgid "New game with last used settings"
 msgstr "Nová hra s naposledy použitým nastavením"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:25
+#: C/shortcuts.page:26
 msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:28
+#: C/shortcuts.page:29
 msgid "Pause"
 msgstr "Pozastavit"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:29
+#: C/shortcuts.page:30
 msgid "<key>Pause</key>"
 msgstr "<key>Pause</key>"
 
 #. (itstool) path: note/p
-#: C/shortcuts.page:30
+#: C/shortcuts.page:31
 msgid ""
-"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
-"key."
+"Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
+"not have a <key>Pause</key> key."
 msgstr ""
 "V případě, že na klávesnici nemáte klávesu <key>Pause</key>, použijte "
-"tlačítko na nástrojové liště."
+"tlačítko <gui style=\"button\">Pozastavit</gui> napravo."
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:33
+#: C/shortcuts.page:35
 msgid "Help"
 msgstr "Nápověda"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:34
+#: C/shortcuts.page:36
 msgid "<key>F1</key>"
 msgstr "<key>F1</key>"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:37
+#: C/shortcuts.page:39
 msgid "Quit"
 msgstr "Ukončit"
 
 #. (itstool) path: td/p
-#: C/shortcuts.page:38
+#: C/shortcuts.page:40
 msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
@@ -753,22 +763,22 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Stále je <link href=\"http://l10n.gnome.org/module/quadrapassel/\">řada "
+"Stále je <link href=\"https://l10n.gnome.org/module/quadrapassel/\">řada "
 "jazyků</link>, do kterých je třeba překlad udělat."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Jestli chcete překládat, musíte si <link href=\"http://l10n.gnome.org"
-"\">vytvořit účet</link> a přidat se k <link href=\"http://l10n.gnome.org/"
+"Jestli chcete překládat, musíte si <link href=\"https://l10n.gnome.org"
+"\">vytvořit účet</link> a přidat se k <link href=\"https://l10n.gnome.org/"
 "teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
 "své nové překlady."
 
@@ -789,9 +799,9 @@ msgstr ""
 #: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
-"\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
+"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
 "link>."

@@ -249,7 +249,7 @@ msgstr "_Zobrazovat varování"
 
 #: src/gnome-mines.vala:244 src/gnome-mines.vala:261
 msgid "_Use Question Flags"
-msgstr "Po_užívat vlaječky pro nejisté"
+msgstr "Po_užívat nejisté vlaječky"
 
 #: src/gnome-mines.vala:247 src/gnome-mines.vala:264
 msgid "_Help"
@@ -319,7 +319,7 @@ msgstr "Začít novou hru"
 
 #: src/gnome-mines.vala:649
 msgid "St_art Over"
-msgstr "Z_ačít znovu"
+msgstr "Z_ačít novou"
 
 #: src/gnome-mines.vala:760
 msgid "_Resume"
