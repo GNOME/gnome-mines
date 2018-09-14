@@ -720,7 +720,7 @@ msgid ""
 "Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
 "not have a <key>Pause</key> key."
 msgstr ""
-"Használja a jobb oldalon lévő <gui style=\"button\">Szünet</app> gombot, ha a "
+"Használja a jobb oldalon lévő <gui style=\"button\">Szünet</gui> gombot, ha a "
 "billentyűzete nem rendelkezik <key>Pause</key> gombbal."
 
 #. (itstool) path: td/p
