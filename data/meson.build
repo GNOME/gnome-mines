@@ -4,8 +4,6 @@ foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256' ]
 endforeach
 install_data (join_paths ('icons', 'hicolor', 'scalable', 'gnome-mines-symbolic.svg'),
               install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
-install_data ('flag-symbolic.svg',
-              install_dir: join_paths (datadir, 'icons', 'hicolor', '16x16', 'actions'))
 
 install_data ('org.gnome.mines.gschema.xml',
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
