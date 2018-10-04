@@ -242,7 +242,11 @@ public class Mines : Gtk.Application
             menu.append_section (null, section);
             section.append (_("_Help"), "app.help");
             section.append (_("_About Mines"), "app.about");
-            set_app_menu (menu);
+            var menu_button = new Gtk.MenuButton ();
+            menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
+            menu_button.show ();
+            menu_button.set_menu_model (menu);
+            headerbar.pack_end (menu_button);
         }
         else
         {
