@@ -687,17 +687,24 @@ public class Mines : Gtk.Application
 
         minefield_view.minefield = minefield;
 
+        var display = Gdk.Display.get_default ();
+        var monitor = display.get_monitor_at_window (window.get_window ());
+        var monitor_geometry = monitor.get_geometry ();
+
         int mine_size = int.max ((int) minefield_view.mine_size, 30);
         int request_x = -1, request_y = -1;
-        if  (window.get_allocated_width () - scrolled.get_allocated_width () + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width () < Gdk.Screen.width ()) {
+        if  (window.get_allocated_width () - scrolled.get_allocated_width ()
+             + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width ()
+                < monitor_geometry.width) {
             request_x = x * 30 + aspect_child.spacing + 150;
         } else {
-            request_x = Gdk.Screen.width () - window.get_allocated_width () + scrolled.get_allocated_width () + aspect_child.spacing + 150;
+            request_x = monitor_geometry.width - window.get_allocated_width ()
+                          + scrolled.get_allocated_width () + aspect_child.spacing + 150;
         }
-        if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < Gdk.Screen.height ()) {
+        if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < monitor_geometry.height) {
             request_y = y * 30;
         } else {
-            request_y = Gdk.Screen.height () - window.get_allocated_height () + scrolled.get_allocated_height ();
+            request_y = monitor_geometry.height - window.get_allocated_height () + scrolled.get_allocated_height ();
         }
         minefield_aspect.set_size_request (request_x, request_y);
 
