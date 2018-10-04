@@ -783,6 +783,7 @@ public class Mines : Gtk.Application
     {
         replay_button.label = _("Play _Again");
         pause_action.set_enabled (false);
+        replay_button.sensitive = true;
         play_pause_button.hide ();
         high_scores_button.show ();
     }
@@ -806,7 +807,7 @@ public class Mines : Gtk.Application
                 warning ("%s", e.message);
             }
             new_game_action.set_enabled (true);
-            show_new_game_screen ();
+            game_ended ();
         });
     }
 
