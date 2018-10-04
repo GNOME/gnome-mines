@@ -245,8 +245,7 @@ public class Mines : Gtk.Application
             section = new Menu ();
             menu.append_section (null, section);
             section.append (_("_Help"), "app.help");
-            section.append (_("_About"), "app.about");
-            section.append (_("_Quit"), "app.quit");
+            section.append (_("_About Mines"), "app.about");
             set_app_menu (menu);
         }
         else
@@ -263,7 +262,7 @@ public class Mines : Gtk.Application
             var help_menu = new Menu ();
             menu.append_submenu (_("_Help"), help_menu);
             help_menu.append (_("_Contents"), "app.help");
-            help_menu.append (_("_About"), "app.about");
+            help_menu.append (_("_About Mines"), "app.about");
             set_menubar (menu);
         }
 
