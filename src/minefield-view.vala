@@ -527,14 +527,6 @@ public class MinefieldView : Gtk.Grid
         return true;
     }
 
-    public void refresh ()
-    {
-        if (_minefield != null)
-            for (int i = 0; i < _minefield.width; i++)
-                for (int j = 0; j < _minefield.height; j++)
-                    mines[i,j].refresh_icon ();
-    }
-
     public override bool key_release_event (Gdk.EventKey event)
     {
         if (event.keyval != Gdk.Key.space)

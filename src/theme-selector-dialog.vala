@@ -158,19 +158,16 @@ public class ThemeSelectorDialog : Gtk.Dialog
         next.clicked.connect (() => {
             switch_theme_preview (++current_index, themes);
             update_sensitivities (themes, current_index);
-            minefield.refresh ();
         });
 
         previous.clicked.connect (() => {
             switch_theme_preview (--current_index, themes);
             update_sensitivities (themes, current_index);
-            minefield.refresh ();
         });
 
         set_size_request (420, 400);
         update_sensitivities (themes, current_index);
         show_all ();
-        minefield.refresh ();
     }
 
     private void switch_theme_preview (int to_index, List<string> themes)
