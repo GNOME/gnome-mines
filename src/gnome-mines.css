@@ -60,6 +60,62 @@
   transition-duration:0.4s;
 }
 
+.mine {
+  background-image: -gtk-icontheme('mine');
+}
+
+.flag {
+  background-image: -gtk-icontheme('flag');
+}
+
+.incorrect {
+  background-image: -gtk-icontheme('incorrect');
+}
+
+.maybe {
+  background-image: -gtk-icontheme('maybe');
+}
+
+.overmine {
+  background-image: -gtk-icontheme('overmine');
+}
+
+.exploded {
+  background-image: -gtk-icontheme('exploded');
+}
+
+.1mines {
+  background-image: -gtk-icontheme('1mines');
+}
+
+.2mines {
+  background-image: -gtk-icontheme('2mines');
+}
+
+.3mines {
+  background-image: -gtk-icontheme('3mines');
+}
+
+.4mines {
+  background-image: -gtk-icontheme('4mines');
+}
+
+.5mines {
+  background-image: -gtk-icontheme('5mines');
+}
+
+.6mines {
+  background-image: -gtk-icontheme('6mines');
+}
+
+.7mines {
+  background-image: -gtk-icontheme('7mines');
+}
+
+.8mines {
+  background-image: -gtk-icontheme('8mines');
+}
+
 .count:not(.cursor):hover {
   background-color:#dededc;
 }
