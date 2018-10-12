@@ -33,9 +33,10 @@
   border-image:none;
   font-size:16px;
   font-weight: bold;
-  background-size: 60%;
+  background-size: 100%;
   background-position: 50%;
-  padding:0px;
+  padding:4px;
+  background-origin: content-box;
   background-repeat: no-repeat;
   box-shadow:none;
   border-width:2px;
