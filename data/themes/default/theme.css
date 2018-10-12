@@ -1,11 +1,9 @@
 /* Style of the unrevealed tiles after game over */
 .explodedField .tile {
   background-color:#888a85;
-  transition-duration:1s;
 }
 
 .explodedField .count,
 .explodedField .exploded {
   background-color:#d3d7cf;
-  transition-duration:1s;
 }

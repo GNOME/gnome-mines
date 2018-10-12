@@ -96,13 +96,6 @@ public class ThemeSelectorDialog : Gtk.Dialog
         reveal_nonmines (view);
         box.pack_start (frame, true, true, 0);
 
-        var animations_check = new Gtk.CheckButton.with_mnemonic (_("Use _animations"));
-        animations_check.set_property("halign", Gtk.Align.CENTER);
-        box.pack_start (animations_check, false, false, 0);
-
-        Gtk.Settings.get_default().bind_property ("gtk-enable-animations",
-          animations_check, "active",BindingFlags.BIDIRECTIONAL|BindingFlags.SYNC_CREATE);
-
         return box;
     }
 

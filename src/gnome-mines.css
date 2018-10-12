@@ -44,7 +44,6 @@
 
 .tile:not(.cursor):hover {
   background-color:#d3d7cf;
-  transition-duration:0.4s;
 }
 
 .tile:active {
@@ -58,7 +57,6 @@
   font-size:0px;
   background-image:none;
   background-color:#dededc;
-  transition-duration:0.4s;
 }
 
 .mine {
@@ -134,13 +132,5 @@
 /* Styles to be used on game over*/
 .explodedField .incorrect {
   background-color:#cc0000;
-}
-
-.completedField .flag {
-  transition-duration:1s;
-}
-
-.explodedField {
-  transition-duration:1s;
 }
 

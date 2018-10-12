@@ -21,7 +21,7 @@
       <description>Set to true to automatically flag squares as mined when enough squares are revealed</description>
     </key>
     <key name="use-animations" type="b">
-      <default>true</default>
+      <default>false</default>
       <summary>Enable animations</summary>
       <description>Set to false to disable theme-defined transition animations</description>
     </key>
