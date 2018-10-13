@@ -101,11 +101,9 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     public ThemeSelectorDialog (Gtk.Window parent)
     {
-        var desktop = Environment.get_variable ("XDG_CURRENT_DESKTOP");
-        bool use_headerbar = desktop == null || desktop != "Unity";
         MinefieldView minefield;
 
-        Object (use_header_bar: use_headerbar ? 1 : 0, title:  _("Select Theme"),
+        Object (use_header_bar: 1, title:  _("Select Theme"),
                 modal: true, transient_for: parent, resizable: false, border_width: 12);
 
         previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
@@ -118,23 +116,14 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
         var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-        if (use_headerbar) {
-            var headerbar = get_header_bar () as Gtk.HeaderBar;
-            headerbar.set_show_close_button (true);
-            get_content_area ().pack_start (create_preview_widget (out minefield), true, true, 0);
+        var headerbar = get_header_bar () as Gtk.HeaderBar;
+        headerbar.set_show_close_button (true);
+        get_content_area ().pack_start (create_preview_widget (out minefield), true, true, 0);
 
-            buttons_holder.pack_start (previous);
-            buttons_holder.pack_start (next);
-            buttons_holder.get_style_context ().add_class ("linked");
-            headerbar.pack_start (buttons_holder);
-        } else {
-            add_button (_("Close"), Gtk.ResponseType.DELETE_EVENT);
-            border_width = 12;
-            buttons_holder.pack_start (previous, false, false, 0);
-            buttons_holder.pack_start (create_preview_widget (out minefield), true, true, 0);
-            buttons_holder.pack_start (next, false, false, 0);
-            get_content_area ().pack_end (buttons_holder, true, true, 0);
-        }
+        buttons_holder.pack_start (previous);
+        buttons_holder.pack_start (next);
+        buttons_holder.get_style_context ().add_class ("linked");
+        headerbar.pack_start (buttons_holder);
 
         var themes = list_themes ();
         var current_theme = settings.get_string ("theme");
