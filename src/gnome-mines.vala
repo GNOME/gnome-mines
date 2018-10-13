@@ -779,6 +779,7 @@ public class Mines : Gtk.Application
         replay_button.label = _("Play _Again");
         pause_action.set_enabled (false);
         replay_button.sensitive = true;
+        repeat_size_action.set_enabled (true);
         play_pause_button.hide ();
         high_scores_button.show ();
     }
