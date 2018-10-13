@@ -85,7 +85,6 @@ public class Minefield : Object
     public uint n_flags
     {
         get { return _n_flags; }
-        set { _n_flags = value; }
     }
 
     public bool use_autoflag
@@ -265,7 +264,7 @@ public class Minefield : Object
         locations[x, y].cleared = true;
         _n_cleared++;
         if (locations[x, y].flag == FlagType.FLAG)
-            n_flags--;
+            _n_flags--;
         locations[x, y].flag = FlagType.NONE;
         redraw_sector (x, y);
         marks_changed ();
@@ -289,9 +288,9 @@ public class Minefield : Object
             return;
 
         if (flag == FlagType.FLAG)
-            n_flags++;
+            _n_flags++;
         else if (locations[x, y].flag == FlagType.FLAG)
-            n_flags--;
+            _n_flags--;
 
         locations[x, y].flag = flag;
         redraw_sector (x, y);
