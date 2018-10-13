@@ -75,12 +75,11 @@ public class Minefield : Object
     public uint n_cleared
     {
         get { return _n_cleared; }
-        set { _n_cleared = value; }
     }
 
     public bool is_complete
     {
-        get { return n_cleared == width * height - n_mines; }
+        get { return _n_cleared == width * height - n_mines; }
     }
 
     public uint n_flags
@@ -264,7 +263,7 @@ public class Minefield : Object
             return;
 
         locations[x, y].cleared = true;
-        n_cleared++;
+        _n_cleared++;
         if (locations[x, y].flag == FlagType.FLAG)
             n_flags--;
         locations[x, y].flag = FlagType.NONE;

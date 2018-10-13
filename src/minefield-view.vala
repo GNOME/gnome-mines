@@ -207,7 +207,6 @@ public class MinefieldView : Gtk.Grid
 
             _minefield.redraw_sector.connect (redraw_sector_cb);
             _minefield.explode.connect (explode_cb);
-            _minefield.paused_changed.connect (() => { queue_draw (); });
             _minefield.cleared.connect (complete_cb);
             _minefield.use_autoflag = use_autoflag;
             queue_resize ();
