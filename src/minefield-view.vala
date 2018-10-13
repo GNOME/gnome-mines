@@ -148,9 +148,6 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    public signal void look ();
-    public signal void unlook ();
-
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
@@ -243,13 +240,11 @@ public class MinefieldView : Gtk.Grid
         if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
         {
             toggle_mark (selected.x, selected.y);
-            unlook ();
         }
         /* Left button to clear */
         else if (event.button == 1)
         {
             selected.is_set = true;
-            look ();
         }
 
         keyboard_cursor.is_set = false;
@@ -277,8 +272,6 @@ public class MinefieldView : Gtk.Grid
         /* Check if the user released button outside the minefield */
         if (!minefield.is_location (selected.x, selected.y))
             return;
-
-        unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
             minefield.multi_release (selected.x, selected.y);
@@ -488,7 +481,6 @@ public class MinefieldView : Gtk.Grid
                 {
                     selected.position = {x, y};
                     selected.is_set = true;
-                    look ();
                 }
             }
             break;
@@ -539,8 +531,6 @@ public class MinefieldView : Gtk.Grid
         /* Check that the user isn't currently using the mouse */
         if (!selected.is_set || !keyboard_cursor.is_set)
             return false;
-
-        unlook ();
 
         if (minefield.is_cleared (selected.x, selected.y))
             minefield.multi_release (selected.x, selected.y);
