@@ -57,6 +57,9 @@ public class Mines : Gtk.Application
     private bool is_maximized;
     private bool is_tiled;
 
+    /* true when the new game minefield draws once */
+    private bool first_draw = false;
+
     /* true when the user has requested the game to pause. */
     private bool pause_requested;
 
@@ -277,6 +280,19 @@ public class Mines : Gtk.Application
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
+        /* Hook a resize on the first minefield draw so that the ratio
+           calculation in minefield_aspect.size-allocate runs one more time
+           with stable allocation sizes for the current minefield configutation */
+        minefield_view.draw.connect ((context, data) => {
+            if(!first_draw) {
+                minefield_aspect.queue_resize ();
+                minefield_view.queue_draw ();
+                first_draw = true;
+		return true;
+            };
+            return false;
+        });
+
         stack = (Gtk.Stack) ui_builder.get_object ("stack");
 
         scrolled = (Gtk.ScrolledWindow) ui_builder.get_object ("scrolled");
@@ -288,6 +304,17 @@ public class Mines : Gtk.Application
 
         minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");
         minefield_aspect.show ();
+
+        minefield_aspect.size_allocate.connect ((allocation) => {
+             uint width = minefield_view.mine_size * minefield_view.minefield.width;
+             width += aspect_child.spacing;
+             width += buttons_box.get_allocated_width ();
+             float new_ratio = (float) width / (minefield_view.minefield.height * minefield_view.mine_size);
+             if (new_ratio != minefield_aspect.ratio) {
+                minefield_aspect.ratio = new_ratio;
+                first_draw = false;
+             };
+        });
 
         paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
         buttons_box = (Gtk.Box) ui_builder.get_object ("buttons_box");
@@ -684,37 +711,6 @@ public class Mines : Gtk.Application
 
         minefield_view.minefield = minefield;
 
-        var display = Gdk.Display.get_default ();
-        var monitor = display.get_monitor_at_window (window.get_window ());
-        var monitor_geometry = monitor.get_geometry ();
-
-        int mine_size = int.max ((int) minefield_view.mine_size, 30);
-        int request_x = -1, request_y = -1;
-        if  (window.get_allocated_width () - scrolled.get_allocated_width ()
-             + 30 * x + aspect_child.spacing + buttons_box.get_allocated_width ()
-                < monitor_geometry.width) {
-            request_x = x * 30 + aspect_child.spacing + 150;
-        } else {
-            request_x = monitor_geometry.width - window.get_allocated_width ()
-                          + scrolled.get_allocated_width () + aspect_child.spacing + 150;
-        }
-        if  (window.get_allocated_height () - scrolled.get_allocated_height () + 30 * y < monitor_geometry.height) {
-            request_y = y * 30;
-        } else {
-            request_y = monitor_geometry.height - window.get_allocated_height () + scrolled.get_allocated_height ();
-        }
-        minefield_aspect.set_size_request (request_x, request_y);
-
-        uint width = x * mine_size;
-        width += aspect_child.spacing;
-        width += uint.max (buttons_box.get_allocated_width (), 150);
-        minefield_aspect.ratio = (float) (width) / (y * mine_size);
-        minefield_aspect.size_allocate.connect ((allocation) => {
-             width = minefield_view.mine_size * x;
-             width += aspect_child.spacing;
-             width += buttons_box.get_allocated_width ();
-             minefield_aspect.ratio = (float) width / (y * minefield_view.mine_size);
-        });
         update_flag_label ();
 
         minefield.paused = false;
