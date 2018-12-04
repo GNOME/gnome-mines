@@ -5,16 +5,14 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-#
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2017.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2017, 2018.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-05-25 14:00+0000\n"
-"PO-Revision-Date: 2017-06-19 13:27+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2018-10-13 21:24+0000\n"
+"PO-Revision-Date: 2018-12-04 15:49+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -22,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 "X-Project-Style: gnome\n"
 
 #: data/gnome-mines.appdata.xml.in:8
@@ -59,8 +57,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:163
+#: src/gnome-mines.vala:219 src/gnome-mines.vala:862
 msgid "Mines"
 msgstr "Minas"
 
@@ -188,8 +186,8 @@ msgstr "_Cancelar"
 msgid "_Play Game"
 msgstr "_Jugar partida"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:642 src/gnome-mines.vala:763
+#: src/gnome-mines.vala:811
 msgid "_Pause"
 msgstr "_Pausa"
 
@@ -225,115 +223,116 @@ msgstr "Juego mediano"
 msgid "Big game"
 msgstr "Juego grande"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:230 src/gnome-mines.vala:252
 msgid "_Scores"
 msgstr "_Puntuación"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:231 src/gnome-mines.vala:253
 msgid "A_ppearance"
 msgstr "_Aspecto"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
+#: src/gnome-mines.vala:234 src/gnome-mines.vala:254
 msgid "_Show Warnings"
 msgstr "Mostrar _advertencias"
 
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:235 src/gnome-mines.vala:255
 msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:258
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "_Acerca de"
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:260
+#| msgid "_About"
+msgid "_About Mines"
+msgstr "_Acerca de Minas"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_Salir"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:250
 msgid "_Mines"
 msgstr "_Minas"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:251
 msgid "_New Game"
 msgstr "Juego _nuevo"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:256
+msgid "_Quit"
+msgstr "_Salir"
+
+#: src/gnome-mines.vala:259
 msgid "_Contents"
 msgstr "Índ_ice"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:309
 msgid "Minefield:"
 msgstr "Minefield:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:343
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minas"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:402
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:480
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:590
 msgid "Do you want to start a new game?"
 msgstr "¿Quiere empezar una partida nueva?"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:591
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Si inicia una partida nueva, perderá su progreso actual."
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:592
 msgid "Keep Current Game"
 msgstr "Mantener el juego actual"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:593
 msgid "Start New Game"
 msgstr "Iniciar un juego nuevo"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:643
 msgid "St_art Over"
 msgstr "_Empezar de nuevo"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:761
 msgid "_Resume"
 msgstr "_Continuar"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:779
 msgid "Play _Again"
 msgstr "Jugar _otra vez"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:835
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:840
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:843
 msgid "Resizing and SVG support:"
 msgstr "Soporte para redimensionado y SVG:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:865
 msgid "Clear explosive mines off the board"
 msgstr "Eliminar las minas explosivas del tablero"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:872
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2016\n"
@@ -342,14 +341,12 @@ msgstr ""
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
 "Pablo Saratxaga <pablo@mandrakesoft.com>"
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "Usar _animaciones"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Seleccionar un tema"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "Cerrar"
+#~ msgid "Use _animations"
+#~ msgstr "Usar _animaciones"
+
+#~ msgid "Close"
+#~ msgstr "Cerrar"
