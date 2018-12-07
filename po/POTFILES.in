@@ -3,6 +3,7 @@
 data/gnome-mines.appdata.xml.in
 data/gnome-mines.desktop.in
 data/org.gnome.mines.gschema.xml
+src/help-overlay.ui
 src/interface.ui
 src/gnome-mines.vala
 src/minefield.vala

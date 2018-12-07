@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.17 -->
+  <object class="GtkShortcutsWindow" id="help_overlay">
+    <property name="modal">1</property>
+    <child>
+      <object class="GtkShortcutsSection">
+        <property name="visible">1</property>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">&lt;Ctrl&gt;R</property>
+                <property name="title" translatable="yes" context="shortcut window">Start a new game with last used settings</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">Pause</property>
+                <property name="title" translatable="yes" context="shortcut window">Pause the game</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">F1</property>
+                <property name="title" translatable="yes" context="shortcut window">Show Help</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">&lt;Primary&gt;question &lt;Primary&gt;F1</property>
+                <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="title" translatable="yes" context="shortcut window">Quit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
