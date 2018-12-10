@@ -1,3 +1,15 @@
+GNOME Mines 3.31.3
+=====================
+
+* Avoid unnecessary icon regeneration !4 (Yanko Kaneti)
+* Extend css to cover tile theme images (Yanko Kaneti)
+* Fixed initial aspect ratio issues #28 (Yanko Kaneti)
+* Change default theme to bgcolors #20 (Robert Roth)
+* Remove transitions for a snappier experience #14 (Robert Roth)
+* Add Keyboard shortcuts overlay !6 (Jeremy Bicha)
+* Updated translations
+* Code cleanup
+
 GNOME Mines 3.31.1
 =====================
 
