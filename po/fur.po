@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-05-25 14:00+0000\n"
-"PO-Revision-Date: 2017-05-27 20:16+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2018-12-10 13:46+0000\n"
+"PO-Revision-Date: 2018-12-24 18:33+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -17,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.2\n"
 
 #: data/gnome-mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -53,8 +52,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Il progjet GNOME"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:163
+#: src/gnome-mines.vala:219 src/gnome-mines.vala:865
 msgid "Mines"
 msgstr "Minis"
 
@@ -161,6 +160,36 @@ msgstr "Altece dal barcon in pixel"
 msgid "true if the window is maximized"
 msgstr "VÊR se il barcon al è slargjât"
 
+#: src/help-overlay.ui:16
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Tache une gnove partide"
+
+#: src/help-overlay.ui:23
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "Tache une gnove partide cun lis ultimis impostazions dopradis"
+
+#: src/help-overlay.ui:30
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Met in pause la partide"
+
+#: src/help-overlay.ui:37
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Mostre jutori"
+
+#: src/help-overlay.ui:44
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Mostre scurtis di tastiere"
+
+#: src/help-overlay.ui:51
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Jes"
+
 #: src/interface.ui:118
 msgid "_Width"
 msgstr "_Largjece"
@@ -181,8 +210,8 @@ msgstr "_Anule"
 msgid "_Play Game"
 msgstr "_Zuie"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:644 src/gnome-mines.vala:765
+#: src/gnome-mines.vala:814
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -218,126 +247,128 @@ msgstr "Cjamp medi"
 msgid "Big game"
 msgstr "Cjamp grant"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:230 src/gnome-mines.vala:253
 msgid "_Scores"
 msgstr "_Risultâts"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:231 src/gnome-mines.vala:254
 msgid "A_ppearance"
 msgstr "A_spiet"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
+#: src/gnome-mines.vala:234 src/gnome-mines.vala:255
 msgid "_Show Warnings"
 msgstr "_Mostre avîs"
 
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:235 src/gnome-mines.vala:256
 msgid "_Use Question Flags"
 msgstr "_Dopre pont interogatîf"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:260
+msgid "Keyboard Shortcuts"
+msgstr "Scurtis di tastiere"
+
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:259
 msgid "_Help"
 msgstr "_Jutori"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "_Informazions"
+#: src/gnome-mines.vala:240 src/gnome-mines.vala:262
+msgid "_About Mines"
+msgstr "_Informazions su Minis"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_Jes"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:251
 msgid "_Mines"
 msgstr "_Minis"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:252
 msgid "_New Game"
 msgstr "_Gnove partide"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:257
+msgid "_Quit"
+msgstr "_Jes"
+
+#: src/gnome-mines.vala:261
 msgid "_Contents"
 msgstr "_Contignûts"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:311
 msgid "Minefield:"
 msgstr "Cjamp minât:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:345
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mine"
 msgstr[1] "%d × %d, %d minis"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Personalizât"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:482
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mine"
 msgstr[1] "<b>%d</b> minis"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:592
 msgid "Do you want to start a new game?"
 msgstr "Vûstu tacâ une gnove partide?"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:593
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se tu tachis une gnove partide, i tiei progrès atuâi a saran pierdûts."
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:594
 msgid "Keep Current Game"
 msgstr "Continue cheste partide"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:595
 msgid "Start New Game"
 msgstr "Tache une gnove partide"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:645
 msgid "St_art Over"
 msgstr "_Torne partî"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:763
 msgid "_Resume"
 msgstr "_Ripie"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:781
 msgid "Play _Again"
 msgstr "Torne zu_ie"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:838
 msgid "Main game:"
 msgstr "Zûc principâl:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:843
 msgid "Score:"
 msgstr "Ponts:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:846
 msgid "Resizing and SVG support:"
 msgstr "Cambiament dimension e supuart SVG:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:868
 msgid "Clear explosive mines off the board"
 msgstr "Cjate dutis lis minis platadis cence falis saltâ pal aiar"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:875
 msgid "translator-credits"
 msgstr "Fabio Tomat <f.t.public@gmail.com>"
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "Dopre _animazions"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Selezione teme"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "Siere"
+#~ msgid "Use _animations"
+#~ msgstr "Dopre _animazions"
+
+#~ msgid "Close"
+#~ msgstr "Siere"
