@@ -1,0 +1,55 @@
+{
+    "app-id": "org.gnome.Mines",
+    "runtime": "org.gnome.Platform",
+    "runtime-version": "master",
+    "sdk": "org.gnome.Sdk",
+    "command": "gnome-mines",
+    "tags": [
+        "nightly"
+    ],
+    "desktop-file-name-prefix": "(Nightly) ",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=wayland",
+        "--filesystem=xdg-run/dconf",
+        "--filesystem=~/.config/dconf:ro",
+        "--talk-name=ca.desrt.dconf",
+        "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
+    ],
+    "cleanup": [
+        "/include",
+        "/lib/*.la",
+        "/lib/pkgconfig",
+        "/share/man",
+        "/share/vala"
+    ],
+    "modules": [{
+            "name": "org.gnome.games-support.modules",
+            "modules": [{
+                    "name": "libgee",
+                    "config-opts": ["--enable-introspection=no"],
+                    "sources": [{
+                        "type": "git",
+                        "url": "https://gitlab.gnome.org/GNOME/libgee.git"
+                    }]
+                },
+                {
+                    "name": "libgnome-games-support",
+                    "sources": [{
+                        "type": "git",
+                        "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
+                    }]
+                }
+            ]
+        },
+        {
+            "name": "gnome-mines",
+            "buildsystem": "meson",
+            "sources": [{
+                "type": "git",
+                "url": "https://gitlab.gnome.org/GNOME/gnome-mines.git"
+            }]
+        }
+    ]
+}
