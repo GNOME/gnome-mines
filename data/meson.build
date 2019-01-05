@@ -1,11 +1,11 @@
 foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256' ]
-    install_data (join_paths ('icons', 'hicolor', size, 'gnome-mines.png'),
+    install_data (join_paths ('icons', 'hicolor', size, '@0@.png'.format(app_id)),
                   install_dir: join_paths (datadir, 'icons', 'hicolor', size, 'apps'))
 endforeach
-install_data (join_paths ('icons', 'hicolor', 'scalable', 'gnome-mines-symbolic.svg'),
+install_data (join_paths ('icons', 'hicolor', 'scalable', '@0@-symbolic.svg'.format(app_id)),
               install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
 
-install_data ('org.gnome.mines.gschema.xml',
+install_data ('@0@.gschema.xml'.format(app_id),
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
 meson.add_install_script ('meson_compile_gschema.py')
 
@@ -18,16 +18,16 @@ foreach theme: [ 'default', 'bgcolors', 'classic' ]
 endforeach
 
 i18n.merge_file ('desktop-file',
-                 input: 'gnome-mines.desktop.in',
-                 output: 'gnome-mines.desktop',
+                 input: '@0@.desktop.in'.format(app_id),
+                 output: '@0@.desktop'.format(app_id),
                  install: true,
                  install_dir: join_paths (datadir, 'applications'),
                  po_dir: '../po',
                  type: 'desktop')
 
 i18n.merge_file ('appdata-file',
-                 input: 'gnome-mines.appdata.xml.in',
-                 output: 'gnome-mines.appdata.xml',
+                 input: '@0@.appdata.xml.in'.format(app_id),
+                 output: '@0@.appdata.xml'.format(app_id),
                  install: true,
                  install_dir: join_paths (datadir, 'metainfo'),
                  po_dir: '../po')

@@ -1,5 +1,5 @@
 {
-    "app-id" : "org.gnome.mines",
+    "app-id" : "org.gnome.Mines",
     "runtime" : "org.gnome.Platform",
     "runtime-version" : "master",
     "sdk" : "org.gnome.Sdk",
@@ -7,9 +7,6 @@
     "tags" : [
         "nightly"
     ],
-    "copy-icon" : true,
-    "rename-icon" : "gnome-mines",
-    "rename-desktop-file" : "gnome-mines.desktop",
     "desktop-file-name-prefix" : "(Nightly) ",
     "finish-args" : [
         "--share=ipc",
@@ -20,11 +17,6 @@
         "--talk-name=ca.desrt.dconf",
         "--env=DCONF_USER_CONFIG_DIR=.config/dconf"
     ],
-    "build-options" : {
-        "cflags" : "-O2 -g",
-        "env" : {
-        }
-    },
     "cleanup" : [
         "/include",
         "/lib/*.la",
@@ -36,6 +28,7 @@
         "org.gnome.games-support.modules.json",
         {
             "name" : "gnome-mines",
+            "buildsystem": "meson",
             "sources" : [
                 {
                     "type" : "git",

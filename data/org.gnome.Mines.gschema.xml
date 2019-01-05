@@ -1,5 +1,5 @@
 <schemalist>
-  <schema id="org.gnome.mines" path="/org/gnome/mines/" gettext-domain="gnome-mines">
+  <schema id="org.gnome.Mines" path="/org/gnome/Mines/" gettext-domain="gnome-mines">
     <key name="theme" type="s">
       <default>'bgcolors'</default>
       <summary>The theme to use</summary>

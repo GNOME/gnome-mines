@@ -7,6 +7,8 @@ project ('gnome-mines', ['vala', 'c'],
          ],
          meson_version: '>= 0.37.1')
 
+app_id = 'org.gnome.Mines'
+
 gnome = import ('gnome')
 i18n = import ('i18n')
 

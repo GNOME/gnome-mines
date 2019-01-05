@@ -115,7 +115,7 @@ public class Mines : Gtk.Application
 
     public Mines ()
     {
-        Object (application_id: "org.gnome.mines", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.Mines", flags: ApplicationFlags.FLAGS_NONE);
 
         add_main_option_entries (option_entries);
     }
@@ -165,7 +165,7 @@ public class Mines : Gtk.Application
 
         Environment.set_application_name (_("Mines"));
 
-        settings = new Settings ("org.gnome.mines");
+        settings = new Settings ("org.gnome.Mines");
         settings.delay ();
 
         if (game_mode != -1)
@@ -869,7 +869,7 @@ public class Mines : Gtk.Application
                                "artists", artists,
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "gnome-mines", "website",
+                               "logo-icon-name", "org.gnome.Mines", "website",
                                "https://wiki.gnome.org/Apps/Mines",
                                null);
     }
