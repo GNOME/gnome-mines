@@ -7,7 +7,6 @@ install_data (join_paths ('icons', 'hicolor', 'scalable', '@0@-symbolic.svg'.for
 
 install_data ('@0@.gschema.xml'.format(app_id),
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
-meson.add_install_script ('meson_compile_gschema.py')
 
 foreach theme: [ 'default', 'bgcolors', 'classic' ]
     foreach file: [ 'theme.css',
