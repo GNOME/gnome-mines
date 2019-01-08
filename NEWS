@@ -1,3 +1,9 @@
+GNOME Mines 3.31.4.1
+=====================
+
+* Fixed crash when opening appearance dialog !8 (Yanko Kaneti)
+* Add libmath dependency to possibly fix linking issues (Robert Roth)
+
 GNOME Mines 3.31.4
 =====================
 
