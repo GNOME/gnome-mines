@@ -56,7 +56,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
     private Gtk.Button previous;
     private Gtk.Button next;
-    private Settings settings = new Settings ("org.gnome.mines");
+    private Settings settings = new Settings ("org.gnome.Mines");
     public List<string> list_themes ()
     {
         string themes_dir = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes");
