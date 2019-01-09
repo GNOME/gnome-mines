@@ -16,7 +16,7 @@ foreach theme: [ 'default', 'bgcolors', 'classic' ]
     endforeach
 endforeach
 
-i18n.merge_file ('desktop-file',
+desktop_file = i18n.merge_file ('desktop-file',
                  input: '@0@.desktop.in'.format(app_id),
                  output: '@0@.desktop'.format(app_id),
                  install: true,
@@ -24,11 +24,33 @@ i18n.merge_file ('desktop-file',
                  po_dir: '../po',
                  type: 'desktop')
 
-i18n.merge_file ('appdata-file',
+desktop_file_validate = find_program('desktop-file-validate', required: false)
+if desktop_file_validate.found()
+  test(
+    'validate-desktop',
+    desktop_file_validate,
+    args: [
+      desktop_file.full_path()
+    ]
+  )
+endif
+
+
+appdata_file = i18n.merge_file ('appdata-file',
                  input: '@0@.appdata.xml.in'.format(app_id),
                  output: '@0@.appdata.xml'.format(app_id),
                  install: true,
                  install_dir: join_paths (datadir, 'metainfo'),
                  po_dir: '../po')
+
+appstream_util = find_program('appstream-util', required: false)
+if appstream_util.found()
+  test(
+    'validate-appdata', appstream_util,
+    args: [
+      'validate-relax', '--nonet', appdata_file.full_path()
+    ]
+  )
+endif
 
 install_man ('gnome-mines.6')
