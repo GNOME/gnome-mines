@@ -33,9 +33,6 @@
   <update_contact>robert.roth.off_at_gmail.com</update_contact>
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
-  <provides>
-    <binary>gnome-chess</binary>
-  </provides>
   <releases>
     <release version="3.31.4.1" date="2019-01-08" />
     <release version="3.31.4" date="2019-01-08" />
