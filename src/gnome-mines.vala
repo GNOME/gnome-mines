@@ -234,7 +234,7 @@ public class Mines : Gtk.Application
             app_main_menu.append (_("A_ppearance"), "app.preferences");
             var section = new Menu ();
             menu.append_section (null, section);
-            section.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
+            section.append (_("Show _Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             section = new Menu ();
             menu.append_section (null, section);
@@ -255,7 +255,7 @@ public class Mines : Gtk.Application
             mines_menu.append (_("_New Game"), "app.new-game");
             mines_menu.append (_("_Scores"), "app.scores");
             mines_menu.append (_("A_ppearance"), "app.preferences");
-            mines_menu.append (_("_Show Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
+            mines_menu.append (_("Show _Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             mines_menu.append (_("_Quit"), "app.quit");
             var help_menu = new Menu ();
