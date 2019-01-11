@@ -238,7 +238,7 @@ public class Mines : Gtk.Application
             section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             section = new Menu ();
             menu.append_section (null, section);
-            section.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
+            section.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
             section.append (_("_Help"), "app.help");
             section.append (_("_About Mines"), "app.about");
             var menu_button = new Gtk.MenuButton ();
@@ -260,7 +260,7 @@ public class Mines : Gtk.Application
             mines_menu.append (_("_Quit"), "app.quit");
             var help_menu = new Menu ();
             menu.append_submenu (_("_Help"), help_menu);
-            help_menu.append (_("Keyboard Shortcuts"), "win.show-help-overlay");
+            help_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
             help_menu.append (_("_Contents"), "app.help");
             help_menu.append (_("_About Mines"), "app.about");
             set_menubar (menu);
