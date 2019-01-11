@@ -37,15 +37,10 @@
     <title>Useful tips</title>
   </section>
 
-<!--
-Let's not include Keyboard Shortcuts here for now.
-See https://mail.gnome.org/archives/desktop-devel-list/2018-December/msg00024.html
   <section id="advanced" style="2column">
     <title>Advanced</title>
-
-
   </section>
-  -->
+
   <section id="get-involved" style="2column">
     <title>Get Involved</title>
   </section>
