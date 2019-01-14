@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-07 17:36+0000\n"
-"PO-Revision-Date: 2019-01-09 09:43+0100\n"
+"POT-Creation-Date: 2019-01-11 20:11+0000\n"
+"PO-Revision-Date: 2019-01-14 15:32+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -53,7 +53,7 @@ msgstr ""
 "de la partida. Si tiene problema, puede pedir una pista: hay una "
 "penalización del tiempo, pero eso mejor que pisar una mina."
 
-#: data/org.gnome.Mines.appdata.xml.in:43
+#: data/org.gnome.Mines.appdata.xml.in:46
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
@@ -64,7 +64,6 @@ msgstr "Minas"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mines.desktop.in:7
-#| msgid "gnome-mines"
 msgid "org.gnome.Mines"
 msgstr "org.gnome.Mines"
 
@@ -168,7 +167,6 @@ msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
 #: src/help-overlay.ui:16
-#| msgid "Start New Game"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
@@ -194,7 +192,6 @@ msgid "Show Keyboard Shortcuts"
 msgstr "Mostrar los atajos del teclado"
 
 #: src/help-overlay.ui:51
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
@@ -265,7 +262,8 @@ msgid "A_ppearance"
 msgstr "_Aspecto"
 
 #: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-msgid "_Show Warnings"
+#| msgid "_Show Warnings"
+msgid "Show _Warnings"
 msgstr "Mostrar _advertencias"
 
 #: src/gnome-mines.vala:238 src/gnome-mines.vala:259
@@ -273,8 +271,9 @@ msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
 #: src/gnome-mines.vala:241 src/gnome-mines.vala:263
-msgid "Keyboard Shortcuts"
-msgstr "Atajo del teclado"
+#| msgid "Keyboard Shortcuts"
+msgid "_Keyboard Shortcuts"
+msgstr "Atajos del _teclado"
 
 #: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
