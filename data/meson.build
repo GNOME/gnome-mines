@@ -1,9 +1,8 @@
-foreach size: [ '16x16', '22x22', '24x24', '32x32', '48x48', '256x256' ]
-    install_data (join_paths ('icons', 'hicolor', size, '@0@.png'.format(app_id)),
-                  install_dir: join_paths (datadir, 'icons', 'hicolor', size, 'apps'))
-endforeach
-install_data (join_paths ('icons', 'hicolor', 'scalable', '@0@-symbolic.svg'.format(app_id)),
+install_data (join_paths ('icons', 'hicolor', 'scalable', '@0@.svg'.format(app_id)),
               install_dir: join_paths (datadir, 'icons', 'hicolor', 'scalable', 'apps'))
+
+install_data (join_paths ('icons', 'hicolor', 'symbolic', '@0@-symbolic.svg'.format(app_id)),
+              install_dir: join_paths (datadir, 'icons', 'hicolor', 'symbolic', 'apps'))
 
 install_data ('@0@.gschema.xml'.format(app_id),
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
