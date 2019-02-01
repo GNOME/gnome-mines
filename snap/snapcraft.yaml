@@ -38,7 +38,7 @@ slots:
   gnome-mines:
     interface: dbus
     bus: session
-    name: org.gnome.mines
+    name: org.gnome.Mines
 
 apps:
   gnome-mines:
@@ -49,7 +49,7 @@ apps:
       - gsettings
       - unity7
       - wayland
-    desktop: usr/share/applications/gnome-mines.desktop
+    desktop: usr/share/applications/org.gnome.Mines.desktop
     environment:
       GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
 
@@ -60,11 +60,11 @@ parts:
     source: .
     source-type: git
     override-build: |
-      sed -i.bak -e 's|=gnome-mines$|=${SNAP}/meta/gui/gnome-mines.png|g' data/gnome-mines.desktop.in
+      sed -i.bak -e 's|=org.gnome.Mines$|=${SNAP}/meta/gui/org.gnome.Mines.svg|g' data/org.gnome.Mines.desktop.in
       snapcraftctl build
       mkdir -p $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp ../src/data/icons/hicolor/256x256/gnome-mines.png $SNAPCRAFT_PART_INSTALL/meta/gui/
-      cp ../install/snap/gnome-mines/current/usr/share/applications/gnome-mines.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp ../src/data/icons/hicolor/scalable/org.gnome.Mines.svg $SNAPCRAFT_PART_INSTALL/meta/gui/
+      cp ../install/snap/gnome-mines/current/usr/share/applications/org.gnome.Mines.desktop $SNAPCRAFT_PART_INSTALL/meta/gui/
     plugin: meson
     meson-parameters: [--prefix=/snap/gnome-mines/current/usr]
     organize:
