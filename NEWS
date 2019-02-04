@@ -1,3 +1,15 @@
+GNOME Mines 3.31.90
+=====================
+
+* Updated translations
+* Added suggested appdata tags !9 (Bilal Elmoussaoui)
+* Tests to validate appdata and desktop !10 (Bilal Elmoussaoui)
+* Keyboard shortcuts page !11 (Jeremy Bicha)
+* Automated builds using Gitlab CI !12 (Bilal Elmoussaoui)
+* Updated application icon !13 (Jakub Steiner)
+* snap packaging updates (Jeremy Bicha)
+* Added in-game shortcuts to keyboard shortcuts window #34 (Robert Roth)
+
 GNOME Mines 3.31.4.1
 =====================
 
