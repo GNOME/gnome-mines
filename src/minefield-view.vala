@@ -452,12 +452,12 @@ public class MinefieldView : Gtk.Grid
             break;
 
         case Gdk.Key.Right:
-        case Gdk.Key.l:
+        case Gdk.Key.k:
             x++;
             break;
 
         case Gdk.Key.Up:
-        case Gdk.Key.k:
+        case Gdk.Key.u:
             y--;
             break;
 
@@ -467,7 +467,6 @@ public class MinefieldView : Gtk.Grid
             break;
 
         case Gdk.Key.space:
-        case Gdk.Key.Return:
             if (keyboard_cursor.is_set)
             {
                 selected.is_set = false;

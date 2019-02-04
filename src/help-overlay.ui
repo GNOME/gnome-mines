@@ -9,6 +9,7 @@
         <child>
           <object class="GtkShortcutsGroup">
             <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Window and games</property>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
@@ -49,6 +50,40 @@
                 <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;Q</property>
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">In-game</property>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">Up Down Left Right</property>
+                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor in the game field</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">u j h k</property>
+                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor in the game field</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">space</property>
+                <property name="title" translatable="yes" context="shortcut window">Reveal field</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">&lt;Primary&gt;space</property>
+                <property name="title" translatable="yes" context="shortcut window">Toggle field flag state between normal and flagged (and question, if enabled)</property>
               </object>
             </child>
           </object>
