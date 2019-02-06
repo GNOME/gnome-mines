@@ -5,14 +5,14 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2017, 2018, 2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-11 20:11+0000\n"
-"PO-Revision-Date: 2019-01-14 15:32+0100\n"
+"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"PO-Revision-Date: 2019-02-06 11:32+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 3.31.90\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -166,35 +166,61 @@ msgstr "Altura de la ventana en píxeles"
 msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Ventana y juegos"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Iniciar una partida nueva con la última configuración usada"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pausar el juego"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Mostrar la ayuda"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Mostrar los atajos del teclado"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "En el juego"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Mover el cursor del teclado en el campo de juego"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Mostrar casilla"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -262,7 +288,6 @@ msgid "A_ppearance"
 msgstr "_Aspecto"
 
 #: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-#| msgid "_Show Warnings"
 msgid "Show _Warnings"
 msgstr "Mostrar _advertencias"
 
@@ -271,7 +296,6 @@ msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
 #: src/gnome-mines.vala:241 src/gnome-mines.vala:263
-#| msgid "Keyboard Shortcuts"
 msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
@@ -302,7 +326,7 @@ msgstr "Índ_ice"
 #. Label on the scores dialog
 #: src/gnome-mines.vala:338
 msgid "Minefield:"
-msgstr "Minefield:"
+msgstr "Campo minado:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: src/gnome-mines.vala:372
@@ -370,7 +394,7 @@ msgstr "Eliminar las minas explosivas del tablero"
 #: src/gnome-mines.vala:871
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2016\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2019\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2008\n"
 "Lucas Vieites <lucas@asixinformatica.com>, 2002-2008\n"
 "Germán Poo Caamaño <gpoo@ubiobio.cl>\n"
