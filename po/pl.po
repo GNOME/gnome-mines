@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-11 20:11+0000\n"
-"PO-Revision-Date: 2019-02-03 18:05+0100\n"
+"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"PO-Revision-Date: 2019-02-06 22:05+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -171,35 +171,63 @@ msgstr "Wysokość okna w pikselach"
 msgid "true if the window is maximized"
 msgstr "Wartość „true” oznacza, że okno jest zmaksymalizowane"
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Okno i gry"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Rozpoczęcie nowej gry"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Rozpoczęcie nowej gry za pomocą ostatnio używanych ustawień"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Wstrzymanie gry"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Wyświetlenie pomocy"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Wyświetlenie skrótów klawiszowych"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Zakończenie działania"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "W grze"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Przesunięcie kursora klawiatury na polu gry"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Odkrycie pola"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Przełączenie flagi pola między stanem zwykłym a oznaczonym (oraz znakiem "
+"zapytania, jeśli jest włączony)"
 
 #: src/interface.ui:118
 msgid "_Width"
