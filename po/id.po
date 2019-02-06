@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-11 20:11+0000\n"
-"PO-Revision-Date: 2019-01-12 19:56+0700\n"
+"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"PO-Revision-Date: 2019-02-06 21:10+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural= n!=1;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -163,35 +163,63 @@ msgstr "Tinggi jendela dalam piksel"
 msgid "true if the window is maximized"
 msgstr "bernilai \"true\" bila jendela dimaksimalkan"
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Jendela dan permainan"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Mulai permainan baru"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Mulai permainan baru dengan pengaturan yang terakhir digunakan"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Istirahatkan permainan"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Tampilkan Bantuan"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Tampilkan Pintasan Papan Tik"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Keluar"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "Dalam permainan"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Pindahkan kursor papan tik pada papan permainan"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Buka papan"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Jungkitkan keadaan bendera papan antara normal dan ditandai (dan pertanyaan, "
+"jika diaktifkan)"
 
 #: src/interface.ui:118
 msgid "_Width"
