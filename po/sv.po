@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-11 20:11+0000\n"
-"PO-Revision-Date: 2019-01-25 14:34+0100\n"
+"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"PO-Revision-Date: 2019-02-11 22:26+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -64,7 +64,6 @@ msgstr "Minor"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mines.desktop.in:7
-#| msgid "gnome-mines"
 msgid "org.gnome.Mines"
 msgstr "org.gnome.Mines"
 
@@ -167,35 +166,63 @@ msgstr "Höjden på fönstret i bildpunkter"
 msgid "true if the window is maximized"
 msgstr "true (sant) om fönstret är maximerat"
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Fönster och spel"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Starta ett nytt spel"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Starta ett nytt spel med senast använda inställningar"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Gör paus i spelet"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Visa hjälp"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Visa tangentbordsgenvägar"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "I spelet"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Flytta tangentbordsmarkören i spelfältet"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Visa fält"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Växla fältets flaggtillstånd mellan normalt och flaggat (och frågetecken om "
+"aktiverat)"
 
 #: src/interface.ui:118
 msgid "_Width"
