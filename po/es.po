@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-02-04 08:35+0000\n"
-"PO-Revision-Date: 2019-02-06 11:32+0100\n"
+"POT-Creation-Date: 2019-02-06 10:40+0000\n"
+"PO-Revision-Date: 2019-02-11 10:20+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -53,7 +53,7 @@ msgstr ""
 "de la partida. Si tiene problema, puede pedir una pista: hay una "
 "penalización del tiempo, pero eso mejor que pisar una mina."
 
-#: data/org.gnome.Mines.appdata.xml.in:46
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
@@ -221,6 +221,8 @@ msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
 msgstr ""
+"Conmutar entre el estado normal y marcado de una casilla (e interrogación si "
+"está disponible)"
 
 #: src/interface.ui:118
 msgid "_Width"
