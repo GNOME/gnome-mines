@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-21 21:47+0000\n"
-"PO-Revision-Date: 2019-01-25 18:23+0100\n"
+"POT-Creation-Date: 2019-02-09 12:20+0000\n"
+"PO-Revision-Date: 2019-02-09 20:45+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -52,7 +52,7 @@ msgstr ""
 "Na začetku igre je mogoče izbrati velikost igralnega polja. Če se igra "
 "zaplete, je mogoče dobiti namig, ki pa je kaznovan s časovnim pribitkom."
 
-#: data/org.gnome.Mines.appdata.xml.in:46
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
@@ -63,7 +63,6 @@ msgstr "Mine"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mines.desktop.in:7
-#| msgid "gnome-mines"
 msgid "org.gnome.Mines"
 msgstr "org.gnome.Mines"
 
@@ -164,35 +163,63 @@ msgstr "Višina okna v točkah"
 msgid "true if the window is maximized"
 msgstr "prav, če je okno razpeto."
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Okno in igre"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Začni novo igro"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Začne novo igro z nazadnje uporabljenimi nastavitvami"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Premor igranja"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Pokaži pomoč"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Pokaži tipkovne bližnjice"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Končaj"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "V igri"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Premakni kazalko tipkovnice na igralno polje"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Razkrij polje"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Preklopi stanje zastavice polja med normalnim, označenim (in vprašajem, če "
+"je možnost omogočena)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -1057,9 +1084,6 @@ msgstr "Izbor teme"
 #~ msgid "Save this game before starting a new one?"
 #~ msgstr "Ali želite igro shraniti preden začnete igrati novo?"
 
-#~ msgid "_Abandon game"
-#~ msgstr "_Zapusti igro"
-
 #~ msgid "_Save game for later"
 #~ msgstr "_Shrani igro za kasneje"
 
@@ -1196,9 +1220,6 @@ msgstr "Izbor teme"
 
 #~ msgid "Game score from last saved session."
 #~ msgstr "Točke igre zadnje shranjene seje."
-
-#~ msgid "Game field"
-#~ msgstr "Igralno polje"
 
 #~ msgid "Game field from last saved session."
 #~ msgstr "Polje igre zadnje shranjene seje."
