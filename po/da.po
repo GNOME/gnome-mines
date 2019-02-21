@@ -1,5 +1,5 @@
 # Danish translation of gnome-games.
-# Copyright (C) 1998-2017 Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-games package.
 #
 # Anders Wegge Jakobsen <wegge@wegge.dk>, 1998.
@@ -8,7 +8,7 @@
 # Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004, 05.
 # flemming christensen <fc@stromata.dk>, 2011.
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2017.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007-2019.
 # scootergrisen, 2015.
 #
 # Husk at tilføje dig i credit-listen (besked id "translator-credits")
@@ -16,11 +16,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-27 20:31+0000\n"
-"PO-Revision-Date: 2017-09-07 03:36+0200\n"
-"Last-Translator: scootergrisen\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"PO-Revision-Date: 2019-02-13 00:16+0100\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
@@ -30,15 +29,15 @@ msgstr ""
 "X-Language: da_DK\n"
 "X-Source-Language: C\n"
 
-#: data/gnome-mines.appdata.xml.in:8
+#: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "GNOME Minestryger"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "Ryd skjulte miner fra et minefelt"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -50,7 +49,7 @@ msgstr ""
 "sikkert sted. Du vinder spillet når du har sat flag på alle minerne på "
 "brættet. Pas på du ikke detonerer en, ellers er spillet slut!"
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -60,58 +59,58 @@ msgstr ""
 "på. Hvis du ikke kan komme videre, kan du bede om at få et tip: der er en "
 "tidsstraf, men det er bedre end at ramme en mine!"
 
-#: data/gnome-mines.appdata.xml.in:42
+#: data/org.gnome.Mines.appdata.xml.in:46
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
+#: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "Minestryger"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-msgid "gnome-mines"
-msgstr "gnome-mines"
+#: data/org.gnome.Mines.desktop.in:7
+msgid "org.gnome.Mines"
+msgstr "org.gnome.Mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "minestryger;"
 
-#: data/gnome-mines.desktop.in:17
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
 msgstr "Lille bræt"
 
-#: data/gnome-mines.desktop.in:21
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
 msgstr "Mellemstort bræt"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
 msgstr "Stort bræt"
 
-#: data/org.gnome.mines.gschema.xml:5
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "Temaet, der skal bruges"
 
-#: data/org.gnome.mines.gschema.xml:6
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "Titlen på felttemaet, der skal bruges."
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "Benyt ukendt-flaget"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "Sæt til “true” for at kunne angive kvadrater som ukendte."
 
-#: data/org.gnome.mines.gschema.xml:15
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Warning about too many flags"
 msgstr "Advarsel om for mange flag"
 
-#: data/org.gnome.mines.gschema.xml:16
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -119,11 +118,11 @@ msgstr ""
 "Sæt til “true” for at aktivere advarselsikoner når der er placeret for mange "
 "flag ved siden af et nummereret felt."
 
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "Aktivér automatisk placering af flag"
 
-#: data/org.gnome.mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:21
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -131,45 +130,102 @@ msgstr ""
 "Sæt til “true” for automatisk at sætte flag på felter, når tilstrækkeligt "
 "mange felter er afsløret"
 
-#: data/org.gnome.mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:25
 msgid "Enable animations"
 msgstr "Aktivér animationer"
 
-#: data/org.gnome.mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "Sæt til “false” for at deaktivere tema-definerede overgangsanimationer"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
 msgstr "Antal kolonner i et brugerdefineret spil"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Number of rows in a custom game"
 msgstr "Antal rækker i et brugerdefineret spil"
 
-#: data/org.gnome.mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "The number of mines in a custom game"
 msgstr "Antal miner i et brugerdefineret spil"
 
-#: data/org.gnome.mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Board size"
 msgstr "Brætstørrelse"
 
-#: data/org.gnome.mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:46
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Brætstørrelse (0-2 = lille-stor, 3 = brugerdefineret)"
 
-#: data/org.gnome.mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:50
 msgid "Width of the window in pixels"
 msgstr "Bredden af vinduet i pixels"
 
-#: data/org.gnome.mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:54
 msgid "Height of the window in pixels"
 msgstr "Højden af vinduet i pixels"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:58
 msgid "true if the window is maximized"
 msgstr "“true” hvis vinduet er maksimeret"
+
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Vindue og spil"
+
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Start et nyt spil"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "Start et nyt spil med de senest brugte indstillinger"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Sæt spillet på pause"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Vis hjælp"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Vis tastaturgenveje"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Afslut"
+
+# Ikke sikker på kontekst
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "I spillet"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Flyt tastaturmarkøren i spilområdet"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Afslør felt"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr "Ændr tilstand for felts flagtilstand mellem normal og flag (og spørgsmålstegn, hvis dette er aktiveret)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -192,8 +248,8 @@ msgstr "_Annullér"
 msgid "_Play Game"
 msgstr "Start _spil"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
+#: src/gnome-mines.vala:810
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -213,131 +269,135 @@ msgstr "_Nyt spil"
 msgid "Paused"
 msgstr "Pause"
 
-#: src/gnome-mines.vala:89
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
 msgstr "Udskriv udgivelsesversion og afslut"
 
-#: src/gnome-mines.vala:90
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "Lille spil"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "Mellemstort spil"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "Stort spil"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
 msgid "_Scores"
 msgstr "_Resultater"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
 msgid "A_ppearance"
 msgstr "_Udseende"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-msgid "_Show Warnings"
-msgstr "_Vis advarsler"
+#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
+msgid "Show _Warnings"
+msgstr "Vis _advarsler"
 
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
 msgid "_Use Question Flags"
 msgstr "_Brug flag med spørgsmålstegn"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+msgid "_Keyboard Shortcuts"
+msgstr "_Tastaturgenveje"
+
+#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "_Om"
+#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
+msgid "_About Mines"
+msgstr "_Om Minestryger"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_Afslut"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:254
 msgid "_Mines"
 msgstr "_Minestryger"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:255
 msgid "_New Game"
 msgstr "_Nyt spil"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:260
+msgid "_Quit"
+msgstr "_Afslut"
+
+#: src/gnome-mines.vala:264
 msgid "_Contents"
 msgstr "_Indhold"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:338
 msgid "Minefield:"
 msgstr "Minefelt:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:372
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mine"
 msgstr[1] "%d × %d, %d miner"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:431
 msgid "Custom"
 msgstr "Brugerdefineret"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:509
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mine"
 msgstr[1] "<b>%d</b> miner"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:619
 msgid "Do you want to start a new game?"
 msgstr "Vil du starte et nyt spil?"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:620
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Hvis du starter et nyt spil, vil dine nuværende fremskridt gå tabt."
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:621
 msgid "Keep Current Game"
 msgstr "Behold det aktuelle spil"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:622
 msgid "Start New Game"
 msgstr "Start et nyt spil"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:672
 msgid "St_art Over"
 msgstr "St_art forfra"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:759
 msgid "_Resume"
 msgstr "_Genoptag"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:777
 msgid "Play _Again"
 msgstr "Spil _igen"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:834
 msgid "Main game:"
 msgstr "Hovedspil:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:839
 msgid "Score:"
 msgstr "Point:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:842
 msgid "Resizing and SVG support:"
 msgstr "Ændring af størrelse og SVG-understøttelse:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:864
 msgid "Clear explosive mines off the board"
 msgstr "Ryd eksplosive miner fra brættet"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:871
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -351,14 +411,12 @@ msgstr ""
 "Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
 "Mere info: http://www.dansk-gruppen.dk"
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "Anvend _animationer"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Vælg tema"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "Luk"
+#~ msgid "Use _animations"
+#~ msgstr "Anvend _animationer"
+
+#~ msgid "Close"
+#~ msgstr "Luk"
