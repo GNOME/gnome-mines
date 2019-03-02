@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-02-04 08:35+0000\n"
-"PO-Revision-Date: 2019-02-04 13:23+0100\n"
+"POT-Creation-Date: 2019-02-04 12:25+0000\n"
+"PO-Revision-Date: 2019-03-02 08:30+0100\n"
 "Last-Translator: Fabio Tomat <f.t.public@gmail.com>\n"
 "Language-Team: Friulian <fur@li.org>\n"
 "Language: fur\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -59,7 +59,6 @@ msgstr "Minis"
 
 #. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
 #: data/org.gnome.Mines.desktop.in:7
-#| msgid "gnome-mines"
 msgid "org.gnome.Mines"
 msgstr "org.gnome.Mines"
 
@@ -216,6 +215,8 @@ msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
 msgstr ""
+"Comute il stât de bandiere dal cjamp tra normâl e cun bandiere (e pont di "
+"domande, se abilitât)"
 
 #: src/interface.ui:118
 msgid "_Width"
