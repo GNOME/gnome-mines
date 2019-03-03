@@ -8,6 +8,7 @@
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.5.5" date="2012-08-12" status="review"/>
     <revision pkgversion="3.28.0" version="0.3" date="2018-09-01" status="review"/>
+    <revision pkgversion="3.31.91" version="0.4" date="2019-03-03" status="review"/>
 
     <credit type="author copyright">
       <name>Tiffany Antopolski</name>
@@ -40,8 +41,8 @@
      a flag on a tile prevents you from clicking on it and possibly causing an
      explosion, which would end the game.</p>
      <p>The exact look of the flags depends on the theme. You can change the
-     theme by clicking <gui>Mines</gui> in the top bar and then selecting
-     <gui>Appearance</gui>.</p>
+     theme by pressing the menu button in the top-right corner of the window and
+     then selecting <gui style="menuitem">Appearance</gui>.</p>
     </td>
    </tr>
   </table>
@@ -64,8 +65,8 @@
 
       <note style="tip">
 	<p>To make the number of available flags equal to the number of
-	remaining mines, open the application menu in the top bar and
-	enable the <gui style="checkbox">Show Warnings</gui>
+	remaining mines, pressing the menu button in the top-right corner of the
+	window and enable the <gui style="checkbox">Show Warnings</gui>
 	and <gui style="checkbox">Use Question Flags</gui>
 	preferences.</p>
      </note>
@@ -92,7 +93,7 @@
     </table>
 
   <note>
-    <p>To enable these flags, open the application menu in the top bar and
+    <p>To enable these flags, press the menu button in the top-right corner of the window and
         enable the <gui style="checkbox">Use Question Flags</gui> preference.</p>
   </note>
 

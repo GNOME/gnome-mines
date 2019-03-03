@@ -6,6 +6,7 @@
     <revision version="0.1" date="2012-08-12" status="review"/>
     <revision pkgversion="3.12" date="2014-03-09" status="review"/>
     <revision pkgversion="3.26" date="2017-12-30" status="review"/>
+    <revision pkgversion="3.31.91" version="0.3" date="2019-03-03" status="review"/>
 
     <credit type="author copyright">
       <name>Baptiste Mille-Mathias</name>
@@ -29,8 +30,8 @@
 
   <p>You can flag warnings to help you keep track of flags.</p>
 
-  <p>To enable warnings, click <gui>Mines</gui> in the top bar and then select
-  <gui>Show Warnings</gui>. This will warn you when you try to place too many
-  flags next to an open tile.</p>
+  <p>To enable warnings, press the menu button in the top-right corner of the
+  window and then select <gui style="checkbox">Show Warnings</gui>. This will
+  warn you when you try to place too many flags next to an open tile.</p>
 
 </page>
