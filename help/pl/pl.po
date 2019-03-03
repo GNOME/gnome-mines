@@ -1,14 +1,14 @@
 # Polish translation for gnome-mines help.
-# Copyright © 2017-2018 the gnome-mines authors.
+# Copyright © 2017-2019 the gnome-mines authors.
 # This file is distributed under the same license as the gnome-mines help.
-# Piotr Drąg <piotrdrag@gmail.com>, 2017-2018.
-# Aviary.pl <community-poland@mozilla.org>, 2017-2018.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017-2019.
+# Aviary.pl <community-poland@mozilla.org>, 2017-2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines-help\n"
-"POT-Creation-Date: 2018-09-01 18:03+0000\n"
-"PO-Revision-Date: 2018-09-01 21:49+0200\n"
+"POT-Creation-Date: 2019-03-03 11:52+0000\n"
+"PO-Revision-Date: 2019-03-03 15:12+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,34 +22,33 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2017-2018\n"
-"Aviary.pl <community-poland@mozilla.org>, 2017-2018"
+"Piotr Drąg <piotrdrag@gmail.com>, 2017-2019\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017-2019"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:19 C/get-help.page:11
-#: C/high-scores.page:11 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
+#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:16 C/documentation.page:14 C/flags.page:25
-#: C/get-help.page:16 C/high-scores.page:16 C/index.page:17 C/new-game.page:18
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:18 C/documentation.page:16 C/flags.page:15 C/flags.page:21
-#: C/flags.page:27 C/get-help.page:18 C/high-scores.page:13
-#: C/high-scores.page:18 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
-#: C/shortcuts.page:12
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
+#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
+#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -99,7 +98,7 @@ msgstr ""
 "prawej stronie."
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:13
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -259,7 +258,7 @@ msgstr ""
 "angielskim)."
 
 #. (itstool) path: page/p
-#: C/documentation.page:40
+#: C/documentation.page:39
 msgid ""
 "Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
@@ -268,12 +267,12 @@ msgstr ""
 "\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
 
 #. (itstool) path: page/title
-#: C/flags.page:32
+#: C/flags.page:33
 msgid "How to use flags"
 msgstr "Jak używać flag"
 
 #. (itstool) path: td/p
-#: C/flags.page:39
+#: C/flags.page:40
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -284,49 +283,50 @@ msgstr ""
 "wybuch, co zakończyłoby grę."
 
 #. (itstool) path: td/p
-#: C/flags.page:42
+#: C/flags.page:43
 msgid ""
 "The exact look of the flags depends on the theme. You can change the theme "
-"by clicking <gui>Mines</gui> in the top bar and then selecting "
-"<gui>Appearance</gui>."
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
-"Wygląd flag zależy od motywu. Można go zmienić klikając <gui>Miny</gui> na "
-"górnym pasku, a następnie wybierając <gui>Wygląd</gui>."
+"Wygląd flag zależy od motywu. Można go zmienić klikając przycisk menu "
+"w górnym prawym rogu okna, a następnie wybierając <gui>Wygląd</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:50
+#: C/flags.page:51
 msgid "How to place a flag on a tile"
 msgstr "Jak umieścić flagę na polu"
 
 #. (itstool) path: td/p
-#: C/flags.page:54
+#: C/flags.page:55
 msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr "Flag nie można kliknąć. Aby umieścić flagę na polu:"
 
 #. (itstool) path: item/p
-#: C/flags.page:56
+#: C/flags.page:57
 msgid "right click on a blank tile."
 msgstr "kliknij puste pole prawym przyciskiem myszy."
 
 #. (itstool) path: note/p
-#: C/flags.page:66
+#: C/flags.page:67
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, open the application menu in the top bar and enable the <gui style="
-"\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
-"Flags</gui> preferences."
+"mines, pressing the menu button in the top-right corner of the window and "
+"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+"\"checkbox\">Use Question Flags</gui> preferences."
 msgstr ""
-"Aby liczba dostępnych flag równała się liczbie pozostałych min, otwórz menu "
-"programu na górnym pasku i włącz preferencje <gui style=\"checkbox"
-"\">Ostrzeżenia</gui> i <gui style=\"checkbox\">Flagi niepewności</gui>."
+"Aby liczba dostępnych flag równała się liczbie pozostałych min, kliknij "
+"przycisk menu w górnym prawym rogu okna i włącz preferencje <gui style="
+"\"checkbox\">Ostrzeżenia</gui> i <gui style=\"checkbox\">Flagi niepewności</"
+"gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:76
+#: C/flags.page:77
 msgid "Use of the <em>question</em> flag"
 msgstr "Korzystanie z flagi niepewności"
 
 #. (itstool) path: section/p
-#: C/flags.page:77
+#: C/flags.page:78
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -335,64 +335,65 @@ msgstr ""
 "niepewności."
 
 #. (itstool) path: td/p
-#: C/flags.page:82
+#: C/flags.page:83
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Aby umieścić flagę niepewności na polu:"
 
 #. (itstool) path: item/p
-#: C/flags.page:84
+#: C/flags.page:85
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Podwójnie kliknij puste pole prawym przyciskiem myszy lub raz w przypadku "
 "pola z flagą."
 
 #. (itstool) path: note/p
-#: C/flags.page:95
+#: C/flags.page:96
 msgid ""
-"To enable these flags, open the application menu in the top bar and enable "
-"the <gui style=\"checkbox\">Use Question Flags</gui> preference."
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
 msgstr ""
-"Aby włączyć te flagi, otwórz menu programu na górnym pasku i włącz "
-"preferencję <gui style=\"checkbox\">Flagi niepewności</gui>."
+"Aby włączyć te flagi, kliknij przycisk menu w górnym prawym rogu okna "
+"i włącz preferencję <gui style=\"checkbox\">Flagi niepewności</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:27
+#: C/get-help.page:22 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:23
+#: C/get-help.page:24
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:28
+#: C/get-help.page:29
 msgid "Warnings"
 msgstr "Ostrzeżenia"
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:31
 msgid "You can flag warnings to help you keep track of flags."
 msgstr "Można korzystać z ostrzeżeń o flagach."
 
 #. (itstool) path: page/p
-#: C/get-help.page:32
+#: C/get-help.page:33
 msgid ""
-"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
-"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
-"flags next to an open tile."
+"To enable warnings, press the menu button in the top-right corner of the "
+"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+"will warn you when you try to place too many flags next to an open tile."
 msgstr ""
-"Aby włączyć ostrzeżenia, kliknij <gui>Miny</gui> na górnym pasku, "
+"Aby włączyć ostrzeżenia, kliknij przycisk menu w górnym prawym rogu okna, "
 "a następnie zaznacz opcję <gui>Ostrzeżenia</gui>. Spowoduje to wyświetlanie "
 "ostrzeżenia, jeśli obok otwartego pola umieszczono za dużo flag."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:23
+#: C/high-scores.page:24
 msgid "High scores"
 msgstr "Najlepsze wyniki"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:25
+#: C/high-scores.page:26
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -401,16 +402,16 @@ msgstr ""
 "wyczyszczono każdy typ planszy."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:28
+#: C/high-scores.page:29
 msgid ""
-"To view the high scores, open the application menu in the top bar and select "
-"<gui style=\"menuitem\">Scores</gui>. The dialog will display the "
-"<gui>Small</gui> field size by default; to view other sizes, select them in "
-"the drop down menu at the top of the dialog."
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
 msgstr ""
-"Aby wyświetlić najlepsze wyniki, otwórz menu programu na górnym pasku "
-"i wybierz <gui style=\"menuitem\">Wyniki</gui>. Domyślnie wyświetlana jest "
-"<gui>Mała</gui> plansza. Z rozwijanego menu na górze okna można wybrać "
+"Aby wyświetlić najlepsze wyniki, kliknij przycisk menu w górnym prawym rogu "
+"okna i wybierz <gui style=\"menuitem\">Wyniki</gui>. Domyślnie wyświetlana "
+"jest <gui>Mała</gui> plansza. Z rozwijanego menu na górze okna można wybrać "
 "pozostałe typy plansz."
 
 #. (itstool) path: info/title
@@ -426,7 +427,7 @@ msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:10
+#: C/index.page:13
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -458,12 +459,12 @@ msgid "Useful tips"
 msgstr "Wskazówki"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:41
 msgid "Advanced"
 msgstr "Zaawansowane"
 
 #. (itstool) path: section/title
-#: C/index.page:43
+#: C/index.page:45
 msgid "Get Involved"
 msgstr "Dołącz do nas"
 
@@ -665,70 +666,6 @@ msgid ""
 msgstr ""
 "Jeśli dostatecznie szybko skończysz grę, to znajdziesz się na liście <link "
 "xref=\"high-scores\">najlepszych wyników</link>."
-
-#. (itstool) path: page/title
-#: C/shortcuts.page:18
-msgid "Keyboard shortcuts"
-msgstr "Skróty klawiszowe"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:21
-msgid "New game"
-msgstr "Nowa gra"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:22
-msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:25
-msgid "New game with last used settings"
-msgstr "Nowa gra z ostatnio używanymi ustawieniami"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:26
-msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "Pause"
-msgstr "Wstrzymanie gry"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:30
-msgid "<key>Pause</key>"
-msgstr "<key>Pause</key>"
-
-#. (itstool) path: note/p
-#: C/shortcuts.page:31
-msgid ""
-"Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
-"not have a <key>Pause</key> key."
-msgstr ""
-"Jeśli klawiatura nie ma klawisza <key>Pause</key>, to użyj przycisku <gui "
-"style=\"button\">Wstrzymaj</gui> po prawej stronie."
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:35
-msgid "Help"
-msgstr "Pomoc"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:36
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:39
-msgid "Quit"
-msgstr "Zakończenie gry"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:40
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
