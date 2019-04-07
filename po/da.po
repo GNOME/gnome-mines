@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-02-04 08:35+0000\n"
+"POT-Creation-Date: 2019-03-26 15:34+0000\n"
 "PO-Revision-Date: 2019-02-13 00:16+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -59,7 +59,7 @@ msgstr ""
 "på. Hvis du ikke kan komme videre, kan du bede om at få et tip: der er en "
 "tidsstraf, men det er bedre end at ramme en mine!"
 
-#: data/org.gnome.Mines.appdata.xml.in:46
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "GNOME-projektet"
 
@@ -67,11 +67,6 @@ msgstr "GNOME-projektet"
 #: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "Minestryger"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mines.desktop.in:7
-msgid "org.gnome.Mines"
-msgstr "org.gnome.Mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -136,7 +131,8 @@ msgstr "Aktivér animationer"
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
-msgstr "Sæt til “false” for at deaktivere tema-definerede overgangsanimationer"
+msgstr ""
+"Sæt til “false” for at deaktivere tema-definerede overgangsanimationer"
 
 #: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
@@ -225,7 +221,9 @@ msgstr "Afslør felt"
 msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr "Ændr tilstand for felts flagtilstand mellem normal og flag (og spørgsmålstegn, hvis dette er aktiveret)"
+msgstr ""
+"Ændr tilstand for felts flagtilstand mellem normal og flag (og "
+"spørgsmålstegn, hvis dette er aktiveret)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -408,15 +406,20 @@ msgstr ""
 "Ask Hjorth Larsen\n"
 "scootergrisen\n"
 "\n"
-"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
-"Mere info: http://www.dansk-gruppen.dk"
+"Dansk-gruppen\n"
+"Websted <http://dansk-gruppen.dk>\n"
+"E-mail <dansk@dansk-gruppen.dk>"
 
 #: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Vælg tema"
+
+#~ msgid "org.gnome.Mines"
+#~ msgstr "org.gnome.Mines"
 
 #~ msgid "Use _animations"
 #~ msgstr "Anvend _animationer"
 
 #~ msgid "Close"
 #~ msgstr "Luk"
+
