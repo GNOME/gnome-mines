@@ -34,6 +34,8 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="3.32.2" date="2019-05-06" />
+    <release version="3.32.0" date="2019-03-11" />
     <release version="3.31.90" date="2019-02-04" type="development" />
     <release version="3.31.4.1" date="2019-01-08" />
     <release version="3.31.4" date="2019-01-08" />
