@@ -7,33 +7,66 @@
   background-color:#d3d7cf;
 }
 
-.1mines {
+.1mines .cursor{
+  background-color:shade(#DDFAC3, 0.5)
+}
+
+.2mines .cursor{
+  background-color:shade(#ECEDBF, 0.5)
+}
+
+.3mines .cursor{
+  background-color:shade(#EDDAB4, 0.5)
+}
+
+.4mines .cursor{
+  background-color:shade(#EDC38A, 0.5)
+}
+
+.5mines .cursor{
+  background-color:shade(#F7A1A2, 0.5)
+}
+
+.6mines .cursor{
+  background-color:shade(#FEA785, 0.5)
+}
+
+.7mines .cursor{
+  background-color:shade(#FF7D60, 0.5);
+}
+
+.8mines .cursor{
+  background-color:#FF323C;
+}
+
+.1mines:not(.cursor) {
   background-color:#DDFAC3;
 }
 
-.2mines {
+.2mines:not(.cursor) {
   background-color:#ECEDBF;
 }
 
-.3mines {
+.3mines:not(.cursor) {
   background-color:#EDDAB4;
 }
 
-.4mines {
+.4mines:not(.cursor) {
   background-color:#EDC38A;
 }
 
-.5mines {
+.5mines:not(.cursor) {
   background-color:#F7A1A2;
 }
-.6mines {
+
+.6mines:not(.cursor) {
   background-color:#FEA785;
 }
 
-.7mines {
+.7mines:not(.cursor) {
   background-color:#FF7D60;
 }
 
-.8mines {
+.8mines:not(.cursor) {
   background-color:#FF323C;
 }
