@@ -36,16 +36,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.el\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-01-11 20:11+0000\n"
-"PO-Revision-Date: 2019-01-21 23:46+0200\n"
-"Last-Translator: Efstathios Iosifidis <iosifidis@opensuse.org>\n"
+"POT-Creation-Date: 2019-03-26 17:59+0000\n"
+"PO-Revision-Date: 2019-06-20 22:42+0300\n"
+"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
 "Language-Team: Greek, Modern (1453-) <opensuse-translation-el@opensuse.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.8.7.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -79,7 +79,7 @@ msgstr ""
 "υπόδειξη: υπάρχει ποινή χρόνου, αλλά είναι καλύτερα από το να χτυπήσετε μια "
 "νάρκη!"
 
-#: data/org.gnome.Mines.appdata.xml.in:46
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "Έργο GNOME"
 
@@ -87,12 +87,6 @@ msgstr "Έργο GNOME"
 #: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "Νάρκες"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mines.desktop.in:7
-#| msgid "gnome-mines"
-msgid "org.gnome.Mines"
-msgstr "org.gnome.Mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -193,35 +187,63 @@ msgstr "Το ύψος του παραθύρου σε εικονοστοιχεί�
 msgid "true if the window is maximized"
 msgstr "αληθής αν το παράθυρο είναι μεγιστοποιημένο"
 
-#: src/help-overlay.ui:16
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Παράθυρο και παιχνίδια"
+
+#: src/help-overlay.ui:17
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Έναρξη νέου παιχνιδιού"
 
-#: src/help-overlay.ui:23
+#: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
 msgstr "Έναρξη νέου παιχνιδιού με ρυθμίσεις που χρησιμοποιήθηκαν τελευταία"
 
-#: src/help-overlay.ui:30
+#: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Παύση παιχνιδιού"
 
-#: src/help-overlay.ui:37
+#: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Εμφάνιση βοήθειας"
 
-#: src/help-overlay.ui:44
+#: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Εμφάνιση συντομεύσεων πληκτρολογίου"
 
-#: src/help-overlay.ui:51
+#: src/help-overlay.ui:52
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Έξοδος"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "Στο παιχνίδι"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Μετακινήστε τον κέρσορα πληκτρολογίου στο πεδίο παιχνιδιού"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Αποκάλυψη πεδίου"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Εναλλαγή της κατάστασης σημαίας πεδίου μεταξύ κανονικού και σημαδεμένου (και "
+"ερώτηση, αν είναι ενεργοποιημένη)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -289,7 +311,6 @@ msgid "A_ppearance"
 msgstr "Ε_μφάνιση"
 
 #: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-#| msgid "_Show Warnings"
 msgid "Show _Warnings"
 msgstr "Εμφάνιση _προειδοποιήσεων"
 
@@ -298,7 +319,6 @@ msgid "_Use Question Flags"
 msgstr "Χ_ρήση ερωτηματικών"
 
 #: src/gnome-mines.vala:241 src/gnome-mines.vala:263
-#| msgid "Keyboard Shortcuts"
 msgid "_Keyboard Shortcuts"
 msgstr "_Συντομεύσεις πληκτρολογίου"
 
@@ -413,6 +433,10 @@ msgstr ""
 #: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Επιλογή θέματος"
+
+#~| msgid "gnome-mines"
+#~ msgid "org.gnome.Mines"
+#~ msgstr "org.gnome.Mines"
 
 #~ msgid "Use _animations"
 #~ msgstr "Χρήση _εφέ"
