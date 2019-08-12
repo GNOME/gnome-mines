@@ -5,14 +5,13 @@
 #
 #
 # aki <aki@akademia.is>, 2004.
-# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2017.
+# Sveinn í Felli <sv1@fellsnet.is>, 2015, 2017, 2019.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 2.6\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-09-16 21:13+0000\n"
-"PO-Revision-Date: 2017-09-25 14:18+0000\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2019-03-26 15:34+0000\n"
+"PO-Revision-Date: 2019-08-12 07:33+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
 "Language: is\n"
@@ -20,17 +19,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 2.0\n"
 
-#: data/gnome-mines.appdata.xml.in:8
+#: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "GNOME sprengjuleit"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "Hreinsa faldar sprengjur af sprengjusvæði"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -43,7 +42,7 @@ msgstr ""
 "og þú ert búin/n að flagga allar sprengjurnar á borðinu. Varastu samt að "
 "setja neina sprengju í gang, því þá er leiknum lokið!"
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -53,58 +52,53 @@ msgstr ""
 "ættir að gera geturðu fengið vísbendingar; vissulega kemur þá til "
 "tímarefsing, en slíkt er væntanlega betra en að stíga á sprengju!"
 
-#: data/gnome-mines.appdata.xml.in:42
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "GNOME verkefnið"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
+#: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "Sprengjuleit"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-msgid "gnome-mines"
-msgstr "gnome-mines"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "minesweeper;sprengjuleit;"
 
-#: data/gnome-mines.desktop.in:17
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
 msgstr "Lítið borð"
 
-#: data/gnome-mines.desktop.in:21
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
 msgstr "Miðlungs"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
 msgstr "Stórt borð"
 
-#: data/org.gnome.mines.gschema.xml:5
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "Hvaða þema á að nota"
 
-#: data/org.gnome.mines.gschema.xml:6
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "Heiti þemunnar sem á að nota."
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "Nota \"óþekkt\"-fánann"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "Hakaðu til að geta merkt reiti sem óþekkta."
 
-#: data/org.gnome.mines.gschema.xml:15
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Warning about too many flags"
 msgstr "_Vara við of mörgum fánum"
 
-#: data/org.gnome.mines.gschema.xml:16
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
@@ -112,11 +106,11 @@ msgstr ""
 "Ef þetta er virkjað koma upp viðvaranir ef of margir fánar eru settir næst "
 "tölusettum reit."
 
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "Virkja sjálfvirka niðursetningu fána"
 
-#: data/org.gnome.mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:21
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -124,47 +118,107 @@ msgstr ""
 "Ef þetta er virkjað verða reitir flaggaðir sjálfkrafa sem sprengjur um leið "
 "og flett hefur verið ofan af nægilega mörgum reitum"
 
-#: data/org.gnome.mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:25
 msgid "Enable animations"
 msgstr "Virkja hreyfingar"
 
-#: data/org.gnome.mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
 "Setja sem ósatt til að gera óvirkar millifærsluhreyfingar sem skilgreindar "
 "eru í þema"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
 msgstr "Fjöldi dálka í sérsniðnum leik"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Number of rows in a custom game"
 msgstr "Fjöldi raða í sérsniðnum leik"
 
-#: data/org.gnome.mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "The number of mines in a custom game"
 msgstr "Fjöldi sprengja á vellinum í sérsniðnum leik"
 
-#: data/org.gnome.mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Board size"
 msgstr "Stærð borðs"
 
-#: data/org.gnome.mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:46
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Stærð borðsins (0-2=lítið-stórt, 3=sérsniðið)"
 
-#: data/org.gnome.mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:50
 msgid "Width of the window in pixels"
 msgstr "Breidd aðalgluggans í mynddílum"
 
-#: data/org.gnome.mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:54
 msgid "Height of the window in pixels"
 msgstr "Hæð aðalgluggans í mynddílum"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:58
 msgid "true if the window is maximized"
 msgstr "SATT ef forritsglugginn er hámarkaður"
+
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "Gluggi og leikir"
+
+#: src/help-overlay.ui:17
+#| msgid "Start New Game"
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Hefja nýjan leik"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "Byrja nýjan leik með seinast notuðu stillingum"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Setja leik í biðstöðu"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Birta hjálp"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Birta flýtilykla"
+
+#: src/help-overlay.ui:52
+#| msgid "_Quit"
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Hætta"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "Innan leiks"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "Færa lyklaborðsbendilinn innan leiksvæðisins"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Birta reit"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"Víxla stöðu reits á milli venjulegrar og flaggaðrar (og spurningamerkis ef"
+" það er virkt)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -186,8 +240,8 @@ msgstr "_Hætta við"
 msgid "_Play Game"
 msgstr "S_pila leik"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
+#: src/gnome-mines.vala:810
 msgid "_Pause"
 msgstr "_Gera hlé"
 
@@ -207,142 +261,149 @@ msgstr "Spila _aftur"
 msgid "Paused"
 msgstr "Í bið"
 
-#: src/gnome-mines.vala:89
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
 msgstr "Birta upplýsingar um útgáfu og hætta"
 
-#: src/gnome-mines.vala:90
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "Lítill leikur"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "Miðlungs"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "Stór leikur"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
 msgid "_Scores"
 msgstr "_Stigatafla"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
 msgid "A_ppearance"
 msgstr "Út_lit"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-msgid "_Show Warnings"
-msgstr "Birta viðvaranir"
+#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
+#| msgid "_Show Warnings"
+msgid "Show _Warnings"
+msgstr "Birta _viðvaranir"
 
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
 msgid "_Use Question Flags"
 msgstr "N_ota spurningafána"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+msgid "_Keyboard Shortcuts"
+msgstr "_Flýtivísanir á lyklaborði"
+
+#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
 msgstr "_Hjálp"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
+#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
+#| msgid "_About"
+msgid "_About Mines"
 msgstr "_Um hugbúnaðinn"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_Hætta"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:254
 msgid "_Mines"
 msgstr "Spren_gjuleit"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:255
 msgid "_New Game"
 msgstr "_Nýr leikur"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:260
+msgid "_Quit"
+msgstr "_Hætta"
+
+#: src/gnome-mines.vala:264
 msgid "_Contents"
 msgstr "_Innihald"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:338
 msgid "Minefield:"
 msgstr "Sprengjusvæði:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:372
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d sprengja"
 msgstr[1] "%d × %d, %d sprengjur"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:431
 msgid "Custom"
 msgstr "Sérsniðið"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:509
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> sprengja"
 msgstr[1] "<b>%d</b> sprengjur"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:619
 msgid "Do you want to start a new game?"
 msgstr "Viltu byrja nýjan leik?"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:620
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ef þú byrjar nýjan leik, mun staða þín í núverandi leik tapast."
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:621
 msgid "Keep Current Game"
 msgstr "Halda núverandi leik"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:622
 msgid "Start New Game"
 msgstr "Hefja nýjan leik"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:672
 msgid "St_art Over"
 msgstr "Byrj_a aftur"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:759
 msgid "_Resume"
 msgstr "Halda áf_ram"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:777
 msgid "Play _Again"
 msgstr "Spila _aftur"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:834
 msgid "Main game:"
 msgstr "Aðalleikur:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:839
 msgid "Score:"
 msgstr "Stig:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:842
 msgid "Resizing and SVG support:"
 msgstr "Stærðarbreytingar og SVG-stuðningur:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:864
 msgid "Clear explosive mines off the board"
 msgstr "Hreinsa virkar sprengjur af borðinu"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:871
 msgid "translator-credits"
 msgstr "Sveinn í Felli, sv1@fellsnet.is"
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "Nota _hreyfingar"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Veldu þema"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "Loka"
+#~ msgid "gnome-mines"
+#~ msgstr "gnome-mines"
+
+#~ msgid "Use _animations"
+#~ msgstr "Nota _hreyfingar"
+
+#~ msgid "Close"
+#~ msgstr "Loka"
