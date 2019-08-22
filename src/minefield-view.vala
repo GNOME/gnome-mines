@@ -93,6 +93,7 @@ private class Position : Object
 public class MinefieldView : Gtk.Grid
 {
     private Settings settings;
+    private int64 span;
 
     /* true if allowed to mark locations with question marks */
     private bool use_question_marks
@@ -240,21 +241,30 @@ public class MinefieldView : Gtk.Grid
         {
             toggle_mark (selected.x, selected.y);
         }
-        /* Left button to clear */
-        else if (event.button == 1)
-        {
-            selected.is_set = true;
-        }
 
         keyboard_cursor.is_set = false;
         mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
         keyboard_cursor.position = {selected.x, selected.y};
+
+        this.span = GLib.get_real_time () / 1000;
     }
 
     public void tile_released_cb (int x, int y, Gdk.EventButton event)
     {
+        int64 new_span = 0;
         if (event.button != 1)
             return;
+
+        new_span = GLib.get_real_time () / 1000;
+        if ((new_span - this.span) > 500)
+        {
+            toggle_mark (selected.x, selected.y);
+        }
+        else if ((event.state & Gdk.ModifierType.CONTROL_MASK) == 0)
+        {
+            selected.is_set = true;
+        }
+
 
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
