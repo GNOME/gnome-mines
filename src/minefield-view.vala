@@ -93,7 +93,7 @@ private class Position : Object
 public class MinefieldView : Gtk.Grid
 {
     private Settings settings;
-    private int64 span;
+    private bool force_nolongpress;
 
     /* true if allowed to mark locations with question marks */
     private bool use_question_marks
@@ -152,6 +152,7 @@ public class MinefieldView : Gtk.Grid
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
+        this.force_nolongpress = false;
         row_homogeneous = true;
         row_spacing = 0;
         column_homogeneous = true;
@@ -194,6 +195,7 @@ public class MinefieldView : Gtk.Grid
                     mines[i,j].show ();
                     mines[i,j].tile_pressed.connect ((x, y, event) => { tile_pressed_cb (x, y, event); });
                     mines[i,j].tile_released.connect ((x, y, event) => { tile_released_cb (x, y, event); });
+                    mines[i,j].tile_long_pressed.connect ((x, y) => { tile_long_pressed_cb (x, y); });
                     add (mines[i,j], i, j);
                 }
             }
@@ -240,32 +242,24 @@ public class MinefieldView : Gtk.Grid
         if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
         {
             toggle_mark (selected.x, selected.y);
+            this.force_nolongpress = true;
+        }
+        else
+        {
+            selected.is_set = true;
         }
 
         keyboard_cursor.is_set = false;
         mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
         keyboard_cursor.position = {selected.x, selected.y};
-
-        this.span = GLib.get_real_time () / 1000;
     }
 
     public void tile_released_cb (int x, int y, Gdk.EventButton event)
     {
-        int64 new_span = 0;
-        if (event.button != 1)
-            return;
+        if (event.button != 1) return;
 
-        new_span = GLib.get_real_time () / 1000;
-        if ((new_span - this.span) > 500)
-        {
-            toggle_mark (selected.x, selected.y);
-        }
-        else if ((event.state & Gdk.ModifierType.CONTROL_MASK) == 0)
-        {
-            selected.is_set = true;
-        }
-
-
+        this.force_nolongpress = false;
+ 
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
             return;
@@ -289,6 +283,13 @@ public class MinefieldView : Gtk.Grid
 
         keyboard_cursor.position = {selected.x, selected.y};
         selected.is_set = false;
+    }
+
+    public void tile_long_pressed_cb (int x, int y)
+    {
+        if (this.force_nolongpress == true) return;
+        selected.is_set = false;
+        toggle_mark (selected.x, selected.y);
     }
 
     private void explode_cb (Minefield minefield)
