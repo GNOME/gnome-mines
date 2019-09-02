@@ -1,5 +1,5 @@
 # gnome-games ja.po.
-# Copyright (C) 1998-2010 Free Software Foundation, Inc.
+# Copyright (C) 1998-2019 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -7,16 +7,17 @@
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2009.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
-# Shushi KUROSE <md81bird@hitaki.net>, 2012.
+# Shushi KUROSE <md81bird@hitaki.net>, 2012, 2017.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
+# sicklylife <translation@sicklylife.jp>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
 "POT-Creation-Date: 2019-03-26 15:34+0000\n"
-"PO-Revision-Date: 2013-09-16 11:08+0900\n"
-"Last-Translator: Jiro Matsuzawa <jmatsuzawa@gnome.org>\n"
+"PO-Revision-Date: 2019-09-02 22:20+0900\n"
+"Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -25,8 +26,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
-#, fuzzy
-#| msgid "Mines"
 msgid "GNOME Mines"
 msgstr "GNOME マインスイーパー"
 
@@ -51,7 +50,7 @@ msgstr ""
 
 #: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
-msgstr ""
+msgstr "The GNOME Project"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
 #: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
@@ -67,19 +66,19 @@ msgstr ""
 
 #: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
-msgstr ""
+msgstr "小さいボード"
 
 #: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
-msgstr ""
+msgstr "中くらいのボード"
 
 #: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
-msgstr ""
+msgstr "大きなボード"
 
 #: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
-msgstr ""
+msgstr "使用するテーマ"
 
 #: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
@@ -161,78 +160,75 @@ msgstr "ウィンドウが最小化されている場合は true"
 #: src/help-overlay.ui:12
 msgctxt "shortcut window"
 msgid "Window and games"
-msgstr ""
+msgstr "ウィンドウとゲーム"
 
 #: src/help-overlay.ui:17
-#, fuzzy
-#| msgid "Start New Game"
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr "新しいゲームを開始"
+msgstr "新しいゲームを開始する"
 
 #: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Start a new game with last used settings"
-msgstr ""
+msgstr "最後に使用した設定で新しいゲームを開始する"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
 msgid "Pause the game"
-msgstr ""
+msgstr "ゲームを一時停止する"
 
 #: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr ""
+msgstr "ヘルプを表示する"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカットを表示する"
 
 #: src/help-overlay.ui:52
-#, fuzzy
-#| msgid "_Quit"
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "終了(_Q)"
+msgstr "終了する"
 
 #: src/help-overlay.ui:60
 msgctxt "shortcut window"
 msgid "In-game"
-msgstr ""
+msgstr "ゲーム内"
 
 #: src/help-overlay.ui:65 src/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor in the game field"
-msgstr ""
+msgstr "ゲームフィールドのカーソルを動かす"
 
 #: src/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Reveal field"
-msgstr ""
+msgstr "フィールドを開く"
 
 #: src/help-overlay.ui:86
 msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
 msgstr ""
+"フィールドの状態を、通常、フラグ、? 付きフラグの順に切り替える"
 
 #: src/interface.ui:118
 msgid "_Width"
-msgstr ""
+msgstr "幅(_W)"
 
 #: src/interface.ui:142
 msgid "_Height"
-msgstr ""
+msgstr "高さ(_H)"
 
 #: src/interface.ui:166
 msgid "Percent _mines"
-msgstr ""
+msgstr "地雷の割合(_M)"
 
 #: src/interface.ui:192
 msgid "_Cancel"
-msgstr ""
+msgstr "キャンセル(_C)"
 
 #: src/interface.ui:208
 msgid "_Play Game"
@@ -245,17 +241,15 @@ msgstr "一時停止(_P)"
 
 #: src/interface.ui:366
 msgid "Change _Difficulty"
-msgstr ""
+msgstr "難易度を変更(_D)"
 
 #: src/interface.ui:383
 msgid "_Best Times"
-msgstr ""
+msgstr "ベストタイム(_B)"
 
 #: src/interface.ui:400
-#, fuzzy
-#| msgid "_Play Game"
 msgid "_Play Again"
-msgstr "プレイする(_P)"
+msgstr "再プレイ(_P)"
 
 #: src/interface.ui:464
 msgid "Paused"
@@ -263,25 +257,19 @@ msgstr "一時停止"
 
 #: src/gnome-mines.vala:92
 msgid "Print release version and exit"
-msgstr ""
+msgstr "バージョンを表示して終了する"
 
 #: src/gnome-mines.vala:93
-#, fuzzy
-#| msgid "Main game:"
 msgid "Small game"
-msgstr "メインゲーム:"
+msgstr "小規模な地雷原"
 
 #: src/gnome-mines.vala:94
-#, fuzzy
-#| msgid "Main game:"
 msgid "Medium game"
-msgstr "メインゲーム:"
+msgstr "中規模の地雷原"
 
 #: src/gnome-mines.vala:95
-#, fuzzy
-#| msgid "Main game:"
 msgid "Big game"
-msgstr "メインゲーム:"
+msgstr "広大な地雷原"
 
 #: src/gnome-mines.vala:233 src/gnome-mines.vala:256
 msgid "_Scores"
@@ -289,35 +277,31 @@ msgstr "得点(_S)"
 
 #: src/gnome-mines.vala:234 src/gnome-mines.vala:257
 msgid "A_ppearance"
-msgstr ""
+msgstr "外観(_P)"
 
 #: src/gnome-mines.vala:237 src/gnome-mines.vala:258
 msgid "Show _Warnings"
-msgstr ""
+msgstr "警告を表示(_W)"
 
 #: src/gnome-mines.vala:238 src/gnome-mines.vala:259
 msgid "_Use Question Flags"
-msgstr ""
+msgstr "疑いフラグを使用(_U)"
 
 #: src/gnome-mines.vala:241 src/gnome-mines.vala:263
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "キーボードショートカット(_K)"
 
 #: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
 #: src/gnome-mines.vala:243 src/gnome-mines.vala:265
-#, fuzzy
-#| msgid "_About"
 msgid "_About Mines"
 msgstr "このアプリケーションについて(_A)"
 
 #: src/gnome-mines.vala:254
-#, fuzzy
-#| msgid "Mines"
 msgid "_Mines"
-msgstr "GNOME マインスイーパー"
+msgstr "GNOME マインスイーパー(_M)"
 
 #: src/gnome-mines.vala:255
 msgid "_New Game"
@@ -334,16 +318,14 @@ msgstr ""
 #. Label on the scores dialog
 #: src/gnome-mines.vala:338
 msgid "Minefield:"
-msgstr ""
+msgstr "地雷原:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: src/gnome-mines.vala:372
-#, fuzzy, c-format
-#| msgid "%u × %u, %u mine"
-#| msgid_plural "%u × %u, %u mines"
+#, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] "%u × %u, 地雷 %u 個"
+msgstr[0] "%d × %d, %d 個の地雷"
 
 #: src/gnome-mines.vala:431
 msgid "Custom"
@@ -373,15 +355,15 @@ msgstr "新しいゲームを開始"
 
 #: src/gnome-mines.vala:672
 msgid "St_art Over"
-msgstr ""
+msgstr "やり直す(_A)"
 
 #: src/gnome-mines.vala:759
 msgid "_Resume"
-msgstr ""
+msgstr "再開(_R)"
 
 #: src/gnome-mines.vala:777
 msgid "Play _Again"
-msgstr ""
+msgstr "再プレイ(_A)"
 
 #: src/gnome-mines.vala:834
 msgid "Main game:"
@@ -403,18 +385,20 @@ msgstr ""
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
-"佐藤 暁 <ss@gnome.gr.jp>\n"
-"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
 "草野 貴之 <AE5T-KSN@asahi-net.or.jp>\n"
-"Yuusuke Tahara <tahara@gnome.gr.jp>\n"
-"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
-"Yukihiro Nakai <Nakai@technologist.com>\n"
+"佐藤 暁 <ss@gnome.gr.jp>\n"
+"日本 GNOME ユーザー会 <http://www.gnome.gr.jp>\n"
 "松澤 二郎 <jmatsuzawa@gnome.org>\n"
-"日本GNOMEユーザー会 <http://www.gnome.gr.jp>"
+"Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>\n"
+"KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>\n"
+"Shushi KUROSE <md81bird@hitaki.net>\n"
+"sicklylife <translation@sicklylife.jp>\n"
+"Yukihiro Nakai <Nakai@technologist.com>\n"
+"Yuusuke Tahara <tahara@gnome.gr.jp>"
 
 #: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
-msgstr ""
+msgstr "テーマの選択"
 
 #~ msgid "Display border around numbers"
 #~ msgstr "数字に縁取りを表示する"
