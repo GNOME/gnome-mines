@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-03-26 17:59+0000\n"
-"PO-Revision-Date: 2019-09-02 22:40+0900\n"
+"POT-Creation-Date: 2019-09-02 13:48+0000\n"
+"PO-Revision-Date: 2019-09-03 18:30+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -82,7 +82,7 @@ msgstr "使用するテーマ"
 
 #: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
-msgstr ""
+msgstr "使用するタイルテーマのタイトルです。"
 
 #: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
@@ -97,13 +97,11 @@ msgid "Warning about too many flags"
 msgstr "フラグを置きすぎたら警告する"
 
 #: data/org.gnome.Mines.gschema.xml:16
-#, fuzzy
-#| msgid "Set to true to enable warning icons when too many flags are placed."
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"フラグをたくさん置いた時に警告アイコンを表示する場合は true にしてください。"
+"数字タイルの隣にフラグをたくさん置いた時に警告アイコンを表示する場合は true にしてください。"
 
 #: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
@@ -119,11 +117,11 @@ msgstr ""
 
 #: data/org.gnome.Mines.gschema.xml:25
 msgid "Enable animations"
-msgstr ""
+msgstr "アニメーションを有効にする"
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
-msgstr ""
+msgstr "テーマで定義されたアニメーション遷移を無効にする場合は false に設定してください"
 
 #: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
@@ -212,7 +210,7 @@ msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
 msgstr ""
-"フィールドを通常の状態からフラグと疑いフラグ (有効な場合) に切り替える"
+"フィールドの状態を“フラグ”、“疑いフラグ (有効な場合)”、“通常”に切り替える"
 
 #: src/interface.ui:118
 msgid "_Width"
