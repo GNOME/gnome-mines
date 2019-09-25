@@ -11,10 +11,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-09-16 21:13+0000\n"
-"PO-Revision-Date: 2017-09-20 15:00+0430\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2019-03-26 17:59+0000\n"
+"PO-Revision-Date: 2019-09-25 16:38+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -23,156 +22,208 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
-#: data/gnome-mines.appdata.xml.in:8
+#: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "مین‌های گنوم"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "پاک‌سازی مین‌ها از میدان مین"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win the "
+"game when you’ve flagged every mine on the board. Be careful not to trigger "
+"one, or the game is over!"
 msgstr ""
 "«مین‌های گنوم» یک بازی فکری است که در آن به دنبال مین‌های مخفی شده می‌گردید. با "
-"بیش‌ترین سرعت ممکن خانه‌های جدول را به عنوان مین مشخص کنید تا تخته بازی را "
-"امن‌تر کنید. شما بازی را زمانی که تمام مین‌های تخته را مشخص کرده باشید برنده "
-"می‌شوید. مواضب باشید که یکی از آنها را منفجر نکنید، وگرنه بازی تمام می‌شود!"
+"بیش‌ترین سرعت ممکن خانه‌های جدول را به عنوان مین مشخص کنید تا تخته بازی را امن‌تر "
+"کنید. شما بازی را زمانی که تمام مین‌های تخته را مشخص کرده باشید برنده می‌شوید. "
+"مواضب باشید که یکی از آنها را منفجر نکنید، وگرنه بازی تمام می‌شود!"
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
 "that’s better than hitting a mine!"
 msgstr ""
-"در شروع بازی می‌توانید اندازهٔ زمینی که می‌خواهید در شروع بازی کنید را مشخص "
-"کنید. اگر گیر کردید، می‌توانید راهنمایی بگیرید: البته این کار جریمهٔ زمانی "
-"دارد، اما از منفجر کردن یک مین بهتر است!"
+"در شروع بازی می‌توانید اندازهٔ زمینی که می‌خواهید در شروع بازی کنید را مشخص کنید. "
+"اگر گیر کردید، می‌توانید راهنمایی بگیرید: البته این کار جریمهٔ زمانی دارد، اما از "
+"منفجر کردن یک مین بهتر است!"
 
-#: data/gnome-mines.appdata.xml.in:42
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "پروژه گنوم"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:166
+#: src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "مین‌ها"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-msgid "gnome-mines"
-msgstr "مین‌های گنوم"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "minesweeper;مین‌یاب;"
 
-#: data/gnome-mines.desktop.in:17
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
 msgstr "تخته کوچک"
 
-#: data/gnome-mines.desktop.in:21
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
 msgstr "تخته متوسط"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
 msgstr "تخته بزرگ"
 
-#: data/org.gnome.mines.gschema.xml:5
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "تم مورد استفاده"
 
-#: data/org.gnome.mines.gschema.xml:6
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "عنوان تم کاشی مورد استفاده."
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "استفاده از پرچم نامعلوم"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "برای توانایی علامت‌گذاری مربع‌ها به عنوان نامعلوم روی درست تنظیم شود."
 
-#: data/org.gnome.mines.gschema.xml:15
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Warning about too many flags"
-msgstr "اخطار درباره‌ی پرچم‌های خیلی زیاد"
+msgstr "اخطار دربارهٔ پرچم‌های خیلی زیاد"
 
-#: data/org.gnome.mines.gschema.xml:16
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"بر روی درست تنظیم شود تا هنگامی که پرچم‌های سوال زیادی در کنار یک خانه عددی "
-"قرار داده شده، هشدار داده شود."
+"روی درست تنظیم شود تا هنگامی که پرچم‌های سوال زیادی در کنار یک خانه عددی قرار "
+"داده شده، هشدار داده شود."
 
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "قعال سازی جا گذاری خودکار پرچم‌ها"
 
-#: data/org.gnome.mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:21
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازه‌ی کافی مربع فاش "
-"شد، روی درست تنظیم شود"
+"برای پرچم‌گذاری خودکار مربع‌ها به عنوان مین هنگامی که به اندازهٔ کافی مربع فاش شد، "
+"روی درست تنظیم شود"
 
-#: data/org.gnome.mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:25
 msgid "Enable animations"
 msgstr "فعال‌سازی پویانمایی"
 
-#: data/org.gnome.mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "اگر روی نادرست تنظیم شود، پویانمایی‌های تعریف شده توسط تم غیرفعال می‌شود"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
 msgstr "تعداد ستون‌ها در یک بازی سفارشی"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Number of rows in a custom game"
 msgstr "تعداد ردیف‌ها در یک بازی سفارشی"
 
-#: data/org.gnome.mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "The number of mines in a custom game"
 msgstr "تعداد مین‌ها در یک بازی سفارشی"
 
-#: data/org.gnome.mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Board size"
-msgstr "اندازه‌ی صفحه"
+msgstr "اندازهٔ صفحه"
 
-#: data/org.gnome.mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:46
 msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "اندازه‌ی صفحه (۰-۲ = کوچک-بزرگ، ۳=سفارشی)"
+msgstr "اندازهٔ صفحه (۰-۲ = کوچک-بزرگ، ۳=سفارشی)"
 
-#: data/org.gnome.mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:50
 msgid "Width of the window in pixels"
-msgstr "عرض پنجره به پیکسل"
+msgstr "پهنای پنجره به پیکسل"
 
-#: data/org.gnome.mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:54
 msgid "Height of the window in pixels"
-msgstr "ارتفاع پنجره به پیکسل"
+msgstr "بلندای پنجره به پیکسل"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:58
 msgid "true if the window is maximized"
 msgstr "درست اگر پنجره بیشینه باشد"
 
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "پنجره و بازی‌ها"
+
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "شروع بازی جدید"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "شروع بازی جدید با آخرین تنظیمات مورد استفاده"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "مکث بازی"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "نمایش راهنما"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "نمایش میان‌برهای صفحه‌کلید"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "خروج"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "درون‌بازی"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "نشانگر صفحه‌کلید را به میدان بازی ببرید"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "آشکار کردن میدان"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+"تغییر وضعیت پرچم میدان بین معمولی و پرچم‌دار (و در صورت به کار افتادن، پرسش)"
+
 #: src/interface.ui:118
 msgid "_Width"
-msgstr "_عرض"
+msgstr "_پهنا"
 
 #: src/interface.ui:142
 msgid "_Height"
-msgstr "_ارتفاع"
+msgstr "_بلندا"
 
 #: src/interface.ui:166
 msgid "Percent _mines"
@@ -186,14 +237,14 @@ msgstr "_لغو"
 msgid "_Play Game"
 msgstr "_بازی کردن"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
+#: src/gnome-mines.vala:810
 msgid "_Pause"
 msgstr "_مکث"
 
 #: src/interface.ui:366
 msgid "Change _Difficulty"
-msgstr "تغییر س_ختی:"
+msgstr "تغییر _دشواری"
 
 #: src/interface.ui:383
 msgid "_Best Times"
@@ -207,144 +258,149 @@ msgstr "_بازی دوباره"
 msgid "Paused"
 msgstr "مکث شده"
 
-#: src/gnome-mines.vala:89
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
-msgstr "نمایش نسخه‌ی انتشار و خروج"
+msgstr "نمایش نگارش انتشار و خروج"
 
-#: src/gnome-mines.vala:90
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "بازی کوچک"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "بازی متوسط"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "بازی بزرگ"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
 msgid "_Scores"
 msgstr "امتیا_زها"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
 msgid "A_ppearance"
 msgstr "_ظاهر"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-msgid "_Show Warnings"
-msgstr "_نمایش هشدارها"
+#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
+msgid "Show _Warnings"
+msgstr "نمایش _هشدارها"
 
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
 msgid "_Use Question Flags"
-msgstr "ا_ستفاده از پرچ‌های سوال"
+msgstr "ا_ستفاده از پرچم‌های پرسش"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+msgid "_Keyboard Shortcuts"
+msgstr "میان‌برهای _صفحه‌کلید"
+
+#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
 msgstr "_راهنما"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "_درباره"
+#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
+msgid "_About Mines"
+msgstr "_دربارهٔ مین‌ها"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_خروج"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:254
 msgid "_Mines"
 msgstr "_مین‌ها"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:255
 msgid "_New Game"
 msgstr "بازی _جدید"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:260
+msgid "_Quit"
+msgstr "_خروج"
+
+#: src/gnome-mines.vala:264
 msgid "_Contents"
 msgstr "م_حتویات"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:338
 msgid "Minefield:"
-msgstr "زمین مین:"
+msgstr "میدان مین:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:372
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%Id × %Id، %Id مین"
 msgstr[1] "%Id × %Id، %Id مین"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:431
 msgid "Custom"
 msgstr "سفارشی"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:509
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%Id</b> مین"
 msgstr[1] "<b>%Id</b> مین"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:619
 msgid "Do you want to start a new game?"
-msgstr "آیا می‌خواهید بازی جدیدی آغاز کنید؟"
+msgstr "می‌خواهید بازی جدیدی آغاز کنید؟"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:620
 msgid "If you start a new game, your current progress will be lost."
 msgstr "اگر بازی جدید شروع کنید، پیشرفت فعلی شما از دست خواهد رفت."
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:621
 msgid "Keep Current Game"
-msgstr "ادامه‌ی بازی فعلی"
+msgstr "ادامهٔ بازی کنونی"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:622
 msgid "Start New Game"
 msgstr "شروع بازی جدید"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:672
 msgid "St_art Over"
 msgstr "_شروع دوباره"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:759
 msgid "_Resume"
 msgstr "ا_ز سر گیری"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:777
 msgid "Play _Again"
 msgstr "بازی _دوباره"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:834
 msgid "Main game:"
 msgstr "بازی اصلی:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:839
 msgid "Score:"
 msgstr "امتیاز:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:842
 msgid "Resizing and SVG support:"
 msgstr "پشتیبانی SVG و تغییر اندازه:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:864
 msgid "Clear explosive mines off the board"
 msgstr "مین‌های انفجاری از صفحه پاک شوند"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:871
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
 "دانیال بهزادی <dani.behzi@gmail.com>"
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "استفاده از _پویانمایی"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
-msgstr "انتخاب تم"
+msgstr "گزینش زمینه"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "خروج"
+#~ msgid "gnome-mines"
+#~ msgstr "مین‌های گنوم"
+
+#~ msgid "Use _animations"
+#~ msgstr "استفاده از _پویانمایی"
+
+#~ msgid "Close"
+#~ msgstr "خروج"
