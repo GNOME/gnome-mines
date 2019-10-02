@@ -9,15 +9,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2019-03-08 03:36+0000\n"
-"PO-Revision-Date: 2019-03-18 11:14+0100\n"
+"POT-Creation-Date: 2019-09-25 13:10+0000\n"
+"PO-Revision-Date: 2019-10-02 12:42+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
-"Language: es\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.31.90\n"
+"X-Generator: Gtranslator 3.34.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -28,30 +28,29 @@ msgstr ""
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:19 C/get-help.page:11
-#: C/high-scores.page:11 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
+#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
+#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:16 C/documentation.page:14 C/flags.page:25
-#: C/get-help.page:16 C/high-scores.page:16 C/index.page:17 C/new-game.page:18
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:18 C/documentation.page:16 C/flags.page:15 C/flags.page:21
-#: C/flags.page:27 C/get-help.page:18 C/high-scores.page:13
-#: C/high-scores.page:18 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
-#: C/shortcuts.page:12
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
+#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
+#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -101,7 +100,7 @@ msgstr ""
 "situado a la derecha."
 
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:13
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -268,12 +267,12 @@ msgstr ""
 "\">wiki</link> contiene información útil."
 
 #. (itstool) path: page/title
-#: C/flags.page:32
+#: C/flags.page:33
 msgid "How to use flags"
 msgstr "Cómo usar las banderas"
 
 #. (itstool) path: td/p
-#: C/flags.page:39
+#: C/flags.page:40
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
@@ -284,53 +283,62 @@ msgstr ""
 "ella, causando una probable explosión que terminaría el juego."
 
 #. (itstool) path: td/p
-#: C/flags.page:42
+#: C/flags.page:43
+#| msgid ""
+#| "The exact look of the flags depends on the theme. You can change the "
+#| "theme by clicking <gui>Mines</gui> in the top bar and then selecting "
+#| "<gui>Appearance</gui>."
 msgid ""
 "The exact look of the flags depends on the theme. You can change the theme "
-"by clicking <gui>Mines</gui> in the top bar and then selecting "
-"<gui>Appearance</gui>."
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
 "El aspecto exacto de las banderas depende del tema. Puede cambiar el tema "
-"pulsando <gui>Minas</gui> situado en la barra superior y luego seleccionando "
-"<gui>Apariencia</gui>."
+"pulsando el botón de menú en la esquina superior derecha de la ventana y "
+"eligiendo <gui style=\"menuitem\">Apariencia</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:50
+#: C/flags.page:51
 msgid "How to place a flag on a tile"
 msgstr "Cómo poner una bandera en una casilla"
 
 #. (itstool) path: td/p
-#: C/flags.page:54
+#: C/flags.page:55
 msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr ""
 "No se puede pulsar en las banderas. Para colocar una bandera en una casilla:"
 
 #. (itstool) path: item/p
-#: C/flags.page:56
+#: C/flags.page:57
 msgid "right click on a blank tile."
 msgstr "pulse con el botón derecho sobre una casilla no descubierta."
 
 # Comprobado con la traducción de master
 #. (itstool) path: note/p
-#: C/flags.page:66
+#: C/flags.page:67
+#| msgid ""
+#| "To make the number of available flags equal to the number of remaining "
+#| "mines, open the application menu in the top bar and enable the <gui style="
+#| "\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
+#| "Flags</gui> preferences."
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, open the application menu in the top bar and enable the <gui style="
-"\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
-"Flags</gui> preferences."
+"mines, pressing the menu button in the top-right corner of the window and "
+"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+"\"checkbox\">Use Question Flags</gui> preferences."
 msgstr ""
 "Para igualar el número de banderas disponibles al de casillas restantes, "
-"abra el menú de la aplicación situado en la barra superior y active las "
-"preferencias <gui style=\"checkbox\">Mostrar advertencias</gui> y <gui style="
+"pulse el botón de menú en la esquina superior derecha de la ventana y active "
+"las opciones <gui style=\"checkbox\">Mostrar advertencias</gui> y <gui style="
 "\"checkbox\">Usar banderas de interrogación</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:76
+#: C/flags.page:77
 msgid "Use of the <em>question</em> flag"
 msgstr "Uso de la bandera de <em>interrogación</em>"
 
 #. (itstool) path: section/p
-#: C/flags.page:77
+#: C/flags.page:78
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -339,67 +347,76 @@ msgstr ""
 "de <em>interrogación</em>."
 
 #. (itstool) path: td/p
-#: C/flags.page:82
+#: C/flags.page:83
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera de <em>interrogación</em> en una casilla:"
 
 #. (itstool) path: item/p
-#: C/flags.page:84
+#: C/flags.page:85
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Pulse dos veces con el botón derecho en una casilla vacía o una vez en una "
 "bandera."
 
 #. (itstool) path: note/p
-#: C/flags.page:95
+#: C/flags.page:96
+#| msgid ""
+#| "To enable these flags, open the application menu in the top bar and "
+#| "enable the <gui style=\"checkbox\">Use Question Flags</gui> preference."
 msgid ""
-"To enable these flags, open the application menu in the top bar and enable "
-"the <gui style=\"checkbox\">Use Question Flags</gui> preference."
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
 msgstr ""
-"Para activar estas banderas, abra el menú de la aplicación situado en la "
-"barra superior y active la opción <gui style=\"checkbox\">Usar banderas de "
-"interrogación</gui>."
+"Para activar estas banderas, pulse el botón de menú en la esquina superior "
+"derecha de la ventana y active la opción <gui style=\"checkbox\">Usar "
+"banderas de interrogación</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:27
+#: C/get-help.page:22 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:23
+#: C/get-help.page:24
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:28
+#: C/get-help.page:29
 msgid "Warnings"
 msgstr "Advertencias"
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:31
 msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
 "Puede usar las banderas de advertencia para ayudarle a llevar un control de "
 "las banderas."
 
 #. (itstool) path: page/p
-#: C/get-help.page:32
+#: C/get-help.page:33
+#| msgid ""
+#| "To enable warnings, click <gui>Mines</gui> in the top bar and then select "
+#| "<gui>Show Warnings</gui>. This will warn you when you try to place too "
+#| "many flags next to an open tile."
 msgid ""
-"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
-"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
-"flags next to an open tile."
+"To enable warnings, press the menu button in the top-right corner of the "
+"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+"will warn you when you try to place too many flags next to an open tile."
 msgstr ""
-"Para activar las advertencias, pulse en <gui>Minas</gui> en la barra "
-"superior y elija <gui>Mostrar advertencias</gui>. Esto le advertirá cuando "
-"intente colocar demasiadas banderas junto a una casilla abierta."
+"Para activar las advertencias, pulse el botón de menú en la esquina superior "
+"derecha de la ventana y elija <gui style=\"checkbox\">Mostrar advertencias</"
+"gui>. Esto le advertirá cuando intente colocar demasiadas banderas junto a "
+"una casilla abierta."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:23
+#: C/high-scores.page:24
 msgid "High scores"
 msgstr "Puntuación más alta"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:25
+#: C/high-scores.page:26
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -408,16 +425,21 @@ msgstr ""
 "tipo de campo de minas."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:28
+#: C/high-scores.page:29
+#| msgid ""
+#| "To view the high scores, open the application menu in the top bar and "
+#| "select <gui style=\"menuitem\">Scores</gui>. The dialog will display the "
+#| "<gui>Small</gui> field size by default; to view other sizes, select them "
+#| "in the drop down menu at the top of the dialog."
 msgid ""
-"To view the high scores, open the application menu in the top bar and select "
-"<gui style=\"menuitem\">Scores</gui>. The dialog will display the "
-"<gui>Small</gui> field size by default; to view other sizes, select them in "
-"the drop down menu at the top of the dialog."
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
 msgstr ""
-"Para ver las puntuaciones más altas, abra el menú de la aplicación situado "
-"en la barra superior y seleccione <gui style=\"menuitem\">Puntuación</gui>. "
-"El diálogo mostrará el tamaño de tablero <gui>Pequeño</gui> de manera "
+"Para ver las puntuaciones más altas, pulsando el botón de menú en la esquina "
+"superior derecha de la ventana y elija <gui style=\"menuitem\">Puntuación</"
+"gui>. El diálogo mostrará el tamaño de tablero <gui>Pequeño</gui> de manera "
 "predeterminada; para ver otros tamaños, selecciónelos en el menú desplegable "
 "en la parte superior del diálogo."
 
@@ -434,7 +456,7 @@ msgid "GNOME Mines"
 msgstr "Minas"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:10
+#: C/index.page:13
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -467,12 +489,12 @@ msgid "Useful tips"
 msgstr "Consejos útiles"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:41
 msgid "Advanced"
 msgstr "Avanzado"
 
 #. (itstool) path: section/title
-#: C/index.page:43
+#: C/index.page:45
 msgid "Get Involved"
 msgstr "Involucrarse"
 
@@ -683,70 +705,6 @@ msgstr ""
 "Si ha sido lo bastante rápido para completar el juego, se le añadirá a la "
 "lista de <link xref=\"high-scores\">puntuaciones más altas</link>."
 
-#. (itstool) path: page/title
-#: C/shortcuts.page:18
-msgid "Keyboard shortcuts"
-msgstr "Atajos de teclado"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:21
-msgid "New game"
-msgstr "Juego nuevo"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:22
-msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:25
-msgid "New game with last used settings"
-msgstr "Juego nuevo con la última configuración usada"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:26
-msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "Pause"
-msgstr "Pausa"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:30
-msgid "<key>Pause</key>"
-msgstr "<key>Pause</key>"
-
-#. (itstool) path: note/p
-#: C/shortcuts.page:31
-msgid ""
-"Use the <gui style=\"button\">Pause</gui> on the right if your keyboard does "
-"not have a <key>Pause</key> key."
-msgstr ""
-"Use el botón <gui style=\"button\">Pausa</gui> situado a la derecha si su "
-"teclado no tiene la tecla <key>Pausa</key>."
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:35
-msgid "Help"
-msgstr "Ayuda"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:36
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:39
-msgid "Quit"
-msgstr "Salir"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:40
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
 #. (itstool) path: credit/name
 #: C/translate.page:15
 msgid "Michael Hill"
@@ -814,6 +772,46 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Atajos de teclado"
+
+#~ msgid "New game"
+#~ msgstr "Juego nuevo"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
+
+#~ msgid "New game with last used settings"
+#~ msgstr "Juego nuevo con la última configuración usada"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
+
+#~ msgid "Pause"
+#~ msgstr "Pausa"
+
+#~ msgid "<key>Pause</key>"
+#~ msgstr "<key>Pause</key>"
+
+#~ msgid ""
+#~ "Use the <gui style=\"button\">Pause</gui> on the right if your keyboard "
+#~ "does not have a <key>Pause</key> key."
+#~ msgstr ""
+#~ "Use el botón <gui style=\"button\">Pausa</gui> situado a la derecha si su "
+#~ "teclado no tiene la tecla <key>Pausa</key>."
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "<key>F1</key>"
+#~ msgstr "<key>F1</key>"
+
+#~ msgid "Quit"
+#~ msgstr "Salir"
+
+#~ msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+#~ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
 #~ msgid ""
 #~ "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
