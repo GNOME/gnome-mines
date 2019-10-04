@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-09-02 13:48+0000\n"
-"PO-Revision-Date: 2019-09-03 18:30+0900\n"
+"POT-Creation-Date: 2019-10-02 10:49+0000\n"
+"PO-Revision-Date: 2019-10-05 00:15+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -101,7 +101,8 @@ msgid ""
 "Set to true to enable warning icons when too many flags are placed next to a "
 "numbered tile."
 msgstr ""
-"数字タイルの隣にフラグをたくさん置いた時に警告アイコンを表示する場合は true にしてください。"
+"数字タイルの隣にフラグをたくさん置いた時に警告アイコンを表示する場合は true "
+"にしてください。"
 
 #: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
@@ -121,7 +122,9 @@ msgstr "アニメーションを有効にする"
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Set to false to disable theme-defined transition animations"
-msgstr "テーマで定義されたアニメーション遷移を無効にする場合は false に設定してください"
+msgstr ""
+"テーマで定義されたアニメーション遷移を無効にする場合は false に設定してくださ"
+"い"
 
 #: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of columns in a custom game"
@@ -255,7 +258,7 @@ msgstr "一時停止"
 
 #: src/gnome-mines.vala:92
 msgid "Print release version and exit"
-msgstr "バージョンを表示して終了する"
+msgstr "リリースバージョンを表示して終了する"
 
 #: src/gnome-mines.vala:93
 msgid "Small game"
@@ -267,11 +270,11 @@ msgstr "中規模の地雷原"
 
 #: src/gnome-mines.vala:95
 msgid "Big game"
-msgstr "広大な地雷原"
+msgstr "大規模な地雷原"
 
 #: src/gnome-mines.vala:233 src/gnome-mines.vala:256
 msgid "_Scores"
-msgstr "得点(_S)"
+msgstr "スコア(_S)"
 
 #: src/gnome-mines.vala:234 src/gnome-mines.vala:257
 msgid "A_ppearance"
