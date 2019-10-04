@@ -20,20 +20,6 @@ passthrough:
   license: GPL-3.0+
   title: GNOME Mines
 
-plugs:
-  gnome-3-28-1804:
-    interface: content
-    target: $SNAP/gnome-platform
-    default-provider: gnome-3-28-1804
-  gtk-3-themes:
-    interface: content
-    target: $SNAP/data-dir/themes
-    default-provider: gtk-common-themes
-  icon-themes:
-    interface: content
-    target: $SNAP/data-dir/icons
-    default-provider: gtk-common-themes
-
 slots:
   # for GtkApplication registration
   gnome-mines:
@@ -43,31 +29,14 @@ slots:
 
 apps:
   gnome-mines:
-    command: desktop-launch gnome-mines
+    command: usr/bin/gnome-mines
+    extensions: [gnome-3-28]
     plugs:
-      - desktop
-      - desktop-legacy
       - gsettings
-      - unity7
-      - wayland
     desktop: usr/share/applications/org.gnome.Mines.desktop
-    environment:
-      GSETTINGS_SCHEMA_DIR: $SNAP/share/glib-2.0/schemas
 
 parts:
-  desktop-gnome-platform:
-    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
-    source-subdir: gtk
-    plugin: make
-    make-parameters: ["FLAVOR=gtk3"]
-    build-packages:
-      - build-essential
-      - libgtk-3-dev
-    override-build: |
-      snapcraftctl build
-      mkdir -pv $SNAPCRAFT_PART_INSTALL/gnome-platform
   gnome-mines:
-    after: [desktop-gnome-platform]
     source: .
     source-type: git
     override-build: |
