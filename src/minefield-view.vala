@@ -93,6 +93,7 @@ private class Position : Object
 public class MinefieldView : Gtk.Grid
 {
     private Settings settings;
+    private bool force_nolongpress;
 
     /* true if allowed to mark locations with question marks */
     private bool use_question_marks
@@ -151,6 +152,7 @@ public class MinefieldView : Gtk.Grid
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
+        this.force_nolongpress = false;
         row_homogeneous = true;
         row_spacing = 0;
         column_homogeneous = true;
@@ -193,6 +195,7 @@ public class MinefieldView : Gtk.Grid
                     mines[i,j].show ();
                     mines[i,j].tile_pressed.connect ((x, y, event) => { tile_pressed_cb (x, y, event); });
                     mines[i,j].tile_released.connect ((x, y, event) => { tile_released_cb (x, y, event); });
+                    mines[i,j].tile_long_pressed.connect ((x, y) => { tile_long_pressed_cb (x, y); });
                     add (mines[i,j], i, j);
                 }
             }
@@ -239,9 +242,9 @@ public class MinefieldView : Gtk.Grid
         if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
         {
             toggle_mark (selected.x, selected.y);
+            this.force_nolongpress = true;
         }
-        /* Left button to clear */
-        else if (event.button == 1)
+        else
         {
             selected.is_set = true;
         }
@@ -253,9 +256,10 @@ public class MinefieldView : Gtk.Grid
 
     public void tile_released_cb (int x, int y, Gdk.EventButton event)
     {
-        if (event.button != 1)
-            return;
+        if (event.button != 1) return;
 
+        this.force_nolongpress = false;
+ 
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
             return;
@@ -279,6 +283,13 @@ public class MinefieldView : Gtk.Grid
 
         keyboard_cursor.position = {selected.x, selected.y};
         selected.is_set = false;
+    }
+
+    public void tile_long_pressed_cb (int x, int y)
+    {
+        if (this.force_nolongpress == true) return;
+        selected.is_set = false;
+        toggle_mark (selected.x, selected.y);
     }
 
     private void explode_cb (Minefield minefield)

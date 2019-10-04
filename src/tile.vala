@@ -2,9 +2,11 @@ public class Tile : Gtk.Button
 {
     private int _row;
     private int _column;
+    private Gtk.GestureLongPress _gesture;
     public signal void tile_mouse_over (int x, int y);
     public signal void tile_pressed (int x, int y, Gdk.EventButton event);
     public signal void tile_released (int x, int y, Gdk.EventButton event);
+    public signal void tile_long_pressed (int x, int y);
 
     public int row
     {
@@ -21,6 +23,11 @@ public class Tile : Gtk.Button
         _column = pcol;
         can_focus = false;
         add_class ("tile");
+        _gesture = new Gtk.GestureLongPress (this);
+        _gesture.pressed.connect((x, y) =>
+        {
+             tile_long_pressed (prow, pcol);
+        });
         button_press_event.connect ((event) =>
         {
             /* By default windows with both button press and button release
