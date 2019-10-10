@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-02-04 08:35+0000\n"
-"PO-Revision-Date: 2019-03-11 22:11+0100\n"
+"POT-Creation-Date: 2019-10-04 15:18+0000\n"
+"PO-Revision-Date: 2019-10-10 14:40+0200\n"
 "Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.1.1\n"
+"X-Generator: Poedit 2.2.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -55,7 +55,7 @@ msgstr ""
 "Si esteu perdut, podeu demanar una pista, però tindreu una penalització de "
 "temps, però és millor això que no pas activar una mina!"
 
-#: data/org.gnome.Mines.appdata.xml.in:46
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "El projecte GNOME"
 
@@ -63,11 +63,6 @@ msgstr "El projecte GNOME"
 #: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
 msgid "Mines"
 msgstr "Mines"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/org.gnome.Mines.desktop.in:7
-msgid "org.gnome.Mines"
-msgstr "org.gnome.Mines"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -223,8 +218,8 @@ msgctxt "shortcut window"
 msgid ""
 "Toggle field flag state between normal and flagged (and question, if enabled)"
 msgstr ""
-"Commuta l'estat del camp del senyalador entre normal i seleccionat (i pregunta, si està habilitat)"
-
+"Commuta l'estat del camp del senyalador entre normal i seleccionat (i "
+"pregunta, si està habilitat)"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -301,7 +296,7 @@ msgstr "_Utilitza banderes de pregunta"
 
 #: src/gnome-mines.vala:241 src/gnome-mines.vala:263
 msgid "_Keyboard Shortcuts"
-msgstr ""
+msgstr "_Dreceres del teclat"
 
 #: src/gnome-mines.vala:242 src/gnome-mines.vala:262
 msgid "_Help"
@@ -409,6 +404,9 @@ msgstr ""
 #: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "Seleccioneu el tema"
+
+#~ msgid "org.gnome.Mines"
+#~ msgstr "org.gnome.Mines"
 
 #~ msgid "Use _animations"
 #~ msgstr "_Usa animacions"
