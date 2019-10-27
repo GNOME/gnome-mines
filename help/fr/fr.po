@@ -1,28 +1,27 @@
 # French translation of gnomine documentation.
-# Copyright (C) 2007-2012 Free Software Foundation, Inc.
+# Copyright (C) 2007-2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnomine documentation package.
 #
-#
-#
 # Bruno Brouard <annoa.b@gmail.com>, 2007, 2012.
-# Claude Paroz <claude@2xlibre.net>, 2007-2008.
+# Claude Paroz <claude@2xlibre.net>, 2007-2008, 2019.
 # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
 # Julien Hardelin <jhardlin@orange.fr>, 2013.
-# Charles Monzat <superboa@hotmail.fr>, 2017.
 # jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
+# Charles Monzat <charles.monzat@free.fr>, 2017-2019.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: gnomine doc fr\n"
-"POT-Creation-Date: 2018-09-01 09:33+0000\n"
-"PO-Revision-Date: 2018-09-01 12:59+0200\n"
-"Last-Translator: jean-baptiste <jean-baptiste@holcroft.fr>\n"
+"Project-Id-Version: gnome-mines doc fr\n"
+"POT-Creation-Date: 2019-10-10 12:41+0000\n"
+"PO-Revision-Date: 2019-10-27 18:56+0100\n"
+"Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"X-Generator: Gtranslator 3.34.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -36,82 +35,82 @@ msgstr ""
 "Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:10 C/flags.page:18 C/get-help.page:11
-#: C/high-scores.page:10 C/new-game.page:12 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
+#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:12 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:13 C/rules.page:13
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
 #: C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:15 C/documentation.page:14 C/flags.page:24
-#: C/get-help.page:16 C/high-scores.page:15 C/index.page:17 C/new-game.page:17
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
 #: C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
-#: C/board-size.page:17 C/documentation.page:16 C/flags.page:14 C/flags.page:20
-#: C/flags.page:26 C/get-help.page:18 C/high-scores.page:12
-#: C/high-scores.page:17 C/new-game.page:14 C/new-game.page:19 C/rules.page:18
-#: C/shortcuts.page:11
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
+#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
+#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
 #. (itstool) path: page/title
-#: C/board-size.page:22
+#: C/board-size.page:23
 msgid "How to change the game board size"
 msgstr "Modification de la taille du plateau"
 
 #. (itstool) path: page/p
-#: C/board-size.page:24
-msgid "You can select a field size at the start of a new game."
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
 msgstr ""
-"Vous pouvez choisir une taille de plateau au début d’une nouvelle partie."
+"Vous pouvez choisir une taille de plateau au démarrage de l’application."
 
-#. (itstool) path: item/p
-#: C/board-size.page:28
-msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
-msgstr ""
-"Cliquez sur <gui style=\"button\">Nouveau</gui> ou sur <guiseq><gui style="
-"\"menu\">Mines</gui> <gui style=\"menuitem\">Nouvelle partie</gui></guiseq>."
-
-#. (itstool) path: item/p
-#: C/board-size.page:33
+#. (itstool) path: page/p
+#: C/board-size.page:27
 msgid "Select one of the grid sizes:"
 msgstr "Choisissez une taille de grille :"
 
 #. (itstool) path: item/p
-#: C/board-size.page:35
+#: C/board-size.page:29
 msgid "a 8 × 8 board with 10 mines"
 msgstr "un plateau de 8 x 8 avec 10 mines"
 
 #. (itstool) path: item/p
-#: C/board-size.page:36
+#: C/board-size.page:30
 msgid "a 16 × 16 board with 40 mines"
 msgstr "un plateau de 16 x 16 avec 40 mines"
 
 #. (itstool) path: item/p
-#: C/board-size.page:37
+#: C/board-size.page:31
 msgid "a 30 × 16 board with 99 mines"
 msgstr "un plateau de 30 x 16 avec 99 mines"
 
 #. (itstool) path: item/p
-#: C/board-size.page:38
+#: C/board-size.page:32
 msgid "a custom board, where you chose the size and the number of mines"
 msgstr ""
 "un plateau personnalisé où vous décidez de la taille de la grille et du "
 "nombre de mines"
 
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"Pour modifier la <link xref=\"board-size\">taille du plateau</link> "
+"ultérieurement, cliquez sur le bouton <gui style=\"button\">Changer la "
+"difficulté</gui> situé sur la droite."
+
 #. (itstool) path: credit/name
-#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:12
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
 #: C/translate.page:10
 msgid "Tiffany Antopolski"
 msgstr "Tiffany Antopolski"
@@ -164,10 +163,10 @@ msgid ""
 "status of your bug. If you don't already have an account, just click on the "
 "<gui>Sign in/Register</gui> link to create one."
 msgstr ""
-"Pour participer vous devez avoir un compte, ce qui vous donnera la "
+"Pour participer, vous devez avoir un compte, ce qui vous donnera la "
 "possibilité d’obtenir les fichiers de bogues, de faire des commentaires, et "
 "de recevoir des mises à jour par e-mail sur l’état de votre bogue. Si vous "
-"n’avez pas déjà un compte, il suffit de cliquer sur le lien <gui>Sign in/ "
+"n’avez pas déjà un compte, il suffit de cliquer sur le lien <gui>Sign in / "
 "Register</gui> pour en créer un."
 
 #. (itstool) path: section/p
@@ -182,9 +181,9 @@ msgstr ""
 "Une fois que vous avez un compte, connectez-vous. Il s’agit d’un site en "
 "anglais. Cliquez sur <gui>New Issue</gui>. Avant de rapporter un bogue, "
 "lisez les <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing."
-"html\">bug writing guidelines (en anglais)</link>, et cliquez sur <link href="
-"\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">Browse (Parcourir)</"
-"link> pour voir si le bogue existe déjà."
+"html\">bug writing guidelines (en anglais)</link>, et effectuez une <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">Recherche</link> "
+"pour voir si le bogue existe déjà."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -226,21 +225,21 @@ msgstr ""
 #: C/develop.page:23
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
 "url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Si vous voulez <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">aider au développement des <app>jeux GNOME</app></link>, vous pouvez vous "
-"mettre en contact avec les développeurs en utilisant <link href=\"https://"
+"Si vous voulez <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
+"\">aider au développement des <app>jeux GNOME</app></link>, vous pouvez "
+"entrer en contact avec les développeurs en utilisant <link href=\"https://"
 "cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</"
-"link> ou via notre <link href=\"http://mail.gnome.org/mailman/listinfo/games-"
-"list\">liste de diffusion</link>."
+"link> ou via notre <link href=\"https://mail.gnome.org/mailman/listinfo/"
+"games-list\">liste de diffusion</link>."
 
 #. (itstool) path: credit/name
-#: C/documentation.page:19 C/new-game.page:22
+#: C/documentation.page:19 C/new-game.page:23
 msgid "Aruna Sankaranarayanan"
 msgstr "Aruna Sankaranarayanan"
 
@@ -263,152 +262,161 @@ msgstr ""
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
+"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
-"Pour contribuer au projet de documentation, entrer en contact avec nous sur "
+"Pour contribuer au projet de documentation, entrez en contact avec nous sur "
 "le canal <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">#docs</link> sur <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> ou via notre <link href=\"http://"
-"mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link> ."
+"gnome.org%2Fdocs\">#docs</link> sur <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> ou via notre <link href=\"https://"
+"mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link>."
 
 #. (itstool) path: page/p
-#: C/documentation.page:40
+#: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
 msgstr ""
-"Notre page <link href=\"https://live.gnome.org/DocumentationProject/"
+"Notre page <link href=\"https://wiki.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> contient des informations utiles."
 
 #. (itstool) path: page/title
-#: C/flags.page:31
+#: C/flags.page:33
 msgid "How to use flags"
 msgstr "Utilisation des drapeaux"
 
 #. (itstool) path: td/p
-#: C/flags.page:38
+#: C/flags.page:40
 msgid ""
 "Flags are used to mark tiles which you suspect may hide a mine. Putting a "
 "flag on a tile prevents you from clicking on it and possibly causing an "
 "explosion, which would end the game."
 msgstr ""
-"Les drapeaux servent à marquer les tuiles que vous suspectez de cacher une "
+"Les drapeaux servent à marquer les cases que vous suspectez de cacher une "
 "mine. Y planter un drapeau vous évite de cliquer dessus au risque de "
 "déclencher une explosion qui mettrait fin à la partie."
 
+#. (itstool) path: td/p
+#: C/flags.page:43
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
+msgstr ""
+"L’apparence exacte des drapeaux dépend du thème. Vous pouvez modifier le "
+"thème en cliquant sur le bouton menu dans le coin supérieur droit de la "
+"fenêtre, puis en sélectionnant <gui style=\"menuitem\">Apparence</gui>."
+
 #. (itstool) path: section/title
-#: C/flags.page:46
+#: C/flags.page:51
 msgid "How to place a flag on a tile"
-msgstr "Comment planter un drapeau sur une tuile"
+msgstr "Comment planter un drapeau sur une case"
 
 #. (itstool) path: td/p
-#: C/flags.page:50
-msgid ""
-"Red flags are those that cannot be clicked. To place a red flag on a tile:"
+#: C/flags.page:55
+msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr ""
-"Les drapeaux rouges ne sont pas cliquables. Pour planter un drapeau rouge "
-"sur une tuile :"
+"Les drapeaux ne sont pas cliquables. Pour planter un drapeau sur une case :"
 
 #. (itstool) path: item/p
-#: C/flags.page:53
+#: C/flags.page:57
 msgid "right click on a blank tile."
-msgstr "faites un clic droit sur une tuile non retournée."
+msgstr "faites un clic droit sur une case non retournée."
 
 #. (itstool) path: note/p
-#: C/flags.page:63
+#: C/flags.page:67
 msgid ""
 "To make the number of available flags equal to the number of remaining "
-"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
-"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
-"options, then restart the application."
+"mines, pressing the menu button in the top-right corner of the window and "
+"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+"\"checkbox\">Use Question Flags</gui> preferences."
 msgstr ""
 "Pour que le nombre de drapeaux disponibles soit égal au nombre de mines "
-"restantes, allez dans les préférences, cochez les cases <gui style=\"checkbox"
-"\">Avertir s’il y a trop de drapeaux</gui> et <gui style=\"checkbox"
-"\">Utiliser le drapeau « Je ne suis pas sûr »</gui>, puis redémarrez "
-"l’application."
+"restantes, cliquez sur le bouton menu dans le coin supérieur droit de la "
+"fenêtre et activez les préférences <gui style=\"checkbox\">Afficher les "
+"avertissements</gui> et <gui style=\"checkbox\">Utiliser des drapeaux points "
+"d’interrogation</gui>."
 
 #. (itstool) path: section/title
-#: C/flags.page:73
-msgid "Use of the <em>I'm not sure</em> flag"
-msgstr "Utilisation du drapeau <em>« Je ne suis pas sûr »</em>"
+#: C/flags.page:77
+msgid "Use of the <em>question</em> flag"
+msgstr "Utilisation du drapeau <em>« point d’interrogation »</em>"
 
 #. (itstool) path: section/p
-#: C/flags.page:74
+#: C/flags.page:78
 msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue "
-"<em>I'm not sure</em> flag."
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
 msgstr ""
-"Si vous ne savez pas si une tuile cache ou non une mine, vous pouvez planter "
-"le drapeau bleu <em>« Je ne suis pas sûr »</em>."
+"Si vous ne savez pas si une case cache ou non une mine, vous pouvez planter "
+"le drapeau <em>« point d’interrogation »</em>."
 
 #. (itstool) path: td/p
-#: C/flags.page:79
+#: C/flags.page:83
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr ""
-"Pour planter un drapeau <em>« Je ne suis pas sûr »</em> sur une tuile :"
+"Pour planter un drapeau <em>« point d’interrogation »</em> sur une case :"
 
 #. (itstool) path: item/p
-#: C/flags.page:81
-msgid "Right-click twice on a blank tile or once on a red flag."
+#: C/flags.page:85
+msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
-"faites deux clics avec le bouton droit sur une tuile non retournée, ou un "
-"seul sur un drapeau rouge."
+"Faites un double-clic avec le bouton droit sur une case non retournée, ou un "
+"simple clic sur un drapeau."
 
 #. (itstool) path: note/p
-#: C/flags.page:92
+#: C/flags.page:96
 msgid ""
-"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
-"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
-"sure\" flags</gui>."
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
 msgstr ""
-"Pour activer ces drapeaux, cliquez sur <guiseq><gui style=\"menu\">Mines</"
-"gui><gui>Préférences</gui></guiseq> et cochez la case <gui>Utiliser le "
-"drapeau <em>« Je ne suis pas sûr »</em></gui>."
+"Pour activer ces drapeaux, cliquez sur le bouton menu dans le coin supérieur "
+"droit de la fenêtre et activez l’option <gui style=\"checkbox\">Utiliser des "
+"drapeaux points d’interrogation</gui>."
 
 #. (itstool) path: credit/name
-#: C/get-help.page:21 C/new-game.page:26
+#: C/get-help.page:22 C/new-game.page:27
 msgid "Rashi Aswani"
 msgstr "Rashi Aswani"
 
 #. (itstool) path: credit/years
-#: C/get-help.page:23
+#: C/get-help.page:24
 msgid "2014"
 msgstr "2014"
 
 #. (itstool) path: page/title
-#: C/get-help.page:28
+#: C/get-help.page:29
 msgid "Warnings"
 msgstr "Avertissements"
 
 #. (itstool) path: page/p
-#: C/get-help.page:30
+#: C/get-help.page:31
 msgid "You can flag warnings to help you keep track of flags."
 msgstr ""
 "Vous pouvez utiliser les drapeaux d’avertissement pour vous aider à garder "
 "une trace des drapeaux."
 
 #. (itstool) path: page/p
-#: C/get-help.page:32
+#: C/get-help.page:33
 msgid ""
-"To enable warnings, click <gui>Mines</gui> in the top bar and then select "
-"<gui>Show Warnings</gui>. This will warn you when you try to place too many "
-"flags next to an open tile."
+"To enable warnings, press the menu button in the top-right corner of the "
+"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+"will warn you when you try to place too many flags next to an open tile."
 msgstr ""
-"Pour activer les avertissements, cliquez sur <gui>Mines</gui> dans la barre "
-"du haut et sélectionnez <gui>Montrer les avertissements</gui>. Vous serez "
-"averti si vous tentez de planter trop de drapeaux à proximité d’une tuile "
-"retournée."
+"Pour activer les avertissements, cliquez sur le bouton menu dans le coin "
+"supérieur droit de la fenêtre et sélectionnez <gui style=\"checkbox"
+"\">Afficher les avertissements</gui>. Vous serez averti si vous tentez de "
+"planter trop de drapeaux à proximité d’une case retournée."
 
 #. (itstool) path: page/title
-#: C/high-scores.page:22
+#: C/high-scores.page:24
 msgid "High scores"
 msgstr "Meilleurs scores"
 
 #. (itstool) path: page/p
-#: C/high-scores.page:24
+#: C/high-scores.page:26
 msgid ""
 "The high scores list the ten fastest times in which each type of mine field "
 "has been cleared."
@@ -417,18 +425,18 @@ msgstr ""
 "tous les types de champs de mines ont été nettoyés."
 
 #. (itstool) path: page/p
-#: C/high-scores.page:27
+#: C/high-scores.page:29
 msgid ""
-"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
-"<gui>Small</gui> field size by default; to view other sizes, select them in "
-"the drop down menu at the top of the dialog."
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
 msgstr ""
-"Pour afficher les meilleurs scores, cliquez sur <guiseq><gui style=\"menu"
-"\">Mines</gui><gui style=\"menuitem\">Scores</gui></guiseq>. La boîte de "
-"dialogue affiche par défaut les scores pour la plus <gui>Petite</gui> taille "
-"de plateau. Pour voir les scores dans une autres taille, choisissez-en une "
-"dans le menu déroulant en haut de la boîte."
+"Pour afficher les meilleurs scores, cliquez sur le bouton menu dans le coin "
+"supérieur droit de la fenêtre et sélectionnez <gui style=\"menuitem"
+"\">Scores</gui>. La boîte de dialogue affiche par défaut les scores pour la "
+"plus <gui>Petite</gui> taille de plateau. Pour voir les scores dans une "
+"autre taille, choisissez-en une dans le menu déroulant en haut de la boîte."
 
 #. (itstool) path: info/title
 #: C/index.page:9
@@ -443,7 +451,7 @@ msgid "GNOME Mines"
 msgstr "GNOME Mines"
 
 #. (itstool) path: credit/name
-#: C/index.page:13 C/shortcuts.page:9
+#: C/index.page:13
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
@@ -461,7 +469,7 @@ msgid ""
 "triggering an explosion."
 msgstr ""
 "<app>Mines</app> est un clone du jeu Démineur. Le but du jeu est de repérer "
-"toutes les mines cachées sous les tuiles d’une grille carrée. Vous aurez "
+"toutes les mines cachées sous les cases d’une grille carrée. Vous aurez "
 "besoin de réflexion et d’un peu de chance pour les trouver toutes sans "
 "provoquer d’explosion."
 
@@ -476,12 +484,12 @@ msgid "Useful tips"
 msgstr "Astuces utiles"
 
 #. (itstool) path: section/title
-#: C/index.page:40
+#: C/index.page:41
 msgid "Advanced"
-msgstr "Avancée"
+msgstr "Avancé"
 
 #. (itstool) path: section/title
-#: C/index.page:43
+#: C/index.page:45
 msgid "Get Involved"
 msgstr "Comment s’impliquer"
 
@@ -507,7 +515,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/license.page:20
 msgid "You are free:"
-msgstr "Vous êtes libre  :"
+msgstr "Vous êtes libre :"
 
 #. (itstool) path: item/title
 #: C/license.page:25
@@ -548,7 +556,7 @@ msgid ""
 msgstr ""
 "Vous devez citer le nom de l’auteur original de la manière indiquée par "
 "l’auteur de l’œuvre ou le titulaire des droits qui vous confère cette "
-"autorisation (mais pas d’une manière qui suggèrerait qu’ils vous soutiennent "
+"autorisation (mais pas d’une manière qui suggérerait qu’ils vous soutiennent "
 "ou approuvent votre utilisation de l’œuvre)."
 
 #. (itstool) path: item/title
@@ -580,42 +588,45 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/\">contrat Commons</link>."
 
 #. (itstool) path: page/title
-#: C/new-game.page:31
+#: C/new-game.page:32
 msgid "Start a new game"
 msgstr "Nouvelle partie"
 
 #. (itstool) path: page/p
-#: C/new-game.page:33
+#: C/new-game.page:34
 msgid "To start a new game:"
 msgstr "Pour commencer une nouvelle partie :"
 
 #. (itstool) path: item/p
-#: C/new-game.page:36
-msgid ""
-"Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
-"Game</gui></guiseq> from the application menu."
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
 msgstr ""
-"Cliquez sur <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem"
-"\">Nouvelle partie</gui></guiseq> à partir du menu d’application."
+"Cliquez sur le bouton <gui style=\"button\">Refaire une partie</gui> situé "
+"sur la droite."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
-msgid "Select your preferred <link xref=\"board-size\">board size</link>."
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
-"Sélectionnez votre <link xref=\"board-size\">taille du tableau</link> "
-"préférée."
+"Pour modifier la <link xref=\"board-size\">taille du plateau</link>, cliquez "
+"sur le bouton <gui style=\"button\">Changer la difficulté</gui> situé sur la "
+"droite."
 
 #. (itstool) path: note/p
-#: C/new-game.page:46
+#: C/new-game.page:47
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to "
-"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
-"former, your current game will be lost."
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
-"Si vous aviez déjà une partie en cours, <app>Mines</app> vous demande si "
-"vous souhaitez <gui>Commencer une nouvelle partie</gui> ou <gui>Continuer la "
-"partie en cours</gui>. Si vous choisissez le premier cas, la partie en cours "
-"sera perdue."
+"Si vous avez déjà une partie en cours et que vous cliquez sur le bouton <gui "
+"style=\"button\">Recommencer</gui>, <app>Mines</app> vous demande si vous "
+"souhaitez <gui>Continuer la partie en cours</gui> ou <gui>Commencer une "
+"nouvelle partie</gui>. Si vous choisissez la deuxième option, la partie en "
+"cours sera perdue."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -646,8 +657,8 @@ msgid ""
 "The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
 msgstr ""
-"Le jeu commence avec le tableau couvert de tuiles. Cliquez sur n’importe "
-"quelle tuile pour la découvrir. Vous allez découvrir :"
+"Le jeu commence avec le tableau couvert de cases. Cliquez sur n’importe "
+"quelle case pour la découvrir. Vous allez découvrir :"
 
 #. (itstool) path: item/p
 #: C/rules.page:39
@@ -656,7 +667,7 @@ msgid ""
 "This will help you deduce where the mines are so that you can mark them with "
 "<link xref=\"flags\">flags</link>."
 msgstr ""
-"Un nombre coloré, qui représente le nombre de mines dans les tuiles "
+"Un nombre coloré, qui représente le nombre de mines dans les cases "
 "adjacentes. Cela vous aidera à en déduire où se trouvent les mines de sorte "
 "que vous pouvez les marquer avec des <link xref=\"flags\">drapeaux</link>."
 
@@ -665,7 +676,7 @@ msgstr ""
 msgid ""
 "A blank tile, which means there are no mines under any of the adjacent tiles."
 msgstr ""
-"Une tuile vide, ce qui signifie qu’il n’y a de mine sous aucune des tuiles "
+"Une case vide, ce qui signifie qu’il n’y a de mine sous aucune des cases "
 "adjacentes."
 
 #. (itstool) path: item/p
@@ -679,7 +690,7 @@ msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
 msgstr ""
-"Recommencez les étapes précédentes jusqu’à avoir retourné toutes les tuiles "
+"Recommencez les étapes précédentes jusqu’à avoir retourné toutes les cases "
 "du plateau qui ne cachent pas de mine."
 
 #. (itstool) path: page/p
@@ -690,70 +701,6 @@ msgid ""
 msgstr ""
 "Si vous avez été suffisamment rapide, votre nom est ajouté à la liste des "
 "<link xref=\"high-scores\">meilleurs scores</link>."
-
-#. (itstool) path: page/title
-#: C/shortcuts.page:17
-msgid "Keyboard shortcuts"
-msgstr "Raccourcis clavier"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:20
-msgid "New game"
-msgstr "Nouveau"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:21
-msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:24
-msgid "New game with last used settings"
-msgstr "Nouvelle partie avec les paramètres de la précédente"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:25
-msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:28
-msgid "Pause"
-msgstr "Pause"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:29
-msgid "<key>Pause</key>"
-msgstr "<key>Pause</key>"
-
-#. (itstool) path: note/p
-#: C/shortcuts.page:30
-msgid ""
-"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
-"key."
-msgstr ""
-"Utilisez le raccourci de la barre d’outils si votre clavier ne possède pas "
-"de touche <key>Pause</key>."
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:33
-msgid "Help"
-msgstr "Aide"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:34
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:37
-msgid "Quit"
-msgstr "Quitter"
-
-#. (itstool) path: td/p
-#: C/shortcuts.page:38
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
@@ -772,30 +719,30 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"L’interface utilisateur et la documentation des <app>jeux GNOME</app> est "
-"actuellement traduite par une communauté de volontaires dans le monde "
+"L’interface utilisateur et la documentation des <app>jeux GNOME</app> sont "
+"actuellement traduites par une communauté de volontaires dans le monde "
 "entier. Votre contribution est la bienvenue."
 
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
-"Il y a de <link href=\"http://l10n.gnome.org/module/gnome-mines/"
-"\">nombreuses langues</link> pour lequel les traductions sont encore "
+"Il y a de <link href=\"https://l10n.gnome.org/module/gnome-mines/"
+"\">nombreuses langues</link> pour lesquelles les traductions sont encore "
 "nécessaires."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
 msgstr ""
-"Pour commencer à traduire, vous devez <link href=\"http://l10n.gnome.org"
-"\">créer un compte</link> et rejoindre <link href=\"http://l10n.gnome.org/"
+"Pour commencer à traduire, vous devez <link href=\"https://l10n.gnome.org"
+"\">créer un compte</link> et rejoindre <link href=\"https://l10n.gnome.org/"
 "teams/\">l’équipe de traduction</link> de votre langue. Ce compte va vous "
 "permettre de téléverser de nouvelles traductions."
 
@@ -817,160 +764,9 @@ msgstr ""
 #: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
 "Vous pouvez aussi joindre par courriel l’équipe d’internationalisation en "
-"utilisant leur <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n"
-"\">liste de diffusion</link>."
-
-#~ msgid "Hints and warnings"
-#~ msgstr "Astuces et avertissements"
-
-#~ msgid ""
-#~ "Click on the button <gui style=\"button\">Receive a hint for your next "
-#~ "move</gui> on the top right to reveal a hidden tile that is safe. A "
-#~ "penalty of ten seconds will be added to your total time. The penalty will "
-#~ "be increased by ten seconds progressively on subsequent hints till the "
-#~ "ninth hint."
-#~ msgstr ""
-#~ "Cliquez sur le bouton <gui style=\"button\">Recevoir une astuce pour "
-#~ "votre prochain coup</gui> en haut à droite pour révéler une tuile cachée "
-#~ "sécurisée. Une pénalité de dix secondes sera ajoutée à votre temps total. "
-#~ "La pénalité augmente progressivement de dix secondes aux astuces "
-#~ "suivantes jusqu'à la neuvième."
-
-#~ msgid "Fullscreen"
-#~ msgstr "Plein écran"
-
-#~ msgid "<key>F11</key>"
-#~ msgstr "<key>F11</key>"
-
-#~ msgid "Hint"
-#~ msgstr "Astuces"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-#~ msgstr ""
-#~ "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-#~ msgstr ""
-#~ "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/flag-question.svg' "
-#~ "md5='544c1aaa711ee86a03a817a1e3b57733'"
-#~ msgstr ""
-#~ "external ref='figures/flag-question.svg' "
-#~ "md5='544c1aaa711ee86a03a817a1e3b57733'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-#~ msgstr ""
-#~ "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-#~ msgstr ""
-#~ "external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
-
-#~ msgid ""
-#~ "<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-#~ "GNOME Mines"
-#~ msgstr ""
-#~ "<media type=\"image\" src=\"figures/logo32.png\">logo de GNOME Mines</"
-#~ "media> GNOME Mines"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/face-smile.svg' "
-#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
-#~ msgstr ""
-#~ "external ref='figures/face-smile.svg' "
-#~ "md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/face-worried.svg' "
-#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
-#~ msgstr ""
-#~ "external ref='figures/face-worried.svg' "
-#~ "md5='f0a66a1c5046deef93c14eeb9993b367'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-#~ msgstr ""
-#~ "external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/face-cool.svg' "
-#~ "md5='6ce4a904009988e203e3d50896f6016e'"
-#~ msgstr ""
-#~ "external ref='figures/face-cool.svg' "
-#~ "md5='6ce4a904009988e203e3d50896f6016e'"
-
-#~ msgctxt "_"
-#~ msgid ""
-#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-#~ msgstr ""
-#~ "external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-
-#~ msgid "The meaning of the faces"
-#~ msgstr "Signification des visages"
-
-#~ msgid "This is a new game and you have not clicked on any tile yet."
-#~ msgstr ""
-#~ "C'est un nouveau jeu et vous n'avez pas encore cliqué sur n'importe "
-#~ "quelle tuile."
-
-#~ msgid "You are currently clicking on a tile."
-#~ msgstr "Vous êtes actuellement en train de cliquer sur une tuile."
-
-#~ msgid "You have uncovered a mine. You lose."
-#~ msgstr "Vous avez découvert une mine. Vous perdez."
-
-#~ msgid "The tile you just clicked on is safe. You can continue."
-#~ msgstr ""
-#~ "La tuile que vous venez de cliquer est sans danger. Vous pouvez continuer."
-
-#~ msgid "You have found all the mines. You win!"
-#~ msgstr "Vous avez trouvé toutes les mines. Vous avez gagné!"
-
-#~ msgid ""
-#~ "Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-#~ "tile that is safe. You will be penalized for using hints: ten seconds "
-#~ "will be added to your total time."
-#~ msgstr ""
-#~ "Cliquez <gui style=\"button\">Astuce</gui> dans la barre d'outils pour "
-#~ "révéler une tuile cachée qui est sûre. Vous serez pénalisé pour "
-#~ "l'utilisation des astuces : dix secondes seront ajoutées à votre temps "
-#~ "total."
-
-#~ msgid "Toolbar"
-#~ msgstr "Barre d'outils"
-
-#~ msgid ""
-#~ "The toolbar, located under the menu bar, lets you perform common actions "
-#~ "with your mouse. To use a toolbar item, just click on it. The buttons, "
-#~ "from left to right, are <gui><link xref=\"new-game\">New Game</link></"
-#~ "gui>, <link xref=\"get-help\">Hint</link>, <gui>Pause</gui> and "
-#~ "<gui>Fullscreen</gui>."
-#~ msgstr ""
-#~ "La barre d'outils, située au-dessous de la barre de menu, vous permet "
-#~ "d'effectuer les actions usuelles à l'aide de la souris. Pour utiliser un "
-#~ "élément de la barre d'outils, cliquez simplement dessus. De gauche à "
-#~ "droite, vous trouverez les boutons <gui><link xref=\"new-game\">Nouveau</"
-#~ "link></gui>, <link xref=\"get-help\">Astuce</link>, <gui>Pause</gui> et "
-#~ "<gui> Plein écran</gui>."
+"utilisant leur <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">liste de diffusion</link>."
