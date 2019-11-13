@@ -63,14 +63,6 @@
         </tr>
       </table>
 
-      <note style="tip">
-	<p>To make the number of available flags equal to the number of
-	remaining mines, pressing the menu button in the top-right corner of the
-	window and enable the <gui style="checkbox">Show Warnings</gui>
-	and <gui style="checkbox">Use Question Flags</gui>
-	preferences.</p>
-     </note>
-
   </section>
 
   <section id="flags-blue">
