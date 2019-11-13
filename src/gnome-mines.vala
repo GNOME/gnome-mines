@@ -26,7 +26,6 @@ public class Mines : Gtk.Application
 
     /* Shared Settings keys */
     public const string KEY_USE_QUESTION_MARKS = "use-question-marks";
-    public const string KEY_USE_OVERMINE_WARNING = "use-overmine-warning";
     public const string KEY_USE_AUTOFLAG = "use-autoflag";
     public const string KEY_THEME = "theme";
     public const string KEY_USE_ANIMATIONS = "use-animations";
@@ -202,7 +201,6 @@ public class Mines : Gtk.Application
         size_actions[2] = lookup_action ("large-size") as SimpleAction;
         size_actions[3] = lookup_action ("custom-size") as SimpleAction;
 
-        add_action (settings.create_action (KEY_USE_OVERMINE_WARNING));
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
         window = (Gtk.ApplicationWindow) ui_builder.get_object ("main_window");
@@ -234,7 +232,6 @@ public class Mines : Gtk.Application
             app_main_menu.append (_("A_ppearance"), "app.preferences");
             var section = new Menu ();
             menu.append_section (null, section);
-            section.append (_("Show _Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             section = new Menu ();
             menu.append_section (null, section);
@@ -255,7 +252,6 @@ public class Mines : Gtk.Application
             mines_menu.append (_("_New Game"), "app.new-game");
             mines_menu.append (_("_Scores"), "app.scores");
             mines_menu.append (_("A_ppearance"), "app.preferences");
-            mines_menu.append (_("Show _Warnings"), "app.%s".printf (KEY_USE_OVERMINE_WARNING));
             mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             mines_menu.append (_("_Quit"), "app.quit");
             var help_menu = new Menu ();

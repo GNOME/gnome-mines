@@ -75,10 +75,6 @@
   background-image: -gtk-icontheme('maybe');
 }
 
-.overmine {
-  background-image: -gtk-icontheme('overmine');
-}
-
 .exploded {
   background-image: -gtk-icontheme('exploded');
 }

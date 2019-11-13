@@ -10,7 +10,7 @@ install_data ('@0@.gschema.xml'.format(app_id),
 foreach theme: [ 'default', 'bgcolors', 'classic' ]
     foreach file: [ 'theme.css',
                     '1mines.svg', '2mines.svg', '3mines.svg', '4mines.svg', '5mines.svg', '6mines.svg', '7mines.svg', '8mines.svg',
-                    'mine.svg', 'flag.svg', 'incorrect.svg', 'exploded.svg', 'overmine.svg', 'maybe.svg' ]
+                    'mine.svg', 'flag.svg', 'incorrect.svg', 'exploded.svg', 'maybe.svg' ]
         install_data (join_paths ('themes', theme, file), install_dir: join_paths (pkgdatadir, 'themes', theme))
     endforeach
 endforeach

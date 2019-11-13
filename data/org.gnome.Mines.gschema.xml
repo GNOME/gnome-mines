@@ -10,11 +10,6 @@
       <summary>Use the unknown flag</summary>
       <description>Set to true to be able to mark squares as unknown.</description>
     </key>
-    <key name="use-overmine-warning" type="b">
-      <default>false</default>
-      <summary>Warning about too many flags</summary>
-      <description>Set to true to enable warning icons when too many flags are placed next to a numbered tile.</description>
-    </key>
     <key name="use-autoflag" type="b">
       <default>false</default>
       <summary>Enable automatic placing of flags</summary>

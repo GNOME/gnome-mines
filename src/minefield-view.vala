@@ -104,15 +104,6 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    /* true if should warn when too many flags set */
-    private bool use_overmine_warning
-    {
-        get
-        {
-            return settings.get_boolean (Mines.KEY_USE_OVERMINE_WARNING);
-        }
-    }
-
     /* true if automatically set flags on middle click... for debugging */
     private bool use_autoflag
     {
@@ -360,12 +351,6 @@ public class MinefieldView : Gtk.Grid
             /* Indicate the number of mines around this location */
             else
             {
-                /* Warn if more flags than the number of mines available */
-                if (use_overmine_warning && minefield.has_flag_warning (x, y))
-                {
-                    mines[x,y].add_class ("overmine");
-                }
-
                 var n = minefield.get_n_adjacent_mines (x, y);
                 mines[x,y].remove_class ("maybe");
                 mines[x,y].remove_class ("flag");
