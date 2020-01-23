@@ -9,28 +9,27 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games 3.3.91\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-08-13 22:16+0000\n"
-"PO-Revision-Date: 2017-09-01 20:05+0800\n"
-"Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2019-11-13 23:25+0000\n"
+"PO-Revision-Date: 2020-01-22 14:38+0800\n"
+"Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese (traditional)\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.0.3\n"
+"X-Generator: Poedit 2.2.4\n"
 
-#: data/gnome-mines.appdata.xml.in:8
+#: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
 msgstr "GNOME 拆地雷"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "清除方格陣中的隱藏的地雷"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -41,7 +40,7 @@ msgstr ""
 "標讓遊戲盤變成安全的地方。當您標上遊戲盤中每一個地雷時就贏得遊戲。請小心不要"
 "觸發任何一個，否則遊戲就會結束！"
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -50,113 +49,154 @@ msgstr ""
 "在遊戲開始時您可以選擇想要玩的尺寸。如果您卡關了，您可以尋求提示：這樣會被追"
 "加大量的時間，但是比觸發地雷好！"
 
-#: data/gnome-mines.appdata.xml.in:42
+#: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
 msgstr "GNOME 計畫"
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
+#: src/gnome-mines.vala:165 src/gnome-mines.vala:220 src/gnome-mines.vala:857
 msgid "Mines"
 msgstr "拆地雷"
 
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-msgid "gnome-mines"
-msgstr "gnome-mines"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "minesweeper;踩地雷;"
 
-#: data/gnome-mines.desktop.in:17
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
 msgstr "小型棋盤"
 
-#: data/gnome-mines.desktop.in:21
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
 msgstr "中型棋盤"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
 msgstr "大型棋盤"
 
-#: data/org.gnome.mines.gschema.xml:5
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "要使用的風格主題"
 
-#: data/org.gnome.mines.gschema.xml:6
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "要使用的拼貼風格主題標題。"
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "可標記為「不知道」"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "如選用本選項，表示可以將方格標記為「不知道」的狀態"
+msgstr "如設成 true，表示可以將方格標記為「未知」。"
 
-#: data/org.gnome.mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr "標記過多時警告"
-
-#: data/org.gnome.mines.gschema.xml:16
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr "設定為‘true’時，若放置過多標記在有數字的地板旁時則會發出警告。"
-
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Enable automatic placing of flags"
 msgstr "啟用自動加上旗標的功能"
 
-#: data/org.gnome.mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
 "設定為‘true’時，如果一個方格附近已有足夠的方格被開啟，可自動將方格標記為地雷"
 
-#: data/org.gnome.mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
 msgstr "啟用動畫"
 
-#: data/org.gnome.mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "設定為 false 以停用風格主題定義的過場動畫"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "自選遊戲中的直向方格數目"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "自選遊戲中的横向方格數目"
 
-#: data/org.gnome.mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "自選遊戲中的地雷數目"
 
-#: data/org.gnome.mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "遊戲盤大小"
 
-#: data/org.gnome.mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "棋盤大小 (0-2 表示小至大，3 表示自訂)"
 
-#: data/org.gnome.mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "視窗的寬度 (像素)"
 
-#: data/org.gnome.mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "視窗的高度 (像素)"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "如果視窗為最大化則設定為‘TRUE’"
+
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "視窗及遊戲"
+
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "開始新遊戲"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "用上次使用的設定開始新遊戲"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "暫停遊戲"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "顯示說明"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "顯示鍵盤快捷鍵"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "結束"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr ""
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "移動遊戲區塊中的鍵盤游標"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr ""
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -178,8 +218,8 @@ msgstr "取消(_C)"
 msgid "_Play Game"
 msgstr "玩遊戲(_P)"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
+#: src/interface.ui:350 src/gnome-mines.vala:667 src/gnome-mines.vala:757
+#: src/gnome-mines.vala:806
 msgid "_Pause"
 msgstr "暫停(_P)"
 
@@ -199,129 +239,129 @@ msgstr "再玩一次(_P)"
 msgid "Paused"
 msgstr "暫停"
 
-#: src/gnome-mines.vala:89
+#: src/gnome-mines.vala:91
 msgid "Print release version and exit"
 msgstr "顯示釋出版本並離開"
 
-#: src/gnome-mines.vala:90
+#: src/gnome-mines.vala:92
 msgid "Small game"
 msgstr "小型遊戲"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:93
 msgid "Medium game"
 msgstr "中型遊戲"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:94
 msgid "Big game"
 msgstr "大型遊戲"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/gnome-mines.vala:231 src/gnome-mines.vala:253
 msgid "_Scores"
 msgstr "分數(_S)"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:232 src/gnome-mines.vala:254
 msgid "A_ppearance"
 msgstr "外觀(_P)"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-msgid "_Show Warnings"
-msgstr "顯示警告(_S)"
-
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/gnome-mines.vala:235 src/gnome-mines.vala:255
 msgid "_Use Question Flags"
 msgstr "使用問號標記(_U)"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
+msgid "_Keyboard Shortcuts"
+msgstr "鍵盤快捷鍵(_K)"
+
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
 msgid "_Help"
 msgstr "求助(_H)"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "關於(_A)"
+#: src/gnome-mines.vala:240 src/gnome-mines.vala:261
+msgid "_About Mines"
+msgstr "關於拆地雷(_A)"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "結束(_Q)"
-
-#: src/gnome-mines.vala:256
+#: src/gnome-mines.vala:251
 msgid "_Mines"
 msgstr "拆地雷(_M)"
 
-#: src/gnome-mines.vala:257
+#: src/gnome-mines.vala:252
 msgid "_New Game"
 msgstr "開新局(_N)"
 
-#: src/gnome-mines.vala:265
+#: src/gnome-mines.vala:256
+msgid "_Quit"
+msgstr "結束(_Q)"
+
+#: src/gnome-mines.vala:260
 msgid "_Contents"
 msgstr "目錄(_C)"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
+#: src/gnome-mines.vala:334
 msgid "Minefield:"
 msgstr "地雷："
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:368
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d 個地雷"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:427
 msgid "Custom"
 msgstr "自訂"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:505
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 個地雷"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:615
 msgid "Do you want to start a new game?"
 msgstr "您是否要開始新的遊戲？"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:616
 msgid "If you start a new game, your current progress will be lost."
 msgstr "如果您開始新的遊戲，您目前的進度會遺失。"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:617
 msgid "Keep Current Game"
 msgstr "繼續目前這局遊戲"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:618
 msgid "Start New Game"
 msgstr "開始另一局遊戲"
 
-#: src/gnome-mines.vala:649
+#: src/gnome-mines.vala:668
 msgid "St_art Over"
 msgstr "重新開始(_A)"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:755
 msgid "_Resume"
 msgstr "繼續(_R)"
 
-#: src/gnome-mines.vala:778
+#: src/gnome-mines.vala:773
 msgid "Play _Again"
 msgstr "再玩一次(_A)"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:830
 msgid "Main game:"
 msgstr "主遊戲："
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:835
 msgid "Score:"
 msgstr "得分："
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:838
 msgid "Resizing and SVG support:"
 msgstr "放大縮小和 SVG 支援："
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:860
 msgid "Clear explosive mines off the board"
 msgstr "從遊戲盤上清除會爆炸的地雷"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:867
 msgid "translator-credits"
 msgstr ""
 "如對翻譯有任何意見，請送一封電子郵件給\n"
@@ -329,17 +369,30 @@ msgstr ""
 "zh-l10n@lists.linux.org.tw\n"
 "\n"
 "Abel Cheung <abel@oaka.org>, 2001-07\n"
-"Fernando <bv1al@journalist.com.tw>, 1999Walter Cheuk <wwycheuk@gmail.com>, "
-"2014."
+"Fernando <bv1al@journalist.com.tw>, 1999\n"
+"Walter Cheuk <wwycheuk@gmail.com>, 2014.\n"
+"Yi-Jyun Pan <pan93412@gmail.com>, 2020."
 
-#: src/theme-selector-dialog.vala:99
-msgid "Use _animations"
-msgstr "啟用動畫(_A)"
-
-#: src/theme-selector-dialog.vala:115
+#: src/theme-selector-dialog.vala:106
 msgid "Select Theme"
 msgstr "選擇風格主題"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr "關閉"
+#~ msgid "gnome-mines"
+#~ msgstr "gnome-mines"
+
+#~ msgid "Warning about too many flags"
+#~ msgstr "標記過多時警告"
+
+#~ msgid ""
+#~ "Set to true to enable warning icons when too many flags are placed next "
+#~ "to a numbered tile."
+#~ msgstr "設定為‘true’時，若放置過多標記在有數字的地板旁時則會發出警告。"
+
+#~ msgid "_Show Warnings"
+#~ msgstr "顯示警告(_S)"
+
+#~ msgid "Use _animations"
+#~ msgstr "啟用動畫(_A)"
+
+#~ msgid "Close"
+#~ msgstr "關閉"
