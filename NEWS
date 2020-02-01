@@ -1,3 +1,11 @@
+GNOME Mines 3.35.90
+=====================
+
+* Updated translations
+* Updated help
+* Removed overmine warnings feature #39 (Robert Roth)
+* Support for long-press flagging on touchscreens (Ordissimo)
+
 GNOME Mines 3.34.0
 =====================
 
