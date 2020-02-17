@@ -52,6 +52,34 @@
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>
             </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">1</property>
+                <property name="title" translatable="yes" context="shortcut window">Game size: small</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">2</property>
+                <property name="title" translatable="yes" context="shortcut window">Game size: medium</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">3</property>
+                <property name="title" translatable="yes" context="shortcut window">Game size: large</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
+                <property name="accelerator">4</property>
+                <property name="title" translatable="yes" context="shortcut window">Game size: custom</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
