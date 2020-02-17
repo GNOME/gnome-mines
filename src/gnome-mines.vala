@@ -267,10 +267,10 @@ public class Mines : Gtk.Application
         set_accels_for_action ("app.new-game", {"<Primary>n"});
         set_accels_for_action ("app.silent-new-game", {"Escape"});
         set_accels_for_action ("app.repeat-size", {"<Primary>r"});
-        set_accels_for_action ("app.small-size", {"1"});
-        set_accels_for_action ("app.medium-size", {"2"});
-        set_accels_for_action ("app.large-size", {"3"});
-        set_accels_for_action ("app.custom-size", {"4"});
+        set_accels_for_action ("app.small-size", {"1", "KP_1"});
+        set_accels_for_action ("app.medium-size", {"2", "KP_2"});
+        set_accels_for_action ("app.large-size", {"3", "KP_3"});
+        set_accels_for_action ("app.custom-size", {"4", "KP_4"});
         set_accels_for_action ("app.pause", {"Pause"});
         set_accels_for_action ("app.help", {"F1"});
         set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
