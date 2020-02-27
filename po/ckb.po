@@ -1,0 +1,369 @@
+# Kurdish (Sorani) translation for gnome-mines
+# Copyright (c) 2020 Rosetta Contributors and Canonical Ltd 2020
+# This file is distributed under the same license as the gnome-mines package.
+# Jwtiyar Nariman <jwtiyar@gmail.com>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2020-02-02 11:12+0000\n"
+"PO-Revision-Date: 2020-02-22 10:09+0300\n"
+"Last-Translator: Jwtiyar Nariman <jwtiyar@gmail.com>\n"
+"Language-Team: Kurdish (Sorani) <ckb@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2020-02-22 07:08+0000\n"
+"X-Generator: Poedit 2.3\n"
+"Language: ckb\n"
+
+#: data/org.gnome.Mines.appdata.xml.in:8
+msgid "GNOME Mines"
+msgstr "مینەکانی گنۆم"
+
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+msgid "Clear hidden mines from a minefield"
+msgstr "پاککردنەوەی مینەکان لە خانەی مینەکان"
+
+#: data/org.gnome.Mines.appdata.xml.in:11
+msgid ""
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
+msgstr ""
+
+#: data/org.gnome.Mines.appdata.xml.in:17
+msgid ""
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
+msgstr ""
+
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
+#: src/gnome-mines.vala:165 src/gnome-mines.vala:220 src/gnome-mines.vala:857
+msgid "Mines"
+msgstr "مینەکان"
+
+#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
+#: data/org.gnome.Mines.desktop.in:7
+msgid "org.gnome.Mines"
+msgstr "org.gnome.Mines"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mines.desktop.in:12
+msgid "minesweeper;"
+msgstr "minesweeper;"
+
+#: data/org.gnome.Mines.desktop.in:17
+msgid "Small board"
+msgstr "بۆردی بچووک"
+
+#: data/org.gnome.Mines.desktop.in:21
+msgid "Medium board"
+msgstr "بۆردی مامناوەند"
+
+#: data/org.gnome.Mines.desktop.in:25
+msgid "Big board"
+msgstr "بۆردی گەورە"
+
+#: data/org.gnome.Mines.gschema.xml:5
+msgid "The theme to use"
+msgstr "ڕووکارەکە بۆ بەکارهێنان"
+
+#: data/org.gnome.Mines.gschema.xml:6
+msgid "The title of the tile theme to use."
+msgstr "ناونیشانی ڕووکار بۆ بەکارهێنان."
+
+#: data/org.gnome.Mines.gschema.xml:10
+msgid "Use the unknown flag"
+msgstr "ئاڵایەکی نەزانراو بەکاربێنە"
+
+#: data/org.gnome.Mines.gschema.xml:11
+msgid "Set to true to be able to mark squares as unknown."
+msgstr "بیکە بە true ئەگەر دەتەوێ چوارگۆشەکان وە نەزانراو بناسێنی."
+
+#: data/org.gnome.Mines.gschema.xml:15
+msgid "Enable automatic placing of flags"
+msgstr "دانانی خۆکارانەی ئاڵا چالاک بکە"
+
+#: data/org.gnome.Mines.gschema.xml:16
+msgid ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr ""
+
+#: data/org.gnome.Mines.gschema.xml:20
+msgid "Enable animations"
+msgstr "جوڵاندنەکان چالاک بکه‌"
+
+#: data/org.gnome.Mines.gschema.xml:21
+msgid "Set to false to disable theme-defined transition animations"
+msgstr ""
+
+#: data/org.gnome.Mines.gschema.xml:26
+msgid "Number of columns in a custom game"
+msgstr "ژمارەی ستونەکان لە یارییەکی دەستکاریکراودا"
+
+#: data/org.gnome.Mines.gschema.xml:31
+msgid "Number of rows in a custom game"
+msgstr "ژمارەی ڕیزەکان لە یارییەکی دەستکاریکراودا"
+
+#: data/org.gnome.Mines.gschema.xml:35
+msgid "The number of mines in a custom game"
+msgstr "ژمارەی مینەکان لە یارییەکی دەستکاریکراودا"
+
+#: data/org.gnome.Mines.gschema.xml:40
+msgid "Board size"
+msgstr "قەبارەی بۆرد"
+
+#: data/org.gnome.Mines.gschema.xml:41
+msgid "Size of the board (0-2 = small-large, 3=custom)"
+msgstr "قەبارەی بۆرد (٠-٢ = بچووک-گەورە, ٣=دەستکاریکراو)"
+
+#: data/org.gnome.Mines.gschema.xml:45
+msgid "Width of the window in pixels"
+msgstr "پانی پەنجەرە بە وێنەخاڵ"
+
+#: data/org.gnome.Mines.gschema.xml:49
+msgid "Height of the window in pixels"
+msgstr "بەرزی پەنجەرە بە وێنەخاڵ"
+
+#: data/org.gnome.Mines.gschema.xml:53
+msgid "true if the window is maximized"
+msgstr "true  ئەگەر پەنجەرەکە گەورە کرابێت"
+
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and games"
+msgstr "پەنجەرەکان و یارییەکان"
+
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "دەست پێکردنی یارییەکی نوێ"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Start a new game with last used settings"
+msgstr "دەستپێکردنی یارییەکی نوێ بەهەمان ڕێکخستنەکانی کۆتاجارەوە"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "وەستانی یاری"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "پیشاندانی یارمەتی"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "نیشاندانی قەدبڕەکانی تەختەکلیل"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "دەرچوون"
+
+#: src/help-overlay.ui:60
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "ناو-یاری"
+
+#: src/help-overlay.ui:65 src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor in the game field"
+msgstr "جوڵانی جێنیشاندەری تەختەکلیل لە ناو خانەی یاری"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "ئاشکراکردنی خانە"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid ""
+"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgstr ""
+
+#: src/interface.ui:118
+msgid "_Width"
+msgstr "ـپانی"
+
+#: src/interface.ui:142
+msgid "_Height"
+msgstr "ـبەرزی"
+
+#: src/interface.ui:166
+msgid "Percent _mines"
+msgstr "ڕێژەیسەدیـمینەکان"
+
+#: src/interface.ui:192
+msgid "_Cancel"
+msgstr "ـپاشگەزبوونەوە"
+
+#: src/interface.ui:208
+msgid "_Play Game"
+msgstr "ـیاری دەسپێبکە"
+
+#: src/interface.ui:350 src/gnome-mines.vala:667 src/gnome-mines.vala:757
+#: src/gnome-mines.vala:806
+msgid "_Pause"
+msgstr "ـڕاگرتن"
+
+#: src/interface.ui:366
+msgid "Change _Difficulty"
+msgstr "گۆڕینیـئاسانی"
+
+#: src/interface.ui:383
+msgid "_Best Times"
+msgstr "ـباشترین کاتەکان"
+
+#: src/interface.ui:400
+msgid "_Play Again"
+msgstr "ـدووبارە بیکەرەوە"
+
+#: src/interface.ui:464
+msgid "Paused"
+msgstr "ڕاگیرا"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "وەشانی بڵاوکراوە چاپ بکە و دایخە"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "یاری بچووک"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "یاری مامناوەند"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "یاری گەورە"
+
+#: src/gnome-mines.vala:231 src/gnome-mines.vala:253
+msgid "_Scores"
+msgstr "نمرەکان_"
+
+#: src/gnome-mines.vala:232 src/gnome-mines.vala:254
+msgid "A_ppearance"
+msgstr "ڕووـکەش"
+
+#: src/gnome-mines.vala:235 src/gnome-mines.vala:255
+msgid "_Use Question Flags"
+msgstr "ـئاڵاکانی پرسیار بەکاربێنە"
+
+#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
+msgid "_Keyboard Shortcuts"
+msgstr "ـقەدبڕەکانی تەختەکلیل"
+
+#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+msgid "_Help"
+msgstr "ـیارمەتی"
+
+#: src/gnome-mines.vala:240 src/gnome-mines.vala:261
+msgid "_About Mines"
+msgstr "ـدەربارەی مینەکان"
+
+#: src/gnome-mines.vala:251
+msgid "_Mines"
+msgstr "ـمینەکان"
+
+#: src/gnome-mines.vala:252
+msgid "_New Game"
+msgstr "یارییەکی نوێ_"
+
+#: src/gnome-mines.vala:256
+msgid "_Quit"
+msgstr "_دەرچوون"
+
+#: src/gnome-mines.vala:260
+msgid "_Contents"
+msgstr "_ناوەڕۆک"
+
+#. Label on the scores dialog
+#: src/gnome-mines.vala:334
+msgid "Minefield:"
+msgstr "خانەی مین:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: src/gnome-mines.vala:368
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d مین"
+msgstr[1] "%d × %d, %d مینەکان"
+
+#: src/gnome-mines.vala:427
+msgid "Custom"
+msgstr "دەستکرد"
+
+#: src/gnome-mines.vala:505
+#, c-format
+msgid "<b>%d</b> mine"
+msgid_plural "<b>%d</b> mines"
+msgstr[0] "<b>%d</b>مین"
+msgstr[1] "<b>%d</b> مین"
+
+#: src/gnome-mines.vala:615
+msgid "Do you want to start a new game?"
+msgstr "ئایا دەتەوێت یەرییەکی نوێ دەستپێبکەیتەوە؟"
+
+#: src/gnome-mines.vala:616
+msgid "If you start a new game, your current progress will be lost."
+msgstr ""
+"ئەگەر یاریەکی نوێ دەستپێبکەیتەوە، ئەوا کارەکانی ئێستات هەمووی لەناو دەچن."
+
+#: src/gnome-mines.vala:617
+msgid "Keep Current Game"
+msgstr "یاری ئێستا بهێڵەوە"
+
+#: src/gnome-mines.vala:618
+msgid "Start New Game"
+msgstr "دەسپێکردنی ارییەکی نوێ"
+
+#: src/gnome-mines.vala:668
+msgid "St_art Over"
+msgstr "لەسەرەـتاوە هەوڵبدەرەوە"
+
+#: src/gnome-mines.vala:755
+msgid "_Resume"
+msgstr "ـدەستپێکردنەوە"
+
+#: src/gnome-mines.vala:773
+msgid "Play _Again"
+msgstr "دووبارەزیاریکردنەوە"
+
+#: src/gnome-mines.vala:830
+msgid "Main game:"
+msgstr "یاری سەرەکی:"
+
+#: src/gnome-mines.vala:835
+msgid "Score:"
+msgstr "نمرە:"
+
+#: src/gnome-mines.vala:838
+msgid "Resizing and SVG support:"
+msgstr "قەبارەکردن و پشتگیریکردنی SVG..."
+
+#: src/gnome-mines.vala:860
+msgid "Clear explosive mines off the board"
+msgstr ""
+
+#: src/gnome-mines.vala:867
+msgid "translator-credits"
+msgstr ""
+"Launchpad Contributions:\n"
+"  Jwtiyar Nariman https://launchpad.net/~jwtiyar\n"
+"  brwa salam https://launchpad.net/~brwasalam"
+
+#: src/theme-selector-dialog.vala:106
+msgid "Select Theme"
+msgstr "ڕووکار هەڵبژێرە"
