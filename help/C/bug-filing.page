@@ -31,7 +31,7 @@
 
   <p>Once you have an account, log in, click on <gui>New Issue</gui>. Before
   reporting a bug, please read the
-  <link href="https://bugzilla.gnome.org/page.cgi?id=bug-writing.html">bug
+  <link href="https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines">bug
   writing guidelines</link>, and please
   <link href="https://gitlab.gnome.org/GNOME/gnome-mines/issues">browse</link>
   for the bug to see if it already exists.</p>
