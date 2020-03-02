@@ -1,12 +1,12 @@
 # Daniel Nylander <po@danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2019-03-03 11:52+0000\n"
-"PO-Revision-Date: 2019-03-04 01:12+0100\n"
+"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"PO-Revision-Date: 2020-03-02 20:39+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.3\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -26,29 +26,27 @@ msgstr ""
 "Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
-#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -158,16 +156,16 @@ msgstr ""
 #: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "När du har ett konto, logga in, klicka på <gui>New Issue</gui>. Innan du "
-"rapporterar ett fel, läs <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">riktlinjer för felrapporter</link>, och <link href="
-"\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">sök</link> för att se "
-"om felet redan är rapporterat."
+"rapporterar ett fel, läs <link href=\"https://wiki.gnome.org/Community/"
+"GettingInTouch/BugReportingGuidelines\">riktlinjer för felrapporter</link>, "
+"och <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">sök</"
+"link> för att se om felet redan är rapporterat."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -306,27 +304,13 @@ msgstr ""
 msgid "right click on a blank tile."
 msgstr "högerklicka på en täckt ruta."
 
-# TODO: pressing -> press
-#. (itstool) path: note/p
-#: C/flags.page:67
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, pressing the menu button in the top-right corner of the window and "
-"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-"\"checkbox\">Use Question Flags</gui> preferences."
-msgstr ""
-"För att göra antalet tillgängliga flaggor lika med antalet kvarvarande "
-"minor, tryck på menyknappen i fönstrets övre högra hörn och aktivera "
-"alternativen <gui style=\"checkbox\">Visa varningar</gui> och <gui style="
-"\"checkbox\">Använd frågetecken-flaggor</gui>."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "Att använda <em>frågetecken</em>-flaggan"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -335,17 +319,17 @@ msgstr ""
 "<em>frågetecken</em>-flaggan."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Att placera en <em>Jag är inte säker</em>-flagga på en ruta:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr "Högerklicka två gånger på en tom ruta eller en gång på en flagga."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
@@ -354,39 +338,6 @@ msgstr ""
 "För att aktivera dessa flaggor, tryck på menyknappen i fönstrets övre högra "
 "hörn och aktivera inställningen <gui style=\"checkbox\">Använd frågetecken-"
 "flaggor</gui>."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Varningar"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr ""
-"Du kan flagga varningar för att hjälpa dig hålla koll på antalet flaggor."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-"will warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"För att aktivera varningar, tryck på menyknappen i fönstrets övre högra hörn "
-"och välj sedan <gui style=\"checkbox\">Visa varningar</gui>. Detta kommer "
-"att varna dig om du försöker placera för många flaggor i anslutning till en "
-"öppen ruta."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -461,12 +412,7 @@ msgid "Useful tips"
 msgstr "Värdefulla tips"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Avancerat"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Engagera dig"
 
@@ -561,6 +507,11 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons webbsida</"
 "link>, eller läs hela <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
@@ -738,6 +689,41 @@ msgstr ""
 "Alternativt, kan du kontakta det internationella teamet genom att använda "
 "deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">sändlista</link>."
+
+# TODO: pressing -> press
+#~ msgid ""
+#~ "To make the number of available flags equal to the number of remaining "
+#~ "mines, pressing the menu button in the top-right corner of the window and "
+#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+#~ "\"checkbox\">Use Question Flags</gui> preferences."
+#~ msgstr ""
+#~ "För att göra antalet tillgängliga flaggor lika med antalet kvarvarande "
+#~ "minor, tryck på menyknappen i fönstrets övre högra hörn och aktivera "
+#~ "alternativen <gui style=\"checkbox\">Visa varningar</gui> och <gui style="
+#~ "\"checkbox\">Använd frågetecken-flaggor</gui>."
+
+#~ msgid "2014"
+#~ msgstr "2014"
+
+#~ msgid "Warnings"
+#~ msgstr "Varningar"
+
+#~ msgid "You can flag warnings to help you keep track of flags."
+#~ msgstr ""
+#~ "Du kan flagga varningar för att hjälpa dig hålla koll på antalet flaggor."
+
+#~ msgid ""
+#~ "To enable warnings, press the menu button in the top-right corner of the "
+#~ "window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+#~ "will warn you when you try to place too many flags next to an open tile."
+#~ msgstr ""
+#~ "För att aktivera varningar, tryck på menyknappen i fönstrets övre högra "
+#~ "hörn och välj sedan <gui style=\"checkbox\">Visa varningar</gui>. Detta "
+#~ "kommer att varna dig om du försöker placera för många flaggor i "
+#~ "anslutning till en öppen ruta."
+
+#~ msgid "Advanced"
+#~ msgstr "Avancerat"
 
 #~ msgid "Keyboard shortcuts"
 #~ msgstr "Tangentbordsgenvägar"
