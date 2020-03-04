@@ -4,13 +4,13 @@
 # 
 # 
 # Rodrigo <rodhos92@gmail.com>, 2019.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012-2019.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2012-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnomine.HEAD\n"
-"POT-Creation-Date: 2019-09-25 13:10+0000\n"
-"PO-Revision-Date: 2019-10-02 12:42+0200\n"
+"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"PO-Revision-Date: 2020-03-04 16:49+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
 "Language: es_ES\n"
@@ -24,33 +24,31 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2018\n"
+"Daniel Mustieles <daniel.mustieles@gmail.com>, 2011-2020\n"
 "Jorge González <jorgegonz@svn.gnome.org>, 2007-2008"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
-#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -159,18 +157,24 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
+#| msgid ""
+#| "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
+#| "link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Una vez que tenga su cuenta, inicie sesión y pulse en <gui>New Issue</gui>. "
-"Antes de informar de un error, lea las <link href=\"https://bugzilla.gnome."
-"org/page.cgi?id=bug-writing.html\">guías para informar de un error</link> y "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">busque</"
-"link> el error para ver si ya existe."
+"Una vez que tenga su cuenta, inicie sesión y pulse en <gui>New issue</gui>. "
+"Antes de informar de un error, lea la <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">guías para informar de un "
+"error</link> y <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
+"\">busque</link> el error para ver si ya existe."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -284,10 +288,6 @@ msgstr ""
 
 #. (itstool) path: td/p
 #: C/flags.page:43
-#| msgid ""
-#| "The exact look of the flags depends on the theme. You can change the "
-#| "theme by clicking <gui>Mines</gui> in the top bar and then selecting "
-#| "<gui>Appearance</gui>."
 msgid ""
 "The exact look of the flags depends on the theme. You can change the theme "
 "by pressing the menu button in the top-right corner of the window and then "
@@ -313,32 +313,13 @@ msgstr ""
 msgid "right click on a blank tile."
 msgstr "pulse con el botón derecho sobre una casilla no descubierta."
 
-# Comprobado con la traducción de master
-#. (itstool) path: note/p
-#: C/flags.page:67
-#| msgid ""
-#| "To make the number of available flags equal to the number of remaining "
-#| "mines, open the application menu in the top bar and enable the <gui style="
-#| "\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
-#| "Flags</gui> preferences."
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, pressing the menu button in the top-right corner of the window and "
-"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-"\"checkbox\">Use Question Flags</gui> preferences."
-msgstr ""
-"Para igualar el número de banderas disponibles al de casillas restantes, "
-"pulse el botón de menú en la esquina superior derecha de la ventana y active "
-"las opciones <gui style=\"checkbox\">Mostrar advertencias</gui> y <gui style="
-"\"checkbox\">Usar banderas de interrogación</gui>."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "Uso de la bandera de <em>interrogación</em>"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -347,22 +328,19 @@ msgstr ""
 "de <em>interrogación</em>."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Para poner una bandera de <em>interrogación</em> en una casilla:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Pulse dos veces con el botón derecho en una casilla vacía o una vez en una "
 "bandera."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
-#| msgid ""
-#| "To enable these flags, open the application menu in the top bar and "
-#| "enable the <gui style=\"checkbox\">Use Question Flags</gui> preference."
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
@@ -371,44 +349,6 @@ msgstr ""
 "Para activar estas banderas, pulse el botón de menú en la esquina superior "
 "derecha de la ventana y active la opción <gui style=\"checkbox\">Usar "
 "banderas de interrogación</gui>."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Advertencias"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr ""
-"Puede usar las banderas de advertencia para ayudarle a llevar un control de "
-"las banderas."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-#| msgid ""
-#| "To enable warnings, click <gui>Mines</gui> in the top bar and then select "
-#| "<gui>Show Warnings</gui>. This will warn you when you try to place too "
-#| "many flags next to an open tile."
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-"will warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Para activar las advertencias, pulse el botón de menú en la esquina superior "
-"derecha de la ventana y elija <gui style=\"checkbox\">Mostrar advertencias</"
-"gui>. Esto le advertirá cuando intente colocar demasiadas banderas junto a "
-"una casilla abierta."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -426,11 +366,6 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/high-scores.page:29
-#| msgid ""
-#| "To view the high scores, open the application menu in the top bar and "
-#| "select <gui style=\"menuitem\">Scores</gui>. The dialog will display the "
-#| "<gui>Small</gui> field size by default; to view other sizes, select them "
-#| "in the drop down menu at the top of the dialog."
 msgid ""
 "To view the high scores, press the menu button in the top-right corner of "
 "the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
@@ -489,12 +424,7 @@ msgid "Useful tips"
 msgstr "Consejos útiles"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Avanzado"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Involucrarse"
 
@@ -590,6 +520,11 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">página web de Creative "
 "Commons</link> o lea el <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\"> Escrito de Commons</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
@@ -772,6 +707,51 @@ msgstr ""
 "Alternativamente, puede contactar con el equipo de internacionalización "
 "usando su <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
 "\">lista de correo</link>."
+
+# Comprobado con la traducción de master
+#~| msgid ""
+#~| "To make the number of available flags equal to the number of remaining "
+#~| "mines, open the application menu in the top bar and enable the <gui "
+#~| "style=\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use "
+#~| "Question Flags</gui> preferences."
+#~ msgid ""
+#~ "To make the number of available flags equal to the number of remaining "
+#~ "mines, pressing the menu button in the top-right corner of the window and "
+#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+#~ "\"checkbox\">Use Question Flags</gui> preferences."
+#~ msgstr ""
+#~ "Para igualar el número de banderas disponibles al de casillas restantes, "
+#~ "pulse el botón de menú en la esquina superior derecha de la ventana y "
+#~ "active las opciones <gui style=\"checkbox\">Mostrar advertencias</gui> y "
+#~ "<gui style=\"checkbox\">Usar banderas de interrogación</gui>."
+
+#~ msgid "2014"
+#~ msgstr "2014"
+
+#~ msgid "Warnings"
+#~ msgstr "Advertencias"
+
+#~ msgid "You can flag warnings to help you keep track of flags."
+#~ msgstr ""
+#~ "Puede usar las banderas de advertencia para ayudarle a llevar un control "
+#~ "de las banderas."
+
+#~| msgid ""
+#~| "To enable warnings, click <gui>Mines</gui> in the top bar and then "
+#~| "select <gui>Show Warnings</gui>. This will warn you when you try to "
+#~| "place too many flags next to an open tile."
+#~ msgid ""
+#~ "To enable warnings, press the menu button in the top-right corner of the "
+#~ "window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+#~ "will warn you when you try to place too many flags next to an open tile."
+#~ msgstr ""
+#~ "Para activar las advertencias, pulse el botón de menú en la esquina "
+#~ "superior derecha de la ventana y elija <gui style=\"checkbox\">Mostrar "
+#~ "advertencias</gui>. Esto le advertirá cuando intente colocar demasiadas "
+#~ "banderas junto a una casilla abierta."
+
+#~ msgid "Advanced"
+#~ msgstr "Avanzado"
 
 #~ msgid "Keyboard shortcuts"
 #~ msgstr "Atajos de teclado"
