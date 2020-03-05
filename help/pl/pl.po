@@ -1,14 +1,14 @@
 # Polish translation for gnome-mines help.
-# Copyright © 2017-2019 the gnome-mines authors.
+# Copyright © 2017-2020 the gnome-mines authors.
 # This file is distributed under the same license as the gnome-mines help.
-# Piotr Drąg <piotrdrag@gmail.com>, 2017-2019.
-# Aviary.pl <community-poland@mozilla.org>, 2017-2019.
+# Piotr Drąg <piotrdrag@gmail.com>, 2017-2020.
+# Aviary.pl <community-poland@mozilla.org>, 2017-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines-help\n"
-"POT-Creation-Date: 2019-03-03 11:52+0000\n"
-"PO-Revision-Date: 2019-03-03 15:12+0200\n"
+"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"PO-Revision-Date: 2020-03-05 14:03+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,33 +22,31 @@ msgstr ""
 msgctxt "_"
 msgid "translator-credits"
 msgstr ""
-"Piotr Drąg <piotrdrag@gmail.com>, 2017-2019\n"
-"Aviary.pl <community-poland@mozilla.org>, 2017-2019"
+"Piotr Drąg <piotrdrag@gmail.com>, 2017-2020\n"
+"Aviary.pl <community-poland@mozilla.org>, 2017-2020"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
-#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -158,16 +156,16 @@ msgstr ""
 #: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Po utworzeniu konta zaloguj się i kliknij <gui>New Issue</gui> (Nowe "
 "zgłoszenie). Przed zgłoszeniem błędu prosimy przeczytać <link href=\"https://"
-"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">wytyczne opisywania "
-"błędów</link> i <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
-"issues\">poszukać</link>, czy błąd został już zgłoszony."
+"wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">wytyczne "
+"opisywania błędów</link> i <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mines/issues\">poszukać</link>, czy błąd został już zgłoszony."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -307,26 +305,13 @@ msgstr "Flag nie można kliknąć. Aby umieścić flagę na polu:"
 msgid "right click on a blank tile."
 msgstr "kliknij puste pole prawym przyciskiem myszy."
 
-#. (itstool) path: note/p
-#: C/flags.page:67
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, pressing the menu button in the top-right corner of the window and "
-"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-"\"checkbox\">Use Question Flags</gui> preferences."
-msgstr ""
-"Aby liczba dostępnych flag równała się liczbie pozostałych min, kliknij "
-"przycisk menu w górnym prawym rogu okna i włącz preferencje <gui style="
-"\"checkbox\">Ostrzeżenia</gui> i <gui style=\"checkbox\">Flagi niepewności</"
-"gui>."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "Korzystanie z flagi niepewności"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -335,19 +320,19 @@ msgstr ""
 "niepewności."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Aby umieścić flagę niepewności na polu:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Podwójnie kliknij puste pole prawym przyciskiem myszy lub raz w przypadku "
 "pola z flagą."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
@@ -355,37 +340,6 @@ msgid ""
 msgstr ""
 "Aby włączyć te flagi, kliknij przycisk menu w górnym prawym rogu okna "
 "i włącz preferencję <gui style=\"checkbox\">Flagi niepewności</gui>."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Ostrzeżenia"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr "Można korzystać z ostrzeżeń o flagach."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-"will warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Aby włączyć ostrzeżenia, kliknij przycisk menu w górnym prawym rogu okna, "
-"a następnie zaznacz opcję <gui>Ostrzeżenia</gui>. Spowoduje to wyświetlanie "
-"ostrzeżenia, jeśli obok otwartego pola umieszczono za dużo flag."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -459,12 +413,7 @@ msgid "Useful tips"
 msgstr "Wskazówki"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Zaawansowane"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Dołącz do nas"
 
@@ -557,6 +506,11 @@ msgstr ""
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">Creative Commons</link>; "
 "można również przeczytać <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">podsumowanie</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
