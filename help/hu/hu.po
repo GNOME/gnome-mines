@@ -1,22 +1,22 @@
 # Hungarian translation for gnome-mines help.
-# Copyright (C) 2013, 2014, 2015, 2017, 2018 Free Software Foundation, Inc.
+# Copyright (C) 2013, 2014, 2015, 2017, 2018, 2019, 2020 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mines help.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015, 2017, 2018, 2019.
-# Balázs Úr <urbalazs at gmail dot com>, 2014, 2018.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2018, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2019-03-03 11:52+0000\n"
-"PO-Revision-Date: 2019-03-10 20:24+0100\n"
-"Last-Translator: Gabor Kelemen <kelemeng at ubuntu dot com>\n"
+"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"PO-Revision-Date: 2020-03-07 22:31+0100\n"
+"Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 19.04.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -26,29 +26,27 @@ msgstr ""
 "Meskó Balázs <mesko.balazs at fsf dot hu>, 2018."
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
-#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -129,8 +127,8 @@ msgid ""
 msgstr ""
 "Az <app>Aknakeresőt</app> egy önkéntes közösség készíti. Közreműködését "
 "szívesen fogadjuk. Ha hibát észlelt, beküldhet egy <em>hibajelentést</em>. "
-"Ehhez keresse fel a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines"
-"\"/> oldalt."
+"Ehhez keresse fel a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/> oldalt."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -158,18 +156,25 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
+#| msgid ""
+#| "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
+#| "link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
-"Ha létrehozta fiókját, jelentkezzen be, kattintson a <gui>New issue</gui> "
-"hivatkozásokra. Hiba jelentése előtt olvassa el a <link href=\"https://"
-"bugzilla.gnome.org/page.cgi?id=bug-writing.html\">hibajelentés-írási "
-"irányelveket</link>, és <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
-"mines/issues\">ellenőrizze</link>, hogy nincs-e már a hiba bejelentve."
+"Ha létrehozta fiókját, jelentkezzen be, kattintson a <gui>New issue</gui>"
+" hivatkozásokra. Hiba jelentése előtt olvassa el a <link"
+" href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines"
+"\">hibajelentés-írási irányelveket</link>, és <link"
+" href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">ellenőrizze</link"
+">, hogy nincs-e már a hiba bejelentve."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -216,12 +221,12 @@ msgid ""
 "href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contributing"
-"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
-"fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
-"\"https://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
-"veheti fel."
+"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\""
+">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a"
+" fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?url="
+"irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link"
+" href=\"https://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán<"
+"/link> veheti fel."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -284,18 +289,14 @@ msgstr ""
 
 #. (itstool) path: td/p
 #: C/flags.page:43
-#| msgid ""
-#| "The exact look of the flags depends on the theme. You can change the "
-#| "theme by clicking <gui>Mines</gui> in the top bar and then selecting "
-#| "<gui>Appearance</gui>."
 msgid ""
 "The exact look of the flags depends on the theme. You can change the theme "
 "by pressing the menu button in the top-right corner of the window and then "
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
-"A zászlók pontos kinézete a témától függ. Módosíthatja a témát a menü gomb"
-" megnyomásával az ablak jobb felső sarkában, és a "
-"<gui style=\"menuitem\">Megjelenés</gui> menüpont kiválasztásával."
+"A zászlók pontos kinézete a témától függ. Módosíthatja a témát a menü gomb "
+"megnyomásával az ablak jobb felső sarkában, és a <gui style=\"menuitem"
+"\">Megjelenés</gui> menüpont kiválasztásával."
 
 #. (itstool) path: section/title
 #: C/flags.page:51
@@ -312,32 +313,13 @@ msgstr "A zászlókra nem lehet kattintani. Egy zászló elhelyezéséhez:"
 msgid "right click on a blank tile."
 msgstr "Kattintson a jobb egérgombbal egy üres mezőre."
 
-#. (itstool) path: note/p
-#: C/flags.page:67
-#| msgid ""
-#| "To make the number of available flags equal to the number of remaining "
-#| "mines, open the application menu in the top bar and enable the <gui style="
-#| "\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use Question "
-#| "Flags</gui> preferences."
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, pressing the menu button in the top-right corner of the window and "
-"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-"\"checkbox\">Use Question Flags</gui> preferences."
-msgstr ""
-"Az elérhető zászlók számának egyenlővé tételéhez a hátralévő aknák számával, "
-"nyomja meg a menügombot az ablak jobb felső sarkában, és engedélyezze a <gui"
-" style="
-"\"checkbox\">Figyelmeztetések megjelenítése</gui> és a <gui style=\"checkbox"
-"\">Kérdés zászlók használata</gui> beállításokat."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "A <em>kérdés</em> zászló használata"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -346,69 +328,27 @@ msgstr ""
 "em> zászlót."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "A <em>Nem vagyok benne biztos</em> zászló elhelyezéséhez egy mezőn:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Kattintson kétszer a jobb egérgombbal egy üres mezőre, vagy egyszer egy "
 "zászlóra."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
-#| msgid ""
-#| "To enable these flags, open the application menu in the top bar and "
-#| "enable the <gui style=\"checkbox\">Use Question Flags</gui> preference."
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
 "preference."
 msgstr ""
-"A zászlók engedélyezéséhez nyomja meg a menü gombot az ablak jobb felső"
-" sarkában, és "
-"engedélyezze a <gui style=\"checkbox\">Kérdés zászlók használata</gui> "
-"beállítást."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Figyelmeztetések"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr ""
-"A zászlófigyelmeztetések használata segíthet az aknák számon tartásában."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-#| msgid ""
-#| "To enable warnings, click <gui>Mines</gui> in the top bar and then select "
-#| "<gui>Show Warnings</gui>. This will warn you when you try to place too "
-#| "many flags next to an open tile."
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-"will warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"A figyelmeztetések bekapcsolásához nyomja meg a menü gombot az ablak jobb"
-" felső sarkában, és "
-"jelölje be a <gui style=\"checkbox\">Figyelmeztetések megjelenítése</gui> "
-"négyzetet. Ekkor figyelmeztetést fog kapni, ha túl sok zászlót próbál egy "
-"szabad mező mellé elhelyezni."
+"A zászlók engedélyezéséhez nyomja meg a menü gombot az ablak jobb felső "
+"sarkában, és engedélyezze a <gui style=\"checkbox\">Kérdés zászlók "
+"használata</gui> beállítást."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -426,23 +366,17 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/high-scores.page:29
-#| msgid ""
-#| "To view the high scores, open the application menu in the top bar and "
-#| "select <gui style=\"menuitem\">Scores</gui>. The dialog will display the "
-#| "<gui>Small</gui> field size by default; to view other sizes, select them "
-#| "in the drop down menu at the top of the dialog."
 msgid ""
 "To view the high scores, press the menu button in the top-right corner of "
 "the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
 "display the <gui>Small</gui> field size by default; to view other sizes, "
 "select them in the drop down menu at the top of the dialog."
 msgstr ""
-"A pontszámok megjelenítéséhez nyomja meg a menü gombot az ablak jobb felső"
-" sarkában, és "
-"válassza a <gui style=\"menuitem\">Pontszámok</gui> menüpontot. A "
-"párbeszédablak alapesetben a <gui>Kicsi</gui> mezőméretet jeleníti meg. Más "
-"méretek megjelenítéséhez válassza ki azokat a párbeszédablak tetején lévő "
-"legördülő menüből."
+"A pontszámok megjelenítéséhez nyomja meg a menü gombot az ablak jobb felső "
+"sarkában, és válassza a <gui style=\"menuitem\">Pontszámok</gui> menüpontot. "
+"A párbeszédablak alapesetben a <gui>Kicsi</gui> mezőméretet jeleníti meg. "
+"Más méretek megjelenítéséhez válassza ki azokat a párbeszédablak tetején "
+"lévő legördülő menüből."
 
 #. (itstool) path: info/title
 #: C/index.page:9
@@ -490,12 +424,7 @@ msgid "Useful tips"
 msgstr "Hasznos tippek"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Speciális"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Közreműködés"
 
@@ -589,6 +518,11 @@ msgstr ""
 "licenses/by-sa/3.0/legalcode\">CreativeCommons weboldalát</link>, vagy a "
 "teljes <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
 "összefoglalót</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
@@ -766,46 +700,4 @@ msgid ""
 msgstr ""
 "Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot <link href="
 "\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">levelezőlistán</link> "
-"is. A magyar csapat <link href=\"https://l10n.gnome.org/languages/hu/"
-"\">kezdőoldalán</link> megtalálja a magyar levelezőlista címét, és a "
-"fordítások megkezdéséhez szükséges információkat."
-
-#~ msgid "Keyboard shortcuts"
-#~ msgstr "Gyorsbillentyűk"
-
-#~ msgid "New game"
-#~ msgstr "Új játék"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#~ msgid "New game with last used settings"
-#~ msgstr "Új játék a legutóbbi beállításokkal"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-
-#~ msgid "Pause"
-#~ msgstr "Szünet"
-
-#~ msgid "<key>Pause</key>"
-#~ msgstr "<key>Pause</key>"
-
-#~ msgid ""
-#~ "Use the <gui style=\"button\">Pause</gui> on the right if your keyboard "
-#~ "does not have a <key>Pause</key> key."
-#~ msgstr ""
-#~ "Használja a jobb oldalon lévő <gui style=\"button\">Szünet</gui> gombot, "
-#~ "ha a billentyűzete nem rendelkezik <key>Pause</key> gombbal."
-
-#~ msgid "Help"
-#~ msgstr "Súgó"
-
-#~ msgid "<key>F1</key>"
-#~ msgstr "<key>F1</key>"
-
-#~ msgid "Quit"
-#~ msgstr "Kilépés"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
+"is."
