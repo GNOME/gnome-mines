@@ -1,13 +1,13 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018.
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2019-03-03 11:52+0000\n"
-"PO-Revision-Date: 2018-09-05 10:55+0200\n"
+"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"PO-Revision-Date: 2020-03-08 07:54+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,29 +26,27 @@ msgid "translator-credits"
 msgstr "Marek Černocký <marek@manet.cz>, 2009, 2013"
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12
-#: C/high-scores.page:12 C/new-game.page:13 C/rules.page:11
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -160,16 +158,16 @@ msgstr ""
 #: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-"link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Když už účet máte, přihlaste se, klikněte na <gui>New Issue</gui>. Před "
-"nahlášením chyby si prosím přečtěte <link href=\"https://bugzilla.gnome.org/"
-"page.cgi?id=bug-writing.html\">přiručku k hlášení chyb</link> a <link href="
-"\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte</link> se "
-"prosím, jestli stejnou chybu nenahlásil už někdo jiný."
+"nahlášením chyby si prosím přečtěte <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb"
+"</link> a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">"
+"podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -309,26 +307,13 @@ msgstr ""
 msgid "right click on a blank tile."
 msgstr "Klikněte pravým tlačítkem na neodkryté dlaždici."
 
-#. (itstool) path: note/p
-#: C/flags.page:67
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, pressing the menu button in the top-right corner of the window and "
-"enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-"\"checkbox\">Use Question Flags</gui> preferences."
-msgstr ""
-"Abyste měli jistotu, že počet vlaječek nepřekročí počet zbývajících min "
-"okolo odkryté dlaždice, zmáčkněte tlačítko nabídky v pravém horním rohu okna "
-"a zapněte <gui style=\"checkbox\">Zobrazovat varování</gui> a <gui style="
-"\"checkbox\">Používat nejisté vlaječky</gui>."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "Používání vlaječek <em>nejistých</em> vlaječek"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -337,19 +322,19 @@ msgstr ""
 "použít <em>nejistou</em> vlaječku."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr "Když chcete na dlaždici umístit <em>nejistou</em> vlaječku:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
 "Klikněte pravým tlačítkem dvojitě na prázdnou dlaždici nebo jednou na "
 "vlaječku."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
@@ -358,40 +343,6 @@ msgstr ""
 "Abyste tyto vlaječky povolili, zmáčkněte tlačítko nabídky v pravém horním "
 "rohu okna a zapněte předvolbu <gui style=\"checkbox\">Používat nejisté "
 "vlaječky</gui>."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Varování"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr ""
-"Můžete nechat vlaječky, aby vám pomocí varování pomohli udrožovat si přehled "
-"o jejich okolí."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-"will warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Jestli-že chcete zapnout varování, zmáčkněte tlačítko nabídky v pravém horním "
-"rohu okna a zaškrtnete <gui style=\"checkbox\">Zobrazovat varování</gui>. "
-"Díky tomu budete varováni, když se pokusíte vedle odkryté dlaždice umístit "
-"příliš mnoho vlaječek."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -467,12 +418,7 @@ msgid "Useful tips"
 msgstr "Užitečné tipy"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Pokročilé"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Zapojte se"
 
@@ -566,6 +512,11 @@ msgstr ""
 "org/licenses/by-sa/3.0/legalcode\">webových stránkách CreativeCommons</link> "
 "nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
 "\">výtah dokumentu pro neprávníky</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
@@ -743,6 +694,41 @@ msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
 "\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
 "link>."
+
+#~ msgid ""
+#~ "To make the number of available flags equal to the number of remaining "
+#~ "mines, pressing the menu button in the top-right corner of the window and "
+#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+#~ "\"checkbox\">Use Question Flags</gui> preferences."
+#~ msgstr ""
+#~ "Abyste měli jistotu, že počet vlaječek nepřekročí počet zbývajících min "
+#~ "okolo odkryté dlaždice, zmáčkněte tlačítko nabídky v pravém horním rohu "
+#~ "okna a zapněte <gui style=\"checkbox\">Zobrazovat varování</gui> a <gui "
+#~ "style=\"checkbox\">Používat nejisté vlaječky</gui>."
+
+#~ msgid "2014"
+#~ msgstr "2014"
+
+#~ msgid "Warnings"
+#~ msgstr "Varování"
+
+#~ msgid "You can flag warnings to help you keep track of flags."
+#~ msgstr ""
+#~ "Můžete nechat vlaječky, aby vám pomocí varování pomohli udrožovat si "
+#~ "přehled o jejich okolí."
+
+#~ msgid ""
+#~ "To enable warnings, press the menu button in the top-right corner of the "
+#~ "window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+#~ "will warn you when you try to place too many flags next to an open tile."
+#~ msgstr ""
+#~ "Jestli-že chcete zapnout varování, zmáčkněte tlačítko nabídky v pravém "
+#~ "horním rohu okna a zaškrtnete <gui style=\"checkbox\">Zobrazovat "
+#~ "varování</gui>. Díky tomu budete varováni, když se pokusíte vedle odkryté "
+#~ "dlaždice umístit příliš mnoho vlaječek."
+
+#~ msgid "Advanced"
+#~ msgstr "Pokročilé"
 
 #~ msgid "Keyboard shortcuts"
 #~ msgstr "Klávesové zkratky"
