@@ -140,6 +140,13 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
+    private Gtk.EventControllerKey key_controller;    // for keeping in memory
+
+    construct
+    {
+        init_keyboard ();
+    }
+
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
@@ -425,7 +432,14 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    public override bool key_press_event (Gdk.EventKey event)
+    private inline void init_keyboard ()  // called on construct
+    {
+        key_controller = new Gtk.EventControllerKey (this);
+        key_controller.key_pressed.connect (on_key_pressed);
+        key_controller.key_released.connect (on_key_released);
+    }
+
+    private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
@@ -439,7 +453,7 @@ public class MinefieldView : Gtk.Grid
         var y = keyboard_cursor.y;
         mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
 
-        switch (event.keyval)
+        switch (keyval)
         {
         case Gdk.Key.Left:
         case Gdk.Key.h:
@@ -466,7 +480,7 @@ public class MinefieldView : Gtk.Grid
             {
                 selected.is_set = false;
 
-                if ((event.state & Gdk.ModifierType.CONTROL_MASK) != 0)
+                if ((state & Gdk.ModifierType.CONTROL_MASK) != 0)
                 {
                     toggle_mark (keyboard_cursor.x, keyboard_cursor.y);
                 }
@@ -512,18 +526,18 @@ public class MinefieldView : Gtk.Grid
         return true;
     }
 
-    public override bool key_release_event (Gdk.EventKey event)
+    private inline void on_key_released (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
-        if (event.keyval != Gdk.Key.space)
-            return false;
+        if (keyval != Gdk.Key.space)
+            return;
 
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
-            return false;
+            return;
 
         /* Check that the user isn't currently using the mouse */
         if (!selected.is_set || !keyboard_cursor.is_set)
-            return false;
+            return;
 
         if (minefield.is_cleared (selected.x, selected.y))
             minefield.multi_release (selected.x, selected.y);
@@ -531,7 +545,5 @@ public class MinefieldView : Gtk.Grid
             minefield.clear_mine (selected.x, selected.y);
 
         selected.is_set = false;
-
-        return false;
     }
 }
