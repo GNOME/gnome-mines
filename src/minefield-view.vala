@@ -309,14 +309,12 @@ public class MinefieldView : Gtk.Grid
         get_style_context  ().add_class ("completedField");
     }
 
-    public override void get_preferred_width (out int minimum, out int natural)
+    public override void measure (Gtk.Orientation orientation, int for_size, out int minimum, out int natural, out int minimum_baseline, out int natural_baseline)
     {
-        minimum = natural = minefield != null ? (int) (minefield.width * minimum_size) : 0;
-    }
-
-    public override void get_preferred_height (out int minimum, out int natural)
-    {
-        minimum = natural = minefield != null ? (int) (minefield.height * minimum_size) : 0;
+        if (orientation == Gtk.Orientation.HORIZONTAL)
+            minimum = natural = minefield != null ? (int) (minefield.width * minimum_size) : 0;
+        else
+            minimum = natural = minefield != null ? (int) (minefield.height * minimum_size) : 0;
     }
 
     public new void add (Gtk.Widget child, int i, int j)
