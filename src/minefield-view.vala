@@ -190,7 +190,6 @@ public class MinefieldView : Gtk.Grid
                 for (int j = 0; j < _minefield.height; j++)
                 {
                     mines[i,j] = new Tile (i, j);
-                    mines[i,j].show ();
                     mines[i,j].tile_pressed.connect (tile_pressed_cb);
                     mines[i,j].tile_released.connect (tile_released_cb);
                     mines[i,j].tile_long_pressed.connect (tile_long_pressed_cb);

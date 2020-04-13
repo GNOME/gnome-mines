@@ -222,7 +222,6 @@ public class Mines : Gtk.Application
         var headerbar = new HeaderBar ();
         headerbar.show_title_buttons = true;
         headerbar.set_title (_("Mines"));
-        headerbar.show ();
         window.set_titlebar (headerbar);
 
         var menu = new GLib.Menu ();
@@ -240,7 +239,6 @@ public class Mines : Gtk.Application
         section.append (_("_About Mines"), "app.about");
         menu_button = new MenuButton ();
         menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
-        menu_button.show ();
         menu_button.set_menu_model (menu);
         headerbar.pack_end (menu_button);
 
@@ -257,7 +255,6 @@ public class Mines : Gtk.Application
         set_accels_for_action ("app.menu", {"F10"});
 
         minefield_view = new MinefieldView (settings);
-        minefield_view.show ();
 
         /* Hook a resize on the first minefield draw so that the ratio
            calculation in minefield_aspect.size-allocate runs one more time
@@ -276,13 +273,9 @@ public class Mines : Gtk.Application
 
         scrolled = (ScrolledWindow) ui_builder.get_object ("scrolled");
         scrolled.add (minefield_view);
-        scrolled.show ();
 
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
-        minefield_overlay.show ();
-
         minefield_aspect = (AspectFrame) ui_builder.get_object ("minefield_aspect");
-        minefield_aspect.show ();
 
         minefield_aspect.size_allocate.connect ((allocation) => {
              uint width = minefield_view.mine_size * minefield_view.minefield.width;
@@ -306,7 +299,6 @@ public class Mines : Gtk.Application
         minefield_overlay.add_overlay (paused_box);
 
         main_screen = (Widget) ui_builder.get_object ("main_screen");
-        main_screen.show_all ();
 
         /* Initialize New Game Screen */
         startup_new_game_screen (ui_builder);
@@ -413,8 +405,6 @@ public class Mines : Gtk.Application
         label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
         label.set_justify (Justification.CENTER);
         button.add (label);
-
-        new_game_screen.show_all ();
     }
 
     private void startup_custom_game_screen (Builder builder)
@@ -444,8 +434,6 @@ public class Mines : Gtk.Application
 
         button = (Button) builder.get_object ("play_game_btn");
         button.clicked.connect (custom_size_clicked_cb);
-
-        custom_game_screen.show_all ();
     }
 
     private void size_allocate_cb (Allocation allocation)
@@ -508,7 +496,7 @@ public class Mines : Gtk.Application
 
     public void start ()
     {
-        window.show ();
+        window.present ();
         show_new_game_screen ();
     }
 
