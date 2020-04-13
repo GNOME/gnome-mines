@@ -5,56 +5,47 @@
     <property name="modal">1</property>
     <child>
       <object class="GtkShortcutsSection">
-        <property name="visible">1</property>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="visible">1</property>
             <property name="title" translatable="yes" context="shortcut window">Window and game</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;N</property>
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;R</property>
                 <property name="title" translatable="yes" context="shortcut window">Restart game with current settings</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">Pause</property>
                 <property name="title" translatable="yes" context="shortcut window">Pause the game</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">F1</property>
                 <property name="title" translatable="yes" context="shortcut window">Show Help</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">F10</property>
                 <property name="title" translatable="yes" context="shortcut window">Open Menu</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Primary&gt;question</property>
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;Q</property>
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>
@@ -63,32 +54,27 @@
         </child>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="visible">1</property>
             <property name="title" translatable="yes" context="shortcut window">Game size selection</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">1</property>
                 <property name="title" translatable="yes" context="shortcut window">Game size: small</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">2</property>
                 <property name="title" translatable="yes" context="shortcut window">Game size: medium</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">3</property>
                 <property name="title" translatable="yes" context="shortcut window">Game size: large</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">4</property>
                 <property name="title" translatable="yes" context="shortcut window">Game size: custom</property>
               </object>
@@ -97,32 +83,27 @@
         </child>
         <child>
           <object class="GtkShortcutsGroup">
-            <property name="visible">1</property>
             <property name="title" translatable="yes" context="shortcut window">In-game</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">Up Down Left Right</property>
                 <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">u j h k</property>
                 <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">space</property>
                 <property name="title" translatable="yes" context="shortcut window">Reveal field</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="visible">1</property>
                 <property name="accelerator">&lt;Primary&gt;space</property>
                 <property name="title" translatable="yes" context="shortcut window">Toggle field flag state</property>
               </object>
