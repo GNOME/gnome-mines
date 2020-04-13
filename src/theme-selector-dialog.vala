@@ -89,7 +89,10 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
         var frame = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
-        frame.border_width = 6;
+        frame.margin_start = 6;
+        frame.margin_end = 6;
+        frame.margin_top = 6;
+        frame.margin_bottom = 6;
         frame.add (view);
         reveal_nonmines (view);
         box.pack_start (frame, true, true, 0);
