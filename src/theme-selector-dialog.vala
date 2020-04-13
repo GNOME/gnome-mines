@@ -107,11 +107,11 @@ public class ThemeSelectorDialog : Gtk.Dialog
         Object (use_header_bar: 1, title:  _("Select Theme"),
                 modal: true, transient_for: parent, resizable: false, border_width: 12);
 
-        previous = new Gtk.Button.from_icon_name ("go-previous-symbolic", Gtk.IconSize.BUTTON);
+        previous = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         previous.valign = Gtk.Align.CENTER;
         previous.halign = Gtk.Align.START;
 
-        next = new Gtk.Button.from_icon_name ("go-next-symbolic", Gtk.IconSize.BUTTON);
+        next = new Gtk.Button.from_icon_name ("go-next-symbolic");
         next.valign = Gtk.Align.CENTER;
         next.halign = Gtk.Align.END;
 
