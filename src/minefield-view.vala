@@ -191,9 +191,9 @@ public class MinefieldView : Gtk.Grid
                 {
                     mines[i,j] = new Tile (i, j);
                     mines[i,j].show ();
-                    mines[i,j].tile_pressed.connect ((x, y, event) => { tile_pressed_cb (x, y, event); });
-                    mines[i,j].tile_released.connect ((x, y, event) => { tile_released_cb (x, y, event); });
-                    mines[i,j].tile_long_pressed.connect ((x, y) => { tile_long_pressed_cb (x, y); });
+                    mines[i,j].tile_pressed.connect (tile_pressed_cb);
+                    mines[i,j].tile_released.connect (tile_released_cb);
+                    mines[i,j].tile_long_pressed.connect (tile_long_pressed_cb);
                     add (mines[i,j], i, j);
                 }
             }
@@ -214,10 +214,10 @@ public class MinefieldView : Gtk.Grid
         }
     }
 
-    public void tile_pressed_cb (int x, int y, Gdk.EventButton event)
+    private inline void tile_pressed_cb (int x, int y, uint button, int n_press, bool ctrl)
     {
         /* Ignore double click events */
-        if (event.type != Gdk.EventType.BUTTON_PRESS)
+        if (n_press > 1)
             return;
 
         /* Check for end cases and paused game */
@@ -237,7 +237,8 @@ public class MinefieldView : Gtk.Grid
             return;
 
         /* Right or Ctrl+Left button to toggle flags */
-        if (event.button == 3 || (event.button == 1 && (event.state & Gdk.ModifierType.CONTROL_MASK) != 0))
+        if (button == Gdk.BUTTON_SECONDARY
+         || button == Gdk.BUTTON_PRIMARY && ctrl)
         {
             toggle_mark (selected.x, selected.y);
             this.force_nolongpress = true;
@@ -252,9 +253,10 @@ public class MinefieldView : Gtk.Grid
         keyboard_cursor.position = {selected.x, selected.y};
     }
 
-    public void tile_released_cb (int x, int y, Gdk.EventButton event)
+    private inline void tile_released_cb (int x, int y, uint button)
     {
-        if (event.button != 1) return;
+        if (button != Gdk.BUTTON_PRIMARY)
+            return;
 
         this.force_nolongpress = false;
 
@@ -283,7 +285,7 @@ public class MinefieldView : Gtk.Grid
         selected.is_set = false;
     }
 
-    public void tile_long_pressed_cb (int x, int y)
+    private inline void tile_long_pressed_cb (int x, int y)
     {
         if (this.force_nolongpress == true) return;
         selected.is_set = false;

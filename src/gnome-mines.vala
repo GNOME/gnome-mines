@@ -89,6 +89,7 @@ public class Mines : Gtk.Application
     private AspectFrame new_game_screen;
     private AspectFrame custom_game_screen;
     private CssProvider theme_provider;
+    private GestureClick view_click_controller;         // for keeping in memory
 
     private const OptionEntry[] option_entries =
     {
@@ -297,7 +298,10 @@ public class Mines : Gtk.Application
         paused_box = (Box) ui_builder.get_object ("paused_box");
         buttons_box = (Box) ui_builder.get_object ("buttons_box");
         aspect_child = (Box) ui_builder.get_object ("aspect_child");
-        paused_box.button_press_event.connect (view_button_press_event);
+
+        view_click_controller = new GestureClick ();    // only reacts to left-click button
+        view_click_controller.pressed.connect (view_button_press_event);
+        paused_box.add_controller (view_click_controller);
 
         minefield_overlay.add_overlay (paused_box);
 
@@ -538,17 +542,14 @@ public class Mines : Gtk.Application
         window.present ();
     }
 
-    private bool view_button_press_event (Widget widget, Gdk.EventButton event)
+    private inline void view_button_press_event (GestureClick _view_click_controller, int n_press, double x, double y)
     {
         /* Cancel pause on click */
-        if (minefield.paused)
-        {
-            minefield.paused = false;
-            pause_requested = false;
-            return true;
-        }
+        if (!minefield.paused)
+            return;
 
-        return false;
+        minefield.paused = false;
+        pause_requested = false;
     }
 
     private void quit_cb ()
