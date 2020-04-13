@@ -55,8 +55,9 @@ public class Mines : Gtk.Application
     private Window window;
     private int window_width;
     private int window_height;
-    private bool is_maximized;
-    private bool is_tiled;
+    private bool window_is_maximized;
+    private bool window_is_fullscreen;
+    private bool window_is_tiled;
 
     /* true when the new game minefield draws once */
     private bool first_draw = false;
@@ -465,7 +466,7 @@ public class Mines : Gtk.Application
 
     private void size_allocate_cb (Allocation allocation)
     {
-        if (!is_maximized && !is_tiled && !window_skip_configure)
+        if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
         {
             window.get_size (out window_width, out window_height);
         }
@@ -473,13 +474,21 @@ public class Mines : Gtk.Application
         window_skip_configure = false;
     }
 
+    private const Gdk.WindowState tiled_state = Gdk.WindowState.TILED
+                                              | Gdk.WindowState.TOP_TILED
+                                              | Gdk.WindowState.BOTTOM_TILED
+                                              | Gdk.WindowState.LEFT_TILED
+                                              | Gdk.WindowState.RIGHT_TILED;
     private bool window_state_event_cb (Gdk.EventWindowState event)
     {
         if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+            window_is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+        /* fullscreen: saved as maximized */
+        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
+            window_is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
         /* We don’t save this state, but track it for saving size allocation */
-        if ((event.changed_mask & Gdk.WindowState.TILED) != 0)
-            is_tiled = (event.new_window_state & Gdk.WindowState.TILED) != 0;
+        if ((event.changed_mask & tiled_state) != 0)
+            window_is_tiled = (event.new_window_state & tiled_state) != 0;
         return false;
     }
 
@@ -521,7 +530,7 @@ public class Mines : Gtk.Application
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean (KEY_USE_ANIMATIONS, Gtk.Settings.get_default ().gtk_enable_animations);
-        settings.set_boolean ("window-is-maximized", is_maximized);
+        settings.set_boolean ("window-is-maximized", window_is_maximized || window_is_fullscreen);
         settings.apply ();
     }
 
