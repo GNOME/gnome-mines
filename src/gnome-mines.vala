@@ -238,7 +238,7 @@ public class Mines : Gtk.Application
         section.append (_("_Help"), "app.help");
         section.append (_("_About Mines"), "app.about");
         menu_button = new MenuButton ();
-        menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
+        menu_button.set_icon_name ("open-menu-symbolic");
         menu_button.set_menu_model (menu);
         headerbar.pack_end (menu_button);
 
