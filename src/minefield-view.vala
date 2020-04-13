@@ -155,7 +155,6 @@ public class MinefieldView : Gtk.Grid
         row_spacing = 0;
         column_homogeneous = true;
         column_spacing = 0;
-        set_events (Gdk.EventMask.KEY_PRESS_MASK | Gdk.EventMask.KEY_RELEASE_MASK);
         can_focus = true;
         expand = true;
         get_style_context ().add_class ("minefield");
