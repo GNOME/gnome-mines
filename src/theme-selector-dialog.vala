@@ -118,7 +118,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
         var headerbar = get_header_bar () as Gtk.HeaderBar;
-        headerbar.set_show_close_button (true);
+        headerbar.set_show_title_buttons (true);
         get_content_area ().pack_start (create_preview_widget (out minefield), true, true, 0);
 
         buttons_holder.pack_start (previous);
