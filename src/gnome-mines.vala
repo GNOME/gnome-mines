@@ -134,12 +134,12 @@ public class Mines : Gtk.Application
             theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
         }
         if (!is_switch) {
-            IconTheme.get_default ().append_search_path (theme_path);
+            IconTheme.get_for_display (Gdk.Display.get_default ()).add_search_path (theme_path);
         } else {
-            string[] icon_search_path;
-            IconTheme.get_default ().get_search_path (out icon_search_path);
+            IconTheme icon_theme = IconTheme.get_for_display (Gdk.Display.get_default ());
+            string[] icon_search_path = icon_theme.get_search_path ();
             icon_search_path[icon_search_path.length - 1] = theme_path;
-            IconTheme.get_default ().set_search_path (icon_search_path);
+            icon_theme.set_search_path (icon_search_path);
         }
 
         var theme_css_path = Path.build_filename (theme_path, "theme.css");
