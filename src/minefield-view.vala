@@ -156,7 +156,8 @@ public class MinefieldView : Gtk.Grid
         column_homogeneous = true;
         column_spacing = 0;
         can_focus = true;
-        expand = true;
+        hexpand = true;
+        vexpand = true;
         get_style_context ().add_class ("minefield");
 
         selected = new Position ();
@@ -321,7 +322,8 @@ public class MinefieldView : Gtk.Grid
     public new void add (Gtk.Widget child, int i, int j)
     {
         attach (child, i-1, j-1, 1, 1);
-        child.expand = true;
+        child.hexpand = true;
+        child.vexpand = true;
     }
 
     private void redraw_sector_cb (uint x, uint y)
