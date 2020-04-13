@@ -436,7 +436,7 @@ public class Mines : Gtk.Application
         button.clicked.connect (custom_size_clicked_cb);
     }
 
-    private void size_allocate_cb (Allocation allocation)
+    private void size_allocate_cb (int width, int height, int baseline)
     {
         if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
         {
