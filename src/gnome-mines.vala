@@ -220,7 +220,7 @@ public class Mines : Gtk.Application
         add_window (window);
 
         var headerbar = new HeaderBar ();
-        headerbar.show_close_button = true;
+        headerbar.show_title_buttons = true;
         headerbar.set_title (_("Mines"));
         headerbar.show ();
         window.set_titlebar (headerbar);
