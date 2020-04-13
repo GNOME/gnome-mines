@@ -235,16 +235,13 @@ public class Mines : Gtk.Application
         set_accels_for_action ("app.menu", {"F10"});
 
         minefield_view = new MinefieldView (settings);
-        minefield_view.show ();
 
         stack = (Stack) ui_builder.get_object ("stack");
 
         aspect_frame = (AspectFrame) ui_builder.get_object ("aspect_frame");
         aspect_frame.add (minefield_view);
-        aspect_frame.show ();
 
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
-        minefield_overlay.show ();
 
         paused_box = (Box) ui_builder.get_object ("paused_box");
 
@@ -255,7 +252,6 @@ public class Mines : Gtk.Application
         minefield_overlay.add_overlay (paused_box);
 
         main_screen = (Widget) ui_builder.get_object ("main_screen");
-        main_screen.show_all ();
 
         main_screen_layout = (Box) ui_builder.get_object ("main_screen_layout");
         main_screen_sidebar = (Box) ui_builder.get_object ("main_screen_sidebar");
@@ -358,8 +354,6 @@ public class Mines : Gtk.Application
         label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
         label.set_justify (Justification.CENTER);
         button.add (label);
-
-        new_game_screen.show_all ();
     }
 
     private void startup_custom_game_screen (Builder builder)
@@ -383,8 +377,6 @@ public class Mines : Gtk.Application
         mines_spin.set_increments (1, 1);
         mines_spin.value_changed.connect (mines_spin_cb);
         set_mines_limit ();
-
-        custom_game_screen.show_all ();
     }
 
     private void size_allocate_cb (Allocation allocation)
@@ -467,7 +459,7 @@ public class Mines : Gtk.Application
 
     public void start ()
     {
-        window.show ();
+        window.present ();
         show_new_game_screen ();
     }
 
