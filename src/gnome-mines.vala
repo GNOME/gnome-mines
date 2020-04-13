@@ -379,7 +379,7 @@ public class Mines : Gtk.Application
         set_mines_limit ();
     }
 
-    private void size_allocate_cb (Allocation allocation)
+    private void size_allocate_cb (int width, int height, int baseline)
     {
         int width, height;
         window.get_size (out width, out height);
