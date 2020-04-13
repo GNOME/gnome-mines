@@ -146,11 +146,11 @@ public class Mines : Gtk.Application
         try
         {
             if (is_switch) {
-                StyleContext.remove_provider_for_screen (Gdk.Screen.get_default (), theme_provider);
+                StyleContext.remove_provider_for_display (Gdk.Display.get_default (), theme_provider);
             }
             theme_provider = new CssProvider ();
             theme_provider.load_from_path (theme_css_path);
-            StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), theme_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+            StyleContext.add_provider_for_display (Gdk.Display.get_default (), theme_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (GLib.Error e)
         {
@@ -161,7 +161,7 @@ public class Mines : Gtk.Application
             window.get_window ().invalidate_rect (null, true);
             window.queue_draw ();
         }
-        StyleContext.reset_widgets (Gdk.Screen.get_default ());
+        StyleContext.reset_widgets (Gdk.Display.get_default ());
     }
 
     protected override void startup ()
@@ -180,7 +180,7 @@ public class Mines : Gtk.Application
         var css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Mines/gnome-mines.css");
 
-        StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+        StyleContext.add_provider_for_display (Gdk.Display.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
         var ui_builder = new Builder ();
         try
         {
