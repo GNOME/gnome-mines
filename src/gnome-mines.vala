@@ -210,7 +210,7 @@ public class Mines : Gtk.Application
 
         window = (ApplicationWindow) ui_builder.get_object ("main_window");
         window.size_allocate.connect (size_allocate_cb);
-        window.window_state_event.connect (window_state_event_cb);
+        window.map.connect (init_state_watcher);
         window.notify["is-active"].connect (on_window_focus_change);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
@@ -458,22 +458,30 @@ public class Mines : Gtk.Application
         window_skip_configure = false;
     }
 
-    private const Gdk.WindowState tiled_state = Gdk.WindowState.TILED
-                                              | Gdk.WindowState.TOP_TILED
-                                              | Gdk.WindowState.BOTTOM_TILED
-                                              | Gdk.WindowState.LEFT_TILED
-                                              | Gdk.WindowState.RIGHT_TILED;
-    private bool window_state_event_cb (Gdk.EventWindowState event)
+    private inline void init_state_watcher ()
     {
-        if ((event.changed_mask & Gdk.WindowState.MAXIMIZED) != 0)
-            window_is_maximized = (event.new_window_state & Gdk.WindowState.MAXIMIZED) != 0;
+        Gdk.Surface? nullable_surface = window.get_surface ();
+        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
+            assert_not_reached ();
+        surface = (Gdk.Toplevel) (!) nullable_surface;
+        surface.notify ["state"].connect (on_window_state_event);
+    }
+
+    private Gdk.Toplevel surface;
+    private const Gdk.ToplevelState tiled_state = Gdk.ToplevelState.TILED
+                                                | Gdk.ToplevelState.TOP_TILED
+                                                | Gdk.ToplevelState.BOTTOM_TILED
+                                                | Gdk.ToplevelState.LEFT_TILED
+                                                | Gdk.ToplevelState.RIGHT_TILED;
+    private inline void on_window_state_event ()
+    {
+        Gdk.ToplevelState state = surface.get_state ();
+
+        window_is_maximized     = (state & Gdk.ToplevelState.MAXIMIZED)  != 0;
         /* fullscreen: saved as maximized */
-        if ((event.changed_mask & Gdk.WindowState.FULLSCREEN) != 0)
-            window_is_fullscreen = (event.new_window_state & Gdk.WindowState.FULLSCREEN) != 0;
+        window_is_fullscreen    = (state & Gdk.ToplevelState.FULLSCREEN) != 0;
         /* We don’t save this state, but track it for saving size allocation */
-        if ((event.changed_mask & tiled_state) != 0)
-            window_is_tiled = (event.new_window_state & tiled_state) != 0;
-        return false;
+        window_is_tiled         = (state & tiled_state)                  != 0;
     }
 
     private inline void on_window_focus_change ()
