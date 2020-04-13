@@ -8,10 +8,12 @@
  * license.
  */
 
+using Gtk;
+
 public class Mines : Gtk.Application
 {
     /* Settings keys */
-    private Settings settings;
+    private GLib.Settings settings;
     private const string KEY_XSIZE = "xsize";
     private const int XSIZE_MIN = 4;
     private const int XSIZE_MAX = 100;
@@ -30,27 +32,27 @@ public class Mines : Gtk.Application
     public const string KEY_THEME = "theme";
     public const string KEY_USE_ANIMATIONS = "use-animations";
 
-    private Gtk.Widget main_screen;
-    private Gtk.Button play_pause_button;
-    private Gtk.Label play_pause_label;
-    private Gtk.Button replay_button;
-    private Gtk.Button high_scores_button;
-    private Gtk.Button new_game_button;
-    private Gtk.AspectFrame minefield_aspect;
-    private Gtk.Overlay minefield_overlay;
-    private Gtk.Box aspect_child;
-    private Gtk.Box buttons_box;
-    private Gtk.Box paused_box;
-    private Gtk.ScrolledWindow scrolled;
-    private Gtk.Stack stack;
+    private Widget main_screen;
+    private Button play_pause_button;
+    private Label play_pause_label;
+    private Button replay_button;
+    private Button high_scores_button;
+    private Button new_game_button;
+    private AspectFrame minefield_aspect;
+    private Overlay minefield_overlay;
+    private Box aspect_child;
+    private Box buttons_box;
+    private Box paused_box;
+    private ScrolledWindow scrolled;
+    private Stack stack;
     private ThemeSelectorDialog theme_dialog;
 
-    private Gtk.Label clock_label;
+    private Label clock_label;
 
-    private Menu app_main_menu;
+    private GLib.Menu app_main_menu;
 
     /* Main window */
-    private Gtk.Window window;
+    private Window window;
     private int window_width;
     private int window_height;
     private bool is_maximized;
@@ -75,16 +77,16 @@ public class Mines : Gtk.Application
     private MinefieldView minefield_view;
 
     /* Game status */
-    private Gtk.Label flag_label;
+    private Label flag_label;
 
-    private Gtk.SpinButton mines_spin;
+    private SpinButton mines_spin;
     private SimpleAction new_game_action;
     private SimpleAction repeat_size_action;
     private SimpleAction pause_action;
     private SimpleAction[] size_actions = new SimpleAction[4];
-    private Gtk.AspectFrame new_game_screen;
-    private Gtk.AspectFrame custom_game_screen;
-    private Gtk.CssProvider theme_provider;
+    private AspectFrame new_game_screen;
+    private AspectFrame custom_game_screen;
+    private CssProvider theme_provider;
 
     private const OptionEntry[] option_entries =
     {
@@ -128,23 +130,23 @@ public class Mines : Gtk.Application
             theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
         }
         if (!is_switch) {
-            Gtk.IconTheme.get_default ().append_search_path (theme_path);
+            IconTheme.get_default ().append_search_path (theme_path);
         } else {
             string[] icon_search_path;
-            Gtk.IconTheme.get_default ().get_search_path (out icon_search_path);
+            IconTheme.get_default ().get_search_path (out icon_search_path);
             icon_search_path[icon_search_path.length - 1] = theme_path;
-            Gtk.IconTheme.get_default ().set_search_path (icon_search_path);
+            IconTheme.get_default ().set_search_path (icon_search_path);
         }
 
         var theme_css_path = Path.build_filename (theme_path, "theme.css");
         try
         {
             if (is_switch) {
-                Gtk.StyleContext.remove_provider_for_screen (Gdk.Screen.get_default (), theme_provider);
+                StyleContext.remove_provider_for_screen (Gdk.Screen.get_default (), theme_provider);
             }
-            theme_provider = new Gtk.CssProvider ();
+            theme_provider = new CssProvider ();
             theme_provider.load_from_path (theme_css_path);
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), theme_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+            StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), theme_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
         }
         catch (GLib.Error e)
         {
@@ -155,7 +157,7 @@ public class Mines : Gtk.Application
             window.get_window ().invalidate_rect (null, true);
             window.queue_draw ();
         }
-        Gtk.StyleContext.reset_widgets (Gdk.Screen.get_default ());
+        StyleContext.reset_widgets (Gdk.Screen.get_default ());
     }
 
     protected override void startup ()
@@ -164,19 +166,19 @@ public class Mines : Gtk.Application
 
         Environment.set_application_name (_("Mines"));
 
-        settings = new Settings ("org.gnome.Mines");
+        settings = new GLib.Settings ("org.gnome.Mines");
         settings.delay ();
 
         if (game_mode != -1)
             settings.set_int (KEY_MODE, game_mode);
 
-        Gtk.Window.set_default_icon_name ("gnome-mines");
+        Window.set_default_icon_name ("gnome-mines");
 
-        var css_provider = new Gtk.CssProvider ();
+        var css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Mines/gnome-mines.css");
 
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        var ui_builder = new Gtk.Builder ();
+        StyleContext.add_provider_for_screen (Gdk.Screen.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
+        var ui_builder = new Builder ();
         try
         {
             ui_builder.add_from_resource ("/org/gnome/Mines/interface.ui");
@@ -203,7 +205,7 @@ public class Mines : Gtk.Application
 
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
-        window = (Gtk.ApplicationWindow) ui_builder.get_object ("main_window");
+        window = (ApplicationWindow) ui_builder.get_object ("main_window");
         window.size_allocate.connect (size_allocate_cb);
         window.window_state_event.connect (window_state_event_cb);
         window.focus_out_event.connect (window_focus_out_event_cb);
@@ -215,7 +217,7 @@ public class Mines : Gtk.Application
             window.maximize ();
         add_window (window);
 
-        var headerbar = new Gtk.HeaderBar ();
+        var headerbar = new HeaderBar ();
         headerbar.show_close_button = true;
         headerbar.set_title (_("Mines"));
         headerbar.show ();
@@ -225,36 +227,36 @@ public class Mines : Gtk.Application
         Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
         if (!shell_shows_menubar)
         {
-            var menu = new Menu ();
-            app_main_menu = new Menu ();
+            var menu = new GLib.Menu ();
+            app_main_menu = new GLib.Menu ();
             menu.append_section (null, app_main_menu);
             app_main_menu.append (_("_Scores"), "app.scores");
             app_main_menu.append (_("A_ppearance"), "app.preferences");
-            var section = new Menu ();
+            var section = new GLib.Menu ();
             menu.append_section (null, section);
             section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
-            section = new Menu ();
+            section = new GLib.Menu ();
             menu.append_section (null, section);
             section.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
             section.append (_("_Help"), "app.help");
             section.append (_("_About Mines"), "app.about");
-            var menu_button = new Gtk.MenuButton ();
-            menu_button.set_image (new Gtk.Image.from_icon_name ("open-menu-symbolic", Gtk.IconSize.BUTTON));
+            var menu_button = new MenuButton ();
+            menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
             menu_button.show ();
             menu_button.set_menu_model (menu);
             headerbar.pack_end (menu_button);
         }
         else
         {
-            var menu = new Menu ();
-            var mines_menu = new Menu ();
+            var menu = new GLib.Menu ();
+            var mines_menu = new GLib.Menu ();
             menu.append_submenu (_("_Mines"), mines_menu);
             mines_menu.append (_("_New Game"), "app.new-game");
             mines_menu.append (_("_Scores"), "app.scores");
             mines_menu.append (_("A_ppearance"), "app.preferences");
             mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
             mines_menu.append (_("_Quit"), "app.quit");
-            var help_menu = new Menu ();
+            var help_menu = new GLib.Menu ();
             menu.append_submenu (_("_Help"), help_menu);
             help_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
             help_menu.append (_("_Contents"), "app.help");
@@ -289,16 +291,16 @@ public class Mines : Gtk.Application
             return false;
         });
 
-        stack = (Gtk.Stack) ui_builder.get_object ("stack");
+        stack = (Stack) ui_builder.get_object ("stack");
 
-        scrolled = (Gtk.ScrolledWindow) ui_builder.get_object ("scrolled");
+        scrolled = (ScrolledWindow) ui_builder.get_object ("scrolled");
         scrolled.add (minefield_view);
         scrolled.show ();
 
-        minefield_overlay = (Gtk.Overlay) ui_builder.get_object ("minefield_overlay");
+        minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
         minefield_overlay.show ();
 
-        minefield_aspect = (Gtk.AspectFrame) ui_builder.get_object ("minefield_aspect");
+        minefield_aspect = (AspectFrame) ui_builder.get_object ("minefield_aspect");
         minefield_aspect.show ();
 
         minefield_aspect.size_allocate.connect ((allocation) => {
@@ -312,14 +314,14 @@ public class Mines : Gtk.Application
              };
         });
 
-        paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
-        buttons_box = (Gtk.Box) ui_builder.get_object ("buttons_box");
-        aspect_child = (Gtk.Box) ui_builder.get_object ("aspect_child");
+        paused_box = (Box) ui_builder.get_object ("paused_box");
+        buttons_box = (Box) ui_builder.get_object ("buttons_box");
+        aspect_child = (Box) ui_builder.get_object ("aspect_child");
         paused_box.button_press_event.connect (view_button_press_event);
 
         minefield_overlay.add_overlay (paused_box);
 
-        main_screen = (Gtk.Widget) ui_builder.get_object ("main_screen");
+        main_screen = (Widget) ui_builder.get_object ("main_screen");
         main_screen.show_all ();
 
         /* Initialize New Game Screen */
@@ -336,15 +338,15 @@ public class Mines : Gtk.Application
                                                           Games.Scores.Style.TIME_LESS_IS_BETTER,
                                                           new Games.Scores.HistoryFileImporter (parse_old_score));
 
-        flag_label = (Gtk.Label) ui_builder.get_object ("flag_label");
-        clock_label = (Gtk.Label) ui_builder.get_object ("clock_label");
+        flag_label = (Label) ui_builder.get_object ("flag_label");
+        clock_label = (Label) ui_builder.get_object ("clock_label");
 
-        play_pause_button = (Gtk.Button) ui_builder.get_object ("play_pause_button");
-        play_pause_label = (Gtk.Label) ui_builder.get_object ("play_pause_label");
+        play_pause_button = (Button) ui_builder.get_object ("play_pause_button");
+        play_pause_label = (Label) ui_builder.get_object ("play_pause_label");
 
-        high_scores_button = (Gtk.Button) ui_builder.get_object ("high_scores_button");
-        replay_button = (Gtk.Button) ui_builder.get_object ("replay_button");
-        new_game_button = (Gtk.Button) ui_builder.get_object ("new_game_button");
+        high_scores_button = (Button) ui_builder.get_object ("high_scores_button");
+        replay_button = (Button) ui_builder.get_object ("replay_button");
+        new_game_button = (Button) ui_builder.get_object ("new_game_button");
 
         if (game_mode != -1)
             start_game ();
@@ -391,77 +393,77 @@ public class Mines : Gtk.Application
         category = create_category_from_key (@"$width-$height-$num_mines");
     }
 
-    private void startup_new_game_screen (Gtk.Builder builder)
+    private void startup_new_game_screen (Builder builder)
     {
-        new_game_screen =  (Gtk.AspectFrame) builder.get_object ("new_game_screen");
+        new_game_screen =  (AspectFrame) builder.get_object ("new_game_screen");
 
-        var button = (Gtk.Button) builder.get_object ("small_size_btn");
+        var button = (Button) builder.get_object ("small_size_btn");
         button.clicked.connect (small_size_clicked_cb);
 
-        var label = new Gtk.Label (null);
+        var label = new Label (null);
         label.set_markup (make_minefield_description (8, 8, 10));
-        label.set_justify (Gtk.Justification.CENTER);
+        label.set_justify (Justification.CENTER);
         button.add (label);
 
-        button = (Gtk.Button) builder.get_object ("medium_size_btn");
+        button = (Button) builder.get_object ("medium_size_btn");
         button.clicked.connect (medium_size_clicked_cb);
 
-        label = new Gtk.Label (null);
+        label = new Label (null);
         label.set_markup (make_minefield_description (16, 16, 40));
-        label.set_justify (Gtk.Justification.CENTER);
+        label.set_justify (Justification.CENTER);
         button.add (label);
 
-        button = (Gtk.Button) builder.get_object ("large_size_btn");
+        button = (Button) builder.get_object ("large_size_btn");
         button.clicked.connect (large_size_clicked_cb);
 
-        label = new Gtk.Label (null);
+        label = new Label (null);
         label.set_markup (make_minefield_description (30, 16, 99));
-        label.set_justify (Gtk.Justification.CENTER);
+        label.set_justify (Justification.CENTER);
         button.add (label);
 
-        button = (Gtk.Button) builder.get_object ("custom_size_btn");
+        button = (Button) builder.get_object ("custom_size_btn");
         button.clicked.connect (show_custom_game_screen);
 
-        label = new Gtk.Label (null);
+        label = new Label (null);
         label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
-        label.set_justify (Gtk.Justification.CENTER);
+        label.set_justify (Justification.CENTER);
         button.add (label);
 
         new_game_screen.show_all ();
     }
 
-    private void startup_custom_game_screen (Gtk.Builder builder)
+    private void startup_custom_game_screen (Builder builder)
     {
-        custom_game_screen =  (Gtk.AspectFrame) builder.get_object ("custom_game_screen");
+        custom_game_screen = (AspectFrame) builder.get_object ("custom_game_screen");
 
-        var field_width_entry = (Gtk.SpinButton) builder.get_object ("width_spin_btn");
+        var field_width_entry = (SpinButton) builder.get_object ("width_spin_btn");
         field_width_entry.set_range (XSIZE_MIN, XSIZE_MAX);
         field_width_entry.value_changed.connect (xsize_spin_cb);
         field_width_entry.set_increments (1, 1);
         field_width_entry.set_value (settings.get_int (KEY_XSIZE));
 
-        var field_height_entry = (Gtk.SpinButton) builder.get_object ("height_spin_btn");
+        var field_height_entry = (SpinButton) builder.get_object ("height_spin_btn");
         field_height_entry.set_range (YSIZE_MIN, YSIZE_MAX);
         field_height_entry.value_changed.connect (ysize_spin_cb);
         field_height_entry.set_increments (1, 1);
         field_height_entry.set_value (settings.get_int (KEY_YSIZE));
 
-        mines_spin = (Gtk.SpinButton) builder.get_object ("mines_spin_btn");
+        mines_spin = (SpinButton) builder.get_object ("mines_spin_btn");
         mines_spin.set_range (1, 100);
         mines_spin.set_increments (1, 1);
         mines_spin.value_changed.connect (mines_spin_cb);
         set_mines_limit ();
 
-        var button = (Gtk.Button) builder.get_object ("cancel_btn");
+        var button = (Button) builder.get_object ("cancel_btn");
         button.clicked.connect (show_new_game_screen);
 
-        button = (Gtk.Button) builder.get_object ("play_game_btn");
+        button = (Button) builder.get_object ("play_game_btn");
         button.clicked.connect (custom_size_clicked_cb);
 
         custom_game_screen.show_all ();
     }
 
-    private void size_allocate_cb (Gtk.Allocation allocation)
+    private void size_allocate_cb (Allocation allocation)
     {
         if (!is_maximized && !is_tiled && !window_skip_configure)
         {
@@ -548,7 +550,7 @@ public class Mines : Gtk.Application
         window.present ();
     }
 
-    private bool view_button_press_event (Gtk.Widget widget, Gdk.EventButton event)
+    private bool view_button_press_event (Widget widget, Gdk.EventButton event)
     {
         /* Cancel pause on click */
         if (minefield.paused)
@@ -611,14 +613,13 @@ public class Mines : Gtk.Application
             var was_paused = minefield.paused;
             minefield.paused = true;
 
-            var dialog = new Gtk.MessageDialog (window, Gtk.DialogFlags.MODAL, Gtk.MessageType.QUESTION, Gtk.ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
+            var dialog = new MessageDialog (window, DialogFlags.MODAL, MessageType.QUESTION, ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
             dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
-            dialog.add_buttons (_("Keep Current Game"), Gtk.ResponseType.DELETE_EVENT,
-                                _("Start New Game"), Gtk.ResponseType.ACCEPT,
-                                null);
+            dialog.add_buttons (_("Keep Current Game"), ResponseType.DELETE_EVENT,
+                                _("Start New Game"),    ResponseType.ACCEPT);
             var result = dialog.run ();
             dialog.destroy ();
-            if (result != Gtk.ResponseType.ACCEPT)
+            if (result != ResponseType.ACCEPT)
             {
                 minefield.paused = was_paused;
                 return false;
@@ -849,20 +850,20 @@ public class Mines : Gtk.Application
             "Ekaterina Gerasimova"
         };
 
-        Gtk.show_about_dialog (window,
-                               "name", _("Mines"),
-                               "version", VERSION,
-                               "comments",
-                               _("Clear explosive mines off the board"),
-                               "copyright",
-                               "Copyright © 1997–2008 Free Software Foundation, Inc.",
-                               "license-type", Gtk.License.GPL_3_0,
-                               "authors", authors,
-                               "artists", artists,
-                               "documenters", documenters,
-                               "translator-credits", _("translator-credits"),
-                               "logo-icon-name", "org.gnome.Mines", "website",
-                               "https://wiki.gnome.org/Apps/Mines");
+        show_about_dialog (window,
+                           "name", _("Mines"),
+                           "version", VERSION,
+                           "comments",
+                           _("Clear explosive mines off the board"),
+                           "copyright",
+                           "Copyright © 1997–2008 Free Software Foundation, Inc.",
+                           "license-type", License.GPL_3_0,
+                           "authors", authors,
+                           "artists", artists,
+                           "documenters", documenters,
+                           "translator-credits", _("translator-credits"),
+                           "logo-icon-name", "org.gnome.Mines", "website",
+                           "https://wiki.gnome.org/Apps/Mines");
     }
 
     private float percent_mines ()
@@ -879,7 +880,7 @@ public class Mines : Gtk.Application
         mines_spin.set_value ((int) Math.round (percent_mines ()));
     }
 
-    private void xsize_spin_cb (Gtk.SpinButton spin)
+    private void xsize_spin_cb (SpinButton spin)
     {
         var xsize = spin.get_value_as_int ();
         if (xsize == settings.get_int (KEY_XSIZE))
@@ -889,7 +890,7 @@ public class Mines : Gtk.Application
         set_mines_limit ();
     }
 
-    private void ysize_spin_cb (Gtk.SpinButton spin)
+    private void ysize_spin_cb (SpinButton spin)
     {
         var ysize = spin.get_value_as_int ();
         if (ysize == settings.get_int (KEY_YSIZE))
@@ -899,7 +900,7 @@ public class Mines : Gtk.Application
         set_mines_limit ();
     }
 
-    private void mines_spin_cb (Gtk.SpinButton spin)
+    private void mines_spin_cb (SpinButton spin)
     {
         if (Math.fabs (percent_mines () - spin.get_value ()) <= 0.5f)
             return;
@@ -944,7 +945,7 @@ public class Mines : Gtk.Application
     {
         try
         {
-            Gtk.show_uri (window.get_screen (), "help:gnome-mines", Gtk.get_current_event_time ());
+            show_uri (window.get_screen (), "help:gnome-mines", get_current_event_time ());
         }
         catch (Error e)
         {
