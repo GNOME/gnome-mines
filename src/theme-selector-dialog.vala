@@ -105,7 +105,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         MinefieldView minefield;
 
         Object (use_header_bar: 1, title:  _("Select Theme"),
-                modal: true, transient_for: parent, resizable: false, border_width: 12);
+                modal: true, transient_for: parent, resizable: false, margin_start: 12, margin_end: 12, margin_top: 12, margin_bottom: 12);
 
         previous = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         previous.valign = Gtk.Align.CENTER;
