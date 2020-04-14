@@ -2,14 +2,14 @@ private class PreviewField : Minefield
 {
     private const Neighbour neighbour_map[] =
     {
-        {-1, 1},
-        {0, 1},
-        {1, 1},
-        {1, 0},
-        {1, -1},
-        {0, -1},
-        {-1, -1},
-        {-1, 0}
+        { -1,  1 },
+        {  0,  1 },
+        {  1,  1 },
+        {  1,  0 },
+        {  1, -1 },
+        {  0, -1 },
+        { -1, -1 },
+        { -1,  0 }
     };
 
     private const int SIZE = 7;
@@ -46,9 +46,7 @@ private class PreviewField : Minefield
                         if (is_location(nx, ny) && locations[nx, ny].has_mine)
                             locations[i, j].adjacent_mines++;
                     }
-               
     }
-
 }
 
 public class ThemeSelectorDialog : Gtk.Dialog
@@ -66,8 +64,8 @@ public class ThemeSelectorDialog : Gtk.Dialog
         try
         {
             FileEnumerator enumerator = file.enumerate_children ("standard::*",
-                                                                  FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
-                                                                  null);
+                                                                 FileQueryInfoFlags.NOFOLLOW_SYMLINKS,
+                                                                 null);
 
             FileInfo info = null;
 
@@ -181,5 +179,4 @@ public class ThemeSelectorDialog : Gtk.Dialog
                 }
             }
     }
-
 }

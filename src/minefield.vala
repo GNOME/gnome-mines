@@ -38,14 +38,14 @@ private struct Neighbour
 }
 private const Neighbour neighbour_map[] =
 {
-    {-1, 1},
-    {0, 1},
-    {1, 1},
-    {1, 0},
-    {1, -1},
-    {0, -1},
-    {-1, -1},
-    {-1, 0}
+    { -1,  1 },
+    {  0,  1 },
+    {  1,  1 },
+    {  1,  0 },
+    {  1, -1 },
+    {  0, -1 },
+    { -1, -1 },
+    { -1,  0 }
 };
 
 public class Minefield : Object

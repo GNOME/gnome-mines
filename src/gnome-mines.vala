@@ -92,7 +92,7 @@ public class Mines : Gtk.Application
         { "small",  0, 0, OptionArg.NONE, null, N_("Small game"), null },
         { "medium", 0, 0, OptionArg.NONE, null, N_("Medium game"), null },
         { "big",    0, 0, OptionArg.NONE, null, N_("Big game"), null },
-        { null }
+        {}
     };
 
     private const GLib.ActionEntry[] action_entries =
@@ -284,7 +284,7 @@ public class Mines : Gtk.Application
                 minefield_aspect.queue_resize ();
                 minefield_view.queue_draw ();
                 first_draw = true;
-		return true;
+                return true;
             };
             return false;
         });
@@ -315,7 +315,6 @@ public class Mines : Gtk.Application
         paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
         buttons_box = (Gtk.Box) ui_builder.get_object ("buttons_box");
         aspect_child = (Gtk.Box) ui_builder.get_object ("aspect_child");
-        paused_box = (Gtk.Box) ui_builder.get_object ("paused_box");
         paused_box.button_press_event.connect (view_button_press_event);
 
         minefield_overlay.add_overlay (paused_box);
@@ -837,20 +836,17 @@ public class Mines : Gtk.Application
             "",
             _("Resizing and SVG support:"),
             "Steve Chaplin",
-            "Callum McKenzie",
-            null
+            "Callum McKenzie"
         };
 
         string[] artists =
         {
-            "Richard Hoelscher",
-            null
+            "Richard Hoelscher"
         };
 
         string[] documenters =
         {
-            "Ekaterina Gerasimova",
-            null
+            "Ekaterina Gerasimova"
         };
 
         Gtk.show_about_dialog (window,
@@ -866,8 +862,7 @@ public class Mines : Gtk.Application
                                "documenters", documenters,
                                "translator-credits", _("translator-credits"),
                                "logo-icon-name", "org.gnome.Mines", "website",
-                               "https://wiki.gnome.org/Apps/Mines",
-                               null);
+                               "https://wiki.gnome.org/Apps/Mines");
     }
 
     private float percent_mines ()

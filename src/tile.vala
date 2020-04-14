@@ -26,7 +26,7 @@ public class Tile : Gtk.Button
         _gesture = new Gtk.GestureLongPress (this);
         _gesture.pressed.connect((x, y) =>
         {
-             tile_long_pressed (prow, pcol);
+            tile_long_pressed (prow, pcol);
         });
         button_press_event.connect ((event) =>
         {
@@ -55,4 +55,3 @@ public class Tile : Gtk.Button
         get_style_context ().remove_class (style_class);
     }
 }
-

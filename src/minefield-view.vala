@@ -250,7 +250,7 @@ public class MinefieldView : Gtk.Grid
         if (event.button != 1) return;
 
         this.force_nolongpress = false;
- 
+
         /* Check for end cases and paused game */
         if (minefield.exploded || minefield.is_complete || minefield.paused)
             return;
@@ -355,9 +355,8 @@ public class MinefieldView : Gtk.Grid
                 mines[x,y].remove_class ("maybe");
                 mines[x,y].remove_class ("flag");
                 mines[x,y].add_class ("count");
-                if (n > 0) {
+                if (n > 0)
                     mines[x,y].add_class ("%umines".printf (n));
-                }
             }
         }
         else
@@ -535,5 +534,4 @@ public class MinefieldView : Gtk.Grid
 
         return false;
     }
-
 }
