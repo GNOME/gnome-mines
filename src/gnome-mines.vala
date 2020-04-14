@@ -610,7 +610,7 @@ public class Mines : Gtk.Application
     private void start_game ()
     {
         window_skip_configure = true;
-        minefield_view.has_focus = true;
+        minefield_view.grab_focus ();
 
         repeat_size_action.set_enabled (false);
         set_play_pause_visuals_unpaused ();
