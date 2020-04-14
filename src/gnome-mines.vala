@@ -210,8 +210,7 @@ public class Mines : Gtk.Application
         window = (ApplicationWindow) ui_builder.get_object ("main_window");
         window.size_allocate.connect (size_allocate_cb);
         window.window_state_event.connect (window_state_event_cb);
-        window.focus_out_event.connect (window_focus_out_event_cb);
-        window.focus_in_event.connect (window_focus_in_event_cb);
+        window.notify["is-active"].connect (on_window_focus_change);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
 
@@ -473,21 +472,19 @@ public class Mines : Gtk.Application
         return false;
     }
 
-    private bool window_focus_out_event_cb (Gdk.EventFocus event)
+    private inline void on_window_focus_change ()
     {
-        if (minefield != null && minefield.is_clock_started ())
-            minefield.paused = true;
-
-        return false;
-    }
-
-    private bool window_focus_in_event_cb (Gdk.EventFocus event)
-    {
-        if (minefield != null && !pause_requested &&
-            (theme_dialog == null || theme_dialog.visible == false))
-            minefield.paused = false;
-
-        return false;
+        if (window.is_active)
+        {
+            if (minefield != null && !pause_requested &&
+                (theme_dialog == null || theme_dialog.visible == false))
+                minefield.paused = false;
+        }
+        else
+        {
+            if (minefield != null && minefield.is_clock_started ())
+                minefield.paused = true;
+        }
     }
 
     private string make_minefield_description (int width, int height, int n_mines)
