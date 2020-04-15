@@ -79,35 +79,35 @@
   background-image: -gtk-icontheme('exploded');
 }
 
-.1mines {
+.surrounded-by-1-mines {
   background-image: -gtk-icontheme('1mines');
 }
 
-.2mines {
+.surrounded-by-2-mines {
   background-image: -gtk-icontheme('2mines');
 }
 
-.3mines {
+.surrounded-by-3-mines {
   background-image: -gtk-icontheme('3mines');
 }
 
-.4mines {
+.surrounded-by-4-mines {
   background-image: -gtk-icontheme('4mines');
 }
 
-.5mines {
+.surrounded-by-5-mines {
   background-image: -gtk-icontheme('5mines');
 }
 
-.6mines {
+.surrounded-by-6-mines {
   background-image: -gtk-icontheme('6mines');
 }
 
-.7mines {
+.surrounded-by-7-mines {
   background-image: -gtk-icontheme('7mines');
 }
 
-.8mines {
+.surrounded-by-8-mines {
   background-image: -gtk-icontheme('8mines');
 }
 
