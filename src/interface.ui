@@ -274,18 +274,7 @@
                         <property name="vexpand">True</property>
                         <property name="orientation">vertical</property>
                         <child>
-                          <object class="GtkOverlay" id="minefield_overlay">
-                            <property name="child">
-                              <object class="GtkScrolledWindow" id="scrolled">
-                                <property name="focusable">True</property>
-                                <property name="child">
-                                  <object class="GtkAspectFrame" id="aspect_frame">
-                                    <property name="obey_child">False</property>
-                                  </object>
-                                </property>
-                              </object>
-                            </property>
-                          </object>
+                          <object class="GtkOverlay" id="minefield_overlay"/>
                         </child>
                         <child>
                           <object class="GtkBox" id="main_screen_sidebar">

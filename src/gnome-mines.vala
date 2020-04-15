@@ -42,7 +42,6 @@ public class Mines : Gtk.Application
     private Button new_game_button;
     private Overlay minefield_overlay;
     private Box paused_box;
-    private AspectFrame aspect_frame;
     private Stack stack;
     private ThemeSelectorDialog theme_dialog;
 
@@ -238,10 +237,8 @@ public class Mines : Gtk.Application
 
         stack = (Stack) ui_builder.get_object ("stack");
 
-        aspect_frame = (AspectFrame) ui_builder.get_object ("aspect_frame");
-        aspect_frame.add (minefield_view);
-
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
+        minefield_overlay.add (minefield_view);
 
         paused_box = (Box) ui_builder.get_object ("paused_box");
 
@@ -642,8 +639,6 @@ public class Mines : Gtk.Application
             n = settings.get_int (KEY_NMINES).clamp (1, x * y - 10);
             break;
         }
-
-        aspect_frame.ratio = ((float) x) / y;
 
         if (minefield != null)
             SignalHandler.disconnect_by_func (minefield, null, this);
