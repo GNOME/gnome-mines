@@ -43,7 +43,6 @@ public class Mines : Gtk.Application
     private Box aspect_child;
     private Box buttons_box;
     private Box paused_box;
-    private ScrolledWindow scrolled;
     private Stack stack;
     private ThemeSelectorDialog theme_dialog;
 
@@ -59,9 +58,6 @@ public class Mines : Gtk.Application
     private bool window_is_maximized;
     private bool window_is_fullscreen;
     private bool window_is_tiled;
-
-    /* true when the new game minefield draws once */
-    private bool first_draw = false;
 
     /* true when the user has requested the game to pause. */
     private bool pause_requested;
@@ -256,37 +252,12 @@ public class Mines : Gtk.Application
 
         minefield_view = new MinefieldView (settings);
 
-        /* Hook a resize on the first minefield draw so that the ratio
-           calculation in minefield_aspect.size-allocate runs one more time
-           with stable allocation sizes for the current minefield configutation */
-        minefield_view.draw.connect ((context, data) => {
-            if(!first_draw) {
-                minefield_aspect.queue_resize ();
-                minefield_view.queue_draw ();
-                first_draw = true;
-                return true;
-            };
-            return false;
-        });
-
         stack = (Stack) ui_builder.get_object ("stack");
-
-        scrolled = (ScrolledWindow) ui_builder.get_object ("scrolled");
-        scrolled.add (minefield_view);
 
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
         minefield_aspect = (AspectFrame) ui_builder.get_object ("minefield_aspect");
-
-        minefield_aspect.size_allocate.connect ((allocation) => {
-             uint width = minefield_view.mine_size * minefield_view.minefield.width;
-             width += aspect_child.spacing;
-             width += buttons_box.get_allocated_width ();
-             float new_ratio = (float) width / (minefield_view.minefield.height * minefield_view.mine_size);
-             if (new_ratio != minefield_aspect.ratio) {
-                minefield_aspect.ratio = new_ratio;
-                first_draw = false;
-             };
-        });
+        minefield_aspect.obey_child = true;
+        minefield_overlay.add (minefield_view);
 
         paused_box = (Box) ui_builder.get_object ("paused_box");
         buttons_box = (Box) ui_builder.get_object ("buttons_box");

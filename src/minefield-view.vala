@@ -90,7 +90,7 @@ private class Position : Object
     }
 }
 
-public class MinefieldView : Gtk.Grid
+public class MinefieldView : Gtk.Widget
 {
     private Settings settings;
     private bool force_nolongpress;
@@ -142,23 +142,36 @@ public class MinefieldView : Gtk.Grid
 
     private Gtk.EventControllerKey key_controller;    // for keeping in memory
 
+    private Gtk.AspectFrame frame;
+    private Gtk.Grid grid;
+    private Gtk.BinLayout layout;
+
     construct
     {
         init_keyboard ();
-    }
 
-    public MinefieldView (Settings settings)
-    {
-        this.settings = settings;
-        this.force_nolongpress = false;
-        row_homogeneous = true;
-        row_spacing = 0;
-        column_homogeneous = true;
-        column_spacing = 0;
-        can_focus = true;
         hexpand = true;
         vexpand = true;
-        add_css_class ("minefield");
+
+        layout = new Gtk.BinLayout ();
+        set_layout_manager (layout);
+
+        frame = new Gtk.AspectFrame (/* label */ null, /* xalign */ 0.5f, /* yalign */ 0.5f, /* ratio */ 1.0f, /* obey-child */ false);
+        frame.shadow_type = Gtk.ShadowType.NONE;
+        frame.insert_after (this, /* insert first */ null);
+
+        grid = new Gtk.Grid ();
+        frame.add (grid);
+
+        this.force_nolongpress = false;
+        grid.row_homogeneous = true;
+        grid.row_spacing = 0;
+        grid.column_homogeneous = true;
+        grid.column_spacing = 0;
+        grid.can_focus = true;
+        grid.hexpand = true;
+        grid.vexpand = true;
+        grid.add_css_class ("minefield");
 
         selected = new Position ();
         selected.set_x.connect ((x) => { return x; });
@@ -168,6 +181,17 @@ public class MinefieldView : Gtk.Grid
         keyboard_cursor = new Position ();
         keyboard_cursor.redraw.connect (redraw_sector_cb);
         keyboard_cursor.validate.connect ((x, y) => { return true; });
+    }
+
+    public MinefieldView (Settings settings)
+    {
+        this.settings = settings;
+    }
+
+    protected override void destroy ()
+    {
+        frame.destroy ();
+        base.destroy ();
     }
 
     private Minefield _minefield;
@@ -181,10 +205,12 @@ public class MinefieldView : Gtk.Grid
                 SignalHandler.disconnect_by_func (_minefield, null, this);
             }
             _minefield = value;
+            frame.ratio = (float) (minefield.width) / (float) (minefield.height);
+
             remove_css_class ("explodedField");
             remove_css_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
-            forall ((child) => { remove (child); });
+            grid.forall ((child) => { grid.remove (child); });
             for (int i = 0; i < _minefield.width; i++)
             {
                 for (int j = 0; j < _minefield.height; j++)
@@ -193,7 +219,7 @@ public class MinefieldView : Gtk.Grid
                     mines[i,j].tile_pressed.connect (tile_pressed_cb);
                     mines[i,j].tile_released.connect (tile_released_cb);
                     mines[i,j].tile_long_pressed.connect (tile_long_pressed_cb);
-                    add (mines[i,j], i, j);
+                    add_tile (mines[i,j], i, j);
                 }
             }
             selected.is_set = false;
@@ -308,17 +334,17 @@ public class MinefieldView : Gtk.Grid
         add_css_class ("completedField");
     }
 
-    public override void measure (Gtk.Orientation orientation, int for_size, out int minimum, out int natural, out int minimum_baseline, out int natural_baseline)
-    {
-        if (orientation == Gtk.Orientation.HORIZONTAL)
-            minimum = natural = minefield != null ? (int) (minefield.width * minimum_size) : 0;
-        else
-            minimum = natural = minefield != null ? (int) (minefield.height * minimum_size) : 0;
-    }
+//    public override void measure (Gtk.Orientation orientation, int for_size, out int minimum, out int natural, out int minimum_baseline, out int natural_baseline)
+//    {
+//        if (orientation == Gtk.Orientation.HORIZONTAL)
+//            minimum = natural = minefield != null ? (int) (minefield.width * minimum_size) : 0;
+//        else
+//            minimum = natural = minefield != null ? (int) (minefield.height * minimum_size) : 0;
+//    }
 
-    public new void add (Gtk.Widget child, int i, int j)
+    public void add_tile (Gtk.Widget child, int i, int j)
     {
-        attach (child, i-1, j-1, 1, 1);
+        grid.attach (child, i-1, j-1, 1, 1);
         child.hexpand = true;
         child.vexpand = true;
     }

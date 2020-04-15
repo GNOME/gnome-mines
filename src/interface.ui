@@ -246,12 +246,7 @@
                               <object class="GtkOverlay" id="minefield_overlay">
                                 <property name="can_focus">False</property>
                                 <child>
-                                  <object class="GtkScrolledWindow" id="scrolled">
-                                    <property name="can_focus">True</property>
-                                    <child>
-                                      <placeholder/>
-                                    </child>
-                                  </object>
+                                  <placeholder/>
                                 </child>
                               </object>
                             </child>
