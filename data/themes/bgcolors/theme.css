@@ -7,66 +7,66 @@
   background-color:#d3d7cf;
 }
 
-.1mines .cursor{
-  background-color:shade(#DDFAC3, 0.5)
+.surrounded-by-1-mines .cursor{
+  background-color:shade(#DDFAC3, 0.5);
 }
 
-.2mines .cursor{
-  background-color:shade(#ECEDBF, 0.5)
+.surrounded-by-2-mines .cursor{
+  background-color:shade(#ECEDBF, 0.5);
 }
 
-.3mines .cursor{
-  background-color:shade(#EDDAB4, 0.5)
+.surrounded-by-3-mines .cursor{
+  background-color:shade(#EDDAB4, 0.5);
 }
 
-.4mines .cursor{
-  background-color:shade(#EDC38A, 0.5)
+.surrounded-by-4-mines .cursor{
+  background-color:shade(#EDC38A, 0.5);
 }
 
-.5mines .cursor{
-  background-color:shade(#F7A1A2, 0.5)
+.surrounded-by-5-mines .cursor{
+  background-color:shade(#F7A1A2, 0.5);
 }
 
-.6mines .cursor{
-  background-color:shade(#FEA785, 0.5)
+.surrounded-by-6-mines .cursor{
+  background-color:shade(#FEA785, 0.5);
 }
 
-.7mines .cursor{
+.surrounded-by-7-mines .cursor{
   background-color:shade(#FF7D60, 0.5);
 }
 
-.8mines .cursor{
+.surrounded-by-8-mines .cursor{
   background-color:#FF323C;
 }
 
-.1mines:not(.cursor) {
+.surrounded-by-1-mines:not(.cursor) {
   background-color:#DDFAC3;
 }
 
-.2mines:not(.cursor) {
+.surrounded-by-2-mines:not(.cursor) {
   background-color:#ECEDBF;
 }
 
-.3mines:not(.cursor) {
+.surrounded-by-3-mines:not(.cursor) {
   background-color:#EDDAB4;
 }
 
-.4mines:not(.cursor) {
+.surrounded-by-4-mines:not(.cursor) {
   background-color:#EDC38A;
 }
 
-.5mines:not(.cursor) {
+.surrounded-by-5-mines:not(.cursor) {
   background-color:#F7A1A2;
 }
 
-.6mines:not(.cursor) {
+.surrounded-by-6-mines:not(.cursor) {
   background-color:#FEA785;
 }
 
-.7mines:not(.cursor) {
+.surrounded-by-7-mines:not(.cursor) {
   background-color:#FF7D60;
 }
 
-.8mines:not(.cursor) {
+.surrounded-by-8-mines:not(.cursor) {
   background-color:#FF323C;
 }
