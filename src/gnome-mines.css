@@ -10,7 +10,7 @@
 }
 
 .count, .explodedField .tile {
--gtk-icon-effect: none;
+  -gtk-icon-filter: none;
 }
 
 .navigation {
