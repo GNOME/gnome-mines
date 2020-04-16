@@ -157,7 +157,7 @@ public class MinefieldView : Gtk.Grid
         can_focus = true;
         hexpand = true;
         vexpand = true;
-        get_style_context ().add_class ("minefield");
+        add_css_class ("minefield");
 
         selected = new Position ();
         selected.set_x.connect ((x) => { return x; });
@@ -180,8 +180,8 @@ public class MinefieldView : Gtk.Grid
                 SignalHandler.disconnect_by_func (_minefield, null, this);
             }
             _minefield = value;
-            get_style_context ().remove_class ("explodedField");
-            get_style_context ().remove_class ("completedField");
+            remove_css_class ("explodedField");
+            remove_css_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
             forall ((child) => { remove (child); });
             for (int i = 0; i < _minefield.width; i++)
@@ -247,7 +247,7 @@ public class MinefieldView : Gtk.Grid
         }
 
         keyboard_cursor.is_set = false;
-        mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
+        mines[keyboard_cursor.x,keyboard_cursor.y].remove_css_class ("cursor");
         keyboard_cursor.position = {selected.x, selected.y};
     }
 
@@ -292,7 +292,7 @@ public class MinefieldView : Gtk.Grid
 
     private void explode_cb (Minefield minefield)
     {
-        get_style_context  ().add_class ("explodedField");
+        add_css_class ("explodedField");
         /* Show the mines that we missed or the flags that were wrong */
         for (var x = 0; x < minefield.width; x++)
             for (var y = 0; y < minefield.height; y++)
@@ -304,7 +304,7 @@ public class MinefieldView : Gtk.Grid
 
     private void complete_cb (Minefield minefield)
     {
-        get_style_context  ().add_class ("completedField");
+        add_css_class ("completedField");
     }
 
     public override void measure (Gtk.Orientation orientation, int for_size, out int minimum, out int natural, out int minimum_baseline, out int natural_baseline)
@@ -352,17 +352,17 @@ public class MinefieldView : Gtk.Grid
             /* Draw explosion if have uncovered a mine */
             if (minefield.has_mine (x, y))
             {
-                mines[x,y].add_class ("exploded");
+                mines[x,y].add_css_class ("exploded");
             }
             /* Indicate the number of mines around this location */
             else
             {
                 var n = minefield.get_n_adjacent_mines (x, y);
-                mines[x,y].remove_class ("maybe");
-                mines[x,y].remove_class ("flag");
-                mines[x,y].add_class ("count");
+                mines[x,y].remove_css_class ("maybe");
+                mines[x,y].remove_css_class ("flag");
+                mines[x,y].add_css_class ("count");
                 if (n > 0)
-                    mines[x,y].add_class (@"surrounded-by-$n-mines");
+                    mines[x,y].add_css_class (@"surrounded-by-$n-mines");
             }
         }
         else
@@ -373,16 +373,16 @@ public class MinefieldView : Gtk.Grid
             /* Draw flags on uncleared locations */
             if (minefield.get_flag (x, y) == FlagType.FLAG)
             {
-                mines[x,y].add_class ("flag");
+                mines[x,y].add_css_class ("flag");
                 /* Cross out incorrect flags */
                 if (minefield.exploded && !minefield.has_mine (x, y))
                 {
-                    mines[x,y].add_class ("incorrect");
+                    mines[x,y].add_css_class ("incorrect");
                 }
             }
             else if (minefield.exploded && minefield.has_mine (x, y))
             {
-                mines[x,y].add_class ("mine");
+                mines[x,y].add_css_class ("mine");
             }
 
         }
@@ -402,26 +402,26 @@ public class MinefieldView : Gtk.Grid
             if (minefield.n_flags >= minefield.n_mines && use_question_marks)
             {
                 minefield.set_flag (x, y, FlagType.MAYBE);
-                mines[x,y].add_class ("maybe");
+                mines[x,y].add_css_class ("maybe");
             }
             else
             {
                 minefield.set_flag (x, y, FlagType.FLAG);
-                mines[x,y].add_class ("flag");
+                mines[x,y].add_css_class ("flag");
             }
             break;
 
         case FlagType.MAYBE:
-            mines[x,y].remove_class ("maybe");
+            mines[x,y].remove_css_class ("maybe");
             minefield.set_flag (x, y, FlagType.NONE);
             break;
 
         case FlagType.FLAG:
-            mines[x,y].remove_class ("flag");
+            mines[x,y].remove_css_class ("flag");
             if (use_question_marks)
             {
                 minefield.set_flag (x, y, FlagType.MAYBE);
-                mines[x,y].add_class ("maybe");
+                mines[x,y].add_css_class ("maybe");
             }
             else
             {
@@ -451,7 +451,7 @@ public class MinefieldView : Gtk.Grid
 
         var x = keyboard_cursor.x;
         var y = keyboard_cursor.y;
-        mines[keyboard_cursor.x,keyboard_cursor.y].remove_class ("cursor");
+        mines[keyboard_cursor.x,keyboard_cursor.y].remove_css_class ("cursor");
 
         switch (keyval)
         {
@@ -507,20 +507,20 @@ public class MinefieldView : Gtk.Grid
         if (x == keyboard_cursor.x && y == keyboard_cursor.y)
         {
             keyboard_cursor.is_set = true;
-            mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
+            mines[keyboard_cursor.x,keyboard_cursor.y].add_css_class ("cursor");
             return true;
         }
 
         if (!keyboard_cursor.is_set)
         {
             keyboard_cursor.is_set = true;
-            mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
+            mines[keyboard_cursor.x,keyboard_cursor.y].add_css_class ("cursor");
             return true;
         }
 
         keyboard_cursor.position = {(int) (x == -1 ? _minefield.width-1 : x%_minefield.width), (int) (y == -1 ? _minefield.height-1 : y%_minefield.height)};
 
-        mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
+        mines[keyboard_cursor.x,keyboard_cursor.y].add_css_class ("cursor");
         if (selected.is_set)
             selected.position = {keyboard_cursor.x, keyboard_cursor.y};
 
