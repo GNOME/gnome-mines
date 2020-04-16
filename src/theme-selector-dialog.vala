@@ -123,7 +123,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
         buttons_holder.add (previous);
         buttons_holder.add (next);
-        buttons_holder.get_style_context ().add_class ("linked");
+        buttons_holder.add_css_class ("linked");
         headerbar.pack_start (buttons_holder);
 
         var themes = list_themes ();

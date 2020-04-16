@@ -19,7 +19,7 @@ public class Tile : Gtk.Button
     construct
     {
         can_focus = false;
-        add_class ("tile");
+        add_css_class ("tile");
 
         _gesture = new Gtk.GestureLongPress ();
         _gesture.touch_only = true;
@@ -49,15 +49,5 @@ public class Tile : Gtk.Button
             tile_released (row, column, button);
         });
         add_controller (_click_controller);
-    }
-
-    public void add_class (string style_class)
-    {
-        get_style_context ().add_class (style_class);
-    }
-
-    public void remove_class (string style_class)
-    {
-        get_style_context ().remove_class (style_class);
     }
 }
