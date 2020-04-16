@@ -1,10 +1,12 @@
-public class Tile : Gtk.Button
+using Gtk;
+
+public class Tile : Widget
 {
     public int row      { internal get; protected construct; }
     public int column   { internal get; protected construct; }
 
-    private Gtk.GestureLongPress _gesture;              // for keeping in memory
-    private Gtk.GestureClick _click_controller;         // for keeping in memory
+    private GestureLongPress _gesture;                  // for keeping in memory
+    private GestureClick _click_controller;             // for keeping in memory
 
     public signal void tile_mouse_over (int x, int y);
     public signal void tile_pressed (int x, int y, uint button, int n_press, bool ctrl);
@@ -20,7 +22,7 @@ public class Tile : Gtk.Button
     {
         add_css_class ("tile");
 
-        _gesture = new Gtk.GestureLongPress ();
+        _gesture = new GestureLongPress ();
         _gesture.touch_only = true;
         _gesture.pressed.connect((x, y) =>
         {
@@ -28,7 +30,7 @@ public class Tile : Gtk.Button
         });
         add_controller (_gesture);
 
-        _click_controller = new Gtk.GestureClick ();
+        _click_controller = new GestureClick ();
         _click_controller.set_button (/* all buttons */ 0);
         _click_controller.pressed.connect ((click_controller, n_press, x, y) =>
         {
