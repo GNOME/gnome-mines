@@ -40,6 +40,11 @@
   background-repeat: no-repeat;
   box-shadow:none;
   border-width:2px;
+  min-height:24px;
+  min-width:24px;
+  border-style:solid;
+  -gtk-icon-shadow:none;
+  -gtk-icon-filter:none;
 }
 
 .tile:not(.cursor):hover {
