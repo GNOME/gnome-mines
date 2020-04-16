@@ -18,7 +18,6 @@ public class Tile : Gtk.Button
 
     construct
     {
-        can_focus = false;
         add_css_class ("tile");
 
         _gesture = new Gtk.GestureLongPress ();
