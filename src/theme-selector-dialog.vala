@@ -153,7 +153,6 @@ public class ThemeSelectorDialog : Gtk.Dialog
     private void switch_theme_preview (int to_index, List<string> themes)
     {
         settings.set_string ("theme", themes.nth_data (to_index));
-        settings.apply ();
         this.queue_draw ();
         this.get_window ().invalidate_rect (null, true);
         this.present ();

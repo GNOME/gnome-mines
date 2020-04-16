@@ -168,7 +168,6 @@ public class Mines : Gtk.Application
         Environment.set_application_name (_("Mines"));
 
         settings = new GLib.Settings ("org.gnome.Mines");
-        settings.delay ();
 
         if (game_mode != -1)
             settings.set_int (KEY_MODE, game_mode);
@@ -527,6 +526,7 @@ public class Mines : Gtk.Application
         base.shutdown ();
 
         /* Save window state */
+        settings.delay ();
         settings.set_int ("window-width", window_width);
         settings.set_int ("window-height", window_height);
         settings.set_boolean (KEY_USE_ANIMATIONS, Gtk.Settings.get_default ().gtk_enable_animations);
