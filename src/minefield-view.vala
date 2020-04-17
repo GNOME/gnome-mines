@@ -156,8 +156,7 @@ public class MinefieldView : Gtk.Widget
         layout = new Gtk.BinLayout ();
         set_layout_manager (layout);
 
-        frame = new Gtk.AspectFrame (/* label */ null, /* xalign */ 0.5f, /* yalign */ 0.5f, /* ratio */ 1.0f, /* obey-child */ false);
-        frame.shadow_type = Gtk.ShadowType.NONE;
+        frame = new Gtk.AspectFrame (/* xalign */ 0.5f, /* yalign */ 0.5f, /* ratio */ 1.0f, /* obey-child */ false);
         frame.insert_after (this, /* insert first */ null);
 
         grid = new Gtk.Grid ();

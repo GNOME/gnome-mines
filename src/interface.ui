@@ -36,8 +36,6 @@
                 <property name="child">
                   <object class="GtkAspectFrame" id="new_game_screen">
                     <property name="can_focus">False</property>
-                    <property name="label_xalign">0</property>
-                    <property name="shadow_type">none</property>
                     <property name="obey_child">False</property>
                     <child>
                       <object class="GtkGrid" id="new_game_grid">
@@ -98,8 +96,6 @@
                 <property name="child">
                   <object class="GtkAspectFrame" id="custom_game_screen">
                     <property name="can_focus">False</property>
-                    <property name="label_xalign">0</property>
-                    <property name="shadow_type">none</property>
                     <child>
                       <object class="GtkGrid" id="custom_game_grid">
                         <property name="can_focus">False</property>
@@ -234,8 +230,6 @@
                         <property name="can_focus">False</property>
                         <property name="hexpand">True</property>
                         <property name="vexpand">True</property>
-                        <property name="label_xalign">0</property>
-                        <property name="shadow_type">none</property>
                         <property name="xalign">0.5</property>
                         <property name="obey_child">False</property>
                         <child>

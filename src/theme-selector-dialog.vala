@@ -88,7 +88,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         view.minefield = new PreviewField ();
 
         var box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        var frame = new Gtk.AspectFrame (null, 0.5f, 0.5f, 1.0f, false);
+        var frame = new Gtk.AspectFrame (/* xalign */ 0.5f, /* xalign */ 0.5f, /* ratio */ 1.0f, /* obey child */ false);
         frame.margin_start = 6;
         frame.margin_end = 6;
         frame.margin_top = 6;
