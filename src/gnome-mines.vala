@@ -154,10 +154,8 @@ public class Mines : Gtk.Application
         }
         if (window != null)
         {
-            window.get_window ().invalidate_rect (null, true);
             window.queue_draw ();
         }
-        StyleContext.reset_widgets (Gdk.Display.get_default ());
     }
 
     protected override void startup ()
