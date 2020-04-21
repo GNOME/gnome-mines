@@ -156,7 +156,6 @@ public class ThemeSelectorDialog : Gtk.Dialog
     {
         settings.set_string ("theme", themes.nth_data (to_index));
         this.queue_draw ();
-        this.get_window ().invalidate_rect (null, true);
         this.present ();
     }
 
