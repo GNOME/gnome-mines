@@ -928,14 +928,7 @@ public class Mines : Gtk.Application
 
     private void help_cb ()
     {
-        try
-        {
-            show_uri_on_window (window, "help:gnome-mines", get_current_event_time ());
-        }
-        catch (Error e)
-        {
-            warning ("Failed to show help: %s", e.message);
-        }
+        show_uri (window, "help:gnome-mines", Gdk.CURRENT_TIME);
     }
 
     public static int main (string[] args)
