@@ -50,6 +50,7 @@ public class Mines : Gtk.Application
     private Label clock_label;
 
     private GLib.Menu app_main_menu;
+    private Gtk.MenuButton menu_button;
 
     /* Main window */
     private Window window;
@@ -112,7 +113,8 @@ public class Mines : Gtk.Application
         { "preferences",        preferences_cb                              },
         { "quit",               quit_cb                                     },
         { "help",               help_cb                                     },
-        { "about",              about_cb                                    }
+        { "about",              about_cb                                    },
+        { "menu",               menu_cb                                     }
     };
 
     public Mines ()
@@ -223,46 +225,24 @@ public class Mines : Gtk.Application
         headerbar.show ();
         window.set_titlebar (headerbar);
 
-        bool shell_shows_menubar;
-        Gtk.Settings.get_default ().get ("gtk-shell-shows-menubar", out shell_shows_menubar);
-        if (!shell_shows_menubar)
-        {
-            var menu = new GLib.Menu ();
-            app_main_menu = new GLib.Menu ();
-            menu.append_section (null, app_main_menu);
-            app_main_menu.append (_("_Scores"), "app.scores");
-            app_main_menu.append (_("A_ppearance"), "app.preferences");
-            var section = new GLib.Menu ();
-            menu.append_section (null, section);
-            section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
-            section = new GLib.Menu ();
-            menu.append_section (null, section);
-            section.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
-            section.append (_("_Help"), "app.help");
-            section.append (_("_About Mines"), "app.about");
-            var menu_button = new MenuButton ();
-            menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
-            menu_button.show ();
-            menu_button.set_menu_model (menu);
-            headerbar.pack_end (menu_button);
-        }
-        else
-        {
-            var menu = new GLib.Menu ();
-            var mines_menu = new GLib.Menu ();
-            menu.append_submenu (_("_Mines"), mines_menu);
-            mines_menu.append (_("_New Game"), "app.new-game");
-            mines_menu.append (_("_Scores"), "app.scores");
-            mines_menu.append (_("A_ppearance"), "app.preferences");
-            mines_menu.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
-            mines_menu.append (_("_Quit"), "app.quit");
-            var help_menu = new GLib.Menu ();
-            menu.append_submenu (_("_Help"), help_menu);
-            help_menu.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
-            help_menu.append (_("_Contents"), "app.help");
-            help_menu.append (_("_About Mines"), "app.about");
-            set_menubar (menu);
-        }
+        var menu = new GLib.Menu ();
+        app_main_menu = new GLib.Menu ();
+        menu.append_section (null, app_main_menu);
+        app_main_menu.append (_("_Scores"), "app.scores");
+        app_main_menu.append (_("A_ppearance"), "app.preferences");
+        var section = new GLib.Menu ();
+        menu.append_section (null, section);
+        section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
+        section = new GLib.Menu ();
+        menu.append_section (null, section);
+        section.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
+        section.append (_("_Help"), "app.help");
+        section.append (_("_About Mines"), "app.about");
+        menu_button = new MenuButton ();
+        menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
+        menu_button.show ();
+        menu_button.set_menu_model (menu);
+        headerbar.pack_end (menu_button);
 
         set_accels_for_action ("app.new-game", {"<Primary>n"});
         set_accels_for_action ("app.silent-new-game", {"Escape"});
@@ -274,6 +254,7 @@ public class Mines : Gtk.Application
         set_accels_for_action ("app.pause", {"Pause"});
         set_accels_for_action ("app.help", {"F1"});
         set_accels_for_action ("app.quit", {"<Primary>q", "<Primary>w"});
+        set_accels_for_action ("app.menu", {"F10"});
 
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
@@ -830,6 +811,11 @@ public class Mines : Gtk.Application
             clock_label.set_text ("%02d∶\xE2\x80\x8E%02d∶\xE2\x80\x8E%02d".printf (hours, minutes, seconds));
         else
             clock_label.set_text ("%02d∶\xE2\x80\x8E%02d".printf (minutes, seconds));
+    }
+
+    private void menu_cb ()
+    {
+        menu_button.activate();
     }
 
     private void about_cb ()

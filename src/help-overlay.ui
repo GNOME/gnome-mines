@@ -9,7 +9,7 @@
         <child>
           <object class="GtkShortcutsGroup">
             <property name="visible">1</property>
-            <property name="title" translatable="yes" context="shortcut window">Window and games</property>
+            <property name="title" translatable="yes" context="shortcut window">Window and game</property>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
@@ -41,6 +41,13 @@
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
+                <property name="accelerator">F10</property>
+                <property name="title" translatable="yes" context="shortcut window">Open Menu</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkShortcutsShortcut">
+                <property name="visible">1</property>
                 <property name="accelerator">&lt;Primary&gt;question</property>
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
@@ -52,6 +59,12 @@
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>
             </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkShortcutsGroup">
+            <property name="visible">1</property>
+            <property name="title" translatable="yes" context="shortcut window">Game size selection</property>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
