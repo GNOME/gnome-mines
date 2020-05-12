@@ -21,7 +21,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
                 <property name="accelerator">&lt;Ctrl&gt;R</property>
-                <property name="title" translatable="yes" context="shortcut window">Start a new game with last used settings</property>
+                <property name="title" translatable="yes" context="shortcut window">Restart game with current settings</property>
               </object>
             </child>
             <child>
@@ -103,14 +103,14 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
                 <property name="accelerator">Up Down Left Right</property>
-                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor in the game field</property>
+                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
                 <property name="accelerator">u j h k</property>
-                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor in the game field</property>
+                <property name="title" translatable="yes" context="shortcut window">Move the keyboard cursor</property>
               </object>
             </child>
             <child>
@@ -124,7 +124,7 @@
               <object class="GtkShortcutsShortcut">
                 <property name="visible">1</property>
                 <property name="accelerator">&lt;Primary&gt;space</property>
-                <property name="title" translatable="yes" context="shortcut window">Toggle field flag state between normal and flagged (and question, if enabled)</property>
+                <property name="title" translatable="yes" context="shortcut window">Toggle field flag state</property>
               </object>
             </child>
           </object>
