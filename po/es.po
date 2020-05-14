@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-04-27 07:48+0000\n"
-"PO-Revision-Date: 2020-04-28 12:33+0200\n"
+"POT-Creation-Date: 2020-05-13 17:53+0000\n"
+"PO-Revision-Date: 2020-05-14 11:59+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: es <gnome-es-list@gnome.org>\n"
 "Language: es\n"
@@ -150,8 +150,6 @@ msgid "true if the window is maximized"
 msgstr "cierto si la ventana está maximizada"
 
 #: src/help-overlay.ui:12
-#| msgctxt "shortcut window"
-#| msgid "Window and games"
 msgctxt "shortcut window"
 msgid "Window and game"
 msgstr "Ventana y juego"
@@ -162,9 +160,11 @@ msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
 #: src/help-overlay.ui:24
+#| msgctxt "shortcut window"
+#| msgid "Start a new game with last used settings"
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
-msgstr "Iniciar una partida nueva con la última configuración usada"
+msgid "Restart game with current settings"
+msgstr "Reiniciar la partida con la configuración actual"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -222,9 +222,11 @@ msgid "In-game"
 msgstr "En el juego"
 
 #: src/help-overlay.ui:106 src/help-overlay.ui:113
+#| msgctxt "shortcut window"
+#| msgid "Move the keyboard cursor in the game field"
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
-msgstr "Mover el cursor del teclado en el campo de juego"
+msgid "Move the keyboard cursor"
+msgstr "Mover el cursor del teclado"
 
 #: src/help-overlay.ui:120
 msgctxt "shortcut window"
@@ -233,11 +235,8 @@ msgstr "Mostrar casilla"
 
 #: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr ""
-"Conmutar entre el estado normal y marcado de una casilla (e interrogación si "
-"está disponible)"
+msgid "Toggle field flag state"
+msgstr "Conmutar el estado de una bandera"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -400,6 +399,14 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Seleccionar un tema"
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "Conmutar entre el estado normal y marcado de una casilla (e interrogación "
+#~ "si está disponible)"
 
 #~ msgid "org.gnome.Mines"
 #~ msgstr "org.gnome.Mines"
