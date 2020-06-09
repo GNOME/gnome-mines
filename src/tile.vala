@@ -24,6 +24,7 @@ public class Tile : Gtk.Button
         can_focus = false;
         add_class ("tile");
         _gesture = new Gtk.GestureLongPress (this);
+        _gesture.touch_only = true;
         _gesture.pressed.connect((x, y) =>
         {
              tile_long_pressed (prow, pcol);
