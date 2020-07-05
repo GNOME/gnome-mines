@@ -311,13 +311,14 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        context = new Games.Scores.Context.with_importer ("gnome-mines",
-                                                          /* Label on the scores dialog */
-                                                          _("Minefield:"),
-                                                          window,
-                                                          create_category_from_key,
-                                                          Games.Scores.Style.TIME_LESS_IS_BETTER,
-                                                          new Games.Scores.HistoryFileImporter (parse_old_score));
+        context = new Games.Scores.Context.with_importer_and_icon_name ("gnome-mines",
+                                                                        /* Label on the scores dialog */
+                                                                        _("Minefield:"),
+                                                                        window,
+                                                                        create_category_from_key,
+                                                                        Games.Scores.Style.TIME_LESS_IS_BETTER,
+                                                                        new Games.Scores.HistoryFileImporter (parse_old_score),
+                                                                        "org.gnome.Mines");
 
         flag_label = (Label) ui_builder.get_object ("flag_label");
         clock_label = (Label) ui_builder.get_object ("clock_label");
