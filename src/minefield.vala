@@ -244,7 +244,7 @@ public class Minefield : Object
         }
 
         /* Mark unmarked mines when won */
-        if (is_complete)
+        if (is_complete && !exploded)
         {
             stop_clock ();
             for (var tx = 0; tx < width; tx++)
