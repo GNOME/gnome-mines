@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-04-27 07:48+0000\n"
-"PO-Revision-Date: 2020-04-30 00:29+0200\n"
+"POT-Creation-Date: 2020-06-26 09:38+0000\n"
+"PO-Revision-Date: 2020-08-03 14:22+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -162,8 +162,8 @@ msgstr "Starta ett nytt spel"
 
 #: src/help-overlay.ui:24
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
-msgstr "Starta ett nytt spel med senast använda inställningar"
+msgid "Restart game with current settings"
+msgstr "Starta om spelet med aktuella inställningar"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -222,8 +222,8 @@ msgstr "I spelet"
 
 #: src/help-overlay.ui:106 src/help-overlay.ui:113
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
-msgstr "Flytta tangentbordsmarkören i spelfältet"
+msgid "Move the keyboard cursor"
+msgstr "Flytta tangentbordsmarkören"
 
 #: src/help-overlay.ui:120
 msgctxt "shortcut window"
@@ -232,11 +232,8 @@ msgstr "Visa fält"
 
 #: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr ""
-"Växla fältets flaggtillstånd mellan normalt och flaggat (och frågetecken om "
-"aktiverat)"
+msgid "Toggle field flag state"
+msgstr "Växla fältets flaggtillstånd"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -404,6 +401,14 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Välj tema"
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "Växla fältets flaggtillstånd mellan normalt och flaggat (och frågetecken "
+#~ "om aktiverat)"
 
 #~ msgid "org.gnome.Mines"
 #~ msgstr "org.gnome.Mines"
