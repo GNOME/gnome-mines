@@ -4,14 +4,14 @@
 # Abigail Brady <morwen@evilmagic.org>, Bastien Nocera <hadess@hadess.net>, 2007.
 # Bruce Cowan <bruce@bcowan.me.uk>, 2009, 2010, 2011, 2012.
 # Philip Withnall <philip@tecnocode.co.uk>, 2010.
-# Zander Brown <zbrown@gnome.org>, 2019.
+# Zander Brown <zbrown@gnome.org>, 2019-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-03-26 17:59+0000\n"
-"PO-Revision-Date: 2019-08-25 01:34+0100\n"
+"POT-Creation-Date: 2020-05-12 08:15+0000\n"
+"PO-Revision-Date: 2020-05-18 13:21+0100\n"
 "Last-Translator: Zander Brown <zbrown@gnome.org>\n"
 "Language-Team: English - United Kingdom <en_GB@li.org>\n"
 "Language: en_GB\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.32.1\n"
+"X-Generator: Gtranslator 3.36.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -31,11 +31,6 @@ msgid "Clear hidden mines from a minefield"
 msgstr "Clear hidden mines from a minefield"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
-#| msgid ""
-#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-#| "spaces with mines as quickly as possible to make the board a safer place. "
-#| "You win the game when you've flagged every mine on the board. Be careful "
-#| "not to trigger one, or the game is over!"
 msgid ""
 "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
 "spaces with mines as quickly as possible to make the board a safer place. "
@@ -48,10 +43,6 @@ msgstr ""
 "to trigger one, or the game is over!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
-#| msgid ""
-#| "You can select the size of the field you want to play on at the start of "
-#| "the game. If you get stuck, you can ask for a hint: there's a time "
-#| "penalty, but that's better than hitting a mine!"
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -66,7 +57,7 @@ msgid "The GNOME Project"
 msgstr "The GNOME Project"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
+#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
 msgid "Mines"
 msgstr "Mines"
 
@@ -104,22 +95,10 @@ msgid "Set to true to be able to mark squares as unknown."
 msgstr "Set to true to be able to mark squares as unknown."
 
 #: data/org.gnome.Mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr "Warning about too many flags"
-
-#: data/org.gnome.Mines.gschema.xml:16
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-
-#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "Enable automatic placing of flags"
 
-#: data/org.gnome.Mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -127,61 +106,64 @@ msgstr ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 
-#: data/org.gnome.Mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
 msgstr "Enable animations"
 
-#: data/org.gnome.Mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "Set to false to disable theme-defined transition animations"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Number of columns in a custom game"
 
-#: data/org.gnome.Mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "Number of rows in a custom game"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "The number of mines in a custom game"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "Board size"
 
-#: data/org.gnome.Mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "Size of the board (0-2 = small-large, 3=custom)"
 
-#: data/org.gnome.Mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "Width of the window in pixels"
 
-#: data/org.gnome.Mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "Height of the window in pixels"
 
-#: data/org.gnome.Mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "true if the window is maximised"
 
 #: src/help-overlay.ui:12
+#| msgctxt "shortcut window"
+#| msgid "Window and games"
 msgctxt "shortcut window"
-msgid "Window and games"
-msgstr "Window and games"
+msgid "Window and game"
+msgstr "Window and game"
 
 #: src/help-overlay.ui:17
-#| msgid "Start New Game"
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Start a new game"
 
 #: src/help-overlay.ui:24
+#| msgctxt "shortcut window"
+#| msgid "Start a new game with last used settings"
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
-msgstr "Start a new game with last used settings"
+msgid "Restart game with current settings"
+msgstr "Restart game with current settings"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -195,36 +177,65 @@ msgstr "Show Help"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr "Open Menu"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Show Keyboard Shortcuts"
 
-#: src/help-overlay.ui:52
-#| msgid "_Quit"
+#: src/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quit"
 
-#: src/help-overlay.ui:60
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr "Game size selection"
+
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr "Game size: small"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr "Game size: medium"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr "Game size: large"
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr "Game size: custom"
+
+#: src/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "In-game"
 
-#: src/help-overlay.ui:65 src/help-overlay.ui:72
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#| msgctxt "shortcut window"
+#| msgid "Move the keyboard cursor in the game field"
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
-msgstr "Move the keyboard cursor in the game field"
+msgid "Move the keyboard cursor"
+msgstr "Move the keyboard cursor"
 
-#: src/help-overlay.ui:79
+#: src/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "Reveal field"
 
-#: src/help-overlay.ui:86
+#: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgid "Toggle field flag state"
+msgstr "Toggle field flag state"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -246,8 +257,8 @@ msgstr "_Cancel"
 msgid "_Play Game"
 msgstr "_Play Game"
 
-#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
-#: src/gnome-mines.vala:810
+#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
+#: src/gnome-mines.vala:796
 msgid "_Pause"
 msgstr "_Pause"
 
@@ -267,137 +278,115 @@ msgstr "_Play Again"
 msgid "Paused"
 msgstr "Paused"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Print release version and exit"
 msgstr "Print release version and exit"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:96
 msgid "Small game"
 msgstr "Small game"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:97
 msgid "Medium game"
 msgstr "Medium game"
 
-#: src/gnome-mines.vala:95
+#: src/gnome-mines.vala:98
 msgid "Big game"
 msgstr "Big game:"
 
-#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
+#: src/gnome-mines.vala:231
 msgid "_Scores"
 msgstr "_Scores"
 
-#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
+#: src/gnome-mines.vala:232
 msgid "A_ppearance"
 msgstr "A_ppearance"
 
-#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-#| msgid "_Show Warnings"
-msgid "Show _Warnings"
-msgstr "Show _Warnings"
-
-#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:235
 msgid "_Use Question Flags"
 msgstr "_Use Question Flags"
 
-#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+#: src/gnome-mines.vala:238
 msgid "_Keyboard Shortcuts"
 msgstr "_Keyboard Shortcuts"
 
-#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
+#: src/gnome-mines.vala:239
 msgid "_Help"
 msgstr "_Help"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
-#| msgid "_About"
+#: src/gnome-mines.vala:240
 msgid "_About Mines"
 msgstr "_About Mines"
 
-#: src/gnome-mines.vala:254
-msgid "_Mines"
-msgstr "_Mines"
-
-#: src/gnome-mines.vala:255
-msgid "_New Game"
-msgstr "_New Game"
-
-#: src/gnome-mines.vala:260
-msgid "_Quit"
-msgstr "_Quit"
-
-#: src/gnome-mines.vala:264
-msgid "_Contents"
-msgstr "_Contents"
-
 #. Label on the scores dialog
-#: src/gnome-mines.vala:338
+#: src/gnome-mines.vala:316
 msgid "Minefield:"
 msgstr "Minefield:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:372
+#: src/gnome-mines.vala:350
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mine"
 msgstr[1] "%d × %d, %d mines"
 
-#: src/gnome-mines.vala:431
+#: src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "Custom"
 
-#: src/gnome-mines.vala:509
+#: src/gnome-mines.vala:495
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mine"
 msgstr[1] "<b>%d</b> mines"
 
-#: src/gnome-mines.vala:619
+#: src/gnome-mines.vala:606
 msgid "Do you want to start a new game?"
 msgstr "Do you want to start a new game?"
 
-#: src/gnome-mines.vala:620
+#: src/gnome-mines.vala:607
 msgid "If you start a new game, your current progress will be lost."
 msgstr "If you start a new game, your current progress will be lost."
 
-#: src/gnome-mines.vala:621
+#: src/gnome-mines.vala:608
 msgid "Keep Current Game"
 msgstr "Keep Current Game"
 
-#: src/gnome-mines.vala:622
+#: src/gnome-mines.vala:609
 msgid "Start New Game"
 msgstr "Start New Game"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:658
 msgid "St_art Over"
 msgstr "St_art Over"
 
-#: src/gnome-mines.vala:759
+#: src/gnome-mines.vala:745
 msgid "_Resume"
 msgstr "_Resume"
 
-#: src/gnome-mines.vala:777
+#: src/gnome-mines.vala:763
 msgid "Play _Again"
 msgstr "Play _Again"
 
-#: src/gnome-mines.vala:834
+#: src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "Main game:"
 
-#: src/gnome-mines.vala:839
+#: src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "Score:"
 
-#: src/gnome-mines.vala:842
+#: src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "Resizing and SVG support:"
 
-#: src/gnome-mines.vala:864
+#: src/gnome-mines.vala:852
 msgid "Clear explosive mines off the board"
 msgstr "Clear explosive mines off the board"
 
-#: src/gnome-mines.vala:871
+#: src/gnome-mines.vala:859
 msgid "translator-credits"
 msgstr ""
 "Robert Brady <robert@susu.org.uk>\n"
@@ -410,9 +399,43 @@ msgstr ""
 "David King <amigadave@amigadave.com>\n"
 "Zander Brown <zbrown@gnome.org>"
 
-#: src/theme-selector-dialog.vala:106
+#: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Select Theme"
+
+#~ msgid "Warning about too many flags"
+#~ msgstr "Warning about too many flags"
+
+#~ msgid ""
+#~ "Set to true to enable warning icons when too many flags are placed next "
+#~ "to a numbered tile."
+#~ msgstr ""
+#~ "Set to true to enable warning icons when too many flags are placed next "
+#~ "to a numbered tile."
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+
+#~| msgid "_Show Warnings"
+#~ msgid "Show _Warnings"
+#~ msgstr "Show _Warnings"
+
+#~ msgid "_Mines"
+#~ msgstr "_Mines"
+
+#~ msgid "_New Game"
+#~ msgstr "_New Game"
+
+#~ msgid "_Quit"
+#~ msgstr "_Quit"
+
+#~ msgid "_Contents"
+#~ msgstr "_Contents"
 
 #~ msgid "Use _animations"
 #~ msgstr "Use _animations"
