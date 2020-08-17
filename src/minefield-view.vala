@@ -517,7 +517,7 @@ public class MinefieldView : Gtk.Grid
             return true;
         }
 
-        keyboard_cursor.position = { (int) (x % _minefield.width), (int) (y % _minefield.height)};
+        keyboard_cursor.position = {(int) (x == -1 ? _minefield.width-1 : x%_minefield.width), (int) (y == -1 ? _minefield.height-1 : y%_minefield.height)};
 
         mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
         if (selected.is_set)
