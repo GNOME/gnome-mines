@@ -1,5 +1,5 @@
 # gnome-games ja.po.
-# Copyright (C) 1998-2019 Free Software Foundation, Inc.
+# Copyright (C) 1998-2010, 2012-2013, 2017, 2019-2020 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
@@ -9,14 +9,14 @@
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012, 2017.
 # Jiro Matsuzawa <jmatsuzawa@gnome.org>, 2013.
-# sicklylife <translation@sicklylife.jp>, 2019.
+# sicklylife <translation@sicklylife.jp>, 2019-2020.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
 "POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2019-10-05 00:15+0900\n"
+"PO-Revision-Date: 2020-08-23 00:16+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -86,7 +86,7 @@ msgstr "使用するタイルテーマのタイトルです。"
 
 #: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
-msgstr "不明なフラグを使う"
+msgstr "不明フラグを使用する"
 
 #: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
@@ -124,7 +124,7 @@ msgstr "カスタマイズしたゲームでの盤面の行数"
 
 #: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
-msgstr "カスタムゲームでの地雷の数"
+msgstr "カスタマイズしたゲームでの地雷の数"
 
 #: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
@@ -132,7 +132,7 @@ msgstr "盤の大きさ"
 
 #: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "ボードの大きさ (0-2 = 小さい〜大きい、3=その他)"
+msgstr "盤の大きさ (0-2 = 小さい〜大きい、3=その他)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -147,9 +147,6 @@ msgid "true if the window is maximized"
 msgstr "ウィンドウが最小化されている場合は true"
 
 #: src/help-overlay.ui:12
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Window and games"
 msgctxt "shortcut window"
 msgid "Window and game"
 msgstr "ウィンドウとゲーム"
@@ -160,12 +157,9 @@ msgid "Start a new game"
 msgstr "新しいゲームを開始する"
 
 #: src/help-overlay.ui:24
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Start a new game with last used settings"
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
-msgstr "最後に使用した設定で新しいゲームを開始する"
+msgstr "現在の設定でゲームをやり直す"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -180,7 +174,7 @@ msgstr "ヘルプを表示する"
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
 msgid "Open Menu"
-msgstr ""
+msgstr "メニューを開く"
 
 #: src/help-overlay.ui:52
 msgctxt "shortcut window"
@@ -195,27 +189,27 @@ msgstr "終了する"
 #: src/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Game size selection"
-msgstr ""
+msgstr "ゲームの大きさの選択"
 
 #: src/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Game size: small"
-msgstr ""
+msgstr "盤面の大きさ: 小さい"
 
 #: src/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Game size: medium"
-msgstr ""
+msgstr "盤面の大きさ: 中くらい"
 
 #: src/help-overlay.ui:86
 msgctxt "shortcut window"
 msgid "Game size: large"
-msgstr ""
+msgstr "盤面の大きさ: 大きい"
 
 #: src/help-overlay.ui:93
 msgctxt "shortcut window"
 msgid "Game size: custom"
-msgstr ""
+msgstr "盤面の大きさ: カスタム"
 
 #: src/help-overlay.ui:101
 msgctxt "shortcut window"
@@ -223,12 +217,9 @@ msgid "In-game"
 msgstr "ゲーム内"
 
 #: src/help-overlay.ui:106 src/help-overlay.ui:113
-#, fuzzy
-#| msgctxt "shortcut window"
-#| msgid "Move the keyboard cursor in the game field"
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
-msgstr "ゲームフィールドのカーソルを動かす"
+msgstr "キーボードカーソルを動かす"
 
 #: src/help-overlay.ui:120
 msgctxt "shortcut window"
@@ -238,7 +229,7 @@ msgstr "フィールドを開く"
 #: src/help-overlay.ui:127
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
-msgstr ""
+msgstr "フィールドのフラグの状態を切り替える"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -275,7 +266,7 @@ msgstr "ベストタイム(_B)"
 
 #: src/interface.ui:400
 msgid "_Play Again"
-msgstr "再プレイ(_P)"
+msgstr "再挑戦(_P)"
 
 #: src/interface.ui:464
 msgid "Paused"
@@ -377,7 +368,7 @@ msgstr "メインゲーム:"
 
 #: src/gnome-mines.vala:830
 msgid "Score:"
-msgstr "得点:"
+msgstr "スコア:"
 
 #: src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
@@ -385,7 +376,7 @@ msgstr "サイズ変更と SVG サポート:"
 
 #: src/gnome-mines.vala:852
 msgid "Clear explosive mines off the board"
-msgstr ""
+msgstr "地雷原から地雷を取り除いてください"
 
 #: src/gnome-mines.vala:859
 msgid "translator-credits"
