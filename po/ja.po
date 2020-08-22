@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-10-02 10:49+0000\n"
+"POT-Creation-Date: 2020-05-31 06:46+0000\n"
 "PO-Revision-Date: 2019-10-05 00:15+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
@@ -53,7 +53,7 @@ msgid "The GNOME Project"
 msgstr "The GNOME Project"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
+#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
 msgid "Mines"
 msgstr "GNOME マインスイーパー"
 
@@ -93,22 +93,10 @@ msgid "Set to true to be able to mark squares as unknown."
 msgstr "不明なエリアをマークできるようにする場合は true にしてください。"
 
 #: data/org.gnome.Mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr "フラグを置きすぎたら警告する"
-
-#: data/org.gnome.Mines.gschema.xml:16
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr ""
-"数字タイルの隣にフラグをたくさん置いた時に警告アイコンを表示する場合は true "
-"にしてください。"
-
-#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "フラグを自動的に置くかどうか"
 
-#: data/org.gnome.Mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
@@ -116,51 +104,54 @@ msgstr ""
 "マス目に地雷が埋まっていることが明らかであることを表すフラグを自動的に付与す"
 "る場合は true にしてください。"
 
-#: data/org.gnome.Mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
 msgstr "アニメーションを有効にする"
 
-#: data/org.gnome.Mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
 "テーマで定義されたアニメーション遷移を無効にする場合は false に設定してくださ"
 "い"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "カスタマイズしたゲームでの盤面の桁数"
 
-#: data/org.gnome.Mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "カスタマイズしたゲームでの盤面の行数"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "カスタムゲームでの地雷の数"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "盤の大きさ"
 
-#: data/org.gnome.Mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "ボードの大きさ (0-2 = 小さい〜大きい、3=その他)"
 
-#: data/org.gnome.Mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "ウィンドウの幅 (ピクセル単位)"
 
-#: data/org.gnome.Mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "ウィンドウの高さ (ピクセル単位)"
 
-#: data/org.gnome.Mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "ウィンドウが最小化されている場合は true"
 
 #: src/help-overlay.ui:12
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Window and games"
 msgctxt "shortcut window"
-msgid "Window and games"
+msgid "Window and game"
 msgstr "ウィンドウとゲーム"
 
 #: src/help-overlay.ui:17
@@ -169,8 +160,11 @@ msgid "Start a new game"
 msgstr "新しいゲームを開始する"
 
 #: src/help-overlay.ui:24
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Start a new game with last used settings"
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
+msgid "Restart game with current settings"
 msgstr "最後に使用した設定で新しいゲームを開始する"
 
 #: src/help-overlay.ui:31
@@ -185,35 +179,66 @@ msgstr "ヘルプを表示する"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr ""
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "キーボードショートカットを表示する"
 
-#: src/help-overlay.ui:52
+#: src/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "終了する"
 
-#: src/help-overlay.ui:60
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr ""
+
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr ""
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr ""
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr ""
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr ""
+
+#: src/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "ゲーム内"
 
-#: src/help-overlay.ui:65 src/help-overlay.ui:72
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#, fuzzy
+#| msgctxt "shortcut window"
+#| msgid "Move the keyboard cursor in the game field"
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
+msgid "Move the keyboard cursor"
 msgstr "ゲームフィールドのカーソルを動かす"
 
-#: src/help-overlay.ui:79
+#: src/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "フィールドを開く"
 
-#: src/help-overlay.ui:86
+#: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
+msgid "Toggle field flag state"
 msgstr ""
-"フィールドの状態を“フラグ”、“疑いフラグ (有効な場合)”、“通常”に切り替える"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -235,8 +260,8 @@ msgstr "キャンセル(_C)"
 msgid "_Play Game"
 msgstr "プレイする(_P)"
 
-#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
-#: src/gnome-mines.vala:810
+#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
+#: src/gnome-mines.vala:796
 msgid "_Pause"
 msgstr "一時停止(_P)"
 
@@ -256,133 +281,113 @@ msgstr "再プレイ(_P)"
 msgid "Paused"
 msgstr "一時停止"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Print release version and exit"
 msgstr "リリースバージョンを表示して終了する"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:96
 msgid "Small game"
 msgstr "小規模な地雷原"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:97
 msgid "Medium game"
 msgstr "中規模の地雷原"
 
-#: src/gnome-mines.vala:95
+#: src/gnome-mines.vala:98
 msgid "Big game"
 msgstr "大規模な地雷原"
 
-#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
+#: src/gnome-mines.vala:231
 msgid "_Scores"
 msgstr "スコア(_S)"
 
-#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
+#: src/gnome-mines.vala:232
 msgid "A_ppearance"
 msgstr "外観(_P)"
 
-#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-msgid "Show _Warnings"
-msgstr "警告を表示(_W)"
-
-#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:235
 msgid "_Use Question Flags"
 msgstr "疑いフラグを使用(_U)"
 
-#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+#: src/gnome-mines.vala:238
 msgid "_Keyboard Shortcuts"
 msgstr "キーボードショートカット(_K)"
 
-#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
+#: src/gnome-mines.vala:239
 msgid "_Help"
 msgstr "ヘルプ(_H)"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
+#: src/gnome-mines.vala:240
 msgid "_About Mines"
 msgstr "このアプリケーションについて(_A)"
 
-#: src/gnome-mines.vala:254
-msgid "_Mines"
-msgstr "GNOME マインスイーパー(_M)"
-
-#: src/gnome-mines.vala:255
-msgid "_New Game"
-msgstr "新しいゲーム(_N)"
-
-#: src/gnome-mines.vala:260
-msgid "_Quit"
-msgstr "終了(_Q)"
-
-#: src/gnome-mines.vala:264
-msgid "_Contents"
-msgstr ""
-
 #. Label on the scores dialog
-#: src/gnome-mines.vala:338
+#: src/gnome-mines.vala:316
 msgid "Minefield:"
 msgstr "地雷原:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:372
+#: src/gnome-mines.vala:350
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d 個の地雷"
 
-#: src/gnome-mines.vala:431
+#: src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "カスタム"
 
-#: src/gnome-mines.vala:509
+#: src/gnome-mines.vala:495
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 個の地雷"
 
-#: src/gnome-mines.vala:619
+#: src/gnome-mines.vala:606
 msgid "Do you want to start a new game?"
 msgstr "新しいゲームを開始しますか?"
 
-#: src/gnome-mines.vala:620
+#: src/gnome-mines.vala:607
 msgid "If you start a new game, your current progress will be lost."
 msgstr "新しいゲームを始める場合は、現在までの経過は失われます。"
 
-#: src/gnome-mines.vala:621
+#: src/gnome-mines.vala:608
 msgid "Keep Current Game"
 msgstr "現在のゲームを継続"
 
-#: src/gnome-mines.vala:622
+#: src/gnome-mines.vala:609
 msgid "Start New Game"
 msgstr "新しいゲームを開始"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:658
 msgid "St_art Over"
 msgstr "初めからやり直す(_A)"
 
-#: src/gnome-mines.vala:759
+#: src/gnome-mines.vala:745
 msgid "_Resume"
 msgstr "再開(_R)"
 
-#: src/gnome-mines.vala:777
+#: src/gnome-mines.vala:763
 msgid "Play _Again"
 msgstr "再プレイ(_A)"
 
-#: src/gnome-mines.vala:834
+#: src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "メインゲーム:"
 
-#: src/gnome-mines.vala:839
+#: src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "得点:"
 
-#: src/gnome-mines.vala:842
+#: src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "サイズ変更と SVG サポート:"
 
-#: src/gnome-mines.vala:864
+#: src/gnome-mines.vala:852
 msgid "Clear explosive mines off the board"
 msgstr ""
 
-#: src/gnome-mines.vala:871
+#: src/gnome-mines.vala:859
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
@@ -397,9 +402,38 @@ msgstr ""
 "Yukihiro Nakai <Nakai@technologist.com>\n"
 "Yuusuke Tahara <tahara@gnome.gr.jp>"
 
-#: src/theme-selector-dialog.vala:106
+#: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "テーマの選択"
+
+#~ msgid "Warning about too many flags"
+#~ msgstr "フラグを置きすぎたら警告する"
+
+#~ msgid ""
+#~ "Set to true to enable warning icons when too many flags are placed next "
+#~ "to a numbered tile."
+#~ msgstr ""
+#~ "数字タイルの隣にフラグをたくさん置いた時に警告アイコンを表示する場合は "
+#~ "true にしてください。"
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "フィールドの状態を“フラグ”、“疑いフラグ (有効な場合)”、“通常”に切り替える"
+
+#~ msgid "Show _Warnings"
+#~ msgstr "警告を表示(_W)"
+
+#~ msgid "_Mines"
+#~ msgstr "GNOME マインスイーパー(_M)"
+
+#~ msgid "_New Game"
+#~ msgstr "新しいゲーム(_N)"
+
+#~ msgid "_Quit"
+#~ msgstr "終了(_Q)"
 
 #~ msgid "Display border around numbers"
 #~ msgstr "数字に縁取りを表示する"
