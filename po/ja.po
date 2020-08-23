@@ -3,8 +3,8 @@
 # Yukihiro Nakai <Nakai@technologist.com>, 1998.
 # Akira Higuchi <a-higuti@math.sci.hokudai.ac.jp>, 1999.
 # Yuusuke Tahara <tahara@gnome.gr.jp>, 2000.
-# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2001-2009.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2002, 2010.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
 # Shushi KUROSE <md81bird@hitaki.net>, 2012, 2017.
@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games gnome-2-32\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-08-23 00:16+0900\n"
+"POT-Creation-Date: 2020-08-22 15:40+0000\n"
+"PO-Revision-Date: 2020-08-23 23:30+0900\n"
 "Last-Translator: sicklylife <translation@sicklylife.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "Language: ja\n"
@@ -53,7 +53,7 @@ msgid "The GNOME Project"
 msgstr "The GNOME Project"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:850
 msgid "Mines"
 msgstr "GNOME マインスイーパー"
 
@@ -116,15 +116,15 @@ msgstr ""
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
-msgstr "カスタマイズしたゲームでの盤面の桁数"
+msgstr "カスタムゲームでの盤の桁数"
 
 #: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
-msgstr "カスタマイズしたゲームでの盤面の行数"
+msgstr "カスタムゲームでの盤の行数"
 
 #: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
-msgstr "カスタマイズしたゲームでの地雷の数"
+msgstr "カスタムゲームでの地雷の数"
 
 #: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
@@ -194,22 +194,22 @@ msgstr "ゲームの大きさの選択"
 #: src/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Game size: small"
-msgstr "盤面の大きさ: 小さい"
+msgstr "盤の大きさ: 小さい"
 
 #: src/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Game size: medium"
-msgstr "盤面の大きさ: 中くらい"
+msgstr "盤の大きさ: 中くらい"
 
 #: src/help-overlay.ui:86
 msgctxt "shortcut window"
 msgid "Game size: large"
-msgstr "盤面の大きさ: 大きい"
+msgstr "盤の大きさ: 大きい"
 
 #: src/help-overlay.ui:93
 msgctxt "shortcut window"
 msgid "Game size: custom"
-msgstr "盤面の大きさ: カスタム"
+msgstr "盤の大きさ: カスタム"
 
 #: src/help-overlay.ui:101
 msgctxt "shortcut window"
@@ -251,8 +251,8 @@ msgstr "キャンセル(_C)"
 msgid "_Play Game"
 msgstr "プレイする(_P)"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:350 src/gnome-mines.vala:658 src/gnome-mines.vala:748
+#: src/gnome-mines.vala:797
 msgid "_Pause"
 msgstr "一時停止(_P)"
 
@@ -318,67 +318,67 @@ msgid "Minefield:"
 msgstr "地雷原:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:351
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d 個の地雷"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:410
 msgid "Custom"
 msgstr "カスタム"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:496
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 個の地雷"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:607
 msgid "Do you want to start a new game?"
 msgstr "新しいゲームを開始しますか?"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:608
 msgid "If you start a new game, your current progress will be lost."
 msgstr "新しいゲームを始める場合は、現在までの経過は失われます。"
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:609
 msgid "Keep Current Game"
 msgstr "現在のゲームを継続"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:610
 msgid "Start New Game"
 msgstr "新しいゲームを開始"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:659
 msgid "St_art Over"
 msgstr "初めからやり直す(_A)"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:746
 msgid "_Resume"
 msgstr "再開(_R)"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:764
 msgid "Play _Again"
 msgstr "再プレイ(_A)"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:826
 msgid "Main game:"
 msgstr "メインゲーム:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:831
 msgid "Score:"
 msgstr "スコア:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:834
 msgid "Resizing and SVG support:"
 msgstr "サイズ変更と SVG サポート:"
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:853
 msgid "Clear explosive mines off the board"
 msgstr "地雷原から地雷を取り除いてください"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:860
 msgid "translator-credits"
 msgstr ""
 "相花 毅 <takeshi.aihana@gmail.com>\n"
