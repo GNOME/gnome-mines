@@ -1,6 +1,9 @@
 # Traducció de la documentació del gnomine de l'equip de Softcatalà.
 # Copyright © 2007, 2008 Free Software Foundation, Inc.
 # Joan Duran <jodufi@gmail.com>, 2007, 2008.
+# Jordi Mas <jmas@softcatala.org>, 2020
+# Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>, 2020
+
 #
 msgid ""
 msgstr ""
@@ -18,729 +21,690 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Joan Duran <jodufi@gmail.com>, 2007, 2008"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:4(media)
-msgctxt "_"
-msgid "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-msgstr "external ref='figures/logo.png' md5='5a979e829d14ad935a9f3e81318a5a36'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#.
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/index.page:22(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
 msgstr ""
-"external ref='figures/logo32.png' md5='aef7085887ecce229ad39e3f43268a8b'"
+"Joan Duran <jodufi@gmail.com>, 2007, 2008\n"
+"Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>, 2020"
 
-#: C/index.page:6(info/title)
+#. (itstool) path: credit/name
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16
+#: C/flags.page:22 C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:23
+msgid "How to change the game board size"
+msgstr "Com canviar la mida del tauler de joc"
+
+#. (itstool) path: page/p
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
+msgstr "Podeu seleccionar una mida de camp a l'inici de l'aplicació."
+
+#. (itstool) path: page/p
+#: C/board-size.page:27
+msgid "Select one of the grid sizes:"
+msgstr "Seleccioneu una de les mides de la quadrícula:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:29
+msgid "a 8 × 8 board with 10 mines"
+msgstr "un tauler de 8 × 8 amb 10 mines,"
+
+#. (itstool) path: item/p
+#: C/board-size.page:30
+msgid "a 16 × 16 board with 40 mines"
+msgstr "un tauler de 16 x 16 amb 40 mines,"
+
+#. (itstool) path: item/p
+#: C/board-size.page:31
+msgid "a 30 × 16 board with 99 mines"
+msgstr "un tauler de 30 x 16 amb 99 mines o"
+
+#. (itstool) path: item/p
+#: C/board-size.page:32
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr ""
+"un tauler personalitzat del qual podeu escollir la mida i el nombre de "
+"mines."
+
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"Per a canviar la <link xref=\"board-size\">mida del tauler</link> més tard, "
+"premeu el botó <gui style=\"button\">Canvia la dificultat</gui> a la dreta."
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9
+#: C/flags.page:14 C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:21 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Compartir Igual 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "Ajudar a millorar el <app>Mines</app>"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Informar d'un error o suggerir una millora"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mines/issues\"/>."
+msgstr ""
+"El <app>Mines</app> el manté una comunitat de voluntaris. Si voleu, hi podeu"
+" participar. Si detecteu un problema, podeu enviar un <em>informe "
+"d'error</em>. Per a informar d'un error, aneu a <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"Es tracta d'un sistema de seguiment d'errors en què els usuaris i els "
+"desenvolupadors poden enviar detalls sobre errors i problemes o sol·licitar "
+"millores."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>Sign in/Register</gui> link to create one."
+msgstr ""
+"Per a participar-hi, necessiteu un compte, el qual us donarà accés i us "
+"permetrà informar d'errors, fer comentaris i rebre actualitzacions per "
+"correu electrònic sobre l'estat de l'error. Si encara no teniu cap compte, "
+"feu clic a l'enllaç <gui>Sign in/Register</gui> per a crear-ne un."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+"reporting a bug, please read the <link "
+"href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">bug"
+" writing guidelines</link>, and please <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</link> for"
+" the bug to see if it already exists."
+msgstr ""
+"Quan tingueu un compte, inicieu la sessió i feu clic a <gui>New issue</gui>."
+" Abans d'informar d'un error, llegiu les <link "
+"href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">pautes"
+" d'escriptura d'errors</link> i <link "
+"href=\"https://gitlab.gnome.org/GNOME/eog/issues\">cerqueu</link> l'error "
+"per a comprovar si ja existeix."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:39
+msgid ""
+"If you are requesting a new feature, choose <gui>Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click"
+" <gui>Submit issue</gui>."
+msgstr ""
+"Si sol·liciteu una funció nova, trieu <gui>Feature</gui> al menú "
+"<gui>Labels</gui>. Ompliu les seccions de títol i descripció i feu clic a "
+"<gui>Submit issue</gui>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:43
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it"
+" is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"El vostre informe tindrà un número d'identificació i el seu estat "
+"s'actualitzarà a mesura que es vagi gestionant. Gràcies per ajudar a "
+"millorar el <app>Mines</app>!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Ajudar a desenvolupar"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"Els <app>jocs del GNOME</app> els desenvolupa i manté una comunitat de "
+"voluntaris. Us convidem a participar-hi."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link "
+"href=\"https://wiki.gnome.org/Apps/Games/Contribute\">help develop "
+"<app>GNOME Games</app></link>, you can get in touch with the developers "
+"using <link "
+"href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+"list</link>."
+msgstr ""
+"Si voleu <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">ajudar "
+"a desenvolupar els <app>jocs del GNOME</app></link>, podeu posar-vos en "
+"contacte amb els desenvolupadors mitjançant l'<link "
+"href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fgnome-games\">irc</link> o la nostra <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">llista de "
+"correu</link>."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:23
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Ajudar a escriure la documentació"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"L'ajuda d'usuari dels jocs del GNOME la manté una comunitat de voluntaris. "
+"Us convidem a participar-hi."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link>"
+" channel on <link "
+"href=\"https://wiki.gnome.org/GnomeIrcChannels\">irc.gnome.org</link> or via"
+" our <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-doc-"
+"list\">mailing list</link>."
+msgstr ""
+"Per a contribuir al projecte de documentació, contacteu amb nosaltres al "
+"canal <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link>"
+" d'<link "
+"href=\"https://wiki.gnome.org/GnomeIrcChannels\">irc.gnome.org</link> o "
+"mitjançant la nostra <link href=\"https://mail.gnome.org/mailman/listinfo"
+"/gnome-doc-list\">llista de correu</link>."
+
+#. (itstool) path: page/p
+#: C/documentation.page:39
+msgid ""
+"Our <link "
+"href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link>"
+" page contains useful information."
+msgstr ""
+"La nostra pàgina <link "
+"href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wiki</link>"
+" conté informació útil."
+
+#. (itstool) path: page/title
+#: C/flags.page:33
+msgid "How to use flags"
+msgstr "Com utilitzar les banderes"
+
+#. (itstool) path: td/p
+#: C/flags.page:40
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"Les banderes s'utilitzen per a marcar les caselles que sospiteu que poden "
+"amagar una mina. Col·locar una bandera en una casella evita que hi feu clic "
+"i que potser provoqueu una explosió, cosa que finalitzaria la partida."
+
+#. (itstool) path: td/p
+#: C/flags.page:43
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
+msgstr ""
+"L'aspecte exacte de les banderes depèn del tema. Podeu canviar el tema "
+"prement el botó de menú de la cantonada superior dreta de la finestra i "
+"seleccionant <gui style=\"menuitem\">Aparença</gui>."
+
+#. (itstool) path: section/title
+#: C/flags.page:51
+msgid "How to place a flag on a tile"
+msgstr "Com col·locar una bandera en una casella"
+
+#. (itstool) path: td/p
+#: C/flags.page:55
+msgid "Flags cannot be clicked. To place a flag on a tile:"
+msgstr ""
+"No es pot fer clic en una bandera. Per a col·locar una bandera en una "
+"casella:"
+
+#. (itstool) path: item/p
+#: C/flags.page:57
+msgid "right click on a blank tile."
+msgstr "feu clic amb el botó secundari a una casella no descoberta."
+
+#. (itstool) path: section/title
+#: C/flags.page:69
+msgid "Use of the <em>question</em> flag"
+msgstr "Ús de la bandera de <em>pregunta</em>"
+
+#. (itstool) path: section/p
+#: C/flags.page:70
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
+msgstr ""
+"Si no esteu segur si una casella amaga una mina, podeu utilitzar la bandera "
+"de <em>pregunta</em>."
+
+#. (itstool) path: td/p
+#: C/flags.page:75
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Per a col·locar una bandera <em>No estic segur</em> en una casella:"
+
+#. (itstool) path: item/p
+#: C/flags.page:77
+msgid "Right-click twice on a blank tile or once on a flag."
+msgstr "feu clic dret dos cops en una casella buida o un cop en una bandera."
+
+#. (itstool) path: note/p
+#: C/flags.page:88
+msgid ""
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
+msgstr ""
+"Per a habilitar aquestes banderes, premeu el botó de menú de la cantonada "
+"superior dreta de la finestra i marqueu la casella <gui "
+"style=\"checkbox\">Utilitza banderes de pregunta</gui>."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:24
+msgid "High scores"
+msgstr "Puntuacions màximes"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:26
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"La llista de puntuacions màximes conté les deu neteges més ràpides de cada "
+"tipus de camp de mines."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:29
+msgid ""
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
+msgstr ""
+"Per a visualitzar les puntuacions màximes, premeu el botó de menu de la "
+"cantonada superior dreta de la finestra i seleccioneu <gui "
+"style=\"menuitem\">Puntuacions</gui>. El diàleg mostrarà la mida de camp "
+"<gui>petita</gui> per defecte; per a visualitzar altres mides, seleccioneu-"
+"les al menú desplegable de la part superior del diàleg."
+
+#. (itstool) path: info/title
+#: C/index.page:9
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Mines del GNOME"
 
-#: C/index.page:7(info/title)
+#. (itstool) path: info/title
+#: C/index.page:10
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Mines del GNOME"
 
-#: C/index.page:10(credit/name) C/shortcuts.page:9(credit/name)
+#. (itstool) path: credit/name
+#: C/index.page:13
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
-#: C/index.page:14(credit/name) C/board-size.page:15(credit/name)
-#: C/documentation.page:14(credit/name) C/flags.page:23(credit/name)
-#: C/get-help.page:14(credit/name) C/high-scores.page:15(credit/name)
-#: C/new-game.page:16(credit/name) C/rules.page:16(credit/name)
-msgid "Ekaterina Gerasimova"
-msgstr "Ekaterina Gerasimova"
+#. (itstool) path: page/title
+#: C/index.page:25
+msgid "<_:media-1/> GNOME Mines"
+msgstr "<_:media-1/> GNOME Mines"
 
-#: C/index.page:18(license/p) C/bug-filing.page:14(license/p)
-#: C/develop.page:15(license/p) C/documentation.page:23(license/p)
-#: C/translate.page:19(license/p)
-msgid "Creative Commons Share Alike 3.0"
-msgstr "Creative Commons Compartir Igual 3.0"
-
-#: C/index.page:22(page/title)
-msgid ""
-"<media type=\"image\" src=\"figures/logo32.png\">GNOME Mines logo</media> "
-"GNOME Mines"
-msgstr ""
-"<media type=\"image\" src=\"figures/logo32.png\">Logotip del Mines del "
-"GNOME</media> Mines del GNOME"
-
-#: C/index.page:24(page/p)
+#. (itstool) path: page/p
+#: C/index.page:27
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
 "need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
 msgstr ""
+"El <app>Mines</app> és un clon del joc Pescamines. L'objectiu és localitzar "
+"totes les mines que s'amaguen sota les caselles d'un tauler rectangular. Heu"
+" d'utilitzar una combinació de lògica i sort per a trobar totes les mines "
+"sense provocar una explosió."
 
-#: C/index.page:31(section/title)
+#. (itstool) path: section/title
+#: C/index.page:34
 msgid "Game Play"
-msgstr ""
+msgstr "Funcionament"
 
-#: C/index.page:34(section/title)
+#. (itstool) path: section/title
+#: C/index.page:37
 msgid "Useful tips"
-msgstr ""
+msgstr "Consells útils"
 
-#: C/index.page:37(section/title)
-msgid "Advanced"
-msgstr "Avançat"
-
-#: C/index.page:40(section/title)
+#. (itstool) path: section/title
+#: C/index.page:46
 msgid "Get Involved"
-msgstr ""
+msgstr "Participació"
 
-#: C/board-size.page:10(credit/name) C/faces.page:9(credit/name)
-#: C/flags.page:17(credit/name) C/get-help.page:9(credit/name)
-#: C/high-scores.page:10(credit/name) C/new-game.page:11(credit/name)
-#: C/rules.page:11(credit/name)
-msgid "Baptiste Mille-Mathias"
-msgstr "Baptiste Mille-Mathias"
-
-#: C/board-size.page:12(credit/years) C/bug-filing.page:11(credit/years)
-#: C/develop.page:12(credit/years) C/documentation.page:11(credit/years)
-#: C/faces.page:11(credit/years) C/get-help.page:11(credit/years)
-#: C/rules.page:13(credit/years) C/translate.page:12(credit/years)
-msgid "2011"
-msgstr "2011"
-
-#: C/board-size.page:17(credit/years) C/documentation.page:16(credit/years)
-#: C/flags.page:13(credit/years) C/flags.page:19(credit/years)
-#: C/flags.page:25(credit/years) C/get-help.page:16(credit/years)
-#: C/high-scores.page:12(credit/years) C/high-scores.page:17(credit/years)
-#: C/new-game.page:13(credit/years) C/new-game.page:18(credit/years)
-#: C/rules.page:18(credit/years) C/shortcuts.page:11(credit/years)
-#: C/toolbar.page:10(credit/years)
-msgid "2012"
-msgstr "2012"
-
-#: C/board-size.page:22(page/title)
-msgid "How to change the game board size"
-msgstr ""
-
-#: C/board-size.page:24(page/p)
-msgid "You can select a field size at the start of a new game."
-msgstr ""
-
-#: C/board-size.page:28(item/p)
-msgid ""
-"Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu\">Mines</"
-"gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
-msgstr ""
-
-#: C/board-size.page:33(item/p)
-msgid "Select one of the grid sizes:"
-msgstr ""
-
-#: C/board-size.page:35(item/p)
-msgid "a 8 × 8 board with 10 mines"
-msgstr ""
-
-#: C/board-size.page:36(item/p)
-msgid "a 16 × 16 board with 40 mines"
-msgstr ""
-
-#: C/board-size.page:37(item/p)
-msgid "a 30 × 16 board with 99 mines"
-msgstr ""
-
-#: C/board-size.page:38(item/p)
-msgid "a custom board, where you chose the size and the number of mines"
-msgstr ""
-
-#: C/bug-filing.page:9(credit/name) C/develop.page:10(credit/name)
-#: C/documentation.page:9(credit/name) C/flags.page:11(credit/name)
-#: C/toolbar.page:8(credit/name) C/translate.page:10(credit/name)
-msgid "Tiffany Antopolski"
-msgstr "Tiffany Antopolski"
-
-#: C/bug-filing.page:18(page/title)
-msgid "Help make <app>Mines</app> better"
-msgstr ""
-
-#: C/bug-filing.page:21(section/title)
-msgid "Report a bug or suggest an improvement"
-msgstr ""
-
-#: C/bug-filing.page:22(section/p)
-msgid ""
-"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
-"participate. If you notice a problem you can file a <em>bug report</em>. To "
-"file a bug, go to <link href=\"https://bugzilla.gnome.org/\"/>."
-msgstr ""
-
-#: C/bug-filing.page:25(section/p)
-msgid ""
-"This is a bug tracking system where users and developers can file details "
-"about bugs and crashes, or request enhancements."
-msgstr ""
-
-#: C/bug-filing.page:28(section/p)
-msgid ""
-"To participate you need an account, which will give you the ability to gain "
-"access, file bugs, make comments, and receive updates by e-mail about the "
-"status of your bug. If you don't already have an account, just click on the "
-"<gui>New Account</gui> link to create one."
-msgstr ""
-
-#: C/bug-filing.page:32(section/p)
-msgid ""
-"Once you have an account, log in, click on <guiseq><gui>File a Bug</"
-"gui><gui>Applications</gui><gui>gnome-mines</gui></guiseq>. Before reporting "
-"a bug, please read the <link href=\"https://bugzilla.gnome.org/page.cgi?"
-"id=bug-writing.html\">bug writing guidelines</link>, and please <link href="
-"\"https://bugzilla.gnome.org/browse.cgi?product=gnome-mines\">browse</link> "
-"for the bug to see if it already exists."
-msgstr ""
-
-#: C/bug-filing.page:40(section/p)
-msgid ""
-"If you are requesting a new feature, choose <gui>enhancement</gui> in the "
-"<gui>Severity</gui> menu. Fill in the Summary and Description sections and "
-"click <gui>Commit</gui>."
-msgstr ""
-
-#: C/bug-filing.page:44(section/p)
-msgid ""
-"Your report will be given an ID number, and its status will be updated as it "
-"is being dealt with. Thanks for helping make <app>Mines</app> better!"
-msgstr ""
-
-#: C/develop.page:19(page/title)
-msgid "Help develop"
-msgstr ""
-
-#: C/develop.page:20(page/p)
-msgid ""
-"The <app>GNOME Games</app> are developed and maintained by a volunteer "
-"community. You are welcome to participate."
-msgstr ""
-
-#: C/develop.page:23(page/p)
-msgid ""
-"If you would like to <link href=\"https://live.gnome.org/GnomeGames/"
-"Contributing\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"http://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
-msgstr ""
-
-#: C/documentation.page:19(credit/name) C/faces.page:15(credit/name)
-#: C/new-game.page:21(credit/name)
-msgid "Aruna Sankaranarayanan"
-msgstr "Aruna Sankaranarayanan"
-
-#: C/documentation.page:27(page/title)
-msgid "Help write documentation"
-msgstr ""
-
-#: C/documentation.page:29(page/p)
-msgid ""
-"The GNOME Games user help is maintained by a volunteer community. You are "
-"welcome to participate."
-msgstr ""
-
-#: C/documentation.page:32(page/p)
-msgid ""
-"To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"http://live.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"http://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link> ."
-msgstr ""
-
-#: C/documentation.page:40(page/p)
-msgid ""
-"Our <link href=\"https://live.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
-msgstr ""
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:24(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-msgstr ""
-"external ref='figures/face-smile.svg' md5='6a6254c55d6e76f65007dfef107f4019'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:28(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-msgstr ""
-"external ref='figures/face-worried.svg' "
-"md5='f0a66a1c5046deef93c14eeb9993b367'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:32(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-msgstr ""
-"external ref='figures/face-sad.svg' md5='9e02c857add1e6a859e14a89cf0b83ae'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:36(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-msgstr ""
-"external ref='figures/face-cool.svg' md5='6ce4a904009988e203e3d50896f6016e'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/faces.page:40(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-msgstr ""
-"external ref='figures/face-win.svg' md5='5a18e37927cee8d20cfc5b37fbcb680b'"
-
-#: C/faces.page:20(page/title)
-msgid "The meaning of the faces"
-msgstr ""
-
-#: C/faces.page:25(td/p)
-msgid "This is a new game and you have not clicked on any tile yet."
-msgstr ""
-
-#: C/faces.page:29(td/p)
-msgid "You are currently clicking on a tile."
-msgstr ""
-
-#: C/faces.page:33(td/p)
-msgid "You have uncovered a mine. You lose."
-msgstr ""
-
-#: C/faces.page:37(td/p)
-msgid "The tile you just clicked on is safe. You can continue."
-msgstr ""
-
-#: C/faces.page:41(td/p)
-msgid "You have found all the mines. You win!"
-msgstr ""
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:34(media)
-msgctxt "_"
-msgid "external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-msgstr ""
-"external ref='figures/flags.png' md5='21bb5789d11d2ea40515a4dfcfd597ca'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:56(media)
-msgctxt "_"
-msgid "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-msgstr "external ref='figures/flag.svg' md5='f9cc3827986004290dd5c61b02e18b73'"
-
-#. This is a reference to an external file such as an image or video. When
-#. the file changes, the md5 hash will change to let you know you need to
-#. update your localized copy. The msgstr is not used at all. Set it to
-#. whatever you like once you have updated your copy of the file.
-#: C/flags.page:85(media)
-msgctxt "_"
-msgid ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-msgstr ""
-"external ref='figures/flag-question.svg' "
-"md5='544c1aaa711ee86a03a817a1e3b57733'"
-
-#: C/flags.page:30(page/title)
-msgid "How to use flags"
-msgstr ""
-
-#: C/flags.page:37(td/p)
-msgid ""
-"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
-"flag on a tile prevents you from clicking on it and possibly causing an "
-"explosion, which would end the game."
-msgstr ""
-
-#: C/flags.page:45(section/title)
-msgid "How to place a flag on a tile"
-msgstr ""
-
-#: C/flags.page:49(td/p)
-msgid ""
-"Red flags are those that cannot be clicked. To place a red flag on a tile:"
-msgstr ""
-
-#: C/flags.page:52(item/p)
-msgid "right click on a blank tile."
-msgstr "feu clic amb el botó secundari a una casella no descoberta."
-
-#: C/flags.page:62(note/p)
-msgid ""
-"To make the number of available flags equal to the number of remaining "
-"mines, enable <gui style=\"checkbox\">Warn if too many flags placed</gui> "
-"and <gui style=\"checkbox\">Use \"I'm not sure\" flags</gui> preference "
-"options, then restart the application."
-msgstr ""
-
-#: C/flags.page:72(section/title)
-msgid "Use of the <em>I'm not sure</em> flag"
-msgstr ""
-
-#: C/flags.page:73(section/p)
-msgid ""
-"If you are not sure whether a tile hides a mine, you can use the blue "
-"<em>I'm not sure</em> flag."
-msgstr ""
-
-#: C/flags.page:78(td/p)
-msgid "To put an <em>I'm not sure</em> flag on a tile:"
-msgstr ""
-
-#: C/flags.page:80(item/p)
-msgid "Right-click twice on a blank tile or once on a red flag."
-msgstr ""
-
-#: C/flags.page:91(note/p)
-msgid ""
-"To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
-"style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm not "
-"sure\" flags</gui>."
-msgstr ""
-
-#: C/get-help.page:21(page/title)
-msgid "Hints and warnings"
-msgstr ""
-
-#: C/get-help.page:23(page/p)
-msgid ""
-"You can use hints to reveal safe tiles, and flag warnings to help you keep "
-"track of flags."
-msgstr ""
-
-#: C/get-help.page:26(page/p)
-msgid ""
-"Click <gui style=\"button\">Hint</gui> in the toolbar to reveal a hidden "
-"tile that is safe. You will be penalized for using hints: ten seconds will "
-"be added to your total time."
-msgstr ""
-
-#: C/get-help.page:30(page/p)
-msgid ""
-"To enable warnings, edit the preferences by selecting <guiseq><gui>Mines</"
-"gui><gui>Preferences</gui></guiseq> and ticking the checkbox next to "
-"<gui>Warn if too many flags have been placed</gui>. This will warn you when "
-"you try to place too many flags next to an open tile."
-msgstr ""
-
-#: C/high-scores.page:22(page/title)
-msgid "High scores"
-msgstr "Puntuacions màximes"
-
-#: C/high-scores.page:24(page/p)
-msgid ""
-"The high scores list the ten fastest times in which each type of mine field "
-"has been cleared."
-msgstr ""
-
-#: C/high-scores.page:27(page/p)
-msgid ""
-"To view the high scores, select <guiseq><gui style=\"menu\">Mines</gui><gui "
-"style=\"menuitem\">Scores</gui></guiseq>. The dialog will display the "
-"<gui>Small</gui> field size by default; to view other sizes, select them in "
-"the drop down menu at the top of the dialog."
-msgstr ""
-
-#: C/license.page:8(info/desc)
+#. (itstool) path: info/desc
+#: C/license.page:8
 msgid "Legal information."
 msgstr "Informació legal."
 
-#: C/license.page:11(page/title)
+#. (itstool) path: page/title
+#: C/license.page:11
 msgid "License"
 msgstr "Llicència"
 
-#: C/license.page:12(page/p)
+#. (itstool) path: page/p
+#: C/license.page:12
 msgid ""
-"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
-"Unported license."
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0"
+" Unported license."
 msgstr ""
+"Aquesta obra es distribueix sota una llicència no adaptada CreativeCommons "
+"Reconeixement-Compartir Igual 3.0."
 
-#: C/license.page:20(page/p)
+#. (itstool) path: page/p
+#: C/license.page:20
 msgid "You are free:"
-msgstr ""
+msgstr "Podeu:"
 
-#: C/license.page:25(item/title)
+#. (itstool) path: item/title
+#: C/license.page:25
 msgid "<em>To share</em>"
-msgstr ""
+msgstr "<em>Compartir</em>"
 
-#: C/license.page:26(item/p)
+#. (itstool) path: item/p
+#: C/license.page:26
 msgid "To copy, distribute and transmit the work."
-msgstr ""
+msgstr "Copiar, distribuir i transmetre l'obra."
 
-#: C/license.page:29(item/title)
+#. (itstool) path: item/title
+#: C/license.page:29
 msgid "<em>To remix</em>"
-msgstr ""
+msgstr "<em>Adaptar</em>"
 
-#: C/license.page:30(item/p)
+#. (itstool) path: item/p
+#: C/license.page:30
 msgid "To adapt the work."
-msgstr ""
+msgstr "Adaptar l'obra."
 
-#: C/license.page:33(page/p)
+#. (itstool) path: page/p
+#: C/license.page:33
 msgid "Under the following conditions:"
-msgstr ""
+msgstr "Amb les condicions següents:"
 
-#: C/license.page:38(item/title)
+#. (itstool) path: item/title
+#: C/license.page:38
 msgid "<em>Attribution</em>"
-msgstr ""
+msgstr "<em>Atribució</em>"
 
-#: C/license.page:39(item/p)
+#. (itstool) path: item/p
+#: C/license.page:39
 msgid ""
 "You must attribute the work in the manner specified by the author or "
-"licensor (but not in any way that suggests that they endorse you or your use "
-"of the work)."
+"licensor (but not in any way that suggests that they endorse you or your use"
+" of the work)."
 msgstr ""
+"Heu d'atribuir l'obra de la manera especificada per l'autor o llicenciador "
+"(però no d'una manera que suggereixi que el llicenciador us patrocina o "
+"patrocina l'ús que feu de l'obra)."
 
-#: C/license.page:46(item/title)
+#. (itstool) path: item/title
+#: C/license.page:46
 msgid "<em>Share Alike</em>"
-msgstr ""
+msgstr "<em>Compartir igual</em>"
 
-#: C/license.page:47(item/p)
+#. (itstool) path: item/p
+#: C/license.page:47
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
+"Si altereu, transformeu o creeu a partir d'aquesta obra, només podeu "
+"distribuir l'obra resultant amb la mateixa llicència, una de similar o una "
+"de compatible."
 
-#: C/license.page:53(page/p)
+#. (itstool) path: page/p
+#: C/license.page:53
 msgid ""
-"For the full text of the license, see the <link href=\"http://"
-"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
-"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
-"sa/3.0/\">Commons Deed</link>."
+"For the full text of the license, see the <link "
+"href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/legalcode\">CreativeCommons website</link>, or read the full <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
 msgstr ""
+"Per al text complet de la llicència, vegeu el <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">lloc web de"
+" CreativeCommons</link> o llegiu el <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">document complet de "
+"l'acte</link>."
 
-#: C/new-game.page:26(page/title)
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#: C/new-game.page:32
 msgid "Start a new game"
-msgstr ""
+msgstr "Començar una partida"
 
-#: C/new-game.page:28(page/p)
+#. (itstool) path: page/p
+#: C/new-game.page:34
 msgid "To start a new game:"
-msgstr ""
+msgstr "Per a començar una partida:"
 
-#: C/new-game.page:31(item/p)
+#. (itstool) path: item/p
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
+msgstr "Premeu el botó <gui style=\"button\">Juga de nou</gui> de la dreta."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
 msgid ""
-"Click the <gui style=\"button\">New</gui> button or select <guiseq><gui "
-"style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq> "
-"from the application menu."
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
+"Per a canviar la <link xref=\"board-size\">mida del tauler</link>, premeu el"
+" botó <gui style=\"button\">Canvia la dificultat</gui> de la dreta."
 
-#: C/new-game.page:37(item/p)
-msgid "Select your preferred <link xref=\"board-size\">board size</link>."
-msgstr ""
-
-#: C/new-game.page:42(note/p)
+#. (itstool) path: note/p
+#: C/new-game.page:47
 msgid ""
-"If you are already playing a game, <app>Mines</app> will ask if you want to "
-"<gui>Start New Game</gui> or <gui>Keep Current Game</gui>. If you choose the "
-"former, your current game will be lost."
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
+"Si esteu jugant una partida i premeu el botó <gui style=\"button\">Comença "
+"de nou</gui>, el <app>Mines</app> us demanarà si voleu <gui>mantenir la "
+"partida actual</gui> o <gui>començar una partida nova</gui>. Si escolliu la "
+"segona opció, es perdrà la partida actual."
 
-#: C/rules.page:24(page/title)
+#. (itstool) path: page/title
+#: C/rules.page:24
 msgid "Game rules"
-msgstr ""
+msgstr "Regles de joc"
 
-#: C/rules.page:26(page/p)
+#. (itstool) path: page/p
+#: C/rules.page:26
 msgid ""
-"The aim of <app>Mines</app> is to clear the minefield without detonating any "
-"of the mines."
+"The aim of <app>Mines</app> is to clear the minefield without detonating any"
+" of the mines."
 msgstr ""
+"L'objectiu del <app>Mines</app> és netejar el camp de mines sense detonar "
+"cap de les mines."
 
-#: C/rules.page:31(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:31
 msgid ""
-"Start by chosing one of the three default board sizes, or by selecting a "
+"Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
+"Comenceu triant una de les tres mides de tauler per defecte o seleccionant "
+"un tauler personalitzat."
 
-#: C/rules.page:35(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:35
 msgid ""
 "The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
 msgstr ""
+"El joc comença amb les caselles del tauler cobertes. Feu clic en una casella"
+" per a descobrir-la. Això revelarà:"
 
-#: C/rules.page:39(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:39
 msgid ""
-"A colored number, which represent the number of mines in the adjacent tiles. "
-"This will help you deduce where the mines are so that you can mark them with "
-"<link xref=\"flags\">flags</link>."
+"A colored number, which represent the number of mines in the adjacent tiles."
+" This will help you deduce where the mines are so that you can mark them "
+"with <link xref=\"flags\">flags</link>."
 msgstr ""
+"Un nombre de color, que representa el nombre de mines que hi ha a les "
+"caselles adjacents. Això us ajudarà a deduir on són les mines i així podreu "
+"marcar-les amb <link xref=\"flags\">banderes</link>."
 
-#: C/rules.page:44(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:44
 msgid ""
-"A blank tile, which means there are no mines under any of the adjacent tiles."
+"A blank tile, which means there are no mines under any of the adjacent "
+"tiles."
 msgstr ""
+"Una casella buida, la qual cosa significa que no hi ha cap mina en cap de "
+"les caselles adjacents."
 
-#: C/rules.page:48(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:48
 msgid "A mine, which will detonate and end the game."
-msgstr ""
+msgstr "Una mina, que detonarà i finalitzarà la partida."
 
-#: C/rules.page:53(item/p)
+#. (itstool) path: item/p
+#: C/rules.page:53
 msgid ""
-"Repeat the previous step until you have uncovered all the tiles which do not "
-"have mines underneath them."
+"Repeat the previous step until you have uncovered all the tiles which do not"
+" have mines underneath them."
 msgstr ""
+"Repetiu el pas anterior fins que hàgiu descobert totes les caselles que no "
+"tinguin mines a sota."
 
-#: C/rules.page:58(page/p)
+#. (itstool) path: page/p
+#: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link xref"
+"=\"high-scores\">high scores</link> list."
 msgstr ""
+"Si acabeu la partida prou ràpidament, entrareu a la llista de <link xref"
+"=\"high-scores\">puntuacions màximes</link>."
 
-#: C/shortcuts.page:17(page/title)
-msgid "Keyboard shortcuts"
-msgstr ""
-
-#: C/shortcuts.page:20(td/p)
-msgid "New game"
-msgstr "Partida nova"
-
-#: C/shortcuts.page:21(td/p)
-msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#: C/shortcuts.page:24(td/p)
-msgid "Fullscreen"
-msgstr "Pantalla completa"
-
-#: C/shortcuts.page:25(td/p)
-msgid "<key>F11</key>"
-msgstr "<key>F11</key>"
-
-#: C/shortcuts.page:28(td/p)
-msgid "Hint"
-msgstr "Pista"
-
-#: C/shortcuts.page:29(td/p)
-msgid "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>H</key></keyseq>"
-
-#: C/shortcuts.page:32(td/p)
-msgid "Pause"
-msgstr "Fes una pausa"
-
-#: C/shortcuts.page:33(td/p)
-msgid "<key>Pause</key>"
-msgstr ""
-
-#: C/shortcuts.page:34(note/p)
-msgid ""
-"Use the toolbar shortcut if your keyboard does not have a <key>Pause</key> "
-"key."
-msgstr ""
-
-#: C/shortcuts.page:37(td/p)
-msgid "Help"
-msgstr "Ajuda"
-
-#: C/shortcuts.page:38(td/p)
-msgid "<key>F1</key>"
-msgstr "<key>F1</key>"
-
-#: C/shortcuts.page:41(td/p)
-msgid "Quit"
-msgstr "Tanca"
-
-#: C/shortcuts.page:42(td/p)
-msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-
-#: C/toolbar.page:15(page/title)
-msgid "Toolbar"
-msgstr "Barra d'eines"
-
-#: C/toolbar.page:17(page/p)
-msgid ""
-"The toolbar, located under the menu bar, lets you perform common actions "
-"with your mouse. To use a toolbar item, just click on it. The buttons, from "
-"left to right, are <gui><link xref=\"new-game\">New Game</link></gui>, <link "
-"xref=\"get-help\">Hint</link>, <gui>Pause</gui> and <gui>Fullscreen</gui>."
-msgstr ""
-
-#: C/translate.page:15(credit/name)
+#. (itstool) path: credit/name
+#: C/translate.page:15
 msgid "Michael Hill"
 msgstr "Michael Hill"
 
-#: C/translate.page:23(page/title)
+#. (itstool) path: page/title
+#: C/translate.page:23
 msgid "Help translate"
-msgstr ""
+msgstr "Ajudar a traduir"
 
-#: C/translate.page:24(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:24
 msgid ""
 "The <app>GNOME games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
+"La interfície d'usuari i la documentació dels <app>jocs del GNOME</app> les "
+"tradueix una comunitat mundial de voluntaris. Us convidem a participar-hi."
 
-#: C/translate.page:27(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:27
 msgid ""
-"There are <link href=\"http://l10n.gnome.org/module/gnome-mines/\">many "
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
 msgstr ""
+" Hi ha <link href=\"https://l10n.gnome.org/module/gnome-mines/\">molts "
+"idiomes</link> dels quals encara es necessiten traduccions."
 
-#: C/translate.page:30(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"http:l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"http://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link "
+"href=\"https://l10n.gnome.org\">create an account</link> and join the <link "
+"href=\"https://l10n.gnome.org/teams/\">translation team</link> for your "
+"language. This will give you the ability to upload new translations."
 msgstr ""
+"Per a començar a traduir, heu de <link href=\"https://l10n.gnome.org\">crear"
+" un compte</link> i unir-vos a l'<link "
+"href=\"https://l10n.gnome.org/teams/\">equip de traducció</link> de la "
+"vostra llengua. Això us permetrà carregar traduccions noves."
 
-#: C/translate.page:34(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:34
 msgid ""
-"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
-"channel are located worldwide, so you may not get an immediate response as a "
-"result of timezone differences."
+"You can chat with GNOME translators using <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>."
+" People on the channel are located worldwide, so you may not get an "
+"immediate response as a result of timezone differences."
 msgstr ""
+"Podeu xatejar amb els traductors del GNOME mitjançant l'<link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>."
+" Els participants del canal es troben a tot el món, per tant, pot ser que no"
+" obtingueu una resposta immediata per les diferències horàries."
 
-#: C/translate.page:37(page/p)
+#. (itstool) path: page/p
+#: C/translate.page:37
 msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"http://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
+"També podeu contactar amb l'equip d'internacionalització mitjançant la seva "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">llista de "
+"correu</link>."
