@@ -1,23 +1,23 @@
 # German translation of the GNOME mines manual.
 #
+#
 # Florian Purucker <florian@purucker.net>, 2007.
-# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2017-2018, 2019.
+# Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2017-2018, 2019, 2020.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2014.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-18 07:34+0000\n"
-"PO-Revision-Date: 2019-04-05 20:58+0200\n"
+"POT-Creation-Date: 2020-05-31 06:47+0000\n"
+"PO-Revision-Date: 2020-09-02 20:32+0200\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 20.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -31,29 +31,27 @@ msgstr ""
 "Bernd Homuth <dev@hmt.im>, 2014."
 
 #. (itstool) path: credit/name
-#: C/board-size.page:11 C/flags.page:20 C/get-help.page:12 C/high-scores.page:12
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
 #: C/new-game.page:13 C/rules.page:11
 msgid "Baptiste Mille-Mathias"
 msgstr "Baptiste Mille-Mathias"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
-#: C/documentation.page:11 C/get-help.page:14 C/rules.page:13
-#: C/translate.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
 msgid "2011"
 msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/get-help.page:17 C/high-scores.page:17 C/index.page:17 C/new-game.page:18
-#: C/rules.page:16
+#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
 #. (itstool) path: credit/years
 #: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
-#: C/flags.page:28 C/get-help.page:19 C/high-scores.page:14
-#: C/high-scores.page:19 C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
 msgid "2012"
 msgstr "2012"
 
@@ -101,8 +99,8 @@ msgid ""
 "<gui style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
 "Um die <link xref=\"board-size\">Spielfeldgröße</link> später zu ändern, "
-"klicken Sie auf den Knopf <gui style=\"button\">Schwierigkeit verändern</gui> "
-"rechts."
+"klicken Sie auf den Knopf <gui style=\"button\">Schwierigkeit verändern</"
+"gui> rechts."
 
 #. (itstool) path: credit/name
 #: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
@@ -134,10 +132,11 @@ msgid ""
 "file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
 "issues\"/>."
 msgstr ""
-"<app>Minen</app> wird von einer Gemeinschaft aus Freiwilligen entwickelt. Sie "
-"sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein Problem "
-"entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. Besuchen Sie "
-"hierzu <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
+"<app>Minen</app> wird von einer Gemeinschaft aus Freiwilligen entwickelt. "
+"Sie sind herzlich eingeladen, sich daran zu beteiligen. Falls Sie ein "
+"Problem entdecken, können Sie einen <em>Fehlerbericht erstellen</em>. "
+"Besuchen Sie hierzu <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -164,19 +163,26 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
+#| msgid ""
+#| "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
+#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
+#| "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
+#| "link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/page."
-"cgi?id=bug-writing.html\">bug writing guidelines</link>, and please <link "
-"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</link> for "
-"the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Sobald die Erstellung des Kontos abgeschlossen ist, melden Sie sich an und "
 "klicken Sie auf <gui>New Issue</gui>. Bevor Sie einen Fehler melden, lesen "
-"Sie bitte die <link href=\"https://bugzilla.gnome.org/page.cgi?id=bug-writing."
-"html\">bug writing guidelines</link> und <link href=\"https://gitlab.gnome."
-"org/GNOME/gnome-mines/issues\">schauen Sie bitte nach</link>, ob der Fehler "
-"vielleicht schon gemeldet wurde."
+"Sie bitte die <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">Richtlinien zum Melden von"
+" Fehlern</link> und <link href=\"https://gitlab."
+"gnome.org/GNOME/gnome-mines/issues\">schauen Sie bitte nach</link>, ob der "
+"Fehler vielleicht schon gemeldet wurde."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -218,16 +224,17 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/develop.page:23
 msgid ""
-"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">help develop <app>GNOME Games</app></link>, you can get in touch with the "
-"developers using <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link href=\"https://"
-"mail.gnome.org/mailman/listinfo/games-list\">mailing list</link>."
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
+"link>."
 msgstr ""
-"Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">bei der "
-"Entwicklung der <app>GNOME Games</app> helfen möchten</link>, können Sie mit "
-"den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">bei "
+"der Entwicklung der <app>GNOME Games</app> helfen möchten</link>, können Sie "
+"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc"
+"%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
 "\"https://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
 "Kontakt aufnehmen."
 
@@ -253,9 +260,9 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/documentation.page:32
 msgid ""
-"To contribute to the Documentation Project, get in touch with us on the <link "
-"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"To contribute to the Documentation Project, get in touch with us on the "
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
@@ -295,13 +302,13 @@ msgstr ""
 #. (itstool) path: td/p
 #: C/flags.page:43
 msgid ""
-"The exact look of the flags depends on the theme. You can change the theme by "
-"pressing the menu button in the top-right corner of the window and then "
+"The exact look of the flags depends on the theme. You can change the theme "
+"by pressing the menu button in the top-right corner of the window and then "
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
-"Das genaue Aussehen der Flaggen hängt vom jeweiligen Thema ab. Sie können das "
-"Thema ändern, in dem Sie auf den Menüknopf in der rechten oberen Ecke des "
-"Fensters klicken und dann <gui style=\"menuitem\">Erscheinungsbild</gui> "
+"Das genaue Aussehen der Flaggen hängt vom jeweiligen Thema ab. Sie können "
+"das Thema ändern, in dem Sie auf den Menüknopf in der rechten oberen Ecke "
+"des Fensters klicken und dann <gui style=\"menuitem\">Erscheinungsbild</gui> "
 "wählen."
 
 #. (itstool) path: section/title
@@ -313,34 +320,21 @@ msgstr "So setzen Sie eine Fahne auf ein Feld"
 #: C/flags.page:55
 msgid "Flags cannot be clicked. To place a flag on a tile:"
 msgstr ""
-"Fahnen können nicht angeklickt werden. So platzieren Sie eine Fahne auf einem "
-"Feld:"
+"Fahnen können nicht angeklickt werden. So platzieren Sie eine Fahne auf "
+"einem Feld:"
 
 #. (itstool) path: item/p
 #: C/flags.page:57
 msgid "right click on a blank tile."
 msgstr "Klicken Sie mit der rechten Maustaste auf ein leeres Feld."
 
-#. (itstool) path: note/p
-#: C/flags.page:67
-msgid ""
-"To make the number of available flags equal to the number of remaining mines, "
-"pressing the menu button in the top-right corner of the window and enable the "
-"<gui style=\"checkbox\">Show Warnings</gui> and <gui style=\"checkbox\">Use "
-"Question Flags</gui> preferences."
-msgstr ""
-"Um die gleiche Anzahl verfügbarer Fahnen und verbleibender Minen zu erhalten, "
-"klicken Sie auf den Menüknopf in der rechten oberen Ecke des Fensters und "
-"aktivieren Sie die Optionen <gui style=\"checkbox\">Warnungen anzeigen</gui> "
-"und <gui style=\"checkbox\">Fragen-Fahne verwenden</gui>."
-
 #. (itstool) path: section/title
-#: C/flags.page:77
+#: C/flags.page:69
 msgid "Use of the <em>question</em> flag"
 msgstr "Verwendung der <em>Fragen</em>-Fahne"
 
 #. (itstool) path: section/p
-#: C/flags.page:78
+#: C/flags.page:70
 msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
@@ -349,20 +343,20 @@ msgstr ""
 "können Sie die <em>Fragen</em>-Fahne einsetzen."
 
 #. (itstool) path: td/p
-#: C/flags.page:83
+#: C/flags.page:75
 msgid "To put an <em>I'm not sure</em> flag on a tile:"
 msgstr ""
 "So setzen Sie eine <em>Ich bin mir nicht sicher</em>-Fahne auf ein Feld:"
 
 #. (itstool) path: item/p
-#: C/flags.page:85
+#: C/flags.page:77
 msgid "Right-click twice on a blank tile or once on a flag."
 msgstr ""
-"Klicken Sie zweimal mit der rechten Maustaste auf ein leeres Feld oder einmal "
-"auf eine Fahne."
+"Klicken Sie zweimal mit der rechten Maustaste auf ein leeres Feld oder "
+"einmal auf eine Fahne."
 
 #. (itstool) path: note/p
-#: C/flags.page:96
+#: C/flags.page:88
 msgid ""
 "To enable these flags, press the menu button in the top-right corner of the "
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
@@ -371,40 +365,6 @@ msgstr ""
 "Um diese Fahnen zu aktivieren, klicken Sie auf den Menüknopf in der rechten "
 "oberen Ecke des Fensters und aktivieren Sie die Option <gui style=\"checkbox"
 "\">Fragen-Fahne verwenden</gui>."
-
-#. (itstool) path: credit/name
-#: C/get-help.page:22 C/new-game.page:27
-msgid "Rashi Aswani"
-msgstr "Rashi Aswani"
-
-#. (itstool) path: credit/years
-#: C/get-help.page:24
-msgid "2014"
-msgstr "2014"
-
-#. (itstool) path: page/title
-#: C/get-help.page:29
-msgid "Warnings"
-msgstr "Warnungen"
-
-#. (itstool) path: page/p
-#: C/get-help.page:31
-msgid "You can flag warnings to help you keep track of flags."
-msgstr ""
-"Sie können Warnungen auslösen, was Ihnen dabei hilft, die Fahnen im Auge zu "
-"behalten."
-
-#. (itstool) path: page/p
-#: C/get-help.page:33
-msgid ""
-"To enable warnings, press the menu button in the top-right corner of the "
-"window and then select <gui style=\"checkbox\">Show Warnings</gui>. This will "
-"warn you when you try to place too many flags next to an open tile."
-msgstr ""
-"Um Warnungen zu aktivieren, klicken Sie auf den Menüknopf in der rechten "
-"oberen Ecke des Fensters und wählen <gui style=\"checkbox\">Warnungen "
-"anzeigen</gui>. Dadurch werden Sie gewarnt, wenn Sie versuchen, zu viele "
-"Fahnen neben einem bereits geöffneten Feld zu platzieren."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -423,8 +383,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/high-scores.page:29
 msgid ""
-"To view the high scores, press the menu button in the top-right corner of the "
-"window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
 "display the <gui>Small</gui> field size by default; to view other sizes, "
 "select them in the drop down menu at the top of the dialog."
 msgstr ""
@@ -459,15 +419,15 @@ msgstr "<_:media-1/> GNOME Minen"
 #. (itstool) path: page/p
 #: C/index.page:27
 msgid ""
-"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate all "
-"the mines that are hidden under tiles on a rectangular board. You will need "
-"to use a combination of logic and luck to find all the mines without "
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
 msgstr ""
-"<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist es, "
-"die unter den Feldern eines rechteckigen Spielfelds verborgenen Minen "
-"aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen zu "
-"finden, ohne eine Explosion zu verursachen."
+"<app>Minen</app> ist ein Klon des Spiels Minesweeper. Ziel des Spiels ist "
+"es, die unter den Feldern eines rechteckigen Spielfelds verborgenen Minen "
+"aufzuspüren. Sie benötigen sowohl Gedächtnis als auch Glück, um alle Minen "
+"zu finden, ohne eine Explosion zu verursachen."
 
 #. (itstool) path: section/title
 #: C/index.page:34
@@ -480,12 +440,7 @@ msgid "Useful tips"
 msgstr "Nützliche Tipps"
 
 #. (itstool) path: section/title
-#: C/index.page:41
-msgid "Advanced"
-msgstr "Fortgeschritten"
-
-#. (itstool) path: section/title
-#: C/index.page:45
+#: C/index.page:46
 msgid "Get Involved"
 msgstr "Mithelfen"
 
@@ -548,13 +503,13 @@ msgstr "<em>Weitergabe</em>"
 #. (itstool) path: item/p
 #: C/license.page:39
 msgid ""
-"You must attribute the work in the manner specified by the author or licensor "
-"(but not in any way that suggests that they endorse you or your use of the "
-"work)."
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
 msgstr ""
 "Sie dürfen das Werk nur unter gleichen Bedingungen weitergeben, wie Sie vom "
-"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr Werk "
-"aussieht)."
+"Autor oder Lizenzgeber festgelegt wurden (aber nicht so, dass es wie Ihr "
+"Werk aussieht)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
@@ -576,15 +531,20 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/license.page:53
 msgid ""
-"For the full text of the license, see the <link href=\"http://creativecommons."
-"org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</link>, or read "
-"the full <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
-"\">Commons Deed</link>."
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Den vollständigen Text der Lizenz finden Sie auf der <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons-Webseite</"
 "link>. Oder Sie können den vollständigen <link href=\"http://creativecommons."
 "org/licenses/by-sa/3.0/\">Commons Deed</link> lesen."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
 
 #. (itstool) path: page/title
 #: C/new-game.page:32
@@ -608,16 +568,16 @@ msgid ""
 "To change the <link xref=\"board-size\">board size</link>, press the <gui "
 "style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
-"Um die <link xref=\"board-size\">Spielfeldgröße</link> zu ändern, klicken Sie "
-"auf den Knopf <gui style=\"button\">Schwierigkeit verändern</gui> rechts."
+"Um die <link xref=\"board-size\">Spielfeldgröße</link> zu ändern, klicken "
+"Sie auf den Knopf <gui style=\"button\">Schwierigkeit verändern</gui> rechts."
 
 #. (itstool) path: note/p
 #: C/new-game.page:47
 msgid ""
 "If you are already playing a game and press the <gui style=\"button\">Start "
-"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep Current "
-"Game</gui> or <gui>Start New Game</gui>. If you choose the latter, your "
-"current game will be lost."
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
 msgstr ""
 "Fall Sie bereits ein Spiel spielten und den <gui style=\"button\">Von neuem "
 "beginnen</gui>-Knopf anklicken, so würde <app>Minen</app> Sie fragen, ob Sie "
@@ -651,11 +611,11 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/rules.page:35
 msgid ""
-"The game begins with the board covered in tiles. Click on any tile to uncover "
-"it. You will reveal:"
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
 msgstr ""
-"Das Spiel beginnt mit einem von Kacheln verdeckten Spielfeld. Klicken Sie auf "
-"eines der Felder, um es aufzudecken. Sie öffnen damit:"
+"Das Spiel beginnt mit einem von Kacheln verdeckten Spielfeld. Klicken Sie "
+"auf eines der Felder, um es aufzudecken. Sie öffnen damit:"
 
 #. (itstool) path: item/p
 #: C/rules.page:39
@@ -665,8 +625,8 @@ msgid ""
 "<link xref=\"flags\">flags</link>."
 msgstr ""
 "Eine farbige Zahl gibt die Anzahl der Minen unter benachbarten Feldern an. "
-"Dies gibt Ihnen einen Hinweis darauf, wo sich Minen befinden und wo Sie <link "
-"xref=\"flags\">Fahnen</link> setzen müssen."
+"Dies gibt Ihnen einen Hinweis darauf, wo sich Minen befinden und wo Sie "
+"<link xref=\"flags\">Fahnen</link> setzen müssen."
 
 #. (itstool) path: item/p
 #: C/rules.page:44
@@ -718,8 +678,8 @@ msgid ""
 "participate."
 msgstr ""
 "Die Benutzeroberfläche und die Dokumentation der <app>GNOME Spiele</app> "
-"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie sind "
-"herzlich eingeladen, sich daran zu beteiligen."
+"werden von einer weltweiten Gemeinschaft aus Freiwilligen übersetzt. Sie "
+"sind herzlich eingeladen, sich daran zu beteiligen."
 
 #. (itstool) path: page/p
 #: C/translate.page:27
@@ -767,3 +727,39 @@ msgstr ""
 "Alternativ können Sie das Internationalisierungsteam über dessen <link href="
 "\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
 "kontaktieren."
+
+#~ msgid ""
+#~ "To make the number of available flags equal to the number of remaining "
+#~ "mines, pressing the menu button in the top-right corner of the window and "
+#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+#~ "\"checkbox\">Use Question Flags</gui> preferences."
+#~ msgstr ""
+#~ "Um die gleiche Anzahl verfügbarer Fahnen und verbleibender Minen zu "
+#~ "erhalten, klicken Sie auf den Menüknopf in der rechten oberen Ecke des "
+#~ "Fensters und aktivieren Sie die Optionen <gui style=\"checkbox"
+#~ "\">Warnungen anzeigen</gui> und <gui style=\"checkbox\">Fragen-Fahne "
+#~ "verwenden</gui>."
+
+#~ msgid "2014"
+#~ msgstr "2014"
+
+#~ msgid "Warnings"
+#~ msgstr "Warnungen"
+
+#~ msgid "You can flag warnings to help you keep track of flags."
+#~ msgstr ""
+#~ "Sie können Warnungen auslösen, was Ihnen dabei hilft, die Fahnen im Auge "
+#~ "zu behalten."
+
+#~ msgid ""
+#~ "To enable warnings, press the menu button in the top-right corner of the "
+#~ "window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
+#~ "will warn you when you try to place too many flags next to an open tile."
+#~ msgstr ""
+#~ "Um Warnungen zu aktivieren, klicken Sie auf den Menüknopf in der rechten "
+#~ "oberen Ecke des Fensters und wählen <gui style=\"checkbox\">Warnungen "
+#~ "anzeigen</gui>. Dadurch werden Sie gewarnt, wenn Sie versuchen, zu viele "
+#~ "Fahnen neben einem bereits geöffneten Feld zu platzieren."
+
+#~ msgid "Advanced"
+#~ msgstr "Fortgeschritten"
