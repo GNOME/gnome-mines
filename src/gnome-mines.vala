@@ -236,7 +236,7 @@ public class Mines : Gtk.Application
         stack = (Stack) ui_builder.get_object ("stack");
 
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
-        minefield_overlay.add (minefield_view);
+        minefield_overlay.set_child (minefield_view);
 
         paused_box = (Box) ui_builder.get_object ("paused_box");
 
@@ -330,25 +330,25 @@ public class Mines : Gtk.Application
         var label = new Label (null);
         label.set_markup (make_minefield_description (8, 8, 10));
         label.set_justify (Justification.CENTER);
-        button.add (label);
+        button.set_child (label);
 
         button = (Button) builder.get_object ("medium_size_btn");
         label = new Label (null);
         label.set_markup (make_minefield_description (16, 16, 40));
         label.set_justify (Justification.CENTER);
-        button.add (label);
+        button.set_child (label);
 
         button = (Button) builder.get_object ("large_size_btn");
         label = new Label (null);
         label.set_markup (make_minefield_description (30, 16, 99));
         label.set_justify (Justification.CENTER);
-        button.add (label);
+        button.set_child (label);
 
         button = (Button) builder.get_object ("custom_size_btn");
         label = new Label (null);
         label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
         label.set_justify (Justification.CENTER);
-        button.add (label);
+        button.set_child (label);
     }
 
     private void startup_custom_game_screen (Builder builder)
