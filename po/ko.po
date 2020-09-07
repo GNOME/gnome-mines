@@ -10,7 +10,7 @@
 #
 # ChiHyeon Kim <pipi910327@gmail.com>, 2017.
 # Changwoo Ryu <cwryu@debian.org>, 2013-2015, 2017.
-# Seong-ho Cho <shcho@gnome.org>, 2019.
+# Seong-ho Cho <shcho@gnome.org>, 2019-2020.
 #
 #
 # 새로 번역하신 분은 아래 "translator-credits"에 추가하세요.
@@ -19,8 +19,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2019-03-26 17:59+0000\n"
-"PO-Revision-Date: 2019-09-02 09:49+0900\n"
+"POT-Creation-Date: 2020-05-31 06:46+0000\n"
+"PO-Revision-Date: 2020-09-07 23:14+0900\n"
 "Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: GNOME Korea <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -28,7 +28,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -64,7 +64,7 @@ msgid "The GNOME Project"
 msgstr "그놈 프로젝트"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:166 src/gnome-mines.vala:222 src/gnome-mines.vala:861
+#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
 msgid "Mines"
 msgstr "지뢰찾기"
 
@@ -102,70 +102,59 @@ msgid "Set to true to be able to mark squares as unknown."
 msgstr "참으로 설정하면, 지뢰인지 아닌지 알 수 없는 칸을 표시할 수 있습니다."
 
 #: data/org.gnome.Mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr "너무 깃발이 많을 때 경고"
-
-#: data/org.gnome.Mines.gschema.xml:16
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr ""
-"참이면 숫자 옆에 너무 깃발을 많이 만들었을 때 경고 아이콘을 표시합니다."
-
-#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable automatic placing of flags"
 msgstr "자동으로 깃발 놓기 사용"
 
-#: data/org.gnome.Mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
 "참이면 주위 칸이 충분히 알려졌을 때 자동으로 해당 칸을 지뢰로 표시합니다"
 
-#: data/org.gnome.Mines.gschema.xml:25
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
 msgstr "애니메이션 사용"
 
-#: data/org.gnome.Mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
 msgstr "거짓으로 설정하면 테마에서 정의한 변화 애니메이션을 사용하지 않습니다"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "사용자 설정의 가로 크기"
 
-#: data/org.gnome.Mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "사용자 설정의 세로 크기"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "사용자 설정 게임에서 지뢰 개수"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "보드 크기"
 
-#: data/org.gnome.Mines.gschema.xml:46
+#: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgstr "보드의 크기(0-2 = 작게-크게, 3=사용자 설정)"
 
-#: data/org.gnome.Mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "창의 너비, 픽셀 단위"
 
-#: data/org.gnome.Mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "창의 높이, 픽셀 단위"
 
-#: data/org.gnome.Mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "참이면 창을 최대화"
 
 #: src/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "Window and games"
+msgid "Window and game"
 msgstr "창과 게임"
 
 #: src/help-overlay.ui:17
@@ -175,8 +164,8 @@ msgstr "새 게임 시작"
 
 #: src/help-overlay.ui:24
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
-msgstr "마지막 설정으로 새 게임 시작"
+msgid "Restart game with current settings"
+msgstr "현재 설정으로 게임 다시 시작"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -190,37 +179,64 @@ msgstr "도움말 표시"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr "메뉴 열기"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "키보드 바로 가기 표시"
 
-#: src/help-overlay.ui:52
+#: src/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "끝내기"
 
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr "게임판 크기 선택"
+
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr "게임판 크기: 작음"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr "게임판 크기: 중간"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr "게임판 크기: 큼"
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr "게임판 크기: 개별 설정"
+
 # NOTE: 게임 진행 중 상태를 설정하는 설정 화면 상위 레이블.
-#: src/help-overlay.ui:60
+#: src/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "게임 진행"
 
-#: src/help-overlay.ui:65 src/help-overlay.ui:72
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
-msgstr "게임판의 키보드 커서 이동"
+msgid "Move the keyboard cursor"
+msgstr "키보드 커서 이동"
 
-#: src/help-overlay.ui:79
+#: src/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "게임판 표시"
 
-#: src/help-overlay.ui:86
+#: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr ""
-"게임판의 빈 상태와 깃발 표시 상태전환 (물음표 표시 기능 활성화했을 경우 물음"
-"표 표시로 전환)"
+msgid "Toggle field flag state"
+msgstr "필드 플래그 상태 전환"
 
 #: src/interface.ui:118
 msgid "_Width"
@@ -242,8 +258,8 @@ msgstr "취소(_C)"
 msgid "_Play Game"
 msgstr "게임 플레이(_P)"
 
-#: src/interface.ui:350 src/gnome-mines.vala:671 src/gnome-mines.vala:761
-#: src/gnome-mines.vala:810
+#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
+#: src/gnome-mines.vala:796
 msgid "_Pause"
 msgstr "일시 중지(_P)"
 
@@ -263,133 +279,113 @@ msgstr "다시 플레이(_P)"
 msgid "Paused"
 msgstr "일시 중지"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:95
 msgid "Print release version and exit"
 msgstr "릴리스 버전을 표시하고 끝납니다"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:96
 msgid "Small game"
 msgstr "작은 게임"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:97
 msgid "Medium game"
 msgstr "중간 게임"
 
-#: src/gnome-mines.vala:95
+#: src/gnome-mines.vala:98
 msgid "Big game"
 msgstr "큰 게임"
 
-#: src/gnome-mines.vala:233 src/gnome-mines.vala:256
+#: src/gnome-mines.vala:231
 msgid "_Scores"
 msgstr "점수(_S)"
 
-#: src/gnome-mines.vala:234 src/gnome-mines.vala:257
+#: src/gnome-mines.vala:232
 msgid "A_ppearance"
 msgstr "모양(_P)"
 
-#: src/gnome-mines.vala:237 src/gnome-mines.vala:258
-msgid "Show _Warnings"
-msgstr "경고 표시(_W)"
-
-#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
+#: src/gnome-mines.vala:235
 msgid "_Use Question Flags"
 msgstr "물음표 깃발 사용(_U)"
 
-#: src/gnome-mines.vala:241 src/gnome-mines.vala:263
+#: src/gnome-mines.vala:238
 msgid "_Keyboard Shortcuts"
 msgstr "키보드 바로 가기(_K)"
 
-#: src/gnome-mines.vala:242 src/gnome-mines.vala:262
+#: src/gnome-mines.vala:239
 msgid "_Help"
 msgstr "도움말(_H)"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:265
+#: src/gnome-mines.vala:240
 msgid "_About Mines"
 msgstr "지뢰찾기 정보(_A)"
 
-#: src/gnome-mines.vala:254
-msgid "_Mines"
-msgstr "지뢰(_M)"
-
-#: src/gnome-mines.vala:255
-msgid "_New Game"
-msgstr "새 게임(_N)"
-
-#: src/gnome-mines.vala:260
-msgid "_Quit"
-msgstr "끝내기(_Q)"
-
-#: src/gnome-mines.vala:264
-msgid "_Contents"
-msgstr "차례(_C)"
-
 #. Label on the scores dialog
-#: src/gnome-mines.vala:338
+#: src/gnome-mines.vala:316
 msgid "Minefield:"
 msgstr "지뢰밭:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:372
+#: src/gnome-mines.vala:350
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, 지뢰 %d개"
 
-#: src/gnome-mines.vala:431
+#: src/gnome-mines.vala:409
 msgid "Custom"
 msgstr "사용자 설정"
 
-#: src/gnome-mines.vala:509
+#: src/gnome-mines.vala:495
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "지뢰 <b>%d</b>개"
 
-#: src/gnome-mines.vala:619
+#: src/gnome-mines.vala:606
 msgid "Do you want to start a new game?"
 msgstr "새 게임을 시작하시겠습니까?"
 
-#: src/gnome-mines.vala:620
+#: src/gnome-mines.vala:607
 msgid "If you start a new game, your current progress will be lost."
 msgstr "새 게임을 시작하면 현재 진행 상황을 잃어버립니다."
 
-#: src/gnome-mines.vala:621
+#: src/gnome-mines.vala:608
 msgid "Keep Current Game"
 msgstr "현재 게임 유지"
 
-#: src/gnome-mines.vala:622
+#: src/gnome-mines.vala:609
 msgid "Start New Game"
 msgstr "새 게임 시작"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:658
 msgid "St_art Over"
 msgstr "처음부터 시작(_A)"
 
-#: src/gnome-mines.vala:759
+#: src/gnome-mines.vala:745
 msgid "_Resume"
 msgstr "다시 계속(_R)"
 
-#: src/gnome-mines.vala:777
+#: src/gnome-mines.vala:763
 msgid "Play _Again"
 msgstr "다시 플레이(_A)"
 
-#: src/gnome-mines.vala:834
+#: src/gnome-mines.vala:825
 msgid "Main game:"
 msgstr "주 게임:"
 
-#: src/gnome-mines.vala:839
+#: src/gnome-mines.vala:830
 msgid "Score:"
 msgstr "점수:"
 
-#: src/gnome-mines.vala:842
+#: src/gnome-mines.vala:833
 msgid "Resizing and SVG support:"
 msgstr "크기 바꾸기 및 SVG 지원:"
 
-#: src/gnome-mines.vala:864
+#: src/gnome-mines.vala:852
 msgid "Clear explosive mines off the board"
 msgstr "게임판에서 폭발물을 제거합니다"
 
-#: src/gnome-mines.vala:871
+#: src/gnome-mines.vala:859
 msgid "translator-credits"
 msgstr ""
 "류창우 <cwryu@debian.org>\n"
@@ -397,9 +393,41 @@ msgstr ""
 "김치현 <pipi910327@gmail.com>\n"
 "조성호 <shcho@gnome.org>"
 
-#: src/theme-selector-dialog.vala:106
+#: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "테마 선택"
+
+#~ msgid "Warning about too many flags"
+#~ msgstr "너무 깃발이 많을 때 경고"
+
+#~ msgid ""
+#~ "Set to true to enable warning icons when too many flags are placed next "
+#~ "to a numbered tile."
+#~ msgstr ""
+#~ "참이면 숫자 옆에 너무 깃발을 많이 만들었을 때 경고 아이콘을 표시합니다."
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "게임판의 빈 상태와 깃발 표시 상태전환 (물음표 표시 기능 활성화했을 경우 물"
+#~ "음표 표시로 전환)"
+
+#~ msgid "Show _Warnings"
+#~ msgstr "경고 표시(_W)"
+
+#~ msgid "_Mines"
+#~ msgstr "지뢰(_M)"
+
+#~ msgid "_New Game"
+#~ msgstr "새 게임(_N)"
+
+#~ msgid "_Quit"
+#~ msgstr "끝내기(_Q)"
+
+#~ msgid "_Contents"
+#~ msgstr "차례(_C)"
 
 #~ msgid "gnome-mines"
 #~ msgstr "gnome-mines"
