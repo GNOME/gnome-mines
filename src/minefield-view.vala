@@ -160,7 +160,7 @@ public class MinefieldView : Gtk.Widget
         frame.insert_after (this, /* insert first */ null);
 
         grid = new Gtk.Grid ();
-        frame.add (grid);
+        frame.set_child (grid);
 
         this.force_nolongpress = false;
         grid.row_homogeneous = true;

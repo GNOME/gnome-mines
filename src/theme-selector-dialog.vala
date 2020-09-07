@@ -93,9 +93,9 @@ public class ThemeSelectorDialog : Gtk.Dialog
         frame.margin_end = 6;
         frame.margin_top = 6;
         frame.margin_bottom = 6;
-        frame.add (view);
+        frame.set_child (view);
         reveal_nonmines (view);
-        box.add (frame);
+        box.append (frame);
 
         return box;
     }
@@ -119,10 +119,10 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
         var headerbar = get_header_bar () as Gtk.HeaderBar;
         headerbar.set_show_title_buttons (true);
-        get_content_area ().add (create_preview_widget (out minefield));
+        get_content_area ().append (create_preview_widget (out minefield));
 
-        buttons_holder.add (previous);
-        buttons_holder.add (next);
+        buttons_holder.append (previous);
+        buttons_holder.append (next);
         buttons_holder.add_css_class ("linked");
         headerbar.pack_start (buttons_holder);
 
