@@ -215,7 +215,7 @@ public class Mines : Gtk.Application
 
         var headerbar = new HeaderBar ();
         headerbar.show_title_buttons = true;
-        headerbar.set_title (_("Mines"));
+        window.set_title (_("Mines"));
         window.set_titlebar (headerbar);
 
         var menu = new GLib.Menu ();
