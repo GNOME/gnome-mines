@@ -528,16 +528,6 @@ public class Mines : Gtk.Application
         flag_label.set_text ("%u/%u".printf (minefield.n_flags, minefield.n_mines));
     }
 
-    private int show_theme_selector ()
-    {
-        theme_dialog = new ThemeSelectorDialog (window);
-
-        var result = theme_dialog.run ();
-        theme_dialog.destroy ();
-
-        return result;
-    }
-
     private void show_scores ()
     {
         context.run_dialog ();
@@ -550,7 +540,8 @@ public class Mines : Gtk.Application
 
     private void preferences_cb ()
     {
-        show_theme_selector ();
+        theme_dialog = new ThemeSelectorDialog (window);
+        theme_dialog.present ();
     }
 
     private void show_custom_game_screen ()
@@ -561,7 +552,7 @@ public class Mines : Gtk.Application
         stack.visible_child_name = "custom_game";
     }
 
-    private bool can_start_new_game ()
+    private void ask_start_new_game (bool start_directly)
     {
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
@@ -572,15 +563,21 @@ public class Mines : Gtk.Application
             dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
             dialog.add_buttons (_("Keep Current Game"), ResponseType.DELETE_EVENT,
                                 _("Start New Game"),    ResponseType.ACCEPT);
-            var result = dialog.run ();
-            dialog.destroy ();
-            if (result != ResponseType.ACCEPT)
-            {
-                minefield.paused = was_paused;
-                return false;
-            }
+            dialog.response.connect ((_dialog, response) => {
+                    _dialog.destroy ();
+                    if (response != ResponseType.ACCEPT)
+                        minefield.paused = was_paused;
+                    else if (start_directly)
+                        start_game ();
+                    else
+                        show_new_game_screen ();
+                });
+            dialog.present ();
         }
-        return true;
+        else if (start_directly)
+            start_game ();
+        else
+            show_new_game_screen ();
     }
 
     private void show_new_game_screen ()
@@ -675,8 +672,7 @@ public class Mines : Gtk.Application
 
     private void new_game_cb ()
     {
-        if (can_start_new_game ())
-            show_new_game_screen ();
+        ask_start_new_game (/* start directly */ false);
     }
 
     private void silent_new_game_cb ()
@@ -687,8 +683,7 @@ public class Mines : Gtk.Application
 
     private void repeat_size_cb ()
     {
-        if (can_start_new_game ())
-            start_game ();
+        ask_start_new_game (/* start directly */ true);
     }
 
     private void toggle_pause_cb ()
