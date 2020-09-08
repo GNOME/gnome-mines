@@ -207,7 +207,6 @@ public class Mines : Gtk.Application
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
         window = (ApplicationWindow) ui_builder.get_object ("main_window");
-        window.size_allocate.connect (size_allocate_cb);
         window.map.connect (init_state_watcher);
         window.notify["is-active"].connect (on_window_focus_change);
         window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
@@ -374,20 +373,6 @@ public class Mines : Gtk.Application
         set_mines_limit ();
     }
 
-    private void size_allocate_cb (int width, int height, int baseline)
-    {
-        int width, height;
-        window.get_size (out width, out height);
-        if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
-        {
-            window_width = width;
-            window_height = height;
-        }
-        set_main_screen_layout (width > height ? Orientation.HORIZONTAL : Orientation.VERTICAL);
-
-        window_skip_configure = false;
-    }
-
     private void set_main_screen_layout (Orientation orientation)
     {
         if (orientation == current_layout)
@@ -417,6 +402,19 @@ public class Mines : Gtk.Application
             assert_not_reached ();
         surface = (Gdk.Toplevel) (!) nullable_surface;
         surface.notify ["state"].connect (on_window_state_event);
+        surface.size_changed.connect (on_size_changed);
+    }
+
+    private inline void on_size_changed (Gdk.Surface _surface, int width, int height)
+    {
+        if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
+        {
+            window_width = width;
+            window_height = height;
+        }
+        set_main_screen_layout (width > height ? Orientation.HORIZONTAL : Orientation.VERTICAL);
+
+        window_skip_configure = false;
     }
 
     private inline void on_window_state_event ()
