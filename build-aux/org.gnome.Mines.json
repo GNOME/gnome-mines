@@ -39,7 +39,8 @@
                     "buildsystem": "meson",
                     "sources": [{
                         "type": "git",
-                        "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
+                        "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git",
+                        "branch": "arnaudb/wip/gtk4"
                     }]
                 }
             ]
