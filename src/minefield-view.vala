@@ -146,18 +146,16 @@ public class MinefieldView : Gtk.Widget
     private Gtk.Grid grid;
     private Gtk.BinLayout layout;
 
-    construct
+    private bool first_init_done = false;
+    private void init_grid ()
     {
-        init_keyboard ();
-
-        hexpand = true;
-        vexpand = true;
-
-        layout = new Gtk.BinLayout ();
-        set_layout_manager (layout);
-
-        frame = new Gtk.AspectFrame (/* xalign */ 0.5f, /* yalign */ 0.5f, /* ratio */ 1.0f, /* obey-child */ false);
-        frame.insert_after (this, /* insert first */ null);
+        if (first_init_done)
+        {
+            frame.set_child (null);
+            grid.destroy ();
+        }
+        else
+            first_init_done = true;
 
         grid = new Gtk.Grid ();
         frame.set_child (grid);
@@ -171,6 +169,22 @@ public class MinefieldView : Gtk.Widget
         grid.hexpand = true;
         grid.vexpand = true;
         grid.add_css_class ("minefield");
+    }
+
+    construct
+    {
+        init_keyboard ();
+
+        hexpand = true;
+        vexpand = true;
+
+        layout = new Gtk.BinLayout ();
+        set_layout_manager (layout);
+
+        frame = new Gtk.AspectFrame (/* xalign */ 0.5f, /* yalign */ 0.5f, /* ratio */ 1.0f, /* obey-child */ false);
+        frame.insert_after (this, /* insert first */ null);
+
+        init_grid ();
 
         selected = new Position ();
         selected.set_x.connect ((x) => { return x; });
@@ -185,12 +199,6 @@ public class MinefieldView : Gtk.Widget
     public MinefieldView (Settings settings)
     {
         this.settings = settings;
-    }
-
-    protected override void destroy ()
-    {
-        frame.destroy ();
-        base.destroy ();
     }
 
     private Minefield _minefield;
@@ -209,7 +217,7 @@ public class MinefieldView : Gtk.Widget
             remove_css_class ("explodedField");
             remove_css_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
-            grid.forall ((child) => { grid.remove (child); });
+            init_grid ();
             for (int i = 0; i < _minefield.width; i++)
             {
                 for (int j = 0; j < _minefield.height; j++)
