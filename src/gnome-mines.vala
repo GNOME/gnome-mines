@@ -380,32 +380,24 @@ public class Mines : Gtk.Application
         new_game_screen =  (AspectFrame) builder.get_object ("new_game_screen");
 
         var button = (Button) builder.get_object ("small_size_btn");
-        button.clicked.connect (small_size_clicked_cb);
-
         var label = new Label (null);
         label.set_markup (make_minefield_description (8, 8, 10));
         label.set_justify (Justification.CENTER);
         button.add (label);
 
         button = (Button) builder.get_object ("medium_size_btn");
-        button.clicked.connect (medium_size_clicked_cb);
-
         label = new Label (null);
         label.set_markup (make_minefield_description (16, 16, 40));
         label.set_justify (Justification.CENTER);
         button.add (label);
 
         button = (Button) builder.get_object ("large_size_btn");
-        button.clicked.connect (large_size_clicked_cb);
-
         label = new Label (null);
         label.set_markup (make_minefield_description (30, 16, 99));
         label.set_justify (Justification.CENTER);
         button.add (label);
 
         button = (Button) builder.get_object ("custom_size_btn");
-        button.clicked.connect (show_custom_game_screen);
-
         label = new Label (null);
         label.set_markup_with_mnemonic ("<span size='xx-large' weight='heavy'>?</span>\n" + dpgettext2 (null, "board size", _("Custom")));
         label.set_justify (Justification.CENTER);
