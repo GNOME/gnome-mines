@@ -108,6 +108,8 @@ public class Mines : Gtk.Application
         { "medium-size",        medium_size_clicked_cb                      },
         { "large-size",         large_size_clicked_cb                       },
         { "custom-size",        show_custom_game_screen                     },
+        { "cancel-custom",      show_new_game_screen                        },
+        { "start-custom",       custom_size_clicked_cb                      },
         { "pause",              toggle_pause_cb                             },
         { "scores",             scores_cb                                   },
         { "preferences",        preferences_cb                              },
@@ -427,12 +429,6 @@ public class Mines : Gtk.Application
         mines_spin.set_increments (1, 1);
         mines_spin.value_changed.connect (mines_spin_cb);
         set_mines_limit ();
-
-        var button = (Button) builder.get_object ("cancel_btn");
-        button.clicked.connect (show_new_game_screen);
-
-        button = (Button) builder.get_object ("play_game_btn");
-        button.clicked.connect (custom_size_clicked_cb);
 
         custom_game_screen.show_all ();
     }

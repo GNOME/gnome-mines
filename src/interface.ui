@@ -184,7 +184,7 @@
                         <property name="margin_top">12</property>
                         <property name="row_spacing">5</property>
                         <child>
-                          <object class="GtkButton" id="cancel_btn">
+                          <object class="GtkButton">
                             <property name="label" translatable="yes">_Cancel</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -193,6 +193,7 @@
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
                             <property name="use_underline">True</property>
+                            <property name="action_name">app.cancel-custom</property>
                           </object>
                           <packing>
                             <property name="left_attach">0</property>
@@ -200,7 +201,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkButton" id="play_game_btn">
+                          <object class="GtkButton">
                             <property name="label" translatable="yes">_Play Game</property>
                             <property name="visible">True</property>
                             <property name="can_focus">True</property>
@@ -209,6 +210,7 @@
                             <property name="hexpand">True</property>
                             <property name="vexpand">True</property>
                             <property name="use_underline">True</property>
+                            <property name="action_name">app.start-custom</property>
                             <style>
                               <class name="suggested-action"/>
                             </style>
