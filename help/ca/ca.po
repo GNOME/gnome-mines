@@ -564,8 +564,8 @@ msgid ""
 "your current game will be lost."
 msgstr ""
 "Si esteu jugant una partida i premeu el botó <gui style=\"button\">Comença "
-"de nou</gui>, el <app>Mines</app> us demanarà si voleu <gui>mantenir la "
-"partida actual</gui> o <gui>començar una partida nova</gui>. Si escolliu la "
+"de nou</gui>, el <app>Mines</app> us demanarà si voleu <gui>Mantenir la "
+"partida actual</gui> o <gui>Començar una partida nova</gui>. Si escolliu la "
 "segona opció, es perdrà la partida actual."
 
 #. (itstool) path: page/title
