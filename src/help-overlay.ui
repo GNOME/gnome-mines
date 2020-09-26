@@ -10,13 +10,13 @@
             <property name="title" translatable="yes" context="shortcut window">Window and game</property>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Ctrl&gt;N</property>
+                <property name="accelerator">&lt;Control&gt;n</property>
                 <property name="title" translatable="yes" context="shortcut window">Start a new game</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Ctrl&gt;R</property>
+                <property name="accelerator">&lt;Control&gt;r</property>
                 <property name="title" translatable="yes" context="shortcut window">Restart game with current settings</property>
               </object>
             </child>
@@ -40,13 +40,13 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Primary&gt;question</property>
+                <property name="accelerator">&lt;Control&gt;question</property>
                 <property name="title" translatable="yes" context="shortcut window">Show Keyboard Shortcuts</property>
               </object>
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Ctrl&gt;Q</property>
+                <property name="accelerator">&lt;Control&gt;q</property>
                 <property name="title" translatable="yes" context="shortcut window">Quit</property>
               </object>
             </child>
@@ -104,7 +104,7 @@
             </child>
             <child>
               <object class="GtkShortcutsShortcut">
-                <property name="accelerator">&lt;Primary&gt;space</property>
+                <property name="accelerator">&lt;Control&gt;space</property>
                 <property name="title" translatable="yes" context="shortcut window">Toggle field flag state</property>
               </object>
             </child>
