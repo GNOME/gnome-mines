@@ -1,3 +1,10 @@
+GNOME Mines 3.36.1
+=====================
+
+* Only allow long-press gesture on touchscreens #50 (Robert Roth)
+* Fixed issue incorrectly accepting game as won #17 (Aleksandr Shoronov)
+* Updated translations
+
 GNOME Mines 3.36.0
 =====================
 
