@@ -207,10 +207,13 @@ public class Minefield : Object
             if (!is_location (nx, ny))
                 continue;
 
-            if (do_clear && get_flag (nx, ny) != FlagType.FLAG)
+            if (do_clear && get_flag (nx, ny) != FlagType.FLAG){
                 clear_mine (nx, ny);
-            else
+                if (clock == null)
+                    return;
+            } else {
                 set_flag (nx, ny, FlagType.FLAG);
+            }
         }
     }
 
