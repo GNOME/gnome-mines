@@ -506,6 +506,7 @@ public class MinefieldView : Gtk.Grid
 
         if (x == keyboard_cursor.x && y == keyboard_cursor.y)
         {
+            keyboard_cursor.is_set = true;
             mines[keyboard_cursor.x,keyboard_cursor.y].add_class ("cursor");
             return true;
         }
