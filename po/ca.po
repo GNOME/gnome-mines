@@ -14,16 +14,17 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-07-28 19:06+0000\n"
-"PO-Revision-Date: 2019-10-10 14:40+0200\n"
-"Last-Translator: Jordi Mas <jmas@softcatala.org>\n"
+"POT-Creation-Date: 2020-12-18 12:21+0000\n"
+"PO-Revision-Date: 2020-12-22 16:20+0100\n"
+"Last-Translator: Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail."
+"com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -60,7 +61,7 @@ msgid "The GNOME Project"
 msgstr "El projecte GNOME"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:850
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "Mines"
 
@@ -136,8 +137,8 @@ msgid "Board size"
 msgstr "Mida del tauler"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Mida del tauler (0-2 = petit-gran, 3=personalitzat)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Mida del tauler (0-2 = petit-gran, 3 = personalitzat)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -236,44 +237,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Commuta l'estat de la bandera del camp"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "_Amplada"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "A_lçada"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "_Percentatge de mines"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "_Cancel·la"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "_Juga al joc"
 
-#: src/interface.ui:350 src/gnome-mines.vala:658 src/gnome-mines.vala:748
-#: src/gnome-mines.vala:797
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "Fes una _pausa"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "Canvia la _dificultat"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "_Millors temps"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "Jug_a de nou"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "Aturat"
 
@@ -293,99 +294,99 @@ msgstr "Partida mitjana"
 msgid "Big game"
 msgstr "Partida gran"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "Puntuacion_s"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "A_parença"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "_Utilitza banderes de pregunta"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "_Dreceres del teclat"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "A_juda"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_Quant al Mines"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "Camp de mines:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:351
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d mines"
 
-#: src/gnome-mines.vala:410
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Personalitzada"
 
-#: src/gnome-mines.vala:496
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> mines"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "Voleu iniciar una partida nova?"
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Si inicieu una partida nova, perdreu el progrés aconseguit fins ara."
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "Mantén la partida actual"
 
-#: src/gnome-mines.vala:610
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "Comença una partida nova"
 
-#: src/gnome-mines.vala:659
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "_Comença de nou"
 
-#: src/gnome-mines.vala:746
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "_Continua"
 
-#: src/gnome-mines.vala:764
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "Jug_a de nou"
 
-#: src/gnome-mines.vala:826
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "Partida principal:"
 
-#: src/gnome-mines.vala:831
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "Marcador:"
 
-#: src/gnome-mines.vala:834
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "Canvi de mida i suport SVG:"
 
-#: src/gnome-mines.vala:853
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "Netegeu el tauler de mines explosives"
 
-#: src/gnome-mines.vala:860
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "Jordi Vila <gnome@softcatala.net>\n"
@@ -394,7 +395,8 @@ msgstr ""
 "Jesús Corrius <jesus@softcatala.org>\n"
 "Josep Puigdemont <josep.puigdemont@gmail.com>\n"
 "David Planella <david.planella@gmail.com>\n"
-"Jordi Mas <jmas@softcatala.org>"
+"Jordi Mas <jmas@softcatala.org>\n"
+"Miquel-Àngel Burgos i Fradeja <miquel.angel.burgos@gmail.com>"
 
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
