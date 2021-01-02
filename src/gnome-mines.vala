@@ -33,23 +33,21 @@ public class Mines : Gtk.Application
     public const string KEY_USE_ANIMATIONS = "use-animations";
 
     private Widget main_screen;
+    private Box main_screen_layout;
+    private Box main_screen_sidebar;
+    
     private Button play_pause_button;
-    private Label play_pause_label;
+    private Image play_pause_image;
     private Button replay_button;
-    private Button high_scores_button;
     private Button new_game_button;
-    private AspectFrame minefield_aspect;
     private Overlay minefield_overlay;
-    private Box aspect_child;
-    private Box buttons_box;
     private Box paused_box;
-    private ScrolledWindow scrolled;
+    private AspectFrame aspect_frame;
     private Stack stack;
     private ThemeSelectorDialog theme_dialog;
 
     private Label clock_label;
 
-    private GLib.Menu app_main_menu;
     private Gtk.MenuButton menu_button;
 
     /* Main window */
@@ -59,9 +57,7 @@ public class Mines : Gtk.Application
     private bool window_is_maximized;
     private bool window_is_fullscreen;
     private bool window_is_tiled;
-
-    /* true when the new game minefield draws once */
-    private bool first_draw = false;
+    private Orientation current_layout = Orientation.VERTICAL;
 
     /* true when the user has requested the game to pause. */
     private bool pause_requested;
@@ -221,30 +217,7 @@ public class Mines : Gtk.Application
             window.maximize ();
         add_window (window);
 
-        var headerbar = new HeaderBar ();
-        headerbar.show_close_button = true;
-        headerbar.set_title (_("Mines"));
-        headerbar.show ();
-        window.set_titlebar (headerbar);
-
-        var menu = new GLib.Menu ();
-        app_main_menu = new GLib.Menu ();
-        menu.append_section (null, app_main_menu);
-        app_main_menu.append (_("_Scores"), "app.scores");
-        app_main_menu.append (_("A_ppearance"), "app.preferences");
-        var section = new GLib.Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Use Question Flags"), "app.%s".printf (KEY_USE_QUESTION_MARKS));
-        section = new GLib.Menu ();
-        menu.append_section (null, section);
-        section.append (_("_Keyboard Shortcuts"), "win.show-help-overlay");
-        section.append (_("_Help"), "app.help");
-        section.append (_("_About Mines"), "app.about");
-        menu_button = new MenuButton ();
-        menu_button.set_image (new Image.from_icon_name ("open-menu-symbolic", IconSize.BUTTON));
-        menu_button.show ();
-        menu_button.set_menu_model (menu);
-        headerbar.pack_end (menu_button);
+        menu_button = (Gtk.MenuButton) ui_builder.get_object ("menu_button");
 
         set_accels_for_action ("app.new-game", {"<Primary>n"});
         set_accels_for_action ("app.silent-new-game", {"Escape"});
@@ -261,51 +234,25 @@ public class Mines : Gtk.Application
         minefield_view = new MinefieldView (settings);
         minefield_view.show ();
 
-        /* Hook a resize on the first minefield draw so that the ratio
-           calculation in minefield_aspect.size-allocate runs one more time
-           with stable allocation sizes for the current minefield configutation */
-        minefield_view.draw.connect ((context, data) => {
-            if(!first_draw) {
-                minefield_aspect.queue_resize ();
-                minefield_view.queue_draw ();
-                first_draw = true;
-                return true;
-            };
-            return false;
-        });
-
         stack = (Stack) ui_builder.get_object ("stack");
 
-        scrolled = (ScrolledWindow) ui_builder.get_object ("scrolled");
-        scrolled.add (minefield_view);
-        scrolled.show ();
+        aspect_frame = (AspectFrame) ui_builder.get_object ("aspect_frame");
+        aspect_frame.add (minefield_view);
+        aspect_frame.show ();
 
         minefield_overlay = (Overlay) ui_builder.get_object ("minefield_overlay");
         minefield_overlay.show ();
 
-        minefield_aspect = (AspectFrame) ui_builder.get_object ("minefield_aspect");
-        minefield_aspect.show ();
-
-        minefield_aspect.size_allocate.connect ((allocation) => {
-             uint width = minefield_view.mine_size * minefield_view.minefield.width;
-             width += aspect_child.spacing;
-             width += buttons_box.get_allocated_width ();
-             float new_ratio = (float) width / (minefield_view.minefield.height * minefield_view.mine_size);
-             if (new_ratio != minefield_aspect.ratio) {
-                minefield_aspect.ratio = new_ratio;
-                first_draw = false;
-             };
-        });
-
         paused_box = (Box) ui_builder.get_object ("paused_box");
-        buttons_box = (Box) ui_builder.get_object ("buttons_box");
-        aspect_child = (Box) ui_builder.get_object ("aspect_child");
         paused_box.button_press_event.connect (view_button_press_event);
 
         minefield_overlay.add_overlay (paused_box);
 
         main_screen = (Widget) ui_builder.get_object ("main_screen");
         main_screen.show_all ();
+
+        main_screen_layout = (Box) ui_builder.get_object ("main_screen_layout");
+        main_screen_sidebar = (Box) ui_builder.get_object ("main_screen_sidebar");
 
         /* Initialize New Game Screen */
         startup_new_game_screen (ui_builder);
@@ -326,11 +273,12 @@ public class Mines : Gtk.Application
         clock_label = (Label) ui_builder.get_object ("clock_label");
 
         play_pause_button = (Button) ui_builder.get_object ("play_pause_button");
-        play_pause_label = (Label) ui_builder.get_object ("play_pause_label");
+        play_pause_image = (Image) ui_builder.get_object ("play_pause_image");
 
-        high_scores_button = (Button) ui_builder.get_object ("high_scores_button");
         replay_button = (Button) ui_builder.get_object ("replay_button");
+
         new_game_button = (Button) ui_builder.get_object ("new_game_button");
+        new_game_button.tooltip_text = translate_and_strip_underlines ("Change _Difficulty");
 
         if (game_mode != -1)
             start_game ();
@@ -435,12 +383,32 @@ public class Mines : Gtk.Application
 
     private void size_allocate_cb (Allocation allocation)
     {
+        int width, height;
+        window.get_size (out width, out height);
         if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
         {
-            window.get_size (out window_width, out window_height);
+            window_width = width;
+            window_height = height;
         }
+        set_main_screen_layout (width > height ? Orientation.HORIZONTAL : Orientation.VERTICAL);
 
         window_skip_configure = false;
+    }
+
+    private void set_main_screen_layout (Orientation orientation)
+    {
+        if (orientation == current_layout)
+            return;
+
+        main_screen_layout.orientation = orientation;
+        main_screen_sidebar.orientation = current_layout;
+
+        current_layout = orientation;
+    }
+
+    private string translate_and_strip_underlines (string key)
+    {
+        return _(key).replace ("_", "");
     }
 
     private const Gdk.WindowState tiled_state = Gdk.WindowState.TILED
@@ -627,6 +595,7 @@ public class Mines : Gtk.Application
 
         size_actions_toggle (true);
         stack.visible_child_name = "new_game";
+        disable_game_buttons ();
     }
 
     private void size_actions_toggle (bool enabled)
@@ -643,10 +612,9 @@ public class Mines : Gtk.Application
         minefield_view.has_focus = true;
 
         repeat_size_action.set_enabled (false);
-        play_pause_label.label = _("_Pause");
-        replay_button.label = _("St_art Over");
-        play_pause_button.show ();
-        high_scores_button.hide ();
+        set_play_pause_visuals_unpaused ();
+        set_replay_tooltip ("St_art Over");
+        enable_game_buttons ();
 
         int x, y, n;
         switch (settings.get_int (KEY_MODE))
@@ -674,6 +642,8 @@ public class Mines : Gtk.Application
             break;
         }
 
+        aspect_frame.ratio = ((float) x) / y;
+
         if (minefield != null)
             SignalHandler.disconnect_by_func (minefield, null, this);
         minefield = new Minefield (x, y, n);
@@ -695,6 +665,44 @@ public class Mines : Gtk.Application
         pause_action.set_enabled (false);
 
         tick_cb ();
+    }
+
+    private void set_play_pause_visuals_unpaused ()
+    {
+        set_play_pause_visuals ("media-playback-pause-symbolic", "_Pause");
+    }
+
+    private void set_play_pause_visuals_paused ()
+    {
+        set_play_pause_visuals ("media-playback-start-symbolic", "_Resume");
+    }
+
+    private void set_play_pause_visuals (string icon_name, string tooltip_text)
+    {
+        play_pause_image.icon_name = icon_name;
+        play_pause_button.tooltip_text = translate_and_strip_underlines (tooltip_text);
+    }
+
+    private void set_replay_tooltip (string tooltip_text)
+    {
+        replay_button.tooltip_text = translate_and_strip_underlines (tooltip_text);
+    }
+
+    private void enable_game_buttons ()
+    {
+        set_game_buttons_enabled (true);
+    }
+
+    private void disable_game_buttons ()
+    {
+        set_game_buttons_enabled (false);
+    }
+
+    private void set_game_buttons_enabled (bool value)
+    {
+        new_game_button.visible = value;
+        replay_button.visible = value;
+        play_pause_button.visible = value;
     }
 
     private void new_game_cb ()
@@ -731,9 +739,9 @@ public class Mines : Gtk.Application
     private void paused_changed_cb ()
     {
         if (minefield.paused)
-            play_pause_label.label = _("_Resume");
+            set_play_pause_visuals_paused ();
         else if (minefield.elapsed > 0)
-            play_pause_label.label = _("_Pause");
+            set_play_pause_visuals_unpaused ();
         paused_box.visible = minefield.paused;
     }
 
@@ -749,12 +757,11 @@ public class Mines : Gtk.Application
 
     private void game_ended ()
     {
-        replay_button.label = _("Play _Again");
+        set_replay_tooltip ("Play _Again");
         pause_action.set_enabled (false);
         replay_button.sensitive = true;
         repeat_size_action.set_enabled (true);
         play_pause_button.hide ();
-        high_scores_button.show ();
     }
 
     private void cleared_cb (Minefield minefield)
@@ -782,7 +789,7 @@ public class Mines : Gtk.Application
 
     private void clock_started_cb ()
     {
-        play_pause_label.label = _("_Pause");
+        set_play_pause_visuals_unpaused ();
         replay_button.sensitive = true;
         pause_action.set_enabled (true);
         repeat_size_action.set_enabled (true);

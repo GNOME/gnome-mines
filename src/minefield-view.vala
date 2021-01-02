@@ -134,8 +134,7 @@ public class MinefieldView : Gtk.Grid
             var w = 320 / minefield.width;
             var h = 200 / minefield.height;
             var s = uint.min (w, h);
-            if (s < 20)
-                s = 20;
+            s = uint.max(30, s);
             return s;
         }
     }
