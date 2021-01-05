@@ -42,7 +42,7 @@ msgid ""
 "to trigger one, or the game is over!"
 msgstr ""
 "El GNOME Mines és un trencaclosques on cerqueu mines amagades. Marqueu amb "
-"banderes els espais amb mines tan ràpid com sigui possible per fer del "
+"banderes els espais amb mines tan ràpid com sigui possible per a fer del "
 "tauler un lloc segur. Guanyeu la partida quan marqueu totes les mines del "
 "tauler. Aneu amb compte de no activar-ne cap o s'acabarà la partida!"
 
@@ -65,7 +65,8 @@ msgstr "El projecte GNOME"
 msgid "Mines"
 msgstr "Mines"
 
-#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#. Translators: Search terms to find this application. Do NOT translate or
+#. localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "pescamines;"
@@ -96,7 +97,7 @@ msgstr "Utilitza la bandera de desconegut"
 
 #: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "Establiu-ho a cert per poder marcar quadres com a desconeguts."
+msgstr "Establiu-ho a cert per a poder marcar quadres com a desconeguts."
 
 #: data/org.gnome.Mines.gschema.xml:15
 msgid "Enable automatic placing of flags"
@@ -117,8 +118,8 @@ msgstr "Habilita animacions"
 #: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
 msgstr ""
-"Estableix a fals per inhabilitar les animacions de transicions definides pel "
-"tema"
+"Estableix a fals per a inhabilitar les animacions de transicions definides "
+"pel tema"
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
