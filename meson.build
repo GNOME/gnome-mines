@@ -1,5 +1,5 @@
 project ('gnome-mines', ['vala', 'c'],
-         version: '40.alpha',
+         version: '40.beta',
          license: 'GPLv3+',
          default_options: [
              'warning_level=1',
