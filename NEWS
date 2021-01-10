@@ -1,3 +1,16 @@
+GNOME Mines 40.alpha
+=====================
+
+* Updated translations
+* Updated help
+* Code cleanup and modernization (Arnaud Bonatti)
+* Keyboard shortcuts window improvements (Sabri Ünal, Robert Roth) 
+* Only allow long-press gesture on touchscreen #50 (Robert Roth)
+* Fixed icon in scores dialog (Arnaud Bonatti)
+* Fixed incorrectly accepting game as won #17 (Aleksandr Shoronov)
+* Fixed spacebar not working until other key is pressed (christiangnrd)
+* Fixed timer not stopping when game ends with multi-release (Christian)
+
 GNOME Mines 3.36.0
 =====================
 
