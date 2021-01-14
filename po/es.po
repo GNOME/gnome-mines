@@ -5,22 +5,22 @@
 # Lucas Vieites <lucas@codexion.com>, 2007, 2008.
 # Jorge González <jorgegonz@svn.gnome.org>, 2007, 2008, 2009, 2010, 2011.
 # Chris Leonard <cjl@laptop.org>, 2012.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2020.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-13 17:53+0000\n"
-"PO-Revision-Date: 2020-05-14 11:59+0200\n"
+"POT-Creation-Date: 2020-12-18 12:21+0000\n"
+"PO-Revision-Date: 2021-01-14 09:45+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: es <gnome-es-list@gnome.org>\n"
-"Language: es\n"
+"Language-Team: Spanish - Spain <gnome-es-list@gnome.org>\n"
+"Language: es_ES\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 3.38.0\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -58,7 +58,7 @@ msgid "The GNOME Project"
 msgstr "El proyecto GNOME"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "Minas"
 
@@ -134,7 +134,8 @@ msgid "Board size"
 msgstr "Tamaño del tablero"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
+#| msgid "Size of the board (0-2 = small-large, 3=custom)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Tamaño del tablero (0-2 = pequeño-grande, 3 = personalizado)"
 
 #: data/org.gnome.Mines.gschema.xml:45
@@ -160,8 +161,6 @@ msgid "Start a new game"
 msgstr "Iniciar un juego nuevo"
 
 #: src/help-overlay.ui:24
-#| msgctxt "shortcut window"
-#| msgid "Start a new game with last used settings"
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
 msgstr "Reiniciar la partida con la configuración actual"
@@ -222,8 +221,6 @@ msgid "In-game"
 msgstr "En el juego"
 
 #: src/help-overlay.ui:106 src/help-overlay.ui:113
-#| msgctxt "shortcut window"
-#| msgid "Move the keyboard cursor in the game field"
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
 msgstr "Mover el cursor del teclado"
@@ -238,44 +235,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Conmutar el estado de una bandera"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "A_nchura"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "Al_tura"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "_Porcentaje de minas"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "_Jugar partida"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "_Pausa"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "Cambiar la _dificultad"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "_Mejores tiempos"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "Jugar _otra vez"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "Detenido"
 
@@ -295,99 +292,99 @@ msgstr "Juego mediano"
 msgid "Big game"
 msgstr "Juego grande"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "_Puntuación"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "_Aspecto"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "_Usar banderas de interrogación"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "Atajos del _teclado"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "Ay_uda"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_Acerca de Minas"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "Campo minado:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minas"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "¿Quiere empezar una partida nueva?"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Si inicia una partida nueva, perderá su progreso actual."
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "Mantener el juego actual"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "Iniciar un juego nuevo"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "_Empezar de nuevo"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "_Continuar"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "Jugar _otra vez"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "Juego principal:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "Puntuación:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "Soporte para redimensionado y SVG:"
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "Eliminar las minas explosivas del tablero"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "Daniel Mustieles <daniel.mustieles@gmail.com>, 2008-2019\n"
