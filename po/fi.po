@@ -14,8 +14,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-08-18 19:39+0300\n"
+"POT-Creation-Date: 2021-01-26 14:46+0000\n"
+"PO-Revision-Date: 2021-02-21 15:42+0200\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Launchpad-Export-Date: 2010-09-13 15:09+0000\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 "X-POT-Import-Date: 2012-03-05 14:46:29+0000\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -63,7 +63,7 @@ msgid "The GNOME Project"
 msgstr "Gnome-projekti"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "Miinaharava"
 
@@ -139,8 +139,8 @@ msgid "Board size"
 msgstr "Laudan koko"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Laudan koko (0-2 pienestä suureen, 3 oma koko)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Laudan koko (0-2 = pieni-suuri, 3 = oma koko)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -239,44 +239,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Vaihtele kentän lipun tilaa"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "_Leveys"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "_Korkeus"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "_Miinaprosentti"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "_Peru"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "_Pelaa"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "_Keskeytä"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "_Vaihda vaikeustasoa"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "_Parhaat ajat"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "Pelaa uu_delleen"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "Keskeytetty"
 
@@ -296,102 +296,102 @@ msgstr "Tavallinen peli"
 msgid "Big game"
 msgstr "Suuri peli"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "_Pisteet"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "_Ulkoasu"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "K_äytä kysymyslippuja"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "_Pikanäppäimet"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "O_hje"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_Tietoja - Miinaharava"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "Miinakenttä:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d miina"
 msgstr[1] "%d × %d, %d miinaa"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Mukautettu"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> miina"
 msgstr[1] "<b>%d</b> miinaa"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "Haluatko aloittaa uuden pelin?"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Jos aloitat uuden pelin, nykyisen pelisi katoaa."
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "Pysy nykyisessä pelissä"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "Aloita uusi peli"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "_Aloita uudelleen"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "_Jatka"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "Pelaa uu_delleen"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "Pääpeli:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "Pisteet:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "Koon muuttaminen ja SVG-tuki:"
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "Siivoa räjähdysherkät miinat pois pelilaudalta"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2012-2020\n"
+"Jiri Grönroos, 2012-2021\n"
 "Timo Jyrinki, 2008\n"
 "Ilkka Tuohela, 2006-2009\n"
 "Sami Pesonen, 2002-2005\n"
