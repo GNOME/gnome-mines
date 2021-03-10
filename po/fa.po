@@ -2,18 +2,18 @@
 # Copyright (C) 2003, 2005, 2006 Sharif Farsiweb, Inc.
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2003, 2005.
 # Behdad Pournader <behdad.p@gmail.com>, 2005.
-# Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
+# Elnaz Sarbar <elnaz@farsiweb.info>, 2005-2006.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Farzaneh Sarafraz <farzaneh@farsiweb.info>, 2006.
-# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014-2020.
-# Arash Mousavi <mousavi.arash@gmail.com>, 2012, 2013, 2016.
+# Danial Behzadi <dani.behzi@gmail.com>, 2012, 2014-2021.
+# Arash Mousavi <mousavi.arash@gmail.com>, 2012-2013, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games HEAD\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-08-31 07:02+0000\n"
+"POT-Creation-Date: 2021-01-26 14:46+0000\n"
+"PO-Revision-Date: 2021-03-10 15:35+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Persian\n"
 "Language: fa\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -58,8 +58,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "پروژه گنوم"
 
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:170
-#: src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:172
+#: src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "مین‌ها"
 
@@ -134,8 +134,8 @@ msgid "Board size"
 msgstr "اندازهٔ صفحه"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "اندازهٔ صفحه (۰-۲ = کوچک-بزرگ، ۳=سفارشی)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "اندازهٔ صفحه (۰-۲ = کوچک-بزرگ، ۳ = سفارشی)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -234,44 +234,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "تغییر وضعیت پرچم"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "_پهنا"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "_بلندا"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "درصد _مین‌ها"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "_لغو"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "_بازی کردن"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "_مکث"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "تغییر _دشواری"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "زمان‌های _برتر"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "_بازی دوباره"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "مکث شده"
 
@@ -291,99 +291,99 @@ msgstr "بازی متوسط"
 msgid "Big game"
 msgstr "بازی بزرگ"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "امتیا_زها"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "_ظاهر"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "ا_ستفاده از پرچم‌های پرسش"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "میان‌برهای _صفحه‌کلید"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "_راهنما"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_دربارهٔ مین‌ها"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "میدان مین:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%Id × %Id، %Id مین"
 msgstr[1] "%Id × %Id، %Id مین"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "سفارشی"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%Id</b> مین"
 msgstr[1] "<b>%Id</b> مین"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "می‌خواهید بازی جدیدی آغاز کنید؟"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "اگر بازی جدید شروع کنید، پیشرفت فعلی شما از دست خواهد رفت."
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "ادامهٔ بازی کنونی"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "شروع بازی جدید"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "_شروع دوباره"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "ا_ز سر گیری"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "بازی _دوباره"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "بازی اصلی:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "امتیاز:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "پشتیبانی SVG و تغییر اندازه:"
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "مین‌های انفجاری از صفحه پاک شوند"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "آرش موسوی <mousavi.arash@gmail.com>\n"
