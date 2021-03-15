@@ -3,9 +3,7 @@
     type="guide"
     style="task" id="index">
   <info>
-    <title type="link" role="trail">
-      <media type="image" src="figures/logo.png" its:translate="no"/>
-    </title>
+    <title type="link" role="trail">GNOME Mines</title>
     <title type="link">GNOME Mines</title>
     <title type="text">GNOME Mines</title>
     <revision pkgversion="3.5.5" version="0.1" date="2012-08-12" status="review"/>
@@ -22,8 +20,8 @@
     </license>
   </info>
 
-  <title><media type="image" src="figures/logo32.png" its:translate="no">GNOME Mines
-  logo</media> GNOME Mines</title>
+  <title><media type="image" width="48px" height="48px" its:translate="no"
+    src="figures/org.gnome.Mines.svg" /> GNOME Mines</title>
   <p>
     <app>Mines</app> is a clone of the game Minesweeper. The aim is to locate
     all the mines that are hidden under tiles on a rectangular board. You will

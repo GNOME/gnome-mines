@@ -13,6 +13,5 @@ gnome.yelp ('gnome-mines',
             media: [ 'figures/flag-question.svg',
                      'figures/flags.png',
                      'figures/flag.svg',
-                     'figures/logo32.png',
-                     'figures/logo.png' ],
+                     'figures/org.gnome.Mines.svg' ],
             symlink_media: true)
