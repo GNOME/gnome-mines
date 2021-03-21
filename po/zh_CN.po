@@ -14,16 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-07-11 14:44-0400\n"
-"Last-Translator: Mingcong Bai <jeffbai@aosc.xyz>\n"
+"POT-Creation-Date: 2021-01-26 14:46+0000\n"
+"PO-Revision-Date: 2021-01-29 16:11+0800\n"
+"Last-Translator: mars <gzhqyz@gmail.com>\n"
 "Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 2.4.1\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -58,7 +58,7 @@ msgid "The GNOME Project"
 msgstr "GNOME 项目"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "扫雷"
 
@@ -130,8 +130,8 @@ msgid "Board size"
 msgstr "盘面大小"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "盘面大小(0-2=小-大，3=自定义)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "盘面大小(0-2 = 小-大，3 = 自定义)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -230,44 +230,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "切换场地标记状态"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "宽度(_W)"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "高度(_H)"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "地雷百分比(_M)"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "取消(_C)"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "玩游戏(_P)"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "暂停(_P)"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "改变难度(_D)"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "最快时间(_B)"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "再玩一遍(_P)"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "已暂停"
 
@@ -287,97 +287,97 @@ msgstr "中等游戏"
 msgid "Big game"
 msgstr "大型游戏"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "得分(_S)"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "外观(_P)"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "使用问号旗标(_U)"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "键盘快捷键(_K)"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "帮助(_H)"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "关于扫雷(_A)"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "雷区："
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d 颗雷"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "自定义"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> 个雷"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "您想要启动新游戏吗？"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "如果开始新游戏，您当前进度将丢失。"
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "保存当前游戏"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "开始新游戏"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "重开一局(_A)"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "继续(_R)"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "再玩一遍(_A)"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "主游戏："
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "得分:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "缩放和 SVG 支持："
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "从板上清除有爆炸性的地雷"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "Yang Zhang <zyangmath@gmail.com>, 2007\n"
