@@ -9,13 +9,13 @@
 # Tino Meinen <tino.meinen@gmail.com>, 2002–2009.
 # Wouter Bolsterlee <wbolster@gnome.org>, 2008.
 # Redmar <redmar@ubuntu-nl.org>, 2011.
-# Nathan Follens <nthn@unseen.is>, 2017, 2019-2020.
+# Nathan Follens <nthn@unseen.is>, 2017, 2019-2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-08-25 15:03+0200\n"
+"POT-Creation-Date: 2021-01-26 14:46+0000\n"
+"PO-Revision-Date: 2021-04-01 22:10+0200\n"
 "Last-Translator: Nathan Follens <nthn@unseen.is>\n"
 "Language-Team: Gnome-NL <gnome-nl-list@gnome.org>\n"
 "Language: nl\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2011-09-18 07:04+0000\n"
-"X-Generator: Poedit 2.4.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
 # Mijnenjager?
 #: data/org.gnome.Mines.appdata.xml.in:8
@@ -64,7 +64,7 @@ msgstr "Het Gnome-project"
 
 # Mijnenjager?
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "Mijnenveger"
 
@@ -143,8 +143,8 @@ msgid "Board size"
 msgstr "Bordgrootte"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Grootte van het bord (0-2 = klein-groot, 3=aangepast)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Grootte van het bord (0-2 = klein-groot, 3 = aangepast)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -244,44 +244,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Veldvlagstatus omwisselen"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "_Breedte"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "_Hoogte"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "Percentage _mijnen"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "_Annuleren"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "S_pelen"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "_Pauzeren"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "Moeilijkheidsgraa_d wijzigen"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "_Beste tijden"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "O_pnieuw spelen"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "Gepauzeerd"
 
@@ -301,101 +301,101 @@ msgstr "Gemiddeld spel"
 msgid "Big game"
 msgstr "Groot spel"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "_Scores"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "Ui_terlijk"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "Vraagvlaggen gebr_uiken"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "Snel_toetsen"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "_Hulp"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_Over Mijnenveger"
 
 # Mijnenjager?
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "Mijnenveld:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mijn"
 msgstr[1] "%d × %d, %d mijnen"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Aangepast"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "%d mijn"
 msgstr[1] "%d mijnen"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "Wilt u een nieuw spel beginnen?"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Als u een nieuw spel begint, gaat uw huidige voortgang verloren."
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "Huidig spel behouden"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "Nieuw spel beginnen"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "_Opnieuw beginnen"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "He_rvatten"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "Opnieuw sp_elen"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "Hoofdspel:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "Score:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "Schalen en SVG ondersteuning:"
 
 # gebiedende wijs hier mooier
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "Haal explosieve mijnen van het bord"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "Tino Meinen\n"
@@ -408,7 +408,7 @@ msgstr ""
 "Meer info over Gnome-NL http://nl.gnome.org/\n"
 "\n"
 "Launchpad-bijdragen:\n"
-"  Balaam's Miracle https://launchpad.net/~balaam-balaamsmiracle\n"
+"  Balaam’s Miracle https://launchpad.net/~balaam-balaamsmiracle\n"
 "  Bert de Bruijn https://launchpad.net/~lpdebruijn\n"
 "  Bram Smulders https://launchpad.net/~bramsmulders\n"
 "  Carl Michiels https://launchpad.net/~carl-michiels\n"
