@@ -1,0 +1,207 @@
+.pausedOverlay {
+  background-color: #212121;
+  color: white;
+  font-size: 32px;
+  border-radius: 3px;
+}
+
+.pausedOverlay:backdrop {
+  background-color: #212121;
+}
+
+.count, .explodedField .tile {
+-gtk-icon-effect: none;
+}
+
+.navigation {
+  border-radius: 32px;
+  background-color: alpha(#888a85, .1);
+  border-width: 0px;
+  border-color: #BABABA;
+  background-image: none;
+}
+
+/* These are the default style settings possibly overridden by themes */
+
+/* Common style for all tiles */
+.tile {
+  background-image: none;
+  background-color: #212121;
+  border-color:@theme_bg_color;
+  border-radius: 4px; /* border width might be affecting */
+  color: transparent;
+  border-image: none;
+  font-size: 16px;
+  font-weight: bold;
+  background-size: 80%;
+  background-position: 50%;
+  padding: 4px;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  box-shadow: none;
+  border-width: 2px;
+}
+
+.tile:not(.cursor):hover {
+  background-color: #444444;
+}
+
+
+.tile:active {
+  background-color: #888a85;
+  box-shadow: inset 0 2px 1px rgba(0, 0, 0, .2);
+}
+
+/* Style for revealed fields showing numbers */
+.count {
+  color: black;
+  font-size: 0px;
+  background-image: none;
+  background-color: #777777;
+}
+
+.mine {
+  background-image: -gtk-icontheme('mine');
+}
+
+.flag {
+  background-image: -gtk-icontheme('flag');
+}
+
+.incorrect {
+  background-image: -gtk-icontheme('incorrect');
+}
+
+.maybe {
+  background-image: -gtk-icontheme('maybe');
+}
+
+.exploded {
+  background-image: -gtk-icontheme('exploded');
+}
+
+.1mines {
+  background-image: -gtk-icontheme('1mines');
+}
+
+.2mines {
+  background-image: -gtk-icontheme('2mines');
+}
+
+.3mines {
+  background-image: -gtk-icontheme('3mines');
+}
+
+.4mines {
+  background-image: -gtk-icontheme('4mines');
+}
+
+.5mines {
+  background-image: -gtk-icontheme('5mines');
+}
+
+.6mines {
+  background-image: -gtk-icontheme('6mines');
+}
+
+.7mines {
+  background-image: -gtk-icontheme('7mines');
+}
+
+.8mines {
+  background-image: -gtk-icontheme('8mines');
+}
+
+.count:not(.cursor):hover {
+  background-color: #777777;
+}
+
+/* Style for mines */
+.mine {
+  background-color: #729fcf;
+}
+
+/* Style of the keyboard cursor */
+.cursor {
+  background-color: #e9b96e;
+}
+
+/* Styles to be used on game over*/
+.explodedField .incorrect {
+  background-color: #cc0000;
+}
+
+/* Style of the unrevealed tiles after game over */
+.explodedField .mine {
+  background-color: #888a85;
+}
+
+.explodedField .exploded {
+  background-color: #d3d7cf;
+}
+
+.1mines .cursor{
+  background-color: shade(#DDFAC3, 0.5);
+}
+
+.2mines .cursor{
+  background-color: shade(#ECEDBF, 0.5);
+}
+
+.3mines .cursor{
+  background-color: shade(#EDDAB4, 0.5);
+}
+
+.4mines .cursor{
+  background-color: shade(#EDC38A, 0.5);
+}
+
+.5mines .cursor{
+  background-color: shade(#F7A1A2, 0.5);
+}
+
+.6mines .cursor{
+  background-color: shade(#FEA785, 0.5);
+}
+
+.7mines .cursor{
+  background-color: shade(#FF7D60, 0.5);
+}
+
+.8mines .cursor{
+  background-color: shade(#FF323C, 0.5);
+}
+
+.1mines:not(.cursor) {
+  background-color: shade(#DDFAC3, 0.4);
+}
+
+.2mines:not(.cursor) {
+  background-color: shade(#ECEDBF, 0.4);
+}
+
+.3mines:not(.cursor) {
+  background-color: shade(#EDDAB4, 0.4);
+}
+
+.4mines:not(.cursor) {
+  background-color: shade(#EDC38A, 0.4);
+}
+
+.5mines:not(.cursor) {
+  background-color: shade(#F7A1A2, 0.4);
+}
+
+.6mines:not(.cursor) {
+  background-color: shade(#FEA785, 0.4);
+}
+
+.7mines:not(.cursor) {
+  background-color: shade(#FF7D60, 0.4);
+}
+
+.8mines:not(.cursor) {
+  background-color: shade(#FF323C, 0.4);
+}
+
+
