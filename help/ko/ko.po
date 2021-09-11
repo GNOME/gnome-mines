@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "POT-Creation-Date: 2020-05-31 06:47+0000\n"
-"PO-Revision-Date: 2021-09-09 15:43+0900\n"
+"PO-Revision-Date: 2021-09-10 12:09+0900\n"
 "Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
@@ -115,7 +115,7 @@ msgstr "<app>지뢰</app> 개선에 도움 주기"
 #. (itstool) path: section/title
 #: C/bug-filing.page:21
 msgid "Report a bug or suggest an improvement"
-msgstr "버그 신고 또는 개선 제안"
+msgstr "버그 보고 또는 개선 제안"
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:22
@@ -136,8 +136,8 @@ msgid ""
 "This is a bug tracking system where users and developers can file details "
 "about bugs and crashes, or request enhancements."
 msgstr ""
-"사용자와 개발자가 버그와 치명적인 문제, 개선 제안에 대한 자세한 내용을 "
-"제출할 수 있는 버그 추적 시스템입니다."
+"사용자와 개발자가 버그와 치명적인 문제, 개선 제안에 대한 자세한 내용을 제출"
+"할 수 있는 버그 추적 시스템입니다."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:28
@@ -189,7 +189,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/develop.page:19
 msgid "Help develop"
-msgstr "개발 도움 주기"
+msgstr "개발 돕기"
 
 #. (itstool) path: page/p
 #: C/develop.page:20
@@ -224,7 +224,7 @@ msgstr "Aruna Sankaranarayanan"
 #. (itstool) path: page/title
 #: C/documentation.page:27
 msgid "Help write documentation"
-msgstr "문석 작성 도움 주기"
+msgstr "문서 작성 돕기"
 
 #. (itstool) path: page/p
 #: C/documentation.page:29
@@ -232,8 +232,8 @@ msgid ""
 "The GNOME Games user help is maintained by a volunteer community. You are "
 "welcome to participate."
 msgstr ""
-"그놈 게임 사용자 도움말은 자원 봉사 단체에서 관리합니다. 여러분의 참여를 "
-"환영합니다."
+"그놈 게임 사용자 도움말은 자원 봉사 단체에서 관리합니다. 여러분의 참여를 환영"
+"합니다."
 
 #. (itstool) path: page/p
 #: C/documentation.page:32
@@ -288,7 +288,7 @@ msgstr ""
 #. (itstool) path: section/title
 #: C/flags.page:51
 msgid "How to place a flag on a tile"
-msgstr "타일에 깃발 표식 방법"
+msgstr "타일 깃발 표시 방법"
 
 #. (itstool) path: td/p
 #: C/flags.page:55
@@ -402,7 +402,7 @@ msgstr "게임 플레이"
 #. (itstool) path: section/title
 #: C/index.page:37
 msgid "Useful tips"
-msgstr "유용한 팁"
+msgstr "유용한 정보"
 
 #. (itstool) path: section/title
 #: C/index.page:46
@@ -431,7 +431,7 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/license.page:20
 msgid "You are free:"
-msgstr "다음을 자유롭게 행할 수 있습니다:"
+msgstr "이용자는 다음 권리가 있습니다:"
 
 #. (itstool) path: item/title
 #: C/license.page:25
@@ -456,7 +456,7 @@ msgstr "저작물을 적용합니다."
 #. (itstool) path: page/p
 #: C/license.page:33
 msgid "Under the following conditions:"
-msgstr "다음과 같은 조건을 따라야합니다:"
+msgstr "다음 조건을 따라야 합니다:"
 
 #. (itstool) path: item/title
 #: C/license.page:38
@@ -470,8 +470,9 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"저자 또는 저작자가 명시한 방식으로 저작물의 속성을 표시해야 합니다(저작자가 "
-"사용자 또는 사용자의 저작물 이용의 보증을 제안하는 방식은 아님)."
+"저작자 또는 저작권자가 지정한 방법으로 표시해야 합니다. 하지만 저작자나 저작"
+"권자가 귀하에게 권리를 부여한다거나 귀하의 사용을 허가한다는 내용을 나타내서"
+"는 안 됩니다."
 
 #. (itstool) path: item/title
 #: C/license.page:46
@@ -484,8 +485,8 @@ msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
 msgstr ""
-"이 문서의 내용을 바꾸거나, 변형하거나, 내용을 작성해나가려면 동일한, 유사한, "
-"호환 라이선스만을 기반으로 저작물을 배포합니다."
+"이 저작물을 개작, 변형, 이 저작물을 기반으로 또 다른 저작물을 만든다면, 동"
+"일, 유사 또는 호환 라이선스에 따라 저작물을 배포해야 함."
 
 #. (itstool) path: page/p
 #: C/license.page:53
@@ -497,8 +498,8 @@ msgid ""
 msgstr ""
 "라이선스 전문을 보려면, <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/legalcode\">크리에이티브 커먼즈 웹사이트 </link> 또는 <link href="
-"\"http://creativecommons.org/licenses/by-sa/3.0/\">커먼즈 증서</link>를 참조"
-"합니다."
+"\"http://creativecommons.org/licenses/by-sa/3.0/\">일반 권리 증서</link>를 참"
+"조합니다."
 
 #. (itstool) path: credit/name
 #: C/new-game.page:27
@@ -626,8 +627,8 @@ msgid ""
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
 msgstr ""
-"<app>그놈 게임</app> 사용자 인터페이스와 문서는 전 세계 자원 봉사 단체에서 번"
-"역하고 있습니다. 여러분의 참여를 환영합니다."
+"<app>그놈 게임</app> 사용자 인터페이스와 문서는 전세계 기여자 집단이 번역합니"
+"다. 여러분의 참여를 환영합니다."
 
 #. (itstool) path: page/p
 #: C/translate.page:27
@@ -671,7 +672,7 @@ msgid ""
 "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"대신, 국제화 팀에 <link href=\"http://mail.gnome.org/mailman/listinfo/gnome-"
+"대신, 국제화 팀에 <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-"
 "i18n\">메일링 리스트</link>로 연락할 수도 있습니다."
 
 #~ msgid ""
