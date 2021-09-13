@@ -7,9 +7,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2020-05-31 06:47+0000\n"
-"PO-Revision-Date: 2021-09-10 12:09+0900\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmail.com>\n"
+"POT-Creation-Date: 2021-09-11 13:28+0000\n"
+"PO-Revision-Date: 2021-09-12 18:27+0900\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
@@ -125,10 +125,10 @@ msgid ""
 "file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
 "issues\"/>."
 msgstr ""
-"<app>지뢰</app>는 자원 봉사 단체가 유지 보수하고 있습니다. 당신의 참여를 환영"
-"합니다. 만약 문제점을 발견한다면 <em>버그 신고</em>에 올려주세요. 버그를 신"
-"고 하려면 <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/> "
-"사이트를 방문합니다."
+"<app>지뢰</app>는 기여자 집단이 관리합니다. 여러분의 참여를 환영합니다. 만약 "
+"문제점을 발견한다면 <em>버그 보고서</em>를 제출할 수 있습니다. 버그를 보고하"
+"려면 <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>로 이"
+"동하십시오."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -165,7 +165,7 @@ msgstr ""
 "고하기 전 <link href=\"https://wiki.gnome.org/GettingInTouch/"
 "BugReportingGuidelines\">버그 작성 지침</link>을 확인하시고, 이미 같은 내용으"
 "로 누군가가 버그 보고를 올렸는지 <link href=\"https://gitlab.gnome.org/GNOME/"
-"lightsoff/issues\">찾아보십시오</link>."
+"gnome-mines/issues\">찾아보십시오</link>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -183,8 +183,8 @@ msgid ""
 "Your report will be given an ID number, and its status will be updated as it "
 "is being dealt with. Thanks for helping make <app>Mines</app> better!"
 msgstr ""
-"여러분이 보내주신 보고는 ID 번호가 부여되며 처리가 되는 대로 상태가 업데이트"
-"됩니다. <app>지뢰</app>를 더 좋게 만드는데 도움을 주셔서 감사합니다!"
+"보고서에는 ID 번호가 붙으며, 처리하는대로 최신 상태가 바뀝니다. <app>지뢰</"
+"app> 개선에 도움을 주셔서 감사합니다!"
 
 #. (itstool) path: page/title
 #: C/develop.page:19
@@ -197,8 +197,8 @@ msgid ""
 "The <app>GNOME Games</app> are developed and maintained by a volunteer "
 "community. You are welcome to participate."
 msgstr ""
-"<app>그놈 게임</app>은 자원 봉사 단체가 개발 및 유지보수하고 있습니다. 당신"
-"의 참여를 환영합니다."
+"<app>그놈 게임</app>은 전세계 기여자가 개발하고 관리합니다. 여러분의 참여를 "
+"환영합니다."
 
 #. (itstool) path: page/p
 #: C/develop.page:23
