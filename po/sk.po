@@ -5,22 +5,22 @@
 # Marcel Telka <marcel@telka.sk>, 2005, 2008.
 # Peter Mráz <etkinator@gmail.com>, 2010, 2011.
 # Ján Kyselica <kyselica.jan@gmail.com>, 2013-2014.
-# Dušan Kazik <prescott66@gmail.com>, 2015.
+# Dušan Kazik <prescott66@gmail.com>, 2015-2021.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-05-31 06:46+0000\n"
-"PO-Revision-Date: 2020-09-04 14:34+0200\n"
+"POT-Creation-Date: 2021-01-26 14:46+0000\n"
+"PO-Revision-Date: 2021-10-05 09:06+0200\n"
 "Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
-"Language-Team: slovenčina <>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -57,7 +57,7 @@ msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:170 src/gnome-mines.vala:224 src/gnome-mines.vala:849
+#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
 msgid "Mines"
 msgstr "Míny"
 
@@ -135,8 +135,9 @@ msgid "Board size"
 msgstr "Veľkosť hracieho poľa"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Veľkosť hracieho poľa (0-2 = malá-veľká, 3=vlastná)"
+#| msgid "Size of the board (0-2 = small-large, 3=custom)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Veľkosť hracieho poľa (0-2 = malá-veľká, 3 = vlastná)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -235,44 +236,44 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Prepne stav vlajky poľa"
 
-#: src/interface.ui:118
+#: src/interface.ui:114
 msgid "_Width"
 msgstr "Šír_ka"
 
-#: src/interface.ui:142
+#: src/interface.ui:138
 msgid "_Height"
 msgstr "_Výška"
 
-#: src/interface.ui:166
+#: src/interface.ui:162
 msgid "Percent _mines"
 msgstr "Percento mí_n"
 
-#: src/interface.ui:192
+#: src/interface.ui:188
 msgid "_Cancel"
 msgstr "Z_rušiť"
 
-#: src/interface.ui:208
+#: src/interface.ui:205
 msgid "_Play Game"
 msgstr "_Hrať hru"
 
-#: src/interface.ui:350 src/gnome-mines.vala:657 src/gnome-mines.vala:747
-#: src/gnome-mines.vala:796
+#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
+#: src/gnome-mines.vala:785
 msgid "_Pause"
 msgstr "_Pozastaviť"
 
-#: src/interface.ui:366
+#: src/interface.ui:364
 msgid "Change _Difficulty"
 msgstr "Zmeniť _obtiažnosť"
 
-#: src/interface.ui:383
+#: src/interface.ui:381
 msgid "_Best Times"
 msgstr "_Najlepšie časy"
 
-#: src/interface.ui:400
+#: src/interface.ui:398
 msgid "_Play Again"
 msgstr "_Hrať znovu"
 
-#: src/interface.ui:464
+#: src/interface.ui:462
 msgid "Paused"
 msgstr "Pozastavené"
 
@@ -292,37 +293,37 @@ msgstr "Stredná hra"
 msgid "Big game"
 msgstr "Veľká hra"
 
-#: src/gnome-mines.vala:231
+#: src/gnome-mines.vala:233
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: src/gnome-mines.vala:232
+#: src/gnome-mines.vala:234
 msgid "A_ppearance"
 msgstr "V_zhľad"
 
-#: src/gnome-mines.vala:235
+#: src/gnome-mines.vala:237
 msgid "_Use Question Flags"
 msgstr "Použiť _vlajky s otáznikom"
 
-#: src/gnome-mines.vala:238
+#: src/gnome-mines.vala:240
 msgid "_Keyboard Shortcuts"
 msgstr "Klávesové _skratky"
 
-#: src/gnome-mines.vala:239
+#: src/gnome-mines.vala:241
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: src/gnome-mines.vala:240
+#: src/gnome-mines.vala:242
 msgid "_About Mines"
 msgstr "_O aplikácii Míny"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:316
+#: src/gnome-mines.vala:318
 msgid "Minefield:"
 msgstr "Mínové pole:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:350
+#: src/gnome-mines.vala:353
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -330,11 +331,11 @@ msgstr[0] "%d × %d, %d  mín"
 msgstr[1] "%d × %d, %d mína"
 msgstr[2] "%d × %d, %d míny"
 
-#: src/gnome-mines.vala:409
+#: src/gnome-mines.vala:404
 msgid "Custom"
 msgstr "Vlastná"
 
-#: src/gnome-mines.vala:495
+#: src/gnome-mines.vala:484
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -342,51 +343,51 @@ msgstr[0] "<b>%d</b>  mín"
 msgstr[1] "<b>%d</b>  mína"
 msgstr[2] "<b>%d</b>  míny"
 
-#: src/gnome-mines.vala:606
+#: src/gnome-mines.vala:595
 msgid "Do you want to start a new game?"
 msgstr "Chcete spustiť novú hru?"
 
-#: src/gnome-mines.vala:607
+#: src/gnome-mines.vala:596
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ak spustíte novú hru stratíte doterajší postup v aktuálnej hre."
 
-#: src/gnome-mines.vala:608
+#: src/gnome-mines.vala:597
 msgid "Keep Current Game"
 msgstr "Pokračovať v aktuálnej hre"
 
-#: src/gnome-mines.vala:609
+#: src/gnome-mines.vala:598
 msgid "Start New Game"
 msgstr "Začať novú hru"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:647
 msgid "St_art Over"
 msgstr "Z_ačať odznovu"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:734
 msgid "_Resume"
 msgstr "Pok_račovať"
 
-#: src/gnome-mines.vala:763
+#: src/gnome-mines.vala:752
 msgid "Play _Again"
 msgstr "_Hrať znovu"
 
-#: src/gnome-mines.vala:825
+#: src/gnome-mines.vala:814
 msgid "Main game:"
 msgstr "Hlavná hra:"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:819
 msgid "Score:"
 msgstr "Skóre:"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:822
 msgid "Resizing and SVG support:"
 msgstr "Zmena veľkosti a podpora SVG:"
 
-#: src/gnome-mines.vala:852
+#: src/gnome-mines.vala:841
 msgid "Clear explosive mines off the board"
 msgstr "Vyčistite pole od výbušných mín"
 
-#: src/gnome-mines.vala:859
+#: src/gnome-mines.vala:848
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
