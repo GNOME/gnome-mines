@@ -4,7 +4,7 @@
   <id>org.gnome.Mines</id>
   <metadata_license>CC0-1.0</metadata_license>
 
-  <project_license>GPL-3.0+ and CC-BY-SA-3.0</project_license>
+  <project_license>GPL-3.0+</project_license>
   <name>GNOME Mines</name>
   <summary>Clear hidden mines from a minefield</summary>
   <description>
