@@ -5,14 +5,14 @@
 #
 msgid ""
 msgstr "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2021-01-07 01:52+0000\n"
-"PO-Revision-Date: 2021-01-10 20:06+0000\n"
+"POT-Creation-Date: 2021-01-26 14:47+0000\n"
+"PO-Revision-Date: 2021-10-12 20:06+0000\n"
 "Last-Translator: Asier Sarasua Garmendia <asiersarasua@ni.eus>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: eu\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -206,14 +206,14 @@ msgid ""
 "%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
-msgstr ""
+msgstr "Dokumentazio-proiektuan lagundu nahi baduzu, jarri gurekin harremanetan <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">irc</link> edo <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">posta-zerrenda</link> erabilita."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
 "Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
 "\">wiki</link> page contains useful information."
-msgstr ""
+msgstr "Gure <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">wikiko</link> orriak informazio interesgarria dauka."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -300,7 +300,7 @@ msgid ""
 "the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
 "display the <gui>Small</gui> field size by default; to view other sizes, "
 "select them in the drop down menu at the top of the dialog."
-msgstr ""
+msgstr "Puntuaziorik altuenak ikusteko, sakatu leihoaren goiko eskuinako izkinan dagoen menu-botoia eta hautatu <gui style=\"menuitem\">Puntuazioak</gui>. Elkarrizketa-koadroak <gui>Txikia</gui> eremu-tamaina erakutsiko du bista lehenetsian; beste tamainak ikusteko, hautatu haiek elkarrizketa-koadroaren goiko aldeko goitibeherako menuan."
 
 #. (itstool) path: info/title
 #: C/index.page:9
@@ -331,7 +331,7 @@ msgid ""
 "all the mines that are hidden under tiles on a rectangular board. You will "
 "need to use a combination of logic and luck to find all the mines without "
 "triggering an explosion."
-msgstr ""
+msgstr "<app>Minak</app> aplikazioa Minesweeper jokoaren klona da. Helburua da taula laukizuzen bateko lauzen azpian dauden minak aurkitzea. Logika eta zortea beharko dituzu mina guztiak aurkitzeko leherketa bat eragin gabe."
 
 #. (itstool) path: section/title
 #: C/index.page:34
@@ -406,7 +406,7 @@ msgid ""
 "You must attribute the work in the manner specified by the author or "
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
-msgstr ""
+msgstr "Lanaren egilea edo lizentziaren jabea nor den aitortu behar duzu, hark esandako moduan (baina zuk egiten duzun erabilera babesten duela esan edo iradoki gabe)."
 
 #. (itstool) path: item/title
 #: C/license.page:46
@@ -418,7 +418,7 @@ msgstr "<em>Partekatu berdin</em>"
 msgid ""
 "If you alter, transform, or build upon this work, you may distribute the "
 "resulting work only under the same, similar or a compatible license."
-msgstr ""
+msgstr "Lan hau aldatu, transformatu edo osatzen baduzu, lizentzia bera edo lizentzia bateragarri bat erabili beharko duzu sortutako lan berria banatzeko."
 
 #. (itstool) path: page/p
 #: C/license.page:53
@@ -427,7 +427,7 @@ msgid ""
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
-msgstr ""
+msgstr "Lizentziaren testu osoa kontsultzeko, begiratu <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons webgunean</link> edo irakurri <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons kontratu osoa</link>."
 
 #. (itstool) path: credit/name
 #: C/new-game.page:27
@@ -463,7 +463,7 @@ msgid ""
 "over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
 "Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
 "your current game will be lost."
-msgstr ""
+msgstr "Jadanik joko batean bazaude eta <gui style=\"button\">Hasi hasieratik</gui> botoia sakatzen baduzu, <app>Minak</app> aplikazioak honako galdera egingo dizu: <gui>Mantendu uneko jokoa</gui> ala <gui>Hasi joko berria</gui>. Bigarrena aukeratzen baduzu, uneko jokoa galdu egingo da."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -475,21 +475,21 @@ msgstr "Jokoaren arauak"
 msgid ""
 "The aim of <app>Mines</app> is to clear the minefield without detonating any "
 "of the mines."
-msgstr ""
+msgstr "<app>Minak</app> jokoan, xedea da mina-eremua garbitzea minaren bat leherrarazi gabe."
 
 #. (itstool) path: item/p
 #: C/rules.page:31
 msgid ""
 "Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
-msgstr ""
+msgstr "Hasteko, aukeratu erabilgarri dauden hiru taula-tamainetako bat edo hautatu taula pertsonalizatu bat."
 
 #. (itstool) path: item/p
 #: C/rules.page:35
 msgid ""
 "The game begins with the board covered in tiles. Click on any tile to "
 "uncover it. You will reveal:"
-msgstr ""
+msgstr "Jokoaren hasieran, taula lauzekin estalita dago. Egin klik edozein lauzatan, hura kentzeko. Hauetako bat ikusiko duzu:"
 
 #. (itstool) path: item/p
 #: C/rules.page:39
@@ -497,32 +497,32 @@ msgid ""
 "A colored number, which represent the number of mines in the adjacent tiles. "
 "This will help you deduce where the mines are so that you can mark them with "
 "<link xref=\"flags\">flags</link>."
-msgstr ""
+msgstr "Koloredun zenbaki bat, alboko lauzetan dagoen mina kopurua adierazten duena. Informazio hori erabilita, minak non dauden asmatzeko argibide bat izango duzu, eta haiek <link xref=\"flags\">banderekin</link> markatuko dituzu."
 
 #. (itstool) path: item/p
 #: C/rules.page:44
 msgid ""
 "A blank tile, which means there are no mines under any of the adjacent tiles."
-msgstr ""
+msgstr "Lauza huts bat. Horrek esan nahi du ez dagoela minarik alboko lauzetan."
 
 #. (itstool) path: item/p
 #: C/rules.page:48
 msgid "A mine, which will detonate and end the game."
-msgstr ""
+msgstr "Mina bat. Mina lehertu egingo da eta jokoa amaitu egingo da."
 
 #. (itstool) path: item/p
 #: C/rules.page:53
 msgid ""
 "Repeat the previous step until you have uncovered all the tiles which do not "
 "have mines underneath them."
-msgstr ""
+msgstr "Errepikatu aurreko urratsa minak ez dituzten lauza guztiak kentzen dituzun arte."
 
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
 "If you complete the game quickly enough, you will be added to the <link xref="
 "\"high-scores\">high scores</link> list."
-msgstr ""
+msgstr "Jokoa azkar amaitzen baduzu, zuren izena <link xref=\"high-scores\">puntuazio altuen</link> zerrendari gehituko zaio."
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
@@ -540,14 +540,14 @@ msgid ""
 "The <app>GNOME games</app> user interface and documentation is being "
 "translated by a world-wide volunteer community. You are welcome to "
 "participate."
-msgstr ""
+msgstr "<app>GNOME Jokoak</app> aplikazioaren erabiltzaile-interfazea eta dokumentazioa boluntarioen komunitate batek itzultzen du. Ongi etorria izango zara lagundu nahi baduzu."
 
 #. (itstool) path: page/p
 #: C/translate.page:27
 msgid ""
 "There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
 "languages</link> for which translations are still needed."
-msgstr ""
+msgstr "Itzulpena behar duten <link href=\"https://l10n.gnome.org/module/gnome-mines/\">hizkuntza asko</link> daude oraindik."
 
 #. (itstool) path: page/p
 #: C/translate.page:30
@@ -556,7 +556,7 @@ msgid ""
 "\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
 "teams/\">translation team</link> for your language. This will give you the "
 "ability to upload new translations."
-msgstr ""
+msgstr "Itzultzen hasteko, <link href=\"https://l10n.gnome.org\">kontu bat sortu</link> behar duzu eta zure hizkuntzaren <link href=\"https://l10n.gnome.org/teams/\">itzulpen-taldearekin</link> bat egin behar duzu. Horren ondoren, itzulpen berriak igo ahal izango dituzu."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
@@ -565,7 +565,7 @@ msgid ""
 "mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
-msgstr ""
+msgstr "GNOME itzultzaileekin berriketan aritzeko, erabili <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. Kanaleko jendea mundu osokoa da, beraz zenbaitetan ez duzu berehalako erantzunik jasoko, ordu-zonen ondorioz."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
@@ -573,4 +573,4 @@ msgid ""
 "Alternatively, you can contact the Internationalization Team using their "
 "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
-msgstr ""
+msgstr "Beste komunikazio-kanal bat internazionalizazio-taldearen <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">posta-zerrenda</link> da."
