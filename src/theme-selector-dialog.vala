@@ -159,7 +159,7 @@ public class ThemeSelectorDialog : Gtk.Dialog
         //this.show_all ();
     }
 
-    private void update_sensitivities (List themes, int current_index)
+    private void update_sensitivities (List<string> themes, int current_index)
     {
         next.set_sensitive (current_index < themes.length ()-1);
         previous.set_sensitive (current_index > 0);
