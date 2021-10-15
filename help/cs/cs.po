@@ -1,13 +1,14 @@
 # Czech translation of gnomine help.
 # Copyright (C) 2009 the author(s) of gnome-games.
 # This file is distributed under the same license as the gnomine help.
-# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020.
+#
+# Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: gnome-games gnome-2-28\n"
-"POT-Creation-Date: 2020-03-01 08:38+0000\n"
-"PO-Revision-Date: 2020-03-08 07:54+0100\n"
+"Project-Id-Version: gnome-mines\n"
+"POT-Creation-Date: 2021-10-15 11:28+0000\n"
+"PO-Revision-Date: 2021-10-15 14:01+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -39,7 +40,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -103,7 +104,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -165,9 +166,9 @@ msgid ""
 msgstr ""
 "Když už účet máte, přihlaste se, klikněte na <gui>New Issue</gui>. Před "
 "nahlášením chyby si prosím přečtěte <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb"
-"</link> a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">"
-"podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
+"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb</"
+"link> a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
+"\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -373,29 +374,35 @@ msgstr ""
 "rozbalovací nabídce na vrchu dialogového okna."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "Miny GNOME"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> Miny GNOME"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -408,17 +415,17 @@ msgstr ""
 "některá vybuchla, musíte použít kombinaci logiky a trochy štěstí."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "Hraní hry"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "Užitečné tipy"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "Zapojte se"
 
@@ -694,78 +701,3 @@ msgstr ""
 "Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
 "\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
 "link>."
-
-#~ msgid ""
-#~ "To make the number of available flags equal to the number of remaining "
-#~ "mines, pressing the menu button in the top-right corner of the window and "
-#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-#~ "\"checkbox\">Use Question Flags</gui> preferences."
-#~ msgstr ""
-#~ "Abyste měli jistotu, že počet vlaječek nepřekročí počet zbývajících min "
-#~ "okolo odkryté dlaždice, zmáčkněte tlačítko nabídky v pravém horním rohu "
-#~ "okna a zapněte <gui style=\"checkbox\">Zobrazovat varování</gui> a <gui "
-#~ "style=\"checkbox\">Používat nejisté vlaječky</gui>."
-
-#~ msgid "2014"
-#~ msgstr "2014"
-
-#~ msgid "Warnings"
-#~ msgstr "Varování"
-
-#~ msgid "You can flag warnings to help you keep track of flags."
-#~ msgstr ""
-#~ "Můžete nechat vlaječky, aby vám pomocí varování pomohli udrožovat si "
-#~ "přehled o jejich okolí."
-
-#~ msgid ""
-#~ "To enable warnings, press the menu button in the top-right corner of the "
-#~ "window and then select <gui style=\"checkbox\">Show Warnings</gui>. This "
-#~ "will warn you when you try to place too many flags next to an open tile."
-#~ msgstr ""
-#~ "Jestli-že chcete zapnout varování, zmáčkněte tlačítko nabídky v pravém "
-#~ "horním rohu okna a zaškrtnete <gui style=\"checkbox\">Zobrazovat "
-#~ "varování</gui>. Díky tomu budete varováni, když se pokusíte vedle odkryté "
-#~ "dlaždice umístit příliš mnoho vlaječek."
-
-#~ msgid "Advanced"
-#~ msgstr "Pokročilé"
-
-#~ msgid "Keyboard shortcuts"
-#~ msgstr "Klávesové zkratky"
-
-#~ msgid "New game"
-#~ msgstr "Nová hra"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>N</key></keyseq>"
-
-#~ msgid "New game with last used settings"
-#~ msgstr "Nová hra s naposledy použitým nastavením"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>R</key></keyseq>"
-
-#~ msgid "Pause"
-#~ msgstr "Pozastavit"
-
-#~ msgid "<key>Pause</key>"
-#~ msgstr "<key>Pause</key>"
-
-#~ msgid ""
-#~ "Use the <gui style=\"button\">Pause</gui> on the right if your keyboard "
-#~ "does not have a <key>Pause</key> key."
-#~ msgstr ""
-#~ "V případě, že na klávesnici nemáte klávesu <key>Pause</key>, použijte "
-#~ "tlačítko <gui style=\"button\">Pozastavit</gui> napravo."
-
-#~ msgid "Help"
-#~ msgstr "Nápověda"
-
-#~ msgid "<key>F1</key>"
-#~ msgstr "<key>F1</key>"
-
-#~ msgid "Quit"
-#~ msgstr "Ukončit"
-
-#~ msgid "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
-#~ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
