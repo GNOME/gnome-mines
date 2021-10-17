@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines-help\n"
-"POT-Creation-Date: 2020-03-01 08:38+0000\n"
+"POT-Creation-Date: 2021-10-15 11:28+0000\n"
 "PO-Revision-Date: 2020-03-05 14:03+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -39,7 +39,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -103,7 +103,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Share Alike 3.0"
 
@@ -369,29 +369,35 @@ msgstr ""
 "pozostałe typy plansz."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "Miny GNOME"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "Miny GNOME"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> Miny GNOME"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -403,17 +409,17 @@ msgstr ""
 "potrzebne są umiejętności logicznego myślenia i łut szczęścia."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "Rozgrywka"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "Wskazówki"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "Dołącz do nas"
 
