@@ -613,7 +613,7 @@ public class Mines : Gtk.Application
 
         repeat_size_action.set_enabled (false);
         set_play_pause_visuals_unpaused ();
-        set_replay_tooltip ("St_art Over");
+        set_replay_tooltip (_("St_art Over"));
         enable_game_buttons ();
 
         int x, y, n;
@@ -669,12 +669,12 @@ public class Mines : Gtk.Application
 
     private void set_play_pause_visuals_unpaused ()
     {
-        set_play_pause_visuals ("media-playback-pause-symbolic", "_Pause");
+        set_play_pause_visuals ("media-playback-pause-symbolic", _("_Pause"));
     }
 
     private void set_play_pause_visuals_paused ()
     {
-        set_play_pause_visuals ("media-playback-start-symbolic", "_Resume");
+        set_play_pause_visuals ("media-playback-start-symbolic", _("_Resume"));
     }
 
     private void set_play_pause_visuals (string icon_name, string tooltip_text)
@@ -757,7 +757,7 @@ public class Mines : Gtk.Application
 
     private void game_ended ()
     {
-        set_replay_tooltip ("Play _Again");
+        set_replay_tooltip (_("Play _Again"));
         pause_action.set_enabled (false);
         replay_button.sensitive = true;
         repeat_size_action.set_enabled (true);
