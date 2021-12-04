@@ -20,9 +20,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-03-16 14:52+0000\n"
-"PO-Revision-Date: 2020-04-06 22:11+0300\n"
-"Last-Translator: Stas Solovey <whats_up@tut.by>\n"
+"POT-Creation-Date: 2021-10-17 15:16+0000\n"
+"PO-Revision-Date: 2021-11-30 14:55+0200\n"
+"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0\n"
 
 #: data/org.gnome.Mines.appdata.xml.in:8
 msgid "GNOME Mines"
@@ -66,8 +66,8 @@ msgstr ""
 msgid "The GNOME Project"
 msgstr "Проект GNOME"
 
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:165 src/gnome-mines.vala:220 src/gnome-mines.vala:857
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
+#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
 msgid "Mines"
 msgstr "Сапёр"
 
@@ -144,8 +144,8 @@ msgid "Board size"
 msgstr "Размер игрового поля"
 
 #: data/org.gnome.Mines.gschema.xml:41
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Размер доски (0-2=маленькая-большая, 3=настраиваемая)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Размер доски (0-2 = маленькая-большая, 3 = настраиваемая)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -161,8 +161,8 @@ msgstr "истинно, если окно имеет максимальный р
 
 #: src/help-overlay.ui:12
 msgctxt "shortcut window"
-msgid "Window and games"
-msgstr "Окно и игры"
+msgid "Window and game"
+msgstr "Окно и игра"
 
 #: src/help-overlay.ui:17
 msgctxt "shortcut window"
@@ -171,8 +171,8 @@ msgstr "Начать новую игру"
 
 #: src/help-overlay.ui:24
 msgctxt "shortcut window"
-msgid "Start a new game with last used settings"
-msgstr "Начать новую игру с последними заданными правилами"
+msgid "Restart game with current settings"
+msgstr "Начать игру с начала с последними заданными правилами"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -186,75 +186,109 @@ msgstr "Показать справку"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr "Открыть меню"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Показать комбинации клавиш"
 
-#: src/help-overlay.ui:52
+#: src/help-overlay.ui:59
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Завершить"
 
-#: src/help-overlay.ui:60
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr "Выбор размера"
+
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr "Размер игры: маленькая"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr "Размер игры: средняя"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr "Размер игры: большая"
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr "Размер игры: настраиваемая"
+
+#: src/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "В игре"
 
-#: src/help-overlay.ui:65 src/help-overlay.ui:72
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
 msgctxt "shortcut window"
-msgid "Move the keyboard cursor in the game field"
-msgstr "Переместить фокус клавиатуры на игровое поле"
+msgid "Move the keyboard cursor"
+msgstr "Переместить фокус клавиатуры"
 
-#: src/help-overlay.ui:79
+#: src/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "Выделить поле"
 
-#: src/help-overlay.ui:86
+#: src/help-overlay.ui:127
 msgctxt "shortcut window"
-msgid ""
-"Toggle field flag state between normal and flagged (and question, if enabled)"
-msgstr ""
-"Переключить состояние флага поля между выключенным и помеченным (и вопросом, "
-"если включено)"
+msgid "Toggle field flag state"
+msgstr "Переключить состояние флага на поле"
 
-#: src/interface.ui:118
+#: src/interface.ui:15
+msgid "_Scores"
+msgstr "_Результаты"
+
+#: src/interface.ui:19
+msgid "A_ppearance"
+msgstr "_Внешний вид"
+
+#: src/interface.ui:25
+msgid "_Use Question Flags"
+msgstr "_Использовать флаги-вопросы"
+
+#: src/interface.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "Комбинации _клавиш"
+
+#: src/interface.ui:35
+msgid "_Help"
+msgstr "_Справка"
+
+#: src/interface.ui:39
+msgid "_About Mines"
+msgstr "_О приложении"
+
+#: src/interface.ui:205
 msgid "_Width"
 msgstr "_Ширина"
 
-#: src/interface.ui:142
+#: src/interface.ui:229
 msgid "_Height"
 msgstr "_Высота"
 
-#: src/interface.ui:166
+#: src/interface.ui:253
 msgid "Percent _mines"
 msgstr "Процент _мин"
 
-#: src/interface.ui:192
+#: src/interface.ui:279
 msgid "_Cancel"
 msgstr "_Отмена"
 
-#: src/interface.ui:208
+#: src/interface.ui:296
 msgid "_Play Game"
 msgstr "_Начать игру"
 
-#: src/interface.ui:350 src/gnome-mines.vala:667 src/gnome-mines.vala:757
-#: src/gnome-mines.vala:806
-msgid "_Pause"
-msgstr "_Пауза"
-
-#: src/interface.ui:366
-msgid "Change _Difficulty"
-msgstr "Изменить _сложность"
-
-#: src/interface.ui:383
-msgid "_Best Times"
-msgstr "_Лучшее время"
-
-#: src/interface.ui:400
-msgid "_Play Again"
-msgstr "_Играть снова"
-
-#: src/interface.ui:464
+#: src/interface.ui:477
 msgid "Paused"
 msgstr "Пауза"
 
@@ -274,53 +308,13 @@ msgstr "Средняя игра"
 msgid "Big game"
 msgstr "Большая игра"
 
-#: src/gnome-mines.vala:231 src/gnome-mines.vala:253
-msgid "_Scores"
-msgstr "_Результаты"
-
-#: src/gnome-mines.vala:232 src/gnome-mines.vala:254
-msgid "A_ppearance"
-msgstr "_Внешний вид"
-
-#: src/gnome-mines.vala:235 src/gnome-mines.vala:255
-msgid "_Use Question Flags"
-msgstr "_Использовать флаги-вопросы"
-
-#: src/gnome-mines.vala:238 src/gnome-mines.vala:259
-msgid "_Keyboard Shortcuts"
-msgstr "Комбинации _клавиш"
-
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
-msgid "_Help"
-msgstr "_Справка"
-
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:261
-msgid "_About Mines"
-msgstr "_О приложении"
-
-#: src/gnome-mines.vala:251
-msgid "_Mines"
-msgstr "_Сапёр"
-
-#: src/gnome-mines.vala:252
-msgid "_New Game"
-msgstr "_Новая игра"
-
-#: src/gnome-mines.vala:256
-msgid "_Quit"
-msgstr "_Завершить"
-
-#: src/gnome-mines.vala:260
-msgid "_Contents"
-msgstr "_Содержание"
-
 #. Label on the scores dialog
-#: src/gnome-mines.vala:334
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Минное поле:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:368
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -328,11 +322,11 @@ msgstr[0] "%d × %d, %d мина"
 msgstr[1] "%d × %d, %d мины"
 msgstr[2] "%d × %d, %d мин"
 
-#: src/gnome-mines.vala:427
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Пользовательская"
 
-#: src/gnome-mines.vala:505
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -340,60 +334,93 @@ msgstr[0] "<b>%d</b> мина"
 msgstr[1] "<b>%d</b> мины"
 msgstr[2] "<b>%d</b> мин"
 
-#: src/gnome-mines.vala:615
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Хотите начать новую игру?"
 
-#: src/gnome-mines.vala:616
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Если начать новую игру, текущие результаты не будут учтены."
 
-#: src/gnome-mines.vala:617
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Продолжить игру"
 
-#: src/gnome-mines.vala:618
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Начать новую игру"
 
-#: src/gnome-mines.vala:668
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "На_чать сначала"
 
-#: src/gnome-mines.vala:755
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Пауза"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "_Продолжить"
 
-#: src/gnome-mines.vala:773
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "_Сыграть снова"
 
-#: src/gnome-mines.vala:830
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Основная игра:"
 
-#: src/gnome-mines.vala:835
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Счёт:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Изменение размера и поддержка изображений SVG:"
 
-#: src/gnome-mines.vala:860
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Очистить поле от мин"
 
-#: src/gnome-mines.vala:867
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Yuri Myasoedov <ymyasoedov@yandex.ru>, 2012-2015.\n"
 "Stas Solovey <whats_up@tut.by>, 2017-2020.\n"
 "Артемий Судаков <finziyr@yandex.ru>, 2020."
 
-#: src/theme-selector-dialog.vala:106
+#: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Выбрать тему"
+
+#~ msgctxt "shortcut window"
+#~ msgid ""
+#~ "Toggle field flag state between normal and flagged (and question, if "
+#~ "enabled)"
+#~ msgstr ""
+#~ "Переключить состояние флага поля между выключенным и помеченным (и "
+#~ "вопросом, если включено)"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Изменить _сложность"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Лучшее время"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Играть снова"
+
+#~ msgid "_Mines"
+#~ msgstr "_Сапёр"
+
+#~ msgid "_New Game"
+#~ msgstr "_Новая игра"
+
+#~ msgid "_Quit"
+#~ msgstr "_Завершить"
+
+#~ msgid "_Contents"
+#~ msgstr "_Содержание"
 
 #~ msgid "gnome-mines"
 #~ msgstr "gnome-mines"
