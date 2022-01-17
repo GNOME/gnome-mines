@@ -208,8 +208,7 @@ public class Mines : Gtk.Application
         /* Initialize Custom Game Screen */
         startup_custom_game_screen (ui_builder);
 
-        context = new Games.Scores.Context.with_importer ("gnome-mines",
-                                                          "org.gnome.Mines",
+        context = new Games.Scores.Context.with_importer ("org.gnome.Mines",
                                                           /* Label on the scores dialog */
                                                           _("Minefield:"),
                                                           window,
