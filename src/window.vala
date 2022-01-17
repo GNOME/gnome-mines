@@ -12,10 +12,18 @@ public class MineWindow : Gtk.ApplicationWindow
 {
 
     private GLib.Settings settings;
+    private Gtk.CssProvider theme_provider;
+
+    public const string KEY_THEME = "theme";
 
     construct
     {
         settings = new GLib.Settings ("org.gnome.Mines");
+
+        set_game_theme (settings.get_string (KEY_THEME));
+        settings.changed[KEY_THEME].connect (() => {
+            set_game_theme (settings.get_string (KEY_THEME));
+        });
 
         load_window_state ();
     }
@@ -53,5 +61,34 @@ public class MineWindow : Gtk.ApplicationWindow
         settings.set_int ("window-height", height);
 
         settings.set_boolean ("window-is-maximized", is_maximized ());
+    }
+
+    private void set_game_theme (string theme)
+    {
+        string theme_path = theme;
+        bool is_switch = theme_provider != null;
+        Gdk.Display display = get_display ();
+
+        if (!Path.is_absolute (theme_path)) {
+            theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
+        }
+        if (!is_switch) {
+            Gtk.IconTheme.get_for_display (display).add_search_path (theme_path);
+        } else {
+            Gtk.IconTheme icon_theme = Gtk.IconTheme.get_for_display (display);
+            string[] icon_search_path = icon_theme.get_search_path ();
+            icon_search_path[icon_search_path.length - 1] = theme_path;
+            icon_theme.set_search_path (icon_search_path);
+        }
+
+        var theme_css_path = Path.build_filename (theme_path, "theme.css");
+        if (is_switch) {
+            Gtk.StyleContext.remove_provider_for_display (display, theme_provider);
+        }
+        theme_provider = new Gtk.CssProvider ();
+        theme_provider.load_from_path (theme_css_path);
+        Gtk.StyleContext.add_provider_for_display (display, theme_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        queue_draw ();
     }
 }

@@ -29,7 +29,6 @@ public class Mines : Gtk.Application
     /* Shared Settings keys */
     public const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public const string KEY_USE_AUTOFLAG = "use-autoflag";
-    public const string KEY_THEME = "theme";
     public const string KEY_USE_ANIMATIONS = "use-animations";
 
     private Widget main_screen;
@@ -80,7 +79,6 @@ public class Mines : Gtk.Application
     private SimpleAction[] size_actions = new SimpleAction[4];
     private AspectFrame new_game_screen;
     private AspectFrame custom_game_screen;
-    private CssProvider theme_provider;
     private GestureClick view_click_controller;         // for keeping in memory
 
     private const OptionEntry[] option_entries =
@@ -119,43 +117,6 @@ public class Mines : Gtk.Application
         add_main_option_entries (option_entries);
     }
 
-    private void set_game_theme (string theme)
-    {
-        string theme_path = theme;
-        bool is_switch = theme_provider != null;
-
-        if (!Path.is_absolute (theme_path)) {
-            theme_path = Path.build_path (Path.DIR_SEPARATOR_S, DATA_DIRECTORY, "themes", theme);
-        }
-        if (!is_switch) {
-            IconTheme.get_for_display (Gdk.Display.get_default ()).add_search_path (theme_path);
-        } else {
-            IconTheme icon_theme = IconTheme.get_for_display (Gdk.Display.get_default ());
-            string[] icon_search_path = icon_theme.get_search_path ();
-            icon_search_path[icon_search_path.length - 1] = theme_path;
-            icon_theme.set_search_path (icon_search_path);
-        }
-
-        var theme_css_path = Path.build_filename (theme_path, "theme.css");
-        try
-        {
-            if (is_switch) {
-                StyleContext.remove_provider_for_display (Gdk.Display.get_default (), theme_provider);
-            }
-            theme_provider = new CssProvider ();
-            theme_provider.load_from_path (theme_css_path);
-            StyleContext.add_provider_for_display (Gdk.Display.get_default (), theme_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
-        }
-        catch (GLib.Error e)
-        {
-            warning ("Error loading css styles from %s: %s", theme_css_path, e.message);
-        }
-        if (window != null)
-        {
-            window.queue_draw ();
-        }
-    }
-
     protected override void startup ()
     {
         base.startup ();
@@ -183,8 +144,6 @@ public class Mines : Gtk.Application
         {
             warning ("Could not load game UI: %s", e.message);
         }
-        settings.changed[KEY_THEME].connect (() => { set_game_theme (settings.get_string (KEY_THEME)); });
-        set_game_theme (settings.get_string (KEY_THEME));
 
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
