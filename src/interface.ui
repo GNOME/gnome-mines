@@ -40,7 +40,7 @@
       </item>
     </section>
   </menu>
-  <object class="GtkApplicationWindow" id="main_window">
+  <object class="MineWindow" id="main_window">
     <property name="title" translatable="yes">Mines</property>
     <property name="icon_name">org.gnome.Mines</property>
     <child type="titlebar">

@@ -4,6 +4,7 @@ resources = gnome.compile_resources ('resources', 'gnome-mines.gresource.xml',
 
 gnome_mines = executable ('gnome-mines',
                           [ 'config.vapi',
+                            'window.vala',
                             'gnome-mines.vala',
                             'minefield.vala',
                             'minefield-view.vala',

@@ -53,11 +53,6 @@ public class Mines : Gtk.Application
 
     /* Main window */
     private Window window;
-    private int window_width;
-    private int window_height;
-    private bool window_is_maximized;
-    private bool window_is_fullscreen;
-    private bool window_is_tiled;
     private Orientation current_layout = Orientation.VERTICAL;
 
     /* true when the user has requested the game to pause. */
@@ -206,14 +201,11 @@ public class Mines : Gtk.Application
 
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
-        window = (ApplicationWindow) ui_builder.get_object ("main_window");
+        window = (MineWindow) ui_builder.get_object ("main_window");
         window.map.connect (init_state_watcher);
         window.notify["is-active"].connect (on_window_focus_change);
-        window.set_default_size (settings.get_int ("window-width"), settings.get_int ("window-height"));
         Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
 
-        if (settings.get_boolean ("window-is-maximized"))
-            window.maximize ();
         add_window (window);
 
         menu_button = (Gtk.MenuButton) ui_builder.get_object ("menu_button");
@@ -390,43 +382,9 @@ public class Mines : Gtk.Application
         return _(key).replace ("_", "");
     }
 
-    private const Gdk.ToplevelState tiled_state = Gdk.ToplevelState.TILED
-                                                | Gdk.ToplevelState.TOP_TILED
-                                                | Gdk.ToplevelState.BOTTOM_TILED
-                                                | Gdk.ToplevelState.LEFT_TILED
-                                                | Gdk.ToplevelState.RIGHT_TILED;
-
-    private inline void init_state_watcher ()
+    private inline void on_layout (Gdk.Surface _surface, int width, int height)
     {
-        Gdk.Surface? nullable_surface = window.get_surface ();
-        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
-            assert_not_reached ();
-        surface = (Gdk.Toplevel) (!) nullable_surface;
-        surface.notify ["state"].connect (on_window_state_event);
-        surface.size_changed.connect (on_size_changed);
-    }
-
-    private inline void on_size_changed (Gdk.Surface _surface, int width, int height)
-    {
-        if (!window_is_maximized && !window_is_fullscreen && !window_is_tiled && !window_skip_configure)
-        {
-            window_width = width;
-            window_height = height;
-        }
         set_main_screen_layout (width > height ? Orientation.HORIZONTAL : Orientation.VERTICAL);
-
-        window_skip_configure = false;
-    }
-
-    private inline void on_window_state_event ()
-    {
-        Gdk.ToplevelState state = surface.get_state ();
-
-        window_is_maximized     = (state & Gdk.ToplevelState.MAXIMIZED)  != 0;
-        /* fullscreen: saved as maximized */
-        window_is_fullscreen    = (state & Gdk.ToplevelState.FULLSCREEN) != 0;
-        /* We don’t save this state, but track it for saving size allocation */
-        window_is_tiled         = (state & tiled_state)                  != 0;
     }
 
     private inline void on_window_focus_change ()
@@ -457,17 +415,20 @@ public class Mines : Gtk.Application
         show_new_game_screen ();
     }
 
+    private inline void init_state_watcher ()
+    {
+        Gdk.Surface? nullable_surface = window.get_surface ();
+        if (nullable_surface == null || !((!) nullable_surface is Gdk.Toplevel))
+            assert_not_reached ();
+        surface = (Gdk.Toplevel) (!) nullable_surface;
+        surface.layout.connect (on_layout);
+    }
+
     protected override void shutdown ()
     {
-        base.shutdown ();
-
-        /* Save window state */
-        settings.delay ();
-        settings.set_int ("window-width", window_width);
-        settings.set_int ("window-height", window_height);
         settings.set_boolean (KEY_USE_ANIMATIONS, Gtk.Settings.get_default ().gtk_enable_animations);
-        settings.set_boolean ("window-is-maximized", window_is_maximized || window_is_fullscreen);
-        settings.apply ();
+
+        base.shutdown ();
     }
 
     protected override int handle_local_options (GLib.VariantDict options)
@@ -579,8 +540,6 @@ public class Mines : Gtk.Application
             SignalHandler.disconnect_by_func (minefield, null, this);
         }
         minefield = null;
-
-        window.resize (window_width, window_height);
 
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
@@ -931,6 +890,8 @@ public class Mines : Gtk.Application
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
+
+        typeof (MineWindow).ensure ();
 
         var app = new Mines ();
         return app.run (args);
