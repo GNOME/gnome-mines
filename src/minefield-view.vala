@@ -8,6 +8,17 @@
  * license.
  */
 
+
+private class Pos : Object {
+    public int x {get; set;}
+    public int y {get; set;}
+
+    public Pos (int x, int y)
+    {
+        Object (x: x, y: y);
+    }
+}
+
 private class Position : Object
 {
     public signal void redraw (uint x, uint y);
@@ -33,56 +44,32 @@ private class Position : Object
         get { return validate (x, y); }
     }
 
-    private int _x = 0;
+    private Pos _pos = new Pos (0, 0);
     public int x
     {
-        get { return _x; }
-        set
-        {
-            if (_x == value)
-                return;
-
-            if (is_set && is_valid)
-                redraw (x, y);
-
-            _x = set_x (value);
-
-            if (is_set && is_valid)
-                redraw (x, y);
-        }
+        get { return _pos.x; }
     }
 
-    private int _y = 0;
     public int y
     {
-        get { return _y; }
-        set
-        {
-            if (_y == value)
-                return;
-
-            if (is_set && is_valid)
-                redraw (x, y);
-
-            _y = set_y (value);
-
-            if (is_set && is_valid)
-                redraw (x, y);
-        }
+        get { return _pos.y; }
     }
 
-    public int[] position
+    public Pos position
     {
+        get { return _pos; }
         set
         {
-            if (_x == value[0] && _y == value[1])
+            if (_pos == value)
                 return;
 
             if (is_set && is_valid)
                 redraw (x, y);
 
-            _x = set_x (value[0]);
-            _y = set_y (value[1]);
+            _pos = value;
+
+            set_x (value.x);
+            set_y (value.y);
 
             if (is_set && is_valid)
                 redraw (x, y);
@@ -233,7 +220,7 @@ public class MinefieldView : Gtk.Widget
             selected.validate.connect (_minefield.is_location);
 
             keyboard_cursor.is_set = false;
-            keyboard_cursor.position = {0, 0};
+            keyboard_cursor.position = new Pos (0, 0);
             keyboard_cursor.set_x.connect ((x) => { return x; }); // (int) (x % _minefield.width); });
             keyboard_cursor.set_y.connect ((y) => { return y; }); // (int) (y % _minefield.height); });
 
@@ -261,7 +248,7 @@ public class MinefieldView : Gtk.Widget
 
         /* Hide any lingering previously selected and get new location */
         selected.is_set = false;
-        selected.position = {x, y};
+        selected.position = new Pos (x, y);
 
         /* Is the current position a minefield square? */
         if (!selected.is_valid)
@@ -281,7 +268,7 @@ public class MinefieldView : Gtk.Widget
 
         keyboard_cursor.is_set = false;
         mines[keyboard_cursor.x,keyboard_cursor.y].remove_css_class ("cursor");
-        keyboard_cursor.position = {selected.x, selected.y};
+        keyboard_cursor.position = new Pos (selected.x, selected.y);
     }
 
     private inline void tile_released_cb (int x, int y, uint button)
@@ -312,7 +299,7 @@ public class MinefieldView : Gtk.Widget
         else if (minefield.get_flag (selected.x, selected.y) != FlagType.FLAG)
             minefield.clear_mine (selected.x, selected.y);
 
-        keyboard_cursor.position = {selected.x, selected.y};
+        keyboard_cursor.position = new Pos (selected.x, selected.y);
         selected.is_set = false;
     }
 
@@ -519,7 +506,7 @@ public class MinefieldView : Gtk.Widget
                 }
                 else
                 {
-                    selected.position = {x, y};
+                    selected.position = new Pos (x, y);
                     selected.is_set = true;
                 }
             }
@@ -551,11 +538,11 @@ public class MinefieldView : Gtk.Widget
             return true;
         }
 
-        keyboard_cursor.position = {(int) (x == -1 ? _minefield.width-1 : x%_minefield.width), (int) (y == -1 ? _minefield.height-1 : y%_minefield.height)};
+        keyboard_cursor.position = new Pos ( (int) (x % _minefield.width), (int) (y % _minefield.height));
 
         mines[keyboard_cursor.x,keyboard_cursor.y].add_css_class ("cursor");
         if (selected.is_set)
-            selected.position = {keyboard_cursor.x, keyboard_cursor.y};
+            selected.position = new Pos (keyboard_cursor.x, keyboard_cursor.y);
 
         return true;
     }
