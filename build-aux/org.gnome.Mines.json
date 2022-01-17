@@ -40,7 +40,6 @@
                     "buildsystem": "meson",
                     "sources": [{
                         "type": "git",
-                        "branch": "games-1-8",
                         "url": "https://gitlab.gnome.org/GNOME/libgnome-games-support.git"
                     }]
                 }
