@@ -15,7 +15,7 @@ foreach theme: [ 'default', 'bgcolors', 'classic' ]
     endforeach
 endforeach
 
-desktop_file = i18n.merge_file ('desktop-file',
+desktop_file = i18n.merge_file (
                  input: '@0@.desktop.in'.format(app_id),
                  output: '@0@.desktop'.format(app_id),
                  install: true,
@@ -35,7 +35,7 @@ if desktop_file_validate.found()
 endif
 
 
-appdata_file = i18n.merge_file ('appdata-file',
+appdata_file = i18n.merge_file (
                  input: '@0@.appdata.xml.in'.format(app_id),
                  output: '@0@.appdata.xml'.format(app_id),
                  install: true,
