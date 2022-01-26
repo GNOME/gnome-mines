@@ -6,15 +6,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2020-09-16 13:37+0000\n"
-"PO-Revision-Date: 2020-09-24 00:00+0200\n"
-"Last-Translator: scootergrisen\n"
+"POT-Creation-Date: 2021-10-15 11:28+0000\n"
+"PO-Revision-Date: 2022-01-25 19:10+0100\n"
+"Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -35,7 +36,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -98,7 +99,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons Deling på samme vilkår 3.0"
 
@@ -142,10 +143,10 @@ msgid ""
 "status of your bug. If you don't already have an account, just click on the "
 "<gui>Sign in/Register</gui> link to create one."
 msgstr ""
-"For at deltage, skal du have en konto hvorved du får adgang samt mulighed for at "
-"rapportere fejl, skrive kommentarer og modtage opdateringer om fejlens "
-"status via e-mail. Har du ikke allerede en konto, så klik blot på <gui>Log "
-"ind/Tilmeld</gui>-linket for at oprette en."
+"For at deltage, skal du have en konto hvorved du får adgang samt mulighed "
+"for at rapportere fejl, skrive kommentarer og modtage opdateringer om "
+"fejlens status via e-mail. Har du ikke allerede en konto, så klik blot på "
+"<gui>Log ind/Tilmeld</gui>-linket for at oprette en."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
@@ -360,29 +361,35 @@ msgstr ""
 "vælge dem i rullegardinsmenuen øverst i dialogen."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "GNOME Miner"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "GNOME Miner"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "GNOME Miner"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> GNOME Miner"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -395,17 +402,17 @@ msgstr ""
 "udløse en eksplosion."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "Gameplay"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "Nyttige tips"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "Vær med"
 
