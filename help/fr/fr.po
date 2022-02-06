@@ -7,13 +7,13 @@
 # Alain Lojewski <allomervan@gmail.com>, 2012-2013.
 # Julien Hardelin <jhardlin@orange.fr>, 2013.
 # jean-baptiste <jean-baptiste@holcroft.fr>, 2018.
-# Charles Monzat <charles.monzat@free.fr>, 2017-2020.
+# Charles Monzat <charles.monzat@free.fr>, 2017-2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines doc fr\n"
-"POT-Creation-Date: 2020-06-26 09:38+0000\n"
-"PO-Revision-Date: 2020-06-29 12:59+0200\n"
+"POT-Creation-Date: 2021-10-15 11:28+0000\n"
+"PO-Revision-Date: 2022-01-28 13:25+0100\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 40.0\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -32,7 +32,8 @@ msgstr ""
 "Alain Lojewski <allomervan@gmail.com>, 2012-2013\n"
 "Yoann Fievez <yoann.fievez@gmail.com>, 2013\n"
 "Julien Hardelin <jhardlin@orange.fr>, 2013\n"
-"Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018"
+"Jean-Baptiste Holcroft <jean-baptiste@holcroft.fr>, 2018\n"
+"Charles Monzat <charles.monzat@free.fr>, 2017-2022"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -48,7 +49,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -115,7 +116,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr ""
 "Creative Commons Paternité-Partage des Conditions Initiales à l’Identique 3.0"
@@ -123,7 +124,7 @@ msgstr ""
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
 msgid "Help make <app>Mines</app> better"
-msgstr "Contribution pour améliorer <app>Mines</app> "
+msgstr "Contribution pour améliorer <app>Mines</app>"
 
 #. (itstool) path: section/title
 #: C/bug-filing.page:21
@@ -169,12 +170,6 @@ msgstr ""
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
-#| msgid ""
-#| "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-#| "reporting a bug, please read the <link href=\"https://bugzilla.gnome.org/"
-#| "page.cgi?id=bug-writing.html\">bug writing guidelines</link>, and please "
-#| "<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</"
-#| "link> for the bug to see if it already exists."
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
 "reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
@@ -183,9 +178,9 @@ msgid ""
 "issues\">browse</link> for the bug to see if it already exists."
 msgstr ""
 "Une fois que vous avez un compte, connectez-vous. Cliquez sur <gui>New "
-"Issue</gui>. Avant de rapporter un bogue, lisez les <link href=\"https://"
-"wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">guide sur "
-"les rapports de bogues</link>, et effectuez une <link href=\"https://gitlab."
+"Issue</gui>. Avant de rapporter un bogue, lisez le <link href=\"https://wiki."
+"gnome.org/Community/GettingInTouch/BugReportingGuidelines\">guide sur les "
+"rapports de bogues</link>, et effectuez une <link href=\"https://gitlab."
 "gnome.org/GNOME/gnome-mines/issues\">Recherche</link> pour voir si le bogue "
 "existe déjà."
 
@@ -272,7 +267,7 @@ msgid ""
 msgstr ""
 "Pour contribuer au projet de documentation, entrez en contact avec nous sur "
 "le canal <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
-"gnome.org%2Fdocs\">#docs</link> sur <link href=\"https://wiki.gnome.org/"
+"gnome.org%2Fdocs\">#docs</link>, sur <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> ou via notre <link href=\"https://"
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">liste de diffusion</link>."
 
@@ -326,7 +321,7 @@ msgstr ""
 #. (itstool) path: item/p
 #: C/flags.page:57
 msgid "right click on a blank tile."
-msgstr "faites un clic droit sur une case non retournée."
+msgstr "Faites un clic droit sur une case non retournée."
 
 #. (itstool) path: section/title
 #: C/flags.page:69
@@ -395,29 +390,37 @@ msgstr ""
 "autre taille, choisissez-en une dans le menu déroulant en haut de la boîte."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+#| msgctxt "link"
+#| msgid "GNOME Mines"
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "GNOME Mines"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "GNOME Mines"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "GNOME Mines"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> GNOME Mines"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -430,17 +433,17 @@ msgstr ""
 "provoquer d’explosion."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "Partie"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "Astuces utiles"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "Comment s’impliquer"
 
@@ -461,7 +464,7 @@ msgid ""
 "Unported license."
 msgstr ""
 "Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l’Identique 3.0 Unported."
+"des Conditions Initiales à l’Identique 3.0 non transposé."
 
 #. (itstool) path: page/p
 #: C/license.page:20
@@ -491,7 +494,7 @@ msgstr "d’adapter cette création,"
 #. (itstool) path: page/p
 #: C/license.page:33
 msgid "Under the following conditions:"
-msgstr "Sous les conditions suivantes :"
+msgstr "sous les conditions suivantes :"
 
 #. (itstool) path: item/title
 #: C/license.page:38
