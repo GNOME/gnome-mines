@@ -7,4 +7,7 @@
   <gresource prefix="/org/gnome/Mines/gtk">
     <file preprocess="xml-stripblanks">help-overlay.ui</file>
   </gresource>
+  <gresource prefix="/org/gnome/Mines/icons/16x16/actions/">
+    <file>preferences-system-time-symbolic.svg</file>
+  </gresource>
 </gresources>
