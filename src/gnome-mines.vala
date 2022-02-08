@@ -112,7 +112,7 @@ public class Mines : Gtk.Application
 
     public Mines ()
     {
-        Object (application_id: "org.gnome.Mines", flags: ApplicationFlags.FLAGS_NONE);
+        Object (application_id: "org.gnome.Mines", flags: ApplicationFlags.FLAGS_NONE, resource_base_path: "/org/gnome/Mines");
 
         add_main_option_entries (option_entries);
     }
