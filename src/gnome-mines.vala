@@ -36,7 +36,6 @@ public class Mines : Gtk.Application
     private Box main_screen_sidebar;
     
     private Button play_pause_button;
-    private Image play_pause_image;
     private Button replay_button;
     private Button new_game_button;
     private Overlay minefield_overlay;
@@ -220,7 +219,6 @@ public class Mines : Gtk.Application
         clock_label = (Label) ui_builder.get_object ("clock_label");
 
         play_pause_button = (Button) ui_builder.get_object ("play_pause_button");
-        play_pause_image = (Image) ui_builder.get_object ("play_pause_image");
 
         replay_button = (Button) ui_builder.get_object ("replay_button");
 
@@ -586,7 +584,7 @@ public class Mines : Gtk.Application
 
     private void set_play_pause_visuals (string icon_name, string tooltip_text)
     {
-        play_pause_image.icon_name = icon_name;
+        play_pause_button.icon_name = icon_name;
         play_pause_button.tooltip_text = translate_and_strip_underlines (tooltip_text);
     }
 
