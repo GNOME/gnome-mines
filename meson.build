@@ -1,11 +1,11 @@
 project ('gnome-mines', ['vala', 'c'],
-         version: '40.0',
+         version: '43.alpha',
          license: 'GPLv3+',
          default_options: [
              'warning_level=1',
              'buildtype=debugoptimized',
          ],
-         meson_version: '>= 0.37.1')
+         meson_version: '>= 0.59.0')
 
 app_id = 'org.gnome.Mines'
 
@@ -31,4 +31,10 @@ subdir ('po')
 subdir ('data')
 subdir ('help')
 subdir ('src')
-meson.add_install_script ('build-aux/meson_post_install.py')
+
+gnome.post_install(
+  glib_compile_schemas: true,
+  gtk_update_icon_cache: true,
+  update_desktop_database: true
+)
+
