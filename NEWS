@@ -1,3 +1,12 @@
+GNOME Mines 40.1
+=====================
+
+* Updated translations
+* Updated icon !29 (Sabri Ünal)
+* Added missing type parameter !30 (Rico Tzschichholz) 
+* Fixed proprietary license in appdata #71 (Robert Roth)
+* Fixed build failure with latest meson !31 (Jan Beich)
+
 GNOME Mines 40.0
 =====================
 
