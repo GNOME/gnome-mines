@@ -1,12 +1,12 @@
 # Daniel Nylander <po@danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019, 2020.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2020-03-01 08:38+0000\n"
-"PO-Revision-Date: 2020-03-02 20:39+0100\n"
+"POT-Creation-Date: 2022-02-18 10:44+0000\n"
+"PO-Revision-Date: 2022-02-18 11:57+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -39,7 +39,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -103,7 +103,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "Creative Commons DelaLika 3.0"
 
@@ -211,12 +211,12 @@ msgid ""
 "href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du komma i "
-"kontakt med utvecklarna genom <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller via vår "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">sändlista</"
-"link>."
+"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du "
+"komma i kontakt med utvecklarna genom <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller "
+"via vår <link href=\"https://mail.gnome.org/mailman/listinfo/games-"
+"list\">sändlista</link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -241,25 +241,25 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Om du vill bidra till dokumentationsprojektet, ta kontakt med oss via <link "
-"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> kanal på <link href=\"https://wiki.gnome.org/GnomeIrcChannels"
-"\">irc.gnome.org</link> eller via vår <link href=\"https://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">sändlista</link>."
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> kanal på <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> eller via vår <link href=\"https://"
+"mail.gnome.org/mailman/listinfo/gnome-doc-list\">sändlista</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki-sida</link> innehåller nyttig information."
+"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki-sida</link> innehåller nyttig information."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -285,8 +285,8 @@ msgid ""
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
 "Flaggornas exakta utseende beror på temat. Du kan ändra temat genom att "
-"trycka på menyknappen i fönstrets övre högra hörn och sedan välja <gui style="
-"\"menuitem\">Utseende</gui>."
+"trycka på menyknappen i fönstrets övre högra hörn och sedan välja <gui "
+"style=\"menuitem\">Utseende</gui>."
 
 #. (itstool) path: section/title
 #: C/flags.page:51
@@ -367,29 +367,35 @@ msgstr ""
 "välj dem i rullgardinsmenyn längst upp i dialogrutan."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "GNOME Minor"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "GNOME Minor"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "GNOME Minor"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> GNOME Minor"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -402,17 +408,17 @@ msgstr ""
 "utlösa en explosion."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "Spelets gång"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "Värdefulla tips"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "Engagera dig"
 
@@ -545,10 +551,10 @@ msgid ""
 "Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
 "your current game will be lost."
 msgstr ""
-"Om du redan spelar ett spel och trycker på knappen <gui style=\"button"
-"\">Börja om</gui>, kommer <app>Minor</app> att fråga om du vill <gui>Behålla "
-"aktuellt spel</gui> eller <gui>Starta nytt spel</gui>. Om du väljer det "
-"senare, kommer ditt nuvarande spel att gå förlorat."
+"Om du redan spelar ett spel och trycker på knappen <gui "
+"style=\"button\">Börja om</gui>, kommer <app>Minor</app> att fråga om du "
+"vill <gui>Behålla aktuellt spel</gui> eller <gui>Starta nytt spel</gui>. Om "
+"du väljer det senare, kommer ditt nuvarande spel att gå förlorat."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -618,8 +624,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
 "Om du avslutar spelet tillräckligt snabbt, kommer du att läggas till på "
 "<link xref=\"high-scores\">poänglistan</link>."
@@ -656,10 +662,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "För att börja översätta måste du <link href=\"https://l10n.gnome.org\">skapa "
 "ett konto</link> och gå med i <link href=\"https://l10n.gnome.org/teams/"
@@ -687,20 +693,8 @@ msgid ""
 "list</link>."
 msgstr ""
 "Alternativt, kan du kontakta det internationella teamet genom att använda "
-"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
-"\">sändlista</link>."
-
-# TODO: pressing -> press
-#~ msgid ""
-#~ "To make the number of available flags equal to the number of remaining "
-#~ "mines, pressing the menu button in the top-right corner of the window and "
-#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
-#~ "\"checkbox\">Use Question Flags</gui> preferences."
-#~ msgstr ""
-#~ "För att göra antalet tillgängliga flaggor lika med antalet kvarvarande "
-#~ "minor, tryck på menyknappen i fönstrets övre högra hörn och aktivera "
-#~ "alternativen <gui style=\"checkbox\">Visa varningar</gui> och <gui style="
-#~ "\"checkbox\">Använd frågetecken-flaggor</gui>."
+"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">sändlista</link>."
 
 #~ msgid "2014"
 #~ msgstr "2014"
@@ -766,11 +760,13 @@ msgstr ""
 #~ msgstr "<keyseq><key>Ctrl</key><key>Q</key></keyseq>"
 
 #~ msgid ""
-#~ "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
-#~ "\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+#~ "Click <gui style=\"button\">New</gui> or <guiseq><gui "
+#~ "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></"
+#~ "guiseq>."
 #~ msgstr ""
-#~ "Klicka på <gui style=\"button\">Nytt</gui> eller <guiseq><gui style=\"menu"
-#~ "\">Minor</gui> <gui style=\"menuitem\">Nytt spel</gui></guiseq>."
+#~ "Klicka på <gui style=\"button\">Nytt</gui> eller <guiseq><gui "
+#~ "style=\"menu\">Minor</gui> <gui style=\"menuitem\">Nytt spel</gui></"
+#~ "guiseq>."
 
 #~ msgid ""
 #~ "To enable these flags, click <guiseq><gui style=\"manu\">Mines</gui><gui "
@@ -885,31 +881,33 @@ msgstr ""
 #~ msgid ""
 #~ "This document is dual-licensed. You may either distribute and/or modify "
 #~ "it under the terms of the <ulink type=\"help\" url=\"help:gpl\">GNU "
-#~ "General Public License</ulink>, which the <link linkend=\"license"
-#~ "\">program is licensed</link> under, or you can distribute it under the "
-#~ "terms of the GNU Free Documentation License. A copy of this follows."
+#~ "General Public License</ulink>, which the <link "
+#~ "linkend=\"license\">program is licensed</link> under, or you can "
+#~ "distribute it under the terms of the GNU Free Documentation License. A "
+#~ "copy of this follows."
 #~ msgstr ""
 #~ "Det här dokumentet är dubbellicensierat. Du kan antingen distribuera och/"
-#~ "eller ändra det under villkoren för <ulink type=\"help\" url=\"help:gpl"
-#~ "\">GNU General Public License</ulink>, som <link linkend=\"license"
-#~ "\">programmer är licensierat</link> under, eller du kan distribuera det "
-#~ "under villkoren för GNU Free Documentation License. En kopia av dessa "
-#~ "följer."
+#~ "eller ändra det under villkoren för <ulink type=\"help\" url=\"help:"
+#~ "gpl\">GNU General Public License</ulink>, som <link "
+#~ "linkend=\"license\">programmer är licensierat</link> under, eller du kan "
+#~ "distribuera det under villkoren för GNU Free Documentation License. En "
+#~ "kopia av dessa följer."
 
 #~ msgid ""
 #~ "Permission is granted to copy, distribute and/or modify this document "
 #~ "under the terms of the GNU Free Documentation License (GFDL), Version 1.1 "
 #~ "or any later version published by the Free Software Foundation with no "
 #~ "Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. You "
-#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:fdl"
-#~ "\">link</ulink> or in the file COPYING-DOCS distributed with this manual."
+#~ "can find a copy of the GFDL at this <ulink type=\"help\" url=\"help:"
+#~ "fdl\">link</ulink> or in the file COPYING-DOCS distributed with this "
+#~ "manual."
 #~ msgstr ""
 #~ "Tillstånd att kopiera, distribuera och/eller modifiera detta dokument ges "
 #~ "under villkoren i GNU Free Documentation License (GFDL), version 1.1 "
 #~ "eller senare, utgivet av Free Software Foundation utan standardavsnitt "
-#~ "och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink type="
-#~ "\"help\" url=\"help:fdl\">länk</ulink> eller i filen COPYING-DOCS som "
-#~ "medföljer denna handbok."
+#~ "och omslagstexter.  En kopia av GFDL finns att hämta på denna <ulink "
+#~ "type=\"help\" url=\"help:fdl\">länk</ulink> eller i filen COPYING-DOCS "
+#~ "som medföljer denna handbok."
 
 #~ msgid ""
 #~ "This manual is part of a collection of GNOME manuals distributed under "
@@ -1229,13 +1227,13 @@ msgstr ""
 #~ msgstr "\"Jag är inte säker\"-flaggor"
 
 #~ msgid ""
-#~ "There is a check-box in the properties dialog entitled Use \"I'm not sure"
-#~ "\" flags. If you enable this then, when right-clicking on a square, it "
-#~ "cycles between the normal flags used to mark the square as mined, a flag "
-#~ "with a question mark on it and no flag. This new flag is to help you with "
-#~ "your reasoning, to mark mines you think might be a mine but aren't sure "
-#~ "about. These flags have no effect on the game; you still have to use the "
-#~ "appropriate number of red marker flags to be able to clear around a "
+#~ "There is a check-box in the properties dialog entitled Use \"I'm not "
+#~ "sure\" flags. If you enable this then, when right-clicking on a square, "
+#~ "it cycles between the normal flags used to mark the square as mined, a "
+#~ "flag with a question mark on it and no flag. This new flag is to help you "
+#~ "with your reasoning, to mark mines you think might be a mine but aren't "
+#~ "sure about. These flags have no effect on the game; you still have to use "
+#~ "the appropriate number of red marker flags to be able to clear around a "
 #~ "numbered square."
 #~ msgstr ""
 #~ "Det finns en kryssruta i egenskapsdialogrutan som heter Använd \"Jag är "
@@ -1315,8 +1313,8 @@ msgstr ""
 #~ "from Vincent Povirk and based on an earlier manual by Tim Riehle "
 #~ "(<email>tkriehle@citilink.com</email>). To report a bug or make a "
 #~ "suggestion regarding this application or this manual, follow the "
-#~ "directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" type="
-#~ "\"help\">document</ulink>."
+#~ "directions in this <ulink url=\"ghelp:user-guide?feedback-bugs\" "
+#~ "type=\"help\">document</ulink>."
 #~ msgstr ""
 #~ "<application>GNOME Minor</application> skrevs av Pista "
 #~ "(<email>szekeres@cyberspace.mht.bme.hu</email>). Den här handboken skrevs "
@@ -1324,13 +1322,13 @@ msgstr ""
 #~ "från Vincent Povirk och baserades på en tidigare handbok av Tim Riehle "
 #~ "(<email>tkriehle@citilink.com</email>). För att rapportera ett fel eller "
 #~ "föreslå någonting angående det här programmet eller den här handboken, "
-#~ "följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-bugs"
-#~ "\" type=\"help\">dokumentet</ulink>."
+#~ "följ anvisningarna i det här <ulink url=\"ghelp:user-guide?feedback-"
+#~ "bugs\" type=\"help\">dokumentet</ulink>."
 
 #~ msgid ""
 #~ "This program is free software; you can redistribute it and/or modify it "
-#~ "under the terms of the <citetitle><ulink type=\"help\" url=\"help:gpl"
-#~ "\">GNU General Public License</ulink></citetitle> as published by the "
+#~ "under the terms of the <citetitle><ulink type=\"help\" url=\"help:"
+#~ "gpl\">GNU General Public License</ulink></citetitle> as published by the "
 #~ "<ulink type=\"http\" url=\"http://www.fsf.org\">Free Software Foundation</"
 #~ "ulink>; either version 2 of the License, or (at your option) any later "
 #~ "version."
