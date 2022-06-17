@@ -13,14 +13,6 @@
   -gtk-icon-filter: none;
 }
 
-.navigation {
-  border-radius:32px;
-  background-color:alpha(#888a85, 0.1);
-  border-width:0px;
-  border-color:#BABABA;
-  background-image:none;
-}
-
 /* These are the default style settings possibly overridden by themes */
 
 /* Common style for all tiles */
