@@ -2,7 +2,7 @@
 <gresources>
   <gresource prefix="/org/gnome/Mines">
     <file preprocess="xml-stripblanks">interface.ui</file>
-    <file>gnome-mines.css</file>
+    <file>style.css</file>
   </gresource>
   <gresource prefix="/org/gnome/Mines/gtk">
     <file preprocess="xml-stripblanks">help-overlay.ui</file>

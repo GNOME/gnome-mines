@@ -10,7 +10,7 @@
 
 using Gtk;
 
-public class Mines : Gtk.Application
+public class Mines : Adw.Application
 {
     /* Settings keys */
     private GLib.Settings settings;
@@ -130,10 +130,10 @@ public class Mines : Gtk.Application
 
         Window.set_default_icon_name ("org.gnome.Mines");
 
-        var css_provider = new CssProvider ();
-        css_provider.load_from_resource ("/org/gnome/Mines/gnome-mines.css");
+        // TODO Support dark mode, We force light mode until there is proper
+        // support for it.
+        Adw.StyleManager.get_default ().color_scheme = FORCE_LIGHT;
 
-        StyleContext.add_provider_for_display (Gdk.Display.get_default (), css_provider, STYLE_PROVIDER_PRIORITY_APPLICATION);
         var ui_builder = new Builder ();
         try
         {
