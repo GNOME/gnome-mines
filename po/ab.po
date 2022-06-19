@@ -1,0 +1,366 @@
+# Abkhazian translation for gnome-mines.
+# Copyright (C) 2022 gnome-mines's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mines package.
+# Нанба Наала <naala-nanba@rambler.ru>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2022-04-05 13:38+0000\n"
+"PO-Revision-Date: 2022-04-05 13:38+0000\n"
+"Last-Translator: Нанба Наала <naala-nanba@rambler.ru>\n"
+"Language-Team: Abkhazian <ab@li.org>\n"
+"Language: ab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: data/org.gnome.Mines.appdata.xml.in:8
+msgid "GNOME Mines"
+msgstr "Асапиор GNOME "
+
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+msgid "Clear hidden mines from a minefield"
+msgstr "Иминарку адәы аҟны аминақәа рыԥшаара."
+
+#: data/org.gnome.Mines.appdata.xml.in:11
+msgid ""
+"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+"spaces with mines as quickly as possible to make the board a safer place. "
+"You win the game when you’ve flagged every mine on the board. Be careful not "
+"to trigger one, or the game is over!"
+msgstr "Асапиор GNOME -ари  аминақәа рыҧшаара ахьаҭаху  хәмарроуп. Иқәшәыргылла абираҟқәа "
+"аминақәа ахьыҟоу адәқәа рҟны,излауо ала имаҷны аамҭа ақәырӡаны. Аминақәа зегьы абираҟқәа "
+"рыла иалышәкаар аиааира шәгоит. Аминақәа шәырмықәыӷәӷәан, мамзар ахәмарра хырқәшахоит."
+
+#: data/org.gnome.Mines.appdata.xml.in:17
+msgid ""
+"You can select the size of the field you want to play on at the start of the "
+"game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
+"that’s better than hitting a mine!"
+msgstr "Ахәмарра алагамҭазы шәара ишәалшоит иалышәхыр ахәмарратә дәы ашәага зеиҧшрахо. "
+"Шәҭагылазаашьа цәгьахазар ишәоур шәылшоит аҵаҳәара, уи ахьшәоуа азы  иахыҧхьаӡалахоит "
+"ахараҧсатә аамҭа ,аха уи амина шәахаҧжәар аасҭа еиӷьуп."
+
+#: data/org.gnome.Mines.appdata.xml.in:47
+msgid "The GNOME Project"
+msgstr "Апроект GNOME"
+
+#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
+#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Аминақәа"
+
+#. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
+#: data/org.gnome.Mines.desktop.in:12
+msgid "minesweeper;"
+msgstr "Асапиор;"
+
+#: data/org.gnome.Mines.desktop.in:17
+msgid "Small board"
+msgstr "Адәы хәыҷы"
+
+#: data/org.gnome.Mines.desktop.in:21
+msgid "Medium board"
+msgstr "Ибжьаратәиу адәы"
+
+#: data/org.gnome.Mines.desktop.in:25
+msgid "Big board"
+msgstr "Идуу адәы"
+
+#: data/org.gnome.Mines.gschema.xml:5
+msgid "The theme to use"
+msgstr "Ахархәара змоу атема"
+
+#: data/org.gnome.Mines.gschema.xml:6
+msgid "The title of the tile theme to use."
+msgstr "Ахархәара змоу атема ахьӡ"
+
+#: data/org.gnome.Mines.gschema.xml:10
+msgid "Use the unknown flag"
+msgstr "Еилкаам абираҟ ахархәара"
+
+#: data/org.gnome.Mines.gschema.xml:11
+msgid "Set to true to be able to mark squares as unknown."
+msgstr "Аҵакы «true» ықәшәыргыл, аквадратқәа рҟны адыргақәа «еилкаам» ақәыргылара алшара шәоурц азы."
+
+#: data/org.gnome.Mines.gschema.xml:15
+msgid "Enable automatic placing of flags"
+msgstr "Аминақәа автоматла раартра аҿакра"
+
+#: data/org.gnome.Mines.gschema.xml:16
+msgid ""
+"Set to true to automatically flag squares as mined when enough squares are "
+"revealed"
+msgstr "Иқәшәыргыл адырга «true»,акәша-мыкәша  иазхаша аквадратқәа анаарту аминақәа змоу аквадратқәа рхала иалкаахарц азы."
+
+#: data/org.gnome.Mines.gschema.xml:20
+msgid "Enable animations"
+msgstr "Анимациа аҿакра"
+
+#: data/org.gnome.Mines.gschema.xml:21
+msgid "Set to false to disable theme-defined transition animations"
+msgstr "Иқәшәыргыл аҵакы «false» атема  иқәнаргылаз анимация аҿыхразы"
+
+#: data/org.gnome.Mines.gschema.xml:26
+msgid "Number of columns in a custom game"
+msgstr "Аиҵагылақәа рхыҧхьаӡара иурхиар зуа ахәмарраҟны"
+
+#: data/org.gnome.Mines.gschema.xml:31
+msgid "Number of rows in a custom game"
+msgstr "Ацәаҳәақәа рхыҧхьаӡара иурхиар зуа ахәмарраҟны"
+
+#: data/org.gnome.Mines.gschema.xml:35
+msgid "The number of mines in a custom game"
+msgstr "Аминақәа рхыҧхьаӡара иурхиар зуа ахәмарраҟны"
+
+#: data/org.gnome.Mines.gschema.xml:40
+msgid "Board size"
+msgstr "Ахәмаррратә дәы ашәагаа"
+
+#: data/org.gnome.Mines.gschema.xml:41
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Адәы ашәагаа(0-2=ихәыҷу-идуу,3=иурхиар зуа )"
+
+#: data/org.gnome.Mines.gschema.xml:45
+msgid "Width of the window in pixels"
+msgstr "Аԥенџьыр  аҭбаара  пиксельла"
+
+#: data/org.gnome.Mines.gschema.xml:49
+msgid "Height of the window in pixels"
+msgstr "Аԥенџьыр  аҳаракыра  пиксельла"
+
+#: data/org.gnome.Mines.gschema.xml:53
+msgid "true if the window is maximized"
+msgstr "Иҵабыргуп, аԥенџьыр иамазар иреҳаӡоу ашәагаа"
+
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and game"
+msgstr "Аԥенџьыри ахәмарреи"
+
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Ахәмарра ҿыц алагара"
+
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Restart game with current settings"
+msgstr "Ахәмарра ханатә алагара аҵыхәтәантәи аҧҟарақәа рыла"
+
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Ахәмарра аанкылара"
+
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "Аилыркаа арбара"
+
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr "Амениу аартра"
+
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Арыдқәа реилаҵа рырбара"
+
+#: src/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Ахырқәшара"
+
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr "Ашәагаа алхра"
+
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr "Ахәмарра ашәагаа: ихәыҷу"
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr "Ахәмарра ашәагаа: абжьаратәи"
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr "Ахәмарра ашәагаа: аду"
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr "Ахәмарра ашәагаа:иурхиар зуа"
+
+#: src/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "Ахәмарра аҟны"
+
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor"
+msgstr "Арыдқәа рфокус аиагара"
+
+#: src/help-overlay.ui:120
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Адәы алкаара"
+
+#: src/help-overlay.ui:127
+msgctxt "shortcut window"
+msgid "Toggle field flag state"
+msgstr "Абираҟ аҭагылазаашьа адәы ахь аиагара"
+
+#: src/interface.ui:15
+msgid "_Scores"
+msgstr "_Аихшьала"
+
+#: src/interface.ui:19
+msgid "A_ppearance"
+msgstr "_Адәахьытәи ақәыԥшылара"
+
+#: src/interface.ui:25
+msgid "_Use Question Flags"
+msgstr "_абираҟқәа-азҵаарақәа рхархәара"
+
+#: src/interface.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "_Арыдқәа реидкыла"
+
+#: src/interface.ui:35
+msgid "_Help"
+msgstr "_Аилыркаа"
+
+#: src/interface.ui:39
+msgid "_About Mines"
+msgstr "_Аминақәа ирызкны"
+
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Аҭбаара"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "_Аҳаракыра"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "Аминақәа _рыпроцент"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "_Аԥыхра"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "_Ахәмарра алагара"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Ааҭгылара"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Апрограмма аверсиа аарԥшны аҭыҵра"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Ихәыҷу ахәмарра"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Абжьаратәи ахәмарра"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Идуу ахәмарра"
+
+#. Label on the scores dialog
+#: src/gnome-mines.vala:265
+msgid "Minefield:"
+msgstr "Аминтә мхы:"
+
+#. For the scores dialog. First width, then height, then number of mines.
+#: src/gnome-mines.vala:301
+#, c-format
+msgid "%d × %d, %d mine"
+msgid_plural "%d × %d, %d mines"
+msgstr[0] "%d × %d, %d минак"
+msgstr[1] "%d × %d, %d аминақәа"
+
+#: src/gnome-mines.vala:352
+msgid "Custom"
+msgstr "Ахархәаратә"
+
+#: src/gnome-mines.vala:452
+#, c-format
+msgid "<b>%d</b> mine"
+msgid_plural "<b>%d</b> mines"
+msgstr[0] "<b>%d</b> минак"
+msgstr[1] "<b>%d</b> аминақәа"
+
+#: src/gnome-mines.vala:563
+msgid "Do you want to start a new game?"
+msgstr "Ишәҭахума ахәмарра ҿыцны шәалагар?"
+
+#: src/gnome-mines.vala:564
+msgid "If you start a new game, your current progress will be lost."
+msgstr "Ахәмарра ҿыц шәалагар уажәтәи алҵшәақәа  ҧхьаӡахаӡом"
+
+#: src/gnome-mines.vala:565
+msgid "Keep Current Game"
+msgstr "Ахәмарра ацҵара"
+
+#: src/gnome-mines.vala:566
+msgid "Start New Game"
+msgstr "Ахәмарра ҿыц алагара"
+
+#: src/gnome-mines.vala:616
+msgid "St_art Over"
+msgstr "Ханатә алагара"
+
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Ааҭгылара"
+
+#: src/gnome-mines.vala:677
+msgid "_Resume"
+msgstr "_Ацҵара"
+
+#: src/gnome-mines.vala:760
+msgid "Play _Again"
+msgstr "_Еиҭа ахәмарра"
+
+#: src/gnome-mines.vala:821
+msgid "Main game:"
+msgstr "Ихадоу ахәмарра:"
+
+#: src/gnome-mines.vala:826
+msgid "Score:"
+msgstr "Аихшьала:"
+
+#: src/gnome-mines.vala:829
+msgid "Resizing and SVG support:"
+msgstr "Ашәагаа аԥсахреи SVG асахьақәа рыдгылареи:"
+
+#: src/gnome-mines.vala:848
+msgid "Clear explosive mines off the board"
+msgstr "Адәы аминақәа рҟынтә арыцқьара"
+
+#: src/gnome-mines.vala:855
+msgid "translator-credits"
+msgstr "Нанба Наала <naala-nanba@rambler.ru>, 2022."
+
+#: src/theme-selector-dialog.vala:104
+msgid "Select Theme"
+msgstr "Атема алхра"
