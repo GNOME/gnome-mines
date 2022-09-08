@@ -7,16 +7,16 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2021-09-11 13:28+0000\n"
-"PO-Revision-Date: 2021-09-12 18:27+0900\n"
-"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
+"POT-Creation-Date: 2022-07-27 12:23+0000\n"
+"PO-Revision-Date: 2022-09-05 15:21+0900\n"
+"Last-Translator: Seong-ho Cho <darkcircle.0426@gmal.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Poedit-Bookmarks: -1,5,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -24,7 +24,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "임준열 <purum@postech.ac.kr>, 2017\n"
-"조성호 <shcho@gnome.org>, 2021"
+"조성호 <shcho@gnome.org>, 2021, 2022"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -40,7 +40,7 @@ msgstr "2011"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
-#: C/high-scores.page:17 C/index.page:17 C/new-game.page:18 C/rules.page:16
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
 msgid "Ekaterina Gerasimova"
 msgstr "Ekaterina Gerasimova"
 
@@ -103,7 +103,7 @@ msgstr "Tiffany Antopolski"
 
 #. (itstool) path: license/p
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
-#: C/index.page:21 C/translate.page:19
+#: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
 msgstr "크리에이티브 커먼즈 동일조건변경허락 3.0"
 
@@ -361,29 +361,35 @@ msgstr ""
 "메뉴에서 크기를 선택합니다."
 
 #. (itstool) path: info/title
-#: C/index.page:9
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "GNOME Mines"
+msgstr "그놈 지뢰"
+
+#. (itstool) path: info/title
+#: C/index.page:7
 msgctxt "link"
 msgid "GNOME Mines"
 msgstr "그놈 지뢰"
 
 #. (itstool) path: info/title
-#: C/index.page:10
+#: C/index.page:8
 msgctxt "text"
 msgid "GNOME Mines"
 msgstr "그놈 지뢰"
 
 #. (itstool) path: credit/name
-#: C/index.page:13
+#: C/index.page:11
 msgid "Brian Grohe"
 msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
-#: C/index.page:25
+#: C/index.page:23
 msgid "<_:media-1/> GNOME Mines"
 msgstr "<_:media-1/> 그놈 지뢰"
 
 #. (itstool) path: page/p
-#: C/index.page:27
+#: C/index.page:25
 msgid ""
 "<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
 "all the mines that are hidden under tiles on a rectangular board. You will "
@@ -395,17 +401,17 @@ msgstr ""
 "않고 모든 지뢰를 찾아내려면 논리적인 사고와 운이 필요합니다."
 
 #. (itstool) path: section/title
-#: C/index.page:34
+#: C/index.page:32
 msgid "Game Play"
 msgstr "게임 플레이"
 
 #. (itstool) path: section/title
-#: C/index.page:37
+#: C/index.page:35
 msgid "Useful tips"
 msgstr "유용한 정보"
 
 #. (itstool) path: section/title
-#: C/index.page:46
+#: C/index.page:44
 msgid "Get Involved"
 msgstr "참여하기"
 
