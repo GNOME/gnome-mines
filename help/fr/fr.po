@@ -12,8 +12,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines doc fr\n"
-"POT-Creation-Date: 2021-10-15 11:28+0000\n"
-"PO-Revision-Date: 2022-01-28 13:25+0100\n"
+"POT-Creation-Date: 2022-04-05 13:38+0000\n"
+"PO-Revision-Date: 2022-04-10 22:46+0200\n"
 "Last-Translator: Charles Monzat <charles.monzat@free.fr>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: fr\n"
@@ -118,8 +118,7 @@ msgstr "Tiffany Antopolski"
 #: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
 #: C/index.page:19 C/translate.page:19
 msgid "Creative Commons Share Alike 3.0"
-msgstr ""
-"Creative Commons Paternité-Partage des Conditions Initiales à l’Identique 3.0"
+msgstr "Creative Commons Paternité - Partage dans les Mêmes Conditions 3.0"
 
 #. (itstool) path: page/title
 #: C/bug-filing.page:18
@@ -391,8 +390,6 @@ msgstr ""
 
 #. (itstool) path: info/title
 #: C/index.page:6
-#| msgctxt "link"
-#| msgid "GNOME Mines"
 msgctxt "link:trail"
 msgid "GNOME Mines"
 msgstr "GNOME Mines"
@@ -463,8 +460,8 @@ msgid ""
 "This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
 "Unported license."
 msgstr ""
-"Cette œuvre est distribuée sous licence Creative Commons Paternité-Partage "
-"des Conditions Initiales à l’Identique 3.0 non transposé."
+"Cette œuvre est distribuée sous licence Creative Commons Attribution - "
+"Partage dans les Mêmes Conditions 3.0 non transposé."
 
 #. (itstool) path: page/p
 #: C/license.page:20
@@ -537,7 +534,7 @@ msgid ""
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "Pour prendre connaissance du texte complet de la licence, consultez le <link "
-"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">site Web "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">site web "
 "CreativeCommons</link> ou lisez in extenso le <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/\">contrat Commons</link>."
 
