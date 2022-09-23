@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
 "POT-Creation-Date: 2022-07-27 12:23+0000\n"
-"PO-Revision-Date: 2022-07-28 21:29+0200\n"
+"PO-Revision-Date: 2022-09-23 19:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: \n"
 "Language: ka\n"
@@ -24,7 +24,7 @@ msgstr "GNOME Mines"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
-msgstr ""
+msgstr "გაასუფთავეთ დანაღმული ველი ნაღმებისგან"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
@@ -33,6 +33,10 @@ msgid ""
 "You win the game when you’ve flagged every mine on the board. Be careful not "
 "to trigger one, or the game is over!"
 msgstr ""
+"GNOME Mines არის თავსატეხი, სადაც თქვენ ეძებთ ფარულ ნაღმებს. რაც შეიძლება "
+"სწრაფად მონიშნეთ ადგილები ნაღმებით, რათა დაფა უფრო უსაფრთხო ადგილი გახდეს. "
+"თქვენ მოიგებთ თამაშს, როდესაც დაფაზე ყველა ნაღმი დროშით მონიშნეთ. ფრთხილად "
+"იყავით, რომ არ გაააქტიუროთ, წინააღმდეგ შემთხვევაში თამაში დასრულებულია!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
@@ -40,6 +44,9 @@ msgid ""
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
 "that’s better than hitting a mine!"
 msgstr ""
+"შეგიძლიათ სათამაშო დაფის ზომა აირჩიოთ, ან ხელით დააყენოთ. თუ გაიჭედეთ, "
+"შეგიძლიათ მინიშნება მოითხოვოთ: გადაიხდით სათამაშო დროით, მაგრამ ეს უკეთესია, "
+"ვიდრე ნაღმზე დაბიჯება!"
 
 #: data/org.gnome.Mines.appdata.xml.in:47
 msgid "The GNOME Project"
@@ -48,78 +55,80 @@ msgstr "პროექტი \"GNOME\""
 #: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
 #: src/gnome-mines.vala:168 src/gnome-mines.vala:845
 msgid "Mines"
-msgstr ""
+msgstr "ნაღმები"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
-msgstr ""
+msgstr "minesweeper;"
 
 #: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
-msgstr ""
+msgstr "პატარა დაფა"
 
 #: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
-msgstr ""
+msgstr "საშუალო დაფა"
 
 #: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
-msgstr ""
+msgstr "დიდი დაფა"
 
 #: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
-msgstr ""
+msgstr "თემა"
 
 #: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
-msgstr ""
+msgstr "თემის სახელი."
 
 #: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
-msgstr ""
+msgstr "უცნობი ალმის გამოყენება"
 
 #: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr ""
+msgstr "ჩართეთ, თუ გნებავთ რომ საშუალება გქონდეთ, კვადრატები უცნობად მონიშნოთ."
 
 #: data/org.gnome.Mines.gschema.xml:15
 msgid "Enable automatic placing of flags"
-msgstr ""
+msgstr "ალმების ავტომატური დასმის ჩართვა"
 
 #: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
+"ჩართეთ, თუ გნებავთ კვადრატების განნაღმულად მონიშვნა, როცა საკმარისი "
+"კვადრატები გამოჩნდება"
 
 #: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
-msgstr ""
+msgstr "ანიმაციების ჩართვა"
 
 #: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
-msgstr ""
+msgstr "გამორთეთ თემის მიერ აღწერილი გადამსვლელი ანიმაციების გამოსართავად"
 
 #: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
-msgstr ""
+msgstr "თამაშში სვეტების რაოდენობა"
 
 #: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
-msgstr ""
+msgstr "სვეტებში მწკრივების რაოდენობა"
 
 #: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
-msgstr ""
+msgstr "თამაშში ნაღმების რაოდენობა"
 
 #: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
-msgstr ""
+msgstr "სათამაშო დაფის ზომა"
 
 #: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
-msgstr ""
+msgstr "დაფის ზომა (0-2 = პატარა-დიდი, 3 = ხელით)"
 
 #: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
@@ -131,12 +140,12 @@ msgstr "ფანჯრის სიმაღლე, პიქსელებშ
 
 #: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "თუ ჩართულია, ფანჯარა გაშლილი გაიხსნება"
 
 #: src/help-overlay.ui:12
 msgctxt "shortcut window"
 msgid "Window and game"
-msgstr ""
+msgstr "ფანჯარა და თამაში"
 
 #: src/help-overlay.ui:17
 msgctxt "shortcut window"
@@ -146,7 +155,7 @@ msgstr "დაიწყეთ ახალი თამაში"
 #: src/help-overlay.ui:24
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
-msgstr ""
+msgstr "თამაშის გადატვირთვა მიმდინარე პარამეტრებით"
 
 #: src/help-overlay.ui:31
 msgctxt "shortcut window"
@@ -156,7 +165,7 @@ msgstr "თამაშის შეჩერება"
 #: src/help-overlay.ui:38
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr ""
+msgstr "დახმარების ჩვენება"
 
 #: src/help-overlay.ui:45
 msgctxt "shortcut window"
@@ -176,47 +185,47 @@ msgstr "გასვლა"
 #: src/help-overlay.ui:67
 msgctxt "shortcut window"
 msgid "Game size selection"
-msgstr ""
+msgstr "თამაშის ზომის არჩევა"
 
 #: src/help-overlay.ui:72
 msgctxt "shortcut window"
 msgid "Game size: small"
-msgstr ""
+msgstr "თამაშის ზომა: პატარა"
 
 #: src/help-overlay.ui:79
 msgctxt "shortcut window"
 msgid "Game size: medium"
-msgstr ""
+msgstr "თამაშის ზომა: საშუალო"
 
 #: src/help-overlay.ui:86
 msgctxt "shortcut window"
 msgid "Game size: large"
-msgstr ""
+msgstr "Game size: დიდი"
 
 #: src/help-overlay.ui:93
 msgctxt "shortcut window"
 msgid "Game size: custom"
-msgstr ""
+msgstr "Game size: ხელით მითითება"
 
 #: src/help-overlay.ui:101
 msgctxt "shortcut window"
 msgid "In-game"
-msgstr ""
+msgstr "თამაშში"
 
 #: src/help-overlay.ui:106 src/help-overlay.ui:113
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
-msgstr ""
+msgstr "კლავიატურის კურსორის გამოძრავება"
 
 #: src/help-overlay.ui:120
 msgctxt "shortcut window"
 msgid "Reveal field"
-msgstr ""
+msgstr "ველის გამოჩენა"
 
 #: src/help-overlay.ui:127
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
-msgstr ""
+msgstr "ველის ალმის მდგომარეობის გადართვა"
 
 #: src/interface.ui:15
 msgid "_Scores"
@@ -228,7 +237,7 @@ msgstr "_გარეგნობა"
 
 #: src/interface.ui:25
 msgid "_Use Question Flags"
-msgstr ""
+msgstr "კითხვის ალმების _გამოყენება"
 
 #: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
@@ -240,19 +249,19 @@ msgstr "დახმარება"
 
 #: src/interface.ui:39
 msgid "_About Mines"
-msgstr ""
+msgstr "ნაღმების _შესახებ"
 
 #: src/interface.ui:205
 msgid "_Width"
-msgstr ""
+msgstr "_სიგანე"
 
 #: src/interface.ui:229
 msgid "_Height"
-msgstr ""
+msgstr "_სიმაღლე"
 
 #: src/interface.ui:253
 msgid "Percent _mines"
-msgstr ""
+msgstr "_ნაღმების პროცენტი"
 
 #: src/interface.ui:279
 msgid "_Cancel"
@@ -260,7 +269,7 @@ msgstr "_გაუქმება"
 
 #: src/interface.ui:296
 msgid "_Play Game"
-msgstr ""
+msgstr "_თამაში"
 
 #: src/interface.ui:477
 msgid "Paused"
@@ -268,32 +277,32 @@ msgstr "შეჩერებულია"
 
 #: src/gnome-mines.vala:91
 msgid "Print release version and exit"
-msgstr ""
+msgstr "ვერსიის ჩვენება და გასვლა"
 
 #: src/gnome-mines.vala:92
 msgid "Small game"
-msgstr ""
+msgstr "პატარა თამაში"
 
 #: src/gnome-mines.vala:93
 msgid "Medium game"
-msgstr ""
+msgstr "საშუალო თამაში"
 
 #: src/gnome-mines.vala:94
 msgid "Big game"
-msgstr ""
+msgstr "დიდი თამაში"
 
 #. Label on the scores dialog
 #: src/gnome-mines.vala:265
 msgid "Minefield:"
-msgstr ""
+msgstr "დანაღმული ველი:"
 
 #. For the scores dialog. First width, then height, then number of mines.
 #: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d × %d, %d ნაღმი"
+msgstr[1] "%d × %d, %d ნაღმი"
 
 #: src/gnome-mines.vala:352
 msgid "Custom"
@@ -303,28 +312,28 @@ msgstr "განსხვავებული"
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>%d</b> ნაღმი"
+msgstr[1] "<b>%d</b> ნაღმი"
 
 #: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
-msgstr ""
+msgstr "დარწმუნებული ბრძანდებით, რომ გნებავთ, თამაში თავიდან დაიწყოთ?"
 
 #: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
-msgstr ""
+msgstr "თუ თამაშს თავიდან დაიწყებთ, მიმდინარე წინსვლას დაკარგავთ."
 
 #: src/gnome-mines.vala:565
 msgid "Keep Current Game"
-msgstr ""
+msgstr "მიმდინარე თამაშის დატოვება"
 
 #: src/gnome-mines.vala:566
 msgid "Start New Game"
-msgstr ""
+msgstr "ახალი თამაშის დაწყება"
 
 #: src/gnome-mines.vala:616
 msgid "St_art Over"
-msgstr ""
+msgstr "_თავიდან დაწყება"
 
 #: src/gnome-mines.vala:672
 msgid "_Pause"
@@ -336,7 +345,7 @@ msgstr "_გაგრძელება"
 
 #: src/gnome-mines.vala:760
 msgid "Play _Again"
-msgstr ""
+msgstr "_თავიდან თამაში"
 
 #: src/gnome-mines.vala:821
 msgid "Main game:"
@@ -348,11 +357,11 @@ msgstr "ქულები:"
 
 #: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
-msgstr ""
+msgstr "ზომის შეცვლის და SVG-ის მხარდაჭერა:"
 
 #: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
-msgstr ""
+msgstr "გაასუფთავეთ დაფა ასაფეთქებლებისგან"
 
 #: src/gnome-mines.vala:855
 msgid "translator-credits"
