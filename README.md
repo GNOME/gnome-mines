@@ -1,4 +1,4 @@
-# GNOME Mines
+# Mines
 
 Mines (previously gnomine) is a puzzle game where you locate mines floating in an ocean using only your brain and a little bit of luck.
 

@@ -2,7 +2,7 @@ name: gnome-mines
 version: git
 summary: Clear hidden mines from a minefield
 description: |
-  GNOME Mines is a puzzle game where you search for hidden mines. Flag the
+  Mines is a puzzle game where you search for hidden mines. Flag the
   spaces with mines as quickly as possible to make the board a safer place. You
   win the game when you’ve flagged every mine on the board. Be careful not to
   trigger one, or the game is over!
@@ -18,7 +18,7 @@ base: core18
 # Launchpad doesn't recognize these fields yet
 passthrough:
   license: GPL-3.0+
-  title: GNOME Mines
+  title: Mines
 
 slots:
   # for GtkApplication registration
