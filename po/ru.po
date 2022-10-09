@@ -20,21 +20,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games trunk\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-10-17 15:16+0000\n"
-"PO-Revision-Date: 2021-11-30 14:55+0200\n"
-"Last-Translator: Alexey Rubtsov <rushills@gmail.com>\n"
+"POT-Creation-Date: 2022-10-03 18:11+0000\n"
+"PO-Revision-Date: 2022-10-04 13:22+0300\n"
+"Last-Translator: Aleksandr Melman <Alexmelman88@gmail.com>\n"
 "Language-Team: Русский <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "Сапёр GNOME"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Мины"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -42,15 +44,15 @@ msgstr "Поиск мин на минном поле"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"Сапёр GNOME — это игра, в которой нужно найти скрытые мины. Установите "
-"флажки на все поля, где находятся мины, затратив минимальное количество "
-"времени. Вы побеждаете, если все мины на поле отмечены флажками. Не "
-"нажимайте на мины, иначе игра закончится!"
+"Мины — это игра, в которой нужно найти скрытые мины. Установите флажки на "
+"все поля, где находятся мины, затратив минимальное количество времени. Вы "
+"побеждаете, если все мины на поле отмечены флажками. Не нажимайте на мины, "
+"иначе игра закончится!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
@@ -62,19 +64,14 @@ msgstr ""
 "затруднительное положение, вы можете получить подсказку, за получение "
 "подсказки начисляется штрафное время, но это лучше, чем нарваться на мину!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Проект GNOME"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
-#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
-msgid "Mines"
-msgstr "Сапёр"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
-msgstr "сапёр;"
+msgstr "minesweeper;сапер;mines;мины;"
 
 #: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
@@ -392,6 +389,12 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Выбрать тему"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "Сапёр GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Проект GNOME"
 
 #~ msgctxt "shortcut window"
 #~ msgid ""
