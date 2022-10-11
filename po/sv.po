@@ -1,19 +1,19 @@
 # Swedish messages for gnome-games.
-# Copyright © 1999-2020 Free Software Foundation, Inc.
+# Copyright © 1999-2022 Free Software Foundation, Inc.
 # Andreas Persenius <ndap@swipnet.se>, 1999.
 # Andreas Hyden <a.hyden@cyberpoint.se>
 # Martin Norbäck <d95mback@dtek.chalmers.se>, 2000.
 # Christian Rose <menthos@menthos.com>, 2000, 2001, 2002, 2003, 2004, 2005.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2007, 2008, 2009, 2010, 2011, 2012.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2016, 2017, 2018, 2019, 2020.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2014, 2016, 2017, 2018, 2019, 2020, 2022.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-12-18 12:21+0000\n"
-"PO-Revision-Date: 2020-12-18 17:35+0100\n"
+"POT-Creation-Date: 2022-10-03 07:50+0000\n"
+"PO-Revision-Date: 2022-10-11 21:06+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -21,12 +21,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "GNOME Minor"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Minor"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -34,15 +36,15 @@ msgstr "Rensa dolda minor från ett minfält"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"GNOME Minor är ett pusselspel där du söker efter dolda minor. Placera "
-"flaggor över rutor med minor så fort som möjligt för att göra brädet till en "
-"säkrare plats. Du vinner spelet då du flaggat varje mina på brädet. Var "
-"försiktig så du inte aktiverar någon mina, för då tar spelet slut!"
+"Minor är ett pusselspel där du söker efter dolda minor. Placera flaggor över "
+"rutor med minor så fort som möjligt för att göra brädet till en säkrare "
+"plats. Du vinner spelet då du flaggat varje mina på brädet. Akta så du inte "
+"aktiverar någon mina, för då är spelet slut!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
@@ -54,14 +56,9 @@ msgstr ""
 "fastnar kan du be om ett tips. Detta ger strafftid, men det är bättre än att "
 "stöta på en mina!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "GNOME-projektet"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Minor"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -235,156 +232,143 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Växla fältets flaggtillstånd"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "_Bredd"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "_Höjd"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "Procentandel _minor"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "_Avbryt"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "_Spela spel"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Paus"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Ändra s_vårighetsgrad"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "_Bästa tider"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "_Spela igen"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Pausad"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Skriv ut utgåvans version och avsluta"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Litet spel"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Medelstort spel"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Stort spel"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "_Poäng"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:19
 msgid "A_ppearance"
 msgstr "U_tseende"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:25
 msgid "_Use Question Flags"
 msgstr "_Använd frågetecken-flaggor"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
 msgstr "_Tangentbordsgenvägar"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "_Hjälp"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:39
 msgid "_About Mines"
 msgstr "_Om Minor"
 
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Bredd"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "_Höjd"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "Procentandel _minor"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "_Spela spel"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Pausad"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Skriv ut utgåvans version och avsluta"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Litet spel"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Medelstort spel"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Stort spel"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Minfält:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minor"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Anpassat"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minor"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Vill du starta ett nytt spel?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Om du startar ett nytt spel kommer ditt nuvarande spel gå förlorat."
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Behåll aktuellt spel"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Starta nytt spel"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "Bö_rja om"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Paus"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "_Fortsätt"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "_Spela igen"
 
-#: src/gnome-mines.vala:814
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Huvudspel:"
 
-#: src/gnome-mines.vala:819
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Poäng:"
 
-#: src/gnome-mines.vala:822
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Stöd för storleksändring och SVG:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Röj explosiva minor från brädet"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -401,6 +385,21 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Välj tema"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "GNOME Minor"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME-projektet"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Ändra s_vårighetsgrad"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Bästa tider"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Spela igen"
 
 #~ msgctxt "shortcut window"
 #~ msgid ""
