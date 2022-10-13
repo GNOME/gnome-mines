@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: gnome-mines gnome-40\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
 "POT-Creation-Date: 2022-10-06 21:27+0000\n"
-"PO-Revision-Date: 2022-10-12 13:57+0200\n"
+"PO-Revision-Date: 2022-10-13 10:22+0200\n"
 "Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
 "Language-Team: Bulgarian <dict@fsa-bg.org>\n"
 "Language: bg\n"
@@ -88,7 +88,7 @@ msgstr "Тема"
 
 #: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
-msgstr "Име на темата, която да се използва."
+msgstr "Името на темата на плочките, която ще се използва."
 
 #: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
