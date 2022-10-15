@@ -8,8 +8,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2021-10-15 11:28+0000\n"
-"PO-Revision-Date: 2021-10-15 22:04+0200\n"
+"POT-Creation-Date: 2022-10-03 04:54+0000\n"
+"PO-Revision-Date: 2022-10-03 10:32+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.1.1\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -56,7 +56,7 @@ msgstr "2012"
 #. (itstool) path: page/title
 #: C/board-size.page:23
 msgid "How to change the game board size"
-msgstr "Hur man ändrar spelplanens storlek"
+msgstr "Hur du ändrar spelplanens storlek"
 
 #. (itstool) path: page/p
 #: C/board-size.page:25
@@ -140,7 +140,7 @@ msgid ""
 "about bugs and crashes, or request enhancements."
 msgstr ""
 "Detta är ett felrapporteringssystem där användare och utvecklare kan lämna "
-"information om buggar, krascher och önska förbättringar."
+"information om fel, krascher och önska förbättringar."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:28
@@ -155,6 +155,7 @@ msgstr ""
 "din felrapport. Om du inte redan har ett konto, klicka bara på länken "
 "<gui>Sign in/Register</gui> för att skapa ett."
 
+# TODO: remove gitlab
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
 msgid ""
@@ -214,12 +215,12 @@ msgid ""
 "href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du komma i "
-"kontakt med utvecklarna genom <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller via vår "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">sändlista</"
-"link>."
+"Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">hjälpa till att utveckla <app>GNOME Spel</app></link>, kan du "
+"komma i kontakt med utvecklarna genom <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, eller "
+"via vår <link href=\"https://mail.gnome.org/mailman/listinfo/games-"
+"list\">sändlista</link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -244,25 +245,25 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
 "Om du vill bidra till dokumentationsprojektet, ta kontakt med oss via <link "
-"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> kanal på <link href=\"https://wiki.gnome.org/GnomeIrcChannels"
-"\">irc.gnome.org</link> eller via vår <link href=\"https://mail.gnome.org/"
-"mailman/listinfo/gnome-doc-list\">sändlista</link>."
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> kanal på <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> eller via vår <link href=\"https://"
+"mail.gnome.org/mailman/listinfo/gnome-doc-list\">sändlista</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki-sida</link> innehåller nyttig information."
+"Vår <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki-sida</link> innehåller nyttig information."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -288,8 +289,8 @@ msgid ""
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
 "Flaggornas exakta utseende beror på temat. Du kan ändra temat genom att "
-"trycka på menyknappen i fönstrets övre högra hörn och sedan välja <gui style="
-"\"menuitem\">Utseende</gui>."
+"trycka på menyknappen i fönstrets övre högra hörn och sedan välja <gui "
+"style=\"menuitem\">Utseende</gui>."
 
 #. (itstool) path: section/title
 #: C/flags.page:51
@@ -318,8 +319,8 @@ msgid ""
 "If you are not sure whether a tile hides a mine, you can use the "
 "<em>question</em> flag."
 msgstr ""
-"Om du är osäker på om en ruta döljer en mina, kan du använda "
-"<em>frågetecken</em>-flaggan."
+"Om du är osäker på om en ruta döljer en mina kan du använda <em>frågetecken</"
+"em>-flaggan."
 
 #. (itstool) path: td/p
 #: C/flags.page:75
@@ -372,20 +373,20 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "GNOME Minor"
+msgid "Mines"
+msgstr "Minor"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "GNOME Minor"
+msgid "Mines"
+msgstr "Minor"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "GNOME Minor"
+msgid "Mines"
+msgstr "Minor"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -394,8 +395,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> GNOME Minor"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Minor"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -486,7 +487,7 @@ msgid ""
 "licensor (but not in any way that suggests that they endorse you or your use "
 "of the work)."
 msgstr ""
-"Du måste ge erkännande åt arbetet på det sätt som anges av författaren eller "
+"Du måste ge erkännande åt verket på det sätt som anges av författaren eller "
 "licensgivaren (men inte på ett sätt som antyder att de har godkänt eller "
 "rekommenderar din användning av verket)."
 
@@ -543,7 +544,7 @@ msgid ""
 "To change the <link xref=\"board-size\">board size</link>, press the <gui "
 "style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
-"För att ändra <link xref=\"board-size\">brädstorleken</link>, tryck på "
+"För att ändra <link xref=\"board-size\">brädstorleken</link> trycker du på "
 "knappen <gui style=\"button\">Ändra svårighetsgrad</gui> till höger."
 
 #. (itstool) path: note/p
@@ -554,10 +555,10 @@ msgid ""
 "Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
 "your current game will be lost."
 msgstr ""
-"Om du redan spelar ett spel och trycker på knappen <gui style=\"button"
-"\">Börja om</gui>, kommer <app>Minor</app> att fråga om du vill <gui>Behålla "
-"aktuellt spel</gui> eller <gui>Starta nytt spel</gui>. Om du väljer det "
-"senare, kommer ditt nuvarande spel att gå förlorat."
+"Om du spelar ett spel och trycker på knappen <gui style=\"button\">Börja om</"
+"gui>, kommer <app>Minor</app> att fråga om du vill <gui>Behålla aktuellt "
+"spel</gui> eller <gui>Starta nytt spel</gui>. Om du väljer det senare kommer "
+"ditt nuvarande spel att gå förlorat."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -579,8 +580,8 @@ msgid ""
 "Start by choosing one of the three default board sizes, or by selecting a "
 "custom board."
 msgstr ""
-"Börja med att välja en av de tre spelplaner som är standard, eller genom att "
-"välja en anpassad spelplan."
+"Börja med att välja en av de tre standardstorlekarna för spelplan, eller "
+"genom att välja en anpassad spelplan."
 
 #. (itstool) path: item/p
 #: C/rules.page:35
@@ -627,11 +628,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
-"Om du avslutar spelet tillräckligt snabbt, kommer du att läggas till på "
-"<link xref=\"high-scores\">poänglistan</link>."
+"Om du avslutar spelet tillräckligt snabbt kommer du att läggas till på <link "
+"xref=\"high-scores\">poänglistan</link>."
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
@@ -665,15 +666,15 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
-"För att börja översätta måste du <link href=\"https://l10n.gnome.org\">skapa "
-"ett konto</link> och gå med i <link href=\"https://l10n.gnome.org/teams/"
-"\">översättningsgruppen</link> för ditt språk. Det kommer att ge dig "
-"möjlighet att skicka upp nya översättningar."
+"För att börja översätta kommer du att behöva <link href=\"https://l10n.gnome."
+"org\">skapa ett konto</link> och gå med i <link href=\"https://l10n.gnome."
+"org/teams/\">översättningsgruppen</link> för ditt språk. Detta kommer att ge "
+"dig möjlighet att skicka upp nya översättningar."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
@@ -683,10 +684,10 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Du kan chatta med GNOME-översättare genom <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. Översättarna "
-"på kanalen finns över hela världen, så du kommer kanske inte få en omedelbar "
-"respons på grund av skillnader i tidszon."
+"Du kan chatta med GNOME-översättare via <link href=\"https://cbe003.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. Folk i "
+"kanalen finns över hela världen, så du kanske inte får ett omedelbart svar "
+"på grund av skillnader i tidzon."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
@@ -695,6 +696,6 @@ msgid ""
 "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Alternativt, kan du kontakta det internationella teamet genom att använda "
-"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n"
-"\">sändlista</link>."
+"Alternativt kan du kontakta internationaliseringsgruppen genom att använda "
+"deras <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-"
+"i18n\">sändlista</link>."
