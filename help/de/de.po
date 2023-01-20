@@ -5,13 +5,13 @@
 # Mario Blättermann <mario.blaettermann@gmail.com>, 2008, 2012-2013, 2017-2018, 2019, 2020.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2012.
 # Bernd Homuth <dev@hmt.im>, 2014.
-# Jürgen Benvenuti <gastornis@posteo.org>, 2022.
+# Jürgen Benvenuti <gastornis@posteo.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: Mines Manual master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-27 12:23+0000\n"
-"PO-Revision-Date: 2022-07-30 22:22+0200\n"
+"POT-Creation-Date: 2022-11-05 19:24+0000\n"
+"PO-Revision-Date: 2023-01-20 21:57+0100\n"
 "Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -30,7 +30,7 @@ msgstr ""
 "2018-2019.\n"
 "Christian Kirbach <christian.kirbach@gmail.com>, 2012-2015.\n"
 "Bernd Homuth <dev@hmt.im>, 2014.\n"
-"Jürgen Benvenuti <gastornis@posteo.org>, 2022."
+"Jürgen Benvenuti <gastornis@posteo.org>, 2022, 2023."
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -228,10 +228,10 @@ msgid ""
 msgstr ""
 "Falls Sie <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">bei "
 "der Entwicklung der <app>GNOME Games</app> helfen möchten</link>, können Sie "
-"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/games-"
-"list\">Mailingliste</link> Kontakt aufnehmen."
+"mit den Entwicklern im <link href=\"https://cbe005.chat.mibbit.com/?url=irc"
+"%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> oder über deren <link href="
+"\"https://mail.gnome.org/mailman/listinfo/games-list\">Mailingliste</link> "
+"Kontakt aufnehmen."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -257,8 +257,8 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
-"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
+"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
@@ -272,12 +272,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
-"Contributing\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">wiki</link> page contains useful information."
 msgstr ""
-"Unser <link href=\"https://wiki.gnome.org/DocumentationProject/"
-"Contributing\">Wiki</link> enthält eine Reihe nützlicher Informationen für "
-"Sie bereit."
+"Unser <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
+"\">Wiki</link> enthält eine Reihe nützlicher Informationen für Sie bereit."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -360,8 +359,8 @@ msgid ""
 "preference."
 msgstr ""
 "Um diese Fahnen zu aktivieren, klicken Sie auf den Menüknopf in der rechten "
-"oberen Ecke des Fensters und aktivieren Sie die Option <gui "
-"style=\"checkbox\">Fragen-Fahne verwenden</gui>."
+"oberen Ecke des Fensters und aktivieren Sie die Option <gui style=\"checkbox"
+"\">Fragen-Fahne verwenden</gui>."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -394,20 +393,20 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "GNOME Minen"
+msgid "Mines"
+msgstr "Minen"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "GNOME Minen"
+msgid "Mines"
+msgstr "Minen"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "GNOME Minen"
+msgid "Mines"
+msgstr "Minen"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -416,8 +415,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> GNOME Minen"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Minen"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -656,8 +655,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link "
-"xref=\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link xref="
+"\"high-scores\">high scores</link> list."
 msgstr ""
 "Wenn Sie das Spiel schnell genug geschafft haben, werden Sie gefragt, ob Sie "
 "Ihren Namen in die <link xref=\"high-scores\">Bestenliste</link> eintragen "
@@ -696,10 +695,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome."
-"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
-"org/teams/\">translation team</link> for your language. This will give you "
-"the ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome.org"
+"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
+"teams/\">translation team</link> for your language. This will give you the "
+"ability to upload new translations."
 msgstr ""
 "Um mit der Übersetzung zu beginnen, müssen Sie zunächst <link href=\"https://"
 "l10n.gnome.org\">ein Konto erstellen</link> und einem <link href=\"https://"
@@ -727,21 +726,21 @@ msgid ""
 "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Alternativ können Sie das Internationalisierungsteam über dessen <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</"
-"link> kontaktieren."
+"Alternativ können Sie das Internationalisierungsteam über dessen <link href="
+"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">Mailingliste</link> "
+"kontaktieren."
 
 #~ msgid ""
 #~ "To make the number of available flags equal to the number of remaining "
 #~ "mines, pressing the menu button in the top-right corner of the window and "
-#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui "
-#~ "style=\"checkbox\">Use Question Flags</gui> preferences."
+#~ "enable the <gui style=\"checkbox\">Show Warnings</gui> and <gui style="
+#~ "\"checkbox\">Use Question Flags</gui> preferences."
 #~ msgstr ""
 #~ "Um die gleiche Anzahl verfügbarer Fahnen und verbleibender Minen zu "
 #~ "erhalten, klicken Sie auf den Menüknopf in der rechten oberen Ecke des "
-#~ "Fensters und aktivieren Sie die Optionen <gui "
-#~ "style=\"checkbox\">Warnungen anzeigen</gui> und <gui "
-#~ "style=\"checkbox\">Fragen-Fahne verwenden</gui>."
+#~ "Fensters und aktivieren Sie die Optionen <gui style=\"checkbox"
+#~ "\">Warnungen anzeigen</gui> und <gui style=\"checkbox\">Fragen-Fahne "
+#~ "verwenden</gui>."
 
 #~ msgid "2014"
 #~ msgstr "2014"
