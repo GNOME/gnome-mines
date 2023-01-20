@@ -1,26 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2022-07-27 12:23+0000\n"
-"PO-Revision-Date: 2022-09-23 19:58+0200\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"POT-Creation-Date: 2022-11-05 19:24+0000\n"
+"PO-Revision-Date: 2023-01-20 16:39+0100\n"
+"Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
 "Language-Team: \n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "GNOME Mines"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "ნაღმები"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -28,15 +30,15 @@ msgstr "გაასუფთავეთ დანაღმული ველ�
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"GNOME Mines არის თავსატეხი, სადაც თქვენ ეძებთ ფარულ ნაღმებს. რაც შეიძლება "
-"სწრაფად მონიშნეთ ადგილები ნაღმებით, რათა დაფა უფრო უსაფრთხო ადგილი გახდეს. "
-"თქვენ მოიგებთ თამაშს, როდესაც დაფაზე ყველა ნაღმი დროშით მონიშნეთ. ფრთხილად "
-"იყავით, რომ არ გაააქტიუროთ, წინააღმდეგ შემთხვევაში თამაში დასრულებულია!"
+"Mines არის თავსატეხი, სადაც თქვენ ეძებთ ფარულ ნაღმებს. რაც შეიძლება სწრაფად "
+"მონიშნეთ ადგილები ნაღმებით, რათა დაფა უფრო უსაფრთხო ადგილი გახდეს. თქვენ "
+"მოიგებთ თამაშს, როდესაც დაფაზე ყველა ნაღმი დროშით მონიშნეთ. ფრთხილად იყავით, "
+"რომ არ გაააქტიუროთ, წინააღმდეგ შემთხვევაში თამაში დასრულებულია!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
@@ -48,14 +50,9 @@ msgstr ""
 "შეგიძლიათ მინიშნება მოითხოვოთ: გადაიხდით სათამაშო დროით, მაგრამ ეს უკეთესია, "
 "ვიდრე ნაღმზე დაბიჯება!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "პროექტი \"GNOME\""
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
-#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
-msgid "Mines"
-msgstr "ნაღმები"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -370,3 +367,9 @@ msgstr "თარგმანი-შესრულებულია"
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "თემის არჩევა"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "GNOME Mines"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "პროექტი \"GNOME\""
