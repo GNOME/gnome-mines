@@ -5,13 +5,13 @@
 # Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.
 # Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.
 # Dirgita <dirgitadevina@yahoo.co.id>, 2012.
-# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021.
+# Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-10-17 15:16+0000\n"
-"PO-Revision-Date: 2021-12-23 10:52+0700\n"
+"POT-Creation-Date: 2023-01-25 19:08+0000\n"
+"PO-Revision-Date: 2023-01-27 10:18+0700\n"
 "Last-Translator: Kukuh Syafaat <kukuhsyafaat@gnome.org>\n"
 "Language-Team: Indonesian <gnome@i15n.org>\n"
 "Language: id\n"
@@ -20,11 +20,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Rosetta-Export-Date: 2007-04-23 05:58:10+0000\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "GNOME Ranjau"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Ranjau"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -32,14 +34,14 @@ msgstr "Kosongkan ranjau tersembunyi dari medan ranjau"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"GNOME Ranjau adalah permainan teka-teki dimana Anda mencari ranjau "
-"tersembunyi. Tandai ruang dengan ranjau secepat mungkin untuk membuat papan "
-"menjadi tempat yang lebih aman. Anda memenangkan permainan ketika Anda telah "
+"Ranjau adalah permainan teka-teki dimana Anda mencari ranjau tersembunyi. "
+"Tandai ruang dengan ranjau secepat mungkin untuk membuat papan menjadi "
+"tempat yang lebih aman. Anda memenangkan permainan ketika Anda telah "
 "menandai setiap ranjau pada papan. Berhati-hatilah untuk tidak memicu salah "
 "satu, atau permainan berakhir!"
 
@@ -53,14 +55,9 @@ msgstr ""
 "Bila Anda mengalami kebuntuan, Anda bisa meminta petunjuk: ada penalti "
 "waktu, tapi itu lebih baik daripada mengenai sebuah ranjau!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Proyek GNOME"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
-#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
-msgid "Mines"
-msgstr "Ranjau"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -374,11 +371,17 @@ msgstr ""
 "Andika Triwidada <andika@gmail.com>, 2010, 2012, 2013, 2014.\n"
 "Vincent Sebastian The <vincent.s.the@gmail.com>, 2011, 2012.\n"
 "Dirgita <dirgitadevina@yahoo.co.id>, 2012.\n"
-"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021."
+"Kukuh Syafaat <kukuhsyafaat@gnome.org>, 2017, 2019, 2020, 2021, 2023."
 
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Pilih Tema"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "GNOME Ranjau"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Proyek GNOME"
 
 #~ msgid "Change _Difficulty"
 #~ msgstr "Ubah _Kesulitan"
