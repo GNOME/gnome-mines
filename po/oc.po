@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-10-17 15:16+0000\n"
-"PO-Revision-Date: 2021-11-13 23:38+0100\n"
+"POT-Creation-Date: 2023-01-25 19:08+0000\n"
+"PO-Revision-Date: 2023-02-12 22:04+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: Tot En Òc\n"
 "Language: oc\n"
@@ -16,12 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.2.2\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "Desminaire GNOME"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Minas"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -29,10 +31,10 @@ msgstr "Netejar un camp de minas de sas minas amagadas"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
 "Lo desminaire GNOME es un copacap ont cercatz de minas amagadas. Senhalatz "
 "las casas que contenon una mina tant viste coma possible per far del platèu "
@@ -49,14 +51,9 @@ msgstr ""
 "Se sètz blocat, podètz demandar un indici : recebretz una penalitat de "
 "temps, mas aquò val melhor que de sautar sus una mina !"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Lo projècte GNOME"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:46 src/interface.ui:52
-#: src/gnome-mines.vala:168 src/gnome-mines.vala:845
-msgid "Mines"
-msgstr "Minas"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr ""
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -374,6 +371,12 @@ msgstr "Cédric Valmary <cvalmary@yahoo.fr>"
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Causir un tèma"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "Desminaire GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Lo projècte GNOME"
 
 #~ msgid "Warning about too many flags"
 #~ msgstr "Avertiment quand i a tròp de bandièras"
