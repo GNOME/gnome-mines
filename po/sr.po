@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-01-26 14:46+0000\n"
-"PO-Revision-Date: 2021-02-15 16:55+0100\n"
+"POT-Creation-Date: 2023-02-12 21:04+0000\n"
+"PO-Revision-Date: 2023-02-16 11:04+0100\n"
 "Last-Translator: Марко М. Костић <marko.m.kostic@gmail.com>\n"
 "Language-Team: српски <gnome-sr@googlegroups.org>\n"
 "Language: sr\n"
@@ -21,11 +21,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.1.1\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "Гномове мине"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Мине"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -33,13 +35,13 @@ msgstr "Очистите скривене мине са минског поља"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"Гномове мине је игра слагалица у којој тражите скривене мине. Откријте поља "
-"са минама што брже можете како бисте таблу учинили безбеднијим местом. "
+"Мине су игра слагалица у којој тражите скривене мине. Откријте поља са "
+"минама што брже можете како бисте таблу учинили безбеднијим местом. "
 "Побеђујете у игри када откријете сваку мину на табли. Будите пажљиви да не "
 "нагазите на неку, јер у том случају игра се завршава!"
 
@@ -54,14 +56,9 @@ msgstr ""
 "савет: али то се кажњава временом, мада је и то боље него ли летети небу под "
 "облаке нагазивши на мину!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Гномов пројекат"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Мине"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Роберт Рот (Roberth Roth)"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -235,94 +232,77 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Промени стање заставице на пољу"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "_Ширина"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "_Висина"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "Проценат _мина"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "_Откажи"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "_Играј игру"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Застани"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Промени _тежину"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "_Најбоља времена"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "_Играј опет"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Паузирано"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Исписује издање и излази"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Мала игра"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Средња игра"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Велика игра"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "_Резултати"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:19
 msgid "A_ppearance"
 msgstr "_Изглед"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:25
 msgid "_Use Question Flags"
 msgstr "_Користи ознаке питања"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
 msgstr "Пр_ечице на тастатури"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "По_моћ"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:39
 msgid "_About Mines"
 msgstr "_О Минама"
 
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Ширина"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "_Висина"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "Проценат _мина"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "_Откажи"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "_Играј игру"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Паузирано"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Исписује издање и излази"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Мала игра"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Средња игра"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Велика игра"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Минско поље:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -331,11 +311,11 @@ msgstr[1] "%d × %d, %d мине"
 msgstr[2] "%d × %d, %d мина"
 msgstr[3] "%d × %d, једна мина"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Произвољно"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -344,51 +324,55 @@ msgstr[1] "<b>%d</b> мине"
 msgstr[2] "<b>%d</b> мина"
 msgstr[3] "<b>Једна</b> мина"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Да ли желите да започнете нову игру?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ако започнете нову игру, ваш тренутни напредак ће бити изгубљен."
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Задржи тренутну игру"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Започни нову игру"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "_Почни"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Застани"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "_Настави"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "_Играј опет"
 
-#: src/gnome-mines.vala:814
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Главна игра:"
 
-#: src/gnome-mines.vala:819
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Разултат:"
 
-#: src/gnome-mines.vala:822
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Подршка промене величине и СВГ:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Уклоните експлозивне мине са табле"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Душан Марјановић <madafaka@root.co.yu>\n"
@@ -402,6 +386,21 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Изаберите тему"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "Гномове мине"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Гномов пројекат"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Промени _тежину"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Најбоља времена"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Играј опет"
 
 #~ msgid "org.gnome.Mines"
 #~ msgstr "org.gnome.Mines"
