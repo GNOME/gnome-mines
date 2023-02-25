@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2021-10-15 11:28+0000\n"
-"PO-Revision-Date: 2022-01-25 19:10+0100\n"
+"POT-Creation-Date: 2023-01-25 19:08+0000\n"
+"PO-Revision-Date: 2023-02-25 16:01+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -15,12 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "scootergrisen <>, 2020"
+msgstr ""
+"scootergrisen\n"
+"Alan Mortensen\n"
+"\n"
+"Dansk-gruppen <dansk@dansk-gruppen.dk>\n"
+"Mere info: http://www.dansk-gruppen.dk"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -207,11 +212,12 @@ msgid ""
 "href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
 "link>."
 msgstr ""
-"Hvis du vil <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">hjælpe med at udvikle <app>GNOME Spil</app></link>, så kan du kontakte "
-"udviklerne med <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">irc</link> eller via vores <link href="
-"\"https://mail.gnome.org/mailman/listinfo/games-list\">mailingliste</link>."
+"Hvis du vil <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">hjælpe med at udvikle <app>GNOME Spil</app></link>, så kan du "
+"kontakte udviklerne med <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link> eller via vores "
+"<link href=\"https://mail.gnome.org/mailman/listinfo/games-"
+"list\">mailingliste</link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -236,25 +242,25 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
 "gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgstr ""
-"Bidrag til dokumentationsprojektet ved at kontakte os på <link href="
-"\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link>-kanalen på <link href=\"https://wiki.gnome.org/"
+"Bidrag til dokumentationsprojektet ved at kontakte os på <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link>-kanalen på <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link> eller via vores <link href=\"https://"
 "mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailingliste</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Vores <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wikiside</link> indeholder nyttig information."
+"Vores <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wikiside</link> indeholder nyttig information."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -280,8 +286,8 @@ msgid ""
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
 "Flagets udseende afhænger af temaet. Du kan ændre temaet ved at trykke på "
-"menuknappen i øverste højre hjørne af vinduet og vælge <gui style=\"menuitem"
-"\">Udseende</gui>."
+"menuknappen i øverste højre hjørne af vinduet og vælge <gui "
+"style=\"menuitem\">Udseende</gui>."
 
 #. (itstool) path: section/title
 #: C/flags.page:51
@@ -363,20 +369,20 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "GNOME Miner"
+msgid "Mines"
+msgstr "Miner"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "GNOME Miner"
+msgid "Mines"
+msgstr "Miner"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "GNOME Miner"
+msgid "Mines"
+msgstr "Miner"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -385,8 +391,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> GNOME Miner"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Miner"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -619,8 +625,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
 "Hvis du fuldfører spillet hurtigt nok, så filøjes du på listen med <link "
 "xref=\"high-scores\">bedste resultater</link>."
@@ -657,10 +663,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "For at komme i gang med at oversætte, skal du <link href=\"https://l10n."
 "gnome.org\">oprette en konto</link> og deltage i <link href=\"https://l10n."
@@ -687,5 +693,6 @@ msgid ""
 "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
 "list</link>."
 msgstr ""
-"Du kan også kontakte internationaliseringsholdet med deres <link href="
-"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailingliste</link>."
+"Du kan også kontakte internationaliseringsholdet med deres <link "
+"href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailingliste</"
+"link>."
