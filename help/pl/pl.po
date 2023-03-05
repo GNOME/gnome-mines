@@ -7,7 +7,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines-help\n"
-"POT-Creation-Date: 2021-10-15 11:28+0000\n"
+"POT-Creation-Date: 2023-02-28 12:19+0000\n"
 "PO-Revision-Date: 2020-03-05 14:03+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
@@ -209,16 +209,15 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz skontaktować się "
-"z programistami za pomocą sieci <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> lub przez <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">listę pocztową</"
-"link> (w języku angielskim)."
+"Jeśli chcesz <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">pomóc rozwijać <app>Gry GNOME</app></link>, to możesz "
+"skontaktować się z programistami za pomocą sieci <link href=\"https://cbe005."
+"chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> "
+"lub przez serwis <link href=\"https://discourse.gnome.org/tag/games\">GNOME "
+"Discourse</link> (w języku angielskim)."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -243,26 +242,27 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
 "Jeśli chcesz wziąć udział w projekcie dokumentacji, to skontaktuj się z nami "
 "w kanale <link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc."
 "gnome.org%2Fdocs\">#docs</link> w sieci <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> lub przez <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">listę pocztową</link> (w języku "
-"angielskim)."
+"GnomeIrcChannels\">irc.gnome.org</link> lub przez serwis <link "
+"href=\"https://discourse.gnome.org/tag/documentation\">GNOME Discourse</"
+"link> (w języku angielskim)."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
-"Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> zawiera przydatne informacje (w języku angielskim)."
+"Nasza <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> zawiera przydatne informacje (w języku "
+"angielskim)."
 
 #. (itstool) path: page/title
 #: C/flags.page:33
@@ -371,20 +371,20 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -393,8 +393,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> Miny GNOME"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Miny"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -597,8 +597,8 @@ msgid ""
 "<link xref=\"flags\">flags</link>."
 msgstr ""
 "Kolorowa cyfra, która wskazuje liczbę min w sąsiednich polach. Pomaga to "
-"wydedukować, gdzie są miny, które należy oznaczyć odpowiednimi <link xref="
-"\"flags\">flagami</link>."
+"wydedukować, gdzie są miny, które należy oznaczyć odpowiednimi <link "
+"xref=\"flags\">flagami</link>."
 
 #. (itstool) path: item/p
 #: C/rules.page:44
@@ -621,8 +621,8 @@ msgstr "Powtarzaj poprzedni krok, aż odkryjesz wszystkie pola bez min."
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
 "Jeśli dostatecznie szybko skończysz grę, to znajdziesz się na liście <link "
 "xref=\"high-scores\">najlepszych wyników</link>."
@@ -659,14 +659,14 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
-"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"https://l10n.gnome.org"
-"\">utworzenie konta</link> i dołączenie do <link href=\"https://l10n.gnome."
-"org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
+"Do rozpoczęcia tłumaczenia potrzebne jest <link href=\"https://l10n.gnome."
+"org\">utworzenie konta</link> i dołączenie do <link href=\"https://l10n."
+"gnome.org/teams/\">zespołu tłumaczy</link> dla danego języka. Umożliwi to "
 "wysyłanie nowych tłumaczeń."
 
 #. (itstool) path: page/p
@@ -677,18 +677,17 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"Można skontaktować się z tłumaczami GNOME za pomocą sieci <link href="
-"\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n"
-"\">IRC</link> (w języku angielskim). Z powodu różnic stref czasowych "
-"odpowiedź może nie przyjść od razu."
+"Można skontaktować się z tłumaczami GNOME za pomocą sieci <link "
+"href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fi18n\">IRC</link> (w języku angielskim). Z powodu różnic stref "
+"czasowych odpowiedź może nie przyjść od razu."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Można także skontaktować się z zespołem tłumaczeń za pomocą <link href="
-"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">listy pocztowej</"
-"link> (w języku angielskim)."
+"Można także skontaktować się z zespołem tłumaczeń za pomocą serwisu <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link> "
+"(w języku angielskim)."
