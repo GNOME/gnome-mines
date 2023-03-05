@@ -2,21 +2,21 @@
 # Copyright (C) 2017 gnome-mines's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mines package.
 # Junyoul Lim <purum@postech.ac.kr>, 2017.
-# Seong-ho Cho <shcho@gnome.org>, 2021.
+# Seong-ho Cho <shcho@gnome.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2022-07-27 12:23+0000\n"
-"PO-Revision-Date: 2022-09-05 15:21+0900\n"
-"Last-Translator: Seong-ho Cho <darkcircle.0426@gmal.com>\n"
+"POT-Creation-Date: 2023-02-28 12:19+0000\n"
+"PO-Revision-Date: 2023-03-05 01:09+0900\n"
+"Last-Translator: Seong-ho Cho <shcho@gnome.org>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Bookmarks: -1,5,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -24,7 +24,7 @@ msgctxt "_"
 msgid "translator-credits"
 msgstr ""
 "임준열 <purum@postech.ac.kr>, 2017\n"
-"조성호 <shcho@gnome.org>, 2021, 2022"
+"조성호 <shcho@gnome.org>, 2021, 2022, 2023"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -206,15 +206,14 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
 "<link href=\"https://wiki.gnome.org/Apps/Games/Contributing\"><app>그놈 게임"
-"</app> 개발을 지원</link> 하려면 <link href=\"https://cbe005.chat.mibbit."
-"com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> 또는 <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">매일링 리스트</"
-"link>에서 개발자와 연락할 수 있습니다."
+"</app> 개발에 도움</link>을 주고 싶다면, <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link> 또는 "
+"<link href=\"https://discourse.gnome.org/tag/games\">그놈 디스코스</link>를 "
+"활용하여 개발자와 연락할 수 있습니다."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -239,22 +238,22 @@ msgstr ""
 #: C/documentation.page:32
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
-"문서 프로젝트에 기여를 하려면 <link href=\"https://wiki.gnome.org/"
+"문서 프로젝트에 기여 하려면 <link href=\"https://wiki.gnome.org/"
 "GnomeIrcChannels\">irc.gnome.org</link>에 있는 <link href=\"https://client01."
 "chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link> 채널 또"
-"는 <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">매일"
-"링 리스트</link>를 통해 연락합니다."
+"는 <link href=\"https://discourse.gnome.org/tag/documentation\">그놈 디스코스"
+"</link>를 활용하여 연락합니다."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
 "<link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">위키"
 "</link> 페이지에 안내 정보가 있습니다."
@@ -331,8 +330,8 @@ msgid ""
 "window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
 "preference."
 msgstr ""
-"이 깃발을 사용하려면 창 우측 상단의 메뉴 단추를 누른 후 <gui style=\"checkbox"
-"\">물음표 깃발 사용</gui> 기본 설정 값을 설정합니다."
+"이 깃발을 사용하려면 창 우측 상단의 메뉴 단추를 누른 후 <gui "
+"style=\"checkbox\">물음표 깃발 사용</gui> 기본 설정 값을 설정합니다."
 
 #. (itstool) path: page/title
 #: C/high-scores.page:24
@@ -355,28 +354,28 @@ msgid ""
 "display the <gui>Small</gui> field size by default; to view other sizes, "
 "select them in the drop down menu at the top of the dialog."
 msgstr ""
-"고득점 목록을 볼려면, 창 우측 상단의 메뉴 단추를 누른 후 <gui style="
-"\"menuitem\">점수</gui>를 선택합니다. <gui>작은</gui> 게임판 크기의 점수가 기"
-"본으로 나타납니다. 다른 크기 게임판의 점수를 보려면 대화상자 상단의 드롭다운 "
-"메뉴에서 크기를 선택합니다."
+"고득점 목록을 볼려면, 창 우측 상단의 메뉴 단추를 누른 후 <gui "
+"style=\"menuitem\">점수</gui>를 선택합니다. <gui>작은</gui> 게임판 크기의 점"
+"수가 기본으로 나타납니다. 다른 크기 게임판의 점수를 보려면 대화상자 상단의 드"
+"롭다운 메뉴에서 크기를 선택합니다."
 
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "그놈 지뢰"
+msgid "Mines"
+msgstr "지뢰"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "그놈 지뢰"
+msgid "Mines"
+msgstr "지뢰"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "그놈 지뢰"
+msgid "Mines"
+msgstr "지뢰"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -385,8 +384,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> 그놈 지뢰"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> 지뢰"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -503,9 +502,9 @@ msgid ""
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
 "라이선스 전문을 보려면, <link href=\"http://creativecommons.org/licenses/by-"
-"sa/3.0/legalcode\">크리에이티브 커먼즈 웹사이트 </link> 또는 <link href="
-"\"http://creativecommons.org/licenses/by-sa/3.0/\">일반 권리 증서</link>를 참"
-"조합니다."
+"sa/3.0/legalcode\">크리에이티브 커먼즈 웹사이트 </link> 또는 <link "
+"href=\"http://creativecommons.org/licenses/by-sa/3.0/\">일반 권리 증서</link>"
+"를 참조합니다."
 
 #. (itstool) path: credit/name
 #: C/new-game.page:27
@@ -533,8 +532,8 @@ msgid ""
 "To change the <link xref=\"board-size\">board size</link>, press the <gui "
 "style=\"button\">Change Difficulty</gui> button on the right."
 msgstr ""
-"<link xref=\"board-size\">게임판 크기</link>를 바꾸려면, 우측의 <gui style="
-"\"button\">난이도 바꾸기</gui>를 누릅니다."
+"<link xref=\"board-size\">게임판 크기</link>를 바꾸려면, 우측의 <gui "
+"style=\"button\">난이도 바꾸기</gui>를 누릅니다."
 
 #. (itstool) path: note/p
 #: C/new-game.page:47
@@ -610,8 +609,8 @@ msgstr "지뢰가 없는 타일을 모두 알아내서 없앨 때까지 반복�
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
 "게임을 충분히 빨리 끝낸다면, <link xref=\"high-scores\">고득점 목록</link>에 "
 "등극할 수 있습니다."
@@ -648,10 +647,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "번역을 시작하려면 <link href=\"https://l10n.gnome.org\">계정 만들기</link>를 "
 "진행하고, 여러분의 언어에 해당하는 <link href=\"https://l10n.gnome.org/teams/"
@@ -666,27 +665,28 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fi18n\">IRC</link>에서 그놈 번역자와 이야기를 나눌 수 있습니다. 채널에 있"
-"는 사람은 전 세계에 있기 때문에, 시차로 인해 빠른 답변을 받지 못할 수도 있습"
-"니다."
+"<link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fi18n\">IRC</link>에서 그놈 번역자와 이야기를 나눌 수 있습니다. 채널에 "
+"있는 사람은 전 세계에 있기 때문에, 시차로 인해 빠른 답변을 받지 못할 수도 있"
+"습니다."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"대신, 국제화 팀에 <link href=\"https://mail.gnome.org/mailman/listinfo/gnome-"
-"i18n\">메일링 리스트</link>로 연락할 수도 있습니다."
+"대신, 국제화 팀에 <link href=\"https://discourse.gnome.org/tag/i18n\">그놈 디"
+"스코스</link>로 연락할 수도 있습니다."
 
 #~ msgid ""
-#~ "Click <gui style=\"button\">New</gui> or <guiseq><gui style=\"menu"
-#~ "\">Mines</gui> <gui style=\"menuitem\">New Game</gui></guiseq>."
+#~ "Click <gui style=\"button\">New</gui> or <guiseq><gui "
+#~ "style=\"menu\">Mines</gui> <gui style=\"menuitem\">New Game</gui></"
+#~ "guiseq>."
 #~ msgstr ""
-#~ "클릭 <gui style=\"button\"> 새로운 </gui> 또는 <guiseq><gui style=\"menu"
-#~ "\"> 지뢰 </gui><gui style=\"menuitem\"> 새 게임 </gui></guiseq>."
+#~ "클릭 <gui style=\"button\"> 새로운 </gui> 또는 <guiseq><gui "
+#~ "style=\"menu\"> 지뢰 </gui><gui style=\"menuitem\"> 새 게임 </gui></"
+#~ "guiseq>."
 
 #~ msgid ""
 #~ "To make the number of available flags equal to the number of remaining "
@@ -704,9 +704,9 @@ msgstr ""
 #~ "style=\"menuitem\">Preferences</gui></guiseq>, and select <gui>Use \"I'm "
 #~ "not sure\" flags</gui>."
 #~ msgstr ""
-#~ "이 깃발을 활성화하려면 <guiseq><gui style=\"manu\">지뢰</gui><gui style="
-#~ "\"menuitem\">설정(Preferences)</gui></guiseq>를 클릭 후 <gui>\"잘 모르겠음"
-#~ "\" 깃발 사용하기</gui>를 선택하세요."
+#~ "이 깃발을 활성화하려면 <guiseq><gui style=\"manu\">지뢰</gui><gui "
+#~ "style=\"menuitem\">설정(Preferences)</gui></guiseq>를 클릭 후 <gui>\"잘 모"
+#~ "르겠음\" 깃발 사용하기</gui>를 선택하세요."
 
 #~ msgid "2014"
 #~ msgstr "2014"
@@ -750,8 +750,8 @@ msgstr ""
 #~ "Select <guiseq><gui style=\"menu\">Mines</gui><gui style=\"menuitem\">New "
 #~ "Game</gui></guiseq> from the application menu."
 #~ msgstr ""
-#~ "프로그램 메뉴에서 <guiseq><gui style=\"menu\">지뢰</gui><gui style="
-#~ "\"menuitem\">새 게임</gui></guiseq>을 선택하세요."
+#~ "프로그램 메뉴에서 <guiseq><gui style=\"menu\">지뢰</gui><gui "
+#~ "style=\"menuitem\">새 게임</gui></guiseq>을 선택하세요."
 
 #~ msgid "Select your preferred <link xref=\"board-size\">board size</link>."
 #~ msgstr ""
