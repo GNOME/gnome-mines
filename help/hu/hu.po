@@ -1,14 +1,14 @@
 # Hungarian translation for gnome-mines help.
-# Copyright (C) 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2022 Free Software Foundation, Inc.
+# Copyright (C) 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2022, 2023 Free Software Foundation, Inc.
 # This file is distributed under the same license as the gnome-mines help.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2013, 2014, 2015, 2017, 2018, 2019.
-# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2018, 2020, 2022.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2018, 2020, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2022-02-18 10:42+0000\n"
-"PO-Revision-Date: 2022-03-14 02:25+0100\n"
+"POT-Creation-Date: 2023-02-28 12:19+0000\n"
+"PO-Revision-Date: 2023-03-08 21:56+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <gnome-hu-list at gnome dot org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -206,20 +206,26 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/develop.page:23
+#| msgid ""
+#| "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+#| "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+#| "touch with the developers using <link href=\"https://cbe005.chat.mibbit."
+#| "com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our "
+#| "<link href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing "
+#| "list</link>."
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">közreműködni a <app>GNOME játékok</app> fejlesztésében</link>, akkor a "
-"fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link href="
-"\"https://mail.gnome.org/mailman/listinfo/games-list\">levelezőlistán</link> "
-"veheti fel."
+"Ha szeretne <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\""
+">közreműködni a <app>GNOME Játékok</app> fejlesztésében</link>, akkor a"
+" fejlesztőkkel a kapcsolatot <link href=\"https://cbe005.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">IRC</link>-n vagy a <link"
+" href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>"
+" fórumon veheti fel."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -242,24 +248,30 @@ msgstr ""
 
 #. (itstool) path: page/p
 #: C/documentation.page:32
+#| msgid ""
+#| "To contribute to the Documentation Project, get in touch with us on the "
+#| "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+#| "org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+#| "GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://"
+#| "mail.gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
 msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link> or via <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
-"A dokumentációs projekthez csatlakozáshoz keresse fel az <link href="
-"\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fdocs"
-"\">#docs</link> csatornát az <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link>-on, vagy a <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">levelezőlistát</link>."
+"A dokumentációs projekthez való csatlakozáshoz keresse fel a <link "
+"href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
+"org%2Fdocs\">#docs</link> csatornát az <link href=\"https://wiki.gnome.org/"
+"GnomeIrcChannels\">irc.gnome.org</link>-on vagy a <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link> fórumon."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
 "A projekt <link href=\"https://wiki.gnome.org/DocumentationProject/"
 "Contributing\">wiki</link> oldala tartalmazza a legfontosabb információkat."
@@ -288,8 +300,8 @@ msgid ""
 "selecting <gui style=\"menuitem\">Appearance</gui>."
 msgstr ""
 "A zászlók pontos kinézete a témától függ. Módosíthatja a témát a menü gomb "
-"megnyomásával az ablak jobb felső sarkában, és a <gui style=\"menuitem"
-"\">Megjelenés</gui> menüpont kiválasztásával."
+"megnyomásával az ablak jobb felső sarkában, és a <gui "
+"style=\"menuitem\">Megjelenés</gui> menüpont kiválasztásával."
 
 #. (itstool) path: section/title
 #: C/flags.page:51
@@ -373,23 +385,27 @@ msgstr ""
 
 #. (itstool) path: info/title
 #: C/index.page:6
-#| msgctxt "link"
+#| msgctxt "link:trail"
 #| msgid "GNOME Mines"
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "GNOME Aknakereső"
+msgid "Mines"
+msgstr "Aknakereső"
 
 #. (itstool) path: info/title
 #: C/index.page:7
+#| msgctxt "link"
+#| msgid "GNOME Mines"
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "GNOME Aknakereső"
+msgid "Mines"
+msgstr "Aknakereső"
 
 #. (itstool) path: info/title
 #: C/index.page:8
+#| msgctxt "text"
+#| msgid "GNOME Mines"
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "GNOME Aknakereső"
+msgid "Mines"
+msgstr "Aknakereső"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -398,8 +414,9 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> GNOME Aknakereső"
+#| msgid "<_:media-1/> GNOME Mines"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Aknakereső"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -604,8 +621,8 @@ msgid ""
 "<link xref=\"flags\">flags</link>."
 msgstr ""
 "Egy színes szám, amely a szomszédos mezőkön lévő aknák számát képviseli. Ez "
-"segít kikövetkeztetni, hogy hol vannak az aknák, így a <link xref=\"flags"
-"\">zászlókkal</link> megjelölheti azokat."
+"segít kikövetkeztetni, hogy hol vannak az aknák, így a <link "
+"xref=\"flags\">zászlókkal</link> megjelölheti azokat."
 
 #. (itstool) path: item/p
 #: C/rules.page:44
@@ -631,11 +648,11 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
-"Ha elég hamar fejezi be a játékot, akkor felkerül a <link xref=\"high-scores"
-"\">pontszámok listájára</link>."
+"Ha elég hamar fejezi be a játékot, akkor felkerül a <link xref=\"high-"
+"scores\">pontszámok listájára</link>."
 
 #. (itstool) path: credit/name
 #: C/translate.page:15
@@ -669,10 +686,10 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://l10n.gnome."
+"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
+"org/teams/\">translation team</link> for your language. This will give you "
+"the ability to upload new translations."
 msgstr ""
 "A fordítás elkezdéséhez <link href=\"https://l10n.gnome.org\">létre kell "
 "hoznia egy fiókot</link>, és csatlakoznia kell a nyelvének megfelelő <link "
@@ -687,18 +704,23 @@ msgid ""
 "channel are located worldwide, so you may not get an immediate response as a "
 "result of timezone differences."
 msgstr ""
-"A GNOME fordítókkal <link href=\"https://cbe003.chat.mibbit.com/?url=irc%3A"
-"%2F%2Firc.gnome.org%2Fi18n\">IRC-en</link> is cseveghet. A csatornán a világ "
-"minden részéről vannak emberek, így előfordulhat, hogy az időzóna-eltérések "
-"miatt nem kap azonnal választ."
+"A GNOME fordítókkal <link href=\"https://cbe003.chat.mibbit.com/?"
+"url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC-en</link> is cseveghet. A "
+"csatornán a világ minden részéről vannak emberek, így előfordulhat, hogy az "
+"időzóna-eltérések miatt nem kap azonnal választ."
 
 #. (itstool) path: page/p
 #: C/translate.page:37
+#| msgid ""
+#| "Alternatively, you can contact the Internationalization Team using their "
+#| "<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
+#| "list</link>."
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot <link href="
-"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">levelezőlistán</link> "
-"is."
+"Ennek alternatívájaként megkeresheti a nemzetközi fordítócsapatot a <link"
+" href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>"
+" fórumon. A magyar csapat <link href=\"http://l10n.gnome.org/languages/hu/\""
+">kezdőoldalán</link> megtalálja a magyar levelezőlista címét és a fordítások"
+" megkezdéséhez szükséges információkat."
