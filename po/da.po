@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-01-26 14:46+0000\n"
-"PO-Revision-Date: 2021-09-15 20:05+0200\n"
+"POT-Creation-Date: 2023-01-25 19:08+0000\n"
+"PO-Revision-Date: 2023-03-10 00:20+0100\n"
 "Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -28,9 +28,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "GNOME Minestryger"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Minestryger"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -38,15 +40,11 @@ msgstr "Ryd skjulte miner fra et minefelt"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
-msgstr ""
-"GNOME Minestryger er et tænkespil hvor du søger efter skjulte miner. Sæt "
-"flag på felterne med miner så hurtigt som muligt for at gøre brættet et mere "
-"sikkert sted. Du vinder spillet når du har sat flag på alle minerne på "
-"brættet. Pas på du ikke detonerer en, ellers er spillet slut!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
+msgstr "Minestryger er et tænkespil, hvor du søger efter skjulte miner. Sæt flag på felterne med miner så hurtigt som muligt for at gøre brættet til et mere sikkert sted. Du vinder spillet, når du har sat flag på alle minerne på brættet. Pas på du ikke detonerer en, ellers er spillet slut!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
@@ -58,14 +56,9 @@ msgstr ""
 "på. Hvis du ikke kan komme videre, kan du bede om at få et tip: der er en "
 "tidsstraf, men det er bedre end at ramme en mine!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "GNOME-projektet"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Minestryger"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -237,156 +230,143 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Ændr tilstand for flag"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "_Bredde"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "_Højde"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "Procent _miner"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "_Annullér"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "Start _spil"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Pause"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Skift _sværhedsgrad"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "_Bedste tider"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "_Spil igen"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Pause"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Udskriv udgivelsesversion og afslut"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Lille spil"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Medium spil"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Stort spil"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "_Resultater"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:19
 msgid "A_ppearance"
 msgstr "_Udseende"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:25
 msgid "_Use Question Flags"
 msgstr "_Brug flag med spørgsmålstegn"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastaturgenveje"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "_Hjælp"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:39
 msgid "_About Mines"
 msgstr "_Om Minestryger"
 
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Bredde"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "_Højde"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "Procent _miner"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "_Annullér"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "Start _spil"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Pause"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Udskriv udgivelsesversion og afslut"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Lille spil"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Medium spil"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Stort spil"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Minefelt:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mine"
 msgstr[1] "%d × %d, %d miner"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Brugerdefineret"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mine"
 msgstr[1] "<b>%d</b> miner"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Vil du starte et nyt spil?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Hvis du starter et nyt spil, vil dine nuværende fremskridt gå tabt."
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Behold det aktuelle spil"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Start et nyt spil"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "St_art forfra"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Pause"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "_Genoptag"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "Spil _igen"
 
-#: src/gnome-mines.vala:814
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Hovedspil:"
 
-#: src/gnome-mines.vala:819
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Point:"
 
-#: src/gnome-mines.vala:822
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Ændring af størrelse og SVG-understøttelse:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Ryd eksplosive miner fra brættet"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Anders Wegge Jakobsen\n"
@@ -404,6 +384,21 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Vælg tema"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "GNOME Minestryger"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME-projektet"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Skift _sværhedsgrad"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Bedste tider"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Spil igen"
 
 #~ msgctxt "shortcut window"
 #~ msgid ""
