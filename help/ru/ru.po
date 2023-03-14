@@ -1,13 +1,13 @@
 # Russian translation for gnome-mines.
 # Copyright (C) 2022 gnome-mines's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mines package.
-# Ser82-png <sw@atrus.ru>, 2022.
+# Ser82-png <asvmail.as@gmail.com>, 2022
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
-"POT-Creation-Date: 2022-10-03 04:54+0000\n"
-"PO-Revision-Date: 2022-10-04 21:00+1000\n"
+"POT-Creation-Date: 2023-02-28 12:19+0000\n"
+"PO-Revision-Date: 2023-03-07 19:22+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
 msgid "translator-credits"
-msgstr "Ser82-png <asvmail.as@gmail.com>, 2021-2022"
+msgstr "Ser82-png <asvmail.as@gmail.com>, 2022-2023"
 
 #. (itstool) path: credit/name
 #: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
@@ -174,7 +174,7 @@ msgid ""
 "<gui>Submit issue</gui>."
 msgstr ""
 "Если вы запрашиваете новую функцию, выберите <gui>Feature</gui> в меню "
-"<gui>Labels</gui>. Заполните разделы «Заголовок» и «Описание» и нажмите "
+"<gui>Labels</gui>. Заполните разделы «Title» и «Description» и нажмите "
 "<gui>Submit issue</gui>."
 
 #. (itstool) path: section/p
@@ -207,16 +207,15 @@ msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
 "touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
 "Если вы хотите <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">помочь в разработке <app>GNOME Games</app></link>, можете "
-"связаться с разработчиками, воспользовавшись <link href=\"https://cbe005."
-"chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, "
-"или через наш <link href=\"https://mail.gnome.org/mailman/listinfo/games-"
-"list\">список рассылки</link>."
+"связаться с разработчиками воспользовавшись <link href=\"https://cbe005.chat."
+"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, или "
+"через <link href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</"
+"link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -243,14 +242,14 @@ msgid ""
 "To contribute to the Documentation Project, get in touch with us on the "
 "<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
 "org%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"GnomeIrcChannels\">irc.gnome.org</link> or via <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 msgstr ""
 "Чтобы внести свой вклад в Проект документации, свяжитесь с нами по <link "
 "href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome."
 "org%2Fdocs\">#docs</link> на <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> или через наш <link href=\"https://"
-"mail.gnome. org/mailman/listinfo/gnome-doc-list\">список рассылки</link>."
+"GnomeIrcChannels\">irc.gnome.org</link> или через <link href=\"https://"
+"discourse.gnome.org/tag/documentation\">GNOME Discourse</link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
@@ -368,24 +367,18 @@ msgstr ""
 
 #. (itstool) path: info/title
 #: C/index.page:6
-#| msgctxt "link:trail"
-#| msgid "GNOME Mines"
 msgctxt "link:trail"
 msgid "Mines"
 msgstr "Мины"
 
 #. (itstool) path: info/title
 #: C/index.page:7
-#| msgctxt "link"
-#| msgid "GNOME Mines"
 msgctxt "link"
 msgid "Mines"
 msgstr "Мины"
 
 #. (itstool) path: info/title
 #: C/index.page:8
-#| msgctxt "text"
-#| msgid "GNOME Mines"
 msgctxt "text"
 msgid "Mines"
 msgstr "Мины"
@@ -694,10 +687,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:37
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Кроме того, вы можете связаться с командой интернационализации, используя их "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">список "
-"рассылки</link>."
+"Кроме того, вы можете связаться с командой интернационализации используя "
+"<link href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
