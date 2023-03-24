@@ -5,13 +5,13 @@
 # Peteris Krisjanis <peteris.krisjanis@os.lv>, 2002.
 # Raivis Dejus <orvils@gmail.com>, 2006, 2007.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2010, 2011.
-# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016, 2017, 2019, 2020, 2021.
+# Rūdofls Mazurs <rudolfs.mazurs@gmail.com>, 2011, 2012, 2013, 2014, 2016, 2017, 2019, 2020, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-01-26 14:46+0000\n"
-"PO-Revision-Date: 2021-03-07 17:33+0200\n"
+"POT-Creation-Date: 2023-01-25 19:08+0000\n"
+"PO-Revision-Date: 2023-03-24 22:43+0200\n"
 "Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -20,26 +20,33 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
 " 2);\n"
-"X-Generator: Lokalize 19.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Poedit-Language: Latvian\n"
 "X-Poedit-Country: LATVIA\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "GNOME Mīnas"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Mīnas"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "Notīrīt apslēptas mīnas no laukuma"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you’ve flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"GNOME Mīnas ir spēle, kurā jāmeklē slēptas mīnas. Pēc iespējas ātrāk uzliec "
+"Mīnas ir spēle, kurā jāmeklē slēptas mīnas. Pēc iespējas ātrāk uzliec "
 "karogs uz vietām, kur ir mīnas un padari galdiņu par drošāku vietu. Spēle ir "
 "uzvarēta, kad uz galdiņa ir ar karogu ir marķēta katra mīna. Tikai skaties, "
 "lai kāda mīna neuzsprāgst, tad spēlei ir beigas!"
@@ -53,14 +60,9 @@ msgstr ""
 "Katras spēles sākumā vari izvēlēties laukuma izmēru. Ja iestrēgsti, vari "
 "prasīt padomu, būs laika sods, bet tas ir labāk, kā uzkāpt uz mīnas!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "GNOME projekts"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Mīnas"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -133,7 +135,6 @@ msgid "Board size"
 msgstr "Laukuma izmērs"
 
 #: data/org.gnome.Mines.gschema.xml:41
-#| msgid "Size of the board (0-2 = small-large, 3=custom)"
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Laukuma izmērs (0-2 = mazs-liels, 3 = pašizvēlēts)"
 
@@ -234,94 +235,77 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Pārslēgt lauka karoga stāvokli"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "_Platums"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "_Augstums"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "_Mīnas procentos"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "At_celt"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "S_pēlēt spēli"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Pauzēt"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Mainīt _grūtību"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "_Labākais laiks"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "S_pēlēt vēlreiz"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Apturēts"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Parādīt informāciju par laidienu un iziet"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Maza spēle"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Vidēja spēle"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Liela spēle"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "Re_zultāti"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:19
 msgid "A_ppearance"
 msgstr "_Izskats"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:25
 msgid "_Use Question Flags"
 msgstr "Izmantot jautājum_u karogus"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastatūras īsinājumtaustiņi"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "_Palīdzība"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:39
 msgid "_About Mines"
 msgstr "P_ar mīnām"
 
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Platums"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "_Augstums"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "_Mīnas procentos"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "At_celt"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "S_pēlēt spēli"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Apturēts"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Parādīt informāciju par laidienu un iziet"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Maza spēle"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Vidēja spēle"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Liela spēle"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Mīnu lauks:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -329,11 +313,11 @@ msgstr[0] "%d × %d, %d mīna"
 msgstr[1] "%d × %d, %d mīnas"
 msgstr[2] "%d × %d, %d mīnu"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Pielāgots"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -341,51 +325,55 @@ msgstr[0] "<b>%d</b> mīna"
 msgstr[1] "<b>%d</b> mīnas"
 msgstr[2] "<b>%d</b> mīnu"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Vai vēlies sākt jaunu spēli?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ja sāksi jaunu spēli, pašreizējais progress tiks pazaudēts."
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Turpināt šo spēli"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Sākt jaunu spēli"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "Sākt no j_auna"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Pauzēt"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "Tu_rpināt"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "S_pēlēt vēlreiz"
 
-#: src/gnome-mines.vala:814
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Galvenā spēle:"
 
-#: src/gnome-mines.vala:819
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Rezultāts:"
 
-#: src/gnome-mines.vala:822
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Izmēru mainīšana un SVG atbalsts:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Attīri galdiņu no sprāgstošām mīnām"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Raivis Dejus <orvils@gmail.com>\n"
@@ -395,6 +383,21 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Izvēlieties motīvu"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "GNOME Mīnas"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "GNOME projekts"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Mainīt _grūtību"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Labākais laiks"
+
+#~ msgid "_Play Again"
+#~ msgstr "S_pēlēt vēlreiz"
 
 #~| msgid "gnome-mines"
 #~ msgid "org.gnome.Mines"
