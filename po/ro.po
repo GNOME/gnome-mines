@@ -11,9 +11,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD.ro\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2020-12-18 12:21+0000\n"
-"PO-Revision-Date: 2020-12-19 15:54+0200\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"POT-Creation-Date: 2023-08-20 13:19+0000\n"
+"PO-Revision-Date: 2023-10-21 16:44+0300\n"
+"Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
+"gmail [dot] com>\n"
 "Language-Team: Romanian Gnome Team <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -21,13 +22,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.4\n"
 "X-Launchpad-Export-Date: 2009-11-27 09:12+0000\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "Mine GNOME"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
+msgstr "Mine"
 
 #: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
@@ -35,14 +38,14 @@ msgstr "Găsește minele de pe un câmp minat"
 
 #: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"Mine GNOME este un joc puzzle în care se caută mine ascunse. Marcați "
-"spațiile minate cât de repede posibil pentru a transforma tabla într-un loc "
-"mai sigur. Câștigați jocul atunci când ați marcat fiecare mină de pe tablă. "
+"Mine este un joc puzzle în care se caută mine ascunse. Marcați spațiile "
+"minate cât de repede posibil pentru a transforma tabla într-un loc mai "
+"sigur. Câștigați jocul atunci când ați marcat fiecare mină de pe tablă. "
 "Aveți grijă să nu declanșați una, altfel jocul se încheie!"
 
 #: data/org.gnome.Mines.appdata.xml.in:17
@@ -55,14 +58,9 @@ msgstr ""
 "jocului. Dacă rămâneți blocat, puteți solicita un indiciu: există o "
 "sancțiune de timp, dar este mai bine decât să loviți o mină!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Proiectul GNOME"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Mine"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 #: data/org.gnome.Mines.desktop.in:12
@@ -235,94 +233,77 @@ msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Comută starea fanioanelor de câmp"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "_Lățime"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "Î_nălțime"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "Procentaj _mine"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "A_nulare"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "_Joacă"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Pauză"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Modifică _dificultatea"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "Cei mai _buni timpi"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "_Joacă din nou"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Pauză"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Tipărește versiunea de lansare și ieși"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Joc mic"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Joc mediu"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Joc mare"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "_Scoruri"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:19
 msgid "A_ppearance"
 msgstr "As_pect"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:25
 msgid "_Use Question Flags"
 msgstr "_Folosește fanioane întrebare"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:31
 msgid "_Keyboard Shortcuts"
 msgstr "Scurtături de _tastatură"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "_Ajutor"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:39
 msgid "_About Mines"
 msgstr "_Despre Mine"
 
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "_Lățime"
+
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "Î_nălțime"
+
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "Procentaj _mine"
+
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "A_nulare"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "_Joacă"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "Pauză"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "Tipărește versiunea de lansare și ieși"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "Joc mic"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "Joc mediu"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "Joc mare"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
 msgstr "Câmp minat:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -330,11 +311,11 @@ msgstr[0] "%d × %d, %d mină"
 msgstr[1] "%d × %d, %d mine"
 msgstr[2] "%d × %d, %d de mine"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "Definită de utilizator"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -342,57 +323,61 @@ msgstr[0] "<b>%d</b> mină"
 msgstr[1] "<b>%d</b> mine"
 msgstr[2] "<b>%d</b> de mine"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "Doriți să începeți un joc nou?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Dacă începeți un joc nou, progresul curent va fi pierdut."
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "Păstrează jocul curent"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "Începe joc nou"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
 msgstr "Î_ncepe din nou"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_Pauză"
+
+#: src/gnome-mines.vala:677
 msgid "_Resume"
 msgstr "_Reia"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:760
 msgid "Play _Again"
 msgstr "Jo_acă din nou"
 
-#: src/gnome-mines.vala:814
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "Jocul principal:"
 
-#: src/gnome-mines.vala:819
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "Scor:"
 
-#: src/gnome-mines.vala:822
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "Redimensionare și suport SVG:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
 msgstr "Eliberează minele explozive de pe tablă"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Mugurel Tudor <mugurelu@gnome.ro>\n"
 "Lucian Adrian Grijincu <lucian.grijincu@gmail.com>\n"
 "Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
-"2019-2020\n"
+"2019-2020, 2023\n"
 "Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2019-2020\n"
 "\n"
 "Launchpad Contributions:\n"
@@ -414,6 +399,21 @@ msgstr ""
 #: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
 msgstr "Selectează tema"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "Mine GNOME"
+
+#~ msgid "The GNOME Project"
+#~ msgstr "Proiectul GNOME"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Modifică _dificultatea"
+
+#~ msgid "_Best Times"
+#~ msgstr "Cei mai _buni timpi"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Joacă din nou"
 
 #~ msgctxt "shortcut window"
 #~ msgid ""
