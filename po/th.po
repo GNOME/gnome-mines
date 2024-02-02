@@ -8,10 +8,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-09-26 14:14+0000\n"
-"PO-Revision-Date: 2012-09-24 17:15+0700\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2023-08-20 13:19+0000\n"
+"PO-Revision-Date: 2024-02-02 16:05+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -19,342 +18,398 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Poedit-Bookmarks: -1,-1,-1,-1,-1,-1,-1,47,-1,-1\n"
 
-#: data/gnome-mines.appdata.xml.in:8
-#, fuzzy
-msgid "GNOME Mines"
+#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
+#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
+#: src/gnome-mines.vala:845
+msgid "Mines"
 msgstr "กับระเบิด"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
+#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
 msgid "Clear hidden mines from a minefield"
 msgstr "กู้กับระเบิดที่ซ่อนอยู่จากสนาม"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.appdata.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.appdata.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
 "that’s better than hitting a mine!"
 msgstr ""
 
-#: data/gnome-mines.appdata.xml.in:42
-msgid "The GNOME Project"
+#: data/org.gnome.Mines.appdata.xml.in:48
+msgid "Robert Roth"
 msgstr ""
 
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
-msgid "Mines"
-msgstr "กับระเบิด"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-#, fuzzy
-msgid "gnome-mines"
-msgstr "คนแคระ"
-
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:12
 msgid "minesweeper;"
 msgstr "กับระเบิด;"
 
-#: data/gnome-mines.desktop.in:17
-#, fuzzy
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
-msgstr "เล็ก"
+msgstr "กระดานขนาดเล็ก"
 
-#: data/gnome-mines.desktop.in:21
-#, fuzzy
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
-msgstr "ปานกลาง"
+msgstr "กระดานขนาดกลาง"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
-msgstr ""
+msgstr "กระดานขนาดใหญ่"
 
-#: data/org.gnome.mines.gschema.xml:5
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
 msgstr "ชุดตกแต่งที่ใช้"
 
-#: data/org.gnome.mines.gschema.xml:6
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
 msgstr "ชื่อของชุดเบี้ยที่ใช้"
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
 msgstr "ใช้ธงไม่แน่ใจ"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
 msgstr "กำหนดเป็นค่าจริงเพื่อสามารถทำเครื่องหมายช่องที่ไม่แน่ใจได้"
 
-#: data/org.gnome.mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr "เตือนเมื่อปักธงเกิน"
-
-#: data/org.gnome.mines.gschema.xml:16
-#, fuzzy
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr "กำหนดเป็นค่าจริงเพื่อเปิดการเตือนด้วยไอคอนเมื่อมีการปักธงเกิน"
-
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Enable automatic placing of flags"
 msgstr "เปิดใช้การปักธงอัตโนมัติ"
 
-#: data/org.gnome.mines.gschema.xml:21
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
-"กำหนดเป็นค่าจริงเพื่อให้ gnomine ปักธงทำเครื่องหมายกับระเบิดในช่องที่ช่องรอบๆ "
-"ถูกเปิดเพียงพอโดยอัตโนมัติ"
+"กำหนดเป็นค่าจริงเพื่อให้ปักธงทำเครื่องหมายกับระเบิดในช่องที่ช่องรอบๆ ถูกเปิดเพียงพอโดยอัตโนมัติ"
 
-#: data/org.gnome.mines.gschema.xml:25
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:20
 msgid "Enable animations"
-msgstr "ทำภาพเ_คลื่อนไหว"
+msgstr "เปิดใช้ภาพเคลื่อนไหว"
 
-#: data/org.gnome.mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:21
 msgid "Set to false to disable theme-defined transition animations"
-msgstr ""
+msgstr "กำหนดเป็นค่าเท็จเพื่อปิดใช้ภาพเคลื่อนไหวขณะเปลี่ยนฉากที่ชุดตกแต่งกำหนด"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "จำนวนคอลัมน์ของเกมกำหนดเอง"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "จำนวนแถวของเกมกำหนดเอง"
 
-#: data/org.gnome.mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "จำนวนกับระเบิดในเกมกำหนดเอง"
 
-#: data/org.gnome.mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "ขนาดกระดาน"
 
-#: data/org.gnome.mines.gschema.xml:46
-msgid "Size of the board (0-2 = small-large, 3=custom)"
+#: data/org.gnome.Mines.gschema.xml:41
+#, fuzzy
+#| msgid "Size of the board (0-2 = small-large, 3=custom)"
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "ขนาดของสนาม (0-2 = เล็ก-ใหญ่, 3=กำหนดเอง)"
 
-#: data/org.gnome.mines.gschema.xml:50
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "ความกว้างของหน้าต่างเป็นนพิกเซล"
 
-#: data/org.gnome.mines.gschema.xml:54
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "ความสูงหน้าต่างเป็นพิกเซล"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "เป็นค่าจริงถ้าหน้าต่างขยายแผ่"
 
-#: src/interface.ui:118
-msgid "_Width"
+#: src/help-overlay.ui:12
+msgctxt "shortcut window"
+msgid "Window and game"
 msgstr ""
 
-#: src/interface.ui:142
-#, fuzzy
-msgid "_Height"
-msgstr "ขว_า"
+#: src/help-overlay.ui:17
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "เริ่มเกมใหม่"
 
-#: src/interface.ui:166
-#, fuzzy
-msgid "Percent _mines"
-msgstr "ร้อยละ:"
-
-#: src/interface.ui:192
-msgid "_Cancel"
-msgstr "_ยกเลิก"
-
-#: src/interface.ui:208
-msgid "_Play Game"
-msgstr "เ_ล่นเกม"
-
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
-msgid "_Pause"
-msgstr "_พัก"
-
-#: src/interface.ui:366
-#, fuzzy
-msgid "Change _Difficulty"
-msgstr "_ระดับความยาก:"
-
-#: src/interface.ui:383
-msgid "_Best Times"
+#: src/help-overlay.ui:24
+msgctxt "shortcut window"
+msgid "Restart game with current settings"
 msgstr ""
 
-#: src/interface.ui:400
-#, fuzzy
-msgid "_Play Again"
-msgstr "เ_ล่นเกม"
+#: src/help-overlay.ui:31
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "พักเกม"
 
-#: src/interface.ui:464
-msgid "Paused"
-msgstr "พัก"
+#: src/help-overlay.ui:38
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "แสดงวิธีใช้"
 
-#: src/gnome-mines.vala:89
-#, fuzzy
-msgid "Print release version and exit"
-msgstr "แสดงเลขรุ่น"
+#: src/help-overlay.ui:45
+msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr ""
 
-#: src/gnome-mines.vala:90
-#, fuzzy
-msgid "Small game"
-msgstr "เล็ก"
+#: src/help-overlay.ui:52
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "แสดงปุ่มลัดแป้นพิมพ์"
 
-#: src/gnome-mines.vala:91
-#, fuzzy
-msgid "Medium game"
-msgstr "ปานกลาง"
+#: src/help-overlay.ui:59
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "ออก"
 
-#: src/gnome-mines.vala:92
-#, fuzzy
-msgid "Big game"
-msgstr "เกมหลัก:"
+#: src/help-overlay.ui:67
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr ""
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
+#: src/help-overlay.ui:72
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr ""
+
+#: src/help-overlay.ui:79
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr ""
+
+#: src/help-overlay.ui:86
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr ""
+
+#: src/help-overlay.ui:93
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr ""
+
+#: src/help-overlay.ui:101
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr ""
+
+#: src/help-overlay.ui:106 src/help-overlay.ui:113
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor"
+msgstr ""
+
+#: src/help-overlay.ui:120
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr ""
+
+#: src/help-overlay.ui:127
+msgctxt "shortcut window"
+msgid "Toggle field flag state"
+msgstr ""
+
+#: src/interface.ui:15
 msgid "_Scores"
 msgstr "_คะแนน"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
-#, fuzzy
+#: src/interface.ui:19
 msgid "A_ppearance"
-msgstr "หน้าตา"
+msgstr "_หน้าตา"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-#, fuzzy
-msgid "_Show Warnings"
-msgstr "คำเตือน"
-
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/interface.ui:25
 msgid "_Use Question Flags"
-msgstr ""
+msgstr "ใ_ช้ธงเครื่องหมายคำถาม"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/interface.ui:31
+msgid "_Keyboard Shortcuts"
+msgstr "ปุ่มลัดแป้น_พิมพ์"
+
+#: src/interface.ui:35
 msgid "_Help"
 msgstr "_วิธีใช้"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr "เ_กี่ยวกับ"
+#: src/interface.ui:39
+msgid "_About Mines"
+msgstr "เ_กี่ยวกับ “กับระเบิด”"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr "_ออก"
+#: src/interface.ui:205
+msgid "_Width"
+msgstr "ความ_กว้าง"
 
-#: src/gnome-mines.vala:256
-#, fuzzy
-msgid "_Mines"
-msgstr "กับระเบิด"
+#: src/interface.ui:229
+msgid "_Height"
+msgstr "ความ_สูง"
 
-#: src/gnome-mines.vala:257
-msgid "_New Game"
-msgstr "เกมใ_หม่"
+#: src/interface.ui:253
+msgid "Percent _mines"
+msgstr "ร้อยละของ_กับระเบิด"
 
-#: src/gnome-mines.vala:265
-msgid "_Contents"
-msgstr "เ_นื้อหา"
+#: src/interface.ui:279
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+#: src/interface.ui:296
+msgid "_Play Game"
+msgstr "เ_ล่นเกม"
+
+#: src/interface.ui:477
+msgid "Paused"
+msgstr "พัก"
+
+#: src/gnome-mines.vala:91
+msgid "Print release version and exit"
+msgstr "แสดงเลขรุ่นแล้วออก"
+
+#: src/gnome-mines.vala:92
+msgid "Small game"
+msgstr "เกมขนาดเล็ก"
+
+#: src/gnome-mines.vala:93
+msgid "Medium game"
+msgstr "เกมขนาดกลาง"
+
+#: src/gnome-mines.vala:94
+msgid "Big game"
+msgstr "เกมขนาดใหญ่"
 
 #. Label on the scores dialog
-#: src/gnome-mines.vala:315
-#, fuzzy
+#: src/gnome-mines.vala:265
 msgid "Minefield:"
-msgstr "กระดานเกม"
+msgstr "สนามระเบิด:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:301
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] ""
+msgstr[0] "%d × %d, ระเบิด %d ลูก"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:352
 msgid "Custom"
 msgstr "กำหนดเอง"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:452
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "ระเบิด <b>%d</b> ลูก"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:563
 msgid "Do you want to start a new game?"
 msgstr "คุณต้องการเปิดเกมใหม่หรือไม่?"
 
-#: src/gnome-mines.vala:597
+#: src/gnome-mines.vala:564
 msgid "If you start a new game, your current progress will be lost."
 msgstr "ถ้าคุณเปิดเกมใหม่ สิ่งที่คุณทำมาก็จะสูญหายหมด"
 
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:565
 msgid "Keep Current Game"
 msgstr "เล่นเกมนี้ต่อไป"
 
-#: src/gnome-mines.vala:599
+#: src/gnome-mines.vala:566
 msgid "Start New Game"
 msgstr "เปิดเกมใหม่"
 
-#: src/gnome-mines.vala:649
-#, fuzzy
+#: src/gnome-mines.vala:616
 msgid "St_art Over"
-msgstr "อวสาน"
+msgstr "เ_ริ่มเกมเดิมใหม่"
+
+#: src/gnome-mines.vala:672
+msgid "_Pause"
+msgstr "_พัก"
+
+#: src/gnome-mines.vala:677
+msgid "_Resume"
+msgstr "เล่น_ต่อ"
 
 #: src/gnome-mines.vala:760
-#, fuzzy
-msgid "_Resume"
-msgstr "_ล้าง"
-
-#: src/gnome-mines.vala:778
-#, fuzzy
 msgid "Play _Again"
-msgstr "เล่นแบบ_ออนไลน์"
+msgstr "เล่นใหม่_อีกครั้ง"
 
-#: src/gnome-mines.vala:833
+#: src/gnome-mines.vala:821
 msgid "Main game:"
 msgstr "เกมหลัก:"
 
-#: src/gnome-mines.vala:838
+#: src/gnome-mines.vala:826
 msgid "Score:"
 msgstr "คะแนน:"
 
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:829
 msgid "Resizing and SVG support:"
 msgstr "การปรับขนาดและการรองรับ SVG:"
 
-#: src/gnome-mines.vala:863
+#: src/gnome-mines.vala:848
 msgid "Clear explosive mines off the board"
-msgstr ""
+msgstr "ล้างระเบิดที่จะทำงานออกจากกระดาน"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:855
 msgid "translator-credits"
 msgstr ""
 "Theppitak Karoonboonyanan <thep@linux.thai.net>\n"
 "Supranee Thirawatthanasuk <supranee@opentle.org>\n"
-"Kitt Tientanopajai <kitty@kitty.in.th>"
+"Kitt Tientanopajai <kitty@kitty.in.th>\n"
+"Aefgh Threenine <aefgh39622@gmail.com>"
 
-#: src/theme-selector-dialog.vala:99
-#, fuzzy
-msgid "Use _animations"
-msgstr "เคลื่อนที่เร็ว"
-
-#: src/theme-selector-dialog.vala:115
-#, fuzzy
+#: src/theme-selector-dialog.vala:104
 msgid "Select Theme"
-msgstr "เลือกเกม"
+msgstr "เลือกชุดตกแต่ง"
 
-#: src/theme-selector-dialog.vala:138
 #, fuzzy
-msgid "Close"
-msgstr "ปิ_ด"
+#~ msgid "GNOME Mines"
+#~ msgstr "กับระเบิด"
+
+#, fuzzy
+#~ msgid "gnome-mines"
+#~ msgstr "คนแคระ"
+
+#~ msgid "Warning about too many flags"
+#~ msgstr "เตือนเมื่อปักธงเกิน"
+
+#, fuzzy
+#~ msgid ""
+#~ "Set to true to enable warning icons when too many flags are placed next to "
+#~ "a numbered tile."
+#~ msgstr "กำหนดเป็นค่าจริงเพื่อเปิดการเตือนด้วยไอคอนเมื่อมีการปักธงเกิน"
+
+#, fuzzy
+#~ msgid "Change _Difficulty"
+#~ msgstr "_ระดับความยาก:"
+
+#, fuzzy
+#~ msgid "_Play Again"
+#~ msgstr "เ_ล่นเกม"
+
+#, fuzzy
+#~ msgid "_Show Warnings"
+#~ msgstr "คำเตือน"
+
+#, fuzzy
+#~ msgid "_Mines"
+#~ msgstr "กับระเบิด"
+
+#~ msgid "_New Game"
+#~ msgstr "เกมใ_หม่"
+
+#~ msgid "_Contents"
+#~ msgstr "เ_นื้อหา"
+
+#, fuzzy
+#~ msgid "Use _animations"
+#~ msgstr "เคลื่อนที่เร็ว"
+
+#, fuzzy
+#~ msgid "Close"
+#~ msgstr "ปิ_ด"
