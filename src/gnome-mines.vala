@@ -166,13 +166,14 @@ public class Mines : Gtk.Application
         base.startup ();
 
         Environment.set_application_name (_("Mines"));
+        Environment.set_prgname ("org.gnome.Mines");
 
         settings = new GLib.Settings ("org.gnome.Mines");
 
         if (game_mode != -1)
             settings.set_int (KEY_MODE, game_mode);
 
-        Window.set_default_icon_name ("gnome-mines");
+        Window.set_default_icon_name ("org.gnome.Mines");
 
         var css_provider = new CssProvider ();
         css_provider.load_from_resource ("/org/gnome/Mines/gnome-mines.css");
