@@ -31,6 +31,7 @@
                     "config-opts": ["--enable-introspection=no"],
                     "sources": [{
                         "type": "git",
+                        "branch": "main",
                         "url": "https://gitlab.gnome.org/GNOME/libgee.git"
                     }]
                 },
