@@ -204,6 +204,8 @@ public class MinefieldView : Gtk.Widget
             remove_css_class ("completedField");
             mines = new Tile[_minefield.width, _minefield.height];
             init_grid ();
+            receives_default = true;
+            focusable = true;
             for (int i = 0; i < _minefield.width; i++)
             {
                 for (int j = 0; j < _minefield.height; j++)
