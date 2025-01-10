@@ -22,7 +22,7 @@
   </description>
   <screenshots>
     <screenshot type="default" height="563" width="748">
-      <image>https://gitlab.gnome.org/GNOME/gnome-mines/-/raw/master/data/screenshot.png</image>
+      <image>https://gitlab.gnome.org/GNOME/gnome-mines/-/raw/main/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
@@ -35,6 +35,21 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="48~alpha" date="2025-01-10" type="development">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+          <li>Fixed proprietary license in appdata #71 (Robert Roth)</li>
+          <li>Compilation fixes (Rico Tzschichholz)</li>
+          <li>Made header tooltips translatable (Robert Roth)</li>
+          <li>Replaced old links with discourse (Andre Klapper)</li>
+          <li>Updated appdata (Sabri Ünal)</li>
+          <li>Fix icon name (Balló György)</li>
+          <li>Fix flatpak build (Robert Roth)</li>
+          <li>Migrated to GTK4 (Arnaud B., Maximiliano)</li>
+        </ul>
+      </description>
+    </release>
     <release version="40.1" date="2022-02-18" />
     <release version="40.0" date="2021-03-19" />
     <release version="3.31.4.1" date="2019-01-08" />

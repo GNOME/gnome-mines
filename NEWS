@@ -1,3 +1,16 @@
+GNOME Mines 48.alpha
+=====================
+
+* Updated translations
+* Fixed proprietary license in appdata #71 (Robert Roth)
+* Compilation fixes (Rico Tzschichholz)
+* Made header tooltips translatable (Robert Roth)
+* Replaced old links with discourse (Andre Klapper)
+* Updated appdata (Sabri Ünal)
+* Fix icon name (Balló György)
+* Fix flatpak build (Robert Roth)
+* Migrated to GTK4 (Arnaud B., Maximiliano)
+
 GNOME Mines 40.0
 =====================
 
