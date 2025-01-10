@@ -1,6 +1,6 @@
 # List of source files containing translatable strings.
 # Please keep this file in alphabetical order.
-data/org.gnome.Mines.appdata.xml.in
+data/org.gnome.Mines.metainfo.xml.in
 data/org.gnome.Mines.desktop.in
 data/org.gnome.Mines.gschema.xml
 src/help-overlay.ui
