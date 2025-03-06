@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnomine\n"
 "POT-Creation-Date: 2013-06-01 17:16+0000\n"
-"PO-Revision-Date: 2013-06-02 17:03+0200\n"
+"PO-Revision-Date: 2025-03-06 17:03+0200\n"
 "Last-Translator: Joan Duran <jodufi@gmail.com>\n"
 "Language-Team: Catalan <tradgnome@softcatala.org>\n"
 "Language: ca\n"
@@ -78,7 +78,7 @@ msgstr "un tauler de 16 x 16 amb 40 mines,"
 #. (itstool) path: item/p
 #: C/board-size.page:31
 msgid "a 30 × 16 board with 99 mines"
-msgstr "un tauler de 30 x 16 amb 99 mines o"
+msgstr "un tauler de 30 x 16 amb 99 mines"
 
 #. (itstool) path: item/p
 #: C/board-size.page:32
@@ -168,7 +168,7 @@ msgstr ""
 " Abans d'informar d'un error, llegiu les <link "
 "href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">pautes"
 " d'escriptura d'errors</link> i <link "
-"href=\"https://gitlab.gnome.org/GNOME/eog/issues\">cerqueu</link> l'error "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">cerqueu</link> l'error "
 "per a comprovar si ja existeix."
 
 #. (itstool) path: section/p
