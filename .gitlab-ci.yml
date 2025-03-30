@@ -15,7 +15,7 @@ flatpak:
     variables:
         MANIFEST_PATH: "build-aux/org.gnome.Mines.json"
         RUNTIME_REPO: "https://sdk.gnome.org/gnome-nightly.flatpakrepo"
-        APP_ID: " org.gnome.Mines"
+        APP_ID: "org.gnome.Mines"
     extends: .flatpak
 
 nightly:
