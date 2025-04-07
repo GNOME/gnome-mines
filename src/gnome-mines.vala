@@ -134,16 +134,6 @@ public class Mines : Adw.Application
         // support for it.
         Adw.StyleManager.get_default ().color_scheme = FORCE_LIGHT;
 
-        var ui_builder = new Builder ();
-        try
-        {
-            ui_builder.add_from_resource ("/org/gnome/Mines/interface.ui");
-        }
-        catch (Error e)
-        {
-            warning ("Could not load game UI: %s", e.message);
-        }
-
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
         new_game_action.set_enabled (true);
@@ -159,15 +149,6 @@ public class Mines : Adw.Application
 
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
 
-        window = (MineWindow) ui_builder.get_object ("main_window");
-        window.map.connect (init_state_watcher);
-        window.notify["is-active"].connect (on_window_focus_change);
-        Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
-
-        add_window (window);
-
-        menu_button = (Gtk.MenuButton) ui_builder.get_object ("menu_button");
-
         set_accels_for_action ("app.new-game",          { "<Control>n"      });
         set_accels_for_action ("app.silent-new-game",   {          "Escape" });
         set_accels_for_action ("app.repeat-size",       { "<Control>r"      });
@@ -180,6 +161,27 @@ public class Mines : Adw.Application
         set_accels_for_action ("app.quit",              { "<Control>q",
                                                           "<Control>w"      });
         set_accels_for_action ("app.menu",              {          "F10"    });
+    }
+
+    private void create_window () {
+        var ui_builder = new Builder ();
+        try
+        {
+            ui_builder.add_from_resource ("/org/gnome/Mines/interface.ui");
+        }
+        catch (Error e)
+        {
+            warning ("Could not load game UI: %s", e.message);
+        }
+
+        window = (MineWindow) ui_builder.get_object ("main_window");
+        window.map.connect (init_state_watcher);
+        window.notify["is-active"].connect (on_window_focus_change);
+        Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
+
+        add_window (window);
+
+        menu_button = (Gtk.MenuButton) ui_builder.get_object ("menu_button");
 
         minefield_view = new MinefieldView (settings);
 
@@ -409,6 +411,9 @@ public class Mines : Adw.Application
 
     protected override void activate ()
     {
+        if (window == null)
+            create_window ();
+
         window.present ();
     }
 
