@@ -10,16 +10,17 @@ Categories=GNOME;GTK;Game;LogicGame;
 # Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
 Keywords=minesweeper;
 StartupNotify=true
-Actions=Small;Medium;Big;
+DBusActivatable=true
+Actions=small-size;medium-size;large-size;
 
-[Desktop Action Small]
+[Desktop Action small-size]
 Name=Small board
 Exec=gnome-mines --small
 
-[Desktop Action Medium]
+[Desktop Action medium-size]
 Name=Medium board
 Exec=gnome-mines --medium
 
-[Desktop Action Big]
+[Desktop Action large-size]
 Name=Big board
 Exec=gnome-mines --big

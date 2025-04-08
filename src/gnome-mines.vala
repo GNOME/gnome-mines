@@ -458,16 +458,16 @@ public class Mines : Adw.Application
     {
         if (minefield != null)
             return;
-        size_actions_toggle (false);
         stack.visible_child_name = "custom_game";
     }
 
-    private void ask_start_new_game (bool start_directly)
+    private void ask_start_new_game (bool start_directly, int mode = -1)
     {
         if (minefield != null && minefield.n_cleared > 0 && !minefield.exploded && !minefield.is_complete)
         {
             var was_paused = minefield.paused;
             minefield.paused = true;
+            size_actions_toggle (false);
 
             var dialog = new MessageDialog (window, DialogFlags.MODAL, MessageType.QUESTION, ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
             dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
@@ -478,14 +478,26 @@ public class Mines : Adw.Application
                     if (response != ResponseType.ACCEPT)
                         minefield.paused = was_paused;
                     else if (start_directly)
+                    {
+                        if (mode != -1 && mode != settings.get_int (KEY_MODE))
+                            settings.set_int (KEY_MODE, mode);
+
                         start_game ();
+                    }
                     else
                         show_new_game_screen ();
+
+                    size_actions_toggle (true);
                 });
             dialog.present ();
         }
         else if (start_directly)
+        {
+            if (mode != -1 && mode != settings.get_int (KEY_MODE))
+                settings.set_int (KEY_MODE, mode);
+
             start_game ();
+        }
         else
             show_new_game_screen ();
     }
@@ -506,7 +518,6 @@ public class Mines : Adw.Application
         repeat_size_action.set_enabled (false);
         pause_action.set_enabled (false);
 
-        size_actions_toggle (true);
         stack.visible_child_name = "new_game";
         disable_game_buttons ();
     }
@@ -811,14 +822,8 @@ public class Mines : Adw.Application
 
     private void set_mode (int mode)
     {
-        if (minefield != null)
-            return;
-
-        if (mode != settings.get_int (KEY_MODE))
-            settings.set_int (KEY_MODE, mode);
-
-        size_actions_toggle (false);
-        start_game ();
+        activate ();
+        ask_start_new_game (/* start directly */ true, mode);
     }
 
     private void small_size_clicked_cb ()

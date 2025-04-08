@@ -1,0 +1,3 @@
+[D-BUS Service]
+Name=org.gnome.Mines
+Exec=@bindir@/gnome-mines --gapplication-service

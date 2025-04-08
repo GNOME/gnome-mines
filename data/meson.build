@@ -15,6 +15,19 @@ foreach theme: [ 'default', 'bgcolors', 'classic' ]
     endforeach
 endforeach
 
+
+service_conf = configuration_data()
+service_conf.set('bindir', bindir)
+
+configure_file(
+  input: '@0@.service.in'.format(app_id),
+  output: '@0@.service'.format(app_id),
+  install: true,
+  install_dir: join_paths(datadir, 'dbus-1', 'services'),
+  configuration: service_conf
+)
+
+
 desktop_file = i18n.merge_file (
                  input: '@0@.desktop.in'.format(app_id),
                  output: '@0@.desktop'.format(app_id),
