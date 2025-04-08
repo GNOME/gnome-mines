@@ -429,7 +429,8 @@ public class Mines : Adw.Application
 
     private void quit_cb ()
     {
-        window.destroy ();
+        if (window != null)
+            window.close ();
     }
 
     private void update_flag_label ()
