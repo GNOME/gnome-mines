@@ -35,6 +35,14 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="48.1" date="2025-04-12" type="stable">
+      <description>
+        <ul>
+          <li>Fixed save settings on close (Balló György)</li>
+          <li>Minor improvements on application handling (Balló György)</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.0" date="2025-03-30" type="stable">
       <description>
         <ul>

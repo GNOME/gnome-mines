@@ -1,3 +1,10 @@
+GNOME Mines 48.1
+=====================
+
+* Fixed running app as GApplication service (Balló György)
+* Fixed save settings on close (Balló György)
+* Make the application d-bus activatable (Balló György)
+
 GNOME Mines 48.0
 =====================
 
