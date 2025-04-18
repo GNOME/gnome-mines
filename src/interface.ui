@@ -325,7 +325,7 @@
                                 <child>
                                   <object class="GtkImage" id="clock_image">
                                     <property name="pixel_size">32</property>
-                                    <property name="icon_name">preferences-system-time-symbolic</property>
+                                    <property name="icon_name">stopwatch</property>
                                   </object>
                                 </child>
                                 <child>
