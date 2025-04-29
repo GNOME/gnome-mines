@@ -49,9 +49,10 @@ private class PreviewField : Minefield
     }
 }
 
-public class ThemeSelectorDialog : Gtk.Dialog
+public class ThemeSelectorDialog : Adw.Dialog
 {
-
+    private Adw.ToolbarView toolbar = new Adw.ToolbarView ();
+    private Adw.HeaderBar headerbar = new Adw.HeaderBar ();
     private Gtk.Button previous;
     private Gtk.Button next;
     private Settings settings = new Settings ("org.gnome.Mines");
@@ -100,12 +101,11 @@ public class ThemeSelectorDialog : Gtk.Dialog
         return box;
     }
 
-    public ThemeSelectorDialog (Gtk.Window parent)
+    public ThemeSelectorDialog (Adw.Window window)
     {
         MinefieldView minefield;
 
-        Object (use_header_bar: 1, title:  _("Select Theme"),
-                modal: true, transient_for: parent, resizable: false, margin_start: 12, margin_end: 12, margin_top: 12, margin_bottom: 12);
+        this.set_title (_("Select Theme"));
 
         previous = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         previous.valign = Gtk.Align.CENTER;
@@ -117,9 +117,13 @@ public class ThemeSelectorDialog : Gtk.Dialog
 
         var buttons_holder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
 
-        var headerbar = get_header_bar () as Gtk.HeaderBar;
-        headerbar.set_show_title_buttons (true);
-        get_content_area ().append (create_preview_widget (out minefield));
+        headerbar.set_show_start_title_buttons (true);
+        headerbar.set_show_end_title_buttons (true);
+
+        Gtk.Builder builder = new Gtk.Builder ();
+        toolbar.add_child (builder, create_preview_widget (out minefield), null);
+        this.set_child (toolbar);
+        toolbar.add_child (builder, headerbar, "top");
 
         buttons_holder.append (previous);
         buttons_holder.append (next);
@@ -138,12 +142,12 @@ public class ThemeSelectorDialog : Gtk.Dialog
         }
 
         next.clicked.connect (() => {
-            switch_theme_preview (++current_index, themes);
+            switch_theme_preview (++current_index, themes, window);
             update_sensitivities (themes, current_index);
         });
 
         previous.clicked.connect (() => {
-            switch_theme_preview (--current_index, themes);
+            switch_theme_preview (--current_index, themes, window);
             update_sensitivities (themes, current_index);
         });
 
@@ -151,11 +155,11 @@ public class ThemeSelectorDialog : Gtk.Dialog
         update_sensitivities (themes, current_index);
     }
 
-    private void switch_theme_preview (int to_index, List<string> themes)
+    private void switch_theme_preview (int to_index, List<string> themes, Adw.Window window)
     {
         settings.set_string ("theme", themes.nth_data (to_index));
         this.queue_draw ();
-        this.present ();
+        this.present (window);
     }
 
     private void update_sensitivities (List<string> themes, int current_index)

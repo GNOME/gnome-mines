@@ -8,7 +8,7 @@
  * license.
  */
 
-public class MineWindow : Gtk.ApplicationWindow
+public class MineWindow : Adw.ApplicationWindow
 {
 
     private GLib.Settings settings;
@@ -83,6 +83,7 @@ public class MineWindow : Gtk.ApplicationWindow
 
         var theme_css_path = Path.build_filename (theme_path, "theme.css");
         if (is_switch) {
+            // There is no way to remove depredations here without completely remolding this.
             Gtk.StyleContext.remove_provider_for_display (display, theme_provider);
         }
         theme_provider = new Gtk.CssProvider ();

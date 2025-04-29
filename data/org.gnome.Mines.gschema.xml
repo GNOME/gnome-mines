@@ -15,11 +15,6 @@
       <summary>Enable automatic placing of flags</summary>
       <description>Set to true to automatically flag squares as mined when enough squares are revealed</description>
     </key>
-    <key name="use-animations" type="b">
-      <default>false</default>
-      <summary>Enable animations</summary>
-      <description>Set to false to disable theme-defined transition animations</description>
-    </key>
     <key name="xsize" type="i">
       <default>16</default>
       <range min="4" max="100" />
@@ -54,3 +49,4 @@
     </key>
   </schema>
 </schemalist>
+

@@ -110,7 +110,7 @@ public class MinefieldView : Gtk.Widget
     {
         get
         {
-            return int.min (get_allocated_width () / (int) minefield.width, get_allocated_height () / (int) minefield.height);
+            return int.min (get_width () / (int) minefield.width, get_height () / (int) minefield.height);
         }
     }
 

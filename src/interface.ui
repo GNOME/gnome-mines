@@ -42,222 +42,68 @@
   </menu>
   <object class="MineWindow" id="main_window">
     <property name="title" translatable="yes">Mines</property>
-    <property name="icon_name">org.gnome.Mines</property>
-    <child type="titlebar">
-      <object class="GtkHeaderBar">
-        <property name="show_title_buttons">True</property>
-        <child>
-          <object class="GtkButton" id="new_game_button">
-            <property name="visible">False</property>
-            <property name="action_name">app.new-game</property>
-            <property name="icon_name">go-previous-symbolic</property>
-          </object>
-        </child>
-        <child>
-          <object class="GtkButton" id="replay_button">
-            <property name="visible">False</property>
-            <property name="action_name">app.repeat-size</property>
-            <property name="icon_name">view-refresh-symbolic</property>
-          </object>
-        </child>
-        <child type="end">
-          <object class="GtkMenuButton" id="menu_button">
-            <property name="menu_model">primary-menu</property>
-            <property name="icon_name">open-menu-symbolic</property>
-          </object>
-        </child>
-        <child type="end">
-          <object class="GtkButton" id="play_pause_button">
-            <property name="visible">False</property>
-            <property name="action_name">app.pause</property>
-            <property name="icon_name">media-playback-pause-symbolic</property>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="GtkBox" id="main_vbox">
-        <property name="margin-end">18</property>
-        <property name="margin-start">18</property>
-        <property name="margin-bottom">18</property>
-        <property name="margin-top">18</property>
-        <property name="spacing">12</property>
-        <child>
-          <object class="GtkStack" id="stack">
-            <property name="hexpand">True</property>
-            <property name="vexpand">True</property>
-            <property name="transition-type">slide-left-right</property>
+    <property name="content">
+      <object class="AdwToolbarView">
+        <child type="top">
+          <object class="AdwHeaderBar">
             <child>
-              <object class="GtkStackPage">
-                <property name="name" translatable="no">new_game</property>
-                <property name="child">
-                  <object class="GtkAspectFrame" id="new_game_screen">
-                    <property name="obey_child">False</property>
-                    <property name="child">
-                      <object class="GtkGrid" id="new_game_grid">
-                        <property name="row_spacing">18</property>
-                        <property name="column_spacing">18</property>
-                        <property name="row_homogeneous">True</property>
-                        <property name="column_homogeneous">True</property>
-                        <child>
-                          <object class="GtkButton" id="small_size_btn">
-                            <property name="action-name">app.small-size</property>
-                            <style>
-                              <class name="card"/>
-                            </style>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">0</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="medium_size_btn">
-                            <property name="action-name">app.medium-size</property>
-                            <style>
-                              <class name="card"/>
-                            </style>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">0</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="large_size_btn">
-                            <property name="action-name">app.large-size</property>
-                            <style>
-                              <class name="card"/>
-                            </style>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">1</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkButton" id="custom_size_btn">
-                            <property name="action-name">app.custom-size</property>
-                            <style>
-                              <class name="card"/>
-                            </style>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">1</property>
-                            </layout>
-                          </object>
-                        </child>
-                      </object>
-                    </property>
-                  </object>
-                </property>
+              <object class="GtkButton" id="new_game_button">
+                <property name="visible">False</property>
+                <property name="action_name">app.new-game</property>
+                <property name="icon_name">go-previous-symbolic</property>
               </object>
             </child>
             <child>
-              <object class="GtkStackPage">
-                <property name="name" translatable="no">custom_game</property>
-                <property name="child">
-                  <object class="GtkAspectFrame" id="custom_game_screen">
+              <object class="GtkButton" id="replay_button">
+                <property name="visible">False</property>
+                <property name="action_name">app.repeat-size</property>
+                <property name="icon_name">view-refresh-symbolic</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="menu_model">primary-menu</property>
+                <property name="icon_name">open-menu-symbolic</property>
+              </object>
+            </child>
+            <child type="end">
+              <object class="GtkButton" id="play_pause_button">
+                <property name="visible">False</property>
+                <property name="action_name">app.pause</property>
+                <property name="icon_name">media-playback-pause-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <property name="content">
+          <object class="GtkBox" id="main_vbox">
+            <property name="margin-end">18</property>
+            <property name="margin-start">18</property>
+            <property name="margin-bottom">18</property>
+            <property name="margin-top">18</property>
+            <property name="spacing">12</property>
+            <child>
+              <object class="GtkStack" id="stack">
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="transition-type">slide-left-right</property>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name" translatable="no">new_game</property>
                     <property name="child">
-                      <object class="GtkGrid" id="custom_game_grid">
-                        <property name="halign">center</property>
-                        <property name="valign">center</property>
-                        <property name="row_spacing">6</property>
-                        <property name="column_spacing">12</property>
-                        <child>
-                          <object class="GtkLabel" id="width_label">
-                            <property name="halign">start</property>
-                            <property name="label" translatable="yes">_Width</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">width_spin_btn</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">0</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="width_spin_btn">
-                            <property name="focusable">True</property>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">0</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="height_label">
-                            <property name="halign">start</property>
-                            <property name="label" translatable="yes">_Height</property>
-                            <property name="use_underline">True</property>
-                            <property name="mnemonic_widget">height_spin_btn</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">1</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="height_spin_btn">
-                            <property name="focusable">True</property>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">1</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkLabel" id="percent_mines_label">
-                            <property name="halign">start</property>
-                            <property name="label" translatable="yes">Percent _mines</property>
-                            <property name="use_underline">True</property>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">2</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkSpinButton" id="mines_spin_btn">
-                            <property name="focusable">True</property>
-                            <layout>
-                              <property name="column">1</property>
-                              <property name="row">2</property>
-                            </layout>
-                          </object>
-                        </child>
-                        <child>
-                          <object class="GtkGrid" id="custom_buttons_grid">
-                            <property name="margin_top">12</property>
-                            <property name="row_spacing">5</property>
+                      <object class="GtkAspectFrame" id="new_game_screen">
+                        <property name="obey_child">False</property>
+                        <property name="child">
+                          <object class="GtkGrid" id="new_game_grid">
+                            <property name="row_spacing">18</property>
+                            <property name="column_spacing">18</property>
+                            <property name="row_homogeneous">True</property>
+                            <property name="column_homogeneous">True</property>
                             <child>
-                              <object class="GtkButton">
-                                <property name="label" translatable="yes">_Cancel</property>
-                                <property name="focusable">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="valign">center</property>
-                                <property name="hexpand">True</property>
-                                <property name="vexpand">True</property>
-                                <property name="use_underline">True</property>
-                                <property name="action_name">app.cancel-custom</property>
-                                <layout>
-                                  <property name="column">0</property>
-                                  <property name="row">1</property>
-                                </layout>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkButton">
-                                <property name="label" translatable="yes">_Play Game</property>
-                                <property name="focusable">True</property>
-                                <property name="receives_default">True</property>
-                                <property name="valign">center</property>
-                                <property name="hexpand">True</property>
-                                <property name="vexpand">True</property>
-                                <property name="use_underline">True</property>
-                                <property name="action_name">app.start-custom</property>
+                              <object class="GtkButton" id="small_size_btn">
+                                <property name="action-name">app.small-size</property>
                                 <style>
-                                  <class name="suggested-action"/>
+                                  <class name="card"/>
                                 </style>
                                 <layout>
                                   <property name="column">0</property>
@@ -265,92 +111,248 @@
                                 </layout>
                               </object>
                             </child>
-                            <layout>
-                              <property name="column">0</property>
-                              <property name="row">3</property>
-                              <property name="column-span">2</property>
-                            </layout>
+                            <child>
+                              <object class="GtkButton" id="medium_size_btn">
+                                <property name="action-name">app.medium-size</property>
+                                <style>
+                                  <class name="card"/>
+                                </style>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="row">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="large_size_btn">
+                                <property name="action-name">app.large-size</property>
+                                <style>
+                                  <class name="card"/>
+                                </style>
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">1</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkButton" id="custom_size_btn">
+                                <property name="action-name">app.custom-size</property>
+                                <style>
+                                  <class name="card"/>
+                                </style>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="row">1</property>
+                                </layout>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name" translatable="no">custom_game</property>
+                    <property name="child">
+                      <object class="GtkAspectFrame" id="custom_game_screen">
+                        <property name="child">
+                          <object class="GtkGrid" id="custom_game_grid">
+                            <property name="halign">center</property>
+                            <property name="valign">center</property>
+                            <property name="row_spacing">6</property>
+                            <property name="column_spacing">12</property>
+                            <child>
+                              <object class="GtkLabel" id="width_label">
+                                <property name="halign">start</property>
+                                <property name="label" translatable="yes">_Width</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">width_spin_btn</property>
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSpinButton" id="width_spin_btn">
+                                <property name="focusable">True</property>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="row">0</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="height_label">
+                                <property name="halign">start</property>
+                                <property name="label" translatable="yes">_Height</property>
+                                <property name="use_underline">True</property>
+                                <property name="mnemonic_widget">height_spin_btn</property>
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">1</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSpinButton" id="height_spin_btn">
+                                <property name="focusable">True</property>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="row">1</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkLabel" id="percent_mines_label">
+                                <property name="halign">start</property>
+                                <property name="label" translatable="yes">Percent _mines</property>
+                                <property name="use_underline">True</property>
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">2</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkSpinButton" id="mines_spin_btn">
+                                <property name="focusable">True</property>
+                                <layout>
+                                  <property name="column">1</property>
+                                  <property name="row">2</property>
+                                </layout>
+                              </object>
+                            </child>
+                            <child>
+                              <object class="GtkGrid" id="custom_buttons_grid">
+                                <property name="margin_top">12</property>
+                                <property name="row_spacing">5</property>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">_Cancel</property>
+                                    <property name="focusable">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="valign">center</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="action_name">app.cancel-custom</property>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">1</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkButton">
+                                    <property name="label" translatable="yes">_Play Game</property>
+                                    <property name="focusable">True</property>
+                                    <property name="receives_default">True</property>
+                                    <property name="valign">center</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="use_underline">True</property>
+                                    <property name="action_name">app.start-custom</property>
+                                    <style>
+                                      <class name="suggested-action"/>
+                                    </style>
+                                    <layout>
+                                      <property name="column">0</property>
+                                      <property name="row">0</property>
+                                    </layout>
+                                  </object>
+                                </child>
+                                <layout>
+                                  <property name="column">0</property>
+                                  <property name="row">3</property>
+                                  <property name="column-span">2</property>
+                                </layout>
+                              </object>
+                            </child>
+                          </object>
+                        </property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkStackPage">
+                    <property name="name" translatable="no">game</property>
+                    <property name="child">
+                      <object class="GtkBox" id="main_screen">
+                        <child>
+                          <object class="GtkBox" id="main_screen_layout">
+                            <property name="hexpand">True</property>
+                            <property name="vexpand">True</property>
+                            <property name="orientation">vertical</property>
+                            <child>
+                              <object class="GtkOverlay" id="minefield_overlay"/>
+                            </child>
+                            <child>
+                              <object class="GtkBox" id="main_screen_sidebar">
+                                <property name="spacing">24</property>
+                                <property name="margin-start">24</property>
+                                <property name="margin-end">24</property>
+                                <property name="margin-top">24</property>
+                                <property name="margin-bottom">24</property>
+                                <property name="halign">center</property>
+                                <property name="valign">center</property>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">6</property>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkImage" id="flag_image">
+                                        <property name="pixel_size">32</property>
+                                        <property name="icon_name">flag-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="flag_label">
+                                        <property name="margin_bottom">12</property>
+                                        <property name="label">5/10</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                                <child>
+                                  <object class="GtkBox">
+                                    <property name="spacing">6</property>
+                                    <property name="orientation">vertical</property>
+                                    <child>
+                                      <object class="GtkImage" id="clock_image">
+                                        <property name="pixel_size">32</property>
+                                        <property name="icon_name">stopwatch-symbolic</property>
+                                      </object>
+                                    </child>
+                                    <child>
+                                      <object class="GtkLabel" id="clock_label">
+                                        <property name="vexpand">True</property>
+                                        <property name="margin_bottom">12</property>
+                                        <property name="yalign">0</property>
+                                        <property name="label">0:00</property>
+                                        <property name="width_request">90</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                </child>
+                              </object>
+                            </child>
                           </object>
                         </child>
                       </object>
                     </property>
                   </object>
-                </property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkStackPage">
-                <property name="name" translatable="no">game</property>
-                <property name="child">
-                  <object class="GtkBox" id="main_screen">
-                    <child>
-                      <object class="GtkBox" id="main_screen_layout">
-                        <property name="hexpand">True</property>
-                        <property name="vexpand">True</property>
-                        <property name="orientation">vertical</property>
-                        <child>
-                          <object class="GtkOverlay" id="minefield_overlay"/>
-                        </child>
-                        <child>
-                          <object class="GtkBox" id="main_screen_sidebar">
-                            <property name="spacing">24</property>
-                            <property name="margin-start">24</property>
-                            <property name="margin-end">24</property>
-                            <property name="margin-top">24</property>
-                            <property name="margin-bottom">24</property>
-                            <property name="halign">center</property>
-                            <property name="valign">center</property>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="spacing">6</property>
-                                <property name="orientation">vertical</property>
-                                <child>
-                                  <object class="GtkImage" id="flag_image">
-                                    <property name="pixel_size">32</property>
-                                    <property name="icon_name">flag</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel" id="flag_label">
-                                    <property name="margin_bottom">12</property>
-                                    <property name="label">5/10</property>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                            <child>
-                              <object class="GtkBox">
-                                <property name="spacing">6</property>
-                                <property name="orientation">vertical</property>
-                                <child>
-                                  <object class="GtkImage" id="clock_image">
-                                    <property name="pixel_size">32</property>
-                                    <property name="icon_name">stopwatch</property>
-                                  </object>
-                                </child>
-                                <child>
-                                  <object class="GtkLabel" id="clock_label">
-                                    <property name="vexpand">True</property>
-                                    <property name="margin_bottom">12</property>
-                                    <property name="yalign">0</property>
-                                    <property name="label">0:00</property>
-                                    <property name="width_request">90</property>
-                                  </object>
-                                </child>
-                              </object>
-                            </child>
-                          </object>
-                        </child>
-                      </object>
-                    </child>
-                  </object>
-                </property>
+                </child>
               </object>
             </child>
           </object>
-        </child>
+        </property>
       </object>
-    </child>
+    </property>
   </object>
   <object class="GtkBox" id="paused_box">
     <property name="hexpand">True</property>
@@ -369,3 +371,4 @@
     </style>
   </object>
 </interface>
+

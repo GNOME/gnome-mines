@@ -9,6 +9,7 @@
  */
 
 using Gtk;
+using Adw;
 
 public class Mines : Adw.Application
 {
@@ -29,7 +30,6 @@ public class Mines : Adw.Application
     /* Shared Settings keys */
     public const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public const string KEY_USE_AUTOFLAG = "use-autoflag";
-    public const string KEY_USE_ANIMATIONS = "use-animations";
 
     private Widget main_screen;
     private Box main_screen_layout;
@@ -50,7 +50,7 @@ public class Mines : Adw.Application
     private Gdk.Toplevel surface;
 
     /* Main window */
-    private Window window;
+    private Adw.Window window;
     private Orientation current_layout = Orientation.VERTICAL;
 
     /* true when the user has requested the game to pause. */
@@ -128,12 +128,6 @@ public class Mines : Adw.Application
         if (game_mode != -1)
             settings.set_int (KEY_MODE, game_mode);
 
-        Window.set_default_icon_name ("org.gnome.Mines");
-
-        // TODO Support dark mode, We force light mode until there is proper
-        // support for it.
-        Adw.StyleManager.get_default ().color_scheme = FORCE_LIGHT;
-
         add_action_entries (action_entries, this);
         new_game_action = lookup_action ("new-game") as SimpleAction;
         new_game_action.set_enabled (true);
@@ -174,10 +168,10 @@ public class Mines : Adw.Application
             warning ("Could not load game UI: %s", e.message);
         }
 
-        window = (MineWindow) ui_builder.get_object ("main_window");
+        window = (Adw.Window) ui_builder.get_object ("main_window");
+
         window.map.connect (init_state_watcher);
         window.notify["is-active"].connect (on_window_focus_change);
-        Gtk.Settings.get_default ().gtk_enable_animations = settings.get_boolean ("use-animations");
 
         add_window (window);
 
@@ -274,7 +268,7 @@ public class Mines : Adw.Application
 
     private void startup_new_game_screen (Builder builder)
     {
-        new_game_screen =  (AspectFrame) builder.get_object ("new_game_screen");
+        new_game_screen = (AspectFrame) builder.get_object ("new_game_screen");
 
         var button = (Button) builder.get_object ("small_size_btn");
         var label = new Label (null);
@@ -384,8 +378,6 @@ public class Mines : Adw.Application
 
     protected override void shutdown ()
     {
-        settings.set_boolean (KEY_USE_ANIMATIONS, Gtk.Settings.get_default ().gtk_enable_animations);
-
         base.shutdown ();
     }
 
@@ -451,7 +443,7 @@ public class Mines : Adw.Application
     private void preferences_cb ()
     {
         theme_dialog = new ThemeSelectorDialog (window);
-        theme_dialog.present ();
+        theme_dialog.present (window);
     }
 
     private void show_custom_game_screen ()
@@ -469,13 +461,13 @@ public class Mines : Adw.Application
             minefield.paused = true;
             size_actions_toggle (false);
 
-            var dialog = new MessageDialog (window, DialogFlags.MODAL, MessageType.QUESTION, ButtonsType.NONE, "%s", _("Do you want to start a new game?"));
-            dialog.secondary_text = (_("If you start a new game, your current progress will be lost."));
-            dialog.add_buttons (_("Keep Current Game"), ResponseType.DELETE_EVENT,
-                                _("Start New Game"),    ResponseType.ACCEPT);
+            var dialog = new Adw.AlertDialog (_("Do you want to start a new game?"), "%s");
+            dialog.body = (_("If you start a new game, your current progress will be lost."));
+            dialog.add_responses ("accept",   _("Start New Game"),
+                                  "delete_event", _("Keep Current Game"));
             dialog.response.connect ((_dialog, response) => {
                     _dialog.destroy ();
-                    if (response != ResponseType.ACCEPT)
+                    if (response != "accept")
                         minefield.paused = was_paused;
                     else if (start_directly)
                     {
@@ -489,7 +481,9 @@ public class Mines : Adw.Application
 
                     size_actions_toggle (true);
                 });
-            dialog.present ();
+            dialog.set_default_response ("delete_event");
+            dialog.set_response_appearance ("accept", Adw.ResponseAppearance.DESTRUCTIVE);
+            dialog.present (window);
         }
         else if (start_directly)
         {
@@ -738,15 +732,15 @@ public class Mines : Adw.Application
     {
         string[] authors =
         {
-            _("Main game:"),
+            //_("Main game:"),
             "Szekeres Istvan (Pista)",
             "Robert Ancell",
             "Robert Roth",
-            "",
-            _("Score:"),
+            //"",
+            //_("Score:"),
             "Horacio J. Peña",
-            "",
-            _("Resizing and SVG support:"),
+            //"",
+            //_("Resizing and SVG support:"),
             "Steve Chaplin",
             "Callum McKenzie"
         };
@@ -761,20 +755,21 @@ public class Mines : Adw.Application
             "Ekaterina Gerasimova"
         };
 
-        show_about_dialog (window,
-                           "name", _("Mines"),
-                           "version", VERSION,
-                           "comments",
-                           _("Clear explosive mines off the board"),
-                           "copyright",
-                           "Copyright © 1997–2008 Free Software Foundation, Inc.",
-                           "license-type", License.GPL_3_0,
-                           "authors", authors,
-                           "artists", artists,
-                           "documenters", documenters,
-                           "translator-credits", _("translator-credits"),
-                           "logo-icon-name", "org.gnome.Mines", "website",
-                           "https://wiki.gnome.org/Apps/Mines");
+        var about = new Adw.AboutDialog () {
+            application_name = "Mines",
+            application_icon = "org.gnome.Mines",
+            developers = authors,
+            comments = "Clear explosive mines off the board",
+            copyright = "Copyright © 1997–2008 Free Software Foundation, Inc.",
+            license_type = License.GPL_3_0,
+            artists = artists,
+            documenters = documenters,
+            translator_credits = _("translator-credits"),
+            version = VERSION,
+            website = "https://wiki.gnome.org/Apps/Mines",
+        };
+
+        about.present (this.active_window);
     }
 
     private float percent_mines ()
@@ -848,7 +843,8 @@ public class Mines : Adw.Application
 
     private void help_cb ()
     {
-        show_uri (window, "help:gnome-mines", Gdk.CURRENT_TIME);
+        Gtk.UriLauncher help_launcher = new UriLauncher ("help:gnome-mines");
+        help_launcher.launch.begin (window, new Cancellable ());
     }
 
     public static int main (string[] args)

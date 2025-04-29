@@ -8,6 +8,7 @@
     <file preprocess="xml-stripblanks">help-overlay.ui</file>
   </gresource>
   <gresource prefix="/org/gnome/Mines/icons/16x16/actions/">
-    <file>stopwatch.svg</file>
+    <file>stopwatch-symbolic.svg</file>
+    <file>flag-symbolic.svg</file>
   </gresource>
 </gresources>
