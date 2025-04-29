@@ -1,0 +1,13 @@
+/* Style of the unrevealed tiles after game over */
+.explodedField .tile {
+  background-color:#9A9996;
+}
+
+.explodedField .exploded {
+  background-color:#F5C211;
+}
+
+.explodedField .count {
+  background-color:#C0BFBC;
+  filter: grayscale(50%);
+}

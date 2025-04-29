@@ -7,7 +7,7 @@ install_data (join_paths ('icons', 'hicolor', 'symbolic', '@0@-symbolic.svg'.for
 install_data ('@0@.gschema.xml'.format(app_id),
               install_dir: join_paths (datadir, 'glib-2.0', 'schemas'))
 
-foreach theme: [ 'default', 'bgcolors', 'classic' ]
+foreach theme: [ 'default', 'bgcolors', 'classic', 'modern' ]
     foreach file: [ 'theme.css',
                     '1mines.svg', '2mines.svg', '3mines.svg', '4mines.svg', '5mines.svg', '6mines.svg', '7mines.svg', '8mines.svg',
                     'mine.svg', 'flag.svg', 'incorrect.svg', 'exploded.svg', 'maybe.svg' ]
