@@ -461,6 +461,11 @@ public class MinefieldView : Gtk.Widget
         add_controller (key_controller);
     }
 
+    // Perform the modulo operation on two integers, use instead of %
+    private inline int mod (int a, int b) {
+        return ((a % b) + b) % b;
+    }   
+
     private inline bool on_key_pressed (Gtk.EventControllerKey _key_controller, uint keyval, uint keycode, Gdk.ModifierType state)
     {
         /* Check for end cases and paused game */
@@ -540,7 +545,7 @@ public class MinefieldView : Gtk.Widget
             return true;
         }
 
-        keyboard_cursor.position = new Pos ( (int) (x % _minefield.width), (int) (y % _minefield.height));
+        keyboard_cursor.position = new Pos (mod (x, (int) _minefield.width), mod (y, (int) _minefield.height));
 
         mines[keyboard_cursor.x,keyboard_cursor.y].add_css_class ("cursor");
         if (selected.is_set)
