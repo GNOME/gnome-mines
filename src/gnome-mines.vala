@@ -11,6 +11,13 @@
 using Gtk;
 using Adw;
 
+// https://gitlab.gnome.org/GNOME/gtk/-/issues/6135
+namespace Workaround {
+    [CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_show_uri")]
+    extern static void gtk_show_uri (Gtk.Window? parent, string uri, uint32 timestamp);
+}
+
+
 public class Mines : Adw.Application
 {
     /* Settings keys */
@@ -732,15 +739,13 @@ public class Mines : Adw.Application
     {
         string[] authors =
         {
-            //_("Main game:"),
+            // Main game
             "Szekeres Istvan (Pista)",
             "Robert Ancell",
             "Robert Roth",
-            //"",
-            //_("Score:"),
+            // Score
             "Horacio J. Peña",
-            //"",
-            //_("Resizing and SVG support:"),
+            // Resizing and SVG support
             "Steve Chaplin",
             "Callum McKenzie"
         };
@@ -756,10 +761,11 @@ public class Mines : Adw.Application
         };
 
         var about = new Adw.AboutDialog () {
-            application_name = "Mines",
+            application_name = _("Mines"),
             application_icon = "org.gnome.Mines",
+            developer_name   = _("The GNOME Project"),
             developers = authors,
-            comments = "Clear explosive mines off the board",
+            comments = _("Clear explosive mines off the board"),
             copyright = "Copyright © 1997–2008 Free Software Foundation, Inc.",
             license_type = License.GPL_3_0,
             artists = artists,
@@ -843,8 +849,7 @@ public class Mines : Adw.Application
 
     private void help_cb ()
     {
-        Gtk.UriLauncher help_launcher = new UriLauncher ("help:gnome-mines");
-        help_launcher.launch.begin (window, new Cancellable ());
+        Workaround.gtk_show_uri (window, "help:gnome-mines", Gdk.CURRENT_TIME);
     }
 
     public static int main (string[] args)
