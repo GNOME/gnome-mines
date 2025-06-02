@@ -101,7 +101,7 @@ public class ThemeSelectorDialog : Adw.Dialog
         return box;
     }
 
-    public ThemeSelectorDialog (Adw.Window window)
+    public ThemeSelectorDialog (Adw.ApplicationWindow window)
     {
         MinefieldView minefield;
 
@@ -155,7 +155,7 @@ public class ThemeSelectorDialog : Adw.Dialog
         update_sensitivities (themes, current_index);
     }
 
-    private void switch_theme_preview (int to_index, List<string> themes, Adw.Window window)
+    private void switch_theme_preview (int to_index, List<string> themes, Adw.ApplicationWindow window)
     {
         settings.set_string ("theme", themes.nth_data (to_index));
         this.queue_draw ();

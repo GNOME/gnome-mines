@@ -50,7 +50,7 @@ public class Mines : Adw.Application
     private Gdk.Toplevel surface;
 
     /* Main window */
-    private Adw.Window window;
+    private Adw.ApplicationWindow window;
     private Orientation current_layout = Orientation.VERTICAL;
 
     /* true when the user has requested the game to pause. */
@@ -168,7 +168,7 @@ public class Mines : Adw.Application
             warning ("Could not load game UI: %s", e.message);
         }
 
-        window = (Adw.Window) ui_builder.get_object ("main_window");
+        window = (Adw.ApplicationWindow) ui_builder.get_object ("main_window");
 
         window.map.connect (init_state_watcher);
         window.notify["is-active"].connect (on_window_focus_change);
