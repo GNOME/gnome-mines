@@ -151,7 +151,8 @@ public class ThemeSelectorDialog : Adw.Dialog
             update_sensitivities (themes, current_index);
         });
 
-        set_size_request (420, 400);
+        set_content_height (400);
+        set_content_width (400);
         update_sensitivities (themes, current_index);
     }
 
