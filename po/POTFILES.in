@@ -3,7 +3,7 @@
 data/org.gnome.Mines.metainfo.xml.in
 data/org.gnome.Mines.desktop.in
 data/org.gnome.Mines.gschema.xml
-src/help-overlay.ui
+src/shortcuts-dialog.ui
 src/interface.ui
 src/gnome-mines.vala
 src/minefield.vala
