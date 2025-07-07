@@ -694,10 +694,10 @@ public class Mines : Adw.Application
         pause_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
 
-        context.add_score.begin (duration, create_category_from_key (key), null, (object, result) => {
+        context.add_score_full.begin (duration, create_category_from_key (key), repeat_size_cb, quit_cb, null, (object, result) => {
             try
             {
-                context.add_score.end (result);
+                context.add_score_full.end (result);
             }
             catch (Error e)
             {
