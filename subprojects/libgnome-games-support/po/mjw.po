@@ -1,0 +1,88 @@
+# Karbi translation for libgnome-games-support.
+# Copyright (C) 2019 libgnome-games-support's Free Software Foundation, Inc.
+# This file is distributed under the same license as the libgnome-games-support package.
+# Jor Teron <jor.teron@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2019-02-21 11:13+0000\n"
+"PO-Revision-Date: 2019-07-15 00:55+0530\n"
+"Last-Translator: Jor Teron <jor.teron@gmail.com>\n"
+"Language-Team: Karbi <mjw@li.org>\n"
+"Language: mjw\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Kurwangthu"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Ong-nei Scores"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Menei Apor"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Scores awe lang"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Isi-hini pathu ik lote ladak scores klang po."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:140
+msgid "Rank"
+msgstr ""
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:149
+msgid "Score"
+msgstr "Score"
+
+#: games/scores/dialog.vala:151
+msgid "Time"
+msgstr "Apor"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:158
+msgid "Player"
+msgstr "Pathu-bang"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:168
+msgid "_Done"
+msgstr "Tang e_d-lo"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:283
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minute"
+msgstr[1] "%ld minutes"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:285
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld second"
+msgstr[1] "%ld seconds"
+
+#: games/scores/dialog.vala:291
+msgid "Your score is the best!"
+msgstr "Nangli score henlo kemenei lo!"
+
+#: games/scores/dialog.vala:293
+msgid "Your score has made the top ten."
+msgstr "Nangli score kep angdeng kele dun."

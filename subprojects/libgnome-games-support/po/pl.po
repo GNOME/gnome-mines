@@ -1,0 +1,91 @@
+# Polish translation for libgnome-games-support.
+# Copyright © 2014-2016 the libgnome-games-support authors.
+# This file is distributed under the same license as the libgnome-games-support package.
+# Piotr Drąg <piotrdrag@gmail.com>, 2014-2016.
+# Aviary.pl <community-poland@mozilla.org>, 2014-2016.
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=libgnome-games-support&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2016-11-20 04:00+0000\n"
+"PO-Revision-Date: 2016-12-11 15:33+0100\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <community-poland@mozilla.org>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Gratulacje!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Najlepsze wyniki"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Najlepsze czasy"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Brak wyników"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Wyniki pojawią się po rozegraniu paru gier."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:135
+msgid "Rank"
+msgstr "Pozycja"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:144
+msgid "Score"
+msgstr "Wynik"
+
+#: games/scores/dialog.vala:146
+msgid "Time"
+msgstr "Czas"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:153
+msgid "Player"
+msgstr "Gracz"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:163
+msgid "_Done"
+msgstr "_Gotowe"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:278
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minuta"
+msgstr[1] "%ld minuty"
+msgstr[2] "%ld minut"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:280
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld sekunda"
+msgstr[1] "%ld sekundy"
+msgstr[2] "%ld sekund"
+
+#: games/scores/dialog.vala:286
+msgid "Your score is the best!"
+msgstr "Osiągnięto najlepszy wynik!"
+
+#: games/scores/dialog.vala:288
+msgid "Your score has made the top ten."
+msgstr "Osiągnięty wynik mieści się w dziesięciu najlepszych."

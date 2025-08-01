@@ -1,0 +1,89 @@
+# Afrikaans translation for libgnome-games-support.
+# Copyright (C) 2019 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# Pieter Schalk Schoeman <pieter@sonbesie.co.za>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2018-12-29 14:50+0000\n"
+"PO-Revision-Date: 2019-01-21 12:59+0200\n"
+"Language-Team: Afrikaans <translate-discuss-af@lists.sourceforge.net>\n"
+"Language: af\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.2\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Geluk!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Tellingranglys"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Beste tyd"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Geen punte"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Die tellings van die speletjies wat jy speel sal hier vertoon word."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:140
+msgid "Rank"
+msgstr "Rang"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:149
+msgid "Score"
+msgstr "Telling"
+
+#: games/scores/dialog.vala:151
+msgid "Time"
+msgstr "Tyd"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:158
+msgid "Player"
+msgstr "Speler"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:168
+msgid "_Done"
+msgstr "_Klaar"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:283
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minuut"
+msgstr[1] "%ld minute"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:285
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld sekonde"
+msgstr[1] "%ld sekondes"
+
+#: games/scores/dialog.vala:291
+msgid "Your score is the best!"
+msgstr "Jou telling is die hoogste!"
+
+#: games/scores/dialog.vala:293
+msgid "Your score has made the top ten."
+msgstr "Jou telling is in die top 10."

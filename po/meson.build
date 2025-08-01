@@ -1,3 +1,3 @@
-i18n.gettext ('gnome-mines', preset: 'glib')
+i18n.gettext (gettext_package, preset: 'glib')
 
 podir = meson.current_source_dir ()

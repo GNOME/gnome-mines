@@ -1,0 +1,89 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2020-03-12 17:26+0000\n"
+"PO-Revision-Date: 2020-03-04 11:41+0530\n"
+"Last-Translator: Lakshmanan <klmnsahana@gmail.com>\n"
+"Language-Team: \n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "வாழ்த்துக்கள்!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "உயர் புள்ளிகள்"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "சிறந்த நேரங்கள்"
+
+#: games/scores/dialog.vala:81
+msgid "No scores yet"
+msgstr "இன்னும் புள்ளிகள் எதுவும் இல்லை"
+
+#: games/scores/dialog.vala:85
+msgid "Play some games and your scores will show up here."
+msgstr "சில ஆட்டங்களை விளையாடுங்கள், உங்கள் புள்ளிகள் இங்கே காண்பிக்கப்படும்."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:142
+msgid "Rank"
+msgstr "தரவரிசை"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:151
+msgid "Score"
+msgstr "புள்ளிகள்"
+
+#: games/scores/dialog.vala:153
+msgid "Time"
+msgstr "நேரம்"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:160
+msgid "Player"
+msgstr "ஆட்டக்காரர்"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:170
+msgid "_Done"
+msgstr "_முடிந்தது"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:286
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld நிமிடம்"
+msgstr[1] "%ld நிமிடங்கள்"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:288
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld விநாடி"
+msgstr[1] "%ld விநாடிகள்"
+
+#: games/scores/dialog.vala:294
+msgid "Your score is the best!"
+msgstr "உங்கள் புள்ளிகள் சிறந்தது!"
+
+#: games/scores/dialog.vala:296
+msgid "Your score has made the top ten."
+msgstr "உங்கள் புள்ளிகள் முதல் பத்து இடங்களைப் பிடித்தது."

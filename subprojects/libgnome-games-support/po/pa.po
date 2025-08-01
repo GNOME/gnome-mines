@@ -1,0 +1,89 @@
+# Punjabi translation for libgnome-games-support.
+# Copyright (C) 2021 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+#
+# A S Alam <amanpreet.alam@gmail.com>, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/is"
+"sues\n"
+"POT-Creation-Date: 2020-09-30 07:54+0000\n"
+"PO-Revision-Date: 2021-02-06 10:11-0800\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjab-translation@googlegroups.com>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "ਵਧਾਈਆਂ!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "ਉੱਚ ਸਕੋਰ"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "ਸਭ ਤੋਂ ਵਧੀਆ ਸਮਾਂ"
+
+#: games/scores/dialog.vala:81
+msgid "No scores yet"
+msgstr "ਹਾਲੇ ਸਕੋਰ ਨਹੀਂ ਹੈ"
+
+#: games/scores/dialog.vala:85
+msgid "Play some games and your scores will show up here."
+msgstr "ਕੁਝ ਖੇਡਾਂ ਖੇਡੋ ਅਤੇ ਤੁਹਾਡਾ ਸਕੋਰ ਇੱਥੇ ਦਿਖਾਇਆ ਜਾਵੇਗਾ।"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:142
+msgid "Rank"
+msgstr "ਦਰਜਾ"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:151
+msgid "Score"
+msgstr "ਸਕੋਰ"
+
+#: games/scores/dialog.vala:153
+msgid "Time"
+msgstr "ਸਮਾਂ"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:160
+msgid "Player"
+msgstr "ਪਲੇਅਰ"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:170
+msgid "_Done"
+msgstr "ਮੁਕੰਮਲ(_D)"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:286
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld ਮਿੰਟ"
+msgstr[1] "%ld ਮਿੰਟ"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:288
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld ਸਕਿੰਟ"
+msgstr[1] "%ld ਸਕਿੰਟ"
+
+#: games/scores/dialog.vala:294
+msgid "Your score is the best!"
+msgstr "ਤੁਹਾਡਾ ਸਕੋਰ ਸਭ ਤੋਂ ਵਧੀਆ ਹੈ!"
+
+#: games/scores/dialog.vala:296
+msgid "Your score has made the top ten."
+msgstr "ਤੁਹਾਡਾ ਸਕੋਰ ਸਿਖਰਲੇ ਦਸਾਂ ਵਿੱਚ ਹੈ।"

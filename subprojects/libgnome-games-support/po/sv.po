@@ -1,0 +1,93 @@
+# Swedish translation for libgnome-games-support.
+# Copyright © 2015-2025 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2016, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-07-08 22:05+0000\n"
+"PO-Revision-Date: 2025-08-05 23:29+0200\n"
+"Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. Empty State
+#: games/scores/dialog.vala:60
+msgid "No scores yet"
+msgstr "Inga poäng än"
+
+#: games/scores/dialog.vala:65
+msgid "Play some games and your scores will show up here."
+msgstr "Spela några spel så kommer dina poäng att visas här."
+
+#: games/scores/dialog.vala:83
+msgid "Score"
+msgstr "Poäng"
+
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "Ny poäng i"
+
+#: games/scores/dialog.vala:88
+msgid "Time"
+msgstr "Tid"
+
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "Ny tid i"
+
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "Gratulerar!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
+msgid "Done"
+msgstr "Klar"
+
+#: games/scores/dialog.vala:297
+msgid "Player"
+msgstr "Spelare"
+
+#: games/scores/dialog.vala:304
+msgid "_New Game"
+msgstr "_Nytt spel"
+
+#: games/scores/dialog.vala:315
+msgid "_Quit"
+msgstr "A_vsluta"
+
+#~ msgid "High Scores"
+#~ msgstr "Högsta poäng"
+
+#~ msgid "Best Times"
+#~ msgstr "Bästa tider"
+
+#~ msgid "Rank"
+#~ msgstr "Placering"
+
+#, c-format
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld minut"
+#~ msgstr[1] "%ld minuter"
+
+#, c-format
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld sekund"
+#~ msgstr[1] "%ld sekunder"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "Din poäng är den bästa!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Ditt resultat är bland de tio bästa."

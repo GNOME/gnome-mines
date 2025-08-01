@@ -1,0 +1,89 @@
+# Georgian translation for libgnome-games-support.
+# Copyright (C) 2025 libgnome-games-support authors.
+# This file is distributed under the same license as the libgnome-games-support package.
+# Ekaterine Papava <papava.e@gtu.ge>, 2023-2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-04-29 14:14+0000\n"
+"PO-Revision-Date: 2025-05-10 03:29+0200\n"
+"Last-Translator: Ekaterine Papava <papava.e@gtu.ge>\n"
+"Language-Team: Georgian <(nothing)>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:62
+msgid "Congratulations!"
+msgstr "გილოცავთ!"
+
+#: games/scores/dialog.vala:64
+msgid "High Scores"
+msgstr "უმაღლესი ქულები"
+
+#: games/scores/dialog.vala:66
+msgid "Best Times"
+msgstr "საუკეთესო დროები"
+
+#: games/scores/dialog.vala:84
+msgid "No scores yet"
+msgstr "ქულების გარეშე"
+
+#: games/scores/dialog.vala:86
+msgid "Play some games and your scores will show up here."
+msgstr "ითამაშეთ და თქვენი ქულები აქ გამოჩნდება."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:143
+msgid "Rank"
+msgstr "რანგი"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:152
+msgid "Score"
+msgstr "ქულები"
+
+#: games/scores/dialog.vala:154
+msgid "Time"
+msgstr "დრო"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:161
+msgid "Player"
+msgstr "მოთამაშე"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:171
+msgid "Done"
+msgstr "მზადაა"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:292
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld წუთი"
+msgstr[1] "%ld წუთი"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:294
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld წამი"
+msgstr[1] "%ld წამი"
+
+#: games/scores/dialog.vala:300
+msgid "Your score is the best!"
+msgstr "თქვენი ქულები საუკეთესოა!"
+
+#: games/scores/dialog.vala:302
+msgid "Your score has made the top ten."
+msgstr "თქვენმა ქულებმა 10 საუკეთესოში გაგიყვანათ."

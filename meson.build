@@ -16,6 +16,7 @@ cc = meson.get_compiler('c')
 # Paths
 mandir = join_paths (get_option ('prefix'), get_option ('mandir'))
 localedir = join_paths (get_option ('prefix'), get_option ('localedir'))
+gettext_package = 'gnome-mines'
 datadir = join_paths (get_option ('prefix'), get_option ('datadir'))
 pkgdatadir = join_paths (datadir, 'gnome-mines')
 bindir = join_paths (get_option ('prefix'), get_option ('bindir'))
@@ -26,7 +27,9 @@ gee_dep = dependency ('gee-0.8')
 gtk_dep = dependency ('gtk4', version: '>= 4.6')
 adw_dep = dependency ('libadwaita-1', version: '>= 1.8.alpha')
 librsvg_dep = dependency ('librsvg-2.0', version: '>=2.32.0')
-libgnome_games_support_dep = dependency ('libgnome-games-support-2', version: '>= 2.0.0')
+libgnome_games_support = subproject ('libgnome-games-support',
+	    		             default_options: 'superproject_name=gnome-mines')
+libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
 libmath_dep = cc.find_library('m')
 
 subdir ('po')

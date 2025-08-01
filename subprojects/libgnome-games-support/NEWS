@@ -1,0 +1,199 @@
+2.0.1 - March 10, 2025
+======================
+
+* Bugs fixed:
+  - #13 Best times are not translated (Michael Catanzaro)
+
+* Translation updates:
+  - Belarusian (Vasil Pupkin)
+  - Bulgarian (Alexander Shopov)
+  - Georgian (Zurab Kargareteli)
+  - Hindi (Scrambled 777)
+  - Thai (Aefgh Threenine)
+  - Turkish (Sabri Ünal)
+
+2.0.0 - March 17, 2022
+======================
+
+- Updated translations
+
+2.0.beta.2 - February 12, 2022
+==============================
+
+- Fix parallel-installability of localizations (#21)
+
+2.0.beta.1 - February 12, 2022
+==============================
+
+- No changes. Oops!
+
+2.0.beta - February 11, 2022
+============================
+
+- Port to GTK 4, thank you: Arnaud B., Robert Roth, Andrey Kutejko, Maximiliano
+- New API version: libgnome-games-support-2, should be parallel-installable
+
+1.8.2 - October 29, 2021
+========================
+
+- Add margins to category bar in scores dialog (!8, Andrey Kutejko)
+- Fix build with latest vala (!9, Rico Tzschichholz)
+
+1.8.1 - March 22, 2021
+======================
+
+- Updated translations
+
+1.8.0 - September 11, 2020
+==========================
+
+- Updated translations
+
+1.7.1 - July 2, 2020
+====================
+
+- Add API to set icon name (#18, Arnaud B.)
+
+1.6.1 - March 26, 2020
+======================
+
+- Always show category in scores dialog (#17, Arnaud B.)
+
+1.6.0.1 - March 5, 2020
+=======================
+
+- Really updated translations, this time
+
+1.6.0 - March 5, 2020
+=====================
+
+- Updated translations
+
+1.5.90 - January 3, 2020
+========================
+
+- Replace autotools buildsystem with meson (Arnaud B.)
+
+1.4.4 - September 2, 2019
+=========================
+
+- Fix build with new gettext
+
+1.4.3 - December 11, 2018
+=========================
+
+- Fix build with vala 0.43.1
+
+1.4.2 - August 12, 2018
+=======================
+
+ - Hide category chooser on scores dialog when not needed (#12, Robert Roth)
+
+1.4.1 - March 21, 2018
+======================
+
+- Fix invalid cast in scores dialog (#794548, Robert Roth)
+
+1.4.0 - March 10, 2018
+======================
+
+- No changes
+
+1.3.90 - February 18, 2018
+==========================
+
+- Fix Scores.Context.get_high_scores() returning unordered scores (#789399)
+- Ensure all public objects are usable when created with g_object_new():
+  - Expose Scores.DirectoryImporter.set_category_convert_func() and
+    Scores.HistoryFileImporter.set_history_convert_func(), which must be called
+    directly after object creation if created using g_object_new().
+  - Change several private fields of Scores.Context into public properties
+  - Expose Scores.Context.load_scores(), which must be called directly after
+    Context creation if created using g_object_new().
+- Build with --abi-stability (requires valac 0.40). Bump soname.
+
+1.2.3 - September 8, 2017
+=========================
+
+- Updated translations
+
+1.2.2 - June 16, 2017
+=====================
+
+- Fix build with vala 0.36
+- Updated translations
+
+1.2.1 - October 24, 2016
+========================
+
+- Do not iterate global main context when running scores dialog
+- Updated translations
+
+1.2.0 - September 18, 2016
+==========================
+
+- Updated translations
+
+1.1.91 - August 28, 2016
+========================
+
+- Rename the pkg-config file one final time... are we there yet?
+- Updated translations
+
+1.1.90 - August 15, 2016
+========================
+
+- Rename to libgnome-games-support at behest of Debian (sorry!)
+- Style checker fixes
+- Updated translations
+
+1.0.2 - May 6, 2016
+===================
+
+- Updated translations
+
+1.0.1 - April 8, 2016
+=====================
+
+- Updated translations
+
+1.0 - March 21, 2016
+====================
+
+- Updated translations
+
+0.91 - March 6, 2016
+====================
+
+- Adjust column spacing on scores dialog
+- Add missing mnemonic to done button on scores dialog
+- Many new and updated translations
+
+0.90 - February 15, 2016
+========================
+
+With this release, libgames-support is now entering API freeze in preparation
+for its first stable release in March. The API will change before this release
+only if a major issue is discovered.
+
+- Add ability to import old scores.
+- Various fixes and improvements.
+- Various API changes.
+- Updated translations
+
+0.2 - October 25, 2015
+======================
+
+- API break: replace Context.get_best_n_scores with Context.get_high_scores. The
+  new function returns a non-nullable Gee.List (with possibly zero elements)
+  rather than a nullable GLib.List (which was never empty if non-null). The
+  soname has been bumped, but the pkg-config version remains the same. We
+  currently plan to adopt a stable API in February 2016, which will not break
+  unless the pkg-config version is changed.
+- Style checker should indicate no issues found if patch is clean (Sahil Sareen)
+- Updated translations
+
+0.1 - September 21, 2015
+========================
+
+Initial release

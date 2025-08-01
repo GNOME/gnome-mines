@@ -1,0 +1,97 @@
+# Arabic translation for libgnome-games-support.
+# Copyright (C) 2017 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# Ahmad H. Al Harthi <a.alharthi@tamkeentech.sa>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?"
+"product=libgnome-games-support&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-09-09 04:01+0000\n"
+"PO-Revision-Date: 2017-09-11 12:20+0300\n"
+"Last-Translator: Ahmad H. Al Harthi <a.alharthi@tamkeentech.sa>\n"
+"Language-Team: Arabic <doc@arabeyes.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural= n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;;\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "مبارك!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "نتائج مرتفعة"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "أفضل توقيتات"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "لا نتائج حتى الآن"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "ستظهر نتائجك هنا بعد اللعب ببعض الألعاب."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:135
+msgid "Rank"
+msgstr "التصنيف"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:144
+msgid "Score"
+msgstr "النتيجة"
+
+#: games/scores/dialog.vala:146
+msgid "Time"
+msgstr "التوقيت"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:153
+msgid "Player"
+msgstr "اللاعب"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:163
+msgid "_Done"
+msgstr "_تم"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:278
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "أقل من دقيقة"
+msgstr[1] "دقيقة واحدة"
+msgstr[2] "دقيقتين"
+msgstr[3] "%ld دقائق"
+msgstr[4] "%ld دقيقة"
+msgstr[5] "%ld دقيقة"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:280
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "أقل من ثانية"
+msgstr[1] "ثانية واحدة"
+msgstr[2] "ثانيتين"
+msgstr[3] "%ld ثوانِ"
+msgstr[4] "%ld ثانية"
+msgstr[5] "%ld ثانية"
+
+#: games/scores/dialog.vala:286
+msgid "Your score is the best!"
+msgstr "نتيجتك هي الأفضل!"
+
+#: games/scores/dialog.vala:288
+msgid "Your score has made the top ten."
+msgstr "نتيجتك من ضمن أعلى عشرة."

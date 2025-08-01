@@ -1,0 +1,87 @@
+# Malay translation for libgnome-games-support.
+# Copyright (C) 2019 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# abuyop <abuyop@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2019-11-20 15:54+0000\n"
+"PO-Revision-Date: 2019-12-28 18:17+0800\n"
+"Language-Team: Malay <ms@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Last-Translator: abuyop <abuyop@gmail.com>\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Tahniah!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Skor Tertinggi"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Masa Terbaik"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Tiada skor lagi"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Main lagi beberapa permainan dan skor anda akan muncul di sini."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:140
+msgid "Rank"
+msgstr "Kedudukan"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:149
+msgid "Score"
+msgstr "Skor"
+
+#: games/scores/dialog.vala:151
+msgid "Time"
+msgstr "Masa"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:158
+msgid "Player"
+msgstr "Pemain"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:168
+msgid "_Done"
+msgstr "Se_lesai"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:283
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minit"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:285
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld saat"
+
+#: games/scores/dialog.vala:291
+msgid "Your score is the best!"
+msgstr "Skor anda adalah yang terbaik!"
+
+#: games/scores/dialog.vala:293
+msgid "Your score has made the top ten."
+msgstr "Skor anda berada dalam kedudukan sepuluh terbaik."

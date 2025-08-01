@@ -1,0 +1,91 @@
+# Chinese (China) translation for libgnome-games-support.
+# Copyright (C) 2016 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# Mandy Wang <wangmychn@gmail.com>, 2016.
+# lumingzh <lumingzh@qq.com>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support games-1-2\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-07-07 14:02+0000\n"
+"PO-Revision-Date: 2025-07-08 07:55+0800\n"
+"Last-Translator: lumingzh <lumingzh@qq.com>\n"
+"Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Gtranslator 48.0\n"
+
+#: games/scores/dialog.vala:80
+msgid "No scores yet"
+msgstr "还没有分数记录"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "去玩一些游戏，然后你的分数会显示到这里。"
+
+#: games/scores/dialog.vala:93
+msgid "Score"
+msgstr "得分"
+
+#: games/scores/dialog.vala:94
+msgid "New Score in"
+msgstr "新得分"
+
+#: games/scores/dialog.vala:98
+msgid "Time"
+msgstr "时间"
+
+#: games/scores/dialog.vala:99
+msgid "New Time in"
+msgstr "新用时"
+
+#: games/scores/dialog.vala:106
+msgid "Congratulations!"
+msgstr "恭喜！"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:110
+msgid "Done"
+msgstr "完成"
+
+#: games/scores/dialog.vala:306
+msgid "Player"
+msgstr "玩家"
+
+#: games/scores/dialog.vala:313
+msgid "_New Game"
+msgstr "新游戏(_N)"
+
+#: games/scores/dialog.vala:324
+msgid "_Quit"
+msgstr "退出(_Q)"
+
+#~ msgid "High Scores"
+#~ msgstr "高分"
+
+#~ msgid "Best Times"
+#~ msgstr "最佳成绩"
+
+#~ msgid "Rank"
+#~ msgstr "排行"
+
+#, c-format
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld 分钟"
+
+#, c-format
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld 秒"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "您取得了最好成绩！"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "您已经进入了前十名。"

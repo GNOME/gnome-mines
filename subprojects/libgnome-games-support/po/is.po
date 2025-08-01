@@ -1,0 +1,89 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Sveinn í Felli <sv1@fellsnet.is>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/is"
+"sues\n"
+"POT-Creation-Date: 2019-01-21 11:18+0000\n"
+"PO-Revision-Date: 2019-02-21 11:10+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 2.0\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Til hamingju!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Flest stig"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Bestu tímar"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Engin stig ennþá"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Spilaðu einhverja leiki og stigin þín munu birtast hér."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:140
+msgid "Rank"
+msgstr "Staða"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:149
+msgid "Score"
+msgstr "Stig"
+
+#: games/scores/dialog.vala:151
+msgid "Time"
+msgstr "Tími"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:158
+msgid "Player"
+msgstr "Spilari"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:168
+msgid "_Done"
+msgstr "_Lokið"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:283
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld mínúta"
+msgstr[1] "%ld mínútur"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:285
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld sekúnda"
+msgstr[1] "%ld sekúndur"
+
+#: games/scores/dialog.vala:291
+msgid "Your score is the best!"
+msgstr "Þú ert með hæstu stigin!"
+
+#: games/scores/dialog.vala:293
+msgid "Your score has made the top ten."
+msgstr "Þú er einn af tíu hæstu."
+

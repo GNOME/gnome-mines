@@ -1,0 +1,95 @@
+# Malayalam translation for libgnome-games-support.
+# Copyright (C) 2017 libgnome-games-support's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgnome-games-support package.
+# Ani Peter <peter.ani@gmail.com>, 2017.
+# Indulekshmi.B <lekshmi.indu@gmail.com>, 2017.
+# Athira N.S <nsathira1991@gmail.com>, 2017.
+# Ponnamma K<k.ponnamma2013@gmail.com>, 2017.
+# Rachana R <rachanarmnr@gmail.com>, 2017.
+# Sarath S.Karippalkizhakkathil <sarathskarippal@gmail.com>, 2017.
+# Anish Sheela <aneesh.nl@gmail.com>, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: libgnome-games-support master\n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product"
+"=libgnome-games-support&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-03-20 19:10+0000\n"
+"PO-Revision-Date: 2017-08-06 11:21+0530\n"
+"Last-Translator: Anish Sheela <aneesh.nl@gmail.com>\n"
+"Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
+"Language: ml\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "അഭിനന്ദനങ്ങള്‍!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "മികച്ച സ്കോര്‍"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "മികച്ച സമയങ്ങള്‍"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "ഇതുവരെ സ്കോര്‍ ഒന്നും ആയിട്ടില്ല"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "ഗെയിം കളിക്കൂ, നിങ്ങളുടെ സ്കോര്‍ ഇവിടെ കാണിക്കും."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:135
+msgid "Rank"
+msgstr "റാങ്ക്"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:144
+msgid "Score"
+msgstr "സ്കോര്‍"
+
+#: games/scores/dialog.vala:146
+msgid "Time"
+msgstr "സമയം"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:153
+msgid "Player"
+msgstr "കളിക്കാരന്‍"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:163
+msgid "_Done"
+msgstr "കഴിഞ്ഞു (_D)"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:278
+#, c-format
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld മിനിട്ട്"
+msgstr[1] "%ld മിനിട്ടുകള്‍"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:280
+#, c-format
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld സെക്കന്റ്"
+msgstr[1] "%ld സെക്കന്റുകള്‍"
+
+#: games/scores/dialog.vala:286
+msgid "Your score is the best!"
+msgstr "നിങ്ങളുടേതാണ് മികച്ച സ്‍കോര്‍!"
+
+#: games/scores/dialog.vala:288
+msgid "Your score has made the top ten."
+msgstr "നിങ്ങളുടെ സ്‍കോര്‍ ഏറ്റവും മികച്ച പത്തിലൊന്നാണ്."

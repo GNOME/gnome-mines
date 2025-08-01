@@ -1,0 +1,96 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2016, 2017.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=libgnom"
+"e-games-support&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2017-02-26 01:13+0000\n"
+"PO-Revision-Date: 2017-03-20 21:09+0200\n"
+"Last-Translator: Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>\n"
+"Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 :"
+" 2);\n"
+"X-Generator: Lokalize 2.0\n"
+
+#. Appears at the top of the dialog, as the heading of the dialog
+#: games/scores/dialog.vala:58
+msgid "Congratulations!"
+msgstr "Apsveicam!"
+
+#: games/scores/dialog.vala:60
+msgid "High Scores"
+msgstr "Labākie rezultāti"
+
+#: games/scores/dialog.vala:62
+msgid "Best Times"
+msgstr "Labākie laiki"
+
+#: games/scores/dialog.vala:78
+msgid "No scores yet"
+msgstr "Vēl nav rezultātu"
+
+#: games/scores/dialog.vala:82
+msgid "Play some games and your scores will show up here."
+msgstr "Uzspēlējiet pāris spēles, un jūsu rezultāts šeit parādīsies."
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:135
+msgid "Rank"
+msgstr "Pozīcija"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:144
+msgid "Score"
+msgstr "Rezultāts"
+
+#: games/scores/dialog.vala:146
+msgid "Time"
+msgstr "Laiks"
+
+#. A column heading in the scores dialog
+#: games/scores/dialog.vala:153
+msgid "Player"
+msgstr "Spēlētājs"
+
+#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
+#: games/scores/dialog.vala:163
+msgid "_Done"
+msgstr "_Gatavs"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:278
+#, c-format
+#| msgid "%d minute"
+#| msgid_plural "%d minutes"
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minūte"
+msgstr[1] "%ld minūtes"
+msgstr[2] "%ld minūšu"
+
+#. Time which may be displayed on a scores dialog.
+#: games/scores/dialog.vala:280
+#, c-format
+#| msgid "%d second"
+#| msgid_plural "%d seconds"
+msgid "%ld second"
+msgid_plural "%ld seconds"
+msgstr[0] "%ld sekunde"
+msgstr[1] "%ld sekundes"
+msgstr[2] "%ld sekunžu"
+
+#: games/scores/dialog.vala:286
+msgid "Your score is the best!"
+msgstr "Tavs rezultāts ir labākais!"
+
+#: games/scores/dialog.vala:288
+msgid "Your score has made the top ten."
+msgstr "Tavs rezultāts ticis labāko desmitniekā."
+

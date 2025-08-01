@@ -1,0 +1,98 @@
+# Brazilian Portuguese translation for libgames-scores.
+# Copyright (C) 2017 libgames-scores's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libgames-scores package.
+# Enrico Nicoletto <liverig@gmail.com>, 2014.
+# Artur de Aquino Morais <artur.morais93@outlook.com>, 2016.
+# Rafael Fontenelle <rafaelff@gnome.org>, 2017.
+# Álvaro Burns <>, 2025.
+# Juliano de Souza Camargo <julianosc@pm.me>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libgames-scores master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-07-08 22:05+0000\n"
+"PO-Revision-Date: 2025-07-12 10:29-0300\n"
+"Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 48.0\n"
+"X-Project-Style: gnome\n"
+
+#. Empty State
+#: games/scores/dialog.vala:60
+msgid "No scores yet"
+msgstr "Ainda não há pontuações"
+
+#: games/scores/dialog.vala:65
+msgid "Play some games and your scores will show up here."
+msgstr "Jogue alguns jogos e sua pontuação será mostrada aqui."
+
+#: games/scores/dialog.vala:83
+msgid "Score"
+msgstr "Pontuação"
+
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "Novo resultado"
+
+#: games/scores/dialog.vala:88
+msgid "Time"
+msgstr "Tempo"
+
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "Novo tempo"
+
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "Parabéns!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
+msgid "Done"
+msgstr "Concluído"
+
+#: games/scores/dialog.vala:297
+msgid "Player"
+msgstr "Jogador"
+
+#: games/scores/dialog.vala:304
+msgid "_New Game"
+msgstr "_Novo jogo"
+
+#: games/scores/dialog.vala:315
+msgid "_Quit"
+msgstr "Sa_ir"
+
+#~ msgid "High Scores"
+#~ msgstr "Melhores pontuações"
+
+#~ msgid "Best Times"
+#~ msgstr "Melhores tempos"
+
+#~ msgid "Rank"
+#~ msgstr "Classificação"
+
+#, c-format
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld minuto"
+#~ msgstr[1] "%ld minutos"
+
+#, c-format
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld segundo"
+#~ msgstr[1] "%ld segundos"
+
+#~ msgid "Your score is the best!"
+#~ msgstr "Você tem a melhor pontuação!"
+
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Sua pontuação é uma das dez melhores!"
