@@ -1,3 +1,17 @@
+GNOME Mines 49.beta
+=====================
+
+* Updated translations
+* Added new theme (Hexon)
+* Replaced timer icon (Hexon)
+* Use libadwaita and support dark theme (Will Warner)
+* Use custom modulon instead of standard operator (Nathan Gill)
+* Fix invalid cast after libadwaita port (Michael Catanzaro)
+* Fix about dialog, fix help url (Will Warner)
+* Fix broken resizing (Will Warner)
+* Port to AdwShortcutsDialog (Urtsi Santsi)
+* Use new score dialog (Will Warner)
+
 GNOME Mines 48.1
 =====================
 

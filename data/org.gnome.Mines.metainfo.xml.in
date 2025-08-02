@@ -35,6 +35,22 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="49~beta" date="2025-08-02" type="development">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+          <li>Added new theme (Hexon)</li>
+          <li>Replaced timer icon (Hexon)</li>
+          <li>Use libadwaita and support dark theme (Will Warner)</li>
+          <li>Use custom modulon instead of standard operator (Nathan Gill)</li>
+          <li>Fix invalid cast after libadwaita port (Michael Catanzaro)</li>
+          <li>Fix about dialog, fix help url (Will Warner)</li>
+          <li>Fix broken resizing (Will Warner)</li>
+          <li>Port to AdwShortcutsDialog (Urtsi Santsi)</li>
+          <li>Use new score dialog (Will Warner)</li>
+        </ul>
+      </description>
+    </release>
     <release version="48.1" date="2025-04-12" type="stable">
       <description>
         <ul>
