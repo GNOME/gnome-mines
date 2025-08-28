@@ -187,6 +187,11 @@ public class MinefieldView : Gtk.Widget
         this.settings = settings;
     }
 
+    ~MinefieldView ()
+    {
+        frame.unparent ();
+    }
+
     private Minefield _minefield;
     public Minefield minefield
     {
