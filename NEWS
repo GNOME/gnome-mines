@@ -1,3 +1,11 @@
+GNOME Mines 49.rc
+=====================
+
+* Updated translations
+* Updated screenshot (Yoav Morag)
+* Use libgnome-games as subproject (Will Warner)
+* Unparent minefield view aspect frame (Michael Catanzaro)
+
 GNOME Mines 49.beta
 =====================
 
