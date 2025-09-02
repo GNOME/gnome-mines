@@ -6,14 +6,15 @@
 # Peter Mráz <etkinator@gmail.com>, 2010, 2011.
 # Ján Kyselica <kyselica.jan@gmail.com>, 2013-2014.
 # Dušan Kazik <prescott66@gmail.com>, 2015-2021.
+# Jose Riha <jose1711@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2021-01-26 14:46+0000\n"
-"PO-Revision-Date: 2021-10-05 09:06+0200\n"
-"Last-Translator: Dušan Kazik <prescott66@gmail.com>\n"
+"POT-Creation-Date: 2025-08-30 17:27+0000\n"
+"PO-Revision-Date: 2025-09-02 13:34+0200\n"
+"Last-Translator: Jose Riha <jose1711@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
@@ -22,27 +23,33 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0\n"
 "X-Generator: Gtranslator 40.0\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8
-msgid "GNOME Mines"
-msgstr "Míny prostredia GNOME"
+#: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
+#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:764
+msgid "Mines"
+msgstr "Míny"
 
-#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+#: data/org.gnome.Mines.metainfo.xml.in:9 data/org.gnome.Mines.desktop.in:3
 msgid "Clear hidden mines from a minefield"
 msgstr "Odhaľte skryté míny v mínovom poli"
 
-#: data/org.gnome.Mines.appdata.xml.in:11
+#: data/org.gnome.Mines.metainfo.xml.in:11
+#| msgid ""
+#| "GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
+#| "spaces with mines as quickly as possible to make the board a safer place. "
+#| "You win the game when you’ve flagged every mine on the board. Be careful "
+#| "not to trigger one, or the game is over!"
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
-"Míny GNOME je hlavolam, v ktorom odhaľujete skryté míny. V čo najkratšom "
+"Míny sú hlavolam, v ktorom odhaľujete skryté míny. V čo najkratšom "
 "možnom čase označte všetky míny a spravte tak hraciu plochu bezpečnejším "
 "miestom. Hru vyhráte ak označíte všetky míny na hracej ploche. Buďte opatrní "
 "a neodpáľte žiadnu mínu, inak hra končí!"
 
-#: data/org.gnome.Mines.appdata.xml.in:17
+#: data/org.gnome.Mines.metainfo.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -52,17 +59,12 @@ msgstr ""
 "poradiť, môžete požiadať o radu. Dostanete však časovú penalizáciu, ale "
 "lepšie ako odpáliť mínu!"
 
-#: data/org.gnome.Mines.appdata.xml.in:47
-msgid "The GNOME Project"
-msgstr "Projekt GNOME"
-
-#: data/org.gnome.Mines.desktop.in:3 src/interface.ui:18
-#: src/gnome-mines.vala:172 src/gnome-mines.vala:226 src/gnome-mines.vala:838
-msgid "Mines"
-msgstr "Míny"
+#: data/org.gnome.Mines.metainfo.xml.in:105
+msgid "Robert Roth"
+msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:11
 msgid "minesweeper;"
 msgstr "hľadanie mín, míny;"
 
@@ -110,220 +112,194 @@ msgstr ""
 "Nastavte na true, aby sa vlajkou automaticky označili štvorce s mínami, keď "
 "je odkrytý dostatočný počet štvorcov"
 
-#: data/org.gnome.Mines.gschema.xml:20
-msgid "Enable animations"
-msgstr "Povoliť animácie"
-
 #: data/org.gnome.Mines.gschema.xml:21
-msgid "Set to false to disable theme-defined transition animations"
-msgstr "Nastavením na hodnotu false, zakážete témou určené prechody animácií"
-
-#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Počet stĺpcov v hre s vlastnou veľkosťou"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of rows in a custom game"
 msgstr "Počet riadkov v hre s vlastnou veľkosťou"
 
-#: data/org.gnome.Mines.gschema.xml:35
+#: data/org.gnome.Mines.gschema.xml:30
 msgid "The number of mines in a custom game"
 msgstr "Počet mín v hre s vlastnou veľkosťou"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "Board size"
 msgstr "Veľkosť hracieho poľa"
 
-#: data/org.gnome.Mines.gschema.xml:41
-#| msgid "Size of the board (0-2 = small-large, 3=custom)"
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Veľkosť hracieho poľa (0-2 = malá-veľká, 3 = vlastná)"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Šírka okna v pixeloch"
 
-#: data/org.gnome.Mines.gschema.xml:49
+#: data/org.gnome.Mines.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Výška okna v pixeloch"
 
-#: data/org.gnome.Mines.gschema.xml:53
+#: data/org.gnome.Mines.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "true, ak je okno maximalizované"
 
-#: src/help-overlay.ui:12
+#: src/shortcuts-dialog.ui:7
 msgctxt "shortcut window"
 msgid "Window and game"
 msgstr "Okno a hra"
 
-#: src/help-overlay.ui:17
+#: src/shortcuts-dialog.ui:11
 msgctxt "shortcut window"
 msgid "Start a new game"
-msgstr "Spustenie novej hry"
+msgstr "Spustiť novú hru"
 
-#: src/help-overlay.ui:24
+#: src/shortcuts-dialog.ui:17
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
-msgstr "Reštart hry s aktuálnymi nastaveniami"
+msgstr "Reštartovať hru s aktuálnymi nastaveniami"
 
-#: src/help-overlay.ui:31
+#: src/shortcuts-dialog.ui:23
 msgctxt "shortcut window"
 msgid "Pause the game"
-msgstr "Pozastavenie hry"
+msgstr "Pozastaviť hru"
 
-#: src/help-overlay.ui:38
+#: src/shortcuts-dialog.ui:29
 msgctxt "shortcut window"
 msgid "Show Help"
-msgstr "Zobrazenie pomocníka"
+msgstr "Zobraziť pomocníka"
 
-#: src/help-overlay.ui:45
+#: src/shortcuts-dialog.ui:35
 msgctxt "shortcut window"
 msgid "Open Menu"
-msgstr "Otvorenie ponuky"
+msgstr "Otvoriť ponuku"
 
-#: src/help-overlay.ui:52
+#: src/shortcuts-dialog.ui:41
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
-msgstr "Zobrazenie klávesových skratiek"
+msgstr "Zobraziť klávesové skratky"
 
-#: src/help-overlay.ui:59
+#: src/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Quit"
-msgstr "Ukončenie"
+msgstr "Ukončiť"
 
-#: src/help-overlay.ui:67
+#: src/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Game size selection"
 msgstr "Výber veľkosti hry"
 
-#: src/help-overlay.ui:72
+#: src/shortcuts-dialog.ui:58
 msgctxt "shortcut window"
 msgid "Game size: small"
 msgstr "Veľkosť hry: malá"
 
-#: src/help-overlay.ui:79
+#: src/shortcuts-dialog.ui:64
 msgctxt "shortcut window"
 msgid "Game size: medium"
 msgstr "Veľkosť hry: stredná"
 
-#: src/help-overlay.ui:86
+#: src/shortcuts-dialog.ui:70
 msgctxt "shortcut window"
 msgid "Game size: large"
 msgstr "Veľkosť hry: veľká"
 
-#: src/help-overlay.ui:93
+#: src/shortcuts-dialog.ui:76
 msgctxt "shortcut window"
 msgid "Game size: custom"
 msgstr "Veľkosť hry: vlastná"
 
-#: src/help-overlay.ui:101
+#: src/shortcuts-dialog.ui:83
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "Hra"
 
-#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#: src/shortcuts-dialog.ui:87 src/shortcuts-dialog.ui:93
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
 msgstr "Pohyb kurzorom klávesnice"
 
-#: src/help-overlay.ui:120
+#: src/shortcuts-dialog.ui:99
 msgctxt "shortcut window"
 msgid "Reveal field"
-msgstr "Odhalenie poľa"
+msgstr "Odhaliť pole"
 
-#: src/help-overlay.ui:127
+#: src/shortcuts-dialog.ui:105
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
-msgstr "Prepne stav vlajky poľa"
+msgstr "Prepnúť stav vlajky poľa"
 
-#: src/interface.ui:114
-msgid "_Width"
-msgstr "Šír_ka"
-
-#: src/interface.ui:138
-msgid "_Height"
-msgstr "_Výška"
-
-#: src/interface.ui:162
-msgid "Percent _mines"
-msgstr "Percento mí_n"
-
-#: src/interface.ui:188
-msgid "_Cancel"
-msgstr "Z_rušiť"
-
-#: src/interface.ui:205
-msgid "_Play Game"
-msgstr "_Hrať hru"
-
-#: src/interface.ui:348 src/gnome-mines.vala:646 src/gnome-mines.vala:736
-#: src/gnome-mines.vala:785
-msgid "_Pause"
-msgstr "_Pozastaviť"
-
-#: src/interface.ui:364
-msgid "Change _Difficulty"
-msgstr "Zmeniť _obtiažnosť"
-
-#: src/interface.ui:381
-msgid "_Best Times"
-msgstr "_Najlepšie časy"
-
-#: src/interface.ui:398
-msgid "_Play Again"
-msgstr "_Hrať znovu"
-
-#: src/interface.ui:462
-msgid "Paused"
-msgstr "Pozastavené"
-
-#: src/gnome-mines.vala:95
-msgid "Print release version and exit"
-msgstr "Vypíše verziu vydania a skončí"
-
-#: src/gnome-mines.vala:96
-msgid "Small game"
-msgstr "Malá hra"
-
-#: src/gnome-mines.vala:97
-msgid "Medium game"
-msgstr "Stredná hra"
-
-#: src/gnome-mines.vala:98
-msgid "Big game"
-msgstr "Veľká hra"
-
-#: src/gnome-mines.vala:233
+#: src/interface.ui:14
 msgid "_Scores"
 msgstr "_Skóre"
 
-#: src/gnome-mines.vala:234
+#: src/interface.ui:18
 msgid "A_ppearance"
 msgstr "V_zhľad"
 
-#: src/gnome-mines.vala:237
+#: src/interface.ui:24
 msgid "_Use Question Flags"
 msgstr "Použiť _vlajky s otáznikom"
 
-#: src/gnome-mines.vala:240
+#: src/interface.ui:30
 msgid "_Keyboard Shortcuts"
 msgstr "Klávesové _skratky"
 
-#: src/gnome-mines.vala:241
+#: src/interface.ui:34
 msgid "_Help"
 msgstr "_Pomocník"
 
-#: src/gnome-mines.vala:242
+#: src/interface.ui:38
 msgid "_About Mines"
 msgstr "_O aplikácii Míny"
 
+#: src/interface.ui:170
+msgid "_Width"
+msgstr "Šír_ka"
+
+#: src/interface.ui:191
+msgid "_Height"
+msgstr "_Výška"
+
+#: src/interface.ui:212
+msgid "Percent _mines"
+msgstr "Percento mí_n"
+
+#: src/interface.ui:235
+msgid "_Cancel"
+msgstr "Z_rušiť"
+
+#: src/interface.ui:251
+msgid "_Play Game"
+msgstr "_Hrať hru"
+
+#: src/interface.ui:366
+msgid "Paused"
+msgstr "Pozastavené"
+
+#: src/gnome-mines.vala:92
+msgid "Print release version and exit"
+msgstr "Vypíše verziu vydania a skončí"
+
+#: src/gnome-mines.vala:93
+msgid "Small game"
+msgstr "Malá hra"
+
+#: src/gnome-mines.vala:94
+msgid "Medium game"
+msgstr "Stredná hra"
+
+#: src/gnome-mines.vala:95
+msgid "Big game"
+msgstr "Veľká hra"
+
 #. Label on the scores dialog
-#: src/gnome-mines.vala:318
+#: src/gnome-mines.vala:215
 msgid "Minefield:"
 msgstr "Mínové pole:"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:353
+#: src/gnome-mines.vala:249
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -331,11 +307,11 @@ msgstr[0] "%d × %d, %d  mín"
 msgstr[1] "%d × %d, %d mína"
 msgstr[2] "%d × %d, %d míny"
 
-#: src/gnome-mines.vala:404
+#: src/gnome-mines.vala:300
 msgid "Custom"
 msgstr "Vlastná"
 
-#: src/gnome-mines.vala:484
+#: src/gnome-mines.vala:367
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -343,51 +319,47 @@ msgstr[0] "<b>%d</b>  mín"
 msgstr[1] "<b>%d</b>  mína"
 msgstr[2] "<b>%d</b>  míny"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:471
 msgid "Do you want to start a new game?"
 msgstr "Chcete spustiť novú hru?"
 
-#: src/gnome-mines.vala:596
+#: src/gnome-mines.vala:472
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Ak spustíte novú hru stratíte doterajší postup v aktuálnej hre."
 
-#: src/gnome-mines.vala:597
-msgid "Keep Current Game"
-msgstr "Pokračovať v aktuálnej hre"
-
-#: src/gnome-mines.vala:598
+#: src/gnome-mines.vala:473
 msgid "Start New Game"
 msgstr "Začať novú hru"
 
-#: src/gnome-mines.vala:647
+#: src/gnome-mines.vala:474
+msgid "Keep Current Game"
+msgstr "Pokračovať v aktuálnej hre"
+
+#: src/gnome-mines.vala:541
 msgid "St_art Over"
 msgstr "Z_ačať odznovu"
 
-#: src/gnome-mines.vala:734
+#: src/gnome-mines.vala:595
+msgid "_Pause"
+msgstr "_Pozastaviť"
+
+#: src/gnome-mines.vala:600
 msgid "_Resume"
 msgstr "Pok_račovať"
 
-#: src/gnome-mines.vala:752
+#: src/gnome-mines.vala:681
 msgid "Play _Again"
 msgstr "_Hrať znovu"
 
-#: src/gnome-mines.vala:814
-msgid "Main game:"
-msgstr "Hlavná hra:"
+#: src/gnome-mines.vala:766
+msgid "The GNOME Project"
+msgstr "Projekt GNOME"
 
-#: src/gnome-mines.vala:819
-msgid "Score:"
-msgstr "Skóre:"
-
-#: src/gnome-mines.vala:822
-msgid "Resizing and SVG support:"
-msgstr "Zmena veľkosti a podpora SVG:"
-
-#: src/gnome-mines.vala:841
+#: src/gnome-mines.vala:768
 msgid "Clear explosive mines off the board"
 msgstr "Vyčistite pole od výbušných mín"
 
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:773
 msgid "translator-credits"
 msgstr ""
 "Stanislav Višňovský (visnovsky@nenya.ms.mff.cuni.cz)\n"
@@ -396,9 +368,37 @@ msgstr ""
 "Ján Kyselica <kyselica.jan@gmail.com>\n"
 "Dušan Kazik <prescott66@gmail.com>"
 
-#: src/theme-selector-dialog.vala:104
+#: src/theme-selector-dialog.vala:108
 msgid "Select Theme"
 msgstr "Výber témy"
+
+#~ msgid "GNOME Mines"
+#~ msgstr "Míny prostredia GNOME"
+
+#~ msgid "Enable animations"
+#~ msgstr "Povoliť animácie"
+
+#~ msgid "Set to false to disable theme-defined transition animations"
+#~ msgstr ""
+#~ "Nastavením na hodnotu false, zakážete témou určené prechody animácií"
+
+#~ msgid "Change _Difficulty"
+#~ msgstr "Zmeniť _obtiažnosť"
+
+#~ msgid "_Best Times"
+#~ msgstr "_Najlepšie časy"
+
+#~ msgid "_Play Again"
+#~ msgstr "_Hrať znovu"
+
+#~ msgid "Main game:"
+#~ msgstr "Hlavná hra:"
+
+#~ msgid "Score:"
+#~ msgstr "Skóre:"
+
+#~ msgid "Resizing and SVG support:"
+#~ msgstr "Zmena veľkosti a podpora SVG:"
 
 #~ msgctxt "shortcut window"
 #~ msgid ""
