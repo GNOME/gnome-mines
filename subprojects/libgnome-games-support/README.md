@@ -14,7 +14,6 @@ libgnome_games_support = subproject ('libgnome-games-support',
                                      default_options: 'superproject_name=gnome-mines')
 
 libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
-
 ```
 
 And set the ``superproject_name`` (here it is ``gnome-mines``) with the name of your project. 
@@ -25,10 +24,15 @@ And set the ``superproject_name`` (here it is ``gnome-mines``) with the name of 
 [wrap-git]
 directory = libgnome-games-support
 url = https://gitlab.gnome.org/GNOME/libgnome-games-support.git
-revision = 3.0.0
+revision = git hash goes here
 depth = 1
-
 ```
+
+3. Build the project with `meson` to download the subproject.
+
+4. Remove the libgnome-games-support subproject's ``.git`` directory if you don't want it to be a git submodule
+
+5. `git commit` the subproject directory.
 
 ### libgnome-games-support documentation
 

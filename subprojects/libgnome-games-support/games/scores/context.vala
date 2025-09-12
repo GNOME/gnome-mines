@@ -75,13 +75,6 @@ public class Context : Object
      */
     public string icon_name { get; construct; }
 
-    [Version (deprecated=true, deprecated_since="3.0")]
-    /**
-     * The {@link [Games.Scores.Importer]} for the context (eg. HistoryFileImporter).
-     *
-     */
-    public Importer? importer { get; construct; }
-
     private Category? current_category = null;
 
     private static Gee.HashDataFunc<Category?> category_hash = (a) => {
@@ -112,35 +105,12 @@ public class Context : Object
      * Emitted when the score dialog is closed.
      *
      */
-    [Version (since="3.0")]
     public signal void dialog_closed ();
 
     class construct
     {
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-    }
-
-    /**
-     * Creates a new Context.
-     *
-     * ``app_name`` is your App ID (eg. ``org.gnome.Mines``).
-     *
-     * ``category_type`` describes all of the categories, make sure to put a colon at the end (eg. "Minefield:", "Difficulty Level:").
-     *
-     * ``game_window`` is the window that the game will be inside of, this is the window the score dialog will be presented upon.
-     *
-     * ``category_request`` is a function that takes a category key and produces the user-facing name for it/
-     *
-     *
-     */
-    public Context (string app_name,
-                    string category_type,
-                    Gtk.Window? game_window,
-                    CategoryRequestFunc category_request,
-                    Style style)
-    {
-        this.with_importer_and_icon_name (app_name, category_type, game_window, category_request, style, null, null);
     }
 
     /**
@@ -159,41 +129,17 @@ public class Context : Object
      * ``icon_name`` is the ID for your app's icon (eg. ``org.gnome.Quadrapassel``).
      *
      */
-    public Context.with_icon_name (string app_name,
-                                   string category_type,
-                                   Gtk.Window? game_window,
-                                   CategoryRequestFunc category_request,
-                                   Style style,
-                                   string icon_name)
-    {
-        this.with_importer_and_icon_name (app_name, category_type, game_window, category_request, style, null, icon_name);
-    }
-
-    [Version (deprecated=true, deprecated_since="3.0")]
-    public Context.with_importer (string app_name,
-                                  string category_type,
-                                  Gtk.Window? game_window,
-                                  CategoryRequestFunc category_request,
-                                  Style style,
-                                  Importer? importer)
-    {
-        this.with_importer_and_icon_name (app_name, category_type, game_window, category_request, style, importer, null);
-    }
-
-    [Version (deprecated=true, deprecated_since="3.0")]
-    public Context.with_importer_and_icon_name (string app_name,
-                                                string category_type,
-                                                Gtk.Window? game_window,
-                                                CategoryRequestFunc category_request,
-                                                Style style,
-                                                Importer? importer = null,
-                                                string? icon_name = null)
+    public Context (string app_name,
+                    string category_type,
+                    Gtk.Window? game_window,
+                    CategoryRequestFunc category_request,
+                    Style style,
+                    string? icon_name = null)
     {
         Object (app_name: app_name,
                 category_type: category_type,
                 game_window: game_window,
                 style: style,
-                importer: importer,
                 icon_name: icon_name ?? app_name);
 
         /* Note: the following functionality can be performed manually by
@@ -217,9 +163,6 @@ public class Context : Object
     public override void constructed ()
     {
         user_score_dir = Path.build_filename (Environment.get_user_data_dir (), app_name, "scores", null);
-
-        if (importer != null)
-            importer.run (this, user_score_dir);
     }
 
     internal List<Category?> get_categories ()
@@ -310,38 +253,32 @@ public class Context : Object
         yield stream.write_all_async (line.data, Priority.DEFAULT, cancellable, null);
     }
 
-    /* This is separate from add_score() for use by HistoryFileImporter.
-     * At the next API break, we should merge this into add_score().
-     */
-    internal async bool add_score_internal (Score score, Category category, Cancellable? cancellable) throws Error
-    {
-        /* Check if category exists in the HashTable. Insert one if not. */
-        if (!scores_per_category.has_key (category))
-            scores_per_category.set (category, new Gee.ArrayList<Score> ());
-
-        if (scores_per_category[category].add (score))
-            current_category = category;
-
-        var high_score_added = is_high_score (score.score, category);
-        if (high_score_added && game_window != null)
-        {
-            var dialog = new Dialog (this, category_type, style, score, current_category, icon_name);
-            dialog.closed.connect (() => add_score_internal.callback ());
-            dialog.present (game_window);
-            yield;
-        }
-
-        yield save_score_to_file (score, category, cancellable);
-        return high_score_added;
-    }
-
     /**
      * Returns true if a dialog was launched on attaining high score.
      *
      */
     public async bool add_score (long score, Category category, Cancellable? cancellable) throws Error
     {
-        return yield add_score_internal (new Score (score), category, cancellable);
+        var the_score = new Score (score);
+
+        /* Check if category exists in the HashTable. Insert one if not. */
+        if (!scores_per_category.has_key (category))
+            scores_per_category.set (category, new Gee.ArrayList<Score> ());
+
+        if (scores_per_category[category].add (the_score))
+            current_category = category;
+
+        var high_score_added = is_high_score (the_score.score, category);
+        if (high_score_added && game_window != null)
+        {
+            var dialog = new Dialog (this, category_type, style, the_score, current_category, icon_name);
+            dialog.closed.connect (() => add_score.callback ());
+            dialog.present (game_window);
+            yield;
+        }
+
+        yield save_score_to_file (the_score, category, cancellable);
+        return high_score_added;
     }
 
     public delegate void NewGameFunc ();
@@ -355,7 +292,6 @@ public class Context : Object
      * ``quit_app_func`` is called when the user presses the 'Quit' button on the dialog
      *
      */
-    [Version (since="3.0")]
     public async bool add_score_full (long score_value, Category category, NewGameFunc new_game_func, QuitAppFunc quit_app_func, Cancellable? cancellable) throws Error
     {
         Score score = new Score (score_value);
@@ -463,31 +399,10 @@ public class Context : Object
         this.category_request = null;
     }
 
-    /* This code violates the essential rule:
-     *
-     *   Never iterate a context created outside the library, including the
-     *   global-default or thread-default contexts. Otherwise, sources created
-     *   in the application may be dispatched when the application is not
-     *   expecting it, causing re-entrancy problems for the application code.
-     *
-     * This is why gtk_dialog_run() was removed.
-     */
-    [Version (deprecated=true, deprecated_since="3.0")]
-    public void run_dialog ()
-        requires (game_window != null)
-    {
-        var main_loop = new MainLoop (null);
-        var dialog = new Dialog (this, category_type, style, null, current_category, icon_name);
-        dialog.closed.connect (() => main_loop.quit ());
-        dialog.present (game_window);
-        main_loop.run ();
-    }
-
     /**
      * Presents the score dialog on top of ``game_window``.
      *
      */
-    [Version (since="3.0")]
     public void present_dialog ()
         requires (game_window != null)
     {

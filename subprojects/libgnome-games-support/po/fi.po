@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=libgnome-games-support&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-19 15:42+0000\n"
-"PO-Revision-Date: 2016-11-19 19:15+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-08-23 15:06+0000\n"
+"PO-Revision-Date: 2025-08-24 14:30+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -17,77 +17,81 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 3.6\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:58
-msgid "Congratulations!"
-msgstr "Onnittelut!"
-
+#. Empty State
 #: games/scores/dialog.vala:60
-msgid "High Scores"
-msgstr "Parhaat pisteet"
-
-#: games/scores/dialog.vala:62
-msgid "Best Times"
-msgstr "Parhaat ajat"
-
-#: games/scores/dialog.vala:78
 msgid "No scores yet"
 msgstr "Ei pisteitä vielä"
 
-#: games/scores/dialog.vala:82
+#: games/scores/dialog.vala:65
 msgid "Play some games and your scores will show up here."
 msgstr "Pelaa joitain pelejä, jolloin pisteesi näkyvät täällä."
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:135
-msgid "Rank"
-msgstr "Sijoitus"
-
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:144
+#: games/scores/dialog.vala:83
 msgid "Score"
 msgstr "Pisteet"
 
-#: games/scores/dialog.vala:146
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "Uudet pisteet pelissä"
+
+#: games/scores/dialog.vala:88
 msgid "Time"
 msgstr "Aika"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:153
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "Uusi aika pelissä"
+
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "Onnittelut!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
+msgid "Done"
+msgstr "Valmis"
+
+#: games/scores/dialog.vala:300
 msgid "Player"
 msgstr "Pelaaja"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:163
-msgid "_Done"
-msgstr "_Valmis"
+#: games/scores/dialog.vala:307
+msgid "_New Game"
+msgstr "_Uusi peli"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:278
+#: games/scores/dialog.vala:318
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#~ msgid "High Scores"
+#~ msgstr "Parhaat pisteet"
+
+#~ msgid "Best Times"
+#~ msgstr "Parhaat ajat"
+
+#~ msgid "Rank"
+#~ msgstr "Sijoitus"
+
 #, c-format
-#| msgid "%d minute"
-#| msgid_plural "%d minutes"
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld minuutti"
-msgstr[1] "%ld minuuttia"
+#~| msgid "%d minute"
+#~| msgid_plural "%d minutes"
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld minuutti"
+#~ msgstr[1] "%ld minuuttia"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:280
 #, c-format
-#| msgid "%d second"
-#| msgid_plural "%d seconds"
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld sekunti"
-msgstr[1] "%ld sekuntia"
+#~| msgid "%d second"
+#~| msgid_plural "%d seconds"
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld sekunti"
+#~ msgstr[1] "%ld sekuntia"
 
-#: games/scores/dialog.vala:286
-msgid "Your score is the best!"
-msgstr "Pisteesi ovat parhaat!"
+#~ msgid "Your score is the best!"
+#~ msgstr "Pisteesi ovat parhaat!"
 
-#: games/scores/dialog.vala:288
-msgid "Your score has made the top ten."
-msgstr "Pisteesi sijoittuvat kymmenen parhaimman joukkoon!"
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Pisteesi sijoittuvat kymmenen parhaimman joukkoon!"

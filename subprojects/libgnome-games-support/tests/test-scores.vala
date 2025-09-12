@@ -19,8 +19,7 @@
  * along with libgnome-games-support.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-namespace Games {
-namespace Scores {
+using Games.Scores;
 
 private Category? category_request (string category_key)
 {
@@ -168,7 +167,4 @@ public int main (string[] args)
     test_suite.add (new TestCase ("Scores Files Created", () => {}, test_scores_files_exist, delete_scores));
     test_suite.add (new TestCase ("Save Score to File", () => {}, test_save_score_to_file, delete_scores));
     return Test.run ();
-}
-
-}
 }

@@ -1,3 +1,14 @@
+2.0.2 - August 23, 2025
+=======================
+
+This library is becoming a copylib! The master branch will no longer have
+releases. This 2.0.2 release might well be the last.
+
+* Bugs fixed:
+  - #24 High score name reverts to the user's real name (Michael Catanzaro)
+  - #27 Circular ref between Context and Context.category_request (Michael
+    Catanzaro)
+
 2.0.1 - March 10, 2025
 ======================
 
