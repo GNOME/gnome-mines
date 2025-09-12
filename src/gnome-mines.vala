@@ -416,7 +416,7 @@ public class Mines : Adw.Application
 
     private void show_scores ()
     {
-        context.run_dialog ();
+        context.present_dialog ();
     }
 
     private void scores_cb ()
