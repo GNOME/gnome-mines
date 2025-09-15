@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-05-10 20:15+0000\n"
-"PO-Revision-Date: 2025-05-16 22:47+0300\n"
+"POT-Creation-Date: 2025-08-25 23:47+0000\n"
+"PO-Revision-Date: 2025-08-28 22:48+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -23,69 +23,73 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 "X-POOTLE-MTIME: 1423957720.000000\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:62
-msgid "Congratulations!"
-msgstr "Tebrikler!"
-
-#: games/scores/dialog.vala:64
-msgid "High Scores"
-msgstr "Yüksek Puanlar"
-
-#: games/scores/dialog.vala:66
-msgid "Best Times"
-msgstr "En İyi Zamanlar"
-
-#: games/scores/dialog.vala:84
+#. Empty State
+#: games/scores/dialog.vala:60
 msgid "No scores yet"
 msgstr "Henüz kayıtlı puan yok"
 
-#: games/scores/dialog.vala:86
+#: games/scores/dialog.vala:65
 msgid "Play some games and your scores will show up here."
 msgstr "Biraz oyun oynarsanız puanlarınız burada görünecektir."
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:143
-msgid "Rank"
-msgstr "Sıralama"
-
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:152
+#: games/scores/dialog.vala:83
 msgid "Score"
 msgstr "Puan"
 
-#: games/scores/dialog.vala:154
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "Yeni Puan"
+
+#: games/scores/dialog.vala:88
 msgid "Time"
 msgstr "Zaman"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:161
-msgid "Player"
-msgstr "Oyuncu"
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "Yeni Zaman"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:171
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "Tebrikler!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
 msgid "Done"
 msgstr "Bitti"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:292
+#: games/scores/dialog.vala:301
+msgid "Player"
+msgstr "Oyuncu"
+
+#: games/scores/dialog.vala:308
+msgid "_New Game"
+msgstr "_Yeni Oyun"
+
+#: games/scores/dialog.vala:319
+msgid "_Quit"
+msgstr "_Çık"
+
+#~ msgid "High Scores"
+#~ msgstr "Yüksek Puanlar"
+
+#~ msgid "Best Times"
+#~ msgstr "En İyi Zamanlar"
+
+#~ msgid "Rank"
+#~ msgstr "Sıralama"
+
 #, c-format
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld dakika"
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld dakika"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:294
 #, c-format
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld saniye"
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld saniye"
 
-#: games/scores/dialog.vala:300
-msgid "Your score is the best!"
-msgstr "En iyi puan sizinki!"
+#~ msgid "Your score is the best!"
+#~ msgstr "En iyi puan sizinki!"
 
-#: games/scores/dialog.vala:302
-msgid "Your score has made the top ten."
-msgstr "Puanınız en iyi on listesine girdi."
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Puanınız en iyi on listesine girdi."

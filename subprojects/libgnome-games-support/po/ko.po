@@ -1,86 +1,92 @@
 # This file is distributed under the same license as the libgnome-games-support package.
 # Minseok Jeon <cheon7886@naver.com>, 2016.
 # Changwoo Ryu <cwryu@debian.org>, 2017.
+# DaeHyun Sung <sungdh86+git@gmail.com>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=libgnome-games-support&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-02-26 01:13+0000\n"
-"PO-Revision-Date: 2017-03-17 00:21+0900\n"
-"Last-Translator: Changwoo Ryu <cwryu@debian.org>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2025-09-05 20:19+0000\n"
+"PO-Revision-Date: 2025-09-07 19:58+0900\n"
+"Last-Translator: DaeHyun Sung <sungdh86+git@gmail.com>\n"
 "Language-Team: Korean <gnome-kr@googlegroups.com>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.7\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.7\n"
 "X-Generator: Poedit 1.8.7\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:58
-msgid "Congratulations!"
-msgstr "축하합니다!"
-
+#. Empty State
 #: games/scores/dialog.vala:60
-msgid "High Scores"
-msgstr "고득점 목록"
-
-#: games/scores/dialog.vala:62
-msgid "Best Times"
-msgstr "최단 시간 목록"
-
-#: games/scores/dialog.vala:78
 msgid "No scores yet"
 msgstr "아직 점수가 없습니다"
 
-#: games/scores/dialog.vala:82
+#: games/scores/dialog.vala:65
 msgid "Play some games and your scores will show up here."
 msgstr "게임을 하면 점수가 여기 나타납니다."
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:135
-msgid "Rank"
-msgstr "순위"
-
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:144
+#: games/scores/dialog.vala:83
 msgid "Score"
 msgstr "점수"
 
-#: games/scores/dialog.vala:146
+#: games/scores/dialog.vala:84
+msgid "New Score in"
+msgstr "새로운 점수"
+
+#: games/scores/dialog.vala:88
 msgid "Time"
 msgstr "시간"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:153
+#: games/scores/dialog.vala:89
+msgid "New Time in"
+msgstr "새로운 시간"
+
+#: games/scores/dialog.vala:96
+msgid "Congratulations!"
+msgstr "축하합니다!"
+
+#. Button in the top right corner, finishes the dialog
+#: games/scores/dialog.vala:100
+msgid "Done"
+msgstr "완료"
+
+#: games/scores/dialog.vala:303
 msgid "Player"
 msgstr "플레이어"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:163
-msgid "_Done"
-msgstr "완료(_D)"
+#: games/scores/dialog.vala:310
+msgid "_New Game"
+msgstr "새 게임(_N)"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:278
+#: games/scores/dialog.vala:321
+msgid "_Quit"
+msgstr "끝내기(_Q)"
+
+#~ msgid "High Scores"
+#~ msgstr "고득점 목록"
+
+#~ msgid "Best Times"
+#~ msgstr "최단 시간 목록"
+
+#~ msgid "Rank"
+#~ msgstr "순위"
+
 #, c-format
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld분"
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld분"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:280
 #, c-format
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld초"
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld초"
 
-#: games/scores/dialog.vala:286
-msgid "Your score is the best!"
-msgstr "최고 점수입니다!"
+#~ msgid "Your score is the best!"
+#~ msgstr "최고 점수입니다!"
 
-#: games/scores/dialog.vala:288
-msgid "Your score has made the top ten."
-msgstr "점수가 10위 안에 들었습니다!"
+#~ msgid "Your score has made the top ten."
+#~ msgstr "점수가 10위 안에 들었습니다!"
