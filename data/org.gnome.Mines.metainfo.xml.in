@@ -35,6 +35,13 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="49.0.1" date="2025-09-16" type="stable">
+      <description>
+        <ul>
+          <li>Update libgnome-games (Michael Catanzaro)</li>
+        </ul>
+      </description>
+    </release>
     <release version="49.0" date="2025-09-15" type="stable">
       <description>
         <ul>
