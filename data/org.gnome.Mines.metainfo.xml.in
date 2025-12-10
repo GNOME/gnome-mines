@@ -28,7 +28,7 @@
   <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mines/issues</url>
   <url type="donation">https://www.gnome.org/donate/</url>
-  <url type="help">https://help.gnome.org/users/gnome-mines/stable/</url>
+  <url type="help">https://help.gnome.org/gnome-mines/index.html</url>
   <url type="translate">https://wiki.gnome.org/TranslationProject</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/gnome-mines</url>
   <update_contact>robert.roth.off_at_gmail.com</update_contact>
