@@ -2,7 +2,6 @@ includesubdir = get_option('superproject_name') + '_gnome-games-support'
 
 lggs_interface_deps = [
     adw_dependency,
-    gee_dependency,
     gio_dependency,
     glib_dependency,
     gtk_dependency,

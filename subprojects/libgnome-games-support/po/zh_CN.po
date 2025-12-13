@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support games-1-2\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-07-07 14:02+0000\n"
-"PO-Revision-Date: 2025-07-08 07:55+0800\n"
+"POT-Creation-Date: 2025-10-08 23:13+0000\n"
+"PO-Revision-Date: 2025-10-09 07:42+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -18,52 +18,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Gtranslator 48.0\n"
+"X-Generator: Gtranslator 49.0\n"
 
-#: games/scores/dialog.vala:80
+#. Empty State
+#: games/scores/dialog.vala:71
 msgid "No scores yet"
 msgstr "还没有分数记录"
 
-#: games/scores/dialog.vala:82
+#: games/scores/dialog.vala:76
 msgid "Play some games and your scores will show up here."
 msgstr "去玩一些游戏，然后你的分数会显示到这里。"
 
-#: games/scores/dialog.vala:93
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:97
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "%1$s 的新得分：%2$s"
+
+#: games/scores/dialog.vala:98
 msgid "Score"
 msgstr "得分"
 
-#: games/scores/dialog.vala:94
-msgid "New Score in"
-msgstr "新得分"
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:103
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "%1$s 的新用时：%2$s"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:104
 msgid "Time"
 msgstr "时间"
 
-#: games/scores/dialog.vala:99
-msgid "New Time in"
-msgstr "新用时"
-
-#: games/scores/dialog.vala:106
+#: games/scores/dialog.vala:111
 msgid "Congratulations!"
 msgstr "恭喜！"
 
-#. Button in the top right corner, finishes the dialog
-#: games/scores/dialog.vala:110
-msgid "Done"
-msgstr "完成"
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:139
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:306
+#: games/scores/dialog.vala:337
 msgid "Player"
 msgstr "玩家"
 
-#: games/scores/dialog.vala:313
+#: games/scores/dialog.vala:343
 msgid "_New Game"
 msgstr "新游戏(_N)"
 
-#: games/scores/dialog.vala:324
+#: games/scores/dialog.vala:354
 msgid "_Quit"
 msgstr "退出(_Q)"
+
+#~ msgid "New Score in"
+#~ msgstr "新得分"
+
+#~ msgid "New Time in"
+#~ msgstr "新用时"
+
+#~ msgid "Done"
+#~ msgstr "完成"
 
 #~ msgid "High Scores"
 #~ msgstr "高分"

@@ -29,7 +29,7 @@ private Category? category_request (string category_key)
 
 private void add_score_sync (Context context, int score, Category category) {
     var main_loop = new MainLoop (MainContext.@default (), false);
-    context.add_score.begin (score, category, null, (object, result) => {
+    context.add_score.begin (score, category, null, null, (object, result) => {
         try
         {
             context.add_score.end (result);
@@ -45,7 +45,7 @@ private void add_score_sync (Context context, int score, Category category) {
 
 private void create_scores ()
 {
-    Context context = new Context ("libgnome-games-support-test", "Games Type", null, category_request, Style.POINTS_GREATER_IS_BETTER);
+    Context context = new Context ("libgnome-games-support-test", "Games Type", category_request, Style.POINTS_GREATER_IS_BETTER);
     Category cat = new Category ("cat1", "cat1");
     add_score_sync (context, 101, cat);
     add_score_sync (context, 102, cat);

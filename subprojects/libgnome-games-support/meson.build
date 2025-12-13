@@ -9,7 +9,6 @@ cc = meson.get_compiler('c')
 valac = meson.get_compiler('vala')
 
 adw_dependency = dependency ('libadwaita-1', version: '>= 1.0')
-gee_dependency = dependency('gee-0.8', version: '>= 0.14.0')
 gio_dependency = dependency('gio-2.0', version: '>= 2.44.0')
 glib_dependency = dependency('glib-2.0', version: '>= 2.44.0')
 gtk_dependency = dependency('gtk4', version: '>= 4.2.0')

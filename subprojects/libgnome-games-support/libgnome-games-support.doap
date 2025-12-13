@@ -11,13 +11,13 @@
   <download-page rdf:resource="https://download.gnome.org/sources/libgnome-games-support/" />
   <programming-language>Vala</programming-language>
 
-  <maintainer>
+  <author>
     <foaf:Person>
       <foaf:name>Michael Catanzaro</foaf:name>
       <foaf:mbox rdf:resource="mailto:mcatanzaro@gnome.org" />
       <gnome:userid>mcatanzaro</gnome:userid>
     </foaf:Person>
-  </maintainer>
+  </author>
   <maintainer>
     <foaf:Person>
       <foaf:name>Will Warner</foaf:name>

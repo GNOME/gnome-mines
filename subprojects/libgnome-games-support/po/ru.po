@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-07-08 22:05+0000\n"
-"PO-Revision-Date: 2025-07-20 00:04+1000\n"
+"POT-Creation-Date: 2025-10-08 23:44+0000\n"
+"PO-Revision-Date: 2025-10-09 18:58+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,50 +21,64 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #. Empty State
-#: games/scores/dialog.vala:60
+#: games/scores/dialog.vala:71
 msgid "No scores yet"
 msgstr "Результатов ещё нет"
 
-#: games/scores/dialog.vala:65
+#: games/scores/dialog.vala:76
 msgid "Play some games and your scores will show up here."
 msgstr "Сыграйте в несколько игр и ваши результаты появятся здесь."
 
-#: games/scores/dialog.vala:83
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:97
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "Новый результат для %1$s: %2$s"
+
+#: games/scores/dialog.vala:98
 msgid "Score"
 msgstr "Результаты"
 
-#: games/scores/dialog.vala:84
-msgid "New Score in"
-msgstr "Новый результат в"
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:103
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "Новое время для %1$s: %2$s"
 
-#: games/scores/dialog.vala:88
+#: games/scores/dialog.vala:104
 msgid "Time"
 msgstr "Время"
 
-#: games/scores/dialog.vala:89
-msgid "New Time in"
-msgstr "Новое время в"
-
-#: games/scores/dialog.vala:96
+#: games/scores/dialog.vala:111
 msgid "Congratulations!"
 msgstr "Поздравляем!"
 
-#. Button in the top right corner, finishes the dialog
-#: games/scores/dialog.vala:100
-msgid "Done"
-msgstr "Готово"
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:139
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:297
+#: games/scores/dialog.vala:337
 msgid "Player"
 msgstr "Игрок"
 
-#: games/scores/dialog.vala:304
+#: games/scores/dialog.vala:343
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: games/scores/dialog.vala:315
+#: games/scores/dialog.vala:354
 msgid "_Quit"
 msgstr "_Выйти"
+
+#~ msgid "New Score in"
+#~ msgstr "Новый результат в"
+
+#~ msgid "New Time in"
+#~ msgstr "Новое время в"
+
+#~ msgid "Done"
+#~ msgstr "Готово"
 
 #~ msgid "High Scores"
 #~ msgstr "Лучшие результаты"

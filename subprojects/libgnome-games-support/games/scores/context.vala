@@ -19,6 +19,15 @@
  * along with libgnome-games-support.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* Remove workaround once https://gitlab.gnome.org/GNOME/vala/-/issues/1429 is fixed. */
+namespace Workaround
+{
+    [CCode (cheader_filename = "gtk/gtk.h", cname = "gtk_style_context_add_provider_for_display")]
+    extern static void gtk_style_context_add_provider_for_display (
+        Gdk.Display display, Gtk.StyleProvider provider, uint priority
+    );
+}
+
 namespace Games {
 namespace Scores {
 
@@ -45,23 +54,16 @@ public enum Style
 public class Context : Object
 {
     /**
-     * An App ID (eg. ``org.gnome.Mines``).
+     * An App ID (e.g. ``org.gnome.Mines``).
      *
      */
     public string app_name { get; construct; }
 
     /**
-     * Describes all of the categories.
-     * Make sure to put a colon at the end (eg. "Minefield:", "Difficulty Level:").
+     * Describes all of the categories (e.g. "Minefield", "Level").
      *
      */
     public string category_type { get; construct; }
-
-    /**
-     * The window that the game will be inside of, this is the window the score dialog will be presented upon.
-     *
-     */
-    public Gtk.Window? game_window { get; construct; }
 
     /**
      * The {@link Games.Scores.Style} that the context should use.
@@ -70,21 +72,24 @@ public class Context : Object
     public Style style { get; construct; }
 
     /**
-     * The ID for the icon that will be used in the score dialog's empty screen (eg. ``org.gnome.Quadrapassel``).
+     * The ID for the icon that will be used in the score dialog's empty screen (e.g. ``org.gnome.Quadrapassel``).
      *
      */
     public string icon_name { get; construct; }
 
+    /**
+     * The maximum size of the high score list in the score dialog (``-1`` for unlimited).
+     *
+     */
+    public int max_high_scores { get; construct; }
+
     private Category? current_category = null;
 
-    private static Gee.HashDataFunc<Category?> category_hash = (a) => {
-        return str_hash (a.key);
-    };
-    private static Gee.EqualDataFunc<Category?> category_equal = (a,b) => {
-        return str_equal (a.key, b.key);
-    };
-    private Gee.HashMap<Category?, Gee.List<Score>> scores_per_category =
-        new Gee.HashMap<Category?, Gee.List<Score>> ((owned) category_hash, (owned) category_equal);
+    private HashTable<Category, GenericArray<Score>> scores_per_category =
+        new HashTable<Category, GenericArray<Score>> (
+            (a) => str_hash (a.key),
+            (a, b) => str_equal (a.key, b.key)
+        );
 
     private string user_score_dir;
     private bool scores_loaded = false;
@@ -111,36 +116,47 @@ public class Context : Object
     {
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+
+        /* Dialog styling */
+        var display = Gdk.Display.get_default ();
+        if (display != null)
+        {
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_string (DIALOG_STYLE);
+            Workaround.gtk_style_context_add_provider_for_display (
+                display, provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            );
+         }
     }
 
     /**
      * Creates a new Context.
      *
-     * ``app_name`` is your App ID (eg. ``org.gnome.Mines``)
+     * ``app_name`` is your App ID (e.g. ``org.gnome.Mines``).
      *
-     * ``category_type`` describes all of the categories, make sure to put a colon at the end (eg. "Minefield:", "Difficulty Level:").
-     *
-     * ``game_window`` is the window that the game will be inside of, this is the window the score dialog will be presented upon.
+     * ``category_type`` describes all of the categories (e.g. "Minefield", "Level").
      *
      * ``category_request`` is a function that takes a category key and produces the user-facing name for it.
      *
      * ``style changes`` the way {@link Games.Scores.Score}s are presented.
      *
-     * ``icon_name`` is the ID for your app's icon (eg. ``org.gnome.Quadrapassel``).
+     * ``icon_name`` is the ID for your app's icon (e.g. ``org.gnome.Quadrapassel``).
+     *
+     * ``max_high_scores`` is the maximum size of the high score list in the score dialog (``-1`` for unlimited).
      *
      */
     public Context (string app_name,
                     string category_type,
-                    Gtk.Window? game_window,
                     CategoryRequestFunc category_request,
                     Style style,
-                    string? icon_name = null)
+                    string? icon_name = null,
+                    int max_high_scores = 10)
     {
         Object (app_name: app_name,
                 category_type: category_type,
-                game_window: game_window,
                 style: style,
-                icon_name: icon_name ?? app_name);
+                icon_name: icon_name ?? app_name,
+                max_high_scores: max_high_scores <= -1 ? int.MAX : max_high_scores);
 
         /* Note: the following functionality can be performed manually by
          * calling Context.load_scores, to ensure Context is usable even if
@@ -165,17 +181,20 @@ public class Context : Object
         user_score_dir = Path.build_filename (Environment.get_user_data_dir (), app_name, "scores", null);
     }
 
-    internal List<Category?> get_categories ()
+    public Category[] get_categories ()
     {
-        var categories = new List<Category?> ();
-        var iterator = scores_per_category.map_iterator ();
-
-        while (iterator.next ())
+        var categories = scores_per_category.get_keys ();
+        categories.sort ((a, b) => {
+            string key_1 = a.name.collate_key_for_filename ();
+            string key_2 = b.name.collate_key_for_filename ();
+            return strcmp (key_1, key_2);
+        });
+        var cat_array = new Category[0];
+        foreach (var category in categories)
         {
-            categories.append (iterator.get_key ());
+            cat_array += category;
         }
-
-        return categories;
+        return cat_array;
     }
 
     /* Primarily used to change name of player and save the changed score to file */
@@ -196,27 +215,28 @@ public class Context : Object
      * Get the best n scores from the given category, sorted.
      *
      */
-    public Gee.List<Score> get_high_scores (Category category, int n = 10)
+    public Score[] get_high_scores (Category category, int n = -1)
     {
-        var result = new Gee.ArrayList<Score> ();
-        if (!scores_per_category.has_key (category))
+        var result = new Score[0];
+        if (!scores_per_category.contains (category))
             return result;
 
+        unowned var scores = scores_per_category[category];
+
         if (style == Style.POINTS_GREATER_IS_BETTER || style == Style.TIME_GREATER_IS_BETTER)
-        {
-            scores_per_category[category].sort ((a,b) => {
-                return (int) (b.score > a.score) - (int) (a.score > b.score);
-            });
-        }
+            scores_per_category[category].sort (Score.score_greater_sorter);
         else
-        {
-            scores_per_category[category].sort ((a,b) => {
-                return (int) (b.score < a.score) - (int) (a.score < b.score);
-            });
+            scores_per_category[category].sort (Score.score_less_sorter);
+
+        if (n <= -1)
+            n = max_high_scores;
+
+        for (int i = 0; i < n && i < scores.length; i++) {
+            var score = scores[i];
+            score.rank = i + 1;
+            result += score;
         }
 
-        for (int i = 0; i < n && i < scores_per_category[category].size; i++)
-            result.add (scores_per_category[category][i]);
         return result;
     }
 
@@ -228,10 +248,10 @@ public class Context : Object
         if (best_scores == null)
             return true;
 
-        if (best_scores.size < 10)
+        if (best_scores.length < max_high_scores)
             return true;
 
-        var lowest = best_scores.@get (9).score;
+        var lowest = best_scores[max_high_scores - 1].score;
 
         if (style == Style.POINTS_LESS_IS_BETTER || style == Style.TIME_LESS_IS_BETTER)
             return score_value < lowest;
@@ -248,7 +268,7 @@ public class Context : Object
 
         var file = File.new_for_path (Path.build_filename (user_score_dir, category.key));
         var stream = file.append_to (FileCreateFlags.NONE);
-        var line = @"$(score.score) $(score.time) $(score.user)\n";
+        var line = @"$(score.score)$(score.get_internal_extra_info ()) $(score.time) $(score.user)\n";
 
         yield stream.write_all_async (line.data, Priority.DEFAULT, cancellable, null);
     }
@@ -257,16 +277,16 @@ public class Context : Object
      * Returns true if a dialog was launched on attaining high score.
      *
      */
-    public async bool add_score (long score, Category category, Cancellable? cancellable) throws Error
+    public async bool add_score (long score, Category category, Gtk.Window? game_window, Cancellable? cancellable) throws Error
     {
         var the_score = new Score (score);
 
         /* Check if category exists in the HashTable. Insert one if not. */
-        if (!scores_per_category.has_key (category))
-            scores_per_category.set (category, new Gee.ArrayList<Score> ());
+        if (!scores_per_category.contains (category))
+            scores_per_category[category] = new GenericArray<Score> ();
 
-        if (scores_per_category[category].add (the_score))
-            current_category = category;
+        scores_per_category[category].add (the_score);
+        current_category = category;
 
         var high_score_added = is_high_score (the_score.score, category);
         if (high_score_added && game_window != null)
@@ -285,30 +305,39 @@ public class Context : Object
     public delegate void QuitAppFunc ();
 
     /**
-     * Adds some buttons to the bottom of the dialog that aid the flow of a game that chooses to use it.
+     * Adds extra info to the score, and optionally, some buttons to the bottom of the dialog that aid the flow of a game.
      *
      * ``new_game_func`` is called when the user presses the 'New Game' button on the dialog
      *
      * ``quit_app_func`` is called when the user presses the 'Quit' button on the dialog
      *
      */
-    public async bool add_score_full (long score_value, Category category, NewGameFunc new_game_func, QuitAppFunc quit_app_func, Cancellable? cancellable) throws Error
+    public async bool add_score_full (long score_value,
+                                      Category category,
+                                      string? extra_info,
+                                      Gtk.Window? game_window,
+                                      NewGameFunc? new_game_func,
+                                      QuitAppFunc? quit_app_func,
+                                      Cancellable? cancellable) throws Error
     {
         Score score = new Score (score_value);
+        score.extra_info = extra_info;
         /* Check if category exists in the HashTable. Insert one if not. */
-        if (!scores_per_category.has_key (category))
-            scores_per_category.set (category, new Gee.ArrayList<Score> ());
+        if (!scores_per_category.contains (category))
+            scores_per_category[category] = new GenericArray<Score> ();
 
-        if (scores_per_category[category].add (score))
-            current_category = category;
+        scores_per_category[category].add (score);
+        current_category = category;
 
         var high_score_added = is_high_score (score.score, category);
-        if (high_score_added)
+        if (high_score_added && game_window != null)
         {
             var dialog = new Dialog (this, category_type, style, score, current_category, icon_name);
             dialog.closed.connect (() => add_score_full.callback ());
             dialog.present (game_window);
-            dialog.add_bottom_buttons (new_game_func, quit_app_func);
+            if (new_game_func != null && quit_app_func != null)
+                dialog.add_bottom_buttons (new_game_func, quit_app_func);
+
             yield;
         }
 
@@ -324,7 +353,7 @@ public class Context : Object
             return;
 
         var filename = Path.build_filename (user_score_dir, category_key);
-        var scores_of_single_category = new Gee.ArrayList<Score> ();
+        var scores_of_single_category = new GenericArray<Score> ();
         var stream = FileStream.open (filename, "r");
         string line;
         while ((line = stream.read_line ()) != null)
@@ -338,10 +367,14 @@ public class Context : Object
                 continue;
             }
 
-            var score_value = long.parse (tokens[0]);
+            long score_value = 0;
+
+            /* '#' adds extra info */
+            var score_tokens = tokens[0].split ("#", 2);
+            score_value = long.parse (score_tokens[0]);
             var time = int64.parse (tokens[1]);
 
-            if (score_value == 0 && tokens[0] != "0" ||
+            if (score_value == 0 && score_tokens[0] != "0" ||
                 time == 0 && tokens[1] != "0")
             {
                 warning ("Failed to read malformed score %s in %s.", line, filename);
@@ -353,24 +386,20 @@ public class Context : Object
             else
                 debug ("Assuming current username for old score %s in %s.", line, filename);
 
-            scores_of_single_category.add (new Score (score_value, time, user));
+            var score = new Score (score_value, time, user);
+            if (score_tokens.length == 2)
+                score._extra_info = score_tokens[1];
+
+            scores_of_single_category.add (score);
         }
 
-        scores_per_category.set (category, scores_of_single_category);
+        scores_per_category[category] = scores_of_single_category;
     }
 
     private void load_scores_from_files () throws Error
         requires (!scores_loaded)
     {
         scores_loaded = true;
-
-        if (game_window != null && game_window.visible)
-        {
-            error ("The application window associated with the GamesScoresContext " +
-                   "was set visible before loading scores. The Context performs " +
-                   "synchronous I/O in the default main context to load scores, so " +
-                   "so you should do this before showing your main window.");
-        }
 
         var directory = File.new_for_path (user_score_dir);
         if (!directory.query_exists ())
@@ -402,11 +431,15 @@ public class Context : Object
     /**
      * Presents the score dialog on top of ``game_window``.
      *
+     * ``selected_category`` is the score category to select by default (optional)
+     *
      */
-    public void present_dialog ()
-        requires (game_window != null)
+    public void present_dialog (Gtk.Window game_window, Category? selected_category = null)
     {
-        var dialog = new Dialog (this, category_type, style, null, current_category, icon_name);
+        if (selected_category == null || !scores_per_category.contains (selected_category))
+            selected_category = current_category;
+
+        var dialog = new Dialog (this, category_type, style, null, selected_category, icon_name);
         dialog.closed.connect (() => dialog_closed ());
         dialog.present (game_window);
     }
@@ -417,9 +450,9 @@ public class Context : Object
      */
     public bool has_scores ()
     {
-        foreach (var scores in scores_per_category.values)
+        foreach (var scores in scores_per_category.get_values ())
         {
-            if (scores.size > 0)
+            if (scores.length > 0)
                 return true;
         }
         return false;

@@ -9,7 +9,6 @@ lggs_tests = executable(
     ],
     dependencies: [
     	adw_dependency,
-        gee_dependency,
         glib_dependency,
         gtk_dependency,
         lggs_dependency,

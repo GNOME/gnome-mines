@@ -211,11 +211,11 @@ public class Mines : Adw.Application
         startup_custom_game_screen (ui_builder);
 
         context = new Games.Scores.Context ("org.gnome.Mines",
-                                            /* Label on the scores dialog */
-                                            _("Minefield:"),
-                                            window,
+                                            _("Minefield"),
                                             create_category_from_key,
-                                            Games.Scores.Style.TIME_LESS_IS_BETTER);
+                                            Games.Scores.Style.TIME_LESS_IS_BETTER,
+                                            "org.gnome.Mines",
+                                            -1);
 
         flag_label = (Label) ui_builder.get_object ("flag_label");
         clock_label = (Label) ui_builder.get_object ("clock_label");
@@ -416,7 +416,7 @@ public class Mines : Adw.Application
 
     private void show_scores ()
     {
-        context.present_dialog ();
+        context.present_dialog (window);
     }
 
     private void scores_cb ()
@@ -671,7 +671,7 @@ public class Mines : Adw.Application
         pause_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
 
-        context.add_score_full.begin (duration, create_category_from_key (key), repeat_size_cb, quit_cb, null, (object, result) => {
+        context.add_score_full.begin (duration, create_category_from_key (key), null, window, repeat_size_cb, quit_cb, null, (object, result) => {
             try
             {
                 context.add_score_full.end (result);

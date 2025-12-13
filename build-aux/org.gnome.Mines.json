@@ -25,19 +25,7 @@
         "/share/man",
         "/share/vala"
     ],
-    "modules": [{
-            "name": "org.gnome.games-support.modules",
-            "modules": [{
-                    "name": "libgee",
-                    "config-opts": ["--enable-introspection=no"],
-                    "sources": [{
-                        "type": "git",
-                        "branch": "main",
-                        "url": "https://gitlab.gnome.org/GNOME/libgee.git"
-                    }]
-                }
-            ]
-        },
+    "modules": [
         {
             "name": "gnome-mines",
             "buildsystem": "meson",
