@@ -24,21 +24,22 @@
 # Enrico Nicoletto <liverig@gmail.com>, 2013, 2014.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2016-2021.
 # Leônidas Araújo <leorusvellt@hotmail.com>, 2023.
+# Juliano de Souza Camargo <julianosc@pm.me>, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2023-01-25 19:08+0000\n"
-"PO-Revision-Date: 2023-04-11 10:16-0300\n"
-"Last-Translator: Leônidas Araújo <leorusvellt@hotmail.com>\n"
-"Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
+"POT-Creation-Date: 2025-12-14 00:38+0000\n"
+"PO-Revision-Date: 2025-12-15 15:02-0300\n"
+"Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
+"Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 42.0\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Gtranslator 49.0\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: gnome-mines\n"
@@ -46,17 +47,16 @@ msgstr ""
 "X-DL-Domain: po\n"
 "X-DL-State: Translating\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
-#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:845
+#: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
+#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:741
 msgid "Mines"
 msgstr "Minas"
 
-#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+#: data/org.gnome.Mines.metainfo.xml.in:9 data/org.gnome.Mines.desktop.in:3
 msgid "Clear hidden mines from a minefield"
 msgstr "Limpe as minas de um campo minado"
 
-#: data/org.gnome.Mines.appdata.xml.in:11
+#: data/org.gnome.Mines.metainfo.xml.in:11
 msgid ""
 "Mines is a puzzle game where you search for hidden mines. Flag the spaces "
 "with mines as quickly as possible to make the board a safer place. You win "
@@ -68,7 +68,7 @@ msgstr ""
 "mais seguro. Você vence o jogo quando sinaliza todas as minas do quadro. "
 "Cuidado para não desencadear uma, ou o jogo acaba!"
 
-#: data/org.gnome.Mines.appdata.xml.in:17
+#: data/org.gnome.Mines.metainfo.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -78,12 +78,12 @@ msgstr ""
 "Caso você fique preso, você pode solicitar uma dica: há uma penalidade de "
 "tempo, mas isto é melhor do que bater em uma mina!"
 
-#: data/org.gnome.Mines.appdata.xml.in:48
+#: data/org.gnome.Mines.metainfo.xml.in:120
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:11
 msgid "minesweeper;"
 msgstr "campo minado;"
 
@@ -127,269 +127,251 @@ msgstr ""
 "Defina como verdadeiro para sinalizar os quadrados automaticamente como "
 "minados quando os quadrados suficientes forem revelados"
 
-#: data/org.gnome.Mines.gschema.xml:20
-msgid "Enable animations"
-msgstr "Habilitar animações"
-
 #: data/org.gnome.Mines.gschema.xml:21
-msgid "Set to false to disable theme-defined transition animations"
-msgstr ""
-"Defina como falso para desativar animações de transição definido pelo tema"
-
-#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Número de colunas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of rows in a custom game"
 msgstr "Número de linhas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:35
+#: data/org.gnome.Mines.gschema.xml:30
 msgid "The number of mines in a custom game"
 msgstr "O número de minas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "Board size"
 msgstr "Tamanho do tabuleiro"
 
-#: data/org.gnome.Mines.gschema.xml:41
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Tamanho do tabuleiro (0-2 = pequeno-grande, 3 = personalizado)"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "A largura da janela em pixels."
 
-#: data/org.gnome.Mines.gschema.xml:49
+#: data/org.gnome.Mines.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "A altura da janela em pixels."
 
-#: data/org.gnome.Mines.gschema.xml:53
+#: data/org.gnome.Mines.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
-#: src/help-overlay.ui:12
+#: src/shortcuts-dialog.ui:7
 msgctxt "shortcut window"
 msgid "Window and game"
 msgstr "Janela e jogo"
 
-#: src/help-overlay.ui:17
+#: src/shortcuts-dialog.ui:11
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Inicia um novo jogo"
 
-#: src/help-overlay.ui:24
+#: src/shortcuts-dialog.ui:17
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
 msgstr "Reinicia o jogo com as configurações atuais"
 
-#: src/help-overlay.ui:31
+#: src/shortcuts-dialog.ui:23
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pausa o jogo"
 
-#: src/help-overlay.ui:38
+#: src/shortcuts-dialog.ui:29
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Mostra a ajuda"
 
-#: src/help-overlay.ui:45
+#: src/shortcuts-dialog.ui:35
 msgctxt "shortcut window"
 msgid "Open Menu"
 msgstr "Abre o menu"
 
-#: src/help-overlay.ui:52
+#: src/shortcuts-dialog.ui:41
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Mostra os atalhos de teclado"
 
-#: src/help-overlay.ui:59
+#: src/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Sai"
 
-#: src/help-overlay.ui:67
+#: src/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Game size selection"
 msgstr "Seleção de tamanho do jogo"
 
-#: src/help-overlay.ui:72
+#: src/shortcuts-dialog.ui:58
 msgctxt "shortcut window"
 msgid "Game size: small"
 msgstr "Tamanho do jogo: pequeno"
 
-#: src/help-overlay.ui:79
+#: src/shortcuts-dialog.ui:64
 msgctxt "shortcut window"
 msgid "Game size: medium"
 msgstr "Tamanho do jogo: médio"
 
-#: src/help-overlay.ui:86
+#: src/shortcuts-dialog.ui:70
 msgctxt "shortcut window"
 msgid "Game size: large"
 msgstr "Tamanho do jogo: grande"
 
-#: src/help-overlay.ui:93
+#: src/shortcuts-dialog.ui:76
 msgctxt "shortcut window"
 msgid "Game size: custom"
 msgstr "Tamanho do jogo: personalizado"
 
-#: src/help-overlay.ui:101
+#: src/shortcuts-dialog.ui:83
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "No jogo"
 
-#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#: src/shortcuts-dialog.ui:87 src/shortcuts-dialog.ui:93
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
 msgstr "Move o cursor do teclado"
 
-#: src/help-overlay.ui:120
+#: src/shortcuts-dialog.ui:99
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "Revela o campo"
 
-#: src/help-overlay.ui:127
+#: src/shortcuts-dialog.ui:105
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Alterna o estado da bandeira de campo"
 
-#: src/interface.ui:15
+#: src/interface.ui:14
 msgid "_Scores"
 msgstr "_Pontuações"
 
-#: src/interface.ui:19
+#: src/interface.ui:18
 msgid "A_ppearance"
 msgstr "A_parência"
 
-#: src/interface.ui:25
+#: src/interface.ui:24
 msgid "_Use Question Flags"
 msgstr "_Usar bandeiras de interrogação"
 
-#: src/interface.ui:31
+#: src/interface.ui:30
 msgid "_Keyboard Shortcuts"
 msgstr "Atalhos de _teclado"
 
-#: src/interface.ui:35
+#: src/interface.ui:34
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: src/interface.ui:39
+#: src/interface.ui:38
 msgid "_About Mines"
 msgstr "_Sobre o Minas"
 
-#: src/interface.ui:205
+#: src/interface.ui:170
 msgid "_Width"
 msgstr "Lar_gura"
 
-#: src/interface.ui:229
+#: src/interface.ui:191
 msgid "_Height"
 msgstr "A_ltura"
 
-#: src/interface.ui:253
+#: src/interface.ui:212
 msgid "Percent _mines"
 msgstr "Porcen_tagem de minas"
 
-#: src/interface.ui:279
+#: src/interface.ui:235
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/interface.ui:296
+#: src/interface.ui:251
 msgid "_Play Game"
 msgstr "_Iniciar jogo"
 
-#: src/interface.ui:477
+#: src/interface.ui:366
 msgid "Paused"
 msgstr "Pausado"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
 msgstr "Exibe a versão de lançamento e sai"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "Jogo pequeno"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "Jogo médio"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "Jogo grande"
 
-#. Label on the scores dialog
-#: src/gnome-mines.vala:265
-msgid "Minefield:"
-msgstr "Campo minado:"
+#: src/gnome-mines.vala:214
+msgid "Minefield"
+msgstr "Campo minado"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:301
+#: src/gnome-mines.vala:248
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minas"
 
-#: src/gnome-mines.vala:352
+#: src/gnome-mines.vala:277
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/gnome-mines.vala:452
+#: src/gnome-mines.vala:344
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: src/gnome-mines.vala:563
+#: src/gnome-mines.vala:448
 msgid "Do you want to start a new game?"
 msgstr "Você quer iniciar um novo jogo?"
 
-#: src/gnome-mines.vala:564
+#: src/gnome-mines.vala:449
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se você iniciar um novo jogo, seu progresso atual será perdido."
 
-#: src/gnome-mines.vala:565
-msgid "Keep Current Game"
-msgstr "Guardar o jogo atual"
-
-#: src/gnome-mines.vala:566
+#: src/gnome-mines.vala:450
 msgid "Start New Game"
 msgstr "Iniciar um novo jogo"
 
-#: src/gnome-mines.vala:616
+#: src/gnome-mines.vala:451
+msgid "Keep Current Game"
+msgstr "Guardar o jogo atual"
+
+#: src/gnome-mines.vala:518
 msgid "St_art Over"
 msgstr "Reco_meçar"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:572
 msgid "_Pause"
 msgstr "_Pausar"
 
-#: src/gnome-mines.vala:677
+#: src/gnome-mines.vala:577
 msgid "_Resume"
 msgstr "Co_ntinuar"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:658
 msgid "Play _Again"
 msgstr "Jogar _novamente"
 
-#: src/gnome-mines.vala:821
-msgid "Main game:"
-msgstr "Jogo principal:"
+#: src/gnome-mines.vala:743
+msgid "The GNOME Project"
+msgstr "O Projeto GNOME"
 
-#: src/gnome-mines.vala:826
-msgid "Score:"
-msgstr "Pontuação:"
-
-#: src/gnome-mines.vala:829
-msgid "Resizing and SVG support:"
-msgstr "Redimensionamento e suporte a SVG:"
-
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:745
 msgid "Clear explosive mines off the board"
 msgstr "Elimine minas explosivas para fora do tabuleiro."
 
-#: src/gnome-mines.vala:855
+#: src/gnome-mines.vala:750
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
@@ -409,15 +391,28 @@ msgstr ""
 "Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Enrico Nicoletto <liverig@gmail.com>"
 
-#: src/theme-selector-dialog.vala:104
+#: src/theme-selector-dialog.vala:108
 msgid "Select Theme"
 msgstr "Selecionar tema"
 
+#~ msgid "Enable animations"
+#~ msgstr "Habilitar animações"
+
+#~ msgid "Set to false to disable theme-defined transition animations"
+#~ msgstr ""
+#~ "Defina como falso para desativar animações de transição definido pelo tema"
+
+#~ msgid "Main game:"
+#~ msgstr "Jogo principal:"
+
+#~ msgid "Score:"
+#~ msgstr "Pontuação:"
+
+#~ msgid "Resizing and SVG support:"
+#~ msgstr "Redimensionamento e suporte a SVG:"
+
 #~ msgid "GNOME Mines"
 #~ msgstr "Minas do GNOME"
-
-#~ msgid "The GNOME Project"
-#~ msgstr "O Projeto GNOME"
 
 #~ msgid "Change _Difficulty"
 #~ msgstr "Alterar _dificuldade"
