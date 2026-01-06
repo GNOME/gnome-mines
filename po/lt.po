@@ -14,29 +14,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: lt\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2023-01-25 19:08+0000\n"
-"PO-Revision-Date: 2023-02-19 21:23+0200\n"
-"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"POT-Creation-Date: 2025-12-22 00:40+0000\n"
+"PO-Revision-Date: 2026-01-06 20:23+0200\n"
+"Last-Translator: Aurimas Černius <aurimas.cernius@mailo.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"(n%100<10 || n%100>=20) ? 1 : 2)\n"
-"X-Generator: Gtranslator 42.0\n"
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.8\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
-#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:845
+#: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
+#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:741
 msgid "Mines"
 msgstr "Minos"
 
-#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+#: data/org.gnome.Mines.metainfo.xml.in:9 data/org.gnome.Mines.desktop.in:3
 msgid "Clear hidden mines from a minefield"
 msgstr "Išvalykite lauką nuo paslėptų minų"
 
-#: data/org.gnome.Mines.appdata.xml.in:11
+#: data/org.gnome.Mines.metainfo.xml.in:11
 msgid ""
 "Mines is a puzzle game where you search for hidden mines. Flag the spaces "
 "with mines as quickly as possible to make the board a safer place. You win "
@@ -48,7 +47,7 @@ msgstr ""
 "Laimite, kai visos minos lentoje yra pažymėtos. Atsargiai, nesusprogdinkite "
 "minos, nes pralaimėsite!"
 
-#: data/org.gnome.Mines.appdata.xml.in:17
+#: data/org.gnome.Mines.metainfo.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -58,12 +57,12 @@ msgstr ""
 "užstrigsite, galite prašyti patarimo: būsite nubaustas laiko bauda, bet tai "
 "yra geriau, nei užlipti ant minos!"
 
-#: data/org.gnome.Mines.appdata.xml.in:48
+#: data/org.gnome.Mines.metainfo.xml.in:120
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:11
 msgid "minesweeper;"
 msgstr "išminuotojas;"
 
@@ -108,202 +107,193 @@ msgstr ""
 "Nustatykite teigiamą automatiniam kvadratų pažymėjimui užminuotais, kai "
 "atidengiama pakankamai langelių"
 
-#: data/org.gnome.Mines.gschema.xml:20
-msgid "Enable animations"
-msgstr "Įjungti animacijas"
-
 #: data/org.gnome.Mines.gschema.xml:21
-msgid "Set to false to disable theme-defined transition animations"
-msgstr "Nustatyti neigiamai temos aprašytoms animacijoms išjungti"
-
-#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Stulpelių skaičius žaidime"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of rows in a custom game"
 msgstr "Eilučių skaičius žaidime"
 
-#: data/org.gnome.Mines.gschema.xml:35
+#: data/org.gnome.Mines.gschema.xml:30
 msgid "The number of mines in a custom game"
 msgstr "Minų skaičius naudotojo konfigūracijos žaidime"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "Board size"
 msgstr "Lentos dydis"
 
-#: data/org.gnome.Mines.gschema.xml:41
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Lentos dydis (0-2 = mažas-didelis, 3 = pasirinktinis)"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Lango plotis pikseliais"
 
-#: data/org.gnome.Mines.gschema.xml:49
+#: data/org.gnome.Mines.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Lango aukštis pikseliais"
 
-#: data/org.gnome.Mines.gschema.xml:53
+#: data/org.gnome.Mines.gschema.xml:48
 msgid "true if the window is maximized"
 msgstr "teigiama, jei langas yra išdidintas"
 
-#: src/help-overlay.ui:12
+#: src/shortcuts-dialog.ui:7
 msgctxt "shortcut window"
 msgid "Window and game"
-msgstr "langas ir žaidimas"
+msgstr "Langas ir žaidimas"
 
-#: src/help-overlay.ui:17
+#: src/shortcuts-dialog.ui:11
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Pradėti naują žaidimą"
 
-#: src/help-overlay.ui:24
+#: src/shortcuts-dialog.ui:17
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
 msgstr "Žaisti iš naujo su dabartiniais parametrais"
 
-#: src/help-overlay.ui:31
+#: src/shortcuts-dialog.ui:23
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Pristabdyti žaidimą"
 
-#: src/help-overlay.ui:38
+#: src/shortcuts-dialog.ui:29
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Rodyti žinyną"
 
-#: src/help-overlay.ui:45
+#: src/shortcuts-dialog.ui:35
 msgctxt "shortcut window"
 msgid "Open Menu"
 msgstr "Atverti meniu"
 
-#: src/help-overlay.ui:52
+#: src/shortcuts-dialog.ui:41
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Rodyti klaviatūros trumpinius"
 
-#: src/help-overlay.ui:59
+#: src/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Išeiti"
 
-#: src/help-overlay.ui:67
+#: src/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Game size selection"
 msgstr "Žaidimo dydžio pasirinkimas"
 
-#: src/help-overlay.ui:72
+#: src/shortcuts-dialog.ui:58
 msgctxt "shortcut window"
 msgid "Game size: small"
 msgstr "Žaidimo dydis: mažas"
 
-#: src/help-overlay.ui:79
+#: src/shortcuts-dialog.ui:64
 msgctxt "shortcut window"
 msgid "Game size: medium"
 msgstr "Žaidimo dydis: vidutinis"
 
-#: src/help-overlay.ui:86
+#: src/shortcuts-dialog.ui:70
 msgctxt "shortcut window"
 msgid "Game size: large"
 msgstr "Žaidimo dydis: didelis"
 
-#: src/help-overlay.ui:93
+#: src/shortcuts-dialog.ui:76
 msgctxt "shortcut window"
 msgid "Game size: custom"
 msgstr "Žaidimo dydis: pasirinktinis"
 
-#: src/help-overlay.ui:101
+#: src/shortcuts-dialog.ui:83
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "Žaidime"
 
-#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#: src/shortcuts-dialog.ui:87 src/shortcuts-dialog.ui:93
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
 msgstr "Perkelti klaviatūros žymeklį"
 
-#: src/help-overlay.ui:120
+#: src/shortcuts-dialog.ui:99
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "Parodyti lauką"
 
-#: src/help-overlay.ui:127
+#: src/shortcuts-dialog.ui:105
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Perjungti lauko vėliavėlės būseną"
 
-#: src/interface.ui:15
+#: src/interface.ui:14
 msgid "_Scores"
 msgstr "_Taškai"
 
-#: src/interface.ui:19
+#: src/interface.ui:18
 msgid "A_ppearance"
 msgstr "Iš_vaizda"
 
-#: src/interface.ui:25
+#: src/interface.ui:24
 msgid "_Use Question Flags"
 msgstr "Na_udoti klaustukų vėliavėles"
 
-#: src/interface.ui:31
+#: src/interface.ui:30
 msgid "_Keyboard Shortcuts"
 msgstr "_Klaviatūros trumpiniai"
 
-#: src/interface.ui:35
+#: src/interface.ui:34
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: src/interface.ui:39
+#: src/interface.ui:38
 msgid "_About Mines"
 msgstr "_Apie minas"
 
-#: src/interface.ui:205
+#: src/interface.ui:170
 msgid "_Width"
 msgstr "_Plotis"
 
-#: src/interface.ui:229
+#: src/interface.ui:191
 msgid "_Height"
 msgstr "_Aukštis"
 
-#: src/interface.ui:253
+#: src/interface.ui:212
 msgid "Percent _mines"
 msgstr "_Minų procentas"
 
-#: src/interface.ui:279
+#: src/interface.ui:235
 msgid "_Cancel"
 msgstr "_Atsisakyti"
 
-#: src/interface.ui:296
+#: src/interface.ui:251
 msgid "_Play Game"
 msgstr "_Žaisti žaidimą"
 
-#: src/interface.ui:477
+#: src/interface.ui:366
 msgid "Paused"
 msgstr "Pauzė"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
 msgstr "Atspausdinti leidimo versiją ir išeiti"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "Mažas žaidimas"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "Vidutinis žaidimas"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "Didelis žaidimas"
 
-#. Label on the scores dialog
-#: src/gnome-mines.vala:265
-msgid "Minefield:"
-msgstr "Minų laukas:"
+#: src/gnome-mines.vala:214
+msgid "Minefield"
+msgstr "Minų laukas"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:301
+#: src/gnome-mines.vala:248
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -311,11 +301,11 @@ msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minos"
 msgstr[2] "%d × %d, %d minų"
 
-#: src/gnome-mines.vala:352
+#: src/gnome-mines.vala:277
 msgid "Custom"
 msgstr "Pasirinktinis"
 
-#: src/gnome-mines.vala:452
+#: src/gnome-mines.vala:344
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -323,75 +313,76 @@ msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minos"
 msgstr[2] "<b>%d</b> minų"
 
-#: src/gnome-mines.vala:563
+#: src/gnome-mines.vala:448
 msgid "Do you want to start a new game?"
 msgstr "Ar norite pradėti naują žaidimą?"
 
-#: src/gnome-mines.vala:564
+#: src/gnome-mines.vala:449
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Jei pradėsite naują žaidimą, jūsų dabartinis progresas bus prarastas."
 
-#: src/gnome-mines.vala:565
-msgid "Keep Current Game"
-msgstr "Likti esamame žaidime"
-
-#: src/gnome-mines.vala:566
+#: src/gnome-mines.vala:450
 msgid "Start New Game"
 msgstr "Pradėti naują žaidimą"
 
-#: src/gnome-mines.vala:616
+#: src/gnome-mines.vala:451
+msgid "Keep Current Game"
+msgstr "Likti esamame žaidime"
+
+#: src/gnome-mines.vala:518
 msgid "St_art Over"
 msgstr "Žaisti iš _naujo"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:572
 msgid "_Pause"
 msgstr "Pristabdyti"
 
-#: src/gnome-mines.vala:677
+#: src/gnome-mines.vala:577
 msgid "_Resume"
 msgstr "_Tęsti"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:658
 msgid "Play _Again"
 msgstr "_Žaisti dar kartą"
 
-#: src/gnome-mines.vala:821
-msgid "Main game:"
-msgstr "Pagrindinis žaidimas:"
+#: src/gnome-mines.vala:743
+msgid "The GNOME Project"
+msgstr "GNOME projektas"
 
-#: src/gnome-mines.vala:826
-msgid "Score:"
-msgstr "Taškai:"
-
-#: src/gnome-mines.vala:829
-msgid "Resizing and SVG support:"
-msgstr "Dydžio keitimas ir SVG palaikymas:"
-
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:745
 msgid "Clear explosive mines off the board"
 msgstr "Išvalykite sprogstančias minas iš lentos"
 
-#: src/gnome-mines.vala:855
+#: src/gnome-mines.vala:750
 msgid "translator-credits"
 msgstr ""
-"Paskutinis vertėjas:\n"
-"Aurimas Černius <aurisc4@gmail.com>\n"
-"\n"
-"Ankstesnieji vertėjai:\n"
+"Aurimas Černius <aurimas.cernius@mailo.com>\n"
 "Žygimantas Beručka <zygis@gnome.org>,\n"
 "Justina Klingaitė <justina.klingaite@gmail.com>\n"
 "Tomas Kuliavas <tokul@users.sf.net>,\n"
 "Gediminas Paulauskas <menesis@chatsubo.lt>"
 
-#: src/theme-selector-dialog.vala:104
+#: src/theme-selector-dialog.vala:108
 msgid "Select Theme"
 msgstr "Pasirinkite temą"
 
+#~ msgid "Enable animations"
+#~ msgstr "Įjungti animacijas"
+
+#~ msgid "Set to false to disable theme-defined transition animations"
+#~ msgstr "Nustatyti neigiamai temos aprašytoms animacijoms išjungti"
+
+#~ msgid "Main game:"
+#~ msgstr "Pagrindinis žaidimas:"
+
+#~ msgid "Score:"
+#~ msgstr "Taškai:"
+
+#~ msgid "Resizing and SVG support:"
+#~ msgstr "Dydžio keitimas ir SVG palaikymas:"
+
 #~ msgid "GNOME Mines"
 #~ msgstr "GNOME minos"
-
-#~ msgid "The GNOME Project"
-#~ msgstr "GNOME projektas"
 
 #~ msgid "Change _Difficulty"
 #~ msgstr "Keisti _sudėtingumą"
