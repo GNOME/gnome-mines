@@ -749,7 +749,7 @@ public class Mines : Adw.Application
             documenters = documenters,
             translator_credits = _("translator-credits"),
             version = VERSION,
-            website = "https://wiki.gnome.org/Apps/Mines",
+            website = "https://gitlab.gnome.org/GNOME/gnome-mines/",
         };
 
         about.present (this.active_window);

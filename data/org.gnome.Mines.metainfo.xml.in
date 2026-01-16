@@ -25,11 +25,11 @@
       <image>https://gitlab.gnome.org/GNOME/gnome-mines/-/raw/main/data/screenshot.png</image>
     </screenshot>
   </screenshots>
-  <url type="homepage">https://wiki.gnome.org/Apps/Mines</url>
+  <url type="homepage">https://gitlab.gnome.org/GNOME/gnome-mines/</url>
   <url type="bugtracker">https://gitlab.gnome.org/GNOME/gnome-mines/issues</url>
-  <url type="donation">https://www.gnome.org/donate/</url>
+  <url type="donation">https://donate.gnome.org</url>
   <url type="help">https://help.gnome.org/gnome-mines/index.html</url>
-  <url type="translate">https://wiki.gnome.org/TranslationProject</url>
+  <url type="translate">https://l10n.gnome.org/module/gnome-mines</url>
   <url type="vcs-browser">https://gitlab.gnome.org/GNOME/gnome-mines</url>
   <update_contact>robert.roth.off_at_gmail.com</update_contact>
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>

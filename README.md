@@ -6,8 +6,8 @@ Mines (previously gnomine) is a puzzle game where you locate mines floating in a
 
 ## Useful links
 
-- Homepage: <https://wiki.gnome.org/Apps/Mines>
+- Homepage: <https://gitlab.gnome.org/GNOME/gnome-mines/>
 - User manual: <https://help.gnome.org/users/gnome-mines/stable/>
 - Report issues: <https://gitlab.gnome.org/GNOME/gnome-mines/issues/>
-- Donate: <https://www.gnome.org/friends/>
-- Translate: <https://wiki.gnome.org/TranslationProject>
+- Donate: <https://donate.gnome.org>
+- Translate: <https://l10n.gnome.org/module/gnome-mines>

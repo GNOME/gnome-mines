@@ -7,7 +7,7 @@
   <name xml:lang="en">gnome-mines</name>
   <shortdesc xml:lang="en">Clear hidden mines from a minefield</shortdesc>
   <description xml:lang="en">Clear hidden mines from a minefield</description>
-  <homepage rdf:resource="https://wiki.gnome.org/Apps/Mines" />
+  <homepage rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mines/" />
   <support-forum rdf:resource="https://discourse.gnome.org/tag/games" />
   <download-page rdf:resource="http://download.gnome.org/sources/gnome-mines/" />
   <bug-database rdf:resource="https://gitlab.gnome.org/GNOME/gnome-mines/issues" />
