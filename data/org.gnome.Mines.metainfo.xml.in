@@ -35,6 +35,15 @@
   <launchable type="desktop-id">org.gnome.Mines.desktop</launchable>
   <project_group>GNOME</project_group>
   <releases>
+    <release version="50~beta" date="2026-01-31" type="development">
+      <description>
+        <ul>
+          <li>Updated translations</li>
+          <li>Updated metainfo links (Sabri Ünal)</li>
+          <li>Update libgnome-games (Will Warner)</li>
+        </ul>
+      </description>
+    </release>
     <release version="49.0.1" date="2025-09-16" type="stable">
       <description>
         <ul>
