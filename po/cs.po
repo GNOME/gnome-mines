@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2025-08-13 14:59+0000\n"
-"PO-Revision-Date: 2025-08-19 00:26+0200\n"
+"POT-Creation-Date: 2026-01-31 12:41+0000\n"
+"PO-Revision-Date: 2026-02-05 00:48+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: čeština <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -31,11 +31,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 "X-Project-Style: gnome\n"
 
 #: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
-#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:764
+#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:741
 msgid "Mines"
 msgstr "Miny"
 
@@ -65,7 +65,7 @@ msgstr ""
 "jste v nesnázích, můžete požádat o radu – to vás bude sice stát trestný čas, "
 "ale je to lepší než odpálit minu."
 
-#: data/org.gnome.Mines.metainfo.xml.in:95
+#: data/org.gnome.Mines.metainfo.xml.in:129
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -295,13 +295,12 @@ msgstr "Střední hra:"
 msgid "Big game"
 msgstr "Velká hra:"
 
-#. Label on the scores dialog
-#: src/gnome-mines.vala:215
-msgid "Minefield:"
-msgstr "Minové pole:"
+#: src/gnome-mines.vala:214
+msgid "Minefield"
+msgstr "Minové pole"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:249
+#: src/gnome-mines.vala:248
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -309,11 +308,11 @@ msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d miny"
 msgstr[2] "%d × %d, %d min"
 
-#: src/gnome-mines.vala:300
+#: src/gnome-mines.vala:277
 msgid "Custom"
 msgstr "Vlastní"
 
-#: src/gnome-mines.vala:367
+#: src/gnome-mines.vala:344
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -321,47 +320,47 @@ msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> miny"
 msgstr[2] "<b>%d</b> min"
 
-#: src/gnome-mines.vala:471
+#: src/gnome-mines.vala:448
 msgid "Do you want to start a new game?"
 msgstr "Chcete začít novou hru?"
 
-#: src/gnome-mines.vala:472
+#: src/gnome-mines.vala:449
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Pokud začnete novou hru, bude váš postup v té stávající ztracen."
 
-#: src/gnome-mines.vala:473
+#: src/gnome-mines.vala:450
 msgid "Start New Game"
 msgstr "Začít novou hru"
 
-#: src/gnome-mines.vala:474
+#: src/gnome-mines.vala:451
 msgid "Keep Current Game"
 msgstr "Zachovat stávající hru"
 
-#: src/gnome-mines.vala:541
+#: src/gnome-mines.vala:518
 msgid "St_art Over"
 msgstr "Z_ačít novou"
 
-#: src/gnome-mines.vala:595
+#: src/gnome-mines.vala:572
 msgid "_Pause"
 msgstr "_Pozastavit"
 
-#: src/gnome-mines.vala:600
+#: src/gnome-mines.vala:577
 msgid "_Resume"
 msgstr "Pok_račovat"
 
-#: src/gnome-mines.vala:681
+#: src/gnome-mines.vala:658
 msgid "Play _Again"
 msgstr "_Hrát znovu"
 
-#: src/gnome-mines.vala:766
+#: src/gnome-mines.vala:743
 msgid "The GNOME Project"
 msgstr "Projekt GNOME"
 
-#: src/gnome-mines.vala:768
+#: src/gnome-mines.vala:745
 msgid "Clear explosive mines off the board"
 msgstr "Vyčistěte hrací desku od nášlapných min"
 
-#: src/gnome-mines.vala:773
+#: src/gnome-mines.vala:750
 msgid "translator-credits"
 msgstr ""
 "Jirka Lébl\n"
