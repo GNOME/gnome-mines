@@ -1,0 +1,702 @@
+# Kazakh translation for gnome-mines.
+# Copyright (C) 2026 gnome-mines's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mines package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines main\n"
+"POT-Creation-Date: 2026-03-14 20:50+0000\n"
+"PO-Revision-Date: 2026-03-17 23:32+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <Kazakh>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Baptiste Mille-Mathias"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Ekaterina Gerasimova"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:23
+msgid "How to change the game board size"
+msgstr "Ойын алаңының өлшемін қалай өзгертуге болады"
+
+#. (itstool) path: page/p
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
+msgstr "Өріс өлшемін қолданба іске қосылған кезде таңдай аласыз."
+
+#. (itstool) path: page/p
+#: C/board-size.page:27
+msgid "Select one of the grid sizes:"
+msgstr "Тор өлшемдерінің бірін таңдаңыз:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:29
+msgid "a 8 × 8 board with 10 mines"
+msgstr "10 минасы бар 8 × 8 өлшемді алаң"
+
+#. (itstool) path: item/p
+#: C/board-size.page:30
+msgid "a 16 × 16 board with 40 mines"
+msgstr "40 минасы бар 16 × 16 өлшемді алаң"
+
+#. (itstool) path: item/p
+#: C/board-size.page:31
+msgid "a 30 × 16 board with 99 mines"
+msgstr "99 минасы бар 30 × 16 өлшемді алаң"
+
+#. (itstool) path: item/p
+#: C/board-size.page:32
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "өлшемі мен миналар санын өзіңіз таңдайтын балама алаң"
+
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"<link xref=\"board-size\">Алаң өлшемін</link> кейінірек өзгерту үшін оң "
+"жақтағы <gui style=\"button\">Қиындықты өзгерту</gui> батырмасын басыңыз."
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:19 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "<app>Mines</app> қолданбасын жақсартуға көмектесу"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Қате туралы хабарлау немесе жақсартуды ұсыну"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
+msgstr ""
+"<app>Mines</app> еріктілер қауымдастығымен қолдау көрсетіледі. Сіз де қатыса "
+"аласыз. Егер мәселе тапсаңыз, <em>қате туралы есеп</em> жібере аласыз. Қате "
+"туралы есеп беру үшін <link href=\"https://gitlab.gnome.org/GNOME/gnome-"
+"mines/issues\"/> адресіне өтіңіз."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr ""
+"Бұл — пайдаланушылар мен әзірлеушілер қателер мен құлаулар туралы "
+"мәліметтерді жібере алатын немесе жақсартуларды сұрай алатын қателерді "
+"трекер жүйесі."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>Sign in/Register</gui> link to create one."
+msgstr ""
+"Қатысу үшін сізге тіркелгі қажет, ол сізге қол жеткізуге, қателерді "
+"жіберуге, пікір қалдыруға және қатеңіздің күйі туралы электрондық пошта "
+"арқылы жаңартуларды алуға мүмкіндік береді. Егер тіркелгіңіз болмаса, оны "
+"жасау үшін <gui>Кіру/Тіркелу</gui> сілтемесін шертіңіз."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
+msgstr ""
+"Тіркелгіңіз болған соң, жүйеге кіріп, <gui>New Issue</gui> батырмасын "
+"шертіңіз. Қате туралы хабарламас бұрын <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">қате жазу нұсқаулығын</"
+"link> оқыңыз және қате бұрыннан бар-жоғын білу үшін <link href=\"https://"
+"gitlab.gnome.org/GNOME/gnome-mines/issues\">шолуды</link> сұраймыз."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:39
+msgid ""
+"If you are requesting a new feature, choose <gui>Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit issue</gui>."
+msgstr ""
+"Егер сіз жаңа мүмкіндікті сұрасаңыз, <gui>Labels</gui> мәзірінен "
+"<gui>Feature</gui> таңдаңыз. Тақырыбы (Title) мен Сипаттамасы (Description) "
+"бөлімдерін толтырып, <gui>Submit issue</gui> батырмасын шертіңіз."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:43
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr ""
+"Сіздің есебіңізге ID нөмірі беріледі және ол қарастырылған сайын оның күйі "
+"жаңартылып отырады. <app>Mines</app> қолданбасын жақсартуға көмектескеніңіз "
+"үшін рақмет!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Әзірлеуге көмектесу"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr ""
+"<app>GNOME Games</app> еріктілер қауымдастығымен әзірленеді және қолдау "
+"көрсетіледі. Сіз де қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/"
+"#gnome-games\">#gnome-games</link> on irc.libera.chat, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+msgstr ""
+"Егер сіз <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\"><app>GNOME Games</app> әзірлеуге көмектескіңіз</link> келсе, "
+"әзірлеушілермен <link xref=\"help:gnome-help/help-matrix\">Matrix</link> "
+"желісіндегі <link href=\"https://matrix.to/#/#gnome-games:gnome.org\">#gnome-"
+"games:gnome.org</link> арнасында, irc.libera.chat желісіндегі <link "
+"href=\"https://web.libera.chat/#gnome-games\">#gnome-games</link> арнасында "
+"немесе <link href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</"
+"link> арқылы байланыса аласыз."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:23
+msgid "Aruna Sankaranarayanan"
+msgstr "Aruna Sankaranarayanan"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Құжаттаманы жазуға көмектесу"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr ""
+"GNOME Games пайдаланушы көмегі еріктілер қауымдастығымен қолдау көрсетіледі. "
+"Сіз де қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
+"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on "
+"irc.libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
+msgstr ""
+"Құжаттама жобасына үлес қосу үшін бізбен <link xref=\"help:gnome-help/help-"
+"matrix\">Matrix</link> желісіндегі <link href=\"https://matrix.to/#/"
+"#docs:gnome.org\">#docs:gnome.org</link> арнасында, irc.libera.chat "
+"желісіндегі <link href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</"
+"link> арнасында немесе <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link> арқылы байланысудан тартынбаңыз."
+
+#. (itstool) path: page/p
+#: C/documentation.page:39
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
+msgstr ""
+"Біздің <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">вики</link> бетінде пайдалы ақпарат бар."
+
+#. (itstool) path: page/title
+#: C/flags.page:33
+msgid "How to use flags"
+msgstr "Жалаушаларды қалай қолдану керек"
+
+#. (itstool) path: td/p
+#: C/flags.page:40
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr ""
+"Жалаушалар астында мина жасырылуы мүмкін деп күдіктенген торкөздерді "
+"белгілеу үшін қолданылады. Торкөзге жалауша қою оны шертуге және ойынның "
+"аяқталуына әкелетін жарылыс тудыруға жол бермейді."
+
+#. (itstool) path: td/p
+#: C/flags.page:43
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
+msgstr ""
+"Жалаушалардың нақты түрі таңдалған темаға байланысты. Теманы өзгерту үшін "
+"терезенің жоғарғы оң жақ бұрышындағы мәзір батырмасын басып, <gui "
+"style=\"menuitem\">Сыртқы түрі</gui> опциясын таңдаңыз."
+
+#. (itstool) path: section/title
+#: C/flags.page:51
+msgid "How to place a flag on a tile"
+msgstr "Торкөзге жалаушаны қалай қоюға болады"
+
+#. (itstool) path: td/p
+#: C/flags.page:55
+msgid "Flags cannot be clicked. To place a flag on a tile:"
+msgstr "Жалаушаларды шертуге болмайды. Торкөзге жалауша қою үшін:"
+
+#. (itstool) path: item/p
+#: C/flags.page:57
+msgid "right click on a blank tile."
+msgstr "бос торкөзге оң жақпен шерту керек."
+
+#. (itstool) path: section/title
+#: C/flags.page:69
+msgid "Use of the <em>question</em> flag"
+msgstr "<em>Сұрақ</em> жалаушасын қолдану"
+
+#. (itstool) path: section/p
+#: C/flags.page:70
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
+msgstr ""
+"Егер торкөзде мина жасырылғанына сенімді болмасаңыз, <em>сұрақ</em> "
+"жалаушасын қолдана аласыз."
+
+#. (itstool) path: td/p
+#: C/flags.page:75
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Торкөзге <em>Сенімді емеспін</em> жалаушасын қою үшін:"
+
+#. (itstool) path: item/p
+#: C/flags.page:77
+msgid "Right-click twice on a blank tile or once on a flag."
+msgstr "Бос торкөзге екі рет немесе жалаушаға бір рет оң жақпен шертіңіз."
+
+#. (itstool) path: note/p
+#: C/flags.page:88
+msgid ""
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
+msgstr ""
+"Бұл жалаушаларды іске қосу үшін терезенің жоғарғы оң жақ бұрышындағы мәзір "
+"батырмасын басып, <gui style=\"checkbox\">Сұрақ жалаушаларын қолдану</gui> "
+"баптауын іске қосыңыз."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:24
+msgid "High scores"
+msgstr "Үздік нәтижелер"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:26
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr ""
+"Үздік нәтижелер тізімінде мина алаңының әрбір түрі тазартылған ең жылдам он "
+"уақыт көрсетіледі."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:29
+msgid ""
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
+msgstr ""
+"Үздік нәтижелерді көру үшін терезенің жоғарғы оң жақ бұрышындағы мәзір "
+"батырмасын басып, <gui style=\"menuitem\">Нәтижелер</gui> тармағын таңдаңыз. "
+"Сұхбат терезесінде бастапқыда <gui>Кіші</gui> өріс өлшемі көрсетіледі; басқа "
+"өлшемдерді көру үшін оларды сұхбат терезесінің жоғарғы жағындағы ашылмалы "
+"мәзірден таңдаңыз."
+
+#. (itstool) path: info/title
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "Mines"
+msgstr "Миналар"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link"
+msgid "Mines"
+msgstr "Миналар"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "text"
+msgid "Mines"
+msgstr "Миналар"
+
+#. (itstool) path: credit/name
+#: C/index.page:11
+msgid "Brian Grohe"
+msgstr "Brian Grohe"
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Миналар"
+
+#. (itstool) path: page/p
+#: C/index.page:25
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr ""
+"<app>Миналар</app> — Minesweeper ойынының клоны. Мақсат — тіктөртбұрышты "
+"алаңдағы торкөздер астында жасырылған барлық миналарды табу. Жарылыс "
+"тудырмай, барлық миналарды табу үшін логика мен сәттілікті үйлестіру қажет "
+"болады."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Game Play"
+msgstr "Ойын барысы"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Useful tips"
+msgstr "Пайдалы кеңестер"
+
+#. (itstool) path: section/title
+#: C/index.page:44
+msgid "Get Involved"
+msgstr "Жобаға қатысу"
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Құқықтық ақпарат."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Лицензия"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr ""
+"Бұл жұмыс CreativeCommons Attribution-Share Alike 3.0 Unported лицензиясы "
+"бойынша таратылады."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Сіз еріктісіз:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Бөлісуге</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Жұмысты көшіруге, таратуға және беруге."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>Туынды жасауға</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Жұмысты бейімдеуге."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Келесі шарттарды сақтаған жағдайда:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Авторлықты көрсету</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr ""
+"Сіз жұмыстың авторы немесе лицензиар көрсеткен тәсілмен авторлығын "
+"көрсетуіңіз керек (бірақ олар сізді немесе жұмысты пайдалануыңызды "
+"қолдайтынын білдіретіндей емес)."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Ұқсас шарттармен бөлісу</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr ""
+"Егер сіз осы жұмысты өзгертсеңіз, түрлендірсеңіз немесе оның негізінде жаңа "
+"туынды жасасаңыз, алынған жұмысты тек дәл сол, ұқсас немесе үйлесімді "
+"лицензия бойынша тарата аласыз."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr ""
+"Лицензияның толық мәтінін <link href=\"http://creativecommons.org/licenses/"
+"by-sa/3.0/legalcode\">CreativeCommons веб-сайтынан</link> көріңіз немесе "
+"толық <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons "
+"Deed</link> құжатын оқыңыз."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Rashi Aswani"
+
+#. (itstool) path: page/title
+#: C/new-game.page:32
+msgid "Start a new game"
+msgstr "Жаңа ойынды бастау"
+
+#. (itstool) path: page/p
+#: C/new-game.page:34
+msgid "To start a new game:"
+msgstr "Жаңа ойынды бастау үшін:"
+
+#. (itstool) path: item/p
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
+msgstr "Оң жақтағы <gui style=\"button\">Қайта ойнау</gui> батырмасын басыңыз."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
+msgstr ""
+"<link xref=\"board-size\">Алаң өлшемін</link> өзгерту үшін оң жақтағы <gui "
+"style=\"button\">Қиындықты өзгерту</gui> батырмасын басыңыз."
+
+#. (itstool) path: note/p
+#: C/new-game.page:47
+msgid ""
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
+msgstr ""
+"Егер сіз қазірдің өзінде ойнап жатсаңыз және <gui style=\"button\">Қайта "
+"бастау</gui> батырмасын бассаңыз, <app>Миналар</app> сізден <gui>Ағымдағы "
+"ойынды сақтау</gui> немесе <gui>Жаңа ойынды бастау</gui> керектігін сұрайды. "
+"Егер сіз соңғысын таңдасаңыз, ағымдағы ойыныңыз жоғалады."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "Ойын ережелері"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr ""
+"<app>Миналар</app> ойынының мақсаты — бірде-бір минаны жармай, мина алаңын "
+"тазарту."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by choosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr ""
+"Үш бастапқы алаң өлшемінің бірін таңдаудан немесе балама алаңды таңдаудан "
+"бастаңыз."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr ""
+"Ойын басталғанда алаң торкөздермен жабылған болады. Кез келген торкөзді ашу "
+"үшін оны шертіңіз. Сіз келесілерді аша аласыз:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr ""
+"Түрлі-түсті сан, ол іргелес торкөздердегі миналар санын білдіреді. Бұл "
+"миналардың қайда екенін анықтауға көмектеседі, осылайша сіз оларды <link "
+"xref=\"flags\">жалаушалармен</link> белгілей аласыз."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr ""
+"Бос торкөз, бұл көршілес торкөздердің астында мина жоқ екенін білдіреді."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "Мина, ол жарылып, ойынды аяқтайды."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr ""
+"Астында минасы жоқ барлық торкөздерді ашқанша алдыңғы қадамды қайталаңыз."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
+msgstr ""
+"Егер ойынды тез аяқтасаңыз, сіз <link xref=\"high-scores\">үздік нәтижелер</"
+"link> тізіміне қосыласыз."
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Michael Hill"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Аударуға көмектесу"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr ""
+"<app>GNOME games</app> пайдаланушы интерфейсі мен құжаттамасы бүкіл "
+"дүниежүзілік еріктілер қауымдастығымен аударылуда. Сіз де қатыса аласыз."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr ""
+"Әлі де аударманы қажет ететін <link href=\"https://l10n.gnome.org/module/"
+"gnome-mines/\">көптеген тілдер</link> бар."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"https://"
+"l10n.gnome.org\">create an account</link> and join the <link href=\"https://"
+"l10n.gnome.org/teams/\">translation team</link> for your language. This will "
+"give you the ability to upload new translations."
+msgstr ""
+"Аударуды бастау үшін сізге <link href=\"https://l10n.gnome.org\">тіркелгі "
+"жасау</link> және өз тіліңіздің <link href=\"https://l10n.gnome.org/teams/"
+"\">аудару тобына</link> қосылу қажет болады. Бұл сізге жаңа аудармаларды "
+"жүктеп салу мүмкіндігін береді."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators in <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"i18n\">#gnome-i18n</link> on irc.libera.chat. People on the channel are "
+"located worldwide, so you may not get an immediate response as a result of "
+"timezone differences."
+msgstr ""
+"Сіз GNOME аудармашыларымен <link xref=\"help:gnome-help/help-"
+"matrix\">Matrix</link> желісіндегі <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> арнасында немесе irc.libera.chat "
+"желісіндегі <link href=\"https://web.libera.chat/#gnome-i18n\">#gnome-i18n</"
+"link> арнасында сөйлесе аласыз. Арнадағы адамдар бүкіл әлемде орналасқан, "
+"сондықтан уақыт белдеулерінің айырмашылығына байланысты бірден жауап ала "
+"алмауыңыз мүмкін."
+
+#. (itstool) path: page/p
+#: C/translate.page:41
+msgid ""
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
+msgstr ""
+"Сонымен қатар, сіз Интернационализация тобымен <link href=\"https://"
+"discourse.gnome.org/tag/i18n\">GNOME Discourse</link> арқылы байланыса "
+"аласыз."
