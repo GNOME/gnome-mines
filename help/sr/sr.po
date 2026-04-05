@@ -1,0 +1,591 @@
+# Serbian translation for gnome-mines.
+# Copyright (C) 2026 gnome-mines's COPYRIGHT HOLDER
+# This file is distributed under the same license as the gnome-mines package.
+# Марко Костић <marko.m.kostic@gmail.com>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gnome-mines main\n"
+"POT-Creation-Date: 2026-04-02 14:14+0000\n"
+"PO-Revision-Date: 2026-04-05 06:52+0200\n"
+"Last-Translator: Марко Костић <marko.m.kostic@gmail.com>\n"
+"Language-Team: Serbian <Serbian>\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
+"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.9\n"
+
+#. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
+msgctxt "_"
+msgid "translator-credits"
+msgstr ""
+"Марко Костић <marko.m.kostic@gmail.com>\n"
+"Превод на српски језик https://гном.срб"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:11 C/flags.page:20 C/high-scores.page:12
+#: C/new-game.page:13 C/rules.page:11
+msgid "Baptiste Mille-Mathias"
+msgstr "Батиста Миј-Матиас (Baptiste Mille-Mathias)"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:13 C/bug-filing.page:11 C/develop.page:12
+#: C/documentation.page:11 C/rules.page:13 C/translate.page:12
+msgid "2011"
+msgstr "2011"
+
+#. (itstool) path: credit/name
+#: C/board-size.page:16 C/documentation.page:14 C/flags.page:26
+#: C/high-scores.page:17 C/index.page:15 C/new-game.page:18 C/rules.page:16
+msgid "Ekaterina Gerasimova"
+msgstr "Екатерина Герасимова"
+
+#. (itstool) path: credit/years
+#: C/board-size.page:18 C/documentation.page:16 C/flags.page:16 C/flags.page:22
+#: C/flags.page:28 C/high-scores.page:14 C/high-scores.page:19
+#: C/new-game.page:15 C/new-game.page:20 C/rules.page:18
+msgid "2012"
+msgstr "2012"
+
+#. (itstool) path: page/title
+#: C/board-size.page:23
+msgid "How to change the game board size"
+msgstr "Како да промените величину табле за игру"
+
+#. (itstool) path: page/p
+#: C/board-size.page:25
+msgid "You can select a field size at the start of the application."
+msgstr "Можете изабрати величину поља на почетку програма."
+
+#. (itstool) path: page/p
+#: C/board-size.page:27
+msgid "Select one of the grid sizes:"
+msgstr "Изаберите једну од величина мреже:"
+
+#. (itstool) path: item/p
+#: C/board-size.page:29
+msgid "a 8 × 8 board with 10 mines"
+msgstr "табла 8 × 8 са 10 мина"
+
+#. (itstool) path: item/p
+#: C/board-size.page:30
+msgid "a 16 × 16 board with 40 mines"
+msgstr "табла 16 × 16 са 40 мина"
+
+#. (itstool) path: item/p
+#: C/board-size.page:31
+msgid "a 30 × 16 board with 99 mines"
+msgstr "табла 30 × 16 са 99 мина"
+
+#. (itstool) path: item/p
+#: C/board-size.page:32
+msgid "a custom board, where you chose the size and the number of mines"
+msgstr "произвољна табла, где сами бирате величину и број мина"
+
+#. (itstool) path: page/p
+#: C/board-size.page:36
+msgid ""
+"To change the <link xref=\"board-size\">board size</link> later, press the "
+"<gui style=\"button\">Change Difficulty</gui> button on the right."
+msgstr "Да бисте касније променили <link xref=\"board-size\">величину табле</link>, притисните дугме <gui style=\"button\">Промени тежину</gui> на десној страни."
+
+#. (itstool) path: credit/name
+#: C/bug-filing.page:9 C/develop.page:10 C/documentation.page:9 C/flags.page:14
+#: C/translate.page:10
+msgid "Tiffany Antopolski"
+msgstr "Tiffany Antopolski"
+
+#. (itstool) path: license/p
+#: C/bug-filing.page:14 C/develop.page:15 C/documentation.page:23
+#: C/index.page:19 C/translate.page:19
+msgid "Creative Commons Share Alike 3.0"
+msgstr "Creative Commons Share Alike 3.0"
+
+#. (itstool) path: page/title
+#: C/bug-filing.page:18
+msgid "Help make <app>Mines</app> better"
+msgstr "Помозите да <app>Мине</app> постану боље"
+
+#. (itstool) path: section/title
+#: C/bug-filing.page:21
+msgid "Report a bug or suggest an improvement"
+msgstr "Пријавите грешку или предложите побољшање"
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:22
+msgid ""
+"<app>Mines</app> is maintained by a volunteer community. You are welcome to "
+"participate. If you notice a problem you can file a <em>bug report</em>. To "
+"file a bug, go to <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
+msgstr "<app>Мине</app> одржава заједница волонтера. Добродошли сте да учествујете. Ако приметите проблем, можете поднети <em>пријаву грешке</em>. Да бисте пријавили грешку, идите на <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:25
+msgid ""
+"This is a bug tracking system where users and developers can file details "
+"about bugs and crashes, or request enhancements."
+msgstr "Ово је систем за праћење грешака где корисници и програмери могу поднети детаље о грешкама и падовима, или затражити побољшања."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:28
+msgid ""
+"To participate you need an account, which will give you the ability to gain "
+"access, file bugs, make comments, and receive updates by e-mail about the "
+"status of your bug. If you don't already have an account, just click on the "
+"<gui>Sign in/Register</gui> link to create one."
+msgstr "Да бисте учествовали, потребан вам је налог, који ће вам омогућити приступ, пријављивање грешака, остављање коментара и примање обавештења путем е-поште о статусу ваше грешке. Ако већ немате налог, само кликните на везу <gui>Пријави се/Региструј се</gui> да бисте га направили."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:32
+msgid ""
+"Once you have an account, log in, click on <gui>New Issue</gui>. Before "
+"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
+"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
+"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\">browse</link> for the bug to see if it already exists."
+msgstr "Када направите налог, пријавите се и кликните на <gui>Нови проблем</gui>. Пре него што пријавите грешку, прочитајте <link href=\"https://wiki.gnome.org/Community/GettingInTouch/BugReportingGuidelines\">смернице за писање грешака</link>, и <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">претражите</link> грешке да видите да ли већ постоји."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:39
+msgid ""
+"If you are requesting a new feature, choose <gui>Feature</gui> in the "
+"<gui>Labels</gui> menu. Fill in the Title and Description sections and click "
+"<gui>Submit issue</gui>."
+msgstr "Ако захтевате нову функцију, изаберите <gui>Функција</gui> у менију <gui>Ознаке</gui>. Попуните одељке Наслов и Опис и кликните на <gui>Пошаљи проблем</gui>."
+
+#. (itstool) path: section/p
+#: C/bug-filing.page:43
+msgid ""
+"Your report will be given an ID number, and its status will be updated as it "
+"is being dealt with. Thanks for helping make <app>Mines</app> better!"
+msgstr "Ваша пријава ће добити ИД број, а њен статус ће бити ажуриран како се буде решавала. Хвала што помажете да <app>Мине</app> постану боље!"
+
+#. (itstool) path: page/title
+#: C/develop.page:19
+msgid "Help develop"
+msgstr "Помозите развоју"
+
+#. (itstool) path: page/p
+#: C/develop.page:20
+msgid ""
+"The <app>GNOME Games</app> are developed and maintained by a volunteer "
+"community. You are welcome to participate."
+msgstr "Гномов комплет игара развија и одржава заједница добровољаца. Добродошли сте да учествујете."
+
+#. (itstool) path: page/p
+#: C/develop.page:23
+msgid ""
+"If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/"
+"#gnome-games\">#gnome-games</link> on irc.libera.chat, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+msgstr "Ако желите да <link href=\"https://wiki.gnome.org/Apps/Games/Contribute\">помогнете у развоју Гномовог комплета игара</link>, можете ступити у контакт са програмерима на <link href=\"https://matrix.to/#/#gnome-games:gnome.org\">#gnome-games:gnome.org</link> на <link xref=\"help:gnome-help/help-matrix\">Матриксу</link> или <link href=\"https://web.libera.chat/#gnome-games\">#gnome-games</link> on irc.libera.chat, или путем <link href=\"https://discourse.gnome.org/tag/games\">Гномовог Дискурса</link>."
+
+#. (itstool) path: credit/name
+#: C/documentation.page:19 C/new-game.page:23
+msgid "Aruna Sankaranarayanan"
+msgstr "Аруна Санкаранарајанан"
+
+#. (itstool) path: page/title
+#: C/documentation.page:27
+msgid "Help write documentation"
+msgstr "Помозите у писању документације"
+
+#. (itstool) path: page/p
+#: C/documentation.page:29
+msgid ""
+"The GNOME Games user help is maintained by a volunteer community. You are "
+"welcome to participate."
+msgstr "Корисничку помоћ за Гномов комплет игара одржава заједница добровољаца. Добродошли сте да учествујете."
+
+#. (itstool) path: page/p
+#: C/documentation.page:32
+msgid ""
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
+"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on "
+"irc.libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
+msgstr "Да бисте допринели пројекту документације, слободно ступите у контакт са нама на <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</link> на <link xref=\"help:gnome-help/help-matrix\">Матриксу</link> или <link href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> на irc.libera.chat, или путем <link href=\"https://discourse.gnome.org/tag/documentation\">Гномовог Дискурса</link>."
+
+#. (itstool) path: page/p
+#: C/documentation.page:39
+msgid ""
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
+msgstr "Наша <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing\">вики</link> страница садржи корисне податке."
+
+#. (itstool) path: page/title
+#: C/flags.page:33
+msgid "How to use flags"
+msgstr "Како користити заставице"
+
+#. (itstool) path: td/p
+#: C/flags.page:40
+msgid ""
+"Flags are used to mark tiles which you suspect may hide a mine. Putting a "
+"flag on a tile prevents you from clicking on it and possibly causing an "
+"explosion, which would end the game."
+msgstr "Заставице се користе за означавање поља за која сумњате да крију мину. Постављање заставице на поље спречава вас да кликнете на њега и евентуално изазовете експлозију, чиме би се игра завршила."
+
+#. (itstool) path: td/p
+#: C/flags.page:43
+msgid ""
+"The exact look of the flags depends on the theme. You can change the theme "
+"by pressing the menu button in the top-right corner of the window and then "
+"selecting <gui style=\"menuitem\">Appearance</gui>."
+msgstr "Тачан изглед заставица зависи од теме. Тему можете променити притиском на дугме изборника у горњем десном углу прозора и избором ставке <gui style=\"menuitem\">Изглед</gui>."
+
+#. (itstool) path: section/title
+#: C/flags.page:51
+msgid "How to place a flag on a tile"
+msgstr "Како поставити заставицу на поље"
+
+#. (itstool) path: td/p
+#: C/flags.page:55
+msgid "Flags cannot be clicked. To place a flag on a tile:"
+msgstr "На заставице се не може кликнути. Да бисте поставили заставицу на поље:"
+
+#. (itstool) path: item/p
+#: C/flags.page:57
+msgid "right click on a blank tile."
+msgstr "десним тастером миша кликните на празно поље."
+
+#. (itstool) path: section/title
+#: C/flags.page:69
+msgid "Use of the <em>question</em> flag"
+msgstr "Коришћење заставице <em>упитник</em>"
+
+#. (itstool) path: section/p
+#: C/flags.page:70
+msgid ""
+"If you are not sure whether a tile hides a mine, you can use the "
+"<em>question</em> flag."
+msgstr "Ако нисте сигурни да ли поље крије мину, можете користити заставицу <em>упитник</em>."
+
+#. (itstool) path: td/p
+#: C/flags.page:75
+msgid "To put an <em>I'm not sure</em> flag on a tile:"
+msgstr "Да бисте поставили заставицу <em>нисам сигуран</em> на поље:"
+
+#. (itstool) path: item/p
+#: C/flags.page:77
+msgid "Right-click twice on a blank tile or once on a flag."
+msgstr "Двапут кликните десним тастером миша на празно поље или једном на заставицу."
+
+#. (itstool) path: note/p
+#: C/flags.page:88
+msgid ""
+"To enable these flags, press the menu button in the top-right corner of the "
+"window and enable the <gui style=\"checkbox\">Use Question Flags</gui> "
+"preference."
+msgstr "Да бисте омогућили ове заставице, притисните дугме изборника у горњем десном углу прозора и омогућите поставку <gui style=\"checkbox\">Користи заставице упитника</gui>."
+
+#. (itstool) path: page/title
+#: C/high-scores.page:24
+msgid "High scores"
+msgstr "Најбољи резултати"
+
+#. (itstool) path: page/p
+#: C/high-scores.page:26
+msgid ""
+"The high scores list the ten fastest times in which each type of mine field "
+"has been cleared."
+msgstr "Листа најбољих резултата приказује десет најбржих времена за која је свака врста минског поља очишћена."
+
+#. (itstool) path: page/p
+#: C/high-scores.page:29
+msgid ""
+"To view the high scores, press the menu button in the top-right corner of "
+"the window and select <gui style=\"menuitem\">Scores</gui>. The dialog will "
+"display the <gui>Small</gui> field size by default; to view other sizes, "
+"select them in the drop down menu at the top of the dialog."
+msgstr "Да бисте видели најбоље резултате, притисните дугме изборника у горњем десном углу прозора и изаберите <gui style=\"menuitem\">Резултати</gui>. Прозорче ће подразумевано приказати <gui>Малу</gui> величину поља; да бисте видели остале величине, изаберите их у падајућем изборнику на врху прозорчета."
+
+#. (itstool) path: info/title
+#: C/index.page:6
+msgctxt "link:trail"
+msgid "Mines"
+msgstr "Мине"
+
+#. (itstool) path: info/title
+#: C/index.page:7
+msgctxt "link"
+msgid "Mines"
+msgstr "Мине"
+
+#. (itstool) path: info/title
+#: C/index.page:8
+msgctxt "text"
+msgid "Mines"
+msgstr "Мине"
+
+#. (itstool) path: credit/name
+#: C/index.page:11
+msgid "Brian Grohe"
+msgstr "Брајан Гроу (Brian Grohe)"
+
+#. (itstool) path: page/title
+#: C/index.page:23
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Мине"
+
+#. (itstool) path: page/p
+#: C/index.page:25
+msgid ""
+"<app>Mines</app> is a clone of the game Minesweeper. The aim is to locate "
+"all the mines that are hidden under tiles on a rectangular board. You will "
+"need to use a combination of logic and luck to find all the mines without "
+"triggering an explosion."
+msgstr "<app>Мине</app> је клон игре Миноловац. Циљ је пронаћи све мине које су скривене под плочицама на правоугаоној табли. Мораћете да користите комбинацију логике и среће да пронађете све мине без изазивања експлозије."
+
+#. (itstool) path: section/title
+#: C/index.page:32
+msgid "Game Play"
+msgstr "Играње игре"
+
+#. (itstool) path: section/title
+#: C/index.page:35
+msgid "Useful tips"
+msgstr "Корисни савети"
+
+#. (itstool) path: section/title
+#: C/index.page:44
+msgid "Get Involved"
+msgstr "Укључите се"
+
+#. (itstool) path: info/desc
+#: C/license.page:8
+msgid "Legal information."
+msgstr "Правни подаци."
+
+#. (itstool) path: page/title
+#: C/license.page:11
+msgid "License"
+msgstr "Лиценца"
+
+#. (itstool) path: page/p
+#: C/license.page:12
+msgid ""
+"This work is distributed under a CreativeCommons Attribution-Share Alike 3.0 "
+"Unported license."
+msgstr "Овај рад је расподељен под условима лиценце CreativeCommons Ауторство-Делити под истим условима 3.0 Србија."
+
+#. (itstool) path: page/p
+#: C/license.page:20
+msgid "You are free:"
+msgstr "Слободни сте:"
+
+#. (itstool) path: item/title
+#: C/license.page:25
+msgid "<em>To share</em>"
+msgstr "<em>Да делите</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:26
+msgid "To copy, distribute and transmit the work."
+msgstr "Да умножавате, расподељујете и преносите рад."
+
+#. (itstool) path: item/title
+#: C/license.page:29
+msgid "<em>To remix</em>"
+msgstr "<em>Да прерађујете</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:30
+msgid "To adapt the work."
+msgstr "Да прилагодите рад."
+
+#. (itstool) path: page/p
+#: C/license.page:33
+msgid "Under the following conditions:"
+msgstr "Под следећим условима:"
+
+#. (itstool) path: item/title
+#: C/license.page:38
+msgid "<em>Attribution</em>"
+msgstr "<em>Ауторство</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:39
+msgid ""
+"You must attribute the work in the manner specified by the author or "
+"licensor (but not in any way that suggests that they endorse you or your use "
+"of the work)."
+msgstr "Морате приписати рад на начин који је навео аутор или давалац лиценце (али не на начин који сугерише да они подржавају вас или ваше коришћење рада)."
+
+#. (itstool) path: item/title
+#: C/license.page:46
+msgid "<em>Share Alike</em>"
+msgstr "<em>Делити под истим условима</em>"
+
+#. (itstool) path: item/p
+#: C/license.page:47
+msgid ""
+"If you alter, transform, or build upon this work, you may distribute the "
+"resulting work only under the same, similar or a compatible license."
+msgstr "Ако измените, преобразите или надоградите овај рад, резултујући рад можете расподељивати само под истом, сличном или сагласном лиценцом."
+
+#. (itstool) path: page/p
+#: C/license.page:53
+msgid ""
+"For the full text of the license, see the <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons website</"
+"link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
+"sa/3.0/\">Commons Deed</link>."
+msgstr "За потпуни текст лиценце, погледајте <link href=\"http://creativecommons.org/licenses/by-sa/3.0/legalcode\">веб страницу CreativeCommons-а</link>, или прочитајте потпуни <link href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Commons Deed</link>."
+
+#. (itstool) path: credit/name
+#: C/new-game.page:27
+msgid "Rashi Aswani"
+msgstr "Раши Асвани (Rashi Aswani)"
+
+#. (itstool) path: page/title
+#: C/new-game.page:32
+msgid "Start a new game"
+msgstr "Почетак нове игре"
+
+#. (itstool) path: page/p
+#: C/new-game.page:34
+msgid "To start a new game:"
+msgstr "За почетак нове игре:"
+
+#. (itstool) path: item/p
+#: C/new-game.page:37
+msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
+msgstr "Притисните дугме <gui style=\"button\">Играј поново</gui> на десној страни."
+
+#. (itstool) path: item/p
+#: C/new-game.page:41
+msgid ""
+"To change the <link xref=\"board-size\">board size</link>, press the <gui "
+"style=\"button\">Change Difficulty</gui> button on the right."
+msgstr "Да бисте променили <link xref=\"board-size\">величину табле</link>, притисните дугме <gui style=\"button\">Промени тежину</gui> на десној страни."
+
+#. (itstool) path: note/p
+#: C/new-game.page:47
+msgid ""
+"If you are already playing a game and press the <gui style=\"button\">Start "
+"over</gui> button, <app>Mines</app> will ask if you want to <gui>Keep "
+"Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
+"your current game will be lost."
+msgstr "Ако већ играте игру и притиснете дугме <gui style=\"button\">Крени испочетка</gui>, <app>Мине</app> ће вас питати да ли желите да <gui>Задржите тренутну игру</gui> или да <gui>Започнете нову игру</gui>. Ако изаберете ово друго, ваша тренутна игра ће бити изгубљена."
+
+#. (itstool) path: page/title
+#: C/rules.page:24
+msgid "Game rules"
+msgstr "Правила игре"
+
+#. (itstool) path: page/p
+#: C/rules.page:26
+msgid ""
+"The aim of <app>Mines</app> is to clear the minefield without detonating any "
+"of the mines."
+msgstr "Циљ <app>Мина</app> је очистити минско поље без активирања било које од мина."
+
+#. (itstool) path: item/p
+#: C/rules.page:31
+msgid ""
+"Start by choosing one of the three default board sizes, or by selecting a "
+"custom board."
+msgstr "Почните тако што ћете изабрати једну од три подразумеване величине табле или тако што ћете изабрати произвољну таблу."
+
+#. (itstool) path: item/p
+#: C/rules.page:35
+msgid ""
+"The game begins with the board covered in tiles. Click on any tile to "
+"uncover it. You will reveal:"
+msgstr "Игра почиње са таблом прекривеном пољима. Кликните на било које поље да га откријете. Открићете:"
+
+#. (itstool) path: item/p
+#: C/rules.page:39
+msgid ""
+"A colored number, which represent the number of mines in the adjacent tiles. "
+"This will help you deduce where the mines are so that you can mark them with "
+"<link xref=\"flags\">flags</link>."
+msgstr "Обојени број, који представља број мина на суседним пољима. Ово ће вам помоћи да закључите где се мине налазе како бисте могли да их означите <link xref=\"flags\">заставицама</link>."
+
+#. (itstool) path: item/p
+#: C/rules.page:44
+msgid ""
+"A blank tile, which means there are no mines under any of the adjacent tiles."
+msgstr "Празно поље, што значи да нема мина испод било ког од суседних поља."
+
+#. (itstool) path: item/p
+#: C/rules.page:48
+msgid "A mine, which will detonate and end the game."
+msgstr "Мину, која ће експлодирати и завршити игру."
+
+#. (itstool) path: item/p
+#: C/rules.page:53
+msgid ""
+"Repeat the previous step until you have uncovered all the tiles which do not "
+"have mines underneath them."
+msgstr "Понављајте претходни корак док не откријете сва поља која немају мине испод себе."
+
+#. (itstool) path: page/p
+#: C/rules.page:58
+msgid ""
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
+msgstr "Ако завршите игру довољно брзо, бићете додати на листу <link xref=\"high-scores\">најбољих резултата</link>."
+
+#. (itstool) path: credit/name
+#: C/translate.page:15
+msgid "Michael Hill"
+msgstr "Мајкл Хил (Michael Hill)"
+
+#. (itstool) path: page/title
+#: C/translate.page:23
+msgid "Help translate"
+msgstr "Помозите у превођењу"
+
+#. (itstool) path: page/p
+#: C/translate.page:24
+msgid ""
+"The <app>GNOME games</app> user interface and documentation is being "
+"translated by a world-wide volunteer community. You are welcome to "
+"participate."
+msgstr "Корисничко сучеље и документацију <app>Гномових игара</app> преводи светска заједница волонтера. Добродошли сте да учествујете."
+
+#. (itstool) path: page/p
+#: C/translate.page:27
+msgid ""
+"There are <link href=\"https://l10n.gnome.org/module/gnome-mines/\">many "
+"languages</link> for which translations are still needed."
+msgstr "Постоје <link href=\"https://l10n.gnome.org/module/gnome-mines/\">многи језици</link> за које су преводи и даље потребни."
+
+#. (itstool) path: page/p
+#: C/translate.page:30
+msgid ""
+"To start translating you will need to <link href=\"https://"
+"l10n.gnome.org\">create an account</link> and join the <link href=\"https://"
+"l10n.gnome.org/teams/\">translation team</link> for your language. This will "
+"give you the ability to upload new translations."
+msgstr "Да бисте започели превођење, мораћете да <link href=\"https://l10n.gnome.org\">отворите налог</link> и придружите се <link href=\"https://l10n.gnome.org/teams/\">преводилачком тиму</link> за ваш језик. Ово ће вам омогућити да шаљете нове преводе."
+
+#. (itstool) path: page/p
+#: C/translate.page:34
+msgid ""
+"You can chat with GNOME translators in <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"i18n\">#gnome-i18n</link> on irc.libera.chat. People on the channel are "
+"located worldwide, so you may not get an immediate response as a result of "
+"timezone differences."
+msgstr "Можете ћаскати са Гномовим преводиоцима на <link href=\"https://matrix.to/#/#i18n:gnome.org\">#i18n:gnome.org</link> преко <link xref=\"help:gnome-help/help-matrix\">Матрикса</link> или на <link href=\"https://web.libera.chat/#gnome-i18n\">#gnome-i18n</link> на irc.libera.chat. Људи на каналу се налазе широм света, тако да можда нећете добити тренутни одговор због разлике у временским зонама."
+
+#. (itstool) path: page/p
+#: C/translate.page:41
+msgid ""
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
+msgstr "Алтернативно, можете контактирати тим за интернационализацију користећи <link href=\"https://discourse.gnome.org/tag/i18n\">Гномов дискурс</link>."
