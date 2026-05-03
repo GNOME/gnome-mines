@@ -7,6 +7,7 @@ public class Tile : Widget
 
     private GestureLongPress _gesture;                  // for keeping in memory
     private GestureClick _click_controller;             // for keeping in memory
+    private EventControllerMotion _motion_controller;
 
     public signal void tile_mouse_over (int x, int y);
     public signal void tile_pressed (int x, int y, uint button, int n_press, bool ctrl);
@@ -50,5 +51,12 @@ public class Tile : Widget
             tile_released (row, column, button);
         });
         add_controller (_click_controller);
+
+        _motion_controller = new EventControllerMotion ();
+        _motion_controller.enter.connect ((event) =>
+        {
+            tile_mouse_over (row, column);
+        });
+        add_controller (_motion_controller);
     }
 }

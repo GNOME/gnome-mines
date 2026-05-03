@@ -216,6 +216,7 @@ public class MinefieldView : Gtk.Widget
                 for (int j = 0; j < _minefield.height; j++)
                 {
                     mines[i,j] = new Tile (i, j);
+                    mines[i,j].tile_mouse_over.connect (tile_mouse_over_cb);
                     mines[i,j].tile_pressed.connect (tile_pressed_cb);
                     mines[i,j].tile_released.connect (tile_released_cb);
                     mines[i,j].tile_long_pressed.connect (tile_long_pressed_cb);
@@ -237,6 +238,19 @@ public class MinefieldView : Gtk.Widget
             _minefield.use_autoflag = use_autoflag;
             queue_resize ();
         }
+    }
+
+    public void tile_mouse_over_cb (int x, int y)
+    {
+        /* Check for end cases and paused game */
+        if (minefield.exploded || minefield.is_complete || minefield.paused)
+            return;
+
+        /* Check that the user isn't currently navigating with keyboard */
+        if (!selected.is_set || keyboard_cursor.is_set)
+            return;
+
+        selected.position = new Pos (x, y);
     }
 
     private inline void tile_pressed_cb (int x, int y, uint button, int n_press, bool ctrl)
