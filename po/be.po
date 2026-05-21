@@ -6,30 +6,29 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2022-11-05 19:24+0000\n"
-"PO-Revision-Date: 2022-11-28 00:51+0300\n"
-"Last-Translator: Launchpad translators\n"
+"POT-Creation-Date: 2026-05-04 04:22+0000\n"
+"PO-Revision-Date: 2026-05-21 14:33+0300\n"
+"Last-Translator: Yuras Shumovich <shumovichy@gmail.com>\n"
 "Language-Team: Belarusian <i18n-bel-gnome@googlegroups.com>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Poedit 3.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Poedit 3.8\n"
 "X-Project-Style: gnome\n"
 
-#: data/org.gnome.Mines.appdata.xml.in:8 data/org.gnome.Mines.desktop.in:3
-#: src/interface.ui:46 src/interface.ui:52 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:845
+#: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
+#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:741
 msgid "Mines"
 msgstr "Мінёр"
 
-#: data/org.gnome.Mines.appdata.xml.in:9 data/org.gnome.Mines.desktop.in:4
+#: data/org.gnome.Mines.metainfo.xml.in:9 data/org.gnome.Mines.desktop.in:3
 msgid "Clear hidden mines from a minefield"
 msgstr "Ачысціце поле ад схаваных мін"
 
-#: data/org.gnome.Mines.appdata.xml.in:11
+#: data/org.gnome.Mines.metainfo.xml.in:11
 msgid ""
 "Mines is a puzzle game where you search for hidden mines. Flag the spaces "
 "with mines as quickly as possible to make the board a safer place. You win "
@@ -38,10 +37,10 @@ msgid ""
 msgstr ""
 "Мінёр — гэта галаваломка, у якой трэба знайсці схаваныя міны. Як мага хутчэй "
 "пазначце міны на дошцы сцяжкамі, каб зрабіць яе бяспечнай. Калі пазначаны "
-"ўсе міны на дошцы, вы перамагаеце. Асцярожна, не націсніце не на адну, інакш "
+"ўсе міны на дошцы, вы перамагаеце. Асцярожна, не на адну не націсніце, бо "
 "гульня скончыцца!"
 
-#: data/org.gnome.Mines.appdata.xml.in:17
+#: data/org.gnome.Mines.metainfo.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
@@ -51,14 +50,14 @@ msgstr ""
 "ход, можна скарыстацца падказкай, за што налічваецца штрафны час, але гэта "
 "лепей за выбух міны!"
 
-#: data/org.gnome.Mines.appdata.xml.in:48
+#: data/org.gnome.Mines.metainfo.xml.in:143
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/org.gnome.Mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:11
 msgid "minesweeper;"
-msgstr "мінёр;сапёр;"
+msgstr "minesweeper;мінёр;сапёр;"
 
 #: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
@@ -74,15 +73,15 @@ msgstr "Вялікая дошка"
 
 #: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
-msgstr "Тэма аздаблення"
+msgstr "Тэма"
 
 #: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
-msgstr "Назва тэмы аздаблення для плітак."
+msgstr "Назва выкарыстанай тэмы для плітак."
 
 #: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
-msgstr "Ужываць сцяжок \"Невядомы\""
+msgstr "Ужываць сцяжок «Невядомы»"
 
 #: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
@@ -100,202 +99,193 @@ msgstr ""
 "Уключыце для аўтаматычнага пазначэння мін, калі для гэтага адкрыта ўжо "
 "дастаткова клетак"
 
-#: data/org.gnome.Mines.gschema.xml:20
-msgid "Enable animations"
-msgstr "Уключыць анімацыі"
-
 #: data/org.gnome.Mines.gschema.xml:21
-msgid "Set to false to disable theme-defined transition animations"
-msgstr "Настаўце false каб выключыць анімацыі пераходу, вызначаныя матывам"
-
-#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Колькасць слупкоў ва ўласнай гульні"
 
-#: data/org.gnome.Mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of rows in a custom game"
 msgstr "Колькасць радкоў ва ўласнай гульні"
 
-#: data/org.gnome.Mines.gschema.xml:35
+#: data/org.gnome.Mines.gschema.xml:30
 msgid "The number of mines in a custom game"
 msgstr "Колькасць мін ва ўласнай гульні"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "Board size"
 msgstr "Памер дошкі"
 
-#: data/org.gnome.Mines.gschema.xml:41
+#: data/org.gnome.Mines.gschema.xml:36
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Памер дошкі (0-2 = малы-вялікі, 3 = уласны)"
 
-#: data/org.gnome.Mines.gschema.xml:45
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Width of the window in pixels"
 msgstr "Шырыня акна ў пікселях"
 
-#: data/org.gnome.Mines.gschema.xml:49
+#: data/org.gnome.Mines.gschema.xml:44
 msgid "Height of the window in pixels"
 msgstr "Вышыня акна ў пікселях"
 
-#: data/org.gnome.Mines.gschema.xml:53
+#: data/org.gnome.Mines.gschema.xml:48
 msgid "true if the window is maximized"
-msgstr "праўда, калі акно разгорнута"
+msgstr "Значэнне «true», калі акно разгорнута"
 
-#: src/help-overlay.ui:12
+#: src/shortcuts-dialog.ui:7
 msgctxt "shortcut window"
 msgid "Window and game"
 msgstr "Акно і гульня"
 
-#: src/help-overlay.ui:17
+#: src/shortcuts-dialog.ui:11
 msgctxt "shortcut window"
 msgid "Start a new game"
 msgstr "Пачаць новую гульню"
 
-#: src/help-overlay.ui:24
+#: src/shortcuts-dialog.ui:17
 msgctxt "shortcut window"
 msgid "Restart game with current settings"
 msgstr "Перазапуск гульні з бягучымі наладамі"
 
-#: src/help-overlay.ui:31
+#: src/shortcuts-dialog.ui:23
 msgctxt "shortcut window"
 msgid "Pause the game"
 msgstr "Прыпыніць гульню"
 
-#: src/help-overlay.ui:38
+#: src/shortcuts-dialog.ui:29
 msgctxt "shortcut window"
 msgid "Show Help"
 msgstr "Паказаць даведку"
 
-#: src/help-overlay.ui:45
+#: src/shortcuts-dialog.ui:35
 msgctxt "shortcut window"
 msgid "Open Menu"
 msgstr "Адкрыць меню"
 
-#: src/help-overlay.ui:52
+#: src/shortcuts-dialog.ui:41
 msgctxt "shortcut window"
 msgid "Show Keyboard Shortcuts"
 msgstr "Паказаць спалучэнні клавіш"
 
-#: src/help-overlay.ui:59
+#: src/shortcuts-dialog.ui:47
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Выйсці"
 
-#: src/help-overlay.ui:67
+#: src/shortcuts-dialog.ui:54
 msgctxt "shortcut window"
 msgid "Game size selection"
 msgstr "Выбар памеру гульні"
 
-#: src/help-overlay.ui:72
+#: src/shortcuts-dialog.ui:58
 msgctxt "shortcut window"
 msgid "Game size: small"
 msgstr "Памер гульні: маленькі"
 
-#: src/help-overlay.ui:79
+#: src/shortcuts-dialog.ui:64
 msgctxt "shortcut window"
 msgid "Game size: medium"
 msgstr "Памер гульні: сярэдні"
 
-#: src/help-overlay.ui:86
+#: src/shortcuts-dialog.ui:70
 msgctxt "shortcut window"
 msgid "Game size: large"
 msgstr "Памер гульні: вялікі"
 
-#: src/help-overlay.ui:93
+#: src/shortcuts-dialog.ui:76
 msgctxt "shortcut window"
 msgid "Game size: custom"
 msgstr "Памер гульні: уласны"
 
-#: src/help-overlay.ui:101
+#: src/shortcuts-dialog.ui:83
 msgctxt "shortcut window"
 msgid "In-game"
 msgstr "Падчас гульні"
 
-#: src/help-overlay.ui:106 src/help-overlay.ui:113
+#: src/shortcuts-dialog.ui:87 src/shortcuts-dialog.ui:93
 msgctxt "shortcut window"
 msgid "Move the keyboard cursor"
 msgstr "Перамясціць курсор клавіятуры"
 
-#: src/help-overlay.ui:120
+#: src/shortcuts-dialog.ui:99
 msgctxt "shortcut window"
 msgid "Reveal field"
 msgstr "Раскрыць поле"
 
-#: src/help-overlay.ui:127
+#: src/shortcuts-dialog.ui:105
 msgctxt "shortcut window"
 msgid "Toggle field flag state"
 msgstr "Пераключыць стан сцяжка"
 
-#: src/interface.ui:15
+#: src/interface.ui:14
 msgid "_Scores"
 msgstr "_Рэкорды"
 
-#: src/interface.ui:19
+#: src/interface.ui:18
 msgid "A_ppearance"
 msgstr "Выгляд"
 
-#: src/interface.ui:25
+#: src/interface.ui:24
 msgid "_Use Question Flags"
 msgstr "_Выкарыстанне сцяжка з пытальнікам"
 
-#: src/interface.ui:31
+#: src/interface.ui:30
 msgid "_Keyboard Shortcuts"
 msgstr "_Спалучэнні клавіш"
 
-#: src/interface.ui:35
+#: src/interface.ui:34
 msgid "_Help"
 msgstr "_Даведка"
 
-#: src/interface.ui:39
+#: src/interface.ui:38
 msgid "_About Mines"
 msgstr "_Аб праграме"
 
-#: src/interface.ui:205
+#: src/interface.ui:170
 msgid "_Width"
 msgstr "_Шырыня"
 
-#: src/interface.ui:229
+#: src/interface.ui:191
 msgid "_Height"
 msgstr "_Вышыня"
 
-#: src/interface.ui:253
+#: src/interface.ui:212
 msgid "Percent _mines"
 msgstr "Працэнт _мін"
 
-#: src/interface.ui:279
+#: src/interface.ui:235
 msgid "_Cancel"
 msgstr "_Скасаваць"
 
-#: src/interface.ui:296
+#: src/interface.ui:251
 msgid "_Play Game"
 msgstr "_Гуляць"
 
-#: src/interface.ui:477
+#: src/interface.ui:366
 msgid "Paused"
 msgstr "Паўза"
 
-#: src/gnome-mines.vala:91
+#: src/gnome-mines.vala:92
 msgid "Print release version and exit"
 msgstr "Вывесці версію праграмы і выйсці"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:93
 msgid "Small game"
 msgstr "Маленькая гульня"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:94
 msgid "Medium game"
 msgstr "Сярэдняя гульня"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:95
 msgid "Big game"
 msgstr "Вялікая гульня"
 
-#. Label on the scores dialog
-#: src/gnome-mines.vala:265
-msgid "Minefield:"
-msgstr "Міннае поле:"
+#: src/gnome-mines.vala:214
+msgid "Minefield"
+msgstr "Міннае поле"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:301
+#: src/gnome-mines.vala:248
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
@@ -303,11 +293,11 @@ msgstr[0] "%d × %d, %d міна"
 msgstr[1] "%d × %d, %d міны"
 msgstr[2] "%d × %d, %d мін"
 
-#: src/gnome-mines.vala:352
+#: src/gnome-mines.vala:277
 msgid "Custom"
 msgstr "Уласны"
 
-#: src/gnome-mines.vala:452
+#: src/gnome-mines.vala:344
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
@@ -315,71 +305,75 @@ msgstr[0] "<b>%d</b> міна"
 msgstr[1] "<b>%d</b> міны"
 msgstr[2] "<b>%d</b> мін"
 
-#: src/gnome-mines.vala:563
+#: src/gnome-mines.vala:448
 msgid "Do you want to start a new game?"
 msgstr "Пачаць новую гульню?"
 
-#: src/gnome-mines.vala:564
+#: src/gnome-mines.vala:449
 msgid "If you start a new game, your current progress will be lost."
 msgstr ""
 "Калі вы пачняце новую гульню, прагрэс цяперашняй гульні будзе страчаны."
 
-#: src/gnome-mines.vala:565
-msgid "Keep Current Game"
-msgstr "Захаваць цяперашнюю гульню"
-
-#: src/gnome-mines.vala:566
+#: src/gnome-mines.vala:450
 msgid "Start New Game"
 msgstr "Пачаць новую гульню"
 
-#: src/gnome-mines.vala:616
+#: src/gnome-mines.vala:451
+msgid "Keep Current Game"
+msgstr "Захаваць цяперашнюю гульню"
+
+#: src/gnome-mines.vala:518
 msgid "St_art Over"
 msgstr "_Пачаць зноў"
 
-#: src/gnome-mines.vala:672
+#: src/gnome-mines.vala:572
 msgid "_Pause"
 msgstr "_Паўза"
 
-#: src/gnome-mines.vala:677
+#: src/gnome-mines.vala:577
 msgid "_Resume"
 msgstr "_Узнавіць"
 
-#: src/gnome-mines.vala:760
+#: src/gnome-mines.vala:658
 msgid "Play _Again"
 msgstr "Гуляць _зноў"
 
-#: src/gnome-mines.vala:821
-msgid "Main game:"
-msgstr "Галоўная гульня:"
+#: src/gnome-mines.vala:743
+msgid "The GNOME Project"
+msgstr "Праект GNOME"
 
-#: src/gnome-mines.vala:826
-msgid "Score:"
-msgstr "Лік:"
-
-#: src/gnome-mines.vala:829
-msgid "Resizing and SVG support:"
-msgstr "Падтрымка змянення памеру і SVG:"
-
-#: src/gnome-mines.vala:848
+#: src/gnome-mines.vala:745
 msgid "Clear explosive mines off the board"
-msgstr "Ачысціць дашку ад выбуховых мін"
+msgstr "Ачысціць дошку ад выбуховых мін"
 
-#: src/gnome-mines.vala:855
+#: src/gnome-mines.vala:750
 msgid "translator-credits"
 msgstr ""
 "Ales Nyakhaychyk <nab@mail.by>\n"
 "Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Юрась Шумовіч <shumovichy@gmail.com>"
 
-#: src/theme-selector-dialog.vala:104
+#: src/theme-selector-dialog.vala:108
 msgid "Select Theme"
 msgstr "Выбар тэмы"
 
+#~ msgid "Enable animations"
+#~ msgstr "Уключыць анімацыі"
+
+#~ msgid "Set to false to disable theme-defined transition animations"
+#~ msgstr "Настаўце false каб выключыць анімацыі пераходу, вызначаныя матывам"
+
+#~ msgid "Main game:"
+#~ msgstr "Галоўная гульня:"
+
+#~ msgid "Score:"
+#~ msgstr "Лік:"
+
+#~ msgid "Resizing and SVG support:"
+#~ msgstr "Падтрымка змянення памеру і SVG:"
+
 #~ msgid "GNOME Mines"
 #~ msgstr "Мінёр GNOME"
-
-#~ msgid "The GNOME Project"
-#~ msgstr "Праект GNOME"
 
 #~ msgid "Change _Difficulty"
 #~ msgstr "Змяніць _складанасць"
