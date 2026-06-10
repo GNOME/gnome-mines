@@ -15,6 +15,11 @@
       <summary>Enable automatic placing of flags</summary>
       <description>Set to true to automatically flag squares as mined when enough squares are revealed</description>
     </key>
+    <key name="auto-clear-on-flags" type="b">
+      <default>false</default>
+      <summary>Enable automatic clearing of squares</summary>
+      <description>Set to true to automatically clear squares when enough surrounding squares have flags</description>
+    </key>
     <key name="xsize" type="i">
       <default>16</default>
       <range min="4" max="100" />

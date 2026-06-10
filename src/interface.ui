@@ -24,6 +24,10 @@
         <attribute name="label" translatable="yes">_Use Question Flags</attribute>
         <attribute name="action">app.use-question-marks</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">Automatically clear on flags</attribute>
+        <attribute name="action">app.auto-clear-on-flags</attribute>
+      </item>
     </section>
     <section>
       <item>

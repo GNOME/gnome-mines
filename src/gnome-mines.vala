@@ -37,6 +37,7 @@ public class Mines : Adw.Application
     /* Shared Settings keys */
     public const string KEY_USE_QUESTION_MARKS = "use-question-marks";
     public const string KEY_USE_AUTOFLAG = "use-autoflag";
+    public const string KEY_AUTO_CLEAR_ON_FLAGS = "auto-clear-on-flags";
 
     private Widget main_screen;
     private Box main_screen_layout;
@@ -142,6 +143,10 @@ public class Mines : Adw.Application
         repeat_size_action.set_enabled (false);
         pause_action = lookup_action ("pause") as SimpleAction;
         pause_action.set_enabled (false);
+        settings.changed[KEY_AUTO_CLEAR_ON_FLAGS].connect (() => {
+            if (minefield != null)
+                minefield.auto_clear_on_flag = settings.get_boolean (KEY_AUTO_CLEAR_ON_FLAGS);
+        });
 
         size_actions[0] = lookup_action ("small-size") as SimpleAction;
         size_actions[1] = lookup_action ("medium-size") as SimpleAction;
@@ -149,6 +154,7 @@ public class Mines : Adw.Application
         size_actions[3] = lookup_action ("custom-size") as SimpleAction;
 
         add_action (settings.create_action (KEY_USE_QUESTION_MARKS));
+        add_action (settings.create_action (KEY_AUTO_CLEAR_ON_FLAGS));
 
         set_accels_for_action ("app.new-game",          { "<Control>n"      });
         set_accels_for_action ("app.silent-new-game",   {          "Escape" });

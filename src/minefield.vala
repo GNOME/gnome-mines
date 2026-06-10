@@ -71,6 +71,7 @@ public class Minefield : Object
     private uint _n_flags = 0;
 
     protected bool _use_autoflag;
+    private bool _auto_clear_on_flag;
 
     public uint n_cleared
     {
@@ -91,6 +92,11 @@ public class Minefield : Object
     {
         get { return _use_autoflag; }
         set { _use_autoflag = value; }
+    }
+
+    public bool auto_clear_on_flag
+    {
+        set { _auto_clear_on_flag = value; }
     }
 
     /* Game timer */
@@ -168,6 +174,12 @@ public class Minefield : Object
 
     public void multi_release (uint x, uint y)
     {
+        check_around (x, y, true);
+        check_for_completion();
+    }
+
+    private void check_around (uint x, uint y, bool compare_with_flags)
+    {
         if (!is_cleared (x, y) || get_flag (x, y) == FlagType.FLAG)
             return;
 
@@ -175,17 +187,18 @@ public class Minefield : Object
         var n_mines = get_n_adjacent_mines (x, y);
         uint n_flags = 0;
         uint n_unknown = 0;
-        foreach (var neighbour in neighbour_map)
-        {
-            var nx = (int) x + neighbour.x;
-            var ny = (int) y + neighbour.y;
-            if (!is_location (nx, ny))
-                continue;
-            if (get_flag (nx, ny) == FlagType.FLAG)
-                n_flags++;
-            if (!is_cleared (nx, ny))
-                n_unknown++;
-        }
+        if (compare_with_flags)
+            foreach (var neighbour in neighbour_map)
+            {
+                var nx = (int) x + neighbour.x;
+                var ny = (int) y + neighbour.y;
+                if (!is_location (nx, ny))
+                    continue;
+                if (get_flag (nx, ny) == FlagType.FLAG)
+                    n_flags++;
+                if (!is_cleared (nx, ny))
+                    n_unknown++;
+            }
 
         /* If have correct number of flags to mines then clear the other
          * locations, otherwise if the number of unknown squares is the
@@ -208,7 +221,7 @@ public class Minefield : Object
                 continue;
 
             if (do_clear && get_flag (nx, ny) != FlagType.FLAG){
-                clear_mine (nx, ny);
+                clear_mines_recursive (nx, ny);
                 if (clock == null)
                     return;
             } else {
@@ -234,18 +247,11 @@ public class Minefield : Object
 
         clear_mines_recursive (x, y);
 
-        /* Failed if this contained a mine */
-        if (locations[x, y].has_mine)
-        {
-            if (!exploded)
-            {
-                exploded = true;
-                stop_clock ();
-                explode ();
-            }
-            return;
-        }
+        check_for_completion();
+    }
 
+    private void check_for_completion ()
+    {
         /* Mark unmarked mines when won */
         if (is_complete && !exploded)
         {
@@ -263,6 +269,8 @@ public class Minefield : Object
         /* Ignore if already cleared */
         if (locations[x, y].cleared)
             return;
+        if (_auto_clear_on_flag && locations[x, y].flag == FlagType.FLAG)
+            return;
 
         locations[x, y].cleared = true;
         _n_cleared++;
@@ -272,20 +280,23 @@ public class Minefield : Object
         redraw_sector (x, y);
         marks_changed ();
 
-        /* Automatically clear locations if no adjacent mines */
-        if (!locations[x, y].has_mine && get_n_adjacent_mines (x, y) == 0)
+        /* Failed if this contained a mine */
+        if (locations[x, y].has_mine)
         {
-            foreach (var neighbour in neighbour_map)
+            if (!exploded)
             {
-                var nx = (int) x + neighbour.x;
-                var ny = (int) y + neighbour.y;
-                if (is_location (nx, ny))
-                    clear_mines_recursive (nx, ny);
+                exploded = true;
+                stop_clock ();
+                explode ();
             }
+            return;
         }
+
+        /* Automatically clear locations if no adjacent mines */
+        check_around (x, y, _auto_clear_on_flag);
     }
 
-    public void set_flag (uint x, uint y, FlagType flag)
+    private void set_flag (uint x, uint y, FlagType flag)
     {
         if (locations[x, y].cleared || locations[x, y].flag == flag)
             return;
@@ -296,6 +307,14 @@ public class Minefield : Object
             _n_flags--;
 
         locations[x, y].flag = flag;
+        if (flag == FlagType.FLAG && _auto_clear_on_flag)
+            foreach (var neighbour in neighbour_map)
+            {
+                var nx = (int) x + neighbour.x;
+                var ny = (int) y + neighbour.y;
+                if (is_location (nx, ny) && locations[nx, ny].cleared)
+                    check_around (nx, ny, true);
+            }
         redraw_sector (x, y);
         marks_changed ();
 
@@ -416,5 +435,12 @@ public class Minefield : Object
     {
         tick ();
         return true;
+    }
+
+    public void set_flag_action (uint x, uint y, FlagType flag)
+    {
+        set_flag (x, y, flag);
+        if (flag == FlagType.FLAG && _auto_clear_on_flag)
+            check_for_completion ();
     }
 }

@@ -236,6 +236,7 @@ public class MinefieldView : Gtk.Widget
             _minefield.explode.connect (explode_cb);
             _minefield.cleared.connect (complete_cb);
             _minefield.use_autoflag = use_autoflag;
+            _minefield.auto_clear_on_flag = settings.get_boolean (Mines.KEY_AUTO_CLEAR_ON_FLAGS);
             queue_resize ();
         }
     }
@@ -442,31 +443,31 @@ public class MinefieldView : Gtk.Widget
              * have made a mistake. */
             if (minefield.n_flags >= minefield.n_mines && use_question_marks)
             {
-                minefield.set_flag (x, y, FlagType.MAYBE);
+                minefield.set_flag_action (x, y, FlagType.MAYBE);
                 mines[x,y].add_css_class ("maybe");
             }
             else
             {
-                minefield.set_flag (x, y, FlagType.FLAG);
+                minefield.set_flag_action (x, y, FlagType.FLAG);
                 mines[x,y].add_css_class ("flag");
             }
             break;
 
         case FlagType.MAYBE:
             mines[x,y].remove_css_class ("maybe");
-            minefield.set_flag (x, y, FlagType.NONE);
+            minefield.set_flag_action (x, y, FlagType.NONE);
             break;
 
         case FlagType.FLAG:
             mines[x,y].remove_css_class ("flag");
             if (use_question_marks)
             {
-                minefield.set_flag (x, y, FlagType.MAYBE);
+                minefield.set_flag_action (x, y, FlagType.MAYBE);
                 mines[x,y].add_css_class ("maybe");
             }
             else
             {
-                minefield.set_flag (x, y, FlagType.NONE);
+                minefield.set_flag_action (x, y, FlagType.NONE);
             }
             break;
         }
