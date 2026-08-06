@@ -7,7 +7,7 @@ Before version 3.0, libgnome-games-support was shipped like a normal library,
 but now it is a copylib that is used as a meson subproject.
 
 ### Using as a meson subproject
-1. In your meson.build, declare a dependency on libgnome-games-support:
+1. In your meson.build, declare a dependency on libgnome-games-support, **and set the ``superproject_name``** (here it is ``gnome-mines``) **to the name of your project**:
 
 ```
 libgnome_games_support = subproject ('libgnome-games-support',
@@ -15,8 +15,6 @@ libgnome_games_support = subproject ('libgnome-games-support',
 
 libgnome_games_support_dep = libgnome_games_support.get_variable ('lggs_dependency')
 ```
-
-And set the ``superproject_name`` (here it is ``gnome-mines``) with the name of your project. 
 
 2. Create ``subprojects/libgnome-games-support.wrap``, it should contain
 
@@ -38,4 +36,6 @@ depth = 1
 
 You either read the comments in the source code or generate documentation for yourself with:
 
-``$ valadoc --package-name=libgnome-games-support --package-version=3.0 --force --pkg=gtk4 --pkg=libadwaita-1 --pkg=gee-0.8 -o docs games/config.vapi games/*.vala games/scores/*.vala``
+```bash
+$ valadoc --package-name=libgnome-games-support --package-version=3.0 --force --pkg=gtk4 --pkg=libadwaita-1 -o docs games/config.vapi games/theme-selector-dialog.vala games/scores/*.vala
+```

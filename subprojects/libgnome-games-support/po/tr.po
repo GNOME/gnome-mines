@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-10-22 17:24+0000\n"
-"PO-Revision-Date: 2025-10-24 02:01+0300\n"
+"POT-Creation-Date: 2026-01-27 19:36+0000\n"
+"PO-Revision-Date: 2026-01-30 01:29+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <gnome-turk@gnome.org>\n"
 "Language: tr\n"
@@ -24,55 +24,75 @@ msgstr ""
 "X-POOTLE-MTIME: 1423957720.000000\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:77
 msgid "No scores yet"
 msgstr "Henüz kayıtlı puan yok"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:82
 msgid "Play some games and your scores will show up here."
 msgstr "Biraz oyun oynarsanız puanlarınız burada görünecektir."
 
+#: games/scores/dialog.vala:91
+msgid "Clear Scores…"
+msgstr "Puanları Temizle…"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:97
+#: games/scores/dialog.vala:112
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "%1$s: %2$s İçin Yeni Puan"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:113
 msgid "Score"
 msgstr "Puan"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:103
+#: games/scores/dialog.vala:118
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "%1$s: %2$s İçin Yeni Zaman"
 
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:119
 msgid "Time"
 msgstr "Zaman"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:125
 msgid "Congratulations!"
 msgstr "Tebrikler!"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:139
+#: games/scores/dialog.vala:132 games/scores/dialog.vala:197
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:337
+#: games/scores/dialog.vala:375
 msgid "Player"
 msgstr "Oyuncu"
 
-#: games/scores/dialog.vala:343
+#: games/scores/dialog.vala:381
 msgid "_New Game"
 msgstr "_Yeni Oyun"
 
-#: games/scores/dialog.vala:354
+#: games/scores/dialog.vala:392
 msgid "_Quit"
 msgstr "_Çık"
+
+#: games/scores/dialog.vala:424
+msgid "Clear All Scores?"
+msgstr "Tüm Puanlar Temizlensin Mi?"
+
+#: games/scores/dialog.vala:425
+msgid "This will clear every score for every layout."
+msgstr "Bu, tüm düzenlerdeki puanları temizleyecek."
+
+#: games/scores/dialog.vala:428
+msgid "_Cancel"
+msgstr "İ_ptal"
+
+#: games/scores/dialog.vala:429
+msgid "Clear All"
+msgstr "Tümünü Temizle"
 
 #~ msgid "New Score in"
 #~ msgstr "Yeni Puan"

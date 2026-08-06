@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: libgames-scores master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-10-09 12:41+0000\n"
-"PO-Revision-Date: 2025-10-09 18:17+0200\n"
+"POT-Creation-Date: 2026-01-25 21:30+0000\n"
+"PO-Revision-Date: 2026-01-26 12:03+0100\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenščina <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -20,55 +20,75 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:73
 msgid "No scores yet"
 msgstr "Še ni rezultatov"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:78
 msgid "Play some games and your scores will show up here."
 msgstr "Po igranju iger bodo rezultati prikazani na tem mestu."
 
+#: games/scores/dialog.vala:87
+msgid "Clear Scores…"
+msgstr "Počisti rezultate …"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:97
+#: games/scores/dialog.vala:108
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "Nov rezultat za %1$s: %2$s"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:109
 msgid "Score"
 msgstr "Rezultat"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:103
+#: games/scores/dialog.vala:114
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "Nov čas za %1$s: %2$s"
 
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:115
 msgid "Time"
 msgstr "Čas"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:121
 msgid "Congratulations!"
 msgstr "Čestitke!"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:139
+#: games/scores/dialog.vala:128 games/scores/dialog.vala:150
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:337
+#: games/scores/dialog.vala:358
 msgid "Player"
 msgstr "Igralec"
 
-#: games/scores/dialog.vala:343
+#: games/scores/dialog.vala:364
 msgid "_New Game"
 msgstr "_Nova igra"
 
-#: games/scores/dialog.vala:354
+#: games/scores/dialog.vala:375
 msgid "_Quit"
 msgstr "_Izhod"
+
+#: games/scores/dialog.vala:407
+msgid "Clear All Scores?"
+msgstr "Ali želite počistiti vse rezultate?"
+
+#: games/scores/dialog.vala:408
+msgid "This will clear every score for every layout."
+msgstr "S tem počistite vsak rezultat za vsako postavitev."
+
+#: games/scores/dialog.vala:411
+msgid "_Cancel"
+msgstr "Pre_kliči"
+
+#: games/scores/dialog.vala:412
+msgid "Clear All"
+msgstr "Počisti vse"

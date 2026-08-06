@@ -6,3 +6,13 @@ include:
    inputs:
      dist-job-name: "build-gnomeos"
      tarball-artifact-path: "_builddir/meson-dist/$CI_PROJECT_NAME-$CI_COMMIT_TAG.tar.xz"
+stages:
+  - lint
+  - build
+  - deploy
+
+lint:
+  image: valalang/lint:latest
+  stage: lint
+  script:
+    - io.elementary.vala-lint games tests -c vala-lint.conf

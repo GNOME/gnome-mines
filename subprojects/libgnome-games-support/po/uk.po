@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Daniel Korostil <ted.korostiled@gmail.com>, 2016, 2017.
-# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/i"
 "ssues\n"
-"POT-Creation-Date: 2025-10-09 16:18+0000\n"
-"PO-Revision-Date: 2025-10-09 21:45+0300\n"
+"POT-Creation-Date: 2026-01-25 21:30+0000\n"
+"PO-Revision-Date: 2026-01-26 02:10+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -20,55 +20,76 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:73
 msgid "No scores yet"
 msgstr "Без балів поки"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:78
 msgid "Play some games and your scores will show up here."
 msgstr "Зіграйте якусь гру і бали з'являться тут."
 
+#: games/scores/dialog.vala:87
+msgid "Clear Scores…"
+msgstr "Вилучити усі результати…"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:97
+#: games/scores/dialog.vala:108
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "Новий результат для %1$s: %2$s"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:109
 msgid "Score"
 msgstr "Бал"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:103
+#: games/scores/dialog.vala:114
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "Новий час для %1$s: %2$s"
 
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:115
 msgid "Time"
 msgstr "Час"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:121
 msgid "Congratulations!"
 msgstr "Вітаємо!"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:139
+#: games/scores/dialog.vala:128 games/scores/dialog.vala:150
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:337
+#: games/scores/dialog.vala:358
 msgid "Player"
 msgstr "Гравець"
 
-#: games/scores/dialog.vala:343
+#: games/scores/dialog.vala:364
 msgid "_New Game"
 msgstr "_Нова гра"
 
-#: games/scores/dialog.vala:354
+#: games/scores/dialog.vala:375
 msgid "_Quit"
 msgstr "Ви_йти"
+
+#: games/scores/dialog.vala:407
+msgid "Clear All Scores?"
+msgstr "Вилучити усі результати?"
+
+#: games/scores/dialog.vala:408
+msgid "This will clear every score for every layout."
+msgstr ""
+"Це призведе до вилучення усіх результатів для усіх розташувань плиток."
+
+#: games/scores/dialog.vala:411
+msgid "_Cancel"
+msgstr "_Скасувати"
+
+#: games/scores/dialog.vala:412
+msgid "Clear All"
+msgstr "Спорожнити все"
 
 #~ msgid "New Score in"
 #~ msgstr "Нові бали у"

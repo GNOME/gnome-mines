@@ -6,82 +6,116 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
-"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
-"issues\n"
-"POT-Creation-Date: 2020-07-02 18:35+0000\n"
-"PO-Revision-Date: 2020-07-07 00:14+0500\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/issues\n"
+"POT-Creation-Date: 2026-01-25 21:30+0000\n"
+"PO-Revision-Date: 2026-01-26 20:28+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <kk_KZ@googlegroups.com>\n"
 "Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
-"X-Generator: Poedit 2.3.1\n"
+"X-Generator: Poedit 3.8\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:58
-msgid "Congratulations!"
-msgstr "Құттықтаймыз!"
-
-#: games/scores/dialog.vala:60
-msgid "High Scores"
-msgstr "Үздік ұпайлар"
-
-#: games/scores/dialog.vala:62
-msgid "Best Times"
-msgstr "Үздік уақыттар"
-
-#: games/scores/dialog.vala:81
+#. Empty State
+#: games/scores/dialog.vala:73
 msgid "No scores yet"
 msgstr "Ұпай саны әлі жоқ"
 
-#: games/scores/dialog.vala:85
+#: games/scores/dialog.vala:78
 msgid "Play some games and your scores will show up here."
 msgstr "Кейбір ойындарды ойнаңыз, ұпайларыңыз осында көрсетіледі."
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:142
-msgid "Rank"
-msgstr "Рейтинг"
+#: games/scores/dialog.vala:87
+msgid "Clear Scores…"
+msgstr "Ұпайларды тазарту…"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:151
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New
+#. Score for Level: 1")
+#: games/scores/dialog.vala:108
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "%1$s үшін жаңа ұпай: %2$s"
+
+#: games/scores/dialog.vala:109
 msgid "Score"
 msgstr "Ұпай саны"
 
-#: games/scores/dialog.vala:153
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New
+#. Time for Level: 1")
+#: games/scores/dialog.vala:114
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "%1$s үшін жаңа уақыт: %2$s"
+
+#: games/scores/dialog.vala:115
 msgid "Time"
 msgstr "Уақыт"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:160
+#: games/scores/dialog.vala:121
+msgid "Congratulations!"
+msgstr "Құттықтаймыз!"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level:
+#. 1")
+#: games/scores/dialog.vala:128 games/scores/dialog.vala:150
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: games/scores/dialog.vala:358
 msgid "Player"
 msgstr "Ойыншы"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:170
-msgid "_Done"
-msgstr "_Дайын"
+#: games/scores/dialog.vala:364
+msgid "_New Game"
+msgstr "_Жаңа ойын"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:286
+#: games/scores/dialog.vala:375
+msgid "_Quit"
+msgstr "_Шығу"
+
+#: games/scores/dialog.vala:407
+msgid "Clear All Scores?"
+msgstr "Барлық ұпайларды тазарту керек пе?"
+
+#: games/scores/dialog.vala:408
+msgid "This will clear every score for every layout."
+msgstr "Бұл әр жайма үшін әрбір ұпайды тазартады."
+
+#: games/scores/dialog.vala:411
+msgid "_Cancel"
+msgstr "_Бас тарту"
+
+#: games/scores/dialog.vala:412
+msgid "Clear All"
+msgstr "Барлығын тазарту"
+
+#~ msgid "High Scores"
+#~ msgstr "Үздік ұпайлар"
+
+#~ msgid "Best Times"
+#~ msgstr "Үздік уақыттар"
+
+#~ msgid "Rank"
+#~ msgstr "Рейтинг"
+
+#~ msgid "_Done"
+#~ msgstr "_Дайын"
+
 #, c-format
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld минут"
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld минут"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:288
 #, c-format
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld секунд"
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld секунд"
 
-#: games/scores/dialog.vala:294
-msgid "Your score is the best!"
-msgstr "Сіздің ұпайыңыз – ең жақсы!"
+#~ msgid "Your score is the best!"
+#~ msgstr "Сіздің ұпайыңыз – ең жақсы!"
 
-#: games/scores/dialog.vala:296
-msgid "Your score has made the top ten."
-msgstr "Сіздің ұпайыңыз үздік ондыққа кірді."
+#~ msgid "Your score has made the top ten."
+#~ msgstr "Сіздің ұпайыңыз үздік ондыққа кірді."

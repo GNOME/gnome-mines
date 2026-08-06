@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-10-08 23:44+0000\n"
-"PO-Revision-Date: 2025-10-09 18:58+1000\n"
+"POT-Creation-Date: 2026-01-26 21:50+0000\n"
+"PO-Revision-Date: 2026-01-27 20:41+1000\n"
 "Last-Translator: Ser82-png <asvmail.as@gmail.com>\n"
 "Language-Team: Russian <gnome-cyr@gnome.org>\n"
 "Language: ru\n"
@@ -21,55 +21,75 @@ msgstr ""
 "X-Generator: Poedit 3.0.1\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:74
 msgid "No scores yet"
 msgstr "Результатов ещё нет"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:79
 msgid "Play some games and your scores will show up here."
 msgstr "Сыграйте в несколько игр и ваши результаты появятся здесь."
 
+#: games/scores/dialog.vala:88
+msgid "Clear Scores…"
+msgstr "Очистить результаты…"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:97
+#: games/scores/dialog.vala:109
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "Новый результат для %1$s: %2$s"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:110
 msgid "Score"
 msgstr "Результаты"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:103
+#: games/scores/dialog.vala:115
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "Новое время для %1$s: %2$s"
 
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:116
 msgid "Time"
 msgstr "Время"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:122
 msgid "Congratulations!"
 msgstr "Поздравляем!"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:139
+#: games/scores/dialog.vala:129 games/scores/dialog.vala:151
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:337
+#: games/scores/dialog.vala:356
 msgid "Player"
 msgstr "Игрок"
 
-#: games/scores/dialog.vala:343
+#: games/scores/dialog.vala:362
 msgid "_New Game"
 msgstr "_Новая игра"
 
-#: games/scores/dialog.vala:354
+#: games/scores/dialog.vala:373
 msgid "_Quit"
 msgstr "_Выйти"
+
+#: games/scores/dialog.vala:405
+msgid "Clear All Scores?"
+msgstr "Очистить все результаты?"
+
+#: games/scores/dialog.vala:406
+msgid "This will clear every score for every layout."
+msgstr "Это позволит обнулить все результаты для каждого макета."
+
+#: games/scores/dialog.vala:409
+msgid "_Cancel"
+msgstr "_Отменить"
+
+#: games/scores/dialog.vala:410
+msgid "Clear All"
+msgstr "Очистить всё"
 
 #~ msgid "New Score in"
 #~ msgstr "Новый результат в"

@@ -677,10 +677,14 @@ public class Mines : Adw.Application
         pause_action.set_enabled (false);
         repeat_size_action.set_enabled (false);
 
-        context.add_score_full.begin (duration, create_category_from_key (key), null, window, repeat_size_cb, quit_cb, null, (object, result) => {
+        context.add_score_full.begin (duration, create_category_from_key (key), null, window, true, null, (object, result) => {
             try
             {
-                context.add_score_full.end (result);
+                var score_result = context.add_score_full.end (result).action;
+                if (score_result == Games.Scores.AddScoreAction.NEW_GAME)
+                    repeat_size_cb ();
+                else if (score_result == Games.Scores.AddScoreAction.QUIT)
+                    quit_cb ();
             }
             catch (Error e)
             {

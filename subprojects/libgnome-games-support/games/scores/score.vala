@@ -77,7 +77,7 @@ public class Score : Object
                 return;
             }
 
-            _extra_info = Base64.encode(value.data);
+            _extra_info = Base64.encode (value.data);
         }
     }
 

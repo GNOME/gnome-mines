@@ -13,6 +13,11 @@ gio_dependency = dependency('gio-2.0', version: '>= 2.44.0')
 glib_dependency = dependency('glib-2.0', version: '>= 2.44.0')
 gtk_dependency = dependency('gtk4', version: '>= 4.2.0')
 
+if get_option('sounds')
+   sndfile_dependency = dependency('sndfile')
+   openal_dependency = dependency('openal')
+endif
+
 includedir = join_paths(get_option('prefix'), get_option('includedir'))
 localedir = join_paths(get_option('prefix'), get_option('localedir'))
 gettext_package = get_option('superproject_name') + '_' + meson.project_name()

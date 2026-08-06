@@ -22,21 +22,17 @@ namespace Games {
 
 public class ThemeSelectorDialog : Adw.Dialog
 {
-    /**
-     * The index of the theme the user has selected.
-     *
-     */
-    public uint active_index = -1;
+    private uint active_index = -1;
     private string[] theme_names;
     private Adw.Bin theme_bin;
     private Gtk.Button prev_button;
     private Gtk.Button next_button;
 
     /**
-     * A function that updates the theme preview widget, and the games current theme.
+     * Emitted when the user selects a new theme, sets the theme preview.
      *
      */
-    public delegate Gtk.Widget ChangeThemeFunc (string theme_name, Gtk.Widget old_theme_preview);
+    public signal Gtk.Widget change_theme (string theme_name, Gtk.Widget old_theme_preview);
 
     /**
      * Creates a new ThemeSelectorDialog
@@ -45,7 +41,7 @@ public class ThemeSelectorDialog : Adw.Dialog
      * If `theme_names` is empty, the dialog will break.
      *
      */
-    public ThemeSelectorDialog (string[] theme_names, string active_theme, Gtk.Widget theme_preview, ChangeThemeFunc theme_update)
+    public ThemeSelectorDialog (string[] theme_names, string active_theme, Gtk.Widget theme_preview)
     {
         this.theme_names = theme_names;
         for (uint i = 0; i < theme_names.length; i++)
@@ -56,22 +52,22 @@ public class ThemeSelectorDialog : Adw.Dialog
         var builder = new Gtk.Builder ();
         Adw.ToolbarView toolbar = new Adw.ToolbarView ();
         Adw.HeaderBar headerbar = new Adw.HeaderBar ();
-        set_title ("Select Theme");
+        set_title (_("Select Theme"));
         headerbar.set_show_start_title_buttons (true);
         headerbar.set_show_end_title_buttons (true);
         Gtk.Box buttons_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
         prev_button = new Gtk.Button.from_icon_name ("go-previous-symbolic");
         next_button = new Gtk.Button.from_icon_name ("go-next-symbolic");
-        prev_button.set_tooltip_text ("Previous");
-        next_button.set_tooltip_text ("Next");
+        prev_button.set_tooltip_text (_("Previous"));
+        next_button.set_tooltip_text (_("Next"));
         next_button.clicked.connect (() => {
             ++active_index;
-            update (theme_update);
+            update ();
 
         });
         prev_button.clicked.connect (() => {
             --active_index;
-            update (theme_update);
+            update ();
         });
         buttons_box.append (prev_button);
         buttons_box.append (next_button);
@@ -85,12 +81,12 @@ public class ThemeSelectorDialog : Adw.Dialog
         toolbar.add_child (builder, theme_bin, null);
     }
 
-    private void update (ChangeThemeFunc theme_update)
-        requires ((theme_update != null) && (theme_bin.child != null) && (active_index != -1))
+    private void update ()
+        requires ((theme_bin.child != null) && (active_index != -1))
     {
         next_button.set_sensitive (active_index < theme_names.length - 1);
         prev_button.set_sensitive (active_index > 0);
-        var new_preview = theme_update (theme_names[active_index], theme_bin.get_child ());
+        var new_preview = change_theme (theme_names[active_index], theme_bin.get_child ());
         theme_bin.set_child (new_preview);
     }
 }

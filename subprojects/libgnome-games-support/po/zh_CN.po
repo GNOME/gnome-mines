@@ -2,15 +2,15 @@
 # Copyright (C) 2016 libgnome-games-support's COPYRIGHT HOLDER
 # This file is distributed under the same license as the libgnome-games-support package.
 # Mandy Wang <wangmychn@gmail.com>, 2016.
-# lumingzh <lumingzh@qq.com>, 2025.
+# lumingzh <lumingzh@qq.com>, 2025-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libgnome-games-support games-1-2\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-10-08 23:13+0000\n"
-"PO-Revision-Date: 2025-10-09 07:42+0800\n"
+"POT-Creation-Date: 2026-01-26 21:50+0000\n"
+"PO-Revision-Date: 2026-01-27 10:09+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -21,55 +21,75 @@ msgstr ""
 "X-Generator: Gtranslator 49.0\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:74
 msgid "No scores yet"
 msgstr "还没有分数记录"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:79
 msgid "Play some games and your scores will show up here."
 msgstr "去玩一些游戏，然后你的分数会显示到这里。"
 
+#: games/scores/dialog.vala:88
+msgid "Clear Scores…"
+msgstr "清除得分…"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:97
+#: games/scores/dialog.vala:109
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "%1$s 的新得分：%2$s"
 
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:110
 msgid "Score"
 msgstr "得分"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:103
+#: games/scores/dialog.vala:115
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "%1$s 的新用时：%2$s"
 
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:116
 msgid "Time"
 msgstr "时间"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:122
 msgid "Congratulations!"
 msgstr "恭喜！"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:139
+#: games/scores/dialog.vala:129 games/scores/dialog.vala:151
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:337
+#: games/scores/dialog.vala:356
 msgid "Player"
 msgstr "玩家"
 
-#: games/scores/dialog.vala:343
+#: games/scores/dialog.vala:362
 msgid "_New Game"
 msgstr "新游戏(_N)"
 
-#: games/scores/dialog.vala:354
+#: games/scores/dialog.vala:373
 msgid "_Quit"
 msgstr "退出(_Q)"
+
+#: games/scores/dialog.vala:405
+msgid "Clear All Scores?"
+msgstr "清除所有得分吗？"
+
+#: games/scores/dialog.vala:406
+msgid "This will clear every score for every layout."
+msgstr "这会清除所有布局的所有得分。"
+
+#: games/scores/dialog.vala:409
+msgid "_Cancel"
+msgstr "取消(_C)"
+
+#: games/scores/dialog.vala:410
+msgid "Clear All"
+msgstr "全部清除"
 
 #~ msgid "New Score in"
 #~ msgstr "新得分"

@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2025-11-30 05:13+0000\n"
-"PO-Revision-Date: 2025-12-03 22:55+0200\n"
+"POT-Creation-Date: 2026-02-23 16:11+0000\n"
+"PO-Revision-Date: 2026-06-06 22:33+0300\n"
 "Last-Translator: Aurimas Černius <aurimas.cernius@mailo.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -18,58 +18,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 3.8\n"
+"X-Generator: Poedit 3.9\n"
 
 #. Empty State
-#: games/scores/dialog.vala:71
+#: games/scores/dialog.vala:83
 msgid "No scores yet"
 msgstr "Dar nėra rezultatų"
 
-#: games/scores/dialog.vala:76
+#: games/scores/dialog.vala:88
 msgid "Play some games and your scores will show up here."
 msgstr "Sužaiskite kelis žaidimus ir čia matysite rezultatus."
 
+#: games/scores/dialog.vala:97
+msgid "Clear Scores…"
+msgstr "Išvalyti rezultatus…"
+
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
-#: games/scores/dialog.vala:98
+#: games/scores/dialog.vala:118
 #, c-format
 msgid "New Score for %1$s: %2$s"
 msgstr "Naujas %1$s rezultatas: %2$s"
 
-#: games/scores/dialog.vala:99
+#: games/scores/dialog.vala:119
 msgid "Score"
 msgstr "Rezultatas"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
-#: games/scores/dialog.vala:104
+#: games/scores/dialog.vala:124
 #, c-format
 msgid "New Time for %1$s: %2$s"
 msgstr "Naujas %1$s laikas: %2$s"
 
-#: games/scores/dialog.vala:105
+#: games/scores/dialog.vala:125
 msgid "Time"
 msgstr "Laikas"
 
-#: games/scores/dialog.vala:111
+#: games/scores/dialog.vala:134
 msgid "Congratulations!"
 msgstr "Sveikinama!"
 
 #. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
-#: games/scores/dialog.vala:118 games/scores/dialog.vala:140
+#: games/scores/dialog.vala:141 games/scores/dialog.vala:209
 #, c-format
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:347
+#: games/scores/dialog.vala:387
 msgid "Player"
 msgstr "Žaidėjas"
 
-#: games/scores/dialog.vala:353
+#: games/scores/dialog.vala:393
 msgid "_New Game"
 msgstr "_Naujas žaidimas"
 
-#: games/scores/dialog.vala:364
+#: games/scores/dialog.vala:404
 msgid "_Quit"
 msgstr "_Išeiti"
+
+#: games/scores/dialog.vala:436
+msgid "Clear All Scores?"
+msgstr "Išvalyti visus rezultatus?"
+
+#: games/scores/dialog.vala:437
+msgid "This will clear every score for every layout."
+msgstr "Bus išvalyti visi kiekvieno išdėstymo rezultatai."
+
+#: games/scores/dialog.vala:440
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+#: games/scores/dialog.vala:441
+msgid "Clear All"
+msgstr "Išvalyti viską"
 
 #~ msgid "New Score in"
 #~ msgstr "Naujas rezultatas"

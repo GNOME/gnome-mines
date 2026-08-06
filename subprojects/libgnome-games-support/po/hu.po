@@ -1,16 +1,16 @@
 # Hungarian translation for libgames-scores.
-# Copyright (C) 2014, 2015, 2016, 2025 Free Software Foundation, Inc.
+# Copyright (C) 2014, 2015, 2016, 2025, 2026 Free Software Foundation, Inc.
 # This file is distributed under the same license as the libgames-scores package.
 #
-# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2025.
+# Balázs Úr <ur.balazs at fsf dot hu>, 2014, 2015, 2025, 2026.
 # Gabor Kelemen <kelemeng at ubuntu dot com>, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: libgames-scores master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/is"
 "sues\n"
-"POT-Creation-Date: 2025-08-31 00:15+0000\n"
-"PO-Revision-Date: 2025-09-01 15:37+0200\n"
+"POT-Creation-Date: 2026-02-23 16:11+0000\n"
+"PO-Revision-Date: 2026-03-06 01:32+0100\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -18,51 +18,75 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. Empty State
-#: games/scores/dialog.vala:60
-msgid "No scores yet"
-msgstr "Még nincsenek pontok"
-
-#: games/scores/dialog.vala:65
-msgid "Play some games and your scores will show up here."
-msgstr "Játsszon pár játékot, és a pontjai itt fognak megjelenni."
-
 #: games/scores/dialog.vala:83
-msgid "Score"
-msgstr "Pont"
-
-#: games/scores/dialog.vala:84
-msgid "New Score in"
-msgstr "Új pont ebben"
+msgid "No scores yet"
+msgstr "Még nincsenek pontszámok"
 
 #: games/scores/dialog.vala:88
+msgid "Play some games and your scores will show up here."
+msgstr "Játsszon pár játékot, és a pontszámai itt fognak megjelenni."
+
+#: games/scores/dialog.vala:97
+msgid "Clear Scores…"
+msgstr "Pontszámok törlése…"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:118
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "Új %1$s pontszám: %2$s"
+
+#: games/scores/dialog.vala:119
+msgid "Score"
+msgstr "Pontszám"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:124
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "Új %1$s idő: %2$s"
+
+#: games/scores/dialog.vala:125
 msgid "Time"
 msgstr "Idő"
 
-#: games/scores/dialog.vala:89
-msgid "New Time in"
-msgstr "Új idő ebben"
-
-#: games/scores/dialog.vala:96
+#: games/scores/dialog.vala:134
 msgid "Congratulations!"
-msgstr "Gratulálok!"
+msgstr "Gratulálunk!"
 
-#. Button in the top right corner, finishes the dialog
-#: games/scores/dialog.vala:100
-#| msgid "_Done"
-msgid "Done"
-msgstr "Kész"
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:141 games/scores/dialog.vala:209
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
 
-#: games/scores/dialog.vala:303
+#: games/scores/dialog.vala:387
 msgid "Player"
 msgstr "Játékos"
 
-#: games/scores/dialog.vala:310
+#: games/scores/dialog.vala:393
 msgid "_New Game"
 msgstr "Ú_j játék"
 
-#: games/scores/dialog.vala:321
+#: games/scores/dialog.vala:404
 msgid "_Quit"
 msgstr "_Kilépés"
+
+#: games/scores/dialog.vala:436
+msgid "Clear All Scores?"
+msgstr "Törli az összes pontszámot?"
+
+#: games/scores/dialog.vala:437
+msgid "This will clear every score for every layout."
+msgstr "Ez törli az összes pontszámot minden elrendezésnél."
+
+#: games/scores/dialog.vala:440
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: games/scores/dialog.vala:441
+msgid "Clear All"
+msgstr "Összes törlése"

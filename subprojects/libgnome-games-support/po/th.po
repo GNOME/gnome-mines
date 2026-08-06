@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: libgnome-games-support master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
 "issues\n"
-"POT-Creation-Date: 2023-01-25 20:46+0000\n"
-"PO-Revision-Date: 2024-03-12 19:33+0700\n"
+"POT-Creation-Date: 2026-02-23 16:11+0000\n"
+"PO-Revision-Date: 2026-07-31 21:42+0700\n"
 "Last-Translator: \n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
 "Language: th\n"
@@ -17,71 +17,103 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.9\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:82
-msgid "Congratulations!"
-msgstr "ยินดีด้วย!"
-
-#: games/scores/dialog.vala:84
-msgid "High Scores"
-msgstr "คะแนนสูงสุด"
-
-#: games/scores/dialog.vala:86
-msgid "Best Times"
-msgstr "เวลาดีที่สุด"
-
-#: games/scores/dialog.vala:105
+#. Empty State
+#: games/scores/dialog.vala:83
 msgid "No scores yet"
 msgstr "ยังไม่มีคะแนน"
 
-#: games/scores/dialog.vala:109
+#: games/scores/dialog.vala:88
 msgid "Play some games and your scores will show up here."
 msgstr "เล่นเกมสักเล็กน้อย แล้วคะแนนของคุณจะปรากฏขึ้นที่นี่"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:166
-msgid "Rank"
-msgstr "อันดับ"
+#: games/scores/dialog.vala:97
+msgid "Clear Scores…"
+msgstr "ล้างคะแนน…"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:175
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:118
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "คะแนนใหม่สำหรับ %1$s: %2$s"
+
+#: games/scores/dialog.vala:119
 msgid "Score"
 msgstr "คะแนน"
 
-#: games/scores/dialog.vala:177
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:124
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "เวลาใหม่สำหรับ %1$s: %2$s"
+
+#: games/scores/dialog.vala:125
 msgid "Time"
 msgstr "เวลา"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:184
+#: games/scores/dialog.vala:134
+msgid "Congratulations!"
+msgstr "ยินดีด้วย!"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:141 games/scores/dialog.vala:209
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: games/scores/dialog.vala:387
 msgid "Player"
 msgstr "ผู้เล่น"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:194
-msgid "_Done"
-msgstr "เ_สร็จ"
+#: games/scores/dialog.vala:393
+msgid "_New Game"
+msgstr "เ_ริ่มเกมใหม่"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:308
+#: games/scores/dialog.vala:404
+msgid "_Quit"
+msgstr "_ออก"
+
+#: games/scores/dialog.vala:436
+msgid "Clear All Scores?"
+msgstr "ล้างคะแนนทั้งหมดหรือไม่?"
+
+#: games/scores/dialog.vala:437
+msgid "This will clear every score for every layout."
+msgstr "การดำเนินการนี้จะล้างคะแนนทั้งหมดสำหรับทุกแบบ"
+
+#: games/scores/dialog.vala:440
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+#: games/scores/dialog.vala:441
+msgid "Clear All"
+msgstr "ล้างทั้งหมด"
+
+#~ msgid "High Scores"
+#~ msgstr "คะแนนสูงสุด"
+
+#~ msgid "Best Times"
+#~ msgstr "เวลาดีที่สุด"
+
+#~ msgid "Rank"
+#~ msgstr "อันดับ"
+
+#~ msgid "_Done"
+#~ msgstr "เ_สร็จ"
+
 #, c-format
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld นาที"
+#~ msgid "%ld minute"
+#~ msgid_plural "%ld minutes"
+#~ msgstr[0] "%ld นาที"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:310
 #, c-format
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld วินาที"
+#~ msgid "%ld second"
+#~ msgid_plural "%ld seconds"
+#~ msgstr[0] "%ld วินาที"
 
-#: games/scores/dialog.vala:317
-msgid "Your score is the best!"
-msgstr "คะแนนของคุณเป็นคะแนนดีที่สุด!"
+#~ msgid "Your score is the best!"
+#~ msgstr "คะแนนของคุณเป็นคะแนนดีที่สุด!"
 
-#: games/scores/dialog.vala:319
-msgid "Your score has made the top ten."
-msgstr "คะแนนของคุณติดสิบอันดับแรก"
+#~ msgid "Your score has made the top ten."
+#~ msgstr "คะแนนของคุณติดสิบอันดับแรก"

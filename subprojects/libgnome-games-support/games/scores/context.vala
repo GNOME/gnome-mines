@@ -32,6 +32,17 @@ namespace Games {
 namespace Scores {
 
 /**
+ * A function provided by the game that converts the category key to a category.
+ *
+ * Why do we have this, instead of expecting games to pass in a list
+ * of categories? Because some games need to create categories on the
+ * fly, like Mines, which allows for custom board sizes. These games do not
+ * know in advance which categories may be in use.
+ *
+ */
+public delegate Category? CategoryRequestFunc (string category_key);
+
+/**
  * The style that a {@link Games.Scores.Score} uses.
  *
  * This tells the score dialog if it should display the scores as a time or as points.
@@ -54,10 +65,11 @@ public enum Style
 public class Context : Object
 {
     /**
-     * An App ID (e.g. ``org.gnome.Mines``).
+     * The name for the directory, inside the user's data_dir, that holds the scores.
+     * This is not a complete path and is usually an app id.
      *
      */
-    public string app_name { get; construct; }
+    public string score_directory { get; construct; }
 
     /**
      * Describes all of the categories (e.g. "Minefield", "Level").
@@ -72,7 +84,8 @@ public class Context : Object
     public Style style { get; construct; }
 
     /**
-     * The ID for the icon that will be used in the score dialog's empty screen (e.g. ``org.gnome.Quadrapassel``).
+     * The ID for the icon that will be used in the score dialog's empty screen
+     * (e.g. ``org.gnome.Mines``). This defaults to ``score_directory``.
      *
      */
     public string icon_name { get; construct; }
@@ -82,6 +95,13 @@ public class Context : Object
      *
      */
     public int max_high_scores { get; construct; }
+
+    /**
+     * Custom header for the scores column in the scores dialog (e.g. "Moves").
+     * This should be translated.
+     *
+     */
+    public string? score_type { get; construct; }
 
     private Category? current_category = null;
 
@@ -93,18 +113,6 @@ public class Context : Object
 
     private string user_score_dir;
     private bool scores_loaded = false;
-
-    /**
-     * A function provided by the game that converts the category key to a category.
-     *
-     * Why do we have this, instead of expecting games to pass in a list
-     * of categories? Because some games need to create categories on the
-     * fly, like Mines, which allows for custom board sizes. These games do not
-     * know in advance which categories may be in use.
-     *
-     */
-    public delegate Category? CategoryRequestFunc (string category_key);
-    private CategoryRequestFunc? category_request = null;
 
     /**
      * Emitted when the score dialog is closed.
@@ -132,7 +140,7 @@ public class Context : Object
     /**
      * Creates a new Context.
      *
-     * ``app_name`` is your App ID (e.g. ``org.gnome.Mines``).
+     * ``score_directory`` is the name for the directory, inside the user's data_dir, that holds the scores.
      *
      * ``category_type`` describes all of the categories (e.g. "Minefield", "Level").
      *
@@ -140,45 +148,45 @@ public class Context : Object
      *
      * ``style changes`` the way {@link Games.Scores.Score}s are presented.
      *
-     * ``icon_name`` is the ID for your app's icon (e.g. ``org.gnome.Quadrapassel``).
+     * ``icon_name`` is the ID for your app's icon (e.g. ``org.gnome.Mines``). This defaults to ``score_directory``.
      *
      * ``max_high_scores`` is the maximum size of the high score list in the score dialog (``-1`` for unlimited).
      *
+     * ``score_type`` is a custom header for the scores column in the scores dialog (e.g. "Moves").
+     *
      */
-    public Context (string app_name,
+    public Context (string score_directory,
                     string category_type,
                     CategoryRequestFunc category_request,
                     Style style,
                     string? icon_name = null,
-                    int max_high_scores = 10)
+                    int max_high_scores = 10,
+                    string? score_type = null)
     {
-        Object (app_name: app_name,
+        Object (score_directory: score_directory,
                 category_type: category_type,
                 style: style,
-                icon_name: icon_name ?? app_name,
-                max_high_scores: max_high_scores <= -1 ? int.MAX : max_high_scores);
+                icon_name: icon_name ?? score_directory,
+                max_high_scores: max_high_scores <= -1 ? int.MAX : max_high_scores,
+                score_type: score_type);
 
         /* Note: the following functionality can be performed manually by
          * calling Context.load_scores, to ensure Context is usable even if
          * constructed with g_object_new.
          */
-        this.category_request = (key) => { return category_request (key); };
         try
         {
-            load_scores_from_files ();
+            load_scores (category_request);
         }
         catch (Error e)
         {
             warning ("Failed to load scores: %s", e.message);
         }
-
-        /* Unset this manually because it holds a circular ref on Context. */
-        this.category_request = null;
     }
 
     public override void constructed ()
     {
-        user_score_dir = Path.build_filename (Environment.get_user_data_dir (), app_name, "scores", null);
+        user_score_dir = Path.build_filename (Environment.get_user_data_dir (), score_directory, "scores", null);
     }
 
     public Category[] get_categories ()
@@ -259,6 +267,24 @@ public class Context : Object
         return score_value > lowest;
     }
 
+    public async void delete_scores () throws Error
+    {
+        scores_per_category.remove_all ();
+        var directory = File.new_for_path (user_score_dir);
+        if ((yield directory.query_info_async (FileAttribute.STANDARD_TYPE, 0)) != null)
+        {
+            var enumerator = yield directory.enumerate_children_async (FileAttribute.STANDARD_NAME, 0);
+            FileInfo file_info;
+            while ((file_info = (yield enumerator.next_files_async (1)).nth_data (0)) != null)
+            {
+                var file_name = file_info.get_name ();
+                var file = directory.get_child (file_name);
+                yield file.delete_async ();
+            }
+            yield directory.delete_async ();
+        }
+    }
+
     private async void save_score_to_file (Score score, Category category, Cancellable? cancellable) throws Error
     {
         if (DirUtils.create_with_parents (user_score_dir, 0766) == -1)
@@ -277,48 +303,25 @@ public class Context : Object
      * Returns true if a dialog was launched on attaining high score.
      *
      */
-    public async bool add_score (long score, Category category, Gtk.Window? game_window, Cancellable? cancellable) throws Error
+    public async bool add_score (long score, Category category, Gtk.Window? game_window, Cancellable? cancellable)
+        throws Error
     {
-        var the_score = new Score (score);
-
-        /* Check if category exists in the HashTable. Insert one if not. */
-        if (!scores_per_category.contains (category))
-            scores_per_category[category] = new GenericArray<Score> ();
-
-        scores_per_category[category].add (the_score);
-        current_category = category;
-
-        var high_score_added = is_high_score (the_score.score, category);
-        if (high_score_added && game_window != null)
-        {
-            var dialog = new Dialog (this, category_type, style, the_score, current_category, icon_name);
-            dialog.closed.connect (() => add_score.callback ());
-            dialog.present (game_window);
-            yield;
-        }
-
-        yield save_score_to_file (the_score, category, cancellable);
-        return high_score_added;
+        var result = yield add_score_full (score, category, null, game_window, false, cancellable);
+        return result.high_score_added;
     }
-
-    public delegate void NewGameFunc ();
-    public delegate void QuitAppFunc ();
 
     /**
      * Adds extra info to the score, and optionally, some buttons to the bottom of the dialog that aid the flow of a game.
      *
-     * ``new_game_func`` is called when the user presses the 'New Game' button on the dialog
-     *
-     * ``quit_app_func`` is called when the user presses the 'Quit' button on the dialog
+     * ``show_action_buttons`` specifies if 'New Game' and 'Quit' buttons should be shown on the dialog
      *
      */
-    public async bool add_score_full (long score_value,
-                                      Category category,
-                                      string? extra_info,
-                                      Gtk.Window? game_window,
-                                      NewGameFunc? new_game_func,
-                                      QuitAppFunc? quit_app_func,
-                                      Cancellable? cancellable) throws Error
+    public async AddScoreResult add_score_full (long score_value,
+                                                Category category,
+                                                string? extra_info,
+                                                Gtk.Window? game_window,
+                                                bool show_action_buttons,
+                                                Cancellable? cancellable) throws Error
     {
         Score score = new Score (score_value);
         score.extra_info = extra_info;
@@ -330,22 +333,27 @@ public class Context : Object
         current_category = category;
 
         var high_score_added = is_high_score (score.score, category);
+        var action = AddScoreAction.NONE;
         if (high_score_added && game_window != null)
         {
-            var dialog = new Dialog (this, category_type, style, score, current_category, icon_name);
+            var dialog = new Dialog (this, category_type, style, score, current_category, icon_name, score_type);
             dialog.closed.connect (() => add_score_full.callback ());
             dialog.present (game_window);
-            if (new_game_func != null && quit_app_func != null)
-                dialog.add_bottom_buttons (new_game_func, quit_app_func);
+            if (show_action_buttons)
+                dialog.add_bottom_buttons ();
 
             yield;
+
+            action = dialog.action;
         }
 
         yield save_score_to_file (score, category, cancellable);
-        return high_score_added;
+        return AddScoreResult (high_score_added, action);
     }
 
-    private void load_scores_from_file (FileInfo file_info) throws Error
+    private void load_scores_from_file (FileInfo file_info,
+                                        CategoryRequestFunc category_request)
+        throws Error
     {
         var category_key = file_info.get_name ();
         var category = category_request (category_key);
@@ -396,7 +404,13 @@ public class Context : Object
         scores_per_category[category] = scores_of_single_category;
     }
 
-    private void load_scores_from_files () throws Error
+    /**
+     * Must be called *immediately* after construction, if constructed using
+     * g_object_new.
+     *
+     */
+    public void load_scores (CategoryRequestFunc category_request)
+        throws Error
         requires (!scores_loaded)
     {
         scores_loaded = true;
@@ -409,23 +423,8 @@ public class Context : Object
         FileInfo file_info;
         while ((file_info = enumerator.next_file ()) != null)
         {
-            load_scores_from_file (file_info);
+            load_scores_from_file (file_info, category_request);
         }
-    }
-
-    /**
-     * Must be called *immediately* after construction, if constructed using
-     * g_object_new.
-     *
-     */
-    public void load_scores (CategoryRequestFunc category_request) throws Error
-        requires (this.category_request == null)
-    {
-        this.category_request = (key) => { return category_request (key); };
-        load_scores_from_files ();
-
-        /* Unset this manually because it holds a circular ref on Context. */
-        this.category_request = null;
     }
 
     /**
@@ -439,7 +438,7 @@ public class Context : Object
         if (selected_category == null || !scores_per_category.contains (selected_category))
             selected_category = current_category;
 
-        var dialog = new Dialog (this, category_type, style, null, selected_category, icon_name);
+        var dialog = new Dialog (this, category_type, style, null, selected_category, icon_name, score_type);
         dialog.closed.connect (() => dialog_closed ());
         dialog.present (game_window);
     }
@@ -456,6 +455,52 @@ public class Context : Object
                 return true;
         }
         return false;
+    }
+}
+
+/**
+ * The action button that the user chose on the score dialog.
+ *
+ */
+[SimpleType]
+public enum AddScoreAction {
+    NONE,
+    NEW_GAME,
+    QUIT
+}
+
+/**
+ * The result of adding a score.
+ *
+ */
+[SimpleType]
+[CCode (default_value = "((GamesScoresAddScoreResult) {.action = 0, .high_score_added = false})")]
+public struct AddScoreResult
+{
+    /**
+     * The {@link Games.Scores.AddScoreAction} from the score dialog.
+     *
+     */
+    public AddScoreAction action;
+
+    /**
+     * If the score added was a high score (visible in the score dialog).
+     *
+     */
+    public bool high_score_added;
+
+    /**
+     * Creates a new AddScoreResult.
+     *
+     * ``high_score_added`` is true if the score is a high score
+     *
+     * ``action`` is the {@link Games.Scores.AddScoreAction} from the score dialog
+     *
+     */
+    public AddScoreResult (bool high_score_added, AddScoreAction action)
+    {
+        this.high_score_added = high_score_added;
+        this.action = action;
     }
 }
 

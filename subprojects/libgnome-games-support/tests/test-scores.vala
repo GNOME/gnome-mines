@@ -45,7 +45,11 @@ private void add_score_sync (Context context, int score, Category category) {
 
 private void create_scores ()
 {
-    Context context = new Context ("libgnome-games-support-test", "Games Type", category_request, Style.POINTS_GREATER_IS_BETTER);
+    Context context = new Context ("libgnome-games-support-test",
+                                   "Games Type",
+                                   category_request,
+                                   Style.POINTS_GREATER_IS_BETTER);
+
     Category cat = new Category ("cat1", "cat1");
     add_score_sync (context, 101, cat);
     add_score_sync (context, 102, cat);

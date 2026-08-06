@@ -1,14 +1,15 @@
 # Norwegian bokmål translation of libgnome-games-support.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Kjartan Maraas <kmaraas@gnome.org>, 2016-2017.
+# Kjartan Maraas <kmaraas@gnome.org>, 2016-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libgnome-games-support 3.23.x\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=libgnome-games-support&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2016-11-20 04:00+0000\n"
-"PO-Revision-Date: 2017-02-19 17:53+0100\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/libgnome-games-support/"
+"issues\n"
+"POT-Creation-Date: 2026-02-23 16:11+0000\n"
+"PO-Revision-Date: 2026-06-04 19:14+0200\n"
 "Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
 "Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "Language: \n"
@@ -17,71 +18,73 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. Appears at the top of the dialog, as the heading of the dialog
-#: games/scores/dialog.vala:58
-msgid "Congratulations!"
-msgstr "Gratulerer!"
-
-#: games/scores/dialog.vala:60
-msgid "High Scores"
-msgstr "Poengsummer"
-
-#: games/scores/dialog.vala:62
-msgid "Best Times"
-msgstr "Beste tider"
-
-#: games/scores/dialog.vala:78
+#. Empty State
+#: games/scores/dialog.vala:83
 msgid "No scores yet"
 msgstr "Ingen poeng ennå"
 
-#: games/scores/dialog.vala:82
+#: games/scores/dialog.vala:88
 msgid "Play some games and your scores will show up here."
 msgstr "Hvis du spiller spill vil poengsummene vises her."
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:135
-msgid "Rank"
-msgstr "Plassering"
+#: games/scores/dialog.vala:97
+msgid "Clear Scores…"
+msgstr "Nullstill poengsummer …"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:144
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Score for Level: 1")
+#: games/scores/dialog.vala:118
+#, c-format
+msgid "New Score for %1$s: %2$s"
+msgstr "Ny poengsum for %1$s: %2$s"
+
+#: games/scores/dialog.vala:119
 msgid "Score"
 msgstr "Poeng"
 
-#: games/scores/dialog.vala:146
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "New Time for Level: 1")
+#: games/scores/dialog.vala:124
+#, c-format
+msgid "New Time for %1$s: %2$s"
+msgstr "Ny tid for %1$s: %2$s"
+
+#: games/scores/dialog.vala:125
 msgid "Time"
 msgstr "Tid"
 
-#. A column heading in the scores dialog
-#: games/scores/dialog.vala:153
+#: games/scores/dialog.vala:134
+msgid "Congratulations!"
+msgstr "Gratulerer!"
+
+#. Translators: %1$s is the category type, %2$s is the category (e.g. "Level: 1")
+#: games/scores/dialog.vala:141 games/scores/dialog.vala:209
+#, c-format
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: games/scores/dialog.vala:387
 msgid "Player"
 msgstr "Spiller"
 
-#. Appears on the top right corner of the dialog. Clicking the button closes the dialog.
-#: games/scores/dialog.vala:163
-msgid "_Done"
-msgstr "Fer_dig"
+#: games/scores/dialog.vala:393
+msgid "_New Game"
+msgstr "_Nytt spill"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:278
-#, c-format
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld minutt"
-msgstr[1] "%ld minutter"
+#: games/scores/dialog.vala:404
+msgid "_Quit"
+msgstr "A_vslutt"
 
-#. Time which may be displayed on a scores dialog.
-#: games/scores/dialog.vala:280
-#, c-format
-msgid "%ld second"
-msgid_plural "%ld seconds"
-msgstr[0] "%ld sekund"
-msgstr[1] "%ld sekunder"
+#: games/scores/dialog.vala:436
+msgid "Clear All Scores?"
+msgstr "Nullstill alle poengsummer?"
 
-#: games/scores/dialog.vala:286
-msgid "Your score is the best!"
-msgstr "Din poengsum er den beste!"
+#: games/scores/dialog.vala:437
+msgid "This will clear every score for every layout."
+msgstr "Dette vil nullstille alle poengsummer for alle utforminger."
 
-#: games/scores/dialog.vala:288
-msgid "Your score has made the top ten."
-msgstr "Poengsummen er blant de beste ti."
+#: games/scores/dialog.vala:440
+msgid "_Cancel"
+msgstr "A_vbryt"
+
+#: games/scores/dialog.vala:441
+msgid "Clear All"
+msgstr "Tøm alle"
