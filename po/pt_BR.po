@@ -24,14 +24,14 @@
 # Enrico Nicoletto <liverig@gmail.com>, 2013, 2014.
 # Rafael Fontenelle <rafaelff@gnome.org>, 2016-2021.
 # Leônidas Araújo <leorusvellt@hotmail.com>, 2023.
-# Juliano de Souza Camargo <julianosc@pm.me>, 2025.
+# Juliano de Souza Camargo <julianosc@pm.me>, 2025-2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
-"POT-Creation-Date: 2025-12-14 00:38+0000\n"
-"PO-Revision-Date: 2025-12-15 15:02-0300\n"
+"POT-Creation-Date: 2026-06-10 05:53+0000\n"
+"PO-Revision-Date: 2026-09-07 16:36-0300\n"
 "Last-Translator: Juliano de Souza Camargo <julianosc@pm.me>\n"
 "Language-Team: Brazilian Portuguese <https://br.gnome.org/traducao/>\n"
 "Language: pt_BR\n"
@@ -39,7 +39,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Gtranslator 49.0\n"
+"X-Generator: Gtranslator 50.0\n"
 "X-Project-Style: gnome\n"
 "X-DL-Team: pt_BR\n"
 "X-DL-Module: gnome-mines\n"
@@ -48,7 +48,7 @@ msgstr ""
 "X-DL-State: Translating\n"
 
 #: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
-#: src/interface.ui:44 src/gnome-mines.vala:130 src/gnome-mines.vala:741
+#: src/interface.ui:48 src/gnome-mines.vala:131 src/gnome-mines.vala:747
 msgid "Mines"
 msgstr "Minas"
 
@@ -78,7 +78,7 @@ msgstr ""
 "Caso você fique preso, você pode solicitar uma dica: há uma penalidade de "
 "tempo, mas isto é melhor do que bater em uma mina!"
 
-#: data/org.gnome.Mines.metainfo.xml.in:120
+#: data/org.gnome.Mines.metainfo.xml.in:143
 msgid "Robert Roth"
 msgstr "Robert Roth"
 
@@ -127,35 +127,47 @@ msgstr ""
 "Defina como verdadeiro para sinalizar os quadrados automaticamente como "
 "minados quando os quadrados suficientes forem revelados"
 
+#: data/org.gnome.Mines.gschema.xml:20
+msgid "Enable automatic clearing of squares"
+msgstr "Habilitar a limpeza automática dos quadrados"
+
 #: data/org.gnome.Mines.gschema.xml:21
+msgid ""
+"Set to true to automatically clear squares when enough surrounding squares "
+"have flags"
+msgstr ""
+"Defina como verdadeiro para limpar os quadrados automaticamente quando "
+"quadrados suficientes à volta tiverem bandeiras"
+
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
 msgstr "Número de colunas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:26
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
 msgstr "Número de linhas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:30
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
 msgstr "O número de minas em um jogo personalizado"
 
-#: data/org.gnome.Mines.gschema.xml:35
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
 msgstr "Tamanho do tabuleiro"
 
-#: data/org.gnome.Mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:41
 msgid "Size of the board (0-2 = small-large, 3 = custom)"
 msgstr "Tamanho do tabuleiro (0-2 = pequeno-grande, 3 = personalizado)"
 
-#: data/org.gnome.Mines.gschema.xml:40
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
 msgstr "A largura da janela em pixels."
 
-#: data/org.gnome.Mines.gschema.xml:44
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
 msgstr "A altura da janela em pixels."
 
-#: data/org.gnome.Mines.gschema.xml:48
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
 msgstr "verdadeiro se a janela estiver maximizada"
 
@@ -256,122 +268,126 @@ msgstr "A_parência"
 msgid "_Use Question Flags"
 msgstr "_Usar bandeiras de interrogação"
 
-#: src/interface.ui:30
+#: src/interface.ui:28
+msgid "Automatically clear on flags"
+msgstr "Limpa automaticamente em bandeiras"
+
+#: src/interface.ui:34
 msgid "_Keyboard Shortcuts"
 msgstr "Atalhos de _teclado"
 
-#: src/interface.ui:34
+#: src/interface.ui:38
 msgid "_Help"
 msgstr "Aj_uda"
 
-#: src/interface.ui:38
+#: src/interface.ui:42
 msgid "_About Mines"
 msgstr "_Sobre o Minas"
 
-#: src/interface.ui:170
+#: src/interface.ui:174
 msgid "_Width"
 msgstr "Lar_gura"
 
-#: src/interface.ui:191
+#: src/interface.ui:195
 msgid "_Height"
 msgstr "A_ltura"
 
-#: src/interface.ui:212
+#: src/interface.ui:216
 msgid "Percent _mines"
 msgstr "Porcen_tagem de minas"
 
-#: src/interface.ui:235
+#: src/interface.ui:239
 msgid "_Cancel"
 msgstr "_Cancelar"
 
-#: src/interface.ui:251
+#: src/interface.ui:255
 msgid "_Play Game"
 msgstr "_Iniciar jogo"
 
-#: src/interface.ui:366
+#: src/interface.ui:370
 msgid "Paused"
 msgstr "Pausado"
 
-#: src/gnome-mines.vala:92
+#: src/gnome-mines.vala:93
 msgid "Print release version and exit"
 msgstr "Exibe a versão de lançamento e sai"
 
-#: src/gnome-mines.vala:93
+#: src/gnome-mines.vala:94
 msgid "Small game"
 msgstr "Jogo pequeno"
 
-#: src/gnome-mines.vala:94
+#: src/gnome-mines.vala:95
 msgid "Medium game"
 msgstr "Jogo médio"
 
-#: src/gnome-mines.vala:95
+#: src/gnome-mines.vala:96
 msgid "Big game"
 msgstr "Jogo grande"
 
-#: src/gnome-mines.vala:214
+#: src/gnome-mines.vala:220
 msgid "Minefield"
 msgstr "Campo minado"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:248
+#: src/gnome-mines.vala:254
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
 msgstr[0] "%d × %d, %d mina"
 msgstr[1] "%d × %d, %d minas"
 
-#: src/gnome-mines.vala:277
+#: src/gnome-mines.vala:283
 msgid "Custom"
 msgstr "Personalizado"
 
-#: src/gnome-mines.vala:344
+#: src/gnome-mines.vala:350
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
 msgstr[0] "<b>%d</b> mina"
 msgstr[1] "<b>%d</b> minas"
 
-#: src/gnome-mines.vala:448
+#: src/gnome-mines.vala:454
 msgid "Do you want to start a new game?"
 msgstr "Você quer iniciar um novo jogo?"
 
-#: src/gnome-mines.vala:449
+#: src/gnome-mines.vala:455
 msgid "If you start a new game, your current progress will be lost."
 msgstr "Se você iniciar um novo jogo, seu progresso atual será perdido."
 
-#: src/gnome-mines.vala:450
+#: src/gnome-mines.vala:456
 msgid "Start New Game"
 msgstr "Iniciar um novo jogo"
 
-#: src/gnome-mines.vala:451
+#: src/gnome-mines.vala:457
 msgid "Keep Current Game"
 msgstr "Guardar o jogo atual"
 
-#: src/gnome-mines.vala:518
+#: src/gnome-mines.vala:524
 msgid "St_art Over"
 msgstr "Reco_meçar"
 
-#: src/gnome-mines.vala:572
+#: src/gnome-mines.vala:578
 msgid "_Pause"
 msgstr "_Pausar"
 
-#: src/gnome-mines.vala:577
+#: src/gnome-mines.vala:583
 msgid "_Resume"
 msgstr "Co_ntinuar"
 
-#: src/gnome-mines.vala:658
+#: src/gnome-mines.vala:664
 msgid "Play _Again"
 msgstr "Jogar _novamente"
 
-#: src/gnome-mines.vala:743
+#: src/gnome-mines.vala:749
 msgid "The GNOME Project"
 msgstr "O Projeto GNOME"
 
-#: src/gnome-mines.vala:745
+#: src/gnome-mines.vala:751
 msgid "Clear explosive mines off the board"
 msgstr "Elimine minas explosivas para fora do tabuleiro."
 
-#: src/gnome-mines.vala:750
+#: src/gnome-mines.vala:756
 msgid "translator-credits"
 msgstr ""
 "Sandro Nunes Henrique <sandro@conectiva.com.br>\n"
