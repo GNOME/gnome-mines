@@ -1,15 +1,15 @@
 # Swedish translation for gnome-mines.
-# Copyright © 2007-2023 gnome-mines's COPYRIGHT HOLDER
+# Copyright © 2007-2026 gnome-mines's COPYRIGHT HOLDER
 # This file is distributed under the same license as the gnome-mines package.
 # Daniel Nylander <po@danielnylander.se>, 2007, 2009.
 # Erik Sköldås <erik.skoldas@tele2.se>, 2015.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019, 2020, 2021, 2023.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2017, 2018, 2019, 2020, 2021, 2023, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome-mines-help\n"
-"POT-Creation-Date: 2023-09-15 00:55+0000\n"
-"PO-Revision-Date: 2023-09-15 21:59+0200\n"
+"POT-Creation-Date: 2026-10-07 05:59+0000\n"
+"PO-Revision-Date: 2026-10-13 00:52+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.9\n"
 "X-Project-Style: gnome\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
@@ -130,8 +130,8 @@ msgid ""
 msgstr ""
 "<app>Minor</app> underhålls av en frivillig gemenskap. Du är välkommen att "
 "delta. Om du upptäcker ett problem kan du skicka in en <em>felrapport</em>. "
-"För att skicka in en felrapport, gå till <link href=\"https://gitlab.gnome."
-"org/GNOME/gnome-mines/issues\"/>."
+"För att skicka in en felrapport, gå till <link href=\"https://"
+"gitlab.gnome.org/GNOME/gnome-mines/issues\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -155,21 +155,20 @@ msgstr ""
 "din felrapport. Om du inte redan har ett konto, klicka bara på länken "
 "<gui>Sign in/Register</gui> för att skapa ett."
 
-# TODO: remove gitlab
 #. (itstool) path: section/p
 #: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
-"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
-"issues\">browse</link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://handbook.gnome.org/"
+"issues/reporting.html\">bug writing guidelines</link>, and please <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</link> for "
+"the bug to see if it already exists."
 msgstr ""
-"När du har ett konto, logga in, klicka på <gui>New Issue</gui>. Innan du "
-"rapporterar ett fel, läs <link href=\"https://wiki.gnome.org/Community/"
-"GettingInTouch/BugReportingGuidelines\">riktlinjer för felrapporter</link>, "
-"och <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">sök</"
-"link> för att se om felet redan är rapporterat."
+"När du har ett konto, logga in och klicka på <gui>New Issue</gui>. Innan du "
+"rapporterar ett fel, läs <link href=\"https://handbook.gnome.org/issues/"
+"reporting.html\">riktlinjerna för hur man skriver en felrapport</link> och "
+"<link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">sök</link> "
+"för att se om felet redan rapporterats."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -210,19 +209,20 @@ msgstr ""
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers at <link href=\"https://matrix.to/#/#gnome-games:"
-"gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-help/"
-"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
-"games\">#gnome-games</link> on irc.libera.chat, or via <link href=\"https://"
-"discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/"
+"#gnome-games\">#gnome-games</link> on irc.libera.chat, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
 "Om du vill <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">hjälpa till att utveckla <app>GNOME-spelen</app></link>, kan du "
 "komma i kontakt med utvecklarna genom <link href=\"https://matrix.to/#/"
-"#gnome-games:gnome.org\">#gnome-games:gnome.org</link> på <link xref=\"help:"
-"gnome-help/help-matrix\">Matrix</link> eller <link href=\"https://web.libera."
-"chat/#gnome-games\">#gnome-games</link> på irc.libera.chat, eller via <link "
-"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
+"#gnome-games:gnome.org\">#gnome-games:gnome.org</link> på <link "
+"xref=\"help:gnome-help/help-matrix\">Matrix</link> eller <link "
+"href=\"https://web.libera.chat/#gnome-games\">#gnome-games</link> på "
+"irc.libera.chat, eller via <link href=\"https://discourse.gnome.org/tag/"
+"games\">GNOME Discourse</link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -249,16 +249,17 @@ msgid ""
 "To contribute to the Documentation Project, feel free to get in touch with "
 "us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
 "link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
-"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on irc."
-"libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on "
+"irc.libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
 "documentation\">GNOME Discourse</link>."
 msgstr ""
 "Om du vill bidra till dokumentationsprojektet är du välkommen att ta kontakt "
-"med oss i <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome."
-"org</link> på <link xref=\"help:gnome-help/help-matrix\">Matrix</link> eller "
-"<link href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> på irc."
-"libera.chat, eller via <link href=\"https://discourse.gnome.org/tag/"
-"documentation\">GNOME Discourse</link>."
+"med oss i <link href=\"https://matrix.to/#/"
+"#docs:gnome.org\">#docs:gnome.org</link> på <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> eller <link href=\"https://web.libera.chat/"
+"#gnome-docs\">#gnome-docs</link> på irc.libera.chat, eller via <link "
+"href=\"https://discourse.gnome.org/tag/documentation\">GNOME Discourse</"
+"link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
@@ -519,8 +520,8 @@ msgid ""
 msgstr ""
 "För den fullständiga lydelsen av licensen, se <link href=\"http://"
 "creativecommons.org/licenses/by-sa/3.0/legalcode\">CreativeCommons webbsida</"
-"link>, eller läs hela <link href=\"http://creativecommons.org/licenses/by-"
-"sa/3.0/\">Commons Deed</link>."
+"link>, eller läs hela <link href=\"http://creativecommons.org/licenses/by-sa/"
+"3.0/\">Commons Deed</link>."
 
 #. (itstool) path: credit/name
 #: C/new-game.page:27
@@ -670,15 +671,15 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome."
-"org\">create an account</link> and join the <link href=\"https://l10n.gnome."
-"org/teams/\">translation team</link> for your language. This will give you "
-"the ability to upload new translations."
+"To start translating you will need to <link href=\"https://"
+"l10n.gnome.org\">create an account</link> and join the <link href=\"https://"
+"l10n.gnome.org/teams/\">translation team</link> for your language. This will "
+"give you the ability to upload new translations."
 msgstr ""
-"För att börja översätta kommer du att behöva <link href=\"https://l10n.gnome."
-"org\">skapa ett konto</link> och gå med i <link href=\"https://l10n.gnome."
-"org/teams/\">översättningsgruppen</link> för ditt språk. Detta kommer att ge "
-"dig möjlighet att skicka upp nya översättningar."
+"För att börja översätta kommer du att behöva <link href=\"https://"
+"l10n.gnome.org\">skapa ett konto</link> och gå med i <link href=\"https://"
+"l10n.gnome.org/teams/\">översättningsgruppen</link> för ditt språk. Detta "
+"kommer att ge dig möjlighet att skicka upp nya översättningar."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
@@ -690,12 +691,12 @@ msgid ""
 "located worldwide, so you may not get an immediate response as a result of "
 "timezone differences."
 msgstr ""
-"Du kan chatta med GNOME-översättare i <link href=\"https://matrix.to/#/#i18n:"
-"gnome.org\">#i18n:gnome.org</link> på <link xref=\"help:gnome-help/help-"
-"matrix\">Matrix</link> eller <link href=\"https://web.libera.chat/#gnome-"
-"i18n\">#gnome-i18n</link> på irc.libera.chat. Folk i kanalen finns över hela "
-"världen, så du kanske inte får ett omedelbart svar på grund av skillnader i "
-"tidszon."
+"Du kan chatta med GNOME-översättare i <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> på <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> eller <link href=\"https://web.libera.chat/"
+"#gnome-i18n\">#gnome-i18n</link> på irc.libera.chat. Folk i kanalen finns "
+"över hela världen, så du kanske inte får ett omedelbart svar på grund av "
+"skillnader i tidszon."
 
 #. (itstool) path: page/p
 #: C/translate.page:41
