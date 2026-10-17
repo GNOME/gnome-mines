@@ -7,350 +7,360 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-games.HEAD\n"
-"Report-Msgid-Bugs-To: https://bugzilla.gnome.org/enter_bug.cgi?product=gnome-"
-"mines&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2017-11-14 09:13+0000\n"
-"PO-Revision-Date: 2004-02-22 19:48+0200\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/gnome-mines/issues\n"
+"POT-Creation-Date: 2026-10-07 05:58+0000\n"
+"PO-Revision-Date: 2026-10-15 20:03+0400\n"
 "Last-Translator: Elxan İsmayılov <elxan.i@gmail.com>\n"
-"Language-Team: Azerbaijani Turkish <translation-team-az@lists.sourceforge."
-"net>\n"
+"Language-Team: Azerbaijani Turkish <translation-team-"
+"az@lists.sourceforge.net>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.10\n"
 
-#: data/gnome-mines.appdata.xml.in:8
-#, fuzzy
-msgid "GNOME Mines"
+#: data/org.gnome.Mines.metainfo.xml.in:8 data/org.gnome.Mines.desktop.in:2
+#: src/interface.ui:48 src/gnome-mines.vala:131 src/gnome-mines.vala:747
+msgid "Mines"
 msgstr "Minalar"
 
-#: data/gnome-mines.appdata.xml.in:9 data/gnome-mines.desktop.in:4
-#, fuzzy
+#: data/org.gnome.Mines.metainfo.xml.in:9 data/org.gnome.Mines.desktop.in:3
 msgid "Clear hidden mines from a minefield"
-msgstr "Mina tarlasındakı minaları taşkar edin"
+msgstr "Mina sahəsindən gizli minaları təmizlə"
 
-#: data/gnome-mines.appdata.xml.in:11
+#: data/org.gnome.Mines.metainfo.xml.in:11
 msgid ""
-"GNOME Mines is a puzzle game where you search for hidden mines. Flag the "
-"spaces with mines as quickly as possible to make the board a safer place. "
-"You win the game when you’ve flagged every mine on the board. Be careful not "
-"to trigger one, or the game is over!"
+"Mines is a puzzle game where you search for hidden mines. Flag the spaces "
+"with mines as quickly as possible to make the board a safer place. You win "
+"the game when you’ve flagged every mine on the board. Be careful not to "
+"trigger one, or the game is over!"
 msgstr ""
+"Minalar gizli minaları axtardığınız tapmaca oyunudur. Lövhəni daha "
+"təhlükəsiz etmək üçün minalı xanaları mümkün qədər tez bayraqla işarələyin. "
+"Lövhədəki hər bir minanı işarələdiyiniz zaman oyun qələbə ilə başa çatır. "
+"Ehtiyatlı olun, hər hansı birinə toxunsanız, oyun bitər!"
 
-#: data/gnome-mines.appdata.xml.in:17
+#: data/org.gnome.Mines.metainfo.xml.in:17
 msgid ""
 "You can select the size of the field you want to play on at the start of the "
 "game. If you get stuck, you can ask for a hint: there’s a time penalty, but "
 "that’s better than hitting a mine!"
 msgstr ""
+"Oyunun əvvəlində oynamaq istədiyiniz sahənin ölçüsünü seçə bilərsiniz. "
+"Çətinliklə üzləşsəniz, ipucu istəyə bilərsiniz: zaman cəriməsi olacaq, lakin "
+"bu, minaya düşməkdən daha yaxşıdır!"
 
-#: data/gnome-mines.appdata.xml.in:42
-msgid "The GNOME Project"
-msgstr ""
-
-#: data/gnome-mines.desktop.in:3 src/interface.ui:18 src/gnome-mines.vala:168
-#: src/gnome-mines.vala:227 src/gnome-mines.vala:860
-msgid "Mines"
-msgstr "Minalar"
-
-#. Translators: Do NOT translate or transliterate this text (this is an icon file name)!
-#: data/gnome-mines.desktop.in:7
-#, fuzzy
-msgid "gnome-mines"
-msgstr "cırtdanlar"
+#: data/org.gnome.Mines.metainfo.xml.in:143
+msgid "Robert Roth"
+msgstr "Robert Rot"
 
 #. Translators: Search terms to find this application. Do NOT translate or localize the semicolons! The list MUST also end with a semicolon!
-#: data/gnome-mines.desktop.in:12
+#: data/org.gnome.Mines.desktop.in:11
 msgid "minesweeper;"
-msgstr ""
+msgstr "minatəmizləyən;"
 
-#: data/gnome-mines.desktop.in:17
-#, fuzzy
+#: data/org.gnome.Mines.desktop.in:17
 msgid "Small board"
-msgstr "Kiçik"
+msgstr "Kiçik lövhə"
 
-#: data/gnome-mines.desktop.in:21
-#, fuzzy
+#: data/org.gnome.Mines.desktop.in:21
 msgid "Medium board"
-msgstr "Orta"
+msgstr "Orta lövhə"
 
-#: data/gnome-mines.desktop.in:25
+#: data/org.gnome.Mines.desktop.in:25
 msgid "Big board"
-msgstr ""
+msgstr "Böyük lövhə"
 
-#: data/org.gnome.mines.gschema.xml:5
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:5
 msgid "The theme to use"
-msgstr "İşlədiləcək oyun faylı"
+msgstr "İstifadə olunacaq mövzu"
 
-#: data/org.gnome.mines.gschema.xml:6
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:6
 msgid "The title of the tile theme to use."
-msgstr "İşlədiləcək qaydalar variasiyası faylı"
+msgstr "İstifadə ediləcək plitə mövzusunun adı."
 
-#: data/org.gnome.mines.gschema.xml:10
+#: data/org.gnome.Mines.gschema.xml:10
 msgid "Use the unknown flag"
-msgstr "Namə'lum bayrağını işlət"
+msgstr "Naməlum bayrağı istifadə et"
 
-#: data/org.gnome.mines.gschema.xml:11
+#: data/org.gnome.Mines.gschema.xml:11
 msgid "Set to true to be able to mark squares as unknown."
-msgstr "Kvadratları namə'lum olaraq işarələyə bilmək üçün bunu seçin."
+msgstr "Xanaları naməlum kimi işarələyə bilmək üçün “doğru” olaraq təyin edin."
 
-#: data/org.gnome.mines.gschema.xml:15
-msgid "Warning about too many flags"
-msgstr ""
-
-#: data/org.gnome.mines.gschema.xml:16
-msgid ""
-"Set to true to enable warning icons when too many flags are placed next to a "
-"numbered tile."
-msgstr ""
-
-#: data/org.gnome.mines.gschema.xml:20
+#: data/org.gnome.Mines.gschema.xml:15
 msgid "Enable automatic placing of flags"
-msgstr ""
+msgstr "Bayraqların avtomatik yerləşdirilməsini aç"
 
-#: data/org.gnome.mines.gschema.xml:21
+#: data/org.gnome.Mines.gschema.xml:16
 msgid ""
 "Set to true to automatically flag squares as mined when enough squares are "
 "revealed"
 msgstr ""
+"Kifayət qədər xana açıldıqda xanaları avtomatik olaraq mina kimi işarələmək "
+"üçün “true” olaraq təyin edin"
 
-#: data/org.gnome.mines.gschema.xml:25
-#, fuzzy
-msgid "Enable animations"
-msgstr "_Animasiyanı fəallaşdır"
+#: data/org.gnome.Mines.gschema.xml:20
+msgid "Enable automatic clearing of squares"
+msgstr "Xanaların avtomatik təmizlənməsini aktivləşdirin"
 
-#: data/org.gnome.mines.gschema.xml:26
-msgid "Set to false to disable theme-defined transition animations"
+#: data/org.gnome.Mines.gschema.xml:21
+msgid ""
+"Set to true to automatically clear squares when enough surrounding squares "
+"have flags"
 msgstr ""
+"Ətrafdakı xanalarda kifayət qədər bayraq olduqda xanaları avtomatik "
+"təmizləmək üçün “doğru” olaraq təyin edin"
 
-#: data/org.gnome.mines.gschema.xml:31
+#: data/org.gnome.Mines.gschema.xml:26
 msgid "Number of columns in a custom game"
-msgstr ""
+msgstr "Fərdi oyundakı sütun sayı"
 
-#: data/org.gnome.mines.gschema.xml:36
+#: data/org.gnome.Mines.gschema.xml:31
 msgid "Number of rows in a custom game"
-msgstr ""
+msgstr "Fərdi oyundakı sətir sayı"
 
-#: data/org.gnome.mines.gschema.xml:40
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:35
 msgid "The number of mines in a custom game"
-msgstr "Doldurulacaq sətir ədədi"
+msgstr "Fərdi oyundakı mina sayı"
 
-#: data/org.gnome.mines.gschema.xml:45
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:40
 msgid "Board size"
-msgstr "Lövhə böyüklüyü"
+msgstr "Lövhə ölçüsü"
 
-#: data/org.gnome.mines.gschema.xml:46
-#, fuzzy
-msgid "Size of the board (0-2 = small-large, 3=custom)"
-msgstr "Lövhənin böyüklüyü (1=kiçik, 3=geniş)"
+#: data/org.gnome.Mines.gschema.xml:41
+msgid "Size of the board (0-2 = small-large, 3 = custom)"
+msgstr "Lövhənin böyüklüyü (0-2 = kiçik-böyük, 3 = fərdi)"
 
-#: data/org.gnome.mines.gschema.xml:50
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:45
 msgid "Width of the window in pixels"
-msgstr "Əsas pəncərənin eni."
+msgstr "Pəncərənin eni (piksellə)"
 
-#: data/org.gnome.mines.gschema.xml:54
-#, fuzzy
+#: data/org.gnome.Mines.gschema.xml:49
 msgid "Height of the window in pixels"
-msgstr "Əsas pəncərənin hündürlüyü."
+msgstr "Pəncərənin hündürlüyü (piksellə)"
 
-#: data/org.gnome.mines.gschema.xml:58
+#: data/org.gnome.Mines.gschema.xml:53
 msgid "true if the window is maximized"
-msgstr ""
+msgstr "pəncərə maksimum ölçüdədirsə “doğru” olur"
 
-#: src/interface.ui:118
-msgid "_Width"
-msgstr ""
+#: src/shortcuts-dialog.ui:7
+msgctxt "shortcut window"
+msgid "Window and game"
+msgstr "Pəncərə və oyun"
 
-#: src/interface.ui:142
-#, fuzzy
-msgid "_Height"
-msgstr "səkkiz"
+#: src/shortcuts-dialog.ui:11
+msgctxt "shortcut window"
+msgid "Start a new game"
+msgstr "Yeni oyuna başla"
 
-#: src/interface.ui:166
-#, fuzzy
-msgid "Percent _mines"
-msgstr "Faiz:"
+#: src/shortcuts-dialog.ui:17
+msgctxt "shortcut window"
+msgid "Restart game with current settings"
+msgstr "Oyunu hazırki ayarlarla yenidən başlat"
 
-#: src/interface.ui:192
-msgid "_Cancel"
-msgstr ""
+#: src/shortcuts-dialog.ui:23
+msgctxt "shortcut window"
+msgid "Pause the game"
+msgstr "Oyuna fasilə ver"
 
-#: src/interface.ui:208
-#, fuzzy
-msgid "_Play Game"
-msgstr "Oyunçu Adları"
+#: src/shortcuts-dialog.ui:29
+msgctxt "shortcut window"
+msgid "Show Help"
+msgstr "“Yardım”ı göstər"
 
-#: src/interface.ui:350 src/gnome-mines.vala:648 src/gnome-mines.vala:762
-#: src/gnome-mines.vala:809
-#, fuzzy
-msgid "_Pause"
-msgstr "Fasilə ver"
+#: src/shortcuts-dialog.ui:35
+msgctxt "shortcut window"
+msgid "Open Menu"
+msgstr "Menyunu aç"
 
-#: src/interface.ui:366
-#, fuzzy
-msgid "Change _Difficulty"
-msgstr "_Çətinlik:"
+#: src/shortcuts-dialog.ui:41
+msgctxt "shortcut window"
+msgid "Show Keyboard Shortcuts"
+msgstr "Klaviatura qısayollarını göstər"
 
-#: src/interface.ui:383
-msgid "_Best Times"
-msgstr ""
+#: src/shortcuts-dialog.ui:47
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Çıx"
 
-#: src/interface.ui:400
-#, fuzzy
-msgid "_Play Again"
-msgstr "Oyunçu Adları"
+#: src/shortcuts-dialog.ui:54
+msgctxt "shortcut window"
+msgid "Game size selection"
+msgstr "Oyun ölçüsü seçimi"
 
-#: src/interface.ui:464
-msgid "Paused"
-msgstr "Fasilədə"
+#: src/shortcuts-dialog.ui:58
+msgctxt "shortcut window"
+msgid "Game size: small"
+msgstr "Oyun ölçüsü: kiçik"
 
-#: src/gnome-mines.vala:89
-msgid "Print release version and exit"
-msgstr ""
+#: src/shortcuts-dialog.ui:64
+msgctxt "shortcut window"
+msgid "Game size: medium"
+msgstr "Oyun ölçüsü: orta"
 
-#: src/gnome-mines.vala:90
-#, fuzzy
-msgid "Small game"
-msgstr "Kiçik"
+#: src/shortcuts-dialog.ui:70
+msgctxt "shortcut window"
+msgid "Game size: large"
+msgstr "Oyun ölçüsü: geniş"
 
-#: src/gnome-mines.vala:91
-#, fuzzy
-msgid "Medium game"
-msgstr "Orta"
+#: src/shortcuts-dialog.ui:76
+msgctxt "shortcut window"
+msgid "Game size: custom"
+msgstr "Oyun ölçüsü: fərdi"
 
-#: src/gnome-mines.vala:92
-#, fuzzy
-msgid "Big game"
-msgstr "Əsas oyun:"
+#: src/shortcuts-dialog.ui:83
+msgctxt "shortcut window"
+msgid "In-game"
+msgstr "Oyun içi"
 
-#: src/gnome-mines.vala:239 src/gnome-mines.vala:258
-#, fuzzy
+#: src/shortcuts-dialog.ui:87 src/shortcuts-dialog.ui:93
+msgctxt "shortcut window"
+msgid "Move the keyboard cursor"
+msgstr "Klaviatura kursorunu daşı"
+
+#: src/shortcuts-dialog.ui:99
+msgctxt "shortcut window"
+msgid "Reveal field"
+msgstr "Sahəni üzə çıxar"
+
+#: src/shortcuts-dialog.ui:105
+msgctxt "shortcut window"
+msgid "Toggle field flag state"
+msgstr "Sahə bayrağı vəziyyətini dəyişdir (aç/bağla)"
+
+#: src/interface.ui:14
 msgid "_Scores"
-msgstr "Xallla"
+msgstr "_Xallar"
 
-#: src/gnome-mines.vala:240 src/gnome-mines.vala:259
-#, fuzzy
+#: src/interface.ui:18
 msgid "A_ppearance"
-msgstr "Görünüş"
+msgstr "_Görünüş"
 
-#: src/gnome-mines.vala:243 src/gnome-mines.vala:260
-msgid "_Show Warnings"
-msgstr ""
-
-#: src/gnome-mines.vala:244 src/gnome-mines.vala:261
+#: src/interface.ui:24
 msgid "_Use Question Flags"
-msgstr ""
+msgstr "Sual bayraqlarından _istifadə et"
 
-#: src/gnome-mines.vala:247 src/gnome-mines.vala:264
+#: src/interface.ui:28
+msgid "Automatically clear on flags"
+msgstr "Bayraqlarda avtomatik təmizləmə"
+
+#: src/interface.ui:34
+msgid "_Keyboard Shortcuts"
+msgstr "_Klaviatura qısayolları"
+
+#: src/interface.ui:38
 msgid "_Help"
 msgstr "_Yardım"
 
-#: src/gnome-mines.vala:248 src/gnome-mines.vala:266
-msgid "_About"
-msgstr ""
+#: src/interface.ui:42
+msgid "_About Mines"
+msgstr "“Minalar” _haqqında"
 
-#: src/gnome-mines.vala:249 src/gnome-mines.vala:262
-msgid "_Quit"
-msgstr ""
+#: src/interface.ui:174
+msgid "_Width"
+msgstr "_En"
 
-#: src/gnome-mines.vala:256
-#, fuzzy
-msgid "_Mines"
-msgstr "Minalar"
+#: src/interface.ui:195
+msgid "_Height"
+msgstr "_Hündürlük"
 
-#: src/gnome-mines.vala:257
-#, fuzzy
-msgid "_New Game"
-msgstr "Yeni Oyun"
+#: src/interface.ui:216
+msgid "Percent _mines"
+msgstr "_Mina faizi"
 
-#: src/gnome-mines.vala:265
-msgid "_Contents"
-msgstr ""
+#: src/interface.ui:239
+msgid "_Cancel"
+msgstr "_Ləğv et"
 
-#. Label on the scores dialog
-#: src/gnome-mines.vala:315
-#, fuzzy
-msgid "Minefield:"
-msgstr "Canfield"
+#: src/interface.ui:255
+msgid "_Play Game"
+msgstr "_Oyuna başla"
+
+#: src/interface.ui:370
+msgid "Paused"
+msgstr "Fasilədə"
+
+#: src/gnome-mines.vala:93
+msgid "Print release version and exit"
+msgstr "Buraxılış versiyasını çap et və çıx"
+
+#: src/gnome-mines.vala:94
+msgid "Small game"
+msgstr "Kiçik oyun"
+
+#: src/gnome-mines.vala:95
+msgid "Medium game"
+msgstr "Orta oyun"
+
+#: src/gnome-mines.vala:96
+msgid "Big game"
+msgstr "Böyük oyun"
+
+#: src/gnome-mines.vala:220
+msgid "Minefield"
+msgstr "Mina sahəsi"
 
 #. For the scores dialog. First width, then height, then number of mines.
-#: src/gnome-mines.vala:349
+#: src/gnome-mines.vala:254
 #, c-format
 msgid "%d × %d, %d mine"
 msgid_plural "%d × %d, %d mines"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%d × %d, %d mina"
+msgstr[1] "%d × %d, %d mina"
 
-#: src/gnome-mines.vala:408
+#: src/gnome-mines.vala:283
 msgid "Custom"
 msgstr "Xüsusi"
 
-#: src/gnome-mines.vala:486
+#: src/gnome-mines.vala:350
 #, c-format
 msgid "<b>%d</b> mine"
 msgid_plural "<b>%d</b> mines"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "<b>%d</b> mina"
+msgstr[1] "<b>%d</b> mina"
 
-#: src/gnome-mines.vala:596
-#, fuzzy
+#: src/gnome-mines.vala:454
 msgid "Do you want to start a new game?"
-msgstr "Yeni oyun başlat"
+msgstr "Yeni oyuna başlamaq istəyirsiniz?"
 
-#: src/gnome-mines.vala:597
-#, fuzzy
+#: src/gnome-mines.vala:455
 msgid "If you start a new game, your current progress will be lost."
-msgstr "Əgər qeyd etməsəniz, bütün dəyişiklikləriniz birdəfəlik itiriləcək"
+msgstr "Əgər yeni oyuna başlasaz, hazırki gedişatınız itəcək."
 
-#: src/gnome-mines.vala:598
-#, fuzzy
-msgid "Keep Current Game"
-msgstr "Hazırkı oyunu qeyd et"
-
-#: src/gnome-mines.vala:599
-#, fuzzy
+#: src/gnome-mines.vala:456
 msgid "Start New Game"
-msgstr "Başlanğıc mağarası"
+msgstr "Yeni oyuna başla"
 
-#: src/gnome-mines.vala:649
-#, fuzzy
+#: src/gnome-mines.vala:457
+msgid "Keep Current Game"
+msgstr "Hazırkı oyunu saxla"
+
+#: src/gnome-mines.vala:524
 msgid "St_art Over"
-msgstr "Başlanğıc mağarası"
+msgstr "_Başdan başla"
 
-#: src/gnome-mines.vala:760
-#, fuzzy
+#: src/gnome-mines.vala:578
+msgid "_Pause"
+msgstr "_Fasilə"
+
+#: src/gnome-mines.vala:583
 msgid "_Resume"
-msgstr "_Sıfırla"
+msgstr "_Davam et"
 
-#: src/gnome-mines.vala:778
-#, fuzzy
+#: src/gnome-mines.vala:664
 msgid "Play _Again"
-msgstr "Oyunçu Adları"
+msgstr "_Yenə oyna"
 
-#: src/gnome-mines.vala:833
-msgid "Main game:"
-msgstr "Əsas oyun:"
+#: src/gnome-mines.vala:749
+msgid "The GNOME Project"
+msgstr "GNOME Layihəsi"
 
-#: src/gnome-mines.vala:838
-msgid "Score:"
-msgstr "Xal:"
-
-#: src/gnome-mines.vala:841
-msgid "Resizing and SVG support:"
-msgstr ""
-
-#: src/gnome-mines.vala:863
-#, fuzzy
+#: src/gnome-mines.vala:751
 msgid "Clear explosive mines off the board"
-msgstr "~a sahədən daşı çıxart"
+msgstr "Lövhədən partlayıcı minaları təmizləyin"
 
-#: src/gnome-mines.vala:870
+#: src/gnome-mines.vala:756
 msgid "translator-credits"
 msgstr ""
 "Mətin Əmirov <metin@karegen.com>\n"
@@ -358,16 +368,40 @@ msgstr ""
 "Tərcümə işləri üzrə yazışma siyahısı ünvanımız:\n"
 "<translation-team-az@lists.sourceforge.net>"
 
-#: src/theme-selector-dialog.vala:99
-#, fuzzy
-msgid "Use _animations"
-msgstr "Sür'ətli gedişləri işlət"
-
-#: src/theme-selector-dialog.vala:115
-#, fuzzy
+#: src/theme-selector-dialog.vala:108
 msgid "Select Theme"
-msgstr "Oyun Seç"
+msgstr "Mövzu seç"
 
-#: src/theme-selector-dialog.vala:138
-msgid "Close"
-msgstr ""
+#, fuzzy
+#~ msgid "GNOME Mines"
+#~ msgstr "Minalar"
+
+#, fuzzy
+#~ msgid "gnome-mines"
+#~ msgstr "cırtdanlar"
+
+#, fuzzy
+#~ msgid "Enable animations"
+#~ msgstr "_Animasiyanı fəallaşdır"
+
+#, fuzzy
+#~ msgid "Change _Difficulty"
+#~ msgstr "_Çətinlik:"
+
+#, fuzzy
+#~ msgid "_Play Again"
+#~ msgstr "Oyunçu Adları"
+
+#, fuzzy
+#~ msgid "_New Game"
+#~ msgstr "Yeni Oyun"
+
+#~ msgid "Main game:"
+#~ msgstr "Əsas oyun:"
+
+#~ msgid "Score:"
+#~ msgstr "Xal:"
+
+#, fuzzy
+#~ msgid "Use _animations"
+#~ msgstr "Sür'ətli gedişləri işlət"
