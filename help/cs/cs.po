@@ -3,14 +3,16 @@
 # This file is distributed under the same license as the gnomine help.
 #
 # Marek Černocký <marek@manet.cz>, 2009, 2013, 2014, 2015, 2017, 2018, 2020, 2021.
+# Václav Koterec <kot.va@centrum.cz>, 2026.
+# Patrik Sivek <patriksivek@gnome.org>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gnome-mines\n"
-"POT-Creation-Date: 2021-10-15 11:28+0000\n"
-"PO-Revision-Date: 2021-10-15 14:01+0200\n"
-"Last-Translator: Marek Černocký <marek@manet.cz>\n"
-"Language-Team: čeština <gnome-cs-list@gnome.org>\n"
+"POT-Creation-Date: 2026-10-12 22:57+0000\n"
+"PO-Revision-Date: 2026-10-18 09:48+0200\n"
+"Last-Translator: Patrik Sivek <patriksivek@gnome.org>\n"
+"Language-Team: Czech\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +21,13 @@ msgstr ""
 "X-Poedit-Language: Czech\n"
 "X-Poedit-Country: CZECH REPUBLIC\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Gtranslator 51.0\n"
+"X-DL-VCS-Web: https://gitlab.gnome.org/GNOME/gnome-mines\n"
+"X-DL-Lang: cs\n"
+"X-DL-Module: gnome-mines\n"
+"X-DL-Branch: main\n"
+"X-DL-Domain: help\n"
+"X-DL-State: Translating\n"
 
 #. Put one translator per line, in the form NAME <EMAIL>, YEAR1, YEAR2
 msgctxt "_"
@@ -128,8 +136,8 @@ msgid ""
 msgstr ""
 "O hru <app>Miny</app> se stará komunita dobrovolníků. Vaše případná účast "
 "bude vítána. Pokud si povšimnete nějakého problému, můžete <em>nahlásit "
-"chybu</em> na <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
-"\"/>."
+"chybu</em> na <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
+"issues\"/>."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:25
@@ -159,16 +167,16 @@ msgstr ""
 #: C/bug-filing.page:32
 msgid ""
 "Once you have an account, log in, click on <gui>New Issue</gui>. Before "
-"reporting a bug, please read the <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">bug writing guidelines</"
-"link>, and please <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/"
-"issues\">browse</link> for the bug to see if it already exists."
+"reporting a bug, please read the <link href=\"https://handbook.gnome.org/"
+"issues/reporting.html\">bug writing guidelines</link>, and please <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">browse</link> for "
+"the bug to see if it already exists."
 msgstr ""
 "Když už účet máte, přihlaste se, klikněte na <gui>New Issue</gui>. Před "
-"nahlášením chyby si prosím přečtěte <link href=\"https://wiki.gnome.org/"
-"Community/GettingInTouch/BugReportingGuidelines\">přiručku k hlášení chyb</"
-"link> a <link href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues"
-"\">podívejte</link> se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
+"nahlášením chyby si prosím přečtěte <link href=\"https://handbook.gnome.org/"
+"issues/reporting.html\">přiručku k hlášení chyb</link> a <link "
+"href=\"https://gitlab.gnome.org/GNOME/gnome-mines/issues\">podívejte</link> "
+"se prosím, jestli stejnou chybu nenahlásil už někdo jiný."
 
 #. (itstool) path: section/p
 #: C/bug-filing.page:39
@@ -209,17 +217,20 @@ msgstr ""
 msgid ""
 "If you would like to <link href=\"https://wiki.gnome.org/Apps/Games/"
 "Contribute\">help develop <app>GNOME Games</app></link>, you can get in "
-"touch with the developers using <link href=\"https://cbe005.chat.mibbit.com/?"
-"url=irc%3A%2F%2Firc.gnome.org%2Fgnome-games\">irc</link>, or via our <link "
-"href=\"https://mail.gnome.org/mailman/listinfo/games-list\">mailing list</"
-"link>."
+"touch with the developers at <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> on <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/"
+"#gnome-games\">#gnome-games</link> on irc.libera.chat, or via <link "
+"href=\"https://discourse.gnome.org/tag/games\">GNOME Discourse</link>."
 msgstr ""
-"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/Contribute"
-"\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s vývojáři "
-"kontaktovat na <link href=\"https://cbe005.chat.mibbit.com/?url=irc%3A%2F"
-"%2Firc.gnome.org%2Fgnome-games\">IRC</link> nebo přes <link href=\"https://"
-"mail.gnome.org/mailman/listinfo/games-list\">poštovní konferenci</link>. Ke "
-"komunikaci se používá angličtina."
+"Jestli chcete <link href=\"https://wiki.gnome.org/Apps/Games/"
+"Contribute\">pomoci s vývojem <app>her GNOME</app></link>, můžete se s "
+"vývojáři kontaktovat na <link href=\"https://matrix.to/#/#gnome-"
+"games:gnome.org\">#gnome-games:gnome.org</link> na síti <link "
+"xref=\"help:gnome-help/help-matrix\">Matrix</link>, přes <link "
+"href=\"https://web.libera.chat/#gnome-games\">#gnome-games</link> na "
+"irc.libera.chat nebo přes <link href=\"https://discourse.gnome.org/tag/"
+"games\">GNOME Discourse</link>."
 
 #. (itstool) path: credit/name
 #: C/documentation.page:19 C/new-game.page:23
@@ -243,24 +254,26 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/documentation.page:32
 msgid ""
-"To contribute to the Documentation Project, get in touch with us on the "
-"<link href=\"https://client01.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org"
-"%2Fdocs\">#docs</link> channel on <link href=\"https://wiki.gnome.org/"
-"GnomeIrcChannels\">irc.gnome.org</link> or via our <link href=\"https://mail."
-"gnome.org/mailman/listinfo/gnome-doc-list\">mailing list</link>."
+"To contribute to the Documentation Project, feel free to get in touch with "
+"us in <link href=\"https://matrix.to/#/#docs:gnome.org\">#docs:gnome.org</"
+"link> on <link xref=\"help:gnome-help/help-matrix\">Matrix</link> or <link "
+"href=\"https://web.libera.chat/#gnome-docs\">#gnome-docs</link> on "
+"irc.libera.chat, or via <link href=\"https://discourse.gnome.org/tag/"
+"documentation\">GNOME Discourse</link>."
 msgstr ""
 "Jestli chcete přispívat do Dokumentačního projektu, nebojte se nás "
-"kontaktovat na kanále <link href=\"https://client01.chat.mibbit.com/?url=irc"
-"%3A%2F%2Firc.gnome.org%2Fdocs\">#docs</link> na <link href=\"https://wiki."
-"gnome.org/GnomeIrcChannels\">irc.gnome.org</link> nebo přes <link href="
-"\"https://mail.gnome.org/mailman/listinfo/gnome-doc-list\">poštovní "
-"konferenci</link>. Ke komunikaci se používá angličtina."
+"kontaktovat přes <link href=\"https://matrix.to/#/"
+"#docs:gnome.org\">#docs:gnome.org</link> na síti <link xref=\"help:gnome-"
+"help/help-matrix\">Matrix</link>, přes <link href=\"https://web.libera.chat/"
+"#gnome-docs\">#gnome-docs</link> na irc.libera.chat nebo přes <link "
+"href=\"https://discourse.gnome.org/tag/documentation\">GNOME Discourse</"
+"link>."
 
 #. (itstool) path: page/p
 #: C/documentation.page:39
 msgid ""
-"Our <link href=\"https://wiki.gnome.org/DocumentationProject/Contributing"
-"\">wiki</link> page contains useful information."
+"Our <link href=\"https://wiki.gnome.org/DocumentationProject/"
+"Contributing\">wiki</link> page contains useful information."
 msgstr ""
 "Užitečné informace obsahuje naše <link href=\"https://wiki.gnome.org/"
 "DocumentationProject/Contributing\">wikistránka</link>."
@@ -376,20 +389,20 @@ msgstr ""
 #. (itstool) path: info/title
 #: C/index.page:6
 msgctxt "link:trail"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: info/title
 #: C/index.page:7
 msgctxt "link"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: info/title
 #: C/index.page:8
 msgctxt "text"
-msgid "GNOME Mines"
-msgstr "Miny GNOME"
+msgid "Mines"
+msgstr "Miny"
 
 #. (itstool) path: credit/name
 #: C/index.page:11
@@ -398,8 +411,8 @@ msgstr "Brian Grohe"
 
 #. (itstool) path: page/title
 #: C/index.page:23
-msgid "<_:media-1/> GNOME Mines"
-msgstr "<_:media-1/> Miny GNOME"
+msgid "<_:media-1/> Mines"
+msgstr "<_:media-1/> Miny"
 
 #. (itstool) path: page/p
 #: C/index.page:25
@@ -515,10 +528,11 @@ msgid ""
 "link>, or read the full <link href=\"http://creativecommons.org/licenses/by-"
 "sa/3.0/\">Commons Deed</link>."
 msgstr ""
-"Text licence v plném znění najdete na <link href=\"http://creativecommons."
-"org/licenses/by-sa/3.0/legalcode\">webových stránkách CreativeCommons</link> "
-"nebo si přečtěte <link href=\"http://creativecommons.org/licenses/by-sa/3.0/"
-"\">výtah dokumentu pro neprávníky</link>."
+"Text licence v plném znění najdete na <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/legalcode\">webových stránkách "
+"CreativeCommons</link> nebo si přečtěte <link href=\"http://"
+"creativecommons.org/licenses/by-sa/3.0/\">výtah dokumentu pro neprávníky</"
+"link>."
 
 #. (itstool) path: credit/name
 #: C/new-game.page:27
@@ -538,7 +552,7 @@ msgstr "Když chcete spustit novou hru:"
 #. (itstool) path: item/p
 #: C/new-game.page:37
 msgid "Press the <gui style=\"button\">Play again</gui> button on the right."
-msgstr "Zmáčkněte napravo tlačítko <gui style=\"button\">Začít novou</gui>."
+msgstr "Zmáčkněte napravo tlačítko <gui style=\"button\">Hrát znovu</gui>."
 
 #. (itstool) path: item/p
 #: C/new-game.page:41
@@ -557,10 +571,10 @@ msgid ""
 "Current Game</gui> or <gui>Start New Game</gui>. If you choose the latter, "
 "your current game will be lost."
 msgstr ""
-"V situaci, kdy máte nějakou hru rozehranou a zmáčknete tlačítko <gui style="
-"\"button\">Začít novou</gui>, dotáží se vás <app>Miny</app>, jestli chcete "
-"<gui>Zachovat stávající hru</gui> nebo <gui>Začít novou hru</gui>. Pokud "
-"zvolíte druhé jmenované, o právě rozehranou hru příjdete."
+"V situaci, kdy máte nějakou hru rozehranou a zmáčknete tlačítko <gui "
+"style=\"button\">Začít novou</gui>, dotáží se vás <app>Miny</app>, jestli "
+"chcete <gui>Zachovat stávající hru</gui> nebo <gui>Začít novou hru</gui>. "
+"Pokud zvolíte druhé jmenované, o právě rozehranou hru příjdete."
 
 #. (itstool) path: page/title
 #: C/rules.page:24
@@ -630,8 +644,8 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/rules.page:58
 msgid ""
-"If you complete the game quickly enough, you will be added to the <link xref="
-"\"high-scores\">high scores</link> list."
+"If you complete the game quickly enough, you will be added to the <link "
+"xref=\"high-scores\">high scores</link> list."
 msgstr ""
 "V případě, že hru dokončíte dostatečně rychle, budete přidáni do žebříčku "
 "<link xref=\"high-scores\">nejvyšších skóre</link>."
@@ -668,36 +682,38 @@ msgstr ""
 #. (itstool) path: page/p
 #: C/translate.page:30
 msgid ""
-"To start translating you will need to <link href=\"https://l10n.gnome.org"
-"\">create an account</link> and join the <link href=\"https://l10n.gnome.org/"
-"teams/\">translation team</link> for your language. This will give you the "
-"ability to upload new translations."
+"To start translating you will need to <link href=\"https://"
+"l10n.gnome.org\">create an account</link> and join the <link href=\"https://"
+"l10n.gnome.org/teams/\">translation team</link> for your language. This will "
+"give you the ability to upload new translations."
 msgstr ""
-"Jestli chcete překládat, musíte si <link href=\"https://l10n.gnome.org"
-"\">vytvořit účet</link> a přidat se k <link href=\"https://l10n.gnome.org/"
-"teams/\">překladatelskému týmu</link> svého jazyka. Pak budete moci odesílat "
-"své nové překlady."
+"Jestli chcete překládat, musíte si <link href=\"https://"
+"l10n.gnome.org\">vytvořit účet</link> a přidat se k <link href=\"https://"
+"l10n.gnome.org/teams/\">překladatelskému týmu</link> svého jazyka. Pak "
+"budete moci odesílat své nové překlady."
 
 #. (itstool) path: page/p
 #: C/translate.page:34
 msgid ""
-"You can chat with GNOME translators using <link href=\"https://cbe003.chat."
-"mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">irc</link>. People on the "
-"channel are located worldwide, so you may not get an immediate response as a "
-"result of timezone differences."
+"You can chat with GNOME translators in <link href=\"https://matrix.to/#/"
+"#i18n:gnome.org\">#i18n:gnome.org</link> on <link xref=\"help:gnome-help/"
+"help-matrix\">Matrix</link> or <link href=\"https://web.libera.chat/#gnome-"
+"i18n\">#gnome-i18n</link> on irc.libera.chat. People on the channel are "
+"located worldwide, so you may not get an immediate response as a result of "
+"timezone differences."
 msgstr ""
-"S ostatními překladateli můžete komunikovat pomocí <link href=\"https://"
-"cbe003.chat.mibbit.com/?url=irc%3A%2F%2Firc.gnome.org%2Fi18n\">IRC</link>. "
-"Lidé na tomto kanále jsou z celého světa, tak počítejte s tím, že kvůli "
-"rozdílným časovým pásmům, nemusí reagovat hned."
+"S ostatními překladateli můžete komunikovat přes <link href=\"https://"
+"matrix.to/#/#i18n:gnome.org\">#i18n:gnome.org</link> na síti <link "
+"xref=\"help:gnome-help/help-matrix\">Matrix</link> nebo přes <link "
+"href=\"https://web.libera.chat/#gnome-i18n\">#gnome-i18n</link> na "
+"irc.libera.chat. Lidé na tomto kanále jsou z celého světa, tak počítejte s "
+"tím, že kvůli rozdílným časovým pásmům, nemusí reagovat hned."
 
 #. (itstool) path: page/p
-#: C/translate.page:37
+#: C/translate.page:41
 msgid ""
-"Alternatively, you can contact the Internationalization Team using their "
-"<link href=\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">mailing "
-"list</link>."
+"Alternatively, you can contact the Internationalization Team using <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
 msgstr ""
-"Případně můžete kontaktovat Internacionalizační tým přes jeho <link href="
-"\"https://mail.gnome.org/mailman/listinfo/gnome-i18n\">poštovní konferenci</"
-"link>."
+"Případně můžete kontaktovat Internacionalizační tým přes <link "
+"href=\"https://discourse.gnome.org/tag/i18n\">GNOME Discourse</link>."
